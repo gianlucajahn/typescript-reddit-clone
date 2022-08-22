@@ -7,12 +7,16 @@
 @import "../../styles/global/variables";
 
 .navBar {
-    height: 48px;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    height: 49px;
     border-bottom: 1px solid #EDEFF1;
+    background-color: white;
     align-items: center;
     justify-content: space-between;
     display: flex;
-    padding: 0px 56px 0px 20px;
 
     .logo {
         cursor: pointer;
@@ -64,6 +68,7 @@
     .user {
         display: flex;
         padding-bottom: 2px;
+        align-items: center;
 
         .auth {
             margin: 14px 0px 12px 0px;
@@ -74,6 +79,7 @@
             box-sizing: border-box;
             padding-bottom: 7px;
             border: 1px solid $blue;
+            cursor: pointer;
         }
 
         .login {
@@ -82,19 +88,33 @@
             padding: 5px 24px 5px 23px;
             padding-top: 2px;
             margin-right: 16px;
+            &:hover {
+                background-color: $whiteHovered;
+            }
         }
 
         .register {
             background-color: $blue;
             color: #fff;
             padding: 4px 16px 7px 15px;
-            margin-right: 23px;
+            margin-right: 8px;
+            &:hover {
+                background-color: $blueHovered;
+            }
         }
 
         .userInfo {
             display: flex;
             align-items: center;
             gap: 5px;
+            cursor: pointer;
+            padding: 0px 18px 0px 14px;
+            height: 30px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            &:hover {
+                border: 1px solid #EDEFF1;
+            }
 
             .userImg {
                 height: 19px;
