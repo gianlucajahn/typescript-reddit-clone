@@ -2,3 +2,12 @@
     margin: 0;
     padding: 0;
 }
+
+// Imports
+@import '../../styles/global/variables';
+
+.home {
+    min-height: calc(100vh - 50px);
+    background-color: $mainPageBackground;
+}
+

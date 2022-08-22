@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Benton Sans';
+  src: url("./resources/fonts/bentonsansregular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Benton Sans Book';
+  src: url("./resources/fonts/bentonsansbook.otf") format("opentype");
+}
