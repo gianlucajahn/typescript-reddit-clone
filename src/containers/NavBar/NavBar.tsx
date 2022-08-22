@@ -25,10 +25,10 @@ export default function NavBar (props: NavBarProps) {
 
         <div className="user">
             <button className="auth login">
-              Login
+              Anmelden
             </button>
             <button className="auth register">
-              Register
+              Registrieren
             </button>
   
             <div className="userInfo">

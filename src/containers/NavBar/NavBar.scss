@@ -37,7 +37,7 @@
         margin-bottom: 2px;
 
         .searchBar {
-            background: url("../../resources/images/search.svg") no-repeat scroll 12px 8px;
+            background: url("../../resources/images/search.svg") no-repeat scroll 16px 8px;
             background-size: 19px;
             color: $svgColor;
             font-family: 'Benton Sans Book';
@@ -45,15 +45,16 @@
             background-color: #F6F7F8;
             border: 1px solid #EDEFF1;
             border-radius: 4px;
-            padding-left: 42px;
+            padding-left: 46px;
             height: 34px;
-            width: 400px;
+            width: 608px;
+            margin-left: 20px;
             &:hover {
-                border: 1px solid #0079D3;
+                border: 1px solid $blue;
                 background-color: #fff;
             }
             &:focus {
-                border: 1px solid #0079D3;
+                border: 1px solid $blue;
                 background-color: #fff;
                 outline: none;
             }
@@ -62,12 +63,32 @@
 
     .user {
         display: flex;
-        gap: 16px;
-        padding-bottom: 1px;
+        padding-bottom: 2px;
 
         .auth {
-            margin: 10px 0px;
-            padding: 4px 12px;
+            margin: 14px 0px 12px 0px;
+            font-family: "Noto Sans Bold";
+            font-size: 14px;
+            border-radius: 9999px;
+            height: 32px;
+            box-sizing: border-box;
+            padding-bottom: 7px;
+            border: 1px solid $blue;
+        }
+
+        .login {
+            background-color: #fff;
+            color: $blue;
+            padding: 5px 24px 5px 23px;
+            padding-top: 2px;
+            margin-right: 16px;
+        }
+
+        .register {
+            background-color: $blue;
+            color: #fff;
+            padding: 4px 16px 7px 15px;
+            margin-right: 23px;
         }
 
         .userInfo {
