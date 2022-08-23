@@ -8,6 +8,7 @@
 
 .navBar {
     position: fixed;
+    z-index: 10;
     width: 100%;
     box-sizing: border-box;
     padding: 0px 20px;
@@ -104,26 +105,113 @@
         }
 
         .userInfo {
+            .link {
             display: flex;
             align-items: center;
             gap: 5px;
+            display: flex;
+            align-items: center;
+            position: relative;
             cursor: pointer;
             padding: 0px 18px 0px 14px;
             height: 30px;
-            border: 1px solid transparent;
+            border: 1px solid #EDEFF1;
             border-radius: 4px;
             &:hover {
                 border: 1px solid #EDEFF1;
             }
 
-            .userImg {
-                height: 19px;
-                width: 20px;
+                .userImg {
+                    height: 19px;
+                    width: 20px;
+                }
+    
+                .expand {
+                    height: 7px;
+                }
             }
 
-            .expand {
-                height: 7px;
+            .dropdownMenu {
+                position: absolute;
+                top: 92.5%;
+                right: 20px;
+                width: 254px;
+                height: 536px;
+                box-sizing: border-box;
+                border: 1px solid #EDEFF1;
+                border-radius: 4px;
+                padding-top: 10px;
+                z-index: 10;
+                background-color: #fff;
+
+                .coins {
+                    padding: 15px 20px 14px 20px !important;
+                }
+
+                #credits {
+                    padding: 12px 20px 12px 26px !important;
+
+                    h6 {
+                        font-family: "IBM Light";
+                        font-size: 11px;
+                        transform: scaleX(1.05);
+                        color: #878a8c;
+                    }
+                }
+
+                .noImg {
+                    padding-left: 52px !important;
+                }
+
+                .dropdownItem {
+                    padding: 11px 20px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 14px;
+                    background-color: #fff;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: rgba(0,0,0,0.04);
+                    }
+                    &:active {
+                        background-color: rgba(0,0,0,0.08);
+                    }
+
+                    .icon {
+                        height: 19px;
+                        -webkit-touch-callout: none; 
+                        -webkit-user-select: none; 
+                        -khtml-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none; 
+                        user-select: none; 
+                    }
+
+                    h3 {
+                        font-size: 14px;
+                        -webkit-touch-callout: none; 
+                        -webkit-user-select: none; 
+                        -khtml-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none; 
+                        user-select: none; 
+                        font-family: "IBM Light";
+                        color: #1c1c1c;
+                        transform: scaleY(0.95);
+                    }
+                }
             }
         }
+    }
+}
+
+.dropdownMenu #credits {
+    &:hover {
+        background-color: #fff;
+        cursor: default;
+    }
+    &:active {
+        cursor: default;
     }
 }
