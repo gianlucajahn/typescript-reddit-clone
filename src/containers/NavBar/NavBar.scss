@@ -152,7 +152,23 @@
                 }
 
                 div.nested {
-                    padding-left: 70px;
+                    margin-left: 50px;
+                }
+
+                div.lastChild {
+                    position: relative;
+                    margin-bottom: 30px;
+                }
+
+                div.lastChild::after {
+                    position: absolute;
+                    top: 55px;
+                    right: 20px;
+                    content: "";
+                    background-color: #EDEFF1;
+                    width: 90%;
+                    height: 1px;
+                    pointer-events: none;
                 }
 
                 .coins {
@@ -235,7 +251,7 @@
     position: absolute;
     right: 9.75%;
     height: 7px !important;
-    transition: 0.3s all;
+    transition: 0.4s all;
 }
 
 .dropdownItem .expanded {
@@ -243,5 +259,5 @@
     right: 9.75%;
     height: 7px !important;
     transform: rotate(180deg);
-    transition: 0.3s all;
+    transition: 0.4s all;
 }
