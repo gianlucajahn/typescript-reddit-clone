@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { MouseEventHandler, useState } from 'react';
 import './NavBar.scss';
 import { ReactComponent as RedditLogo } from "../../resources/images/redditlogo.svg";
 import { ReactComponent as Reddit } from "../../resources/images/reddit.svg";
@@ -8,40 +8,39 @@ import { ReactComponent as User } from "../../resources/images/user.svg";
 import { ObjectType } from 'typescript';
 
 export interface NavBarProps {
-
+  dropdownIsOpen: boolean,
+  handleDropdown: MouseEventHandler<HTMLDivElement>,
+  handleExpand: MouseEventHandler<HTMLDivElement>,
+  dropdownState: {
+    erkunden: boolean,
+    gaming: boolean,
+    sports: boolean,
+    television: boolean,
+    celebrity: boolean,
+    business: boolean,
+    crypto: boolean,
+    weitereinfos: boolean,
+    richtlinien: boolean,
+    mehr: boolean
+  }
 }
 
 export default function NavBar (props: NavBarProps) {
-  const [dropdownState, setDropdownState] = useState({
-    erkunden: false,
-    gaming: false,
-    sports: false,
-    television: false,
-    celebrity: false,
-    business: false,
-    crypto: false,
-    mehr: false,
-    weitereinfos: false,
-    richtlinien: true
-  });
+  const {
+    dropdownIsOpen,
+    handleDropdown,
+    handleExpand,
+    dropdownState
+  } = props;
 
-  const handleExpand = (e: React.MouseEvent) => {
-    const changedState = e.currentTarget.id;
-    if (changedState === "erkunden") {
-      setDropdownState({
-        erkunden: !dropdownState.erkunden,
-        gaming: false,
-        sports: false,
-        television: false,
-        celebrity: false,
-        business: false,
-        crypto: false,
-        mehr: false,
-        weitereinfos: dropdownState.weitereinfos,
-        richtlinien: dropdownState.richtlinien
-      })} else {
-        setDropdownState({...dropdownState, [changedState]: !dropdownState[changedState as keyof typeof dropdownState]});
-      }
+
+  const handleHoverLink = (e: React.MouseEvent) => {
+    const target = e.target as HTMLDivElement;
+    if (e.type === "mouseenter") {
+      target.setAttribute('style', 'border: 1px solid #EDEFF1;');
+    } else if (!dropdownIsOpen) {
+      target.setAttribute('style', 'border: 1px solid transparent');
+    }
   }
 
   return (
@@ -64,12 +63,12 @@ export default function NavBar (props: NavBarProps) {
               Registrieren
             </button>
   
-            <div className="userInfo">
-              <div className="link">
+            <div className="userInfo" onClick={handleDropdown}>
+              <div className="link" id="link" style={{ border: dropdownIsOpen ? "1px solid #EDEFF1" : "1px solid transparent" }} onMouseEnter={handleHoverLink} onMouseLeave={handleHoverLink}>
                   <img src={require("../../resources/images/user.png")} className="userImg" />
                   <img src={require("../../resources/images/expand.png")} className="expand" />
               </div>
-              <div className="dropdownMenu">
+              <div className="dropdownMenu" style={{ display: dropdownIsOpen ? "block" : "none" }}>
                 <div className="dropdownItem coins">
                   <img className="icon coin" src={require("../../resources/images/coin.png")} />
                   <h3>Münzen</h3>

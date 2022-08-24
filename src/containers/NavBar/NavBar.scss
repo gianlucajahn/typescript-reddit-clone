@@ -106,6 +106,9 @@
 
         .userInfo {
             .link {
+            * {
+                pointer-events: none;
+            }
             display: flex;
             align-items: center;
             gap: 5px;
@@ -115,7 +118,7 @@
             cursor: pointer;
             padding: 0px 18px 0px 14px;
             height: 30px;
-            border: 1px solid #EDEFF1;
+            border: 1px solid transparent;
             border-radius: 4px;
             &:hover {
                 border: 1px solid #EDEFF1;
@@ -176,7 +179,7 @@
                     width: 100%;
                     background-color: #EDEFF1;
                     margin-top: 14px;
-                    margin-bottom: 14px;
+                    margin-bottom: 12px;
                 }
 
                 .coins {
@@ -184,7 +187,7 @@
                 }
 
                 #credits {
-                    padding: 12px 20px 12px 26px !important;
+                    padding: 10px 20px 16px 26px !important;
 
                     h6 {
                         font-family: "IBM Light";
@@ -211,10 +214,6 @@
                     }
                     &:active {
                         background-color: rgba(0,0,0,0.08);
-                    }
-
-                    * {
-                        pointer-events: none;
                     }
 
                     .icon {
