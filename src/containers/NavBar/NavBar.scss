@@ -171,6 +171,14 @@
                     pointer-events: none;
                 }
 
+                .line {
+                    height: 1px;
+                    width: 100%;
+                    background-color: #EDEFF1;
+                    margin-top: 14px;
+                    margin-bottom: 14px;
+                }
+
                 .coins {
                     padding: 15px 20px 14px 20px !important;
                 }

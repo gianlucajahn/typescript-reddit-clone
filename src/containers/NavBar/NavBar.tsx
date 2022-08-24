@@ -375,6 +375,8 @@ export default function NavBar (props: NavBarProps) {
                   <h3>Music</h3>
                 </div>
 
+                <div className="line" style={{ display: dropdownState.erkunden ? "block" : "none" }}></div>
+
                 <div className="dropdownItem einstellungen">
                   <img className="icon einstellungen" src={require("../../resources/images/einstellungen.png")} />
                   <h3>Einstellungen</h3>
@@ -390,15 +392,73 @@ export default function NavBar (props: NavBarProps) {
                   <h3>Hilfecenter</h3>
                 </div>
 
-                <div className="dropdownItem weitereinfos">
+                <div className="dropdownItem weitereinfos" id="weitereinfos" onClick={handleExpand}>
                   <img className="icon weitereinfos" src={require("../../resources/images/weitereinfos.png")} />
                   <h3>Weitere Infos</h3>
+                  <img className={ dropdownState.weitereinfos ? "expanded" : "expand" } src={require("../../resources/images/expandblack.png")} />
                 </div>
 
-                <div className="dropdownItem richtlinien">
-                  <img className="icon richtlinien" src={require("../../resources/images/richtlinien.png")} />
-                  <h3>Bedingungen &#38; Richtlinien</h3>
+                <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
+                  <h3>Reddit iOS</h3>
                 </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
+                  <h3>Reddit Android</h3>
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
+                  <h3>Rereddit</h3>
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
+                  <h3>Die besten Communities</h3>
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
+                  <h3>Communities</h3>
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
+                  <h3>Über Reddit</h3>
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
+                  <h3>Blog</h3>
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
+                  <h3>Karriere</h3>
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
+                  <h3>Presse</h3>
+                </div>
+
+                <div className="line" style={{ display: dropdownState.weitereinfos ? "block" : "none" }}></div>
+
+                <div className="dropdownItem richtlinien" id="richtlinien" onClick={handleExpand}>
+                  <img className="icon richtlinien" src={require("../../resources/images/richtlinien.png")} />
+                  <h3>Bedingungen &#38; AGBs</h3>
+                  <img className={ dropdownState.richtlinien ? "expanded" : "expand" } src={require("../../resources/images/expandblack.png")} />
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.richtlinien ? "flex" : "none" }}>
+                  <h3>Nutzungsvereinbarung</h3>
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.richtlinien ? "flex" : "none" }}>
+                  <h3>Datenschutzerklärung</h3>
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.richtlinien ? "flex" : "none" }}>
+                  <h3>Inhaltsrichtlinie</h3>
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.richtlinien ? "flex" : "none" }}>
+                  <h3>Moderationsrichtlinien</h3>
+                </div>
+
+                <div className="line" style={{ display: dropdownState.richtlinien ? "block" : "none" }}></div>
 
                 <div className="dropdownItem registrieren">
                   <img className="icon registrieren" src={require("../../resources/images/registrieren.png")} />
