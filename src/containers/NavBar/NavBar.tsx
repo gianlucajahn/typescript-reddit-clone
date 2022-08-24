@@ -1,16 +1,47 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import './NavBar.scss';
 import { ReactComponent as RedditLogo } from "../../resources/images/redditlogo.svg";
 import { ReactComponent as Reddit } from "../../resources/images/reddit.svg";
 import { ReactComponent as Search } from "../../resources/images/search.svg";
 import { ReactComponent as Expand } from "../../resources/images/expand.svg";
 import { ReactComponent as User } from "../../resources/images/user.svg";
+import { ObjectType } from 'typescript';
 
 export interface NavBarProps {
 
 }
 
 export default function NavBar (props: NavBarProps) {
+  const [dropdownState, setDropdownState] = useState({
+    erkunden: false,
+    gaming: false,
+    sports: false,
+    television: false,
+    celebrity: false,
+    business: false,
+    crypto: false,
+    weitereinfos: false,
+    richtlinien: true
+  });
+
+  const handleExpand = (e: React.MouseEvent) => {
+    const changedState = e.currentTarget.id;
+    if (changedState === "erkunden") {
+      setDropdownState({
+        erkunden: !dropdownState.erkunden,
+        gaming: false,
+        sports: false,
+        television: false,
+        celebrity: false,
+        business: false,
+        crypto: false,
+        weitereinfos: false,
+        richtlinien: dropdownState.richtlinien
+      })} else {
+        setDropdownState({...dropdownState, [changedState]: !dropdownState[changedState as keyof typeof dropdownState]});
+      }
+  }
+
   return (
     <div className="navBar">
         <div className="logo">
@@ -54,12 +85,88 @@ export default function NavBar (props: NavBarProps) {
 
                 <div className="dropdownItem recent">
                   <img className="icon recent" src={require("../../resources/images/recent.png")} />
-                  <h3>Kürzlich besuchte Comm...</h3>
+                  <h3>Kürzlich besucht</h3>
                 </div>
 
-                <div className="dropdownItem erkunden">
+                <div className="dropdownItem erkunden" id="erkunden" onClick={handleExpand}>
                   <img className="icon erkunden" src={require("../../resources/images/erkunden.png")} />
                   <h3>Erkunden</h3>
+                  <img className={ dropdownState.erkunden ? "expanded" : "expand" } src={require("../../resources/images/expandblack.png")} />
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.erkunden ? "flex" : "none" }} id="gaming" onClick={handleExpand}>
+                  <h3>Gaming</h3>
+                  <img className="icon expand" src={require("../../resources/images/expandblack.png")} />
+                </div>
+
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
+                  <h3>Valheim</h3>
+                </div>
+
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
+                  <h3>Genshin Impact</h3>
+                </div>
+
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
+                  <h3>Minecraft</h3>
+                </div>
+
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
+                  <h3>Pokimane</h3>
+                </div>
+
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
+                  <h3>Halo Infinite</h3>
+                </div>
+
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
+                  <h3>Call of Duty: Warzone</h3>
+                </div>
+
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
+                  <h3>Path of Exile</h3>
+                </div>
+
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
+                  <h3>Hollow Knight</h3>
+                </div>
+
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
+                  <h3>Escape from Tarkov</h3>
+                </div>
+
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
+                  <h3>Watch Dogs: Legion</h3>
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.erkunden ? "flex" : "none" }}>
+                  <h3>Sports</h3>
+                  <img className="icon expand" src={require("../../resources/images/expandblack.png")} />
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.erkunden ? "flex" : "none" }}>
+                  <h3>Television</h3>
+                  <img className="icon expand" src={require("../../resources/images/expandblack.png")} />
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.erkunden ? "flex" : "none" }}>
+                  <h3>Celebrity</h3>
+                  <img className="icon expand" src={require("../../resources/images/expandblack.png")} />
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.erkunden ? "flex" : "none" }}>
+                  <h3>Business</h3>
+                  <img className="icon expand" src={require("../../resources/images/expandblack.png")} />
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.erkunden ? "flex" : "none" }}>
+                  <h3>Crypto</h3>
+                  <img className="icon expand" src={require("../../resources/images/expandblack.png")} />
+                </div>
+
+                <div className="dropdownItem expanded" style={{ display: dropdownState.erkunden ? "flex" : "none" }}>
+                  <h3>Mehr</h3>
+                  <img className="icon expand" src={require("../../resources/images/expandblack.png")} />
                 </div>
 
                 <div className="dropdownItem einstellungen">
@@ -89,7 +196,7 @@ export default function NavBar (props: NavBarProps) {
 
                 <div className="dropdownItem registrieren">
                   <img className="icon registrieren" src={require("../../resources/images/registrieren.png")} />
-                  <h3>Registrieren oder Anmelden</h3>
+                  <h3>Registrieren &#38; Anmelden</h3>
                 </div>
 
                 <div className="dropdownItem" id="credits">

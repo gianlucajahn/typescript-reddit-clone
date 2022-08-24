@@ -136,13 +136,24 @@
                 top: 92.5%;
                 right: 20px;
                 width: 254px;
-                height: 536px;
+                min-height: 536px;
+                overflow: auto;
+                max-height: 743px;
+                overflow-x: hidden;
                 box-sizing: border-box;
                 border: 1px solid #EDEFF1;
                 border-radius: 4px;
                 padding-top: 10px;
                 z-index: 10;
                 background-color: #fff;
+
+                div.expanded {
+                    padding-left: 54px;
+                }
+
+                div.nested {
+                    padding-left: 70px;
+                }
 
                 .coins {
                     padding: 15px 20px 14px 20px !important;
@@ -176,6 +187,10 @@
                     }
                     &:active {
                         background-color: rgba(0,0,0,0.08);
+                    }
+
+                    * {
+                        pointer-events: none;
                     }
 
                     .icon {
@@ -214,4 +229,19 @@
     &:active {
         cursor: default;
     }
+}
+
+.dropdownItem .expand {
+    position: absolute;
+    right: 9.75%;
+    height: 7px !important;
+    transition: 0.3s all;
+}
+
+.dropdownItem .expanded {
+    position: absolute;
+    right: 9.75%;
+    height: 7px !important;
+    transform: rotate(180deg);
+    transition: 0.3s all;
 }
