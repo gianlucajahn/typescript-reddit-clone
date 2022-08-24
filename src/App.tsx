@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { MouseEventHandler, useState } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Home from './containers/Home/Home';
 import NavBar from './containers/NavBar/NavBar';
+import { isReturnStatement } from 'typescript';
+import LoginModal from './components/LoginModal/LoginModal';
 
 function App() {
   const location = useLocation();
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
+  const [loginModalState, setLoginModalState] = useState("closed");
   const [dropdownState, setDropdownState] = useState({
     erkunden: false,
     gaming: false,
@@ -59,13 +62,43 @@ function App() {
     }
   }
 
+  const checkDropdown = (e: any) => {
+    if (e.target.id === "link") {
+      return;
+    } else {
+      const dropdownMenu = document.getElementById('dropdownMenu');
+      let node = e.target;
+      while (node) {
+        if (node === dropdownMenu) {
+          setDropdownIsOpen(true);
+          return;
+        }
+    
+        node = node.parentNode;
+      }
+  
+      setDropdownIsOpen(false);
+    }
+  }
+
+  const handleLoginModal = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement;
+    setLoginModalState(target.id);
+  }
+
   return (
-    <>
+    <div onClick={checkDropdown} id="app">
+      {loginModalState !== "closed" ? 
+      <LoginModal 
+        loginModalState={loginModalState}
+        handleLoginModal={handleLoginModal}
+      /> : null}
       <NavBar 
         dropdownIsOpen={dropdownIsOpen}
         dropdownState={dropdownState}
         handleDropdown={handleDropdown}
         handleExpand={handleExpand}
+        handleLoginModal={handleLoginModal}
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/typescript-reddit-clone/' element={<Home />} />
@@ -74,7 +107,7 @@ function App() {
         <Route path='/typescript-reddit-clone/create' element={<Home />} />
         <Route path='*' element={<Home />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

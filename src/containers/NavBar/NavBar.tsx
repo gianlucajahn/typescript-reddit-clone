@@ -11,6 +11,7 @@ export interface NavBarProps {
   dropdownIsOpen: boolean,
   handleDropdown: MouseEventHandler<HTMLDivElement>,
   handleExpand: MouseEventHandler<HTMLDivElement>,
+  handleLoginModal: MouseEventHandler<HTMLElement>,
   dropdownState: {
     erkunden: boolean,
     gaming: boolean,
@@ -30,7 +31,8 @@ export default function NavBar (props: NavBarProps) {
     dropdownIsOpen,
     handleDropdown,
     handleExpand,
-    dropdownState
+    handleLoginModal,
+    dropdownState,
   } = props;
 
 
@@ -56,10 +58,10 @@ export default function NavBar (props: NavBarProps) {
         </div>
 
         <div className="user">
-            <button className="auth login">
+            <button className="auth login" onClick={handleLoginModal} id="login">
               Anmelden
             </button>
-            <button className="auth register">
+            <button className="auth register" onClick={handleLoginModal} id="register">
               Registrieren
             </button>
   
@@ -68,7 +70,7 @@ export default function NavBar (props: NavBarProps) {
                   <img src={require("../../resources/images/user.png")} className="userImg" />
                   <img src={require("../../resources/images/expand.png")} className="expand" />
               </div>
-              <div className="dropdownMenu" style={{ display: dropdownIsOpen ? "block" : "none" }}>
+              <div className="dropdownMenu" style={{ display: dropdownIsOpen ? "block" : "none" }} id="dropdownMenu">
                 <div className="dropdownItem coins">
                   <img className="icon coin" src={require("../../resources/images/coin.png")} />
                   <h3>Münzen</h3>
