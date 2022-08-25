@@ -92,6 +92,9 @@
             &:hover {
                 background-color: $whiteHovered;
             }
+            &:active {
+                background-color: #d7eaf8;
+            }
         }
 
         .register {
@@ -101,6 +104,10 @@
             margin-right: 8px;
             &:hover {
                 background-color: $blueHovered;
+            }
+            &:active {
+                background-color: #3d99de;
+                border-color: #3d99de;
             }
         }
 
