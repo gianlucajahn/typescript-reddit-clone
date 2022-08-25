@@ -9,6 +9,7 @@ import { ObjectType } from 'typescript';
 
 export interface NavBarProps {
   dropdownIsOpen: boolean,
+  userName: string,
   handleDropdown: MouseEventHandler<HTMLDivElement>,
   handleExpand: MouseEventHandler<HTMLDivElement>,
   handleLoginModal: MouseEventHandler<HTMLElement>,
@@ -33,6 +34,7 @@ export default function NavBar (props: NavBarProps) {
     handleExpand,
     handleLoginModal,
     dropdownState,
+    userName
   } = props;
 
 

@@ -1,7 +1,15 @@
+* {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
 .modalBackground {
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
-    height: 100vh;
+    height: 101vh;
     width: 100vw;
     z-index: 12;
 }
@@ -24,4 +32,163 @@
     border-bottom-left-radius: 4px;
     height: 650px;
     width: 131px;
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 24px;
+
+    .heading {
+        color: #1A1A1B;
+        font-size: 18px;
+        font-family: "IBM Regular";
+        margin-bottom: 8px;
+    }
+
+    .policy {
+        color: #1A1A1B;
+        font-size: 12px;
+        font-family: "Noto Sans Regular";
+
+        span {
+            color: #0079d3;
+            cursor: pointer;
+            &:hover {
+                color: #3394dc;
+            }
+        }
+    }
+
+    button.googleButton {
+        margin-top: 57px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        background-color: white;
+        border: 1px solid #dadce0;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-family: "IBM";
+        color: #1A1A1B;
+        height: 40px;
+        width: 20em;
+        box-sizing: border-box;
+        padding: 2px 12px;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: 0.25s all;
+        &:hover {
+            border-color: #d2e3fc;
+            background: rgba(66,133,244,.04);
+        }
+        &:active {
+            background: rgba(66,133,244,.09);
+        }
+
+        .google,
+        .apple {
+            margin-right: 55px;
+            height: 20px;
+        }
+        .apple {
+            padding-top: 3px;
+        }
+    }
+
+    .or {
+        color: #878A8C;
+        font-size: 14px;
+        font-family: "IBM Light";
+        margin: 32px 122px 28px 122px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -40.25%;
+            top: 9px;
+            width: 7.95em;
+            height: 1px;
+            background-color: #edeff1;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 15%;
+            top: 9px;
+            width: 7.95em;
+            height: 1px;
+            background-color: #edeff1;
+        }
+    }
+
+    .container {
+        position: relative;
+
+        .inputField {
+            margin-bottom: 12px;
+            height: 48px;
+            box-sizing: border-box;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            padding: 24px 12px 10px 12px;
+            font-family: "Noto Sans Regular";
+            background-color: rgb(252, 252, 251);
+            outline: 0px;
+            width: 21em;
+            transition: 0.2s ease-in-out all;
+            &:hover {
+                background-color: white;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+            }
+            &:active {
+                background-color: white;
+                border-color: rgb(36, 160, 237);
+            }
+        }
+
+        .circle {
+            width: 5px;
+            height: 5px;
+            border-radius: 45%;
+            background-color: #24a0ed;
+            position: absolute;
+            pointer-events: none;
+            top: 39%;
+        }
+
+        .label {
+            position: absolute;
+            pointer-events: none;
+            left: 12px;
+            top: 18px;
+            font-size: 10px;
+            font-family: "Noto Sans Bold";
+            transition: 0.3s ease all;
+            color: #a5a5a4;
+            letter-spacing: 0.025em;
+        }
+
+        .inputField:hover ~ .label,
+        .inputField:focus ~ .label,
+        .inputField:not(:focus):valid ~ .label, 
+        .inputField:not(:hover):valid ~ .label {
+            top: 8px;
+            bottom: 10px;
+            left: 12px;
+            font-size: 8px;
+            opacity: 1;
+        }
+    }
+}
+
+.username .circle {
+    left: 20%;
+}
+
+.password .circle {
+    left: 14.75%;
 }

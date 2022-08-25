@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from 'react';
+import React, { ChangeEvent, MouseEventHandler, useState } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
@@ -11,6 +11,8 @@ function App() {
   const location = useLocation();
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [loginModalState, setLoginModalState] = useState("closed");
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
   const [dropdownState, setDropdownState] = useState({
     erkunden: false,
     gaming: false,
@@ -23,6 +25,24 @@ function App() {
     weitereinfos: false,
     richtlinien: true
   });
+  const [hoverState, setHoverState] = useState({
+    username: false,
+    password: false
+  })
+
+  const handleLoginInput = (e: ChangeEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    if (target.id === "username") {
+      setUserName(target.value);
+    } else if (target.id === "password") {
+      setPassword(target.value);
+    }
+  }
+
+  const handleHover = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+    setHoverState({...hoverState, [target.id]: !hoverState[target.id as keyof typeof hoverState]});
+  }
 
   const handleExpand = (e: React.MouseEvent) => {
     const changedState = e.currentTarget.id;
@@ -92,6 +112,11 @@ function App() {
       <LoginModal 
         loginModalState={loginModalState}
         handleLoginModal={handleLoginModal}
+        handleLoginInput={handleLoginInput}
+        handleHover={handleHover}
+        hoverState={hoverState}
+        userName={userName}
+        password={password}
       /> : null}
       <NavBar 
         dropdownIsOpen={dropdownIsOpen}
@@ -99,6 +124,7 @@ function App() {
         handleDropdown={handleDropdown}
         handleExpand={handleExpand}
         handleLoginModal={handleLoginModal}
+        userName={userName}
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/typescript-reddit-clone/' element={<Home />} />
