@@ -88,6 +88,14 @@ function App() {
     } else {
       const dropdownMenu = document.getElementById('dropdownMenu');
       let node = e.target;
+      if (node.id === "register") {
+        setDropdownIsOpen(false);
+        return;
+      } else if (node.parentNode.id === "register") {
+        setDropdownIsOpen(false);
+        return;
+      }
+      
       while (node) {
         if (node === dropdownMenu) {
           setDropdownIsOpen(true);
@@ -103,6 +111,7 @@ function App() {
 
   const handleLoginModal = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
+    setDropdownIsOpen(false);
     setLoginModalState(target.id);
   }
 

@@ -39,6 +39,25 @@
     flex-direction: column;
     padding: 48px 24px;
 
+    #closed {
+        border: 1px solid transparent;
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        top: 2.3%;
+        right: 1.75%;
+        cursor: pointer;
+    }
+
+    .cross {
+        height: 20px;
+        position: absolute;
+        right: 1.9%;
+        top: 2.5%;
+        fill: #808080;
+        pointer-events: none;
+    }
+
     .heading {
         color: #1A1A1B;
         font-size: 18px;
@@ -125,6 +144,10 @@
         }
     }
 
+    div.password {
+        margin-bottom: 2px;
+    }
+
     .container {
         position: relative;
 
@@ -183,12 +206,41 @@
             opacity: 1;
         }
     }
-}
 
-.username .circle {
-    left: 20%;
-}
+    button.anmelden,
+    button.demo {
+        font-family: "Noto Sans Bold";
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0079d3;
+        color: #fff;
+        border-radius: 999px;
+        line-height: 18px;
+        margin-bottom: 6px;
+        &:hover {
+            background-color: #1484d7;
+        }
+        &:active {
+            background-color: #3d99de;
+        }
+    }
 
-.password .circle {
-    left: 14.75%;
+    p.suggestion {
+        margin-top: 18px;
+        font-size: 12px;
+        font-family: "Noto Sans Regular";
+        color: #1A1A1B;
+
+        span {
+            color: #0079d3;
+            font-family: "IBM";
+            cursor: pointer;
+
+            &:hover {
+                color: rgb(51, 148, 220);
+            }
+        }
+    }
 }

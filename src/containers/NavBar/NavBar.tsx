@@ -463,7 +463,7 @@ export default function NavBar (props: NavBarProps) {
 
                 <div className="line" style={{ display: dropdownState.richtlinien ? "block" : "none" }}></div>
 
-                <div className="dropdownItem registrieren">
+                <div className="dropdownItem registrieren" onClick={handleLoginModal} id="register">
                   <img className="icon registrieren" src={require("../../resources/images/registrieren.png")} />
                   <h3>Registrieren &#38; Anmelden</h3>
                 </div>
