@@ -10,6 +10,8 @@ import { ObjectType } from 'typescript';
 export interface NavBarProps {
   dropdownIsOpen: boolean,
   userName: string,
+  loginStatus: boolean,
+  handleLogin: MouseEventHandler,
   handleDropdown: MouseEventHandler<HTMLDivElement>,
   handleExpand: MouseEventHandler<HTMLDivElement>,
   handleLoginModal: MouseEventHandler<HTMLElement>,
@@ -33,8 +35,10 @@ export default function NavBar (props: NavBarProps) {
     handleDropdown,
     handleExpand,
     handleLoginModal,
+    handleLogin,
     dropdownState,
-    userName
+    userName,
+    loginStatus
   } = props;
 
 
@@ -463,9 +467,9 @@ export default function NavBar (props: NavBarProps) {
 
                 <div className="line" style={{ display: dropdownState.richtlinien ? "block" : "none" }}></div>
 
-                <div className="dropdownItem registrieren" onClick={handleLoginModal} id="register">
-                  <img className="icon registrieren" src={require("../../resources/images/registrieren.png")} />
-                  <h3>Registrieren &#38; Anmelden</h3>
+                <div className="dropdownItem registrieren" onClick={loginStatus ? handleLogin : handleLoginModal} id={loginStatus ? "logout" : "register"}>
+                  <img className="icon registrieren" src={require(`../../resources/images/${loginStatus ? "logout.png" : "registrieren.png"}`)} />
+                  <h3>{loginStatus ? "Ausloggen" : "Registrieren & Anmelden"}</h3>
                 </div>
 
                 <div className="dropdownItem" id="credits">

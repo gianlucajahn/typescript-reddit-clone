@@ -12,9 +12,11 @@ export interface LoginModalProps {
     },
     userName: string,
     password: string,
+    loginStatus: boolean,
     handleLoginInput: ChangeEventHandler<HTMLInputElement>,
     handleLoginModal: MouseEventHandler<HTMLButtonElement>,
     handleHover: MouseEventHandler<HTMLInputElement>
+    handleLogin: MouseEventHandler
 }
 
 export default function LoginModal (props: LoginModalProps) {
@@ -23,6 +25,8 @@ export default function LoginModal (props: LoginModalProps) {
     hoverState,
     userName,
     password,
+    loginStatus,
+    handleLogin,
     handleLoginInput,
     handleLoginModal,
     handleHover
@@ -66,10 +70,10 @@ export default function LoginModal (props: LoginModalProps) {
                 <div className="circle" style={{ display: hoverState.password === false ? password.length <= 1 ? "block" : "none" : "none", left: loginModalState === "login" ? "14.75%" : "29.5%" }}></div>
             </div>
 
-            <button className="anmelden">
+            <button className="anmelden" id="login" onClick={handleLogin}>
                 {loginModalState === "login" ? "Anmelden" : "Registrieren"}
             </button>
-            <button className="demo">
+            <button className="demo" id="demo" onClick={handleLogin}>
                 Demo-Account
             </button>
 

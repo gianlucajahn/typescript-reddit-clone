@@ -13,6 +13,7 @@ function App() {
   const [loginModalState, setLoginModalState] = useState("closed");
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const [loginStatus, setLoginStatus] = useState(false);
   const [dropdownState, setDropdownState] = useState({
     erkunden: false,
     gaming: false,
@@ -28,7 +29,7 @@ function App() {
   const [hoverState, setHoverState] = useState({
     username: false,
     password: false
-  })
+  });
 
   const handleLoginInput = (e: ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
@@ -95,7 +96,7 @@ function App() {
         setDropdownIsOpen(false);
         return;
       }
-      
+
       while (node) {
         if (node === dropdownMenu) {
           setDropdownIsOpen(true);
@@ -115,6 +116,24 @@ function App() {
     setLoginModalState(target.id);
   }
 
+  const handleLogin = (e: React.MouseEvent) => {
+    const target = e.target as HTMLButtonElement | HTMLDivElement;
+    if (target.id === "login") {
+      setLoginStatus(true);
+      setLoginModalState("closed");
+    } else if (target.id === "demo") {
+      setLoginStatus(true);
+      setUserName("NikolaTesla");
+      setPassword("electricity");
+      setLoginModalState("closed");
+    } else if (target.id === "logout") {
+      setLoginStatus(false);
+      setUserName("");
+      setPassword("");
+      setDropdownIsOpen(false);
+    }
+  }
+
   return (
     <div onClick={checkDropdown} id="app">
       {loginModalState !== "closed" ? 
@@ -126,6 +145,8 @@ function App() {
         hoverState={hoverState}
         userName={userName}
         password={password}
+        loginStatus={loginStatus}
+        handleLogin={handleLogin}
       /> : null}
       <NavBar 
         dropdownIsOpen={dropdownIsOpen}
@@ -134,6 +155,8 @@ function App() {
         handleExpand={handleExpand}
         handleLoginModal={handleLoginModal}
         userName={userName}
+        loginStatus={loginStatus}
+        handleLogin={handleLogin}
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/typescript-reddit-clone/' element={<Home />} />
