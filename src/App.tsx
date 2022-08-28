@@ -123,14 +123,14 @@ function App() {
       setLoginModalState("closed");
     } else if (target.id === "demo") {
       setLoginStatus(true);
-      setUserName("NikolaTesla");
+      setUserName("Nikola Tesla");
       setPassword("electricity");
       setLoginModalState("closed");
     } else if (target.id === "logout") {
+      setDropdownIsOpen(false);
       setLoginStatus(false);
       setUserName("");
       setPassword("");
-      setDropdownIsOpen(false);
     }
   }
 

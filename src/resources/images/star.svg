@@ -1,0 +1,14 @@
+<svg 
+  class="_3VX6GfMQ01Q_1wsiZnQ2UN Y2DEjcFyO7_glQ5xOX4oz" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 12 12"
+>
+  <path 
+    d="M6.47.828a.5.5 0 00-.94 0L4.268 4.267.827 5.53a.5.5 0 000 .938l3.44 1.264 1.264 3.44a.5.5 0 00.938 0l1.264-3.44 3.44-1.264a.5.5 0 000-.938l-3.44-1.264L6.47.827z" 
+    fill="url(#bluePinkGradient)" 
+    stroke="#fff" 
+    stroke-linejoin="round"
+  ></path>
+          <defs>
+            <linearGradient id="bluePinkGradient" x1="1" y1="11" x2="11.01" y2="10.99" gradientUnits="userSpaceOnUse"><stop stop-color="#6A5CFF"></stop><stop offset="1" stop-color="#E4ABFF"></stop></linearGradient></defs></svg>

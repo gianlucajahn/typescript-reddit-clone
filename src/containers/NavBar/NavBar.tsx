@@ -4,6 +4,7 @@ import { ReactComponent as RedditLogo } from "../../resources/images/redditlogo.
 import { ReactComponent as Reddit } from "../../resources/images/reddit.svg";
 import { ReactComponent as Search } from "../../resources/images/search.svg";
 import { ReactComponent as Expand } from "../../resources/images/expand.svg";
+import { ReactComponent as Star } from "../../resources/images/star.svg";
 import { ReactComponent as User } from "../../resources/images/user.svg";
 import { ObjectType } from 'typescript';
 
@@ -41,7 +42,8 @@ export default function NavBar (props: NavBarProps) {
     loginStatus
   } = props;
 
-
+  const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
+  const [randomIntToString, setRandomIntToString] = useState(randomInt.toString());
   const handleHoverLink = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     if (e.type === "mouseenter") {
@@ -64,19 +66,35 @@ export default function NavBar (props: NavBarProps) {
         </div>
 
         <div className="user">
-            <button className="auth login" onClick={handleLoginModal} id="login">
+            {loginStatus ? null : <button className="auth login" onClick={handleLoginModal} id="login">
               Anmelden
-            </button>
-            <button className="auth register" onClick={handleLoginModal} id="register">
+            </button>}
+            {loginStatus ? null : <button className="auth register" onClick={handleLoginModal} id="register">
               Registrieren
-            </button>
+            </button>}
+            {loginStatus ? <button className="auth shopAvatar" type="button">
+              <Star className="star1" />
+              <Star className="star2" />
+              <Star className="star3" />
+              Shop Avatars
+            </button> : null}
   
             <div className="userInfo" onClick={handleDropdown}>
-              <div className="link" id="link" style={{ border: dropdownIsOpen ? "1px solid #EDEFF1" : "1px solid transparent" }} onMouseEnter={handleHoverLink} onMouseLeave={handleHoverLink}>
-                  <img src={require("../../resources/images/user.png")} className="userImg" />
+              <div className={loginStatus ? "link loggedInLink" : "link"} id="link" style={{ border: dropdownIsOpen ? "1px solid #EDEFF1" : "1px solid transparent" }} onMouseEnter={handleHoverLink} onMouseLeave={handleHoverLink}>
+                  {loginStatus ? null : <img src={require("../../resources/images/user.png")} className="userImg" />}
+                  {loginStatus ? <div className="avatarContainer">
+                    <img className="avatar" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
+                    <div className="navbarUserInfo">
+                      <h4>{userName}</h4>
+                      <div className="karmaContainer">
+                        <img className="karma" src={require("../../resources/images/karma.PNG")} />
+                        <p>1 karma</p>
+                      </div>
+                    </div>
+                  </div> : null}
                   <img src={require("../../resources/images/expand.png")} className="expand" />
               </div>
-              <div className="dropdownMenu" style={{ display: dropdownIsOpen ? "block" : "none" }} id="dropdownMenu">
+              <div className={loginStatus ? "dropdownMenu dropdownMenuLogin" : "dropdownMenu"} style={{ display: dropdownIsOpen ? "block" : "none" }} id="dropdownMenu">
                 <div className="dropdownItem coins">
                   <img className="icon coin" src={require("../../resources/images/coin.png")} />
                   <h3>Münzen</h3>
@@ -468,8 +486,8 @@ export default function NavBar (props: NavBarProps) {
                 <div className="line" style={{ display: dropdownState.richtlinien ? "block" : "none" }}></div>
 
                 <div className="dropdownItem registrieren" onClick={loginStatus ? handleLogin : handleLoginModal} id={loginStatus ? "logout" : "register"}>
-                  <img className="icon registrieren" src={require(`../../resources/images/${loginStatus ? "logout.png" : "registrieren.png"}`)} />
-                  <h3>{loginStatus ? "Ausloggen" : "Registrieren & Anmelden"}</h3>
+                  <img className="icon registrieren noPointerEvents" src={require(`../../resources/images/${loginStatus ? "logout.png" : "registrieren.png"}`)} />
+                  <h3 className="noPointerEvents">{loginStatus ? "Ausloggen" : "Registrieren & Anmelden"}</h3>
                 </div>
 
                 <div className="dropdownItem" id="credits">

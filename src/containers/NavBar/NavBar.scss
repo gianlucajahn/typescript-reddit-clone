@@ -6,6 +6,21 @@
 // Imports
 @import "../../styles/global/variables";
 
+// Animations
+@keyframes spark {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
 .navBar {
     position: fixed;
     z-index: 10;
@@ -81,6 +96,44 @@
             padding-bottom: 7px;
             border: 1px solid $blue;
             cursor: pointer;
+        }
+
+        button.shopAvatar {
+            padding: 4px 16px 8px 16px;
+            color: white;
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(83,73,218,1) 0%, rgba(180,74,192,1) 100%);
+            border: none;
+            margin-right: 8px;
+            position: relative;
+
+            .star1,
+            .star2,
+            .star3 {
+                fill: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(83,73,218,1) 0%, rgba(180,74,192,1) 100%);
+                height: 16px;
+                position: absolute;
+                animation: infinite ease-in-out;
+                animation-name: spark;
+                animation-duration: 1.75s;
+            }
+
+            .star1 {
+                top: 16px;
+                left: -6px;
+            }
+
+            .star2 {
+                top: -9px;
+                left: 38px;
+                animation-delay: 0.8s;
+            }
+
+            .star3 {
+                right: -7px;
+                top: 12px;
+                animation-delay: 1.175s;
+            }
         }
 
         .login {
@@ -274,4 +327,60 @@
     height: 7px !important;
     transform: rotate(180deg);
     transition: 0.4s all;
+}
+
+.noPointerEvents {
+    pointer-events: none;
+}
+
+.avatarContainer {
+    display: flex;
+    gap: 5px;
+    margin-right: 50px;
+
+    .avatar {
+        height: 33px;
+    }
+
+    .navbarUserInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3px;
+
+        h4 {
+            transform: scaleX(1.1);
+            transform: scaleY(0.925);
+            font-size: 12px;
+            font-family: "IBM Light";
+        }
+    }
+}
+
+.karmaContainer {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    font-size: 12px;
+    font-family: "IBM";
+    p {
+        color: #A8AAAB;
+    }
+
+    .karma {
+        height: 12px;
+        padding-bottom: 1px;
+    }
+}
+
+.loggedInLink {
+    margin-top: 1px;
+    height: 41px !important;
+    padding-bottom: 2px !important;
+    padding-right: 12px !important;
+    padding-left: 10px !important;
+}
+
+.dropdownMenuLogin {
+    top: 105.5% !important;
 }
