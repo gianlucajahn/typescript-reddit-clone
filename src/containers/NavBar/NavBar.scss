@@ -91,7 +91,11 @@
             height: 32px;
 
             .vertical-line {
-                
+                height: 32px;
+                width: 1px;
+                border: none;
+                background-color: #edeff1;
+                margin: 0px 2px;
             }
 
             .userButton {
@@ -111,6 +115,10 @@
 
                 img {
                     height: 20px;
+                }
+
+                .live {
+                    height: 18px;
                 }
             }
 
