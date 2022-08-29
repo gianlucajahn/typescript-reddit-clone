@@ -26,7 +26,6 @@
     z-index: 10;
     width: 100%;
     box-sizing: border-box;
-    padding: 0px 20px;
     height: 49px;
     border-bottom: 1px solid #EDEFF1;
     background-color: white;
@@ -86,6 +85,40 @@
         padding-bottom: 2px;
         align-items: center;
 
+        .userButtons {
+            display: flex;
+            gap: 8px;
+            height: 32px;
+
+            .vertical-line {
+                
+            }
+
+            .userButton {
+                margin-top: 1px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 32px;
+                width: 32px;
+                border: 1px transparent;
+                border-radius: 4px;
+                background-color: transparent;
+                &:hover {
+                    background-color: rgba(26,26,27,0.1);
+                }
+
+                img {
+                    height: 20px;
+                }
+            }
+
+            .lastBtn {
+                margin-right: 8px;
+            }
+        }
+
         .auth {
             margin: 14px 0px 12px 0px;
             font-family: "Noto Sans Bold";
@@ -99,6 +132,7 @@
         }
 
         button.shopAvatar {
+            margin-top: 1px;
             padding: 4px 16px 8px 16px;
             color: white;
             background: rgb(2,0,36);
@@ -197,7 +231,6 @@
             .dropdownMenu {
                 position: absolute;
                 top: 92.5%;
-                right: 20px;
                 width: 254px;
                 min-height: 536px;
                 overflow: auto;
@@ -336,7 +369,7 @@
 .avatarContainer {
     display: flex;
     gap: 5px;
-    margin-right: 50px;
+    margin-right: 80px;
 
     .avatar {
         height: 33px;

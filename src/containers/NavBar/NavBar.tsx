@@ -54,7 +54,7 @@ export default function NavBar (props: NavBarProps) {
   }
 
   return (
-    <div className="navBar">
+    <div className="navBar" style={{ padding: loginStatus ? "0px 12px" : "0px 20px" }}>
         <div className="logo">
           <RedditLogo className="redditLogo" />
           <Reddit className="reddit" />
@@ -72,12 +72,37 @@ export default function NavBar (props: NavBarProps) {
             {loginStatus ? null : <button className="auth register" onClick={handleLoginModal} id="register">
               Registrieren
             </button>}
-            {loginStatus ? <button className="auth shopAvatar" type="button">
-              <Star className="star1" />
-              <Star className="star2" />
-              <Star className="star3" />
-              Shop Avatars
-            </button> : null}
+            {loginStatus ? 
+            
+            <div className="userButtons">
+                <button className="userButton">
+                  <img className="userIcon popular" src={require("../../resources/images/popular.PNG")} />
+                </button>
+                <button className="userButton">
+                  <img className="userIcon all" src={require("../../resources/images/all.PNG")} />
+                </button>
+                <button className="userButton">
+                  <img className="userIcon live" src={require("../../resources/images/live.PNG")} />
+                </button>
+
+                <div className="vertical-line"></div>
+
+                <button className="userButton">
+                  <img className="userIcon chat" src={require("../../resources/images/chat.PNG")} />
+                </button>
+                <button className="userButton">
+                  <img className="userIcon notifications" src={require("../../resources/images/bell.PNG")} />
+                </button>
+                <button className="userButton lastBtn">
+                  <img className="userIcon create" src={require("../../resources/images/add.PNG")} />
+                </button>
+                <button className="auth shopAvatar" type="button">
+                  <Star className="star1" />
+                  <Star className="star2" />
+                  <Star className="star3" />
+                  Shop Avatars
+                </button>
+            </div> : null}
   
             <div className="userInfo" onClick={handleDropdown}>
               <div className={loginStatus ? "link loggedInLink" : "link"} id="link" style={{ border: dropdownIsOpen ? "1px solid #EDEFF1" : "1px solid transparent" }} onMouseEnter={handleHoverLink} onMouseLeave={handleHoverLink}>
@@ -94,7 +119,7 @@ export default function NavBar (props: NavBarProps) {
                   </div> : null}
                   <img src={require("../../resources/images/expand.png")} className="expand" />
               </div>
-              <div className={loginStatus ? "dropdownMenu dropdownMenuLogin" : "dropdownMenu"} style={{ display: dropdownIsOpen ? "block" : "none" }} id="dropdownMenu">
+              <div className={loginStatus ? "dropdownMenu dropdownMenuLogin" : "dropdownMenu"} style={{ display: dropdownIsOpen ? "block" : "none", right: loginStatus ? "12px" : "20px" }} id="dropdownMenu">
                 <div className="dropdownItem coins">
                   <img className="icon coin" src={require("../../resources/images/coin.png")} />
                   <h3>Münzen</h3>
