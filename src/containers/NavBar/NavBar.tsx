@@ -54,14 +54,22 @@ export default function NavBar (props: NavBarProps) {
   }
 
   return (
-    <div className="navBar" style={{ padding: loginStatus ? "0px 12px" : "0px 20px" }}>
+    <div className="navBar" style={{ padding: loginStatus ? "0px 12px 0px 20px" : "0px 20px" }}>
         <div className="logo">
           <RedditLogo className="redditLogo" />
           <Reddit className="reddit" />
+
+          <div className="subredditContainer" style={{ display: loginStatus ? "flex" : "none" }}>
+            <div>
+              <img className="currentSubreddit" src={require("../../resources/images/home.png")} />
+              <h4>Home</h4>
+            </div>
+            <img src={require("../../resources/images/expand.png")} className="expand" />
+          </div>
         </div>
 
         <div className="search">
-          <input type="text" placeholder="Reddit durchsuchen" className="searchBar">
+          <input type="text" placeholder="Reddit durchsuchen" className={loginStatus ? "searchBarLogin" : "searchBar"}>
           </input>
         </div>
 

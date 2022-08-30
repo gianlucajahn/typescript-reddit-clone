@@ -25,12 +25,12 @@
     position: fixed;
     z-index: 10;
     width: 100%;
+    justify-content: space-between;
     box-sizing: border-box;
     height: 49px;
     border-bottom: 1px solid #EDEFF1;
     background-color: white;
     align-items: center;
-    justify-content: space-between;
     display: flex;
 
     .logo {
@@ -55,7 +55,8 @@
         height: 34px;
         margin-bottom: 2px;
 
-        .searchBar {
+        .searchBar,
+        .searchBarLogin {
             background: url("../../resources/images/search.svg") no-repeat scroll 16px 8px;
             background-size: 19px;
             color: $svgColor;
@@ -66,8 +67,6 @@
             border-radius: 4px;
             padding-left: 46px;
             height: 34px;
-            width: 608px;
-            margin-left: 20px;
             &:hover {
                 border: 1px solid $blue;
                 background-color: #fff;
@@ -77,6 +76,14 @@
                 background-color: #fff;
                 outline: none;
             }
+        }
+
+        .searchBar {
+            width: 608px;
+        }
+
+        .searchBarLogin {
+            width: 808px;
         }
     }
 
@@ -89,13 +96,13 @@
             display: flex;
             gap: 8px;
             height: 32px;
+            margin-left: 3px;
 
             .vertical-line {
                 height: 32px;
                 width: 1px;
                 border: none;
                 background-color: #edeff1;
-                margin: 0px 2px;
             }
 
             .userButton {
@@ -121,10 +128,6 @@
                     height: 18px;
                 }
             }
-
-            .lastBtn {
-                margin-right: 8px;
-            }
         }
 
         .auth {
@@ -146,7 +149,7 @@
             background: rgb(2,0,36);
             background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(83,73,218,1) 0%, rgba(180,74,192,1) 100%);
             border: none;
-            margin-right: 8px;
+            margin-right: 5px;
             position: relative;
 
             .star1,
@@ -229,10 +232,6 @@
                 .userImg {
                     height: 19px;
                     width: 20px;
-                }
-    
-                .expand {
-                    height: 7px;
                 }
             }
 
@@ -424,4 +423,49 @@
 
 .dropdownMenuLogin {
     top: 105.5% !important;
+}
+
+.expand {
+    height: 7px;
+}
+
+.subredditContainer {
+    margin: 0px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+    min-width: 245px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    &:hover {
+        border: 1px solid #EDEFF1;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+
+        .currentSubreddit {
+            height: 18px;
+            margin-right: 10px;
+        }
+
+        h4 {
+            font-family: "IBM Light";
+            font-size: 14px;
+            color: #1c1c1c;
+            padding-top: 2px;
+        }
+    }
+
+    .expand {
+        justify-self: flex-end;
+    }
+}
+
+@media only screen and (max-width: 1700px) {
+    .searchBarLogin {
+        width: 550px !important;
+    }
 }
