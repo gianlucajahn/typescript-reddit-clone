@@ -116,8 +116,25 @@
                 border: 1px transparent;
                 border-radius: 4px;
                 background-color: transparent;
+                position: relative;
+                font-size: 0.7185em;
                 &:hover {
                     background-color: rgba(26,26,27,0.1);
+                }
+                &::after {
+                    transition: 1s all;
+                }
+
+                &:hover::after {
+                    position: absolute;
+                    top: 117.5%;
+                    border-radius: 4px;
+                    background-color: black;
+                    color: white;
+                    height: 12px;
+                    margin: 0 auto;
+                    padding: 5px 10px 5px 10px;
+                    content: attr(aria-label);
                 }
 
                 img {

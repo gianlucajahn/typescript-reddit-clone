@@ -83,25 +83,25 @@ export default function NavBar (props: NavBarProps) {
             {loginStatus ? 
             
             <div className="userButtons">
-                <button className="userButton">
+                <button className="userButton" aria-label='Popular'>
                   <img className="userIcon popular" src={require("../../resources/images/popular.PNG")} />
                 </button>
-                <button className="userButton">
+                <button className="userButton" aria-label='All'>
                   <img className="userIcon all" src={require("../../resources/images/all.PNG")} />
                 </button>
-                <button className="userButton">
+                <button className="userButton" aria-label='Live'>
                   <img className="userIcon live" src={require("../../resources/images/live.PNG")} />
                 </button>
 
                 <div className="vertical-line"></div>
 
-                <button className="userButton">
+                <button className="userButton" aria-label='Chat'>
                   <img className="userIcon chat" src={require("../../resources/images/chat.PNG")} />
                 </button>
-                <button className="userButton">
+                <button className="userButton" aria-label='Notifications'>
                   <img className="userIcon notifications" src={require("../../resources/images/bell.PNG")} />
                 </button>
-                <button className="userButton lastBtn">
+                <button className="userButton lastBtn" aria-label='Create'>
                   <img className="userIcon create" src={require("../../resources/images/add.PNG")} />
                 </button>
                 <button className="auth shopAvatar" type="button">
