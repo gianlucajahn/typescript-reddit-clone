@@ -93,7 +93,7 @@ export default function NavBar (props: NavBarProps) {
                 </div>
                 {joinedCommunities.map((community: any, index: number) => {
                   return <div className="subItem" id={community.title}>
-                            <img className="subIcon" src={require(`../../resources/images/Communities/${community.title}/icon.PNG`)} />
+                            <img className="subIcon" src={require(`../../resources/images/Communities/${community.title}/icon.png`)} />
                             <h3>r/{community.title}</h3>
                             <img className="favorite" src={require(`../../resources/images/${community.favorite ? "" : "un"}favorited.PNG`)} /> 
                           </div>;

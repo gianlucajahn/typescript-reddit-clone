@@ -42,6 +42,30 @@ function App() {
         logo: "../../resources/images/Communities/learnprogramming/icon.PNG",
         category: "Education",
         favorite: false
+      },
+      {
+        title: "leagueoflegends",
+        logo: "../../resources/images/Communities/leagueoflegends/icon.PNG",
+        category: "Education",
+        favorite: false
+      },
+      {
+        title: "todayilearned",
+        logo: "../../resources/images/Communities/astronomy/icon.PNG",
+        category: "Education",
+        favorite: false
+      },
+      {
+        title: "wallstreetbets",
+        logo: "../../resources/images/Communities/wallstreetbets/icon.PNG",
+        category: "Education",
+        favorite: false
+      },
+      {
+        title: "nasa",
+        logo: "../../resources/images/Communities/nasa/icon.PNG",
+        category: "Education",
+        favorite: false
       }
   ]);
 
