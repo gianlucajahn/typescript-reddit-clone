@@ -30,6 +30,20 @@ function App() {
     username: false,
     password: false
   });
+  const [joinedCommunities, setJoinedCommunities] = useState([
+      {
+        title: "announcements",
+        logo: "../../resources/images/Communities/announcements/icon.PNG",
+        category: "Education",
+        favorite: false
+      },
+      {
+        title: "learnprogramming",
+        logo: "../../resources/images/Communities/learnprogramming/icon.PNG",
+        category: "Education",
+        favorite: false
+      }
+  ]);
 
   const handleLoginInput = (e: ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
@@ -38,6 +52,20 @@ function App() {
     } else if (target.id === "password") {
       setPassword(target.value);
     }
+  }
+
+  const handleFavorite = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+    const targetedIndex = joinedCommunities.findIndex(sub => sub.title === target.id);
+    const newJoinedCommunities = joinedCommunities.map((community, index) => {
+      if (index === targetedIndex) {
+        community.favorite = !community.favorite;
+        return community;
+      } else {
+        return community;
+      }
+    });
+    setJoinedCommunities(newJoinedCommunities);
   }
 
   const handleHover = (e: React.MouseEvent) => {
@@ -157,6 +185,8 @@ function App() {
         userName={userName}
         loginStatus={loginStatus}
         handleLogin={handleLogin}
+        joinedCommunities={joinedCommunities}
+        handleFavorite={handleFavorite}
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/typescript-reddit-clone/' element={<Home />} />

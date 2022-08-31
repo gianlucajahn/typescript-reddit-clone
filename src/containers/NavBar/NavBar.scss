@@ -48,6 +48,7 @@
         .reddit {
             height: 18px;
             padding-bottom: 1px;
+            margin-right: 2px;
         }
     }
 
@@ -121,9 +122,6 @@
                 &:hover {
                     background-color: rgba(26,26,27,0.1);
                 }
-                &::after {
-                    transition: 1s all;
-                }
 
                 &:hover::after {
                     position: absolute;
@@ -135,6 +133,16 @@
                     margin: 0 auto;
                     padding: 5px 10px 5px 10px;
                     content: attr(aria-label);
+                }
+
+                &:hover::before {
+                    position: absolute;
+                    top: 112.5%;
+                    background-color: black;
+                    color: white;
+                    height: 4px;
+                    margin: 0 auto;
+                    padding: 5px 10px 5px 10px;
                 }
 
                 img {
@@ -451,8 +459,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 14px;
+    padding: 8px 14px 8px 11px;
     min-width: 245px;
+    position: relative;
     border: 1px solid transparent;
     border-radius: 4px;
     &:hover {
@@ -478,6 +487,72 @@
 
     .expand {
         justify-self: flex-end;
+    }
+
+    .subredditDropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 63px 0px 20px 0px;
+        position: absolute;
+        top: 93%;
+        left: -1px;
+        width: 270px;
+        cursor: default;
+        max-height: 483px;
+        overflow-y: scroll;
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 4px;
+        border: 1px solid #EDEFF1;
+        border-top: 1px solid transparent;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+
+        h6 {
+            font-size: 10px;
+            font-family: "IBM Light";
+            color: #878a8c;
+            margin-bottom: 9px;
+            padding-left: 24px;
+            padding-right: 22px;
+            pointer-events: none;
+        }
+
+        .communityList {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .subItem {
+                width: 100%;
+                padding: 9px 22px 9px 24px;
+                position: relative;
+                box-sizing: border-box;
+                cursor: pointer;
+                &:hover {
+                    background-color: rgba(0,0,0,0.04);
+                }
+
+                .subIcon {
+                    height: 20px;
+                    margin-right: 8px;
+                }
+    
+                h3 {
+                    font-family: "IBM Light";
+                    font-size: 14px;
+                    color: #1c1c1c;
+                }
+
+                .favorite {
+                    height: 19px;
+                    position: absolute;
+                    right: 9.5%;
+                    top: 8px;
+                }
+            }
+        }
     }
 }
 

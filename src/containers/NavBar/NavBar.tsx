@@ -12,6 +12,8 @@ export interface NavBarProps {
   dropdownIsOpen: boolean,
   userName: string,
   loginStatus: boolean,
+  joinedCommunities: any,
+  handleFavorite: MouseEventHandler<HTMLButtonElement>,
   handleLogin: MouseEventHandler,
   handleDropdown: MouseEventHandler<HTMLDivElement>,
   handleExpand: MouseEventHandler<HTMLDivElement>,
@@ -37,9 +39,11 @@ export default function NavBar (props: NavBarProps) {
     handleExpand,
     handleLoginModal,
     handleLogin,
+    handleFavorite,
     dropdownState,
     userName,
-    loginStatus
+    loginStatus,
+    joinedCommunities
   } = props;
 
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
@@ -65,6 +69,46 @@ export default function NavBar (props: NavBarProps) {
               <h4>Home</h4>
             </div>
             <img src={require("../../resources/images/expand.png")} className="expand" />
+            <div className="subredditDropdown">
+              {joinedCommunities[0].favorite === true || joinedCommunities[1].favorite === true ? 
+              <>
+                <h6>DEINE FAVORITEN</h6>
+                <div className="favorites communityList">
+                  {joinedCommunities.map((community: any, index: number) => {
+                    if (community.favorite === true) {
+                      return <div className="subItem" id={community.title}>
+                        <img className="subIcon" src={require(community.logo)} />
+                        <h3>r/{community.title}</h3>
+                        <img className="favorite" src={require("../../resources/images/favorited.PNG")} /> 
+                      </div>
+                    }
+                  })}
+                </div>
+              </> : null}
+              <h6>DEINE COMMUNITIES</h6>
+              <div className="communityList">
+                <div className="createCommunity subItem">
+                  <img className="create subIcon" src={require("../../resources/images/add.PNG")} />
+                  <h3>Community erstellen</h3>
+                </div>
+                {joinedCommunities.map((community: any, index: number) => {
+                  return <div className="subItem" id={community.title}>
+                            <img className="subIcon" src={require(`../../resources/images/Communities/${community.title}/icon.PNG`)} />
+                            <h3>r/{community.title}</h3>
+                            <img className="favorite" src={require(`../../resources/images/${community.favorite ? "" : "un"}favorited.PNG`)} /> 
+                          </div>;
+                })}
+                <h3 style={{ marginTop: "50px" }}>Community erstellen</h3>
+                <h3>Community erstellen</h3>
+                <h3>Community erstellen</h3>
+                <h3>Community erstellen</h3>
+                <h3>Community erstellen</h3>
+                <h3>Community erstellen</h3>
+                <h3>Community erstellen</h3>
+                <h3>Community erstellen</h3>
+                <h3>Community erstellen</h3>
+              </div>
+            </div>
           </div>
         </div>
 
