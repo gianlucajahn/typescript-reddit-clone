@@ -9,6 +9,7 @@ import LoginModal from './components/LoginModal/LoginModal';
 
 function App() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [loginModalState, setLoginModalState] = useState("closed");
@@ -115,6 +116,32 @@ function App() {
       })} else {
         setDropdownState({...dropdownState, [changedState]: !dropdownState[changedState as keyof typeof dropdownState]});
       }
+  }
+
+  const handleNavigate = (e: React.MouseEvent) => {
+    const target = e.target as HTMLDivElement;
+    if (target.classList.contains('favorite')) {
+      return;
+    } else if (target.classList.contains('gaming') || (target.parentElement?.classList.contains("gaming"))) {
+      navigate("/r/gaming");
+      return;
+    } else if (target.classList.contains('sports') || (target.parentElement?.classList.contains("sports"))) {
+      navigate("/r/sports");
+      return;
+    } else if (target.classList.contains('television') || (target.parentElement?.classList.contains("television"))) {
+      navigate("/r/television");
+      return;
+    } else if (target.classList.contains('celebrity') || (target.parentElement?.classList.contains("celebrity"))) {
+      navigate("/r/celebrity");
+      return;
+    } else if (target.classList.contains('business') || (target.parentElement?.classList.contains("business"))) {
+      navigate("/r/business");
+      return;
+    } else if (target.classList.contains('crypto') || (target.parentElement?.classList.contains("crypto"))) {
+      navigate("/r/crypto");
+      return;
+    }
+    navigate(`${target.id}`);
   }
 
   const handleExpandSub = (e: React.MouseEvent) => {
@@ -236,6 +263,7 @@ function App() {
         handleFavorite={handleFavorite}
         subDropdownIsOpen={subDropdownIsOpen}
         handleExpandSub={handleExpandSub}
+        handleNavigate={handleNavigate}
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/typescript-reddit-clone/' element={<Home />} />
