@@ -14,7 +14,7 @@ export interface NavBarProps {
   loginStatus: boolean,
   subDropdownIsOpen: boolean,
   joinedCommunities: any,
-  handleFavorite: MouseEventHandler<HTMLButtonElement>,
+  handleFavorite: MouseEventHandler<HTMLImageElement>,
   handleLogin: MouseEventHandler,
   handleDropdown: MouseEventHandler<HTMLDivElement>,
   handleExpand: MouseEventHandler<HTMLDivElement>,
@@ -63,9 +63,9 @@ export default function NavBar (props: NavBarProps) {
 
   const handleHoverSubMenu = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
-    if (e.type === "mouseenter") {
+    if (e.type === "mouseenter" && target.id === "subredditContainer") {
       target.setAttribute('style', 'border: 1px solid #EDEFF1;');
-    } else if (!subDropdownIsOpen) {
+    } else if (!subDropdownIsOpen && target.id === "subredditContainer") {
       target.setAttribute('style', 'border: 1px solid transparent');
     }
   }
@@ -82,17 +82,17 @@ export default function NavBar (props: NavBarProps) {
               <h4 className="return">Home</h4>
             </div>
             <img src={require("../../resources/images/expand.png")} className="expand return" />
-            <div className="subredditDropdown" id="subredditDropdown" style={{ display: subDropdownIsOpen ? "block" : "none" }}>
-              {joinedCommunities[0].favorite === true || joinedCommunities[1].favorite === true ? 
+            <div className="subredditDropdown" id="subredditDropdown" style={{ display: subDropdownIsOpen ? "block" : "none", borderTop: "1px solid transparent" }}>
+              {joinedCommunities.find((community: any) => community.favorite === true) ? 
               <>
                 <h6>DEINE FAVORITEN</h6>
                 <div className="favorites communityList">
                   {joinedCommunities.map((community: any, index: number) => {
                     if (community.favorite === true) {
-                      return <div className="subItem sub" id={community.title}>
-                        <img className="subIcon sub" src={require(community.logo)} />
+                      return <div className="subItem sub" id={community.title + "-sub"}>
+                        <img className="subIcon sub" src={require(`../../resources/images/Communities/${community.title}/icon.png`)} />
                         <h3 className="sub">r/{community.title}</h3>
-                        <img className="favorite" src={require("../../resources/images/favorited.PNG")} /> 
+                        <img className="favorite" src={require("../../resources/images/favorited.PNG")} onClick={handleFavorite} id={community.title} /> 
                       </div>
                     }
                   })}
@@ -108,18 +108,26 @@ export default function NavBar (props: NavBarProps) {
                   return <div className="subItem sub" id={community.title}>
                             <img className="subIcon sub" src={require(`../../resources/images/Communities/${community.title}/icon.png`)} />
                             <h3 className="sub">r/{community.title}</h3>
-                            <img className="favorite" src={require(`../../resources/images/${community.favorite ? "" : "un"}favorited.PNG`)} /> 
+                            <img className="favorite" src={require(`../../resources/images/${community.favorite ? "" : "un"}favorited.PNG`)} id={community.title} onClick={handleFavorite} /> 
                           </div>;
                 })}
-                <h3 style={{ marginTop: "50px" }}>Community erstellen</h3>
-                <h3>Community erstellen</h3>
-                <h3>Community erstellen</h3>
-                <h3>Community erstellen</h3>
-                <h3>Community erstellen</h3>
-                <h3>Community erstellen</h3>
-                <h3>Community erstellen</h3>
-                <h3>Community erstellen</h3>
-                <h3>Community erstellen</h3>
+                <h6 className="communityList feeds">FEEDS</h6>
+                <div className="subItem sub" id="home">
+                  <img className="subIcon sub" src={require(`../../resources/images/home.png`)} />
+                  <h3 className="sub">Home</h3>
+                </div>;
+                <div className="subItem sub" id="popular">
+                  <img className="subIcon sub" src={require(`../../resources/images/popular.PNG`)} />
+                  <h3 className="sub">Popular</h3>
+                </div>;
+                <div className="subItem sub" id="all">
+                  <img className="subIcon sub" src={require(`../../resources/images/all.PNG`)} />
+                  <h3 className="sub">All</h3>
+                </div>;
+                <div className="subItem sub" id="redditlive">
+                  <img className="subIcon sub" src={require(`../../resources/images/live.PNG`)} />
+                  <h3 className="sub">Reddit Live</h3>
+                </div>;
               </div>
             </div>
           </div>

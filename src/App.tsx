@@ -34,37 +34,37 @@ function App() {
   const [joinedCommunities, setJoinedCommunities] = useState([
       {
         title: "announcements",
-        logo: "../../resources/images/Communities/announcements/icon.PNG",
+        logo: "../../resources/images/Communities/announcements/icon.png",
         category: "Education",
-        favorite: false
+        favorite: true
       },
       {
         title: "learnprogramming",
-        logo: "../../resources/images/Communities/learnprogramming/icon.PNG",
+        logo: "../../resources/images/Communities/learnprogramming/icon.png",
         category: "Education",
         favorite: false
       },
       {
         title: "leagueoflegends",
-        logo: "../../resources/images/Communities/leagueoflegends/icon.PNG",
+        logo: "../../resources/images/Communities/leagueoflegends/icon.png",
         category: "Education",
         favorite: false
       },
       {
         title: "todayilearned",
-        logo: "../../resources/images/Communities/astronomy/icon.PNG",
+        logo: "../../resources/images/Communities/astronomy/icon.png",
         category: "Education",
         favorite: false
       },
       {
         title: "wallstreetbets",
-        logo: "../../resources/images/Communities/wallstreetbets/icon.PNG",
+        logo: "../../resources/images/Communities/wallstreetbets/icon.png",
         category: "Education",
         favorite: false
       },
       {
         title: "nasa",
-        logo: "../../resources/images/Communities/nasa/icon.PNG",
+        logo: "../../resources/images/Communities/nasa/icon.png",
         category: "Education",
         favorite: false
       }
@@ -174,7 +174,7 @@ function App() {
     } else if (node2 === subredditDropdown) {
       setSubDropdownIsOpen(true);
       return
-    } else if (node2.classList.contains('communityList')) {
+    } else if (node2.classList.contains('communityList') || node2.classList.contains('favorite')) {
       setSubDropdownIsOpen(true);
       return
     } else if (node2.id === "subredditContainer" || node2.classList.contains('return')) {

@@ -20,5 +20,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "custom.d.ts", "global.d.ts", "src/declaration.d.ts",]
+  "include": ["src", "src/custom.d.ts", "global.d.ts", "src/declarations.d.ts",]
 }
