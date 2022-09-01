@@ -4,12 +4,13 @@ import './App.scss';
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Home from './containers/Home/Home';
 import NavBar from './containers/NavBar/NavBar';
-import { isReturnStatement } from 'typescript';
+import { isReturnStatement, reduceEachTrailingCommentRange } from 'typescript';
 import LoginModal from './components/LoginModal/LoginModal';
 
 function App() {
   const location = useLocation();
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
+  const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [loginModalState, setLoginModalState] = useState("closed");
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -116,6 +117,10 @@ function App() {
       }
   }
 
+  const handleExpandSub = (e: React.MouseEvent) => {
+    setSubDropdownIsOpen(!subDropdownIsOpen);
+  }
+
   const handleDropdown = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     if (target.id === "link") {
@@ -136,10 +141,12 @@ function App() {
   }
 
   const checkDropdown = (e: any) => {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    const subredditDropdown = document.getElementById('subredditDropdown');
+
     if (e.target.id === "link") {
       return;
     } else {
-      const dropdownMenu = document.getElementById('dropdownMenu');
       let node = e.target;
       if (node.id === "register") {
         setDropdownIsOpen(false);
@@ -157,8 +164,24 @@ function App() {
     
         node = node.parentNode;
       }
-  
-      setDropdownIsOpen(false);
+    setDropdownIsOpen(false);
+    }
+
+    let node2 = e.target;
+    if (node2.classList.contains('sub')) {
+      setSubDropdownIsOpen(false);
+      return;
+    } else if (node2 === subredditDropdown) {
+      setSubDropdownIsOpen(true);
+      return
+    } else if (node2.classList.contains('communityList')) {
+      setSubDropdownIsOpen(true);
+      return
+    } else if (node2.id === "subredditContainer" || node2.classList.contains('return')) {
+      return;
+    } else {
+      setSubDropdownIsOpen(false);
+      return;
     }
   }
 
@@ -211,6 +234,8 @@ function App() {
         handleLogin={handleLogin}
         joinedCommunities={joinedCommunities}
         handleFavorite={handleFavorite}
+        subDropdownIsOpen={subDropdownIsOpen}
+        handleExpandSub={handleExpandSub}
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/typescript-reddit-clone/' element={<Home />} />

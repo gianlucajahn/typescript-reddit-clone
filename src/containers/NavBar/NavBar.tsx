@@ -12,11 +12,13 @@ export interface NavBarProps {
   dropdownIsOpen: boolean,
   userName: string,
   loginStatus: boolean,
+  subDropdownIsOpen: boolean,
   joinedCommunities: any,
   handleFavorite: MouseEventHandler<HTMLButtonElement>,
   handleLogin: MouseEventHandler,
   handleDropdown: MouseEventHandler<HTMLDivElement>,
   handleExpand: MouseEventHandler<HTMLDivElement>,
+  handleExpandSub: MouseEventHandler<HTMLDivElement>
   handleLoginModal: MouseEventHandler<HTMLElement>,
   dropdownState: {
     erkunden: boolean,
@@ -40,10 +42,12 @@ export default function NavBar (props: NavBarProps) {
     handleLoginModal,
     handleLogin,
     handleFavorite,
+    handleExpandSub,
     dropdownState,
     userName,
     loginStatus,
-    joinedCommunities
+    joinedCommunities,
+    subDropdownIsOpen
   } = props;
 
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
@@ -57,44 +61,53 @@ export default function NavBar (props: NavBarProps) {
     }
   }
 
+  const handleHoverSubMenu = (e: React.MouseEvent) => {
+    const target = e.target as HTMLDivElement;
+    if (e.type === "mouseenter") {
+      target.setAttribute('style', 'border: 1px solid #EDEFF1;');
+    } else if (!subDropdownIsOpen) {
+      target.setAttribute('style', 'border: 1px solid transparent');
+    }
+  }
+
   return (
     <div className="navBar" style={{ padding: loginStatus ? "0px 12px 0px 20px" : "0px 20px" }}>
         <div className="logo">
           <RedditLogo className="redditLogo" />
           <Reddit className="reddit" />
 
-          <div className="subredditContainer" style={{ display: loginStatus ? "flex" : "none" }}>
+          <div className="subredditContainer" id="subredditContainer" style={{ display: loginStatus ? "flex" : "none", border: subDropdownIsOpen ? "1px solid #EDEFF1" : "1px solid transparent" }} onClick={handleExpandSub} onMouseEnter={handleHoverSubMenu} onMouseLeave={handleHoverSubMenu}>
             <div>
-              <img className="currentSubreddit" src={require("../../resources/images/home.png")} />
-              <h4>Home</h4>
+              <img className="currentSubreddit return" src={require("../../resources/images/home.png")} />
+              <h4 className="return">Home</h4>
             </div>
-            <img src={require("../../resources/images/expand.png")} className="expand" />
-            <div className="subredditDropdown">
+            <img src={require("../../resources/images/expand.png")} className="expand return" />
+            <div className="subredditDropdown" id="subredditDropdown" style={{ display: subDropdownIsOpen ? "block" : "none" }}>
               {joinedCommunities[0].favorite === true || joinedCommunities[1].favorite === true ? 
               <>
                 <h6>DEINE FAVORITEN</h6>
                 <div className="favorites communityList">
                   {joinedCommunities.map((community: any, index: number) => {
                     if (community.favorite === true) {
-                      return <div className="subItem" id={community.title}>
-                        <img className="subIcon" src={require(community.logo)} />
-                        <h3>r/{community.title}</h3>
+                      return <div className="subItem sub" id={community.title}>
+                        <img className="subIcon sub" src={require(community.logo)} />
+                        <h3 className="sub">r/{community.title}</h3>
                         <img className="favorite" src={require("../../resources/images/favorited.PNG")} /> 
                       </div>
                     }
                   })}
                 </div>
               </> : null}
-              <h6>DEINE COMMUNITIES</h6>
+              <h6 className="communityList">DEINE COMMUNITIES</h6>
               <div className="communityList">
-                <div className="createCommunity subItem">
-                  <img className="create subIcon" src={require("../../resources/images/add.PNG")} />
-                  <h3>Community erstellen</h3>
+                <div className="createCommunity subItem sub">
+                  <img className="create subIcon sub" src={require("../../resources/images/add.PNG")} />
+                  <h3 className="sub">Community erstellen</h3>
                 </div>
                 {joinedCommunities.map((community: any, index: number) => {
-                  return <div className="subItem" id={community.title}>
-                            <img className="subIcon" src={require(`../../resources/images/Communities/${community.title}/icon.png`)} />
-                            <h3>r/{community.title}</h3>
+                  return <div className="subItem sub" id={community.title}>
+                            <img className="subIcon sub" src={require(`../../resources/images/Communities/${community.title}/icon.png`)} />
+                            <h3 className="sub">r/{community.title}</h3>
                             <img className="favorite" src={require(`../../resources/images/${community.favorite ? "" : "un"}favorited.PNG`)} /> 
                           </div>;
                 })}
