@@ -269,7 +269,7 @@
                 width: 254px;
                 min-height: 536px;
                 overflow: auto;
-                max-height: 743px;
+                max-height: 760px;
                 overflow-x: hidden;
                 box-sizing: border-box;
                 border: 1px solid #EDEFF1;
@@ -572,5 +572,55 @@
 @media only screen and (max-width: 1700px) {
     .searchBarLogin {
         width: 550px !important;
+    }
+}
+
+.dropdownProfile {
+    display: flex;
+    cursor: default !important;
+    padding-top: 3px !important;
+
+    &:hover {
+        background-color: white !important;
+    }
+
+    .avatarBig {
+        height: 78px;
+        cursor: pointer;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: 1px;
+        margin-top: 12px;
+        gap: 3px;
+
+        h3.username {
+            font-family: "IBM" !important;
+            font-size: 15px !important;
+        }
+
+        button.toProfile {
+            padding: 0px 16px 0px 14px;
+            font-family: "Noto Sans Bold";
+            cursor: pointer;
+            height: 27px;
+            margin-bottom: 2px;
+            background: #3d99de;
+            color: white;
+            border: 1px solid #3d99de;
+            padding-bottom: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            .toProfileImg {
+                height: 14px;
+            }
+        }
     }
 }

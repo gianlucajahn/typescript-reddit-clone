@@ -197,6 +197,17 @@ export default function NavBar (props: NavBarProps) {
                   <img src={require("../../resources/images/expand.png")} className="expand" />
               </div>
               <div className={loginStatus ? "dropdownMenu dropdownMenuLogin" : "dropdownMenu"} style={{ display: dropdownIsOpen ? "block" : "none", right: loginStatus ? "12px" : "20px" }} id="dropdownMenu">
+                {loginStatus ? <div className="dropdownItem dropdownProfile">
+                  <img className="avatarBig" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
+                  <div className="profile">
+                    <h3 className="username">{userName}</h3>
+                    <button className="toProfile auth shopAvatar">
+                      <img className="toProfileImg" src={require("../../resources/images/profile.png")} />
+                      Profile
+                    </button>
+                  </div>
+                </div> : null}
+
                 <div className="dropdownItem coins">
                   <img className="icon coin" src={require("../../resources/images/coin.png")} />
                   <h3>Münzen</h3>
