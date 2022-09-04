@@ -14,6 +14,7 @@ export interface NavBarProps {
   userName: string,
   loginStatus: boolean,
   subDropdownIsOpen: boolean,
+  randomIntToString: string,
   joinedCommunities: any,
   handleFavorite: MouseEventHandler<HTMLImageElement>,
   handleLogin: MouseEventHandler,
@@ -50,12 +51,11 @@ export default function NavBar (props: NavBarProps) {
     userName,
     loginStatus,
     joinedCommunities,
-    subDropdownIsOpen
+    subDropdownIsOpen,
+    randomIntToString
   } = props;
 
   const location = useLocation();
-  const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
-  const [randomIntToString, setRandomIntToString] = useState(randomInt.toString());
   const handleHoverLink = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     if (e.type === "mouseenter") {

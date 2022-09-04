@@ -601,6 +601,7 @@
         h3.username {
             font-family: "IBM" !important;
             font-size: 15px !important;
+            margin-bottom: 2px;
         }
 
         button.toProfile {
@@ -617,6 +618,14 @@
             justify-content: center;
             align-items: center;
             gap: 5px;
+            &:hover {
+                background-color: $blueHovered;
+            }
+            &:active {
+                background-color: #3d99de !important;
+                border-color: #3d99de !important;
+                background: #3d99de !important;
+            }
 
             .toProfileImg {
                 height: 14px;

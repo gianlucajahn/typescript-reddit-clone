@@ -9,5 +9,12 @@
 .home {
     min-height: calc(200vh);
     background-color: $mainPageBackground;
+    display: flex;
+    gap: 20px;
+    padding-top: 68px;
+
+    .feed {
+        margin-left: 464px;
+    }
 }
 

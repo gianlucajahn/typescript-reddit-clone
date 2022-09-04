@@ -1,0 +1,71 @@
+
+// Imports
+@import "../../styles/global/variables";
+
+.createPostMenu {
+    display: flex;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+    padding: 6px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 640px;
+    height: 58px;
+    padding: 0px 8px 0px 59px;
+    align-items: center;
+    position: relative;
+
+    .avatar {
+        height: 54px;
+        position: absolute;
+        top: -9%;
+        left: 0.95%;
+        cursor: pointer;
+    }
+
+    input {
+        color: $svgColor;
+        font-family: 'Benton Sans Book';
+        background-color: #F6F7F8;
+        border: 1px solid #EDEFF1;
+        border-radius: 4px;
+        height: 36px;
+        width: 467px;
+        margin-bottom: 2px;
+        padding-left: 16px;
+        font-size: 15px;
+        margin-right: 8px;
+
+        &:hover {
+            border: 1px solid $blue;
+            background-color: #fff;
+        }
+        &:focus {
+            border: 1px solid $blue;
+            background-color: #fff;
+            outline: none;
+        }
+    }
+
+    button {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 38px;
+        width: 38px;
+        border: 1px transparent;
+        border-radius: 4px;
+        background-color: transparent;
+        position: relative;
+        font-size: 0.7185em;
+        &:hover {
+            background-color: rgba(26,26,27,0.1);
+        }
+
+        .icon {
+            height: 20px;
+        }
+    }
+}

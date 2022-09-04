@@ -12,6 +12,8 @@ function App() {
   const navigate = useNavigate();
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
+  const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
+  const [randomIntToString, setRandomIntToString] = useState(randomInt.toString());
   const [loginModalState, setLoginModalState] = useState("closed");
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -264,13 +266,29 @@ function App() {
         subDropdownIsOpen={subDropdownIsOpen}
         handleExpandSub={handleExpandSub}
         handleNavigate={handleNavigate}
+        randomIntToString={randomIntToString}
       />
       <Routes key={location.pathname} location={location}>
-        <Route path='/typescript-reddit-clone/' element={<Home />} />
-        <Route path='/typescript-reddit-clone/r/:subredditId' element={<Home />} />
-        <Route path='/typescript-reddit-clone/profile' element={<Home />} />
-        <Route path='/typescript-reddit-clone/create' element={<Home />} />
-        <Route path='*' element={<Home />} />
+        <Route path='/typescript-reddit-clone/' element={<Home 
+          randomIntToString={randomIntToString}
+          userName={userName}
+        />} />
+        <Route path='/typescript-reddit-clone/r/:subredditId' element={<Home 
+          randomIntToString={randomIntToString}
+          userName={userName}
+        />} />
+        <Route path='/typescript-reddit-clone/profile' element={<Home
+          randomIntToString={randomIntToString}
+          userName={userName}
+        />} />
+        <Route path='/typescript-reddit-clone/create' element={<Home 
+          randomIntToString={randomIntToString}
+          userName={userName}
+        />} />
+        <Route path='*' element={<Home
+          randomIntToString={randomIntToString}
+          userName={userName}
+        />} />
       </Routes>
     </div>
   );
