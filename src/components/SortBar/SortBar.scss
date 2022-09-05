@@ -1,0 +1,84 @@
+// Imports
+@import "../../styles/global/variables";
+
+.sortBar {
+    display: flex;
+    width: $contentWidth;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    height: 61px;
+
+    .left {
+        display: flex;
+        align-items: center;
+        padding-left: 13px;
+        gap: 9px;
+    }
+
+    .left .sortButton,
+    .right .sortButton {
+        margin-top: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 4px 10px 5px 8px;
+        border-radius: 20px;
+        border: none;
+        gap: 8px;
+        cursor: pointer;
+        &:active {
+            background-color: #c9c9c9 !important;
+        }
+
+        .expand {
+            height: 7px !important;
+            padding-top: 2px;
+        }
+
+        &#more {
+            height: 34px;
+
+            img {
+                width: 1.525em;
+                height: 0.425em;
+            }
+        }
+
+        &:hover {
+            background-color: #f6f7f8;
+        }
+        &.selected {
+            background-color: #f6f7f8;
+        }
+    
+        .icon {
+            height: 1.525em;
+        }
+
+        p {
+            padding-top: 2px;
+            font-family: "Noto Sans Bold";
+            font-size: 14px;
+            padding-bottom: 4px;
+            color: #878A8C;
+        }
+
+        p.selected {
+            color: #0079D3;
+        }
+    }
+}
+
+button.sortButton #layout {
+    height: 20px;
+}
+
+.right {
+    margin-right: 12px;
+}

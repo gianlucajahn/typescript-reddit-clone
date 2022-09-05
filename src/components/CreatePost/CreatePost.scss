@@ -10,9 +10,9 @@
     padding: 6px;
     border-radius: 4px;
     box-sizing: border-box;
-    width: 640px;
+    width: $contentWidth;
     height: 58px;
-    padding: 0px 8px 0px 59px;
+    padding: 0px 8px 0px 61px;
     align-items: center;
     position: relative;
 
@@ -20,7 +20,7 @@
         height: 54px;
         position: absolute;
         top: -9%;
-        left: 0.95%;
+        left: 1.2%;
         cursor: pointer;
     }
 
@@ -48,7 +48,8 @@
         }
     }
 
-    button {
+    button.imagePost,
+    button.linkPost {
         cursor: pointer;
         display: flex;
         justify-content: center;

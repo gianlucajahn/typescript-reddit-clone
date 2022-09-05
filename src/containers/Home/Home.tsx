@@ -1,16 +1,21 @@
 import * as React from 'react';
 import './Home.scss';
 import CreatePost from '../../components/CreatePost/CreatePost';
+import SortBar from '../../components/SortBar/SortBar';
 
 export interface HomeProps {
   randomIntToString: string,
-  userName: string
+  userName: string,
+  currentSort: string,
+  setSort: React.MouseEventHandler;
 }
 
 export default function Home (props: HomeProps) {
   const {
     randomIntToString,
-    userName
+    userName,
+    currentSort,
+    setSort
   } = props;
 
   return (
@@ -19,6 +24,10 @@ export default function Home (props: HomeProps) {
         <CreatePost 
           randomIntToString={randomIntToString}
           userName={userName} />
+        <SortBar 
+          currentSort={currentSort}
+          setSort={setSort}
+        />
       </div>
 
       <div className="info">

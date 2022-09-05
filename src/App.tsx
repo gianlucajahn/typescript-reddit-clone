@@ -14,6 +14,7 @@ function App() {
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
   const [randomIntToString, setRandomIntToString] = useState(randomInt.toString());
+  const [currentSort, setCurrentSort] = useState("best");
   const [loginModalState, setLoginModalState] = useState("closed");
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -80,6 +81,11 @@ function App() {
     } else if (target.id === "password") {
       setPassword(target.value);
     }
+  }
+
+  const setSort = (e: React.MouseEvent) => {
+    const target = e.currentTarget as HTMLButtonElement;
+    setCurrentSort(target.id);
   }
 
   const handleFavorite = (e: React.MouseEvent) => {
@@ -272,22 +278,32 @@ function App() {
         <Route path='/typescript-reddit-clone/' element={<Home 
           randomIntToString={randomIntToString}
           userName={userName}
+          currentSort={currentSort}
+          setSort={setSort}
         />} />
         <Route path='/typescript-reddit-clone/r/:subredditId' element={<Home 
           randomIntToString={randomIntToString}
           userName={userName}
+          currentSort={currentSort}
+          setSort={setSort}
         />} />
         <Route path='/typescript-reddit-clone/profile' element={<Home
           randomIntToString={randomIntToString}
           userName={userName}
+          currentSort={currentSort}
+          setSort={setSort}
         />} />
         <Route path='/typescript-reddit-clone/create' element={<Home 
           randomIntToString={randomIntToString}
           userName={userName}
+          currentSort={currentSort}
+          setSort={setSort}
         />} />
         <Route path='*' element={<Home
           randomIntToString={randomIntToString}
           userName={userName}
+          currentSort={currentSort}
+          setSort={setSort}
         />} />
       </Routes>
     </div>
