@@ -1,0 +1,43 @@
+.homesidebar {
+    max-height: 1000px;
+    min-height: 428px;
+    width: 312px;
+    box-sizing: border-box;
+}
+
+.topCommunities {
+    background-color: white;
+    width: 312px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    position: relative;
+
+    &::before {
+        background: linear-gradient(0deg,rgba(0,0,0,.7) 0,transparent);
+        content: "";
+        height: 80px;
+        position: absolute;
+        width: 100%;
+    }
+
+    .topBanner {
+        width: 310px;
+        height: 80px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        z-index: 5;
+    }
+
+    h3 {
+        position: absolute;
+        left: 5%;
+        font-size: 16px;
+        font-family: "IBM Light";
+        color: white;
+        bottom: 13px;
+        transform: scaleX(1.04);
+        transform: scaleY(0.95);
+    }
+}
