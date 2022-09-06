@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import './HomeSideBar.scss';
 
 export interface HomeSideBarProps {
@@ -8,6 +8,8 @@ export default function HomeSideBar (props: HomeSideBarProps) {
   const {
 
   } = props;
+
+  const [viewAll, setViewAll] = useState(false);
 
   return (
     <div className="homesidebar">
