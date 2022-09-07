@@ -8,6 +8,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
+    "noImplicitAny": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -22,3 +23,4 @@
   },
   "include": ["src", "src/custom.d.ts", "global.d.ts", "src/declarations.d.ts",]
 }
+ 
