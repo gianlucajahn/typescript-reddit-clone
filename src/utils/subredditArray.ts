@@ -55,7 +55,7 @@ const subredditArray = [
         buttonColor: "#fc471e",
         headerColor: "#fc471e",
         backgroundColor: "#edeff1",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/announcements/banner.jpg"
     },
     {
         title: "learnprogramming",
@@ -154,7 +154,7 @@ const subredditArray = [
         buttonColor: "#ff66ac",
         headerColor: "#349e48",
         backgroundColor: "#edeff1",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/learnprogramming/banner.jpg"
     },
     {
         title: "leagueoflegends",
@@ -239,7 +239,7 @@ const subredditArray = [
         buttonColor: "#a68039",
         headerColor: "#a68039",
         backgroundColor: "#0f221e",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/leagueoflegends/banner.jpg"
     },
     {
         title: "todayilearned",
@@ -322,7 +322,117 @@ const subredditArray = [
         buttonColor: "#0079d3",
         headerColor: "#0079d3",
         backgroundColor: "#edeff1",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/todayilearned/banner.jpg"
+    },
+    {
+        title: "wallstreetbets",
+        logo: "../../resources/images/Communities/wallstreetbets/icon.png",
+        category: "Entertainment",
+        favorite: false,
+        joined: true,
+        about: "Like 4chan found a Bloomberg Terminal.",
+        members: "12.5m",
+        online: "43.2k",
+        creationDate: "Jan 31, 2012",
+        rules: [
+            {
+                number: 1,
+                title: "Content Guidelines",
+                desc: "Please make sure all comments and submissions adhere to the content guidelines."
+            },
+            {
+                number: 2,
+                title: "Submission should've been a Comment in the Daily Thread",
+                desc: "If your submission isn't all that useful, funny, long, or unique, and is primarily text... well, it should've been a comment in the daily thread and not a submission. Note: Discussion threads can steer clear of this by bringing some information to the table, being more than a ticker and a question mark, etc."
+            },
+            {
+                number: 3,
+                title: "No Market Manipulation",
+                desc: "Any post that contains false or misleading information and is made for the purpose of manipulating the market for a security is prohibited. Any activity of this sort is against the securities laws and will not be tolerated on this forum."
+            },
+            {
+                number: 4,
+                title: "No Pump & Dumps, Short Squeezes, or Scams",
+                desc: "No non-reporting penny, microcap (Less than $500 million market cap), OTC stocks, low volume options, or any other worthless securities that are susceptible to scams or pump & dump schemes. The bot will unspam tickers when their market cap is >500MM and re-spam them after they sink to under 400MM. No squeeze-only threads. If your investment thesis is solely rallying people to move the price and liquidate longs/shorts, then it doesn't belong here. Try r/ponzischemes."
+            },
+            {
+                number: 5,
+                title: "Political Stuff",
+                desc: "This isn't /r/politics, /r/the_donald, /r/political_humor, etc. If you choose to start or engage in arguments about politicians instead of making fun of their bad SPY long then you're in the wrong place and we'll show you the door. Nobody cares about your political opinions. If it's not about taking advantage of the political to make money then leave that baggage at home. WSB is not the stage for your lazy political regurgitation nor will it be used as a propaganda mouthpiece by anybody."
+            },
+            {
+                number: 6,
+                title: "No Advertisement, Self-Promotion, Fundraising, or Begging",
+                desc: "No affiliate/referral links, trading services, market education shilling, Patreons, mailing lists, or anything even vaguely similar."
+            },
+            {
+                number: 7,
+                title: "No Bullsh*tting",
+                desc: "Don't make shit up, and be responsible giving and taking advice. This includes talking about things you don't know about. You should listen, not talk. Nobody wants an ill-informed opinion. Paper trades don't count as real trades and are forbidden. Nobody gives a shit about your preschool's trading competition."
+            },
+            {
+                number: 8,
+                title: "Bad Positions Screenshot",
+                desc: "YOLO posts must be a minimum of $10,000 of options or $25,000 of shares. If your title has to include 'position in comments' then it's a bad screenshot. Gain/Loss posts must show gains or losses of more than $2,500 for options or $5,000 for shares. Gain/Loss posts should be realized before posting. If it's good enough to screenshot, it's good enough to close."
+            },
+            {
+                number: 9,
+                title: "No Brigading",
+                desc: "If you came here from another sub specifically to steer the discussion, downvote, or accuse.. it will get you banned. Don't go do it to other subs either."
+            },
+            {
+                number: 10,
+                title: "No Bullsh*tting",
+                desc: "Screenshots or links to social media (Tweets, Reddit Comments, etc.) are not allowed unless they are new and market moving. For example, Elon Musk tweeting 'Funding secured at $420 to take Tesla private' was both new and market moving at the time, and would be allowed. However, Elon Musk tweeting 'we need to increase oil & gas output immediately' is not market moving, and would not be allowed. We also don't want to see posts like 'he's one of us!' or 'more visibility for this comment!'"
+            },
+            {
+                number: 11,
+                title: "Don't Shit on the Community",
+                desc: "Some level of poking fun at the subreddit is fine. We know how to laugh at ourselves. This becomes a problem however, when you let light hearted joking cross the line into malice and hatred."
+            },
+        ],
+        flairs: [
+            {
+                title: "Daily Discussion",
+                color: "#0392cf"
+            },
+            {
+                title: "Loss",
+                color: "#ff0000"
+            },
+            {
+                title: "Meme",
+                color: "#014980"
+            },
+            {
+                title: "Discussion",
+                color: "#800080"
+            },
+            {
+                title: "DD",
+                color: "#365b8c"
+            },
+            {
+                title: "Chart",
+                color: "#ff4500"
+            },
+            {
+                title: "News",
+                color: "#ffb000"
+            },
+            {
+                title: "Gain",
+                color: "#ffb000"
+            },
+            {
+                title: "YOLO",
+                color: "#0392cf"
+            }
+        ],
+        buttonColor: "#f1c40f",
+        headerColor: "#192a56",
+        backgroundColor: "#273c75",
+        bannerUrl: "../../resources/images/Communities/wallstreetbets/banner.jpg"
     },
     {
         title: "nasa",
@@ -423,7 +533,7 @@ const subredditArray = [
         buttonColor: "#0079d3",
         headerColor: "#003155",
         backgroundColor: "#00243e",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/nasa/banner.jpg"
     },
     {
         title: "genshinimpact",
@@ -538,7 +648,7 @@ const subredditArray = [
         buttonColor: "#0079d3",
         headerColor: "#373c3f",
         backgroundColor: "#3f8f94",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/genshinimpact/banner.jpg"
     },
     {
         title: "books",
@@ -620,7 +730,7 @@ const subredditArray = [
         buttonColor: "#bf9daf",
         headerColor: "#a1887f",
         backgroundColor: "#edeff1",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/books/banner.jpg"
     },
     {
         title: "apexlegends",
@@ -713,7 +823,7 @@ const subredditArray = [
         headerColor: "#373c3f",
         blackText: false,
         backgroundColor: "#edeff1",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/apexlegends/banner.jpg"
     },
     {
         title: "nba",
@@ -794,88 +904,7 @@ const subredditArray = [
         headerColor: "#ffa500",
         blackText: false,
         backgroundColor: "#edeff1",
-        bannerUrl: ""
-    },
-    {
-        title: "nba",
-        logo: "../../resources/images/Communities/nba/icon.png",
-        category: "Sports",
-        favorite: false,
-        joined: false,
-        about: "A subreddit dedicated to NBA news and discussion.",
-        members: "5.2m",
-        online: "17.5k",
-        creationDate: "Nov 4, 2008",
-        rules: [
-            {
-                number: 1,
-                title: "Be civil and respectful",
-                desc: "There are obvious reasons why we don't allow people to personally insult others, and doing so will get you banned. It makes everyone feel a little less welcome. Note: this rule applies to messages in modmail, as well."
-            },
-            {
-                number: 2,
-                title: "No trolling or baiting users",
-                desc: "Do not post or comment with the purpose of trolling or inciting reactions from other users. This will lead to a ban. Don't be offensive just to be offensive."
-            },
-            {
-                number: 3,
-                title: "No racist, sexist, or homophobic language",
-                desc: "This is an automatic ban. We want everyone no matter their age, gender, sexual preferences, or race to feel welcome in this subreddit. This includes jokes or quotes that include such language."
-            },
-            {
-                number: 4,
-                title: "No reposts",
-                desc: "Please check the new queue before posting. Make sure the content you are posting has not already been submitted by another user."
-            },
-            {
-                number: 5,
-                title: "No fake news",
-                desc: "Any blatant attempt to grab attention or troll with a fake news headline will result in a permanent ban. Make sure your news comes from a reputable source."
-            },
-            {
-                number: 6,
-                title: "No self-promotion",
-                desc: "There's a big difference between people that are trying to use our subreddit for their own personal gain and people that are just trying to share something with the community."
-            },
-            {
-                number: 7,
-                title: "No NSFW content",
-                desc: "NSFW content will be removed and violators will be banned."
-            },
-            {
-                number: 8,
-                title: "Posts and comments must be relevant to the NBA",
-                desc: "Posts that are irrelevant for this subreddit include, but is not limited to: video games, 2K, fantasy, gambling and college players. Comments that purposely derail the discussion of the post may lead to a ban."
-            },
-            {
-                number: 9,
-                title: "Stats/Player Tweets/Quotes/Misc. Media are self-post only and must be sourced",
-                desc: "All stats posts, outside of post game box score stats, must be sourced. If it's not a common stat easily found in a single game box score (counting stats across multiple games should be sourced), include the source in the post. You should also include some of your thoughts in the body of the post to jump-start discussion. Posts that simply link to stats will be removed."
-            }
-        ],
-        flairs: [
-            {
-                title: "Game Thread",
-                color: "#ff4500"
-            },
-            {
-                title: "Post Game Thread",
-                color: "#3fab53"
-            },
-            {
-                title: "Highlight",
-                color: "#ffa500"
-            },
-            {
-                title: "News",
-                color: "#57b2b2"
-            }
-        ],
-        buttonColor: "#ff4500",
-        headerColor: "#ffa500",
-        blackText: false,
-        backgroundColor: "#edeff1",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/nba/banner.jpg"
     },
     {
         title: "movies",
@@ -988,7 +1017,7 @@ const subredditArray = [
         headerColor: "#014980",
         blackText: false,
         backgroundColor: "#02315c",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/movies/banner.jpg"
     },
     {
         title: "programmerhumor",
@@ -1068,7 +1097,7 @@ const subredditArray = [
         headerColor: "#ff4500",
         blackText: true,
         backgroundColor: "#edeff1",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/programmerhumor/banner.jpg"
     },
     {
         title: "baking",
@@ -1120,7 +1149,7 @@ const subredditArray = [
         headerColor: "#0079d3",
         blackText: true,
         backgroundColor: "#edeff1",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/baking/banner.jpg"
     },
     {
         title: "astronomy",
@@ -1202,7 +1231,7 @@ const subredditArray = [
         headerColor: "#000000",
         blackText: false,
         backgroundColor: "#edeff1",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/astronomy/banner.jpg"
     },
     {
         title: "sports",
@@ -1271,11 +1300,11 @@ const subredditArray = [
         headerColor: "#000000",
         blackText: false,
         backgroundColor: "#edeff1",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/sports/banner.jpg"
     },
     {
-        title: "business",
-        logo: "../../resources/images/Communities/business/icon.png",
+        title: "finance",
+        logo: "../../resources/images/Communities/finance/icon.png",
         category: "Education",
         favorite: false,
         joined: false,
@@ -1331,8 +1360,7 @@ const subredditArray = [
         buttonColor: "#0d7680",
         headerColor: "#0d7680",
         blackText: false,
-        backgroundColor: "#f2dfce",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/finance/banner.jpg"
     },
     {
         title: "crypto",
@@ -1430,7 +1458,7 @@ const subredditArray = [
         headerColor: "#cc3600",
         blackText: false,
         backgroundColor: "#bbbdbf",
-        bannerUrl: ""
+        bannerUrl: "../../resources/images/Communities/crypto/banner.jpg"
     },
 ]
 

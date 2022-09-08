@@ -140,7 +140,7 @@ function App() {
       navigate("/r/movies");
       return;
     } else if (target.classList.contains('business') || (target.parentElement?.classList.contains("business"))) {
-      navigate("/r/business");
+      navigate("/r/finance");
       return;
     } else if (target.classList.contains('crypto') || (target.parentElement?.classList.contains("crypto"))) {
       navigate("/r/crypto");
