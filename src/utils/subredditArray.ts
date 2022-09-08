@@ -1070,6 +1070,368 @@ const subredditArray = [
         backgroundColor: "#edeff1",
         bannerUrl: ""
     },
+    {
+        title: "baking",
+        logo: "../../resources/images/Communities/baking/icon.png",
+        category: "Entertainment",
+        favorite: false,
+        joined: false,
+        about: "For all your baking needs! Recipes, ideas and all things baking related. Cakes, cookies, pies, tarts, muffins, scones, short- rye- wheat- and naan breads welcome!",
+        members: "957k",
+        online: "707",
+        creationDate: "Apr 21, 2009",
+        rules: [
+            {
+                number: 1,
+                title: "No self-promotion",
+                desc: "No self-promotion (please don't link to pinterest, instagram, or facebook)"
+            },
+            {
+                number: 2,
+                title: "No memes",
+                desc: "Please do not post memes in this subreddit."
+            },
+            {
+                number: 3,
+                title: "No stand mixer posts",
+                desc: "No stand mixer or other kitchen-aid posts."
+            },
+            {
+                number: 4,
+                title: "No tshirt, mug, dropshipping etc. spam",
+                desc: "from r/modguide thread: 'The flow of t-shirt spam (and other astroturfing-type spam) goes like this: Scammer will post an image to a sub that they have stolen from a popular post or social media site. Or they will simply proceed to step 2 on a popular image post, steal that image and place it on a shirt and post a link inside the thread. Then a second account will comment asking if anyone knows where to buy this on a shirt. A third account will post a link.'"
+            }
+        ],
+        flairs: [
+            {
+                title: "Semi-Related",
+                color: "#edeff1"
+            },
+            {
+                title: "No recipe",
+                color: "#edeff1"
+            },
+            {
+                title: "Recipe",
+                color: "#edeff1"
+            }
+        ],
+        buttonColor: "#0079d3",
+        headerColor: "#0079d3",
+        blackText: true,
+        backgroundColor: "#edeff1",
+        bannerUrl: ""
+    },
+    {
+        title: "astronomy",
+        logo: "../../resources/images/Communities/astronomy/icon.png",
+        category: "Education",
+        favorite: false,
+        joined: false,
+        about: "The amateur hobby of humanity since the dawn of time and scientific study of celestial objects.",
+        members: "2.6m",
+        online: "185",
+        creationDate: "Mar 28, 2008",
+        rules: [
+            {
+                number: 1,
+                title: "Read the rules",
+                desc: "Read all the rules before posting or commenting. If your post was removed or you were banned, it's probably because you didn't read the rules and the mods aren't under any obligation to explain why since it's in the rules. Read the rules."
+            },
+            {
+                number: 2,
+                title: "Pictures & Videos",
+                desc: "We require that all pictures and videos be original content created by the submitter and include acquisition information as a top level comment. Submissions must be exceptional quality (i.e., likely no cell phone. Should have good composition, focus, resolution...). Spamming multiple submissions (especially ones of reprocessings of the same object) in a short time or reposting removed submissions will result in a ban."
+            },
+            {
+                number: 3,
+                title: "Object Identification",
+                desc: "If you are asking for help identifying an object you must first have referred to this thread (https://www.reddit.com/r/Astronomy/comments/92zks3/), consulted the flow chart there, and used all tools linked in the stickied comment. If you are still unable to answer the question yourself, make sure you include a time, location, direction, and angle above the horizon."
+            },
+            {
+                number: 4,
+                title: "Poorly Researched Posts",
+                desc: "Posts that ask simple questions that can be easily answered by a few minutes on Google/YouTube will be removed. To ensure your post is not removed, ask specific questions letting readers know what you have already learned/tried. Similarly posts that ask for subjective answers, basic sources on topics (i.e., What books/blogs should I read?) will be removed. We're here to help you learn; not to do your thinking for you and we're definitely not here to do your homework for you."
+            },
+            {
+                number: 5,
+                title: "Telescope Help",
+                desc: "While we don't mind answering questions about your scope please refer to our rule regarding poorly researched posts. Posts asking what telescope to get or which telescope is better will be removed. If you need additional help, try /r/Telescopes."
+            },
+            {
+                number: 6,
+                title: "Content",
+                desc: "Rage comics, memes, infographics, etc... are not allowed. Avoid multiple exclamation marks, excessive CAPS, or editorializing submission titles. Selling items, crowdfunding, etc... are prohibited. Look, we get it. Carl Sagan was a HUGE pothead. Post your stoner moments over at /r/woahdude/"
+            },
+            {
+                number: 7,
+                title: "Comments",
+                desc: "Comments should be on topic. We do not allow comments that are cliche, low-brow, disrespectful, etc...."
+            },
+            {
+                number: 8,
+                title: "Sources",
+                desc: "Primary or reputable secondary sources ONLY. Users posting content from a single site will be assumed to be driving traffic to that site and will be banned."
+            },
+            {
+                number: 9,
+                title: "Repetition & Relevance",
+                desc: "When posting news, please verify that the topic hasn't already been posted in the past few days. Submissions should be recent enough or historically significant enough to be relevant. Astronomy can be done in space but space flight is not astronomy."
+            },
+            {
+                number: 10,
+                title: "Pseudoscience",
+                desc: "/r/Astronomy is a science based sub. Pseudoscience (Creationism, Electric Universe, Flat Earthism, Ancient Aliens, Moon Landing conspiracy, etc...) will be removed. Similarly, this is not the place for half baked theories or outlandish hypotheticals."
+            },
+        ],
+        flairs: [
+            {
+                title: "Photos",
+                color: "#8d001a"
+            },
+            {
+                title: "Guides",
+                color: "#8d001a"
+            },
+            {
+                title: "Studies",
+                color: "#8d001a"
+            }
+        ],
+        buttonColor: "#8d001a",
+        headerColor: "#000000",
+        blackText: false,
+        backgroundColor: "#edeff1",
+        bannerUrl: ""
+    },
+    {
+        title: "sports",
+        logo: "../../resources/images/Communities/sports/icon.png",
+        category: "Entertainment",
+        favorite: false,
+        joined: false,
+        about: "Sports News and Highlights from the NFL, NBA, NHL, MLB, MLS, and leagues around the world.",
+        members: "20.5m",
+        online: "1.8k",
+        creationDate: "Sep 17, 2007",
+        rules: [
+            {
+                number: 1,
+                title: "No Memes, Images or Low-Effort/Joke Posts.",
+                desc: "No memes, joke posts, eSports, pictures with text or static images. NSFW content must be relevant to sports and market appropriately"
+            },
+            {
+                number: 2,
+                title: "Titles Must be High-Effort and Descriptive",
+                desc: "Posts with misleading/sensationalized/editorialized/ambiguous titles are prohibited. The title must clearly and thoroughly describe the post."
+            },
+            {
+                number: 3,
+                title: "No Blogs, Spam, or Illegal Content",
+                desc: "If you post a blog, vlog, podcast, or attempt to drive traffic to a specific channel or website - it will be removed and you will be banned. ALL self-promotion will be removed as dictated by site rules."
+            },
+            {
+                number: 4,
+                title: "No Personal Information",
+                desc: "Making comments or posts with another person’s personal information (name, social media, phone number, etc) that is not publicly available is against Reddit’s rules and will earn a ban and report to the admins."
+            },
+            {
+                number: 5,
+                title: "No Rudeness, Personal Attacks or Trolling",
+                desc: "No racism, sexism, slurs, etc. Threats, suggestions of harm, personal insults and personal attacks are prohibited. No posts/comments created for hate, trolling or slapfights. Comparing or ranking different sports, athletes, fanbases or nationalities is prohibited. Calling out a specific user or taking part in/encouraging witch hunting will lead to a ban."
+            }
+        ],
+        flairs: [
+            {
+                title: "Mod Post",
+                color: "#ff4500"
+            },
+            {
+                title: "Tennis",
+                color: "#ff4500"
+            },
+            {
+                title: "Basketball",
+                color: "#ff4500"
+            },
+            {
+                title: "Cricket",
+                color: "#ff4500"
+            },
+            {
+                title: "Hockey",
+                color: "#ff4500"
+            },
+            {
+                title: "Football",
+                color: "#ff4500"
+            }
+        ],
+        buttonColor: "#ff4500",
+        headerColor: "#000000",
+        blackText: false,
+        backgroundColor: "#edeff1",
+        bannerUrl: ""
+    },
+    {
+        title: "business",
+        logo: "../../resources/images/Communities/business/icon.png",
+        category: "Education",
+        favorite: false,
+        joined: false,
+        about: "Welcome to r/Finance! No Personal Finance, Homework, Personal blogs, or Career-related posts. All questions go in Monday Morning catch-all threads.",
+        members: "973k",
+        online: "286",
+        creationDate: "Mar 13, 2008",
+        rules: [
+            {
+                number: 1,
+                title: "No Memes, Images or Low-Effort/Joke Posts.",
+                desc: "No memes, joke posts, pictures with text or static images."
+            },
+            {
+                number: 2,
+                title: "Titles Must be High-Effort and Descriptive",
+                desc: "Posts with misleading/sensationalized/editorialized/ambiguous titles are prohibited. The title must clearly and thoroughly describe the post."
+            },
+            {
+                number: 3,
+                title: "No Blogs, Spam, or Illegal Content",
+                desc: "If you post a blog, vlog, podcast, or attempt to drive traffic to a specific channel or website - it will be removed and you will be banned. ALL self-promotion will be removed as dictated by site rules."
+            },
+            {
+                number: 4,
+                title: "No Personal Information",
+                desc: "Making comments or posts with another person’s personal information (name, social media, phone number, etc) that is not publicly available is against Reddit’s rules and will earn a ban and report to the admins."
+            },
+            {
+                number: 5,
+                title: "No Rudeness, Personal Attacks or Trolling",
+                desc: "No racism, sexism, slurs, etc. Threats, suggestions of harm, personal insults and personal attacks are prohibited. No posts/comments created for hate, trolling or slapfights."
+            }
+        ],
+        flairs: [
+            {
+                title: "Analysis",
+                color: "#ff4500"
+            },
+            {
+                title: "Question",
+                color: "#ff4500"
+            },
+            {
+                title: "Discussion",
+                color: "#ff4500"
+            },
+            {
+                title: "News",
+                color: "#ff4500"
+            }
+        ],
+        buttonColor: "#0d7680",
+        headerColor: "#0d7680",
+        blackText: false,
+        backgroundColor: "#f2dfce",
+        bannerUrl: ""
+    },
+    {
+        title: "crypto",
+        logo: "../../resources/images/Communities/crypto/icon.png",
+        category: "Entertainment",
+        favorite: false,
+        joined: false,
+        about: "The leading community for cryptocurrency news, discussion, and analysis.",
+        members: "5.4m",
+        online: "7.1k",
+        creationDate: "Mar 11, 2013",
+        rules: [
+            {
+                number: 1,
+                title: "Core Principles",
+                desc: "See our Expanded Rules wiki page for more details about this rule."
+            },
+            {
+                number: 2,
+                title: "Spam",
+                desc: "Posting referral, promo links, or codes of any kind is strictly prohibited and will be met with a long-term or permanent ban. This includes 'PM for referral', asking for referral codes or links, and linking to sites used solely for referral links."
+            },
+            {
+                number: 3,
+                title: "Manipulation",
+                desc: "See our Expanded Rules wiki page for more details about this rule."
+            },
+            {
+                number: 4,
+                title: "Illegal Activity",
+                desc: "See our Expanded Rules wiki page for more details about this rule."
+            },
+            {
+                number: 5,
+                title: "Content Standards",
+                desc: "See our Expanded Rules wiki page for more details about this rule."
+            },
+            {
+                number: 6,
+                title: "Personal Information",
+                desc: "See our Expanded Rules wiki page for more details about this rule."
+            },
+            {
+                number: 7,
+                title: "Content Theft",
+                desc: "See our Expanded Rules wiki page for more details about this rule."
+            },
+            {
+                number: 8,
+                title: "On Topic Discussion",
+                desc: "See our Expanded Rules wiki page for more details about this rule."
+            },
+            {
+                number: 9,
+                title: "Suitable Titles and Flairs",
+                desc: "See our Expanded Rules wiki page for more details about this rule."
+            },
+            {
+                number: 10,
+                title: "Communicate With the Mod Team",
+                desc: "See our Expanded Rules wiki page for more details about this rule."
+            }
+        ],
+        flairs: [
+            {
+                title: "DISCUSSION",
+                color: "#7193ff"
+            },
+            {
+                title: "OFFICIAL",
+                color: "#f53e3e"
+            },
+            {
+                title: "GENERAL NEWS",
+                color: "#ff4500"
+            },
+            {
+                title: "UPDATES",
+                color: "#014980"
+            },
+            {
+                title: "COMEDY",
+                color: "#cc8b00"
+            },
+            {
+                title: "REMINDER",
+                color: "#ffd635"
+            },
+            {
+                title: "TECHNOLOGY",
+                color: "#720469"
+            }
+        ],
+        buttonColor: "#cc3600",
+        headerColor: "#cc3600",
+        blackText: false,
+        backgroundColor: "#bbbdbf",
+        bannerUrl: ""
+    },
 ]
 
 export default subredditArray;

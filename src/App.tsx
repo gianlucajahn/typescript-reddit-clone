@@ -137,10 +137,7 @@ function App() {
       navigate("/r/sports");
       return;
     } else if (target.classList.contains('television') || (target.parentElement?.classList.contains("television"))) {
-      navigate("/r/television");
-      return;
-    } else if (target.classList.contains('celebrity') || (target.parentElement?.classList.contains("celebrity"))) {
-      navigate("/r/celebrity");
+      navigate("/r/movies");
       return;
     } else if (target.classList.contains('business') || (target.parentElement?.classList.contains("business"))) {
       navigate("/r/business");
