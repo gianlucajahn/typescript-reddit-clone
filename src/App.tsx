@@ -6,10 +6,12 @@ import Home from './containers/Home/Home';
 import NavBar from './containers/NavBar/NavBar';
 import { isReturnStatement, reduceEachTrailingCommentRange } from 'typescript';
 import LoginModal from './components/LoginModal/LoginModal';
+import subredditArray from './utils/subredditArray';
 
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
+  const [subreddits, setSubreddits] = useState(subredditArray);
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
