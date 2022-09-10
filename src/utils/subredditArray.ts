@@ -194,6 +194,7 @@ const subredditArray = [
         ],
         buttonColor: "#a68039",
         headerColor: "#a68039",
+        blackText: false,
         backgroundColor: "#0f221e",
         bannerUrl: "../../resources/images/Communities/leagueoflegends/banner.jpg"
     },
@@ -309,6 +310,7 @@ const subredditArray = [
         ],
         buttonColor: "#0079d3",
         headerColor: "#373c3f",
+        blackText: false,
         backgroundColor: "#3f8f94",
         bannerUrl: "../../resources/images/Communities/genshinimpact/banner.jpg"
     },
@@ -451,6 +453,7 @@ const subredditArray = [
         buttonColor: "#0d7680",
         headerColor: "#0d7680",
         blackText: false,
+        backgroundColor: "#F2DFCE",
         bannerUrl: "../../resources/images/Communities/finance/banner.jpg"
     },
     {
@@ -508,6 +511,7 @@ const subredditArray = [
         ],
         buttonColor: "#fc471e",
         headerColor: "#fc471e",
+        blackText: false,
         backgroundColor: "#edeff1",
         bannerUrl: "../../resources/images/Communities/announcements/banner.jpg"
     },
@@ -607,6 +611,7 @@ const subredditArray = [
         ],
         buttonColor: "#ff66ac",
         headerColor: "#349e48",
+        blackText: false,
         backgroundColor: "#edeff1",
         bannerUrl: "../../resources/images/Communities/learnprogramming/banner.jpg"
     },
@@ -690,6 +695,7 @@ const subredditArray = [
         ],
         buttonColor: "#0079d3",
         headerColor: "#0079d3",
+        blackText: false,
         backgroundColor: "#edeff1",
         bannerUrl: "../../resources/images/Communities/todayilearned/banner.jpg"
     },
@@ -800,6 +806,7 @@ const subredditArray = [
         ],
         buttonColor: "#f1c40f",
         headerColor: "#192a56",
+        blackText: false,
         backgroundColor: "#273c75",
         bannerUrl: "../../resources/images/Communities/wallstreetbets/banner.jpg"
     },
@@ -901,6 +908,7 @@ const subredditArray = [
         ],
         buttonColor: "#0079d3",
         headerColor: "#003155",
+        blackText: false,
         backgroundColor: "#00243e",
         bannerUrl: "../../resources/images/Communities/nasa/banner.jpg"
     },
@@ -983,6 +991,7 @@ const subredditArray = [
         ],
         buttonColor: "#bf9daf",
         headerColor: "#a1887f",
+        blackText: false,
         backgroundColor: "#edeff1",
         bannerUrl: "../../resources/images/Communities/books/banner.jpg"
     },

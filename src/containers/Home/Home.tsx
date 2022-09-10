@@ -3,14 +3,16 @@ import './Home.scss';
 import CreatePost from '../../components/CreatePost/CreatePost';
 import SortBar from '../../components/SortBar/SortBar';
 import HomeSideBar from '../../components/HomeSideBar/HomeSideBar';
+import { Subreddits } from '../../types/types';
 
 export interface HomeProps {
   randomIntToString: string,
   userName: string,
   currentSort: string,
   setSort: React.MouseEventHandler;
-  subreddits: [],
-  topSubreddits: [],
+  subreddits: Subreddits,
+  topSubreddits: Subreddits,
+  handleSubMembership: React.MouseEventHandler
 }
 
 export default function Home (props: HomeProps) {
@@ -20,7 +22,8 @@ export default function Home (props: HomeProps) {
     currentSort,
     setSort,
     subreddits,
-    topSubreddits
+    topSubreddits,
+    handleSubMembership
   } = props;
 
   return (
@@ -36,7 +39,11 @@ export default function Home (props: HomeProps) {
       </div>
 
       <div className="info">
-        <HomeSideBar />
+        <HomeSideBar 
+          subreddits={subreddits}
+          topSubreddits={topSubreddits}
+          handleSubMembership={handleSubMembership}
+        />
       </div>
     </div>
   );

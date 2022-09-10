@@ -1,3 +1,6 @@
+// Imports
+@import "../../styles/global/variables";
+
 .homesidebar {
     max-height: 1000px;
     min-height: 428px;
@@ -5,14 +8,14 @@
     box-sizing: border-box;
 }
 
-.topCommunities {
+.topBannerContainer {
+    position: relative;
+    height: 80px;
     background-color: white;
     width: 312px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    margin-bottom: 16px;
     border-radius: 4px;
-    position: relative;
 
     &::before {
         background: linear-gradient(0deg,rgba(0,0,0,.7) 0,transparent);
@@ -36,8 +39,93 @@
         font-size: 16px;
         font-family: "IBM Light";
         color: white;
-        bottom: 13px;
+        bottom: 7px;
         transform: scaleX(1.04);
         transform: scaleY(0.95);
+    }
+}
+
+.subredditList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-bottom: none;
+
+    .viewAll {
+        align-self: center;
+        margin-top: 12px;
+        font-family: "Noto Sans Bold";
+        color: white;
+        background-color: #0079d3;
+        border: none;
+        font-size: 14px;
+        padding: 6px 115px 7px 115px;
+        border-radius: 9999px;
+
+        &:active {
+            background-color: #3d99de;
+        }
+
+        &:hover {
+            background-color: #1484d7;
+        }
+    }
+
+    .subInList {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        align-items: center;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        background-color: white;
+        cursor: pointer;
+
+        .num,
+        .top,
+        .logo,
+        .title {
+            pointer-events: none;
+        }
+
+        .num {
+            font-size: 14px;
+            font-family: "IBM Light";
+            padding-right: 12px;
+            color: #1c1c1c;
+        }
+
+        .top {
+            height: 7px;
+            align-self: center;
+            padding-right: 14px;
+        }
+
+        .logo {
+            height: 30px;
+            width: 30px;
+            margin-right: 9px;
+        }
+
+        .title {
+            font-size: 14px;
+            font-family: "IBM Light";
+            color: #1c1c1c;
+            width: 135px;
+        }
+
+        .join {
+            height: 24px;
+            box-sizing: border-box;
+            border-radius: 9999px;
+            font-family: "Noto Sans Bold";
+            color: white;
+            letter-spacing: -0.02em;
+            cursor: pointer;
+        }
     }
 }

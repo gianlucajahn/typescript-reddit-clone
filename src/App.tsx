@@ -12,7 +12,7 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const [subreddits, setSubreddits] = useState(subredditArray);
-  const [topSubreddits, setTopSubreddits] = useState(subreddits.slice(5));
+  const [topSubreddits, setTopSubreddits] = useState(subreddits.slice(0, 5));
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
@@ -39,42 +39,12 @@ function App() {
     password: false
   });
   const [joinedCommunities, setJoinedCommunities] = useState([
-      {
-        title: "announcements",
-        logo: "../../resources/images/Communities/announcements/icon.png",
-        category: "Education",
-        favorite: true
-      },
-      {
-        title: "learnprogramming",
-        logo: "../../resources/images/Communities/learnprogramming/icon.png",
-        category: "Education",
-        favorite: false
-      },
-      {
-        title: "leagueoflegends",
-        logo: "../../resources/images/Communities/leagueoflegends/icon.png",
-        category: "Education",
-        favorite: false
-      },
-      {
-        title: "todayilearned",
-        logo: "../../resources/images/Communities/astronomy/icon.png",
-        category: "Education",
-        favorite: false
-      },
-      {
-        title: "wallstreetbets",
-        logo: "../../resources/images/Communities/wallstreetbets/icon.png",
-        category: "Education",
-        favorite: false
-      },
-      {
-        title: "nasa",
-        logo: "../../resources/images/Communities/nasa/icon.png",
-        category: "Education",
-        favorite: false
-      }
+    subreddits[5],
+    subreddits[6],
+    subreddits[1],
+    subreddits[7],
+    subreddits[8],
+    subreddits[9],
   ]);
 
   const handleLoginInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -84,6 +54,31 @@ function App() {
     } else if (target.id === "password") {
       setPassword(target.value);
     }
+  }
+
+  const handleSubMembership = (e: React.MouseEvent) => {
+    const target = e.currentTarget as HTMLButtonElement;
+    const subIndex = subreddits.findIndex(element => element.title === target.id);
+    const targetedSubreddit = subreddits[subIndex];
+
+    if (targetedSubreddit.joined) {
+      const joinedCommunitiesEdited = [...joinedCommunities];
+      const subIndex = joinedCommunitiesEdited.findIndex(element => element === targetedSubreddit);
+      joinedCommunitiesEdited.splice(subIndex, 1);
+      setJoinedCommunities(joinedCommunitiesEdited);
+    } else if (targetedSubreddit.joined === false) {
+      setJoinedCommunities([...joinedCommunities, targetedSubreddit]);
+    }
+
+    const newSubredditArray = subreddits.map((sub, i) => {
+      if (i === subIndex) {
+        sub.joined = !sub.joined;
+        return sub;
+      } else {
+        return sub;
+      }
+    });
+    setSubreddits(newSubredditArray);
   }
 
   const setSort = (e: React.MouseEvent) => {
@@ -282,6 +277,7 @@ function App() {
           setSort={setSort}
           subreddits={subreddits}
           topSubreddits={topSubreddits}
+          handleSubMembership={handleSubMembership}
         />} />
         <Route path='/typescript-reddit-clone/r/:subredditId' element={<Home 
           randomIntToString={randomIntToString}
@@ -290,6 +286,7 @@ function App() {
           setSort={setSort}
           subreddits={subreddits}
           topSubreddits={topSubreddits}
+          handleSubMembership={handleSubMembership}
         />} />
         <Route path='/typescript-reddit-clone/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -298,6 +295,7 @@ function App() {
           setSort={setSort}
           subreddits={subreddits}
           topSubreddits={topSubreddits}
+          handleSubMembership={handleSubMembership}
         />} />
         <Route path='/typescript-reddit-clone/create' element={<Home 
           randomIntToString={randomIntToString}
@@ -306,6 +304,7 @@ function App() {
           setSort={setSort}
           subreddits={subreddits}
           topSubreddits={topSubreddits}
+          handleSubMembership={handleSubMembership}
         />} />
         <Route path='*' element={<Home
           randomIntToString={randomIntToString}
@@ -314,6 +313,7 @@ function App() {
           setSort={setSort}
           subreddits={subreddits}
           topSubreddits={topSubreddits}
+          handleSubMembership={handleSubMembership}
         />} />
       </Routes>
     </div>
