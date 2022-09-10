@@ -57,6 +57,9 @@ function App() {
   }
 
   const handleSubMembership = (e: React.MouseEvent) => {
+    if (loginStatus === false) {
+      setLoginModalState("login");
+    }
     const target = e.currentTarget as HTMLButtonElement;
     const subIndex = subreddits.findIndex(element => element.title === target.id);
     const targetedSubreddit = subreddits[subIndex];
@@ -143,8 +146,11 @@ function App() {
     } else if (target.classList.contains('crypto') || (target.parentElement?.classList.contains("crypto"))) {
       navigate("/r/crypto");
       return;
+    } else if (target.classList.contains('returnHome')) {
+      navigate("/");
+      return;
     }
-    navigate(`${target.id}`);
+    navigate(`r/${target.id}`);
   }
 
   const handleExpandSub = (e: React.MouseEvent) => {
@@ -278,6 +284,8 @@ function App() {
           subreddits={subreddits}
           topSubreddits={topSubreddits}
           handleSubMembership={handleSubMembership}
+          loginStatus={loginStatus}
+          setLoginModalState={setLoginModalState}
         />} />
         <Route path='/typescript-reddit-clone/r/:subredditId' element={<Home 
           randomIntToString={randomIntToString}
@@ -287,6 +295,8 @@ function App() {
           subreddits={subreddits}
           topSubreddits={topSubreddits}
           handleSubMembership={handleSubMembership}
+          loginStatus={loginStatus}
+          setLoginModalState={setLoginModalState}
         />} />
         <Route path='/typescript-reddit-clone/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -296,6 +306,8 @@ function App() {
           subreddits={subreddits}
           topSubreddits={topSubreddits}
           handleSubMembership={handleSubMembership}
+          loginStatus={loginStatus}
+          setLoginModalState={setLoginModalState}
         />} />
         <Route path='/typescript-reddit-clone/create' element={<Home 
           randomIntToString={randomIntToString}
@@ -305,6 +317,8 @@ function App() {
           subreddits={subreddits}
           topSubreddits={topSubreddits}
           handleSubMembership={handleSubMembership}
+          loginStatus={loginStatus}
+          setLoginModalState={setLoginModalState}
         />} />
         <Route path='*' element={<Home
           randomIntToString={randomIntToString}
@@ -314,6 +328,8 @@ function App() {
           subreddits={subreddits}
           topSubreddits={topSubreddits}
           handleSubMembership={handleSubMembership}
+          loginStatus={loginStatus}
+          setLoginModalState={setLoginModalState}
         />} />
       </Routes>
     </div>

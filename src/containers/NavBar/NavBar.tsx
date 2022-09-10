@@ -77,8 +77,12 @@ export default function NavBar (props: NavBarProps) {
   return (
     <div className="navBar" style={{ padding: loginStatus ? "0px 12px 0px 20px" : "0px 20px" }}>
         <div className="logo">
-          <RedditLogo className="redditLogo" />
-          <Reddit className="reddit" />
+          <div className="logoContainer returnHome" onClick={handleNavigate}>
+            <RedditLogo className="redditLogo" />
+            <Reddit className="reddit" />
+          </div>
+
+
 
           <div className="subredditContainer" id="subredditContainer" style={{ display: loginStatus ? "flex" : "none", border: subDropdownIsOpen ? "1px solid #EDEFF1" : "1px solid transparent" }} onClick={handleExpandSub} onMouseEnter={handleHoverSubMenu} onMouseLeave={handleHoverSubMenu}>
             <div>
@@ -93,7 +97,7 @@ export default function NavBar (props: NavBarProps) {
                 <div className="favorites communityList">
                   {joinedCommunities.map((community: any, index: number) => {
                     if (community.favorite === true) {
-                      return <div className="subItem sub" id={"/r/" + community.title} onClick={handleNavigate}>
+                      return <div className="subItem sub" id={community.title} onClick={handleNavigate}>
                         <img className="subIcon sub noPointerEvents" src={require(`../../resources/images/Communities/${community.title}/icon.png`)} />
                         <h3 className="sub noPointerEvents">r/{community.title}</h3>
                         <img className="favorite" src={require("../../resources/images/favorited.PNG")} onClick={handleFavorite} id={community.title} /> 
@@ -109,7 +113,7 @@ export default function NavBar (props: NavBarProps) {
                   <h3 className="sub">Community erstellen</h3>
                 </div>
                 {joinedCommunities.map((community: any, index: number) => {
-                  return <div className="subItem sub" id={"/r/" + community.title} onClick={handleNavigate}>
+                  return <div className="subItem sub" id={community.title} onClick={handleNavigate}>
                              <img className="subIcon sub noPointerEvents" src={require(`../../resources/images/Communities/${community.title}/icon.png`)} />
                             <h3 className="sub noPointerEvents">r/{community.title}</h3>
                             <img className="favorite" src={require(`../../resources/images/${community.favorite ? "" : "un"}favorited.PNG`)} id={community.title} onClick={handleFavorite} /> 

@@ -65,13 +65,14 @@
         font-size: 14px;
         padding: 6px 115px 7px 115px;
         border-radius: 9999px;
-
-        &:active {
-            background-color: #3d99de;
-        }
+        cursor: pointer;
 
         &:hover {
             background-color: #1484d7;
+        }
+
+        &:active {
+            background-color: #3d99de !important;
         }
     }
 

@@ -5,17 +5,25 @@ import { Subreddits } from '../../types/types';
 export interface HomeSideBarProps {
     subreddits: Subreddits,
     topSubreddits: Subreddits,
-    handleSubMembership: React.MouseEventHandler
+    handleSubMembership: React.MouseEventHandler,
+    loginStatus: boolean,
+    setLoginModalState: any
 }
 
 export default function HomeSideBar (props: HomeSideBarProps) {
   const {
     subreddits,
     topSubreddits,
-    handleSubMembership
+    handleSubMembership,
+    loginStatus,
+    setLoginModalState
   } = props;
 
   const [viewAll, setViewAll] = useState(false);
+
+  const handleView = (e: React.MouseEvent) => {
+    setViewAll(!viewAll);
+  }
 
   return (
     <div className="homesidebar">
@@ -45,15 +53,15 @@ export default function HomeSideBar (props: HomeSideBarProps) {
                     <h3 className="title">{"r/" + subreddit.title}</h3>
 
                     <button className="join" onClick={handleSubMembership} id={subreddit.title} style={{
-                        padding: subreddit.joined ? "2px 10px 4px 9px" : "2px 16px 4px 15px",
-                        backgroundColor: subreddit.joined ? "white" : "#0079d3",
-                        color: subreddit.joined ? "#0079d3" : "white",
-                        border: subreddit.joined ? "1px solid #0079d3" : "none"
-                    }}>{subreddit.joined ? "Leave" : "Join"}</button>
+                        padding: subreddit.joined ? loginStatus ? "2px 10px 4px 9px" : "2px 16px 4px 15px" : "2px 16px 4px 15px",
+                        backgroundColor: subreddit.joined ? loginStatus ? "white" : "#0079d3" : "#0079d3",
+                        color: subreddit.joined ? loginStatus ? "#0079d3" : "white" : "white",
+                        border: subreddit.joined ? loginStatus ? "1px solid #0079d3" : "none" : "none"
+                    }}>{subreddit.joined ? loginStatus ? "Leave" : "Join" : "Join"}</button>
                 </div>
               })}
 
-              <button className="viewAll">{viewAll ? "View less" : "View All"}</button>
+              <button className="viewAll" onClick={handleView}>{viewAll ? "View less" : "View All"}</button>
             </div>
 
         </div>

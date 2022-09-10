@@ -12,7 +12,9 @@ export interface HomeProps {
   setSort: React.MouseEventHandler;
   subreddits: Subreddits,
   topSubreddits: Subreddits,
-  handleSubMembership: React.MouseEventHandler
+  handleSubMembership: React.MouseEventHandler,
+  loginStatus: boolean,
+  setLoginModalState: any
 }
 
 export default function Home (props: HomeProps) {
@@ -23,7 +25,9 @@ export default function Home (props: HomeProps) {
     setSort,
     subreddits,
     topSubreddits,
-    handleSubMembership
+    handleSubMembership,
+    loginStatus,
+    setLoginModalState
   } = props;
 
   return (
@@ -43,6 +47,8 @@ export default function Home (props: HomeProps) {
           subreddits={subreddits}
           topSubreddits={topSubreddits}
           handleSubMembership={handleSubMembership}
+          loginStatus={loginStatus}
+          setLoginModalState={setLoginModalState}
         />
       </div>
     </div>

@@ -40,15 +40,27 @@
         gap: 8px;
         height: 100%;
 
-        .redditLogo {
-            height: 32px;
-            width: 32px;
-        }
+        .logoContainer {
 
-        .reddit {
-            height: 18px;
-            padding-bottom: 1px;
-            margin-right: 2px;
+            * {
+                pointer-events: none;
+            }
+
+            display: flex;
+            gap: 8px;
+            height: 100%;
+            align-items: center;
+
+            .redditLogo {
+                height: 32px;
+                width: 32px;
+            }
+    
+            .reddit {
+                height: 18px;
+                padding-bottom: 1px;
+                margin-right: 2px;
+            }
         }
     }
 
