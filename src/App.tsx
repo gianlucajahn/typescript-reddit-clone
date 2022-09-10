@@ -149,6 +149,9 @@ function App() {
     } else if (target.classList.contains('returnHome')) {
       navigate("/");
       return;
+    } else if (target.classList.contains('books')) {
+      navigate("/r/books");
+      return;
     } else if (target.classList.contains('join')) {
       return;
     }

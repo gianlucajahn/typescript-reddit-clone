@@ -6,7 +6,7 @@ export interface HomeSideBarProps {
     subreddits: Subreddits,
     topSubreddits: Subreddits,
     handleSubMembership: React.MouseEventHandler,
-    handleNavigate: MouseEventHandler<HTMLDivElement>,
+    handleNavigate: MouseEventHandler<HTMLElement>
     loginStatus: boolean,
     setLoginModalState: any
 }
@@ -64,6 +64,12 @@ export default function HomeSideBar (props: HomeSideBarProps) {
               })}
 
               <button className="viewAll" onClick={handleView}>{viewAll ? "View less" : "View All"}</button>
+              <div className="suggestions">
+                <button className="crypto suggestion" onClick={handleNavigate}>Crypto</button>
+                <button className="books suggestion" onClick={handleNavigate}>Books</button>
+                <button className="sports suggestion" onClick={handleNavigate}>Sports</button>
+                <button className="gaming suggestion" onClick={handleNavigate}>Gaming</button>
+              </div>
             </div>
 
         </div>

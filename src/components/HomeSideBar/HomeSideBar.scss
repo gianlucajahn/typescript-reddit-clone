@@ -53,7 +53,37 @@
     box-sizing: border-box;
     background-color: white;
     border: 1px solid #ccc;
-    border-bottom: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    .suggestions {
+        display: flex;
+        gap: 0.7em;
+        padding-left: 12px;
+        margin-bottom: 16px;
+
+        .suggestion {
+            padding: 4px 8px 5px 8px;
+            background: #F6F7F8;
+            border: none;
+            border-radius: 9999px;
+            height: 26px;
+            font-family: "Noto Sans Bold";
+            letter-spacing: -0.02em;
+            box-sizing: border-box;
+            color: #0079d3;
+            font-size: 12px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #e3edf6;
+            }
+
+            &:active {
+                background-color: #bbd9f0;
+            }
+        }
+    }
 
     .viewAll {
         align-self: center;
@@ -65,6 +95,7 @@
         font-size: 14px;
         padding: 6px 115px 7px 115px;
         border-radius: 9999px;
+        margin-bottom: 16px;
         cursor: pointer;
 
         &:hover {
