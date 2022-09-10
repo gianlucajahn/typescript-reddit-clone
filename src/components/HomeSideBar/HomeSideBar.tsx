@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, MouseEventHandler } from 'react';
 import './HomeSideBar.scss';
 import { Subreddits } from '../../types/types';
 
@@ -6,6 +6,7 @@ export interface HomeSideBarProps {
     subreddits: Subreddits,
     topSubreddits: Subreddits,
     handleSubMembership: React.MouseEventHandler,
+    handleNavigate: MouseEventHandler<HTMLDivElement>,
     loginStatus: boolean,
     setLoginModalState: any
 }
@@ -15,6 +16,7 @@ export default function HomeSideBar (props: HomeSideBarProps) {
     subreddits,
     topSubreddits,
     handleSubMembership,
+    handleNavigate,
     loginStatus,
     setLoginModalState
   } = props;
@@ -41,7 +43,7 @@ export default function HomeSideBar (props: HomeSideBarProps) {
                 } else if (viewAll === false && i > 4) {
                     return;
                 }
-                return <div className="subInList" style={{ 
+                return <div className="subInList" onClick={handleNavigate} id={subreddit.title} style={{ 
                     paddingLeft: i === 9 ? "15px" : "23px", 
                     borderBottom: viewAll ? i === 9 ? "none" : "thin solid #edeff1" : i === 4 ? "none" : "thin solid #edeff1",
                     paddingRight: subreddit.joined ? "11px" : "4px"

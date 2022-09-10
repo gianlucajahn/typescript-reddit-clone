@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { MouseEventHandler } from 'react';
 import './Home.scss';
 import CreatePost from '../../components/CreatePost/CreatePost';
 import SortBar from '../../components/SortBar/SortBar';
@@ -13,6 +13,7 @@ export interface HomeProps {
   subreddits: Subreddits,
   topSubreddits: Subreddits,
   handleSubMembership: React.MouseEventHandler,
+  handleNavigate: MouseEventHandler<HTMLDivElement>,
   loginStatus: boolean,
   setLoginModalState: any
 }
@@ -26,6 +27,7 @@ export default function Home (props: HomeProps) {
     subreddits,
     topSubreddits,
     handleSubMembership,
+    handleNavigate,
     loginStatus,
     setLoginModalState
   } = props;
@@ -49,6 +51,7 @@ export default function Home (props: HomeProps) {
           handleSubMembership={handleSubMembership}
           loginStatus={loginStatus}
           setLoginModalState={setLoginModalState}
+          handleNavigate={handleNavigate}
         />
       </div>
     </div>

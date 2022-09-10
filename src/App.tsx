@@ -149,7 +149,10 @@ function App() {
     } else if (target.classList.contains('returnHome')) {
       navigate("/");
       return;
+    } else if (target.classList.contains('join')) {
+      return;
     }
+
     navigate(`r/${target.id}`);
   }
 
@@ -286,6 +289,7 @@ function App() {
           handleSubMembership={handleSubMembership}
           loginStatus={loginStatus}
           setLoginModalState={setLoginModalState}
+          handleNavigate={handleNavigate}
         />} />
         <Route path='/typescript-reddit-clone/r/:subredditId' element={<Home 
           randomIntToString={randomIntToString}
@@ -297,6 +301,7 @@ function App() {
           handleSubMembership={handleSubMembership}
           loginStatus={loginStatus}
           setLoginModalState={setLoginModalState}
+          handleNavigate={handleNavigate}
         />} />
         <Route path='/typescript-reddit-clone/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -308,6 +313,7 @@ function App() {
           handleSubMembership={handleSubMembership}
           loginStatus={loginStatus}
           setLoginModalState={setLoginModalState}
+          handleNavigate={handleNavigate}
         />} />
         <Route path='/typescript-reddit-clone/create' element={<Home 
           randomIntToString={randomIntToString}
@@ -319,6 +325,7 @@ function App() {
           handleSubMembership={handleSubMembership}
           loginStatus={loginStatus}
           setLoginModalState={setLoginModalState}
+          handleNavigate={handleNavigate}
         />} />
         <Route path='*' element={<Home
           randomIntToString={randomIntToString}
@@ -330,6 +337,7 @@ function App() {
           handleSubMembership={handleSubMembership}
           loginStatus={loginStatus}
           setLoginModalState={setLoginModalState}
+          handleNavigate={handleNavigate}
         />} />
       </Routes>
     </div>
