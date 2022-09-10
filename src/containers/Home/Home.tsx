@@ -9,6 +9,8 @@ export interface HomeProps {
   userName: string,
   currentSort: string,
   setSort: React.MouseEventHandler;
+  subreddits: [],
+  topSubreddits: [],
 }
 
 export default function Home (props: HomeProps) {
@@ -16,7 +18,9 @@ export default function Home (props: HomeProps) {
     randomIntToString,
     userName,
     currentSort,
-    setSort
+    setSort,
+    subreddits,
+    topSubreddits
   } = props;
 
   return (

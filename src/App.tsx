@@ -12,6 +12,7 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const [subreddits, setSubreddits] = useState(subredditArray);
+  const [topSubreddits, setTopSubreddits] = useState(subreddits.slice(5));
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
@@ -279,30 +280,40 @@ function App() {
           userName={userName}
           currentSort={currentSort}
           setSort={setSort}
+          subreddits={subreddits}
+          topSubreddits={topSubreddits}
         />} />
         <Route path='/typescript-reddit-clone/r/:subredditId' element={<Home 
           randomIntToString={randomIntToString}
           userName={userName}
           currentSort={currentSort}
           setSort={setSort}
+          subreddits={subreddits}
+          topSubreddits={topSubreddits}
         />} />
         <Route path='/typescript-reddit-clone/profile' element={<Home
           randomIntToString={randomIntToString}
           userName={userName}
           currentSort={currentSort}
           setSort={setSort}
+          subreddits={subreddits}
+          topSubreddits={topSubreddits}
         />} />
         <Route path='/typescript-reddit-clone/create' element={<Home 
           randomIntToString={randomIntToString}
           userName={userName}
           currentSort={currentSort}
           setSort={setSort}
+          subreddits={subreddits}
+          topSubreddits={topSubreddits}
         />} />
         <Route path='*' element={<Home
           randomIntToString={randomIntToString}
           userName={userName}
           currentSort={currentSort}
           setSort={setSort}
+          subreddits={subreddits}
+          topSubreddits={topSubreddits}
         />} />
       </Routes>
     </div>

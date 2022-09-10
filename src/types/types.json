@@ -1,0 +1,113 @@
+{
+    "title": "movies",
+    "logo": "../../resources/images/Communities/movies/icon.png",
+    "category": "Entertainment",
+    "favorite": false,
+    "joined": false,
+    "about": "The goal of /r/Movies is to provide an inclusive place for discussions and news about films with major releases. Submissions should be for the purpose of informing or initiating a discussion, not just to entertain readers. Read our extensive list of rules for more information on other types of posts like fan-art and self-promotion, or message the moderators if you have any questions.",
+    "members": "29.0m",
+    "online": "23.5k",
+    "creationDate": "Jan 25, 2008",
+    "rules": [
+        {
+            "number": 1,
+            "title": "General Violation of One of Our Endless Rules",
+            "desc": "Our full list of rules is here."
+        },
+        {
+            "number": 2,
+            "title": "Blatant Hatespeech - Racial/Sexist/Homophobic Slurs",
+            "desc": "If it's a quote from a movie - put it in quotes. If it's immature 4channery or something that looks like rhetoric straight out of a Trump subreddit - let us know. Remember that discussion about derogatory/offensive/sensitive issues often leads to unnecessary conflict. Discuss the subject of the thread, not the users."
+        },
+        {
+            "number": 3,
+            "title": "Ambiguous titles/Clickbait",
+            "desc": "Any type of 'This movie is amazing!' submission that doesn't include the subject in the submission title. Submission titles that do not refer to the name of the movie the post is talking about are also bounds for removal under this rule."
+        },
+        {
+            "number": 4,
+            "title": "Spam & Self-Promotion - User Submits From the Same Source Too Much",
+            "desc": "The /r/Movies definition of spam is when a user has more than 20% of their submissions coming from one source. If your username is the same as the website or YT channel you're trying to promote - you will be banned and your website blacklisted. Sharing Letterboxd accounts is not allowed either."
+        },
+        {
+            "number": 5,
+            "title": "Image posts & memes",
+            "desc": "Memes are not allowed. Single images or albums of behind the scene of already released movies are prohibited, as are memes, movies I like/recommend and infographics. Make a text post if you want to talk about something like that and link the image in there. Official first looks and posters ARE allowed if they've not been posted before."
+        },
+        {
+            "number": 6,
+            "title": "Popular prohibited websites",
+            "desc": "The following list of websites are prohibited as link posts, feel free to link to these sites in comments or text-posts. Streaming Sites, Letterboxd, IMDB, Rottentomatoes, Social-media."
+        },
+        {
+            "number": 7,
+            "title": "Flame wars - Name calling - Insults - Antagonism",
+            "desc": "We usually draw the line around name-calling, but intentionally antagonizing users will result in an immediate ban. Respect differences of opinion, and resist the urge to be defensive or assign blame. Remember that people have different communication styles, and that not everyone is using their native language when using Reddit. Interpret other Redditors' arguments in good faith, and give people the benefit of the doubt."
+        },
+        {
+            "number": 8,
+            "title": "Possible subreddit brigading",
+            "desc": "Report possible brigading operations with this tag."
+        },
+        {
+            "number": 9,
+            "title": "Extraneous Comic Book Movie submission",
+            "desc": "Anything that isn't official, hard-lined news about comic book movies/Superhero movies will be removed. No featurettes, fan art, parodies, etc."
+        },
+        {
+            "number": 10,
+            "title": "Repost",
+            "desc": "No reposts. Simple. Original Content is appreciated."
+        },
+        {
+            "number": 11,
+            "title": "Negative Attention Seeking",
+            "desc": "One of those users who's only here to bother people for the lulz or whatever. Gotta do something while the girls ain't callin'."
+        },
+        {
+            "number": 12,
+            "title": "Inaccurate or Grossly Misleading Information in Submission Title",
+            "desc": "For upcoming movie news, we take misinformation seriously. In development does not mean a movie is coming out. In talks or in negotiations does not mean 'This person is working on this project'. 'A source tells us.' If that appears in your article, it'll probably be removed. This is movie news, not investigative journalism. We want official announcements."
+        },
+        {
+            "number": 13,
+            "title": "Cause Chaos Within the Mod Ranks",
+            "desc": "Maybe you don't know what rule this post broke, but it burns at your core and makes you want to inflict that pain on the mods. Don't. Edit from Gianluca: Honestly, these subreddit's rules are wild. I had to change up some stuff because it's too insultive. Weird folks in here, lol."
+        }
+    ],
+    "flairs": [
+        {
+            "title": "Official Discussion",
+            "color": "#46d160"
+        },
+        {
+            "title": "Recommendation",
+            "color": "#0266b3"
+        },
+        {
+            "title": "Article",
+            "color": "#00a6a5"
+        },
+        {
+            "title": "News",
+            "color": "#0aa18f"
+        },
+        {
+            "title": "Discussion",
+            "color": "#0079d3"
+        },
+        {
+            "title": "Poster",
+            "color": "#ccac2b"
+        },
+        {
+            "title": "Media",
+            "color": "#ccac2b"
+        }
+    ],
+    "buttonColor": "#014980",
+    "headerColor": "#014980",
+    "blackText": false,
+    "backgroundColor": "#02315c",
+    "bannerUrl": "../../resources/images/Communities/movies/banner.jpg"
+}
