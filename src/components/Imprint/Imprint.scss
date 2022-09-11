@@ -1,0 +1,67 @@
+.imprint-container {
+    margin-top: 1px;
+    width: 312px;
+    height: 263px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px 10px 15px;
+    position: sticky;
+    top: 100px;
+}
+
+.first,
+.second,
+.third,
+.fourth {
+    display: flex;
+    width: 312px;
+
+    .left {
+        width: 46.5%;
+    }
+
+    .left,
+    .right {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .imprint-content {
+            font-family: "IBM Light";
+            font-size: 13px;
+            color: #1A1A1B;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.line {
+    width: 97.25%;
+    align-self: center;
+    height: 1px;
+    background-color: #edeff1;
+    color: #edeff1;
+    margin: 10px 0px;
+    margin-right: 16px;
+}
+
+.line.lastline {
+    margin-bottom: 30px;
+}
+
+.imprint-credits {
+    font-family: "IBM Light";
+    font-size: 13px;
+    color: #1A1A1B;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+}

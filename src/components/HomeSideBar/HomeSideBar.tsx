@@ -1,6 +1,7 @@
 import React, { useState, MouseEventHandler } from 'react';
 import './HomeSideBar.scss';
 import { Subreddits } from '../../types/types';
+import Imprint from '../Imprint/Imprint';
 
 export interface HomeSideBarProps {
     subreddits: Subreddits,
@@ -96,6 +97,8 @@ export default function HomeSideBar (props: HomeSideBarProps) {
           <button className="home-create create-post" onClick={navToSubmit}>Create Post</button>
           <button className="home-create create-community">Create Community</button>
         </div>
+
+        <Imprint />
     </div>
   );
 }
