@@ -6,7 +6,8 @@ export interface HomeSideBarProps {
     subreddits: Subreddits,
     topSubreddits: Subreddits,
     handleSubMembership: React.MouseEventHandler,
-    handleNavigate: MouseEventHandler<HTMLElement>
+    handleNavigate: MouseEventHandler<HTMLElement>,
+    navToSubmit: MouseEventHandler,
     loginStatus: boolean,
     setLoginModalState: any
 }
@@ -17,6 +18,7 @@ export default function HomeSideBar (props: HomeSideBarProps) {
     topSubreddits,
     handleSubMembership,
     handleNavigate,
+    navToSubmit,
     loginStatus,
     setLoginModalState
   } = props;
@@ -83,6 +85,16 @@ export default function HomeSideBar (props: HomeSideBarProps) {
           </div>
 
           <button className="premium-button">Try Now</button>
+        </div>
+
+        <div className="homeContainer">
+          <img className="home-banner" src={require("../../resources/images/homebanner.png")} />
+          <img className="home-avatar" src={require("../../resources/images/homeavatar.png")} />
+          <h3 className="home-headline">Home</h3>
+          <h3 className="home-content">Your personal Reddit frontpage. Come here to check in with your favorite communities.</h3>
+
+          <button className="home-create create-post" onClick={navToSubmit}>Create Post</button>
+          <button className="home-create create-community">Create Community</button>
         </div>
     </div>
   );

@@ -167,7 +167,6 @@
 
 .premiumContainer {
     width: 312px;
-    height: 108px;
     box-sizing: border-box;
     background-color: white;
     border: 1px solid #ccc;
@@ -215,6 +214,7 @@
         border-radius: 9999px;
         padding-bottom: 2px;
         padding-right: 2px;
+        margin-bottom: 8px;
         letter-spacing: -0.0125em;
         cursor: pointer;
 
@@ -224,6 +224,89 @@
 
         &:active {
             background-color: #ff723d;
+        }
+    }
+}
+
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    width: 312px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    position: relative;
+
+    .home-banner {
+
+    }
+
+    .home-avatar {
+        position: absolute;
+        width: 40px;
+        height: 68px;
+        top: 21px;
+        left: 12px;
+    }
+
+    .home-headline {
+        margin-top: 26px;
+        margin-left: 62px;
+        font-family: "IBM Regular";
+        color: #1c1c1c;
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .home-content {
+        margin-left: 11px;
+        font-size: 0.925em;
+        line-height: 1.425;
+        margin-right: 8px;
+        color: #1c1c1c;
+        font-family: "IBM Light";
+        margin-bottom: 13px;
+    }
+
+    .home-create {
+        border: 1px solid transparent;
+        border-radius: 9999px;
+        align-self: center;
+        height: 32px;
+        width: 92.15%;
+        margin-bottom: 12px;
+        font-size: 14px;
+        font-family: "Noto Sans Bold";
+        padding-bottom: 1px;
+        padding-right: 1px;
+        cursor: pointer;
+    }
+
+    .create-post {
+        background-color: #0079d3;
+        color: white;
+
+        &:hover {
+            background-color: #1484d7;
+        }
+
+        &:active {
+            background-color: #3d99de;
+        }
+    }
+
+    .create-community {
+        color: #0079d3;
+        background-color: white;
+        border: 1px solid #0079d3;
+
+        &:hover {
+            background-color: #f5fafd;
+        }
+
+        &:active {
+            background-color: #d7eaf8;
         }
     }
 }

@@ -233,6 +233,10 @@ function App() {
     setLoginModalState(target.id);
   }
 
+  const navToSubmit = (e: React.MouseEvent) => {
+    navigate("/submit");
+  }
+
   const handleLogin = (e: React.MouseEvent) => {
     const target = e.target as HTMLButtonElement | HTMLDivElement;
     if (target.id === "login") {
@@ -293,6 +297,7 @@ function App() {
           loginStatus={loginStatus}
           setLoginModalState={setLoginModalState}
           handleNavigate={handleNavigate}
+          navToSubmit={navToSubmit}
         />} />
         <Route path='/typescript-reddit-clone/r/:subredditId' element={<Home 
           randomIntToString={randomIntToString}
@@ -305,6 +310,7 @@ function App() {
           loginStatus={loginStatus}
           setLoginModalState={setLoginModalState}
           handleNavigate={handleNavigate}
+          navToSubmit={navToSubmit}
         />} />
         <Route path='/typescript-reddit-clone/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -317,6 +323,7 @@ function App() {
           loginStatus={loginStatus}
           setLoginModalState={setLoginModalState}
           handleNavigate={handleNavigate}
+          navToSubmit={navToSubmit}
         />} />
         <Route path='/typescript-reddit-clone/create' element={<Home 
           randomIntToString={randomIntToString}
@@ -329,6 +336,7 @@ function App() {
           loginStatus={loginStatus}
           setLoginModalState={setLoginModalState}
           handleNavigate={handleNavigate}
+          navToSubmit={navToSubmit}
         />} />
         <Route path='*' element={<Home
           randomIntToString={randomIntToString}
@@ -341,6 +349,7 @@ function App() {
           loginStatus={loginStatus}
           setLoginModalState={setLoginModalState}
           handleNavigate={handleNavigate}
+          navToSubmit={navToSubmit}
         />} />
       </Routes>
     </div>

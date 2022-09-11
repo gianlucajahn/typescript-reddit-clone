@@ -1,25 +1,24 @@
-import * as React from 'react';
+import React, { MouseEventHandler } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './CreatePost.scss';
 
 export interface CreatePostProps {
     randomIntToString: string,
-    userName: string
+    userName: string,
+    navToSubmit: MouseEventHandler
 }
 
 export default function CreatePost (props: CreatePostProps) {
   const {
     randomIntToString,
-    userName
+    userName,
+    navToSubmit,
   } = props;
 
   const navigate = useNavigate();
-  const navTo = (e: React.MouseEvent) => {
-    navigate("/submit");
-  }
 
   return (
-    <div className="createPostMenu" onClick={navTo}>
+    <div className="createPostMenu" onClick={navToSubmit}>
         <img className="avatar" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
         <input type="text" placeholder="Post erstellen"></input>
         <button className="imagePost">

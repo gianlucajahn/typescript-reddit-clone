@@ -14,6 +14,7 @@ export interface HomeProps {
   topSubreddits: Subreddits,
   handleSubMembership: React.MouseEventHandler,
   handleNavigate: MouseEventHandler<HTMLDivElement>,
+  navToSubmit: MouseEventHandler,
   loginStatus: boolean,
   setLoginModalState: any
 }
@@ -28,6 +29,7 @@ export default function Home (props: HomeProps) {
     topSubreddits,
     handleSubMembership,
     handleNavigate,
+    navToSubmit,
     loginStatus,
     setLoginModalState
   } = props;
@@ -37,7 +39,9 @@ export default function Home (props: HomeProps) {
       <div className="feed">
         <CreatePost 
           randomIntToString={randomIntToString}
-          userName={userName} />
+          userName={userName}
+          navToSubmit={navToSubmit}
+        />
         <SortBar 
           currentSort={currentSort}
           setSort={setSort}
@@ -52,6 +56,7 @@ export default function Home (props: HomeProps) {
           loginStatus={loginStatus}
           setLoginModalState={setLoginModalState}
           handleNavigate={handleNavigate}
+          navToSubmit={navToSubmit}
         />
       </div>
     </div>
