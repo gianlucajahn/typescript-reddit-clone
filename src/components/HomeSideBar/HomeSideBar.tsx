@@ -71,7 +71,18 @@ export default function HomeSideBar (props: HomeSideBarProps) {
                 <button className="gaming suggestion" onClick={handleNavigate}>Gaming</button>
               </div>
             </div>
+        </div>
 
+        <div className="premiumContainer">
+          <div className="premium-top">
+            <img className="premiumIcon" src={require("../../resources/images/premium2.png")} />
+            <div className="slogan">
+              <h4 className="headline">Reddit Premium</h4>
+              <h4 className="content">The best Reddit experience, with monthly Coins</h4>
+            </div>
+          </div>
+
+          <button className="premium-button">Try Now</button>
         </div>
     </div>
   );
