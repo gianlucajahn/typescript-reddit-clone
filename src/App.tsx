@@ -1,4 +1,4 @@
-import React, { ChangeEvent, MouseEventHandler, useState } from 'react';
+import React, { ChangeEvent, MouseEventHandler, useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
@@ -7,6 +7,8 @@ import NavBar from './containers/NavBar/NavBar';
 import { isReturnStatement, reduceEachTrailingCommentRange } from 'typescript';
 import LoginModal from './components/LoginModal/LoginModal';
 import subredditArray from './utils/subredditArray';
+import SubredditPage from './containers/SubredditPage/SubredditPage';
+import { Subreddits, Subreddit } from "./types/types";
 
 function App() {
   const location = useLocation();
@@ -14,6 +16,7 @@ function App() {
   const [subreddits, setSubreddits] = useState(subredditArray);
   const [topSubreddits, setTopSubreddits] = useState(subreddits.slice(0, 5));
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
+  const [currentSub, setCurrentSub] = useState<Subreddit>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
   const [randomIntToString, setRandomIntToString] = useState(randomInt.toString());
@@ -55,6 +58,22 @@ function App() {
       setPassword(target.value);
     }
   }
+
+  const identifyCurrentSub = (e: any) => {
+    if (location.pathname.substring(1, 2) === "r") {
+      const newSub = location.pathname.substring(3)
+      const subIndex = subreddits.findIndex(element => element.title === newSub);
+      if (subIndex !== -1) {
+        setCurrentSub(subreddits[subIndex]);
+      } else {
+        return;
+      }
+    }  
+  }
+
+  useEffect(() => {
+    identifyCurrentSub(location.pathname);
+  }, [location.pathname])
 
   const handleSubMembership = (e: React.MouseEvent) => {
     if (loginStatus === false) {
@@ -286,7 +305,7 @@ function App() {
         randomIntToString={randomIntToString}
       />
       <Routes key={location.pathname} location={location}>
-        <Route path='/typescript-reddit-clone/' element={<Home 
+        <Route path='/' element={<Home 
           randomIntToString={randomIntToString}
           userName={userName}
           currentSort={currentSort}
@@ -299,7 +318,22 @@ function App() {
           handleNavigate={handleNavigate}
           navToSubmit={navToSubmit}
         />} />
-        <Route path='/typescript-reddit-clone/r/:subredditId' element={<Home 
+        <Route path='/r/:subredditId' element={<SubredditPage
+          randomIntToString={randomIntToString}
+          userName={userName}
+          currentSort={currentSort}
+          setSort={setSort}
+          subreddits={subreddits}
+          topSubreddits={topSubreddits}
+          handleSubMembership={handleSubMembership}
+          loginStatus={loginStatus}
+          setLoginModalState={setLoginModalState}
+          handleNavigate={handleNavigate}
+          navToSubmit={navToSubmit}
+          identifyCurrentSub={identifyCurrentSub}
+          currentSub={currentSub}
+        />} />
+        <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}
           userName={userName}
           currentSort={currentSort}
@@ -312,20 +346,7 @@ function App() {
           handleNavigate={handleNavigate}
           navToSubmit={navToSubmit}
         />} />
-        <Route path='/typescript-reddit-clone/profile' element={<Home
-          randomIntToString={randomIntToString}
-          userName={userName}
-          currentSort={currentSort}
-          setSort={setSort}
-          subreddits={subreddits}
-          topSubreddits={topSubreddits}
-          handleSubMembership={handleSubMembership}
-          loginStatus={loginStatus}
-          setLoginModalState={setLoginModalState}
-          handleNavigate={handleNavigate}
-          navToSubmit={navToSubmit}
-        />} />
-        <Route path='/typescript-reddit-clone/create' element={<Home 
+        <Route path='/submit' element={<Home 
           randomIntToString={randomIntToString}
           userName={userName}
           currentSort={currentSort}
