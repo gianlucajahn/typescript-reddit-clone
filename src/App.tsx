@@ -303,6 +303,7 @@ function App() {
         handleExpandSub={handleExpandSub}
         handleNavigate={handleNavigate}
         randomIntToString={randomIntToString}
+        currentSub={currentSub}
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/' element={<Home 

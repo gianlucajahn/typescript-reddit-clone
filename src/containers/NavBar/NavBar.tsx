@@ -8,6 +8,7 @@ import { ReactComponent as Expand } from "../../resources/images/expand.svg";
 import { ReactComponent as Star } from "../../resources/images/star.svg";
 import { ReactComponent as User } from "../../resources/images/user.svg";
 import { ObjectType } from 'typescript';
+import { Subreddit } from '../../types/types';
 
 export interface NavBarProps {
   dropdownIsOpen: boolean,
@@ -15,6 +16,7 @@ export interface NavBarProps {
   loginStatus: boolean,
   subDropdownIsOpen: boolean,
   randomIntToString: string,
+  currentSub: Subreddit | undefined,
   joinedCommunities: any,
   handleFavorite: MouseEventHandler<HTMLImageElement>,
   handleLogin: MouseEventHandler,
@@ -48,6 +50,7 @@ export default function NavBar (props: NavBarProps) {
     handleNavigate,
     handleExpandSub,
     dropdownState,
+    currentSub,
     userName,
     loginStatus,
     joinedCommunities,
@@ -86,8 +89,8 @@ export default function NavBar (props: NavBarProps) {
 
           <div className="subredditContainer" id="subredditContainer" style={{ display: loginStatus ? "flex" : "none", border: subDropdownIsOpen ? "1px solid #EDEFF1" : "1px solid transparent" }} onClick={handleExpandSub} onMouseEnter={handleHoverSubMenu} onMouseLeave={handleHoverSubMenu}>
             <div>
-              <img className="currentSubreddit return" src={require("../../resources/images/home.png")} />
-              <h4 className="return">Home</h4>
+              <img className="currentSubreddit return" src={currentSub !== undefined ?  require(`../../resources/images/Communities/${currentSub.title}/icon.png`) : require("../../resources/images/home.png")} />
+              <h4 className="return subText">{currentSub !== undefined ? currentSub.title : "Home"}</h4>
             </div>
             <img src={require("../../resources/images/expand.png")} className="expand return" />
             <div className="subredditDropdown" id="subredditDropdown" style={{ display: subDropdownIsOpen ? "block" : "none", borderTop: "1px solid transparent" }}>

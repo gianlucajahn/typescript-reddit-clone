@@ -1,6 +1,7 @@
 const subredditArray = [
     {
         title: "movies",
+        officialTitle: "Movies",
         logo: "../../resources/images/Communities/movies/icon.png",
         category: "Entertainment",
         favorite: false,
@@ -114,6 +115,7 @@ const subredditArray = [
     },
     {
         title: "leagueoflegends",
+        officialTitle: "League of Legends",
         logo: "../../resources/images/Communities/leagueoflegends/icon.png",
         category: "Gaming",
         favorite: false,
@@ -200,6 +202,7 @@ const subredditArray = [
     },
     {
         title: "genshinimpact",
+        officialTitle: "Genshin Impact",
         logo: "../../resources/images/Communities/genshinimpact/icon.png",
         category: "Gaming",
         favorite: false,
@@ -316,6 +319,7 @@ const subredditArray = [
     },
     {
         title: "nba",
+        officialTitle: "NBA",
         logo: "../../resources/images/Communities/nba/icon.png",
         category: "Sports",
         favorite: false,
@@ -397,6 +401,7 @@ const subredditArray = [
     },
     {
         title: "finance",
+        officialTitle: "Finance",
         logo: "../../resources/images/Communities/finance/icon.png",
         category: "Education",
         favorite: false,
@@ -458,6 +463,7 @@ const subredditArray = [
     },
     {
         title: "announcements",
+        officialTitle: "Announcements",
         logo: "../../resources/images/Communities/announcements/icon.png",
         category: "Education",
         favorite: true,
@@ -517,6 +523,7 @@ const subredditArray = [
     },
     {
         title: "learnprogramming",
+        officialTitle: "Learn Programming",
         logo: "../../resources/images/Communities/learnprogramming/icon.png",
         category: "Education",
         favorite: true,
@@ -617,6 +624,7 @@ const subredditArray = [
     },
     {
         title: "todayilearned",
+        officialTitle: "Today I Learned",
         logo: "../../resources/images/Communities/todayilearned/icon.png",
         category: "Education",
         favorite: false,
@@ -701,6 +709,7 @@ const subredditArray = [
     },
     {
         title: "wallstreetbets",
+        officialTitle: "Wallstreet Bets",
         logo: "../../resources/images/Communities/wallstreetbets/icon.png",
         category: "Entertainment",
         favorite: false,
@@ -812,6 +821,7 @@ const subredditArray = [
     },
     {
         title: "nasa",
+        officialTitle: "NASA",
         logo: "../../resources/images/Communities/nasa/icon.png",
         category: "News",
         favorite: false,
@@ -914,6 +924,7 @@ const subredditArray = [
     },
     {
         title: "books",
+        officialTitle: "Books",
         logo: "../../resources/images/Communities/books/icon.png",
         category: "Entertainment",
         favorite: false,
@@ -997,6 +1008,7 @@ const subredditArray = [
     },
     {
         title: "apexlegends",
+        officialTitle: "Apex Legends",
         logo: "../../resources/images/Communities/apexlegends/icon.png",
         category: "Gaming",
         favorite: false,
@@ -1090,6 +1102,7 @@ const subredditArray = [
     },
     {
         title: "programmerhumor",
+        officialTitle: "Programmer' Humor",
         logo: "../../resources/images/Communities/programmerhumor/icon.png",
         category: "Entertainment",
         favorite: false,
@@ -1170,6 +1183,7 @@ const subredditArray = [
     },
     {
         title: "baking",
+        officialTitle: "Baking",
         logo: "../../resources/images/Communities/baking/icon.png",
         category: "Entertainment",
         favorite: false,
@@ -1222,6 +1236,7 @@ const subredditArray = [
     },
     {
         title: "astronomy",
+        officialTitle: "Astronomy",
         logo: "../../resources/images/Communities/astronomy/icon.png",
         category: "Education",
         favorite: false,
@@ -1304,6 +1319,7 @@ const subredditArray = [
     },
     {
         title: "sports",
+        officialTitle: "Sports",
         logo: "../../resources/images/Communities/sports/icon.png",
         category: "Entertainment",
         favorite: false,
@@ -1373,6 +1389,7 @@ const subredditArray = [
     },
     {
         title: "crypto",
+        officialTitle: "Crypto",
         logo: "../../resources/images/Communities/crypto/icon.png",
         category: "Entertainment",
         favorite: false,

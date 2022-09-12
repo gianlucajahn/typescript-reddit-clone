@@ -2,6 +2,7 @@ export type Subreddits = Subreddit[]
 
 export type Subreddit = {
     title:           string;
+    officialTitle:   string;
     logo:            string;
     category:        string;
     favorite:        boolean;
