@@ -60,6 +60,11 @@ function App() {
   }
 
   const identifyCurrentSub = (e: any) => {
+    if (location.pathname === "/") {
+      setCurrentSub(undefined);
+      return;
+    }
+
     if (location.pathname.substring(1, 2) === "r") {
       const newSub = location.pathname.substring(3)
       const subIndex = subreddits.findIndex(element => element.title === newSub);
@@ -148,6 +153,12 @@ function App() {
 
   const handleNavigate = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
+    const subIndex = subreddits.findIndex(element => element.title === target.id);
+    if (target.classList.contains('join')) {
+      return;
+    }
+    setCurrentSub(subreddits[subIndex]);
+
     if (target.classList.contains('favorite')) {
       return;
     } else if (target.classList.contains('gaming') || (target.parentElement?.classList.contains("gaming"))) {

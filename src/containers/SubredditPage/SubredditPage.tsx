@@ -37,12 +37,13 @@ export default function SubredditPage (props: SubredditPageProps) {
     navToSubmit
   } = props;
 
-  console.log(currentSub);
-  console.log(currentSub?.backgroundColor);
-
   return (
     <div className="subredditPage" style={{ backgroundColor: currentSub ? currentSub?.backgroundColor : "#edeff1" }}>
-      
+      <img className="subredditBanner" src={require(`../../resources/images/Communities/${currentSub?.title}/banner.jpg`)} />
+
+      <div className="subredditHeadline">
+
+      </div>
     </div>
   );
 }

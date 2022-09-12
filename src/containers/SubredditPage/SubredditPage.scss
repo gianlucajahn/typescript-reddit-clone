@@ -1,3 +1,15 @@
 .subredditPage {
     min-height: 120vh;
+
+    .subredditBanner {
+        margin-top: 49px;
+        width: 100vw;
+        max-height: 300px;
+    }
+
+    .subredditHeadline {
+        background-color: white;
+        height: 110px;
+        margin-top: -4px;
+    }
 }

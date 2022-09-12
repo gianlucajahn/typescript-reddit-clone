@@ -89,8 +89,8 @@ export default function NavBar (props: NavBarProps) {
 
           <div className="subredditContainer" id="subredditContainer" style={{ display: loginStatus ? "flex" : "none", border: subDropdownIsOpen ? "1px solid #EDEFF1" : "1px solid transparent" }} onClick={handleExpandSub} onMouseEnter={handleHoverSubMenu} onMouseLeave={handleHoverSubMenu}>
             <div>
-              <img className="currentSubreddit return" src={currentSub !== undefined ?  require(`../../resources/images/Communities/${currentSub.title}/icon.png`) : require("../../resources/images/home.png")} />
-              <h4 className="return subText">{currentSub !== undefined ? currentSub.title : "Home"}</h4>
+              <img className="currentSubreddit return" src={currentSub !== undefined ?  require(`../../resources/images/Communities/${currentSub.title}/icon.png`) : require("../../resources/images/home.png")} style={{ height: currentSub !== undefined ? "21px" : "18px" }}/>
+              <h4 className="return subText">{currentSub !== undefined ? "r/" + currentSub.title : "Home"}</h4>
             </div>
             <img src={require("../../resources/images/expand.png")} className="expand return" />
             <div className="subredditDropdown" id="subredditDropdown" style={{ display: subDropdownIsOpen ? "block" : "none", borderTop: "1px solid transparent" }}>
@@ -103,7 +103,7 @@ export default function NavBar (props: NavBarProps) {
                       return <div className="subItem sub" id={community.title} onClick={handleNavigate}>
                         <img className="subIcon sub noPointerEvents" src={require(`../../resources/images/Communities/${community.title}/icon.png`)} />
                         <h3 className="sub noPointerEvents">r/{community.title}</h3>
-                        <img className="favorite" src={require("../../resources/images/favorited.PNG")} onClick={handleFavorite} id={community.title} /> 
+                        <img className="favorite join" src={require("../../resources/images/favorited.PNG")} onClick={handleFavorite} id={community.title} /> 
                       </div>
                     }
                   })}
@@ -119,7 +119,7 @@ export default function NavBar (props: NavBarProps) {
                   return <div className="subItem sub" id={community.title} onClick={handleNavigate}>
                              <img className="subIcon sub noPointerEvents" src={require(`../../resources/images/Communities/${community.title}/icon.png`)} />
                             <h3 className="sub noPointerEvents">r/{community.title}</h3>
-                            <img className="favorite" src={require(`../../resources/images/${community.favorite ? "" : "un"}favorited.PNG`)} id={community.title} onClick={handleFavorite} /> 
+                            <img className="favorite join" src={require(`../../resources/images/${community.favorite ? "" : "un"}favorited.PNG`)} id={community.title} onClick={handleFavorite} /> 
                           </div>;
                 })}
                 <h6 className="communityList feeds">FEEDS</h6>
