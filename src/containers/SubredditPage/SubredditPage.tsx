@@ -42,7 +42,18 @@ export default function SubredditPage (props: SubredditPageProps) {
       <img className="subredditBanner" src={require(`../../resources/images/Communities/${currentSub?.title}/banner.jpg`)} />
 
       <div className="subredditHeadline">
+        <div className="headlineTop">
+          <div className="headlineIcon">
 
+          </div>
+          <div className="headlineTitle">
+
+          </div>
+          <button className="headlineJoin">{currentSub?.joined ? "Leave" : "Join"}</button>
+        </div>
+        <div className="headlineBottom">
+
+        </div>
       </div>
     </div>
   );
