@@ -157,6 +157,7 @@ function App() {
     if (target.classList.contains('join')) {
       return;
     }
+    console.log("done");
     setCurrentSub(subreddits[subIndex]);
 
     if (target.classList.contains('favorite')) {
