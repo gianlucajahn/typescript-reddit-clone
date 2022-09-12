@@ -43,11 +43,12 @@ export default function SubredditPage (props: SubredditPageProps) {
 
       <div className="subredditHeadline">
         <div className="headlineTop">
-          <div className="headlineIcon">
-
+          <div className="iconContainer">
+            <img className="icon" src={require(`../../resources/images/Communities/${currentSub?.title}/icon.png`)} />
           </div>
           <div className="headlineTitle">
-
+            <h1>{currentSub?.officialTitle}</h1>
+            <h3>{"r/" + currentSub?.title}</h3>
           </div>
           <button className="headlineJoin">{currentSub?.joined ? "Leave" : "Join"}</button>
         </div>
