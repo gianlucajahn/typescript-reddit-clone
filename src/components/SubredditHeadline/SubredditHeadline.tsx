@@ -28,8 +28,8 @@ export default function SubredditHeadline (props: SubredditHeadlineProps) {
     <div className="headlineBottom">
         {currentSub?.anchors.map((anchor, i) => {
             return <div className="anchor">
-                <h4>{anchor}</h4>
-                <div className="anchorLine"></div>
+                {anchor}
+                <div className="anchorLine" style={{ backgroundColor: currentSub?.buttonColor }}></div>
             </div>
         })}
     </div>

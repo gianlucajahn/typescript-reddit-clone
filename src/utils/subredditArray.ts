@@ -107,7 +107,36 @@ const subredditArray = [
                 color: "#ccac2b"
             }
         ],
-        anchors: ["Posts", "Predictions", "Rules & FAQ 📋", "Latest AMA's 🎤", "Poster Collection", "This week's trailers", "Weekly Discussions"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "Predictions",
+                selected: false
+            },
+            {
+                title: "Rules & FAQ 📋",
+                selected: false
+            },
+            {
+                title: "Latest AMA's 🎤",
+                selected: false
+            },
+            {
+                title: "Poster Collection",
+                selected: false
+            },
+            {
+                title: "This week's trailers",
+                selected: false
+            },
+            {
+                title: "Weekly Discussions",
+                selected: false
+            }
+        ],
         buttonColor: "#014980",
         headerColor: "#014980",
         blackText: false,
@@ -195,7 +224,20 @@ const subredditArray = [
                 color: "#fc471e"
             }
         ],
-        anchors: ["Posts", "Predictions", "Full Rules"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "Predictions",
+                selected: false
+            },
+            {
+                title: "Full Rules",
+                selected: false
+            }
+        ],
         buttonColor: "#a68039",
         headerColor: "#a68039",
         blackText: false,
@@ -313,7 +355,32 @@ const subredditArray = [
                 color: "#330099"
             }
         ],
-        anchors: ["Posts", "General Information", "In-depth FAQ", "Megathreads", "Official Sites", "Social Media"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "General Information",
+                selected: false
+            },
+            {
+                title: "In-depth FAQ",
+                selected: false
+            },
+            {
+                title: "Megathreads",
+                selected: false
+            },
+            {
+                title: "Official Sites",
+                selected: false
+            },
+            {
+                title: "Social Media",
+                selected: false
+            },
+        ],
         buttonColor: "#0079d3",
         headerColor: "#373c3f",
         blackText: false,
@@ -396,7 +463,32 @@ const subredditArray = [
                 color: "#e58c0e"
             }
         ],
-        anchors: ["Posts", "Predictions", "Wiki", "Rules & Guidelines", "Tools", "Old Reddit"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "Predictions",
+                selected: false
+            },
+            {
+                title: "Wiki",
+                selected: false
+            },
+            {
+                title: "Rules & Guidelines",
+                selected: false
+            },
+            {
+                title: "Tools",
+                selected: false
+            },
+            {
+                title: "Old Reddit",
+                selected: false
+            },
+        ],
         buttonColor: "#ff4500",
         headerColor: "#ffa500",
         blackText: false,
@@ -459,7 +551,12 @@ const subredditArray = [
                 color: "#ff4500"
             }
         ],
-        anchors: ["Posts"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+        ],
         buttonColor: "#0d7680",
         headerColor: "#0d7680",
         blackText: false,
@@ -541,7 +638,24 @@ const subredditArray = [
                 color: "#edeff1"
             }
         ],
-        anchors: ["Posts", "Website", "Twitch", "Discord"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "Website",
+                selected: false
+            },
+            {
+                title: "Twitch",
+                selected: false
+            },
+            {
+                title: "Discord",
+                selected: false
+            },
+        ],
         buttonColor: "#ff885b",
         headerColor: "#ff4500",
         blackText: true,
@@ -643,7 +757,24 @@ const subredditArray = [
                 color: "#edeff1"
             }
         ],
-        anchors: ["Posts", "New? READ ME FIRST!", "Posting guidelines", "FAQ"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "New? READ ME FIRST!",
+                selected: false
+            },
+            {
+                title: "Posting guidelines",
+                selected: false
+            },
+            {
+                title: "FAQ",
+                selected: false
+            },
+        ],
         buttonColor: "#ff66ac",
         headerColor: "#349e48",
         blackText: false,
@@ -729,7 +860,16 @@ const subredditArray = [
                 color: "#fc471e"
             }
         ],
-        anchors: ["Posts", "Wiki"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "Wiki",
+                selected: false
+            },
+        ],
         buttonColor: "#0079d3",
         headerColor: "#0079d3",
         blackText: false,
@@ -842,7 +982,40 @@ const subredditArray = [
                 color: "#0392cf"
             }
         ],
-        anchors: ["Posts", "Predictions", "Wiki", "wallstreetbetscrypto", "Discord/Twitter/IG", "Thread Filters (NEW)", "FAQ", "Brand Use Guidelines"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "Predictions",
+                selected: false
+            },
+            {
+                title: "Wiki",
+                selected: false
+            },
+            {
+                title: "wallstreetbetscrypto",
+                selected: false
+            },
+            {
+                title: "Discord/Twitter/IG",
+                selected: false
+            },
+            {
+                title: "Thread Filters (NEW)",
+                selected: false
+            },
+            {
+                title: "FAQ",
+                selected: false
+            },
+            {
+                title: "Brand Use Guidelines",
+                selected: false
+            },
+        ],
         buttonColor: "#f1c40f",
         headerColor: "#192a56",
         blackText: false,
@@ -946,7 +1119,24 @@ const subredditArray = [
                 color: "#349e48"
             }
         ],
-        anchors: ["Posts", "Predictions", "Wiki", "Mission Events"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "Predictions",
+                selected: false
+            },
+            {
+                title: "Wiki",
+                selected: false
+            },
+            {
+                title: "Mission Events",
+                selected: false
+            },
+        ],
         buttonColor: "#0079d3",
         headerColor: "#003155",
         blackText: false,
@@ -1031,7 +1221,28 @@ const subredditArray = [
                 color: "#edeff1"
             }
         ],
-        anchors: ["Posts", "Wiki", "Book Recommendations", "What We're Reading", "Simple Questions"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "Wiki",
+                selected: false
+            },
+            {
+                title: "Book Recommendations",
+                selected: false
+            },
+            {
+                title: "What We're Reading",
+                selected: false
+            },
+            {
+                title: "Simple Questions",
+                selected: false
+            },
+        ],
         buttonColor: "#bf9daf",
         headerColor: "#a1887f",
         blackText: false,
@@ -1126,7 +1337,36 @@ const subredditArray = [
                 color: "#e58c0e"
             }
         ],
-        anchors: ["Posts", "Predictions", "Rules", "Apex Outlands", "LFG", "Discord", "Hunted Updates"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "Predictions",
+                selected: false
+            },
+            {
+                title: "Rules",
+                selected: false
+            },
+            {
+                title: "Apex Outlands",
+                selected: false
+            },
+            {
+                title: "LFG",
+                selected: false
+            },
+            {
+                title: "Discord",
+                selected: false
+            },
+            {
+                title: "Hunted Updates",
+                selected: false
+            },
+        ],
         buttonColor: "#252525",
         headerColor: "#373c3f",
         blackText: false,
@@ -1187,7 +1427,32 @@ const subredditArray = [
                 color: "#fc471e"
             }
         ],
-        anchors: ["Posts", "Blog", "Corporate Site", "Updates from Reddit", "Contact Us", "Help"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "Blog",
+                selected: false
+            },
+            {
+                title: "Corporate Site",
+                selected: false
+            },
+            {
+                title: "Updates from Reddit",
+                selected: false
+            },
+            {
+                title: "Contact Us",
+                selected: false
+            },
+            {
+                title: "Help",
+                selected: false
+            },
+        ],
         buttonColor: "#fc471e",
         headerColor: "#fc471e",
         blackText: false,
@@ -1241,7 +1506,12 @@ const subredditArray = [
                 color: "#edeff1"
             }
         ],
-        anchors: ["Posts"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+        ],
         buttonColor: "#0079d3",
         headerColor: "#0079d3",
         blackText: true,
@@ -1325,7 +1595,12 @@ const subredditArray = [
                 color: "#8d001a"
             }
         ],
-        anchors: ["Posts"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+        ],
         buttonColor: "#8d001a",
         headerColor: "#000000",
         blackText: false,
@@ -1396,7 +1671,28 @@ const subredditArray = [
                 color: "#ff4500"
             }
         ],
-        anchors: ["Posts", "Predictions", "Wiki", "Multi", "Flair"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "Predictions",
+                selected: false
+            },
+            {
+                title: "Wiki",
+                selected: false
+            },
+            {
+                title: "Multi",
+                selected: false
+            },
+            {
+                title: "Flair",
+                selected: false
+            },
+        ],
         buttonColor: "#ff4500",
         headerColor: "#000000",
         blackText: false,
@@ -1496,7 +1792,40 @@ const subredditArray = [
                 color: "#720469"
             }
         ],
-        anchors: ["Posts", "Polls", "Predictions", "Moons 🌕", "Reddit Talk", "Our Network", "Wiki", "Official Discord"],
+        anchors: [
+            {
+                title: "Posts",
+                selected: false
+            },
+            {
+                title: "Polls",
+                selected: false
+            },
+            {
+                title: "Predictions",
+                selected: false
+            },
+            {
+                title: "Moons 🌕",
+                selected: false
+            },
+            {
+                title: "Reddit Talk",
+                selected: false
+            },
+            {
+                title: "Our Network",
+                selected: false
+            },
+            {
+                title: "Wiki",
+                selected: false
+            },
+            {
+                title: "Official Discord",
+                selected: false
+            },
+        ],
         buttonColor: "#cc3600",
         headerColor: "#cc3600",
         blackText: false,
