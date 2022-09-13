@@ -73,4 +73,15 @@
                 }
             }
         }
+
+        .headlineBottom {
+            display: flex;
+            gap: 27px;
+            position: absolute;
+            bottom: 4px;
+            left: 472px;
+            font-size: 14px;
+            color: #1c1c1c;
+            font-family: "IBM Light";
+        }
     }
