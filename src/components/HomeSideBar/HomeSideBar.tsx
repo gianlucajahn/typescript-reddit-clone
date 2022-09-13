@@ -41,7 +41,7 @@ export default function HomeSideBar (props: HomeSideBarProps) {
 
             <div className="subredditList">
               {subreddits.map((subreddit, i) => {
-                if (viewAll && i > 20) {
+                if (viewAll && i > 9) {
                     return;
                 } else if (viewAll === false && i > 4) {
                     return;

@@ -107,6 +107,7 @@ const subredditArray = [
                 color: "#ccac2b"
             }
         ],
+        anchors: ["Posts", "Predictions", "Rules & FAQ 📋", "Latest AMA's 🎤", "Poster Collection", "This week's trailers", "Weekly Discussions"],
         buttonColor: "#014980",
         headerColor: "#014980",
         blackText: false,
@@ -194,6 +195,7 @@ const subredditArray = [
                 color: "#fc471e"
             }
         ],
+        anchors: ["Posts", "Predictions", "Full Rules"],
         buttonColor: "#a68039",
         headerColor: "#a68039",
         blackText: false,
@@ -311,6 +313,7 @@ const subredditArray = [
                 color: "#330099"
             }
         ],
+        anchors: ["Posts", "General Information", "In-depth FAQ", "Megathreads", "Official Sites", "Social Media"],
         buttonColor: "#0079d3",
         headerColor: "#373c3f",
         blackText: false,
@@ -393,6 +396,7 @@ const subredditArray = [
                 color: "#e58c0e"
             }
         ],
+        anchors: ["Posts", "Predictions", "Wiki", "Rules & Guidelines", "Tools", "Old Reddit"],
         buttonColor: "#ff4500",
         headerColor: "#ffa500",
         blackText: false,
@@ -455,6 +459,7 @@ const subredditArray = [
                 color: "#ff4500"
             }
         ],
+        anchors: ["Posts"],
         buttonColor: "#0d7680",
         headerColor: "#0d7680",
         blackText: false,
@@ -462,64 +467,86 @@ const subredditArray = [
         bannerUrl: "../../resources/images/Communities/finance/banner.jpg"
     },
     {
-        title: "announcements",
-        officialTitle: "Announcements",
-        logo: "../../resources/images/Communities/announcements/icon.png",
-        category: "Education",
-        favorite: true,
-        joined: true,
-        about: "Official announcements from Reddit, Inc.",
-        members: "172m",
-        online: "742",
-        creationDate: "Jun 17, 2009",
+        title: "programmerhumor",
+        officialTitle: "Memes and jokes about everything programming and CS",
+        logo: "../../resources/images/Communities/programmerhumor/icon.png",
+        category: "Entertainment",
+        favorite: false,
+        joined: false,
+        about: "Dedicated to humor and jokes relating to programmers and programming.",
+        members: "2.3m",
+        online: "24.0k",
+        creationDate: "Jan 22, 2012",
         rules: [
             {
                 number: 1,
-                title: "Only relevant information",
-                desc: "Please refrain from sharing information that is not relevant to the topic. There are subreddits for all of them."
+                title: "Posts must be humorous",
+                desc: "At the very least, posts must make an attempt at humor. Do not make posts that cannot be funny in any way, such as asking for help with programming."
             },
             {
                 number: 2,
-                title: "No personal attacks",
-                desc: "Personal attacks are forbidden and will result in a warn, post or comment deletion or in a ban, in very serious cases. Please behave."
+                title: "Posts must strictly be programming related",
+                desc: "We do not allow memes that can apply to more than just programming as a profession, or general tech related jokes/memes (such as running as administrator, sudo, USB or BIOS related posts)."
             },
             {
                 number: 3,
-                title: "All claims require evidence",
-                desc: "If you refer to anything, accompany it with the source for what you are referring to."
+                title: "No reposts",
+                desc: "Content that is part of top of all time, reached trending in the past 2 months, or has recently been posted, is considered a repost and will be removed."
+            },
+            {
+                number: 4,
+                title: "No low-quality content",
+                desc: "We also remove the following to preserve the quality of the subreddit, even if it passes the previous rules: Reaction Posts, Errors/Bugs and low effort analogies."
+            },
+            {
+                number: 5,
+                title: "Hotlinking to outside sources is not allowed",
+                desc: "Hotlinking is not allowed without explicit permission from the mods, unless it is obvious that the host allows it (e.g. Imgur or other image hosting services). Rehosting for the purposes of offering a direct link to an image is allowed in the comments."
+            },
+            {
+                number: 6,
+                title: "Any common post will be removed if it's not novel",
+                desc: "Any post on the list of common posts will be removed. You can find this list here. Established meme formats are allowed, as long as the post is compliant with the previous rules."
+            },
+            {
+                number: 7,
+                title: "Put effort into your titles",
+                desc: "Titles must also be creative, high effort and relevant to the content. Titles such as “Interesting title”, “.”, “print(title)”, and “I don’t know what to put here” are not allowed."
+            },
+            {
+                number: 8,
+                title: "Posts or comments must not focus around merchandise or advertising",
+                desc: "Posts or comments must not focus around merchandise, merchandisable goods (mugs, t-shirts, etc), or advertising. These posts are considered spam and removed on sight. Permabans will be handed out."
             }
         ],
         flairs: [
             {
-                title: "Changes to ToS",
-                color: "#fc471e"
+                title: "Mod Post",
+                color: "#ff4500"
             },
             {
-                title: "Rediquette",
-                color: "#fc471e"
+                title: "Meme",
+                color: "#edeff1"
             },
             {
-                title: "Hiring",
-                color: "#fc471e"
+                title: "(Bad) UI",
+                color: "#edeff1"
             },
             {
-                title: "Discussion",
-                color: "#fc471e"
+                title: "Other",
+                color: "#edeff1"
             },
             {
-                title: "News",
-                color: "#fc471e"
-            },
-            {
-                title: "Official",
-                color: "#fc471e"
+                title: "instanceof Trend",
+                color: "#edeff1"
             }
         ],
-        buttonColor: "#fc471e",
-        headerColor: "#fc471e",
-        blackText: false,
+        anchors: ["Posts", "Website", "Twitch", "Discord"],
+        buttonColor: "#ff885b",
+        headerColor: "#ff4500",
+        blackText: true,
         backgroundColor: "#edeff1",
-        bannerUrl: "../../resources/images/Communities/announcements/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/programmerhumor/banner.jpg"
     },
     {
         title: "learnprogramming",
@@ -616,6 +643,7 @@ const subredditArray = [
                 color: "#edeff1"
             }
         ],
+        anchors: ["Posts", "New? READ ME FIRST!", "Posting guidelines", "FAQ"],
         buttonColor: "#ff66ac",
         headerColor: "#349e48",
         blackText: false,
@@ -701,6 +729,7 @@ const subredditArray = [
                 color: "#fc471e"
             }
         ],
+        anchors: ["Posts", "Wiki"],
         buttonColor: "#0079d3",
         headerColor: "#0079d3",
         blackText: false,
@@ -813,6 +842,7 @@ const subredditArray = [
                 color: "#0392cf"
             }
         ],
+        anchors: ["Posts", "Predictions", "Wiki", "wallstreetbetscrypto", "Discord/Twitter/IG", "Thread Filters (NEW)", "FAQ", "Brand Use Guidelines"],
         buttonColor: "#f1c40f",
         headerColor: "#192a56",
         blackText: false,
@@ -916,6 +946,7 @@ const subredditArray = [
                 color: "#349e48"
             }
         ],
+        anchors: ["Posts", "Predictions", "Wiki", "Mission Events"],
         buttonColor: "#0079d3",
         headerColor: "#003155",
         blackText: false,
@@ -1000,6 +1031,7 @@ const subredditArray = [
                 color: "#edeff1"
             }
         ],
+        anchors: ["Posts", "Wiki", "Book Recommendations", "What We're Reading", "Simple Questions"],
         buttonColor: "#bf9daf",
         headerColor: "#a1887f",
         blackText: false,
@@ -1094,6 +1126,7 @@ const subredditArray = [
                 color: "#e58c0e"
             }
         ],
+        anchors: ["Posts", "Predictions", "Rules", "Apex Outlands", "LFG", "Discord", "Hunted Updates"],
         buttonColor: "#252525",
         headerColor: "#373c3f",
         blackText: false,
@@ -1101,85 +1134,65 @@ const subredditArray = [
         bannerUrl: "../../resources/images/Communities/apexlegends/banner.jpg"
     },
     {
-        title: "programmerhumor",
-        officialTitle: "Memes and jokes about everything programming and CS",
-        logo: "../../resources/images/Communities/programmerhumor/icon.png",
-        category: "Entertainment",
-        favorite: false,
-        joined: false,
-        about: "Dedicated to humor and jokes relating to programmers and programming.",
-        members: "2.3m",
-        online: "24.0k",
-        creationDate: "Jan 22, 2012",
+        title: "announcements",
+        officialTitle: "Announcements",
+        logo: "../../resources/images/Communities/announcements/icon.png",
+        category: "Education",
+        favorite: true,
+        joined: true,
+        about: "Official announcements from Reddit, Inc.",
+        members: "172m",
+        online: "742",
+        creationDate: "Jun 17, 2009",
         rules: [
             {
                 number: 1,
-                title: "Posts must be humorous",
-                desc: "At the very least, posts must make an attempt at humor. Do not make posts that cannot be funny in any way, such as asking for help with programming."
+                title: "Only relevant information",
+                desc: "Please refrain from sharing information that is not relevant to the topic. There are subreddits for all of them."
             },
             {
                 number: 2,
-                title: "Posts must strictly be programming related",
-                desc: "We do not allow memes that can apply to more than just programming as a profession, or general tech related jokes/memes (such as running as administrator, sudo, USB or BIOS related posts)."
+                title: "No personal attacks",
+                desc: "Personal attacks are forbidden and will result in a warn, post or comment deletion or in a ban, in very serious cases. Please behave."
             },
             {
                 number: 3,
-                title: "No reposts",
-                desc: "Content that is part of top of all time, reached trending in the past 2 months, or has recently been posted, is considered a repost and will be removed."
-            },
-            {
-                number: 4,
-                title: "No low-quality content",
-                desc: "We also remove the following to preserve the quality of the subreddit, even if it passes the previous rules: Reaction Posts, Errors/Bugs and low effort analogies."
-            },
-            {
-                number: 5,
-                title: "Hotlinking to outside sources is not allowed",
-                desc: "Hotlinking is not allowed without explicit permission from the mods, unless it is obvious that the host allows it (e.g. Imgur or other image hosting services). Rehosting for the purposes of offering a direct link to an image is allowed in the comments."
-            },
-            {
-                number: 6,
-                title: "Any common post will be removed if it's not novel",
-                desc: "Any post on the list of common posts will be removed. You can find this list here. Established meme formats are allowed, as long as the post is compliant with the previous rules."
-            },
-            {
-                number: 7,
-                title: "Put effort into your titles",
-                desc: "Titles must also be creative, high effort and relevant to the content. Titles such as “Interesting title”, “.”, “print(title)”, and “I don’t know what to put here” are not allowed."
-            },
-            {
-                number: 8,
-                title: "Posts or comments must not focus around merchandise or advertising",
-                desc: "Posts or comments must not focus around merchandise, merchandisable goods (mugs, t-shirts, etc), or advertising. These posts are considered spam and removed on sight. Permabans will be handed out."
+                title: "All claims require evidence",
+                desc: "If you refer to anything, accompany it with the source for what you are referring to."
             }
         ],
         flairs: [
             {
-                title: "Mod Post",
-                color: "#ff4500"
+                title: "Changes to ToS",
+                color: "#fc471e"
             },
             {
-                title: "Meme",
-                color: "#edeff1"
+                title: "Rediquette",
+                color: "#fc471e"
             },
             {
-                title: "(Bad) UI",
-                color: "#edeff1"
+                title: "Hiring",
+                color: "#fc471e"
             },
             {
-                title: "Other",
-                color: "#edeff1"
+                title: "Discussion",
+                color: "#fc471e"
             },
             {
-                title: "instanceof Trend",
-                color: "#edeff1"
+                title: "News",
+                color: "#fc471e"
+            },
+            {
+                title: "Official",
+                color: "#fc471e"
             }
         ],
-        buttonColor: "#ff885b",
-        headerColor: "#ff4500",
-        blackText: true,
+        anchors: ["Posts", "Blog", "Corporate Site", "Updates from Reddit", "Contact Us", "Help"],
+        buttonColor: "#fc471e",
+        headerColor: "#fc471e",
+        blackText: false,
         backgroundColor: "#edeff1",
-        bannerUrl: "../../resources/images/Communities/programmerhumor/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/announcements/banner.jpg"
     },
     {
         title: "baking",
@@ -1228,6 +1241,7 @@ const subredditArray = [
                 color: "#edeff1"
             }
         ],
+        anchors: ["Posts"],
         buttonColor: "#0079d3",
         headerColor: "#0079d3",
         blackText: true,
@@ -1311,6 +1325,7 @@ const subredditArray = [
                 color: "#8d001a"
             }
         ],
+        anchors: ["Posts"],
         buttonColor: "#8d001a",
         headerColor: "#000000",
         blackText: false,
@@ -1381,6 +1396,7 @@ const subredditArray = [
                 color: "#ff4500"
             }
         ],
+        anchors: ["Posts", "Predictions", "Wiki", "Multi", "Flair"],
         buttonColor: "#ff4500",
         headerColor: "#000000",
         blackText: false,
@@ -1480,6 +1496,7 @@ const subredditArray = [
                 color: "#720469"
             }
         ],
+        anchors: ["Posts", "Polls", "Predictions", "Moons 🌕", "Reddit Talk", "Our Network", "Wiki", "Official Discord"],
         buttonColor: "#cc3600",
         headerColor: "#cc3600",
         blackText: false,

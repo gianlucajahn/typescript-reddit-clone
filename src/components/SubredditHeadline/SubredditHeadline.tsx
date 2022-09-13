@@ -3,12 +3,14 @@ import { Subreddit } from '../../types/types';
 import './SubredditHeadline.scss';
 
 export interface SubredditHeadlineProps {
-    currentSub: Subreddit | undefined
+    currentSub: Subreddit | undefined,
+    handleSubMembership: React.MouseEventHandler,
 }
 
 export default function SubredditHeadline (props: SubredditHeadlineProps) {
   const {
     currentSub,
+    handleSubMembership
   } = props;
 
   return (
@@ -21,10 +23,20 @@ export default function SubredditHeadline (props: SubredditHeadlineProps) {
         <h1>{currentSub?.officialTitle}</h1>
         <h3>{"r/" + currentSub?.title}</h3>
       </div>
-      <button className="headlineJoin" style={{ backgroundColor: currentSub?.buttonColor }}>{currentSub?.joined ? "Leave" : "Join"}</button>
+      <button className="headlineJoin" style={{ backgroundColor: currentSub?.buttonColor }} onClick={handleSubMembership} id={currentSub?.title}>{currentSub?.joined ? "Leave" : "Join"}</button>
     </div>
     <div className="headlineBottom">
+        <div className="postsAnchor">
 
+        </div>
+
+        <div className="rulesAnchor">
+
+        </div>
+
+        <div className="flairsAnchor">
+            
+        </div>
     </div>
   </div>
   );

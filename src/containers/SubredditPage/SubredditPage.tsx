@@ -44,6 +44,7 @@ export default function SubredditPage (props: SubredditPageProps) {
 
       <SubredditHeadline 
         currentSub={currentSub}
+        handleSubMembership={handleSubMembership}
       />
     </div>
   );

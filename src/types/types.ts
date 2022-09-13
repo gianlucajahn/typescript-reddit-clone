@@ -13,6 +13,7 @@ export type Subreddit = {
     creationDate:    string;
     rules:           Rule[];
     flairs:          Flair[];
+    anchors:         string[];
     buttonColor:     string;
     headerColor:     string;
     blackText:       boolean;
