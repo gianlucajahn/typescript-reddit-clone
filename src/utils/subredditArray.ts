@@ -1094,7 +1094,7 @@ const subredditArray = [
                 color: "#e58c0e"
             }
         ],
-        buttonColor: "#bf9daf",
+        buttonColor: "#252525",
         headerColor: "#373c3f",
         blackText: false,
         backgroundColor: "#edeff1",
