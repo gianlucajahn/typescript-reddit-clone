@@ -1,0 +1,67 @@
+    .subredditHeadline {
+        background-color: white;
+        height: 100px;
+        margin-top: -4px;
+        position: relative;
+        z-index: 7;
+        padding-left: 464px;
+
+        .headlineTop {
+            display: flex;
+            gap: 28px;
+
+            .iconContainer {
+                width: 77px;
+                height: 77px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid white;
+                background-color: white;
+                border-radius: 9999px;
+                position: absolute;
+                top: -15px;
+
+                .icon {
+                    width: 70px;
+                    height: 70px;
+                    padding-right: 0.01em;
+                }
+            }
+
+            .headlineTitle {
+                padding-top: 8px;
+                margin-left: 96px;
+
+                h1 {
+                    color: #1c1c1c;
+                    font-size: 27px;
+                    font-family: "IBM";
+                    letter-spacing: 0.015em;
+                    margin-bottom: 5px;
+                }
+
+                h3 {
+                    color: #7c7c7c;
+                    font-size: 14px;
+                    font-family: "IBM Light";
+                    letter-spacing: 0.02em;
+                }
+            }
+
+            .headlineJoin {
+                margin-top: 10px;
+                display: flex;
+                color: white;
+                padding-bottom: 2px;
+                font-size: 14px;
+                font-family: "Noto Sans Bold";
+                justify-content: center;
+                align-items: center;
+                width: 96px;
+                border: 1px solid transparent;
+                border-radius: 9999px;
+                height: 32px;
+            }
+        }
+    }

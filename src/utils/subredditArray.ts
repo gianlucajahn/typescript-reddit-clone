@@ -1,7 +1,7 @@
 const subredditArray = [
     {
         title: "movies",
-        officialTitle: "Movies",
+        officialTitle: "Movie News and Discussion",
         logo: "../../resources/images/Communities/movies/icon.png",
         category: "Entertainment",
         favorite: false,
@@ -115,7 +115,7 @@ const subredditArray = [
     },
     {
         title: "leagueoflegends",
-        officialTitle: "League of Legends",
+        officialTitle: "League Of Legends",
         logo: "../../resources/images/Communities/leagueoflegends/icon.png",
         category: "Gaming",
         favorite: false,
@@ -202,7 +202,7 @@ const subredditArray = [
     },
     {
         title: "genshinimpact",
-        officialTitle: "Genshin Impact",
+        officialTitle: "Genshin Impact Official",
         logo: "../../resources/images/Communities/genshinimpact/icon.png",
         category: "Gaming",
         favorite: false,
@@ -401,7 +401,7 @@ const subredditArray = [
     },
     {
         title: "finance",
-        officialTitle: "Finance",
+        officialTitle: "Financial news and views",
         logo: "../../resources/images/Communities/finance/icon.png",
         category: "Education",
         favorite: false,
@@ -523,7 +523,7 @@ const subredditArray = [
     },
     {
         title: "learnprogramming",
-        officialTitle: "Learn Programming",
+        officialTitle: "learn programming",
         logo: "../../resources/images/Communities/learnprogramming/icon.png",
         category: "Education",
         favorite: true,
@@ -624,7 +624,7 @@ const subredditArray = [
     },
     {
         title: "todayilearned",
-        officialTitle: "Today I Learned",
+        officialTitle: "Today I Learned (TIL)",
         logo: "../../resources/images/Communities/todayilearned/icon.png",
         category: "Education",
         favorite: false,
@@ -709,7 +709,7 @@ const subredditArray = [
     },
     {
         title: "wallstreetbets",
-        officialTitle: "Wallstreet Bets",
+        officialTitle: "wallstreetbets",
         logo: "../../resources/images/Communities/wallstreetbets/icon.png",
         category: "Entertainment",
         favorite: false,
@@ -924,7 +924,7 @@ const subredditArray = [
     },
     {
         title: "books",
-        officialTitle: "Books",
+        officialTitle: "So many books, so little time",
         logo: "../../resources/images/Communities/books/icon.png",
         category: "Entertainment",
         favorite: false,
@@ -1102,7 +1102,7 @@ const subredditArray = [
     },
     {
         title: "programmerhumor",
-        officialTitle: "Programmer' Humor",
+        officialTitle: "Memes and jokes about everything programming and CS",
         logo: "../../resources/images/Communities/programmerhumor/icon.png",
         category: "Entertainment",
         favorite: false,
@@ -1183,7 +1183,7 @@ const subredditArray = [
     },
     {
         title: "baking",
-        officialTitle: "Baking",
+        officialTitle: "The Baking sub-reddit",
         logo: "../../resources/images/Communities/baking/icon.png",
         category: "Entertainment",
         favorite: false,
@@ -1319,7 +1319,7 @@ const subredditArray = [
     },
     {
         title: "sports",
-        officialTitle: "Sports",
+        officialTitle: "Reddit Sports",
         logo: "../../resources/images/Communities/sports/icon.png",
         category: "Entertainment",
         favorite: false,
@@ -1389,7 +1389,7 @@ const subredditArray = [
     },
     {
         title: "crypto",
-        officialTitle: "Crypto",
+        officialTitle: "Cryptocurrency News & Discussion",
         logo: "../../resources/images/Communities/crypto/icon.png",
         category: "Entertainment",
         favorite: false,

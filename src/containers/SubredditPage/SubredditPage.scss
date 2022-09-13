@@ -4,12 +4,8 @@
     .subredditBanner {
         margin-top: 49px;
         width: 100vw;
-        max-height: 400px;
-    }
-
-    .subredditHeadline {
-        background-color: white;
-        height: 100px;
-        margin-top: -4px;
+        max-height: 243px;
+        z-index: 1;
+        position: relative;
     }
 }

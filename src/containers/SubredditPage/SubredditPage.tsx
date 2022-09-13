@@ -1,5 +1,6 @@
 import React, { MouseEventHandler } from 'react';
 import { useLocation } from 'react-router-dom';
+import SubredditHeadline from '../../components/SubredditHeadline/SubredditHeadline';
 import { Subreddits, Subreddit } from '../../types/types';
 import './SubredditPage.scss';
 
@@ -41,21 +42,9 @@ export default function SubredditPage (props: SubredditPageProps) {
     <div className="subredditPage" style={{ backgroundColor: currentSub ? currentSub?.backgroundColor : "#edeff1" }}>
       <img className="subredditBanner" src={require(`../../resources/images/Communities/${currentSub?.title}/banner.jpg`)} />
 
-      <div className="subredditHeadline">
-        <div className="headlineTop">
-          <div className="iconContainer">
-            <img className="icon" src={require(`../../resources/images/Communities/${currentSub?.title}/icon.png`)} />
-          </div>
-          <div className="headlineTitle">
-            <h1>{currentSub?.officialTitle}</h1>
-            <h3>{"r/" + currentSub?.title}</h3>
-          </div>
-          <button className="headlineJoin">{currentSub?.joined ? "Leave" : "Join"}</button>
-        </div>
-        <div className="headlineBottom">
-
-        </div>
-      </div>
+      <SubredditHeadline 
+        currentSub={currentSub}
+      />
     </div>
   );
 }
