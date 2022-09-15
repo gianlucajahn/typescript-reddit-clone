@@ -26,10 +26,10 @@ export default function SubredditHeadline (props: SubredditHeadlineProps) {
       <button className="headlineJoin" style={{ backgroundColor: currentSub?.buttonColor }} onClick={handleSubMembership} id={currentSub?.title}>{currentSub?.joined ? "Leave" : "Join"}</button>
     </div>
     <div className="headlineBottom">
-        {currentSub?.anchors.map((anchor, i) => {
-            return <div className="anchor">
-                {anchor}
-                <div className="anchorLine" style={{ backgroundColor: currentSub?.buttonColor }}></div>
+        {currentSub?.anchors?.map((anchor, i) => {
+            return <div className="anchor" style={{ color: anchor?.selected ? "#1c1c1c" : "#737373" }} id={anchor?.title}>
+                {anchor?.title}
+                <div className="anchorLine" style={{ backgroundColor: anchor?.selected ? currentSub?.buttonColor : "transparent" }}></div>
             </div>
         })}
     </div>

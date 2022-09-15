@@ -13,13 +13,18 @@ export type Subreddit = {
     creationDate:    string;
     rules:           Rule[];
     flairs:          Flair[];
-    anchors:         string[];
+    anchors:         Anchor[] | undefined;
     buttonColor:     string;
     headerColor:     string;
     blackText:       boolean;
     backgroundColor: string;
     bannerUrl:       string;
 }
+
+export type Anchor = {
+    title: string,
+    selected: boolean
+} | undefined
 
 export type Flair = {
     title: string;

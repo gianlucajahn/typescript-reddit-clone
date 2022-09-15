@@ -18,6 +18,8 @@ export interface SubredditPageProps {
     setLoginModalState: any,
     identifyCurrentSub: any,
     currentSub: Subreddit | undefined,
+    selectAnchor: React.MouseEventHandler,
+    currentAnchor: number
 }
 
 export default function SubredditPage (props: SubredditPageProps) {
@@ -32,10 +34,12 @@ export default function SubredditPage (props: SubredditPageProps) {
     setLoginModalState,
     identifyCurrentSub,
     currentSub,
+    currentAnchor,
     setSort,
     handleSubMembership,
     handleNavigate,
-    navToSubmit
+    navToSubmit,
+    selectAnchor
   } = props;
 
   return (
@@ -45,6 +49,8 @@ export default function SubredditPage (props: SubredditPageProps) {
       <SubredditHeadline 
         currentSub={currentSub}
         handleSubMembership={handleSubMembership}
+        selectAnchor={selectAnchor}
+        currentAnchor={currentAnchor}
       />
     </div>
   );

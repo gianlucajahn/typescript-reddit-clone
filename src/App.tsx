@@ -16,6 +16,8 @@ function App() {
   const [subreddits, setSubreddits] = useState(subredditArray);
   const [topSubreddits, setTopSubreddits] = useState(subreddits.slice(0, 5));
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
+  const [currentAnchor, setCurrentAnchor] = useState(Number);
+  const [selectedAnchor, setSelectedAnchor] = useState("");
   const [currentSub, setCurrentSub] = useState<Subreddit>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
@@ -263,6 +265,22 @@ function App() {
     setLoginModalState(target.id);
   }
 
+  const selectAnchor = (e: React.MouseEvent) => {
+    const target = e.target as HTMLDivElement;
+    const newAnchorArray = currentSub?.anchors?.map((anchor, i) => {
+      if (anchor && anchor.title === target.id) {
+        anchor.selected = true;
+        setCurrentAnchor(i);
+        return anchor;
+      } else if (anchor) {
+        anchor.selected = false;
+        return anchor;
+      }
+    });
+
+    
+  }
+
   const navToSubmit = (e: React.MouseEvent) => {
     navigate("/submit");
   }
@@ -344,6 +362,8 @@ function App() {
           navToSubmit={navToSubmit}
           identifyCurrentSub={identifyCurrentSub}
           currentSub={currentSub}
+          selectAnchor={selectAnchor}
+          currentAnchor={currentAnchor}
         />} />
         <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}
