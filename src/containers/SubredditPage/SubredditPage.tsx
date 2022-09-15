@@ -4,6 +4,7 @@ import CreatePost from '../../components/CreatePost/CreatePost';
 import SubredditHeadline from '../../components/SubredditHeadline/SubredditHeadline';
 import { Subreddits, Subreddit } from '../../types/types';
 import './SubredditPage.scss';
+import SortBar from '../../components/SortBar/SortBar';
 
 export interface SubredditPageProps {
     randomIntToString: string,
@@ -60,6 +61,11 @@ export default function SubredditPage (props: SubredditPageProps) {
               randomIntToString={randomIntToString}
               userName={userName}
               navToSubmit={navToSubmit}
+            />
+
+            <SortBar 
+              currentSort={currentSort}
+              setSort={setSort}
             />
           </div>
           <div className="sidebar">
