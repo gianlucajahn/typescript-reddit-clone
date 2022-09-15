@@ -4,12 +4,16 @@ import './SubredditHeadline.scss';
 
 export interface SubredditHeadlineProps {
     currentSub: Subreddit | undefined,
+    currentAnchor: number | undefined,
+    selectAnchor: React.MouseEventHandler
     handleSubMembership: React.MouseEventHandler,
 }
 
 export default function SubredditHeadline (props: SubredditHeadlineProps) {
   const {
     currentSub,
+    currentAnchor,
+    selectAnchor,
     handleSubMembership
   } = props;
 
@@ -27,9 +31,9 @@ export default function SubredditHeadline (props: SubredditHeadlineProps) {
     </div>
     <div className="headlineBottom">
         {currentSub?.anchors?.map((anchor, i) => {
-            return <div className="anchor" style={{ color: anchor?.selected ? "#1c1c1c" : "#737373" }} id={anchor?.title}>
+            return <div className="anchor" style={{ color: currentAnchor === i ? "#1c1c1c" : "#737373" }} id={`${i}`} onClick={selectAnchor}>
                 {anchor?.title}
-                <div className="anchorLine" style={{ backgroundColor: anchor?.selected ? currentSub?.buttonColor : "transparent" }}></div>
+                <div className="anchorLine" style={{ backgroundColor: currentAnchor === i ? currentSub?.buttonColor : "transparent" }}></div>
             </div>
         })}
     </div>

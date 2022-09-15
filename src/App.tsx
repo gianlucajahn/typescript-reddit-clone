@@ -267,18 +267,16 @@ function App() {
 
   const selectAnchor = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
+    const index = Number(target.id);
+    console.log(index);
     const newAnchorArray = currentSub?.anchors?.map((anchor, i) => {
-      if (anchor && anchor.title === target.id) {
-        anchor.selected = true;
+      if (anchor && i === index) {
         setCurrentAnchor(i);
         return anchor;
-      } else if (anchor) {
-        anchor.selected = false;
+      } else {
         return anchor;
       }
     });
-
-    
   }
 
   const navToSubmit = (e: React.MouseEvent) => {

@@ -1,5 +1,6 @@
 import React, { MouseEventHandler } from 'react';
 import { useLocation } from 'react-router-dom';
+import CreatePost from '../../components/CreatePost/CreatePost';
 import SubredditHeadline from '../../components/SubredditHeadline/SubredditHeadline';
 import { Subreddits, Subreddit } from '../../types/types';
 import './SubredditPage.scss';
@@ -19,7 +20,7 @@ export interface SubredditPageProps {
     identifyCurrentSub: any,
     currentSub: Subreddit | undefined,
     selectAnchor: React.MouseEventHandler,
-    currentAnchor: number
+    currentAnchor: number | undefined
 }
 
 export default function SubredditPage (props: SubredditPageProps) {
@@ -52,6 +53,19 @@ export default function SubredditPage (props: SubredditPageProps) {
         selectAnchor={selectAnchor}
         currentAnchor={currentAnchor}
       />
+
+      <div className="subredditContent">
+          <div className="feed">
+            <CreatePost 
+              randomIntToString={randomIntToString}
+              userName={userName}
+              navToSubmit={navToSubmit}
+            />
+          </div>
+          <div className="sidebar">
+    
+          </div>
+      </div>
     </div>
   );
 }
