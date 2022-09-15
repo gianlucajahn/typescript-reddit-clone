@@ -5,6 +5,7 @@ import SubredditHeadline from '../../components/SubredditHeadline/SubredditHeadl
 import { Subreddits, Subreddit } from '../../types/types';
 import './SubredditPage.scss';
 import SortBar from '../../components/SortBar/SortBar';
+import Imprint from '../../components/Imprint/Imprint';
 
 export interface SubredditPageProps {
     randomIntToString: string,
@@ -69,7 +70,14 @@ export default function SubredditPage (props: SubredditPageProps) {
             />
           </div>
           <div className="sidebar">
-    
+            <div className="aboutCommunity">
+              <div className="head">
+                <h3>About Community</h3>
+                <img className="more" src={require("../../resources/images/more_white.PNG")} />
+              </div>
+            </div>
+
+            <Imprint />
           </div>
       </div>
     </div>

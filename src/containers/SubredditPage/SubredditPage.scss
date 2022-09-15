@@ -7,5 +7,26 @@
         max-height: 243px;
         z-index: 1;
         position: relative;
+        cursor: pointer;
+    }
+}
+
+.subredditContent {
+    display: flex;
+    gap: 24px;
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .aboutCommunity {
+            background-color: white;
+            border: 1px solid #ccc;
+            width: 312px;
+            box-sizing: border-box;
+            height: 472px;
+            border-radius: 4px;
+        }
     }
 }
