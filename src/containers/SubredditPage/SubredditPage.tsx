@@ -71,10 +71,38 @@ export default function SubredditPage (props: SubredditPageProps) {
           </div>
           <div className="sidebar">
             <div className="aboutCommunity">
-              <div className="head">
+              <div className="head" style={{ backgroundColor: currentSub?.headerColor }}>
                 <h3>About Community</h3>
                 <img className="more" src={require("../../resources/images/more_white.PNG")} />
               </div>
+
+              <p className="about">{currentSub?.about}</p>
+              <div className="createdAt">
+                <img className="cake" src={require("../../resources/images/cake.png")} />
+                <p>Created {currentSub?.creationDate}</p>
+              </div>
+
+              <div className="memberContainer">
+                <div className="memberCount">
+                  <p>{currentSub?.members}</p>
+                  <h5>Members</h5>
+                </div>
+                <div className="onlineCount">
+                  <div className="number">
+                      <div className="dot"></div>
+                      <p>{currentSub?.online}</p>
+                  </div>
+                  <h5>currently online</h5>
+                </div>
+                <div className="size">
+                  <p>{currentSub?.bySize}</p>
+                  <h5>Ranked by Size</h5>
+                </div>
+              </div>
+
+              <button className="createPost" style={{ backgroundColor: currentSub?.buttonColor }}>
+                Create Post
+              </button>
             </div>
 
             <Imprint />

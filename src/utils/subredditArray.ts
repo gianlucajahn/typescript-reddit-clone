@@ -141,7 +141,8 @@ const subredditArray = [
         headerColor: "#014980",
         blackText: false,
         backgroundColor: "#02315c",
-        bannerUrl: "../../resources/images/Communities/movies/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/movies/banner.jpg",
+        bySize: "#5"
     },
     {
         title: "leagueoflegends",
@@ -242,7 +243,8 @@ const subredditArray = [
         headerColor: "#a68039",
         blackText: false,
         backgroundColor: "#0f221e",
-        bannerUrl: "../../resources/images/Communities/leagueoflegends/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/leagueoflegends/banner.jpg",
+        bySize: "#28"
     },
     {
         title: "genshinimpact",
@@ -385,7 +387,8 @@ const subredditArray = [
         headerColor: "#373c3f",
         blackText: false,
         backgroundColor: "#3f8f94",
-        bannerUrl: "../../resources/images/Communities/genshinimpact/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/genshinimpact/banner.jpg",
+        bySize: "Top 1%"
     },
     {
         title: "nba",
@@ -493,7 +496,8 @@ const subredditArray = [
         headerColor: "#ffa500",
         blackText: false,
         backgroundColor: "#edeff1",
-        bannerUrl: "../../resources/images/Communities/nba/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/nba/banner.jpg",
+        bySize: "#34"
     },
     {
         title: "finance",
@@ -561,7 +565,8 @@ const subredditArray = [
         headerColor: "#0d7680",
         blackText: false,
         backgroundColor: "#F2DFCE",
-        bannerUrl: "../../resources/images/Communities/finance/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/finance/banner.jpg",
+        bySize: "Top 1%"
     },
     {
         title: "programmerhumor",
@@ -660,7 +665,8 @@ const subredditArray = [
         headerColor: "#ff4500",
         blackText: true,
         backgroundColor: "#edeff1",
-        bannerUrl: "../../resources/images/Communities/programmerhumor/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/programmerhumor/banner.jpg",
+        bySize: "Top 1%"
     },
     {
         title: "learnprogramming",
@@ -779,7 +785,8 @@ const subredditArray = [
         headerColor: "#349e48",
         blackText: false,
         backgroundColor: "#edeff1",
-        bannerUrl: "../../resources/images/Communities/learnprogramming/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/learnprogramming/banner.jpg",
+        bySize: "#49"
     },
     {
         title: "todayilearned",
@@ -874,7 +881,8 @@ const subredditArray = [
         headerColor: "#0079d3",
         blackText: false,
         backgroundColor: "#edeff1",
-        bannerUrl: "../../resources/images/Communities/todayilearned/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/todayilearned/banner.jpg",
+        bySize: "#6"
     },
     {
         title: "wallstreetbets",
@@ -1020,7 +1028,8 @@ const subredditArray = [
         headerColor: "#192a56",
         blackText: false,
         backgroundColor: "#273c75",
-        bannerUrl: "../../resources/images/Communities/wallstreetbets/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/wallstreetbets/banner.jpg",
+        bySize: "#25"
     },
     {
         title: "nasa",
@@ -1141,7 +1150,8 @@ const subredditArray = [
         headerColor: "#003155",
         blackText: false,
         backgroundColor: "#00243e",
-        bannerUrl: "../../resources/images/Communities/nasa/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/nasa/banner.jpg",
+        bySize: "Top 1%"
     },
     {
         title: "books",
@@ -1247,7 +1257,8 @@ const subredditArray = [
         headerColor: "#a1887f",
         blackText: false,
         backgroundColor: "#edeff1",
-        bannerUrl: "../../resources/images/Communities/books/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/books/banner.jpg",
+        bySize: "#10"
     },
     {
         title: "apexlegends",
@@ -1371,7 +1382,8 @@ const subredditArray = [
         headerColor: "#373c3f",
         blackText: false,
         backgroundColor: "#edeff1",
-        bannerUrl: "../../resources/images/Communities/apexlegends/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/apexlegends/banner.jpg",
+        bySize: "Top 1%"
     },
     {
         title: "announcements",
@@ -1457,7 +1469,8 @@ const subredditArray = [
         headerColor: "#fc471e",
         blackText: false,
         backgroundColor: "#edeff1",
-        bannerUrl: "../../resources/images/Communities/announcements/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/announcements/banner.jpg",
+        bySize: "#1"
     },
     {
         title: "baking",
@@ -1516,7 +1529,8 @@ const subredditArray = [
         headerColor: "#0079d3",
         blackText: true,
         backgroundColor: "#edeff1",
-        bannerUrl: "../../resources/images/Communities/baking/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/baking/banner.jpg",
+        bySize: "Top 1%"
     },
     {
         title: "astronomy",
@@ -1605,7 +1619,8 @@ const subredditArray = [
         headerColor: "#000000",
         blackText: false,
         backgroundColor: "#edeff1",
-        bannerUrl: "../../resources/images/Communities/astronomy/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/astronomy/banner.jpg",
+        bySize: "Top 1%"
     },
     {
         title: "sports",
@@ -1697,7 +1712,8 @@ const subredditArray = [
         headerColor: "#000000",
         blackText: false,
         backgroundColor: "#edeff1",
-        bannerUrl: "../../resources/images/Communities/sports/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/sports/banner.jpg",
+        bySize: "#17"
     },
     {
         title: "crypto",
@@ -1830,7 +1846,8 @@ const subredditArray = [
         headerColor: "#cc3600",
         blackText: false,
         backgroundColor: "#bbbdbf",
-        bannerUrl: "../../resources/images/Communities/crypto/banner.jpg"
+        bannerUrl: "../../resources/images/Communities/crypto/banner.jpg",
+        bySize: "#32"
     },
 ]
 

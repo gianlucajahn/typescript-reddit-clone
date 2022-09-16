@@ -19,6 +19,7 @@ export type Subreddit = {
     blackText:       boolean;
     backgroundColor: string;
     bannerUrl:       string;
+    bySize:          string | undefined;
 }
 
 export type Anchor = {
