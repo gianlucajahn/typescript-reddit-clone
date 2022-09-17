@@ -4,7 +4,7 @@
     .subredditBanner {
         margin-top: 49px;
         width: 100vw;
-        max-height: 243px;
+        max-height: 400px;
         z-index: 1;
         position: relative;
         cursor: pointer;
@@ -25,7 +25,6 @@
             border: 1px solid #ccc;
             width: 312px;
             box-sizing: border-box;
-            height: 472px;
             border-radius: 4px;
 
             .head {
@@ -142,7 +141,7 @@
 
 .userFlair {
     margin-top: 16px;
-    margin-left: 11px;
+    margin-left: 10px;
     margin-right: 11px;
     border-top: 1px solid rgba(26,26,27,0.07);
 
@@ -153,14 +152,63 @@
 
     .userFlairDesc {
         justify-content: space-between;
+        margin-right: 8px;
+        margin-left: 1px;
+
+        h5 {
+            margin-top: 25px;
+            font-size: 10px;
+            letter-spacing: 0.07em;
+            color: #1a1a1b;
+            font-family: "IBM";
+        }
     }
 
     .user {
+        margin-top: 12px;
         align-items: center;
         gap: 6px;
 
         .avatar {
             height: 38px;
+            margin-right: 1px;
+        }
+
+        .userName {
+            font-size: 12px;
+            font-family: "IBM";
+            color: #1a1a1b;
+        }
+    }
+}
+
+.communityOptions {
+    border-top: 1px solid rgba(26,26,27,0.07);
+    margin: 15px 12px 4px 12px;
+    padding: 18px 0px 12px 0px;
+    display: flex;
+    justify-content: center;
+
+    .communityToggle {
+        width: 100%;
+        padding: 7px 12px 7px 12px;
+        color: #1a1a1b;
+        font-size: 11px;
+        font-family: "IBM";
+        cursor: pointer;
+        align-items: center;
+        border: 1px transparent;
+        background-color: white;
+        border-radius: 9999px;
+        display: flex;
+        justify-content: space-between;
+
+        &:hover {
+            background-color: #ededed;
+        }
+
+        &:active {
+            background-color: #c8c8c8;
         }
     }
 }

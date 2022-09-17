@@ -109,7 +109,9 @@ export default function SubredditPage (props: SubredditPageProps) {
                 <div className="userFlairDesc">
                   <h5>USER FLAIR PREVIEW</h5>
                   <Pen  
-                    style={{ fill: currentSub?.buttonColor, height: "20px" }}
+                    style={{ fill: currentSub?.buttonColor, height: "19px", 
+                    marginTop: "22px",
+                    cursor: "pointer" }}
                   />
                 </div>
 
@@ -117,6 +119,13 @@ export default function SubredditPage (props: SubredditPageProps) {
                   <img className="avatar" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
                   <p className="userName">{userName}</p>
                 </div>
+              </div>
+
+              <div className="communityOptions">
+                <button className="communityToggle">
+                  COMMUNITY OPTIONS
+                  <img className="expand" src={require("../../resources/images/expand.png")} />
+                </button>
               </div>
             </div>
 
