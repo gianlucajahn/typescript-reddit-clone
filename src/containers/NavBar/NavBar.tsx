@@ -16,6 +16,7 @@ export interface NavBarProps {
   loginStatus: boolean,
   subDropdownIsOpen: boolean,
   randomIntToString: string,
+  navToSubmit: MouseEventHandler,
   currentSub: Subreddit | undefined,
   joinedCommunities: any,
   handleFavorite: MouseEventHandler<HTMLImageElement>,
@@ -43,6 +44,7 @@ export default function NavBar (props: NavBarProps) {
   const {
     dropdownIsOpen,
     handleDropdown,
+    navToSubmit,
     handleExpand,
     handleLoginModal,
     handleLogin,
@@ -177,7 +179,7 @@ export default function NavBar (props: NavBarProps) {
                 <button className="userButton" aria-label='Notifications'>
                   <img className="userIcon notifications" src={require("../../resources/images/bell.PNG")} />
                 </button>
-                <button className="userButton lastBtn" aria-label='Create'>
+                <button className="userButton lastBtn" aria-label='Create' onClick={navToSubmit}>
                   <img className="userIcon create" src={require("../../resources/images/add.PNG")} />
                 </button>
                 <button className="auth shopAvatar" type="button">

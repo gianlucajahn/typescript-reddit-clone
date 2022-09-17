@@ -6,6 +6,7 @@ import { Subreddits, Subreddit } from '../../types/types';
 import './SubredditPage.scss';
 import SortBar from '../../components/SortBar/SortBar';
 import Imprint from '../../components/Imprint/Imprint';
+import { ReactComponent as Pen } from "../../resources/images/pen.svg";
 
 export interface SubredditPageProps {
     randomIntToString: string,
@@ -100,9 +101,23 @@ export default function SubredditPage (props: SubredditPageProps) {
                 </div>
               </div>
 
-              <button className="createPost" style={{ backgroundColor: currentSub?.buttonColor }}>
+              <button className="createPost" style={{ backgroundColor: currentSub?.buttonColor }} onClick={navToSubmit}>
                 Create Post
               </button>
+
+              <div className="userFlair" style={{ display: loginStatus ? "block" : "none" }}>
+                <div className="userFlairDesc">
+                  <h5>USER FLAIR PREVIEW</h5>
+                  <Pen  
+                    style={{ fill: currentSub?.buttonColor, height: "20px" }}
+                  />
+                </div>
+
+                <div className="user">
+                  <img className="avatar" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
+                  <p className="userName">{userName}</p>
+                </div>
+              </div>
             </div>
 
             <Imprint />

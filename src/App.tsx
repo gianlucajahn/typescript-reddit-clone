@@ -331,6 +331,7 @@ function App() {
         handleNavigate={handleNavigate}
         randomIntToString={randomIntToString}
         currentSub={currentSub}
+        navToSubmit={navToSubmit}
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/' element={<Home 

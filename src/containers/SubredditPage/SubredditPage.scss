@@ -120,7 +120,7 @@
                 font-size: 14px;
                 color: white;
                 font-family: "Noto Sans Bold";
-
+                cursor: pointer;
             }
         }
     }
@@ -137,5 +137,30 @@
         background-color: #46d160;
         border: 1px solid transparent;
         border-radius: 9999px;
+    }
+}
+
+.userFlair {
+    margin-top: 16px;
+    margin-left: 11px;
+    margin-right: 11px;
+    border-top: 1px solid rgba(26,26,27,0.07);
+
+    .userFlairDesc,
+    .user {
+        display: flex;
+    }
+
+    .userFlairDesc {
+        justify-content: space-between;
+    }
+
+    .user {
+        align-items: center;
+        gap: 6px;
+
+        .avatar {
+            height: 38px;
+        }
     }
 }
