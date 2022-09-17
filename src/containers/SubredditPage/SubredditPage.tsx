@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from 'react';
+import React, { MouseEventHandler, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import CreatePost from '../../components/CreatePost/CreatePost';
 import SubredditHeadline from '../../components/SubredditHeadline/SubredditHeadline';
@@ -46,15 +46,28 @@ export default function SubredditPage (props: SubredditPageProps) {
     selectAnchor
   } = props;
 
+  const [communityTheme, setCommunityTheme] = useState(true);
+  const switchCommunityTheme = (e: React.MouseEvent) => {
+    setCommunityTheme(!communityTheme);
+  }
+
+  const standardTheme = {
+    buttonColor: "#0079d3",
+    headerColor: "#0079d3",
+    banner: "../../resources/images/Communities/todayilearned/banner.jpg",
+  }
+
   return (
-    <div className="subredditPage" style={{ backgroundColor: currentSub ? currentSub?.backgroundColor : "#edeff1" }}>
-      <img className="subredditBanner" src={require(`../../resources/images/Communities/${currentSub?.title}/banner.jpg`)} />
+    <div className="subredditPage" style={{ backgroundColor: communityTheme ?  currentSub?.backgroundColor : "#edeff1" }}>
+      <img className="subredditBanner" src={communityTheme ? require(`../../resources/images/Communities/${currentSub?.title}/banner.jpg`) : require(`../../resources/images/Communities/todayilearned/banner.jpg`)} />
 
       <SubredditHeadline 
         currentSub={currentSub}
         handleSubMembership={handleSubMembership}
         selectAnchor={selectAnchor}
         currentAnchor={currentAnchor}
+        standardTheme={standardTheme}
+        communityTheme={communityTheme}
       />
 
       <div className="subredditContent">
@@ -72,7 +85,7 @@ export default function SubredditPage (props: SubredditPageProps) {
           </div>
           <div className="sidebar">
             <div className="aboutCommunity">
-              <div className="head" style={{ backgroundColor: currentSub?.headerColor }}>
+              <div className="head" style={{ backgroundColor: communityTheme ? currentSub?.headerColor : standardTheme.headerColor }}>
                 <h3>About Community</h3>
                 <img className="more" src={require("../../resources/images/more_white.PNG")} />
               </div>
@@ -101,7 +114,7 @@ export default function SubredditPage (props: SubredditPageProps) {
                 </div>
               </div>
 
-              <button className="createPost" style={{ backgroundColor: currentSub?.buttonColor }} onClick={navToSubmit}>
+              <button className="createPost" style={{ backgroundColor: communityTheme ? currentSub?.buttonColor : standardTheme.buttonColor }} onClick={navToSubmit}>
                 Create Post
               </button>
 
@@ -109,7 +122,8 @@ export default function SubredditPage (props: SubredditPageProps) {
                 <div className="userFlairDesc">
                   <h5>USER FLAIR PREVIEW</h5>
                   <Pen  
-                    style={{ fill: currentSub?.buttonColor, height: "19px", 
+                    style={{ fill: communityTheme ? currentSub?.buttonColor : "#0079d3", 
+                    height: "19px", 
                     marginTop: "22px",
                     cursor: "pointer" }}
                   />
@@ -124,8 +138,18 @@ export default function SubredditPage (props: SubredditPageProps) {
               <div className="communityOptions">
                 <button className="communityToggle">
                   COMMUNITY OPTIONS
-                  <img className="expand" src={require("../../resources/images/expand.png")} />
+                  <img className="expand" src={require("../../resources/images/expandblack.png")} />
                 </button>
+
+                <div className="theme">
+                  <div className="leftTheme">
+                    <img className="eye" src={require("../../resources/images/eye.png")} />
+                    <p>Community theme</p>
+                  </div>
+                  <button className="switch" onClick={switchCommunityTheme} style={{ backgroundColor: communityTheme ?  `${currentSub?.buttonColor}` : "#edeff1" }}>
+                    <div className="dot" style={{ left: communityTheme ? "52%" : "3%" }}></div>
+                  </button>
+                </div>
               </div>
             </div>
 

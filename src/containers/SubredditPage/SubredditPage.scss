@@ -187,7 +187,32 @@
     margin: 15px 12px 4px 12px;
     padding: 18px 0px 12px 0px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+
+    .theme {
+        display: flex;
+        margin-top: 12px;
+        align-items: center;
+        justify-content: space-between;
+
+        .leftTheme {
+            display: flex;
+            margin: 0px 3px;
+
+            p {
+                padding-bottom: 3px;
+                font-size: 12px;
+                font-family: "Noto Sans Regular";
+                color: #1a1a1b;
+            }
+    
+            .eye {
+                height: 16px;
+                margin-right: 7px;
+            }
+        }
+    }
 
     .communityToggle {
         width: 100%;
@@ -207,8 +232,30 @@
             background-color: #ededed;
         }
 
-        &:active {
-            background-color: #c8c8c8;
+        &:focus {
+            background-color: #dbdbdb;
         }
+    }
+}
+
+.switch {
+    width: 46px;
+    height: 22px;
+    border: 1px solid transparent;
+    border-radius: 9999px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s all;
+
+    .dot {
+        position: absolute;
+        transition: 0.2s all;
+        top: 0;
+        height: 17px;
+        width: 17px;
+        background-color: white;
+        box-shadow: 0 2px 3px 0 rgb(0, 0, 0 / 20%);
+        border: 1px solid transparent;
+        border-radius: 50%;
     }
 }
