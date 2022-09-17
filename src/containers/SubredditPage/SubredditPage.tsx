@@ -47,6 +47,12 @@ export default function SubredditPage (props: SubredditPageProps) {
   } = props;
 
   const [communityTheme, setCommunityTheme] = useState(true);
+  const [communityOptions, setCommunityOptions] = useState(false);
+
+  const switchCommunityOptions = (e: React.MouseEvent) => {
+    setCommunityOptions(!communityOptions);
+  }
+
   const switchCommunityTheme = (e: React.MouseEvent) => {
     setCommunityTheme(!communityTheme);
   }
@@ -136,12 +142,12 @@ export default function SubredditPage (props: SubredditPageProps) {
               </div>
 
               <div className="communityOptions">
-                <button className="communityToggle">
+                <button className="communityToggle" onClick={switchCommunityOptions}>
                   COMMUNITY OPTIONS
-                  <img className="expand" src={require("../../resources/images/expandblack.png")} />
+                  <img className="expand" src={require("../../resources/images/expandblack.png")} style={{ transform: communityOptions ? "rotate(180deg)" : "" }} />
                 </button>
 
-                <div className="theme">
+                <div className="theme" style={{ display: communityOptions ? "flex" : "none" }}>
                   <div className="leftTheme">
                     <img className="eye" src={require("../../resources/images/eye.png")} />
                     <p>Community theme</p>
