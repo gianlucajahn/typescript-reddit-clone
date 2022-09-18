@@ -1,5 +1,5 @@
 .subredditPage {
-    min-height: 120vh;
+    min-height: 200vh;
 
     .subredditBanner {
         margin-top: 49px;
@@ -262,4 +262,81 @@
 
 .expand {
     transition: 0.3s all;
+}
+
+.rulesContainer {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 400px;
+    background-color: white;
+
+    .head {
+        padding: 12px 12px;
+
+        h3 {
+            font-size: 14px;
+            font-family: "IBM Regular";
+            color: #ffffff;
+            letter-spacing: 0.04em;
+
+        }
+    }
+
+    .ruleContainer,
+    .firstRuleContainer,
+    .lastRuleContainer {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 310px;
+
+        .ruleHead {
+            display: flex;
+            margin-bottom: 8px;
+
+            .titleDiv {
+                display: flex;
+                width: 91.5%;
+
+                h3 {
+                    font-size: 14px;
+                    font-family: "IBM Regular";
+                    color: #1a1a1b;
+                }
+
+                .rule-num {
+                    margin-right: 3px;
+                }
+            }
+
+            img.expand {
+                margin-top: 6px;
+                margin-left: 8px;
+            }
+        }
+
+        .ruleFooter {
+            padding-left: 16px;
+            width: 84%;
+        }
+    }
+}
+
+.ruleContainer {
+    padding: 14px 12px;
+    border-top: 1px solid rgba(26,26,27,0.07);
+}
+
+.firstRuleContainer {
+    padding: 20px 12px 14px 12px;
+}
+
+.lastRuleContainer {
+    padding: 14px 12px 20px 12px;
+}
+
+.ruleFooter {
+    font-size: 14px;
+    font-family: "Noto Sans Regular";
+    color: #1a1a1b;
 }

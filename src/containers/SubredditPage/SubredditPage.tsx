@@ -7,6 +7,7 @@ import './SubredditPage.scss';
 import SortBar from '../../components/SortBar/SortBar';
 import Imprint from '../../components/Imprint/Imprint';
 import { ReactComponent as Pen } from "../../resources/images/pen.svg";
+import { resourceLimits } from 'worker_threads';
 
 export interface SubredditPageProps {
     randomIntToString: string,
@@ -157,6 +158,33 @@ export default function SubredditPage (props: SubredditPageProps) {
                   </button>
                 </div>
               </div>
+            </div>
+
+
+
+
+
+            <div className="rulesContainer">
+                <div className="head" style={{ backgroundColor: communityTheme ? currentSub?.headerColor : standardTheme.headerColor }}>
+                    <h3>r/{currentSub?.title} Rules</h3>
+                </div>
+
+                {currentSub?.rules.map((rule, i) => {
+                  return (
+                    <div className={i !== 0 ? i !== currentSub.rules.length - 1 ? "ruleContainer" : "lastRuleContainer" : "firstRuleContainer"} >
+                      <div className="ruleHead">
+                        <div className="titleDiv">
+                          <h3 className="rule-num">{rule.number + `. `}</h3>
+                          <h3 className="rule-title">{rule.title}</h3>
+                        </div>
+                        <img className="expand" src={require("../../resources/images/expandblack.png")} />
+                      </div>
+                      <div className="ruleFooter">
+                        {rule.desc}
+                      </div>
+                    </div>
+                  )
+                })}
             </div>
 
             <Imprint />
