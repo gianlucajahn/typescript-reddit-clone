@@ -78,6 +78,21 @@ function App() {
     }  
   }
 
+  const expandRule = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+    console.log(target);
+    const numString = target.id;
+    const ruleNum = parseInt(numString);
+    const newSub = currentSub;
+    if (newSub) {
+      newSub.rules[ruleNum].expanded = !newSub?.rules[ruleNum].expanded;
+    }
+
+    if (currentSub) {
+      setCurrentSub(newSub);
+    }
+  }
+
   useEffect(() => {
     identifyCurrentSub(location.pathname);
   }, [location.pathname])
@@ -363,6 +378,7 @@ function App() {
           currentSub={currentSub}
           selectAnchor={selectAnchor}
           currentAnchor={currentAnchor}
+          expandRule={expandRule}
         />} />
         <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}

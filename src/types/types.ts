@@ -34,7 +34,7 @@ export type Flair = {
 
 export type Rule = {
     number:   number;
-    selected: boolean;
+    expanded: boolean;
     title:    string;
     desc:     string;
 }

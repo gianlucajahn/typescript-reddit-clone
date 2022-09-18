@@ -293,6 +293,11 @@
         .ruleHead {
             display: flex;
             margin-bottom: 8px;
+            cursor: pointer;
+            
+            * {
+                pointer-events: none;
+            }
 
             .titleDiv {
                 display: flex;
