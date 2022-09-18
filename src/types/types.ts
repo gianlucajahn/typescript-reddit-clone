@@ -33,7 +33,8 @@ export type Flair = {
 }
 
 export type Rule = {
-    number: number;
-    title:  string;
-    desc:   string;
+    number:   number;
+    selected: boolean;
+    title:    string;
+    desc:     string;
 }
