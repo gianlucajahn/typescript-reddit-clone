@@ -192,24 +192,30 @@ function App() {
     if (target.classList.contains('favorite')) {
       return;
     } else if (target.classList.contains('gaming') || (target.parentElement?.classList.contains("gaming"))) {
+      setCurrentSub(subreddits[11]);
       navigate("/r/gaming");
       return;
     } else if (target.classList.contains('sports') || (target.parentElement?.classList.contains("sports"))) {
+      setCurrentSub(subreddits[15]);
       navigate("/r/sports");
       return;
     } else if (target.classList.contains('television') || (target.parentElement?.classList.contains("television"))) {
+      setCurrentSub(subreddits[0]);
       navigate("/r/movies");
       return;
     } else if (target.classList.contains('business') || (target.parentElement?.classList.contains("business"))) {
+      setCurrentSub(subreddits[4]);
       navigate("/r/finance");
       return;
     } else if (target.classList.contains('crypto') || (target.parentElement?.classList.contains("crypto"))) {
+      setCurrentSub(subreddits[16]);
       navigate("/r/crypto");
       return;
     } else if (target.classList.contains('returnHome')) {
       navigate("/");
       return;
     } else if (target.classList.contains('books')) {
+      setCurrentSub(subreddits[10]);
       navigate("/r/books");
       return;
     } else if (target.classList.contains('join')) {
