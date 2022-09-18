@@ -328,20 +328,22 @@
 }
 
 .ruleContainer {
-    padding: 14px 12px;
+    padding: 10px 12px 4px 12px;
     border-top: 1px solid rgba(26,26,27,0.07);
 }
 
 .firstRuleContainer {
-    padding: 20px 12px 14px 12px;
+    padding: 18px 12px 4px 12px;
 }
 
 .lastRuleContainer {
-    padding: 14px 12px 20px 12px;
+    padding: 14px 12px 10px 12px;
+    border-top: 1px solid rgba(26,26,27,0.07);
 }
 
 .ruleFooter {
     font-size: 14px;
     font-family: "Noto Sans Regular";
     color: #1a1a1b;
+    padding-bottom: 12px;
 }

@@ -37,4 +37,4 @@ export type Rule = {
     expanded: boolean;
     title:    string;
     desc:     string;
-}
+} | undefined

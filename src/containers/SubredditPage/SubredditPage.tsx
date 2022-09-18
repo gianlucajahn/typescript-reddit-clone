@@ -176,13 +176,13 @@ export default function SubredditPage (props: SubredditPageProps) {
                     <div className={i !== 0 ? i !== currentSub.rules.length - 1 ? "ruleContainer" : "lastRuleContainer" : "firstRuleContainer"} >
                       <div className="ruleHead" id={`${i}`} onClick={expandRule}>
                         <div className="titleDiv">
-                          <h3 className="rule-num">{rule.number + `. `}</h3>
-                          <h3 className="rule-title">{rule.title}</h3>
+                          <h3 className="rule-num">{rule?.number + `. `}</h3>
+                          <h3 className="rule-title">{rule?.title}</h3>
                         </div>
                         <img className="expand" src={require("../../resources/images/expandblack.png")} />
                       </div>
-                      <div className="ruleFooter" style={{ display: currentSub.rules[i].expanded ? "block" : "none" }}>
-                        {rule.desc}
+                      <div className="ruleFooter" style={{ display: currentSub.rules[i]?.expanded ? "block" : "none" }}>
+                        {rule?.desc}
                       </div>
                     </div>
                   )

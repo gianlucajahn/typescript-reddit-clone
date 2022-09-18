@@ -79,18 +79,24 @@ function App() {
   }
 
   const expandRule = (e: React.MouseEvent) => {
-    const target = e.currentTarget;
-    console.log(target);
-    const numString = target.id;
-    const ruleNum = parseInt(numString);
-    const newSub = currentSub;
-    if (newSub) {
-      newSub.rules[ruleNum].expanded = !newSub?.rules[ruleNum].expanded;
+    if (currentSub == undefined) {
+      return;
     }
 
-    if (currentSub) {
-      setCurrentSub(newSub);
-    }
+    const target = e.currentTarget;
+    const numString = target.id;
+    const ruleNum = parseInt(numString) + 1;
+    let newRules = [...currentSub.rules]
+    newRules.map((rule, i) => {
+      if (rule?.number === ruleNum) {
+        rule.expanded = !rule.expanded;
+        return rule;
+      } else {
+        return rule;
+      }
+    });
+
+    setCurrentSub({...currentSub, rules: newRules});
   }
 
   useEffect(() => {
