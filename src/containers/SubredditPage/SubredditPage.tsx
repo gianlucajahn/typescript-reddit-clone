@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from 'react';
+import React, { MouseEventHandler, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import CreatePost from '../../components/CreatePost/CreatePost';
 import SubredditHeadline from '../../components/SubredditHeadline/SubredditHeadline';
@@ -179,7 +179,7 @@ export default function SubredditPage (props: SubredditPageProps) {
                           <h3 className="rule-num">{rule?.number + `. `}</h3>
                           <h3 className="rule-title">{rule?.title}</h3>
                         </div>
-                        <img className="expand" src={require("../../resources/images/expandblack.png")} />
+                        <img className="expand" src={require("../../resources/images/expandblack.png")} style={{ transform: rule?.expanded ? "rotate(180deg)" : "" }}/>
                       </div>
                       <div className="ruleFooter" style={{ display: currentSub.rules[i]?.expanded ? "block" : "none" }}>
                         {rule?.desc}

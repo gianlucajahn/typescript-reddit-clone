@@ -71,7 +71,14 @@ function App() {
       const newSub = location.pathname.substring(3)
       const subIndex = subreddits.findIndex(element => element.title === newSub);
       if (subIndex !== -1) {
-        setCurrentSub(subreddits[subIndex]);
+        let newSub = {...subreddits[subIndex]};
+        let newRules = newSub.rules;
+        newRules.map((rule, i) => {
+          rule.expanded = false;
+          return rule;
+        });
+        newSub = {...newSub, rules: newRules};
+        setCurrentSub(newSub);
       } else {
         return;
       }
