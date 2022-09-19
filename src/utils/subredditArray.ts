@@ -589,19 +589,19 @@ const subredditArray = [
         flairs: [
             {
                 title: "Analysis",
-                color: "#ff4500"
+                color: "#0d7680"
             },
             {
                 title: "Question",
-                color: "#ff4500"
+                color: "#0d7680"
             },
             {
                 title: "Discussion",
-                color: "#ff4500"
+                color: "#0d7680"
             },
             {
                 title: "News",
-                color: "#ff4500"
+                color: "#0d7680"
             }
         ],
         anchors: [
@@ -813,23 +813,23 @@ const subredditArray = [
         flairs: [
             {
                 title: "Topic",
-                color: "#edeff1"
+                color: "#737373"
             },
             {
                 title: "Tutorial",
-                color: "#edeff1"
+                color: "#737373"
             },
             {
                 title: "Code Review",
-                color: "#edeff1"
+                color: "#737373"
             },
             {
                 title: "Resource",
-                color: "#edeff1"
+                color: "#737373"
             },
             {
                 title: "Linked List",
-                color: "#edeff1"
+                color: "#737373"
             }
         ],
         anchors: [
@@ -1219,7 +1219,7 @@ const subredditArray = [
             },
             {
                 title: "News",
-                color: "#faea95"
+                color: "#FFBF00"
             },
             {
                 title: "Self",
@@ -1333,11 +1333,11 @@ const subredditArray = [
         flairs: [
             {
                 title: "Weekly Thread",
-                color: "#edeff1"
+                color: "#737373"
             },
             {
                 title: "AMA 2PM",
-                color: "#edeff1"
+                color: "#737373"
             }
         ],
         anchors: [
@@ -1633,15 +1633,15 @@ const subredditArray = [
         flairs: [
             {
                 title: "Semi-Related",
-                color: "#edeff1"
+                color: "#737373"
             },
             {
                 title: "No recipe",
-                color: "#edeff1"
+                color: "#737373"
             },
             {
                 title: "Recipe",
-                color: "#edeff1"
+                color: "#737373"
             }
         ],
         anchors: [
@@ -1685,7 +1685,7 @@ const subredditArray = [
                 number: 3,
                 expanded: false,
                 title: "Object Identification",
-                desc: "If you are asking for help identifying an object you must first have referred to this thread (https://www.reddit.com/r/Astronomy/comments/92zks3/), consulted the flow chart there, and used all tools linked in the stickied comment. If you are still unable to answer the question yourself, make sure you include a time, location, direction, and angle above the horizon."
+                desc: "If you are asking for help identifying an object you must first have referred to this thread consulted the flow chart there, and used all tools linked in the stickied comment. If you are still unable to answer the question yourself, make sure you include a time, location, direction, and angle above the horizon."
             },
             {
                 number: 4,
@@ -1779,7 +1779,7 @@ const subredditArray = [
                 number: 2,
                 expanded: false,
                 title: "Titles Must be High-Effort and Descriptive",
-                desc: "Posts with misleading/sensationalized/editorialized/ambiguous titles are prohibited. The title must clearly and thoroughly describe the post."
+                desc: "Posts with misleading / sensationalized /editorialized / ambiguous titles are prohibited. The title must clearly and thoroughly describe the post."
             },
             {
                 number: 3,
