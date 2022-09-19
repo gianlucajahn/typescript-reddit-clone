@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from 'react';
+import React, { MouseEventHandler, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import './NavBar.scss';
 import { ReactComponent as RedditLogo } from "../../resources/images/redditlogo.svg";
@@ -8,7 +8,7 @@ import { ReactComponent as Expand } from "../../resources/images/expand.svg";
 import { ReactComponent as Star } from "../../resources/images/star.svg";
 import { ReactComponent as User } from "../../resources/images/user.svg";
 import { ObjectType } from 'typescript';
-import { Subreddit } from '../../types/types';
+import { Subreddit, Subreddits } from '../../types/types';
 
 export interface NavBarProps {
   dropdownIsOpen: boolean,
@@ -17,6 +17,7 @@ export interface NavBarProps {
   subDropdownIsOpen: boolean,
   randomIntToString: string,
   navToSubmit: MouseEventHandler,
+  subreddits: Subreddits,
   currentSub: Subreddit | undefined,
   joinedCommunities: any,
   handleFavorite: MouseEventHandler<HTMLImageElement>,
@@ -52,6 +53,7 @@ export default function NavBar (props: NavBarProps) {
     handleNavigate,
     handleExpandSub,
     dropdownState,
+    subreddits,
     currentSub,
     userName,
     loginStatus,
@@ -61,6 +63,7 @@ export default function NavBar (props: NavBarProps) {
   } = props;
 
   const location = useLocation();
+  const [paddingLeft, setPaddingLeft] = useState("");
   const handleHoverLink = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     if (e.type === "mouseenter") {
@@ -147,8 +150,30 @@ export default function NavBar (props: NavBarProps) {
         </div>
 
         <div className="search">
-          <input type="text" placeholder="Search Reddit" className={loginStatus ? "searchBarLogin" : "searchBar"}>
+          <input type="text" placeholder="Search Reddit" className={loginStatus ? "searchBarLogin" : "searchBar"} style={{ paddingLeft: currentSub === undefined ? "46px" : 
+                                                                                                                                        currentSub.title === "movies"           ? "174px" : 
+                                                                                                                                        currentSub.title === "leagueoflegends"  ? "230px" : 
+                                                                                                                                        currentSub.title === "genshinimpact"    ? "218px" : 
+                                                                                                                                        currentSub.title === "nba"              ? "154px" :
+                                                                                                                                        currentSub.title === "finance"          ? "176px" :
+                                                                                                                                        currentSub.title === "programmerhumor"  ? "246px" :
+                                                                                                                                        currentSub.title === "learnprogramming" ? "244px" :
+                                                                                                                                        currentSub.title === "todayilearned"    ? "213px" :
+                                                                                                                                        currentSub.title === "wallstreetbets"   ? "215px" :
+                                                                                                                                        currentSub.title === "nasa"             ? "160px" :
+                                                                                                                                        currentSub.title === "books"            ? "168px" :
+                                                                                                                                        currentSub.title === "apexlegends"      ? "206px" :
+                                                                                                                                        currentSub.title === "announcements"    ? "228px" :
+                                                                                                                                        currentSub.title === "baking"           ? "172px" :
+                                                                                                                                        currentSub.title === "astronomy"        ? "196px" : 
+                                                                                                                                        "170px" }}>
           </input>
+          {currentSub !== undefined && 
+          <div className="subredditIndicator">
+              <img className="subLogo" src={require(`../../resources/images/Communities/${currentSub?.title}/icon.png`)} />
+              <h5 className="subName">r/{currentSub?.title}</h5>
+              <img className="subClose" src={require("../../resources/images/close.PNG")} />
+          </div>}
         </div>
 
         <div className="user">

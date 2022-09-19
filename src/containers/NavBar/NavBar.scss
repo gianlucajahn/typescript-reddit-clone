@@ -67,13 +67,49 @@
     .search {
         height: 34px;
         margin-bottom: 2px;
+        position: relative;
+
+        .subredditIndicator {
+            position: absolute;
+            align-items: center;
+            top: 6px;
+            border: 1px solid transparent;
+            border-radius: 9999px;
+            left: 46px;
+            padding: 2px 8px 3px 8px;
+            background-color: #d6d6d6;
+            display: flex;
+            gap: 9px;
+            cursor: text;
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+
+            .subLogo {
+                cursor: default;
+            }
+
+            .subName {
+                font-size: 12px;
+                font-family: "Noto Sans";
+                color: #1b1b1b;
+            }
+
+            .subClose {
+                cursor: pointer;
+            }
+        }
 
         .searchBar,
         .searchBarLogin {
             background: url("../../resources/images/search.svg") no-repeat scroll 16px 8px;
             background-size: 19px;
             color: $svgColor;
+            box-sizing: border-box;
             font-family: 'Benton Sans Book';
+            height: 37px !important;
             font-size: 0.8375em;
             background-color: #F6F7F8;
             border: 1px solid #EDEFF1;
@@ -92,11 +128,11 @@
         }
 
         .searchBar {
-            width: 608px;
+            width: 660px;
         }
 
         .searchBarLogin {
-            width: 808px;
+            width: 866px;
         }
     }
 
@@ -110,6 +146,7 @@
             gap: 8px;
             height: 32px;
             margin-left: 3px;
+            margin-right: 10px;
 
             .vertical-line {
                 height: 32px;

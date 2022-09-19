@@ -366,6 +366,7 @@ function App() {
         randomIntToString={randomIntToString}
         currentSub={currentSub}
         navToSubmit={navToSubmit}
+        subreddits={subreddits}
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/' element={<Home 
