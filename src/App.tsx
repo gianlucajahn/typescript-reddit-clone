@@ -61,6 +61,11 @@ function App() {
     }
   }
 
+  const removeCurrentSub = (e: React.MouseEvent) => {
+    setCurrentSub(undefined);
+    navigate("/");
+  }
+
   const identifyCurrentSub = (e: any) => {
     if (location.pathname === "/") {
       setCurrentSub(undefined);
@@ -367,6 +372,7 @@ function App() {
         currentSub={currentSub}
         navToSubmit={navToSubmit}
         subreddits={subreddits}
+        removeCurrentSub={removeCurrentSub}
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/' element={<Home 

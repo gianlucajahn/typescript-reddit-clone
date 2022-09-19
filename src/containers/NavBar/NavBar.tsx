@@ -20,6 +20,7 @@ export interface NavBarProps {
   subreddits: Subreddits,
   currentSub: Subreddit | undefined,
   joinedCommunities: any,
+  removeCurrentSub: MouseEventHandler,
   handleFavorite: MouseEventHandler<HTMLImageElement>,
   handleLogin: MouseEventHandler,
   handleDropdown: MouseEventHandler<HTMLDivElement>,
@@ -49,6 +50,7 @@ export default function NavBar (props: NavBarProps) {
     handleExpand,
     handleLoginModal,
     handleLogin,
+    removeCurrentSub,
     handleFavorite,
     handleNavigate,
     handleExpandSub,
@@ -172,7 +174,7 @@ export default function NavBar (props: NavBarProps) {
           <div className="subredditIndicator">
               <img className="subLogo" src={require(`../../resources/images/Communities/${currentSub?.title}/icon.png`)} />
               <h5 className="subName">r/{currentSub?.title}</h5>
-              <img className="subClose" src={require("../../resources/images/close.PNG")} />
+              <img className="subClose" src={require("../../resources/images/close.PNG")} onClick={removeCurrentSub} />
           </div>}
         </div>
 
