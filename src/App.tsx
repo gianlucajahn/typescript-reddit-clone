@@ -380,6 +380,7 @@ function App() {
           setLoginModalState={setLoginModalState}
           handleNavigate={handleNavigate}
           navToSubmit={navToSubmit}
+          loginModalState={loginModalState}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
@@ -398,6 +399,7 @@ function App() {
           selectAnchor={selectAnchor}
           currentAnchor={currentAnchor}
           expandRule={expandRule}
+          loginModalState={loginModalState}
         />} />
         <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -411,6 +413,7 @@ function App() {
           setLoginModalState={setLoginModalState}
           handleNavigate={handleNavigate}
           navToSubmit={navToSubmit}
+          loginModalState={loginModalState}
         />} />
         <Route path='/submit' element={<Home 
           randomIntToString={randomIntToString}
@@ -424,6 +427,7 @@ function App() {
           setLoginModalState={setLoginModalState}
           handleNavigate={handleNavigate}
           navToSubmit={navToSubmit}
+          loginModalState={loginModalState}
         />} />
         <Route path='*' element={<Home
           randomIntToString={randomIntToString}
@@ -437,6 +441,7 @@ function App() {
           setLoginModalState={setLoginModalState}
           handleNavigate={handleNavigate}
           navToSubmit={navToSubmit}
+          loginModalState={loginModalState}
         />} />
       </Routes>
     </div>

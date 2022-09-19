@@ -8,7 +8,7 @@ export interface SubredditHeadlineProps {
     standardTheme: any,
     communityTheme: boolean,
     selectAnchor: React.MouseEventHandler
-    handleSubMembership: React.MouseEventHandler,
+    handleSubMembership: React.MouseEventHandler
 }
 
 export default function SubredditHeadline (props: SubredditHeadlineProps) {

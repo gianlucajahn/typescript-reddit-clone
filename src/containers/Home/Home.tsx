@@ -16,7 +16,8 @@ export interface HomeProps {
   handleNavigate: MouseEventHandler<HTMLDivElement>,
   navToSubmit: MouseEventHandler,
   loginStatus: boolean,
-  setLoginModalState: any
+  setLoginModalState: any,
+  loginModalState: string
 }
 
 export default function Home (props: HomeProps) {
@@ -31,11 +32,12 @@ export default function Home (props: HomeProps) {
     handleNavigate,
     navToSubmit,
     loginStatus,
-    setLoginModalState
+    setLoginModalState,
+    loginModalState
   } = props;
 
   return (
-    <div className="home">
+    <div className="home" style={{ maxHeight: loginModalState === "closed" ? "" : "92.75vh" }}>
       <div className="feed">
         <CreatePost 
           randomIntToString={randomIntToString}
@@ -57,6 +59,7 @@ export default function Home (props: HomeProps) {
           setLoginModalState={setLoginModalState}
           handleNavigate={handleNavigate}
           navToSubmit={navToSubmit}
+          loginModalState={loginModalState}
         />
       </div>
     </div>

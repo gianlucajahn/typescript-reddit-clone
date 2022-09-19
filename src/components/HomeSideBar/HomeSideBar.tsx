@@ -10,6 +10,7 @@ export interface HomeSideBarProps {
     handleNavigate: MouseEventHandler<HTMLElement>,
     navToSubmit: MouseEventHandler,
     loginStatus: boolean,
+    loginModalState: string
     setLoginModalState: any
 }
 
@@ -21,7 +22,8 @@ export default function HomeSideBar (props: HomeSideBarProps) {
     handleNavigate,
     navToSubmit,
     loginStatus,
-    setLoginModalState
+    setLoginModalState,
+    loginModalState
   } = props;
 
   const [viewAll, setViewAll] = useState(false);
@@ -31,7 +33,7 @@ export default function HomeSideBar (props: HomeSideBarProps) {
   }
 
   return (
-    <div className="homesidebar">
+    <div className="homesidebar" style={{ maxHeight: loginModalState === "closed" ? "" : "92.75vh", overflow: "hidden" }}>
         
         <div className="topCommunities">
             <div className="topBannerContainer">
@@ -41,7 +43,7 @@ export default function HomeSideBar (props: HomeSideBarProps) {
 
             <div className="subredditList">
               {subreddits.map((subreddit, i) => {
-                if (viewAll && i > 20) {
+                if (viewAll && i > 9) {
                     return;
                 } else if (viewAll === false && i > 4) {
                     return;

@@ -24,8 +24,9 @@ export interface SubredditPageProps {
     identifyCurrentSub: any,
     currentSub: Subreddit | undefined,
     selectAnchor: React.MouseEventHandler,
-    currentAnchor: number | undefined
-    expandRule: MouseEventHandler;
+    currentAnchor: number | undefined,
+    expandRule: MouseEventHandler,
+    loginModalState: string
 }
 
 export default function SubredditPage (props: SubredditPageProps) {
@@ -37,6 +38,7 @@ export default function SubredditPage (props: SubredditPageProps) {
     subreddits,
     topSubreddits,
     loginStatus,
+    loginModalState,
     setLoginModalState,
     identifyCurrentSub,
     currentSub,
@@ -67,7 +69,7 @@ export default function SubredditPage (props: SubredditPageProps) {
   }
 
   return (
-    <div className="subredditPage" style={{ backgroundColor: communityTheme ?  currentSub?.backgroundColor : "#edeff1" }}>
+    <div className="subredditPage" style={{ backgroundColor: communityTheme ?  currentSub?.backgroundColor : "#edeff1", height: loginModalState === "closed" ? "" : "100vh", overflow: loginModalState === "closed" ? "scroll" : "hidden" }}>
       <img className="subredditBanner" src={communityTheme ? require(`../../resources/images/Communities/${currentSub?.title}/banner.jpg`) : require(`../../resources/images/Communities/todayilearned/banner.jpg`)} />
 
       <SubredditHeadline 
