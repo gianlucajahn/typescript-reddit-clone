@@ -20,7 +20,7 @@ export default function CreatePost (props: CreatePostProps) {
   return (
     <div className="createPostMenu" onClick={navToSubmit}>
         <img className="avatar" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
-        <input type="text" placeholder="Post erstellen"></input>
+        <input type="text" placeholder="Create Post"></input>
         <button className="imagePost">
             <img className="icon" src={require("../../resources/images/img.PNG")} />
         </button>
