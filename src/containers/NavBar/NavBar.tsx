@@ -98,7 +98,7 @@ export default function NavBar (props: NavBarProps) {
             <div className="subredditDropdown" id="subredditDropdown" style={{ display: subDropdownIsOpen ? "block" : "none", borderTop: "1px solid transparent" }}>
               {joinedCommunities.find((community: any) => community.favorite === true) ? 
               <>
-                <h6>DEINE FAVORITEN</h6>
+                <h6>YOUR FAVORITES</h6>
                 <div className="favorites communityList">
                   {joinedCommunities.map((community: any, index: number) => {
                     if (community.favorite === true) {
@@ -111,11 +111,11 @@ export default function NavBar (props: NavBarProps) {
                   })}
                 </div>
               </> : null}
-              <h6 className="communityList">DEINE COMMUNITIES</h6>
+              <h6 className="communityList">YOUR COMMUNITIES</h6>
               <div className="communityList">
                 <div className="createCommunity subItem sub">
                   <img className="create subIcon sub" src={require("../../resources/images/add.PNG")} />
-                  <h3 className="sub">Community erstellen</h3>
+                  <h3 className="sub">Create Community</h3>
                 </div>
                 {joinedCommunities.map((community: any, index: number) => {
                   return <div className="subItem sub" id={community.title} onClick={handleNavigate}>
@@ -147,16 +147,16 @@ export default function NavBar (props: NavBarProps) {
         </div>
 
         <div className="search">
-          <input type="text" placeholder="Reddit durchsuchen" className={loginStatus ? "searchBarLogin" : "searchBar"}>
+          <input type="text" placeholder="Search Reddit" className={loginStatus ? "searchBarLogin" : "searchBar"}>
           </input>
         </div>
 
         <div className="user">
             {loginStatus ? null : <button className="auth login" onClick={handleLoginModal} id="login">
-              Anmelden
+              Login
             </button>}
             {loginStatus ? null : <button className="auth register" onClick={handleLoginModal} id="register">
-              Registrieren
+              Sign Up Now
             </button>}
             {loginStatus ? 
             
@@ -219,7 +219,7 @@ export default function NavBar (props: NavBarProps) {
 
                 <div className="dropdownItem coins">
                   <img className="icon coin" src={require("../../resources/images/coin.png")} />
-                  <h3>Münzen</h3>
+                  <h3>Coins</h3>
                 </div>
 
                 <div className="dropdownItem premium">
@@ -234,12 +234,12 @@ export default function NavBar (props: NavBarProps) {
 
                 <div className="dropdownItem recent">
                   <img className="icon recent" src={require("../../resources/images/recent.png")} />
-                  <h3>Kürzlich besucht</h3>
+                  <h3>Recently visited</h3>
                 </div>
 
                 <div className="dropdownItem erkunden" id="erkunden" onClick={handleExpand}>
                   <img className="icon erkunden" src={require("../../resources/images/erkunden.png")} />
-                  <h3>Erkunden</h3>
+                  <h3>Discover</h3>
                   <img className={ dropdownState.erkunden ? "expanded" : "expand" } src={require("../../resources/images/expandblack.png")} />
                 </div>
 
@@ -494,7 +494,7 @@ export default function NavBar (props: NavBarProps) {
                 </div>
 
                 <div className="dropdownItem expanded" style={{ display: dropdownState.erkunden ? "flex" : "none" }} id="mehr" onClick={handleExpand}>
-                  <h3>Mehr</h3>
+                  <h3>More</h3>
                   <img className={ dropdownState.mehr ? "expanded" : "expand" } src={require("../../resources/images/expandblack.png")} />
                 </div>
 
@@ -526,22 +526,22 @@ export default function NavBar (props: NavBarProps) {
 
                 <div className="dropdownItem einstellungen">
                   <img className="icon einstellungen" src={require("../../resources/images/einstellungen.png")} />
-                  <h3>Einstellungen</h3>
+                  <h3>Settings</h3>
                 </div>
 
                 <div className="dropdownItem">
                   <img className="icon" src={require("../../resources/images/werbung.png")} />
-                  <h3>Wirb auf Reddit</h3>
+                  <h3>Advertise on Reddit</h3>
                 </div>
 
                 <div className="dropdownItem hilfecenter">
                   <img className="icon hilfecenter" src={require("../../resources/images/hilfecenter.png")} />
-                  <h3>Hilfecenter</h3>
+                  <h3>Help Center</h3>
                 </div>
 
                 <div className="dropdownItem weitereinfos" id="weitereinfos" onClick={handleExpand}>
                   <img className="icon weitereinfos" src={require("../../resources/images/weitereinfos.png")} />
-                  <h3>Weitere Infos</h3>
+                  <h3>More Infos</h3>
                   <img className={ dropdownState.weitereinfos ? "expanded" : "expand" } src={require("../../resources/images/expandblack.png")} />
                 </div>
 
@@ -558,7 +558,7 @@ export default function NavBar (props: NavBarProps) {
                 </div>
 
                 <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
-                  <h3>Die besten Communities</h3>
+                  <h3>Our Best Communities</h3>
                 </div>
 
                 <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
@@ -566,7 +566,7 @@ export default function NavBar (props: NavBarProps) {
                 </div>
 
                 <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
-                  <h3>Über Reddit</h3>
+                  <h3>About Reddit</h3>
                 </div>
 
                 <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
@@ -574,46 +574,46 @@ export default function NavBar (props: NavBarProps) {
                 </div>
 
                 <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
-                  <h3>Karriere</h3>
+                  <h3>Careers</h3>
                 </div>
 
                 <div className="dropdownItem expanded" style={{ display: dropdownState.weitereinfos ? "flex" : "none" }}>
-                  <h3>Presse</h3>
+                  <h3>Press</h3>
                 </div>
 
                 <div className="line" style={{ display: dropdownState.weitereinfos ? "block" : "none" }}></div>
 
                 <div className="dropdownItem richtlinien" id="richtlinien" onClick={handleExpand}>
                   <img className="icon richtlinien" src={require("../../resources/images/richtlinien.png")} />
-                  <h3>Bedingungen &#38; AGBs</h3>
+                  <h3>Terms &#38; Conditions</h3>
                   <img className={ dropdownState.richtlinien ? "expanded" : "expand" } src={require("../../resources/images/expandblack.png")} />
                 </div>
 
                 <div className="dropdownItem expanded" style={{ display: dropdownState.richtlinien ? "flex" : "none" }}>
-                  <h3>Nutzungsvereinbarung</h3>
+                  <h3>User Agreement</h3>
                 </div>
 
                 <div className="dropdownItem expanded" style={{ display: dropdownState.richtlinien ? "flex" : "none" }}>
-                  <h3>Datenschutzerklärung</h3>
+                  <h3>Privacy Policy</h3>
                 </div>
 
                 <div className="dropdownItem expanded" style={{ display: dropdownState.richtlinien ? "flex" : "none" }}>
-                  <h3>Inhaltsrichtlinie</h3>
+                  <h3>Content Policy</h3>
                 </div>
 
                 <div className="dropdownItem expanded" style={{ display: dropdownState.richtlinien ? "flex" : "none" }}>
-                  <h3>Moderationsrichtlinien</h3>
+                  <h3>Moderation Guidelines</h3>
                 </div>
 
                 <div className="line" style={{ display: dropdownState.richtlinien ? "block" : "none" }}></div>
 
                 <div className="dropdownItem registrieren" onClick={loginStatus ? handleLogin : handleLoginModal} id={loginStatus ? "logout" : "register"}>
                   <img className="icon registrieren noPointerEvents" src={require(`../../resources/images/${loginStatus ? "logout.png" : "registrieren.png"}`)} />
-                  <h3 className="noPointerEvents">{loginStatus ? "Ausloggen" : "Registrieren & Anmelden"}</h3>
+                  <h3 className="noPointerEvents">{loginStatus ? "Log Out" : "Sign Up & Login"}</h3>
                 </div>
 
                 <div className="dropdownItem" id="credits">
-                  <h6>© 2022 Reddit, Inc. Alle Rechte vorbehalten.</h6>
+                  <h6>© 2022 Reddit, Inc. All rights reserved.</h6>
                 </div>
               </div>
             </div>
