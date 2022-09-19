@@ -109,11 +109,12 @@
 
         .google,
         .apple {
-            margin-right: 55px;
+            margin-right: 45px;
             height: 20px;
         }
         .apple {
             padding-top: 3px;
+            margin-right: 48px !important;
         }
     }
 
@@ -121,13 +122,13 @@
         color: #878A8C;
         font-size: 14px;
         font-family: "IBM Light";
-        margin: 32px 122px 28px 122px;
+        margin: 32px 122px 28px 128px;
         position: relative;
 
         &::before {
             content: "";
             position: absolute;
-            left: -40.25%;
+            left: -86.25%;
             top: 9px;
             width: 7.95em;
             height: 1px;
@@ -136,9 +137,9 @@
         &::after {
             content: "";
             position: absolute;
-            left: 15%;
+            left: 19%;
             top: 9px;
-            width: 7.95em;
+            width: 9em;
             height: 1px;
             background-color: #edeff1;
         }

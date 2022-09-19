@@ -44,40 +44,40 @@ export default function LoginModal (props: LoginModalProps) {
             <button id="closed" onClick={handleLoginModal}>
                 <Cross className="cross"/>
             </button>
-            <h3 className="heading">{loginModalState === "login" ? "Anmelden" : "Registrieren"}</h3>
-            <p className="policy">Wenn du fortfährst, stimmst du unserer <span>Benutzervereinbarungen</span> und <span>Datenschutzrichtlinien</span> zu.</p>
+            <h3 className="heading">{loginModalState === "login" ? "Login" : "Sign Up"}</h3>
+            <p className="policy">If you continue, you agree to our <span>User Agreements</span> and <span>Privacy Policy</span>.</p>
 
             <button className="loginButton googleButton">
                 <Google className="google" />
-                Weiter mit Google
+                Continue with Google
             </button>
 
             <button className="loginButton appleButton">
                 <Apple className="apple" />
-                Mit Apple fortfahren
+                Continue with Apple
             </button>
 
-            <h3 className="or">ODER</h3>
+            <h3 className="or">OR</h3>
 
             <div className="container username">
                 <input className="inputField" type="text" required spellCheck="false" id="username" onChange={handleLoginInput} onMouseEnter={handleHover} onMouseLeave={handleHover} />
-                <span className="label">{loginModalState === "login" ? "BENUTZERNAME" : "GEWÜNSCHTER BENUTZERNAME"}</span>
-                <div className="circle" style={{ display: hoverState.username === false ? userName.length <= 1 ? "block" : "none" : "none", left: loginModalState === "login" ? "20%" : "35%" }}></div>
+                <span className="label">{loginModalState === "login" ? "USERNAME" : "PREFERED USERNAME"}</span>
+                <div className="circle" style={{ display: hoverState.username === false ? userName.length <= 1 ? "block" : "none" : "none", left: loginModalState === "login" ? "19.5%" : "33.75%" }}></div>
             </div>
             <div className="container password">
                 <input className="inputField" type="password" required spellCheck="false" id="password" onChange={handleLoginInput} onMouseEnter={handleHover} onMouseLeave={handleHover} />
-                <span className="label">{loginModalState === "login" ? "PASSWORT" : "GEWÜNSCHTES PASSWORT"}</span>
-                <div className="circle" style={{ display: hoverState.password === false ? password.length <= 1 ? "block" : "none" : "none", left: loginModalState === "login" ? "14.75%" : "29.5%" }}></div>
+                <span className="label">{loginModalState === "login" ? "PASSWORD" : "PREFERED PASSWORD"}</span>
+                <div className="circle" style={{ display: hoverState.password === false ? password.length <= 1 ? "block" : "none" : "none", left: loginModalState === "login" ? "19.5%" : "33.65%" }}></div>
             </div>
 
             <button className="anmelden" id="login" onClick={handleLogin}>
-                {loginModalState === "login" ? "Anmelden" : "Registrieren"}
+                {loginModalState === "login" ? "Login" : "Sign Up"}
             </button>
             <button className="demo" id="demo" onClick={handleLogin}>
                 Demo-Account
             </button>
 
-            <p className="suggestion">{loginModalState === "login" ? "Neu bei Reddit?" : "Bereits ein*e Redditor*in?"} <span id={loginModalState === "login" ? "register" : "login"} onClick={handleLoginModal}>{loginModalState === "login" ? "REGISTRIEREN" : "ANMELDEN"}</span></p>
+            <p className="suggestion">{loginModalState === "login" ? "New to Reddit?" : "Already a Redditor*ess?"} <span id={loginModalState === "login" ? "register" : "login"} onClick={handleLoginModal}>{loginModalState === "login" ? "SIGN UP" : "LOGIN"}</span></p>
           </div>
         </div>
     </div>
