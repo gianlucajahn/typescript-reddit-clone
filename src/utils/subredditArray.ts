@@ -233,19 +233,19 @@ const subredditArray = [
         flairs: [
             {
                 title: "Question",
-                color: "#fc471e"
+                color: "#a68039"
             },
             {
                 title: "Discussion",
-                color: "#fc471e"
+                color: "#a68039"
             },
             {
                 title: "Clip",
-                color: "#fc471e"
+                color: "#a68039"
             },
             {
                 title: "Announcement",
-                color: "#fc471e"
+                color: "#a68039"
             }
         ],
         anchors: [
@@ -685,19 +685,19 @@ const subredditArray = [
             },
             {
                 title: "Meme",
-                color: "#edeff1"
+                color: "#737373"
             },
             {
                 title: "(Bad) UI",
-                color: "#edeff1"
+                color: "#737373"
             },
             {
                 title: "Other",
-                color: "#edeff1"
+                color: "#737373"
             },
             {
                 title: "instanceof Trend",
-                color: "#edeff1"
+                color: "#737373"
             }
         ],
         anchors: [

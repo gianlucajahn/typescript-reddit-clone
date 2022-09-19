@@ -1,5 +1,5 @@
 .subredditPage {
-    min-height: 200vh;
+    min-height: 250vh;
 
     .subredditBanner {
         margin-top: 49px;
@@ -348,4 +348,43 @@
     font-family: "Noto Sans Regular";
     color: #1a1a1b;
     padding-bottom: 12px;
+}
+
+.flairsContainer {
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 310px;
+
+    .head {
+        border: 1px solid transparent;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        color: white;
+        font-family: "IBM Regular";
+        letter-spacing: 0.04em;
+        padding: 11px 12px;
+
+        h3 {
+            font-size: 14px;
+        }
+    }
+
+    .flairList {
+        display: flex;
+        gap: 6px;
+        width: 310px;
+        flex-wrap: wrap;
+        width: 94%;
+        padding: 16px 10px 20px 10px !important;
+
+        .flair {
+            border: 1px solid transparent;
+            border-radius: 9999px;
+            padding: 6px 10px;
+            color: white;
+            font-size: 14px;
+            font-family: "IBM";
+        }
+    }
 }

@@ -189,6 +189,30 @@ export default function SubredditPage (props: SubredditPageProps) {
                 })}
             </div>
 
+
+
+
+
+            <div className="flairsContainer">
+                <div className="head" style={{ backgroundColor: communityTheme ? currentSub?.headerColor : standardTheme.headerColor }}>
+                    <h3>Search by flair</h3>
+                </div>
+
+                <div className="flairList">
+                  {currentSub?.flairs.map((flair, i) => {
+                    return (
+                      <button className="flair" style={{ backgroundColor: `${flair.color}` }}>
+                        {flair.title}
+                      </button>
+                    )
+                  })}
+                </div>
+            </div>
+
+
+
+
+
             <Imprint />
           </div>
       </div>
