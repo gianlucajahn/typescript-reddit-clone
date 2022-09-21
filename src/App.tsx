@@ -331,17 +331,21 @@ function App() {
 
   const checkDropdown = (e: any) => {
     const dropdownMenu = document.getElementById('dropdownMenu');
+    const searchDropdown = document.getElementById('searchDropdown');
     const subredditDropdown = document.getElementById('subredditDropdown');
 
     if (e.target.id === "link") {
+      setSearchDropdown(false);
       return;
     } else {
       let node = e.target;
       if (node.id === "register") {
         setDropdownIsOpen(false);
+        setSearchDropdown(false);
         return;
       } else if (node.parentNode.id === "register") {
         setDropdownIsOpen(false);
+        setSearchDropdown(false);
         return;
       }
 
@@ -350,10 +354,16 @@ function App() {
           setDropdownIsOpen(true);
           return;
         }
+
+        if (node === searchDropdown) {
+          setSearchDropdown(true);
+          return;
+        }
     
         node = node.parentNode;
       }
     setDropdownIsOpen(false);
+    setSearchDropdown(false);
     }
 
     let node2 = e.target;

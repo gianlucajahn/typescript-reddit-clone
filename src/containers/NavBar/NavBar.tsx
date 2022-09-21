@@ -191,8 +191,8 @@ export default function NavBar (props: NavBarProps) {
               <img className="subClose" src={require("../../resources/images/close.PNG")} onClick={removeCurrentSub} />
           </div>}
 
-          <div className="searchDropdown" style={{ display: searchDropdown ? "flex" : "none" }}>
-            <div className="resultList">
+          <div className="searchDropdown searchdd" style={{ display: searchDropdown ? "flex" : "none" }} id="searchDropdown">
+            <div className="resultList searchdd">
               {subreddits.map((sub, i) => {
                 if (searchTerm === "") {
                   return;
@@ -205,22 +205,22 @@ export default function NavBar (props: NavBarProps) {
                   }
 
                   return (
-                    <div className="searchResult" style={{ display: searchItemDisplay[i - 1] === true ? "flex" : "none" }} id={sub.title} onClick={handleNavigate}>
-                      <div className="left">
-                        <img className="subLogo" src={require(`../../resources/images/Communities/${sub.title}/icon.png`)} />
-                        <h3 className="subTitle">r/{sub.title}</h3>
+                    <div className="searchResult searchdd" style={{ display: searchItemDisplay[i - 1] === true ? "flex" : "none" }} id={sub.title} onClick={handleNavigate}>
+                      <div className="left searchdd">
+                        <img className="subLogo searchdd" src={require(`../../resources/images/Communities/${sub.title}/icon.png`)} />
+                        <h3 className="subTitle searchdd">r/{sub.title}</h3>
                       </div>
-                      <img className="close" src={require("../../resources/images/close.PNG")} onClick={changeSearchItemDisplay} id={`${i}`} />
+                      <img className="close searchdd" src={require("../../resources/images/close.PNG")} onClick={changeSearchItemDisplay} id={`${i}`} />
                     </div>
                   );
                 }
                 return;
               })}
             </div>
-            <div className="searchTerm">
-              <div className="left">
-                <Search className="subLogo" />
-                <h3 className="subTitle">Search for "{searchTerm}"</h3>
+            <div className="searchTerm searchdd">
+              <div className="left searchdd">
+                <Search className="subLogo searchdd" />
+                <h3 className="subTitle searchdd">Search for "{searchTerm}"</h3>
               </div>
               <img className="close" src={require("../../resources/images/close.PNG")} onClick={() => setSearchTerm("")} />
             </div>
