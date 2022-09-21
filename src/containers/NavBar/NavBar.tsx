@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useEffect, useState } from 'react';
+import React, { FormEventHandler, MouseEventHandler, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import './NavBar.scss';
 import { ReactComponent as RedditLogo } from "../../resources/images/redditlogo.svg";
@@ -20,6 +20,12 @@ export interface NavBarProps {
   subreddits: Subreddits,
   currentSub: Subreddit | undefined,
   joinedCommunities: any,
+  searchDropdown: boolean,
+  searchTerm: string,
+  setSearchTerm: any,
+  searchItemDisplay: boolean[],
+  changeSearchItemDisplay: MouseEventHandler<HTMLImageElement>,
+  handleInputChange: FormEventHandler,
   removeCurrentSub: MouseEventHandler,
   handleFavorite: MouseEventHandler<HTMLImageElement>,
   handleLogin: MouseEventHandler,
@@ -54,11 +60,17 @@ export default function NavBar (props: NavBarProps) {
     handleFavorite,
     handleNavigate,
     handleExpandSub,
+    handleInputChange,
+    searchTerm,
+    searchItemDisplay,
+    changeSearchItemDisplay,
     dropdownState,
     subreddits,
+    setSearchTerm,
     currentSub,
     userName,
     loginStatus,
+    searchDropdown,
     joinedCommunities,
     subDropdownIsOpen,
     randomIntToString
@@ -83,6 +95,8 @@ export default function NavBar (props: NavBarProps) {
       target.setAttribute('style', 'border: 1px solid transparent');
     }
   }
+
+  let currentRender = 0;
 
   return (
     <div className="navBar" style={{ padding: loginStatus ? "0px 12px 0px 20px" : "0px 20px" }}>
@@ -152,7 +166,7 @@ export default function NavBar (props: NavBarProps) {
         </div>
 
         <div className="search">
-          <input type="text" placeholder="Search Reddit" className={loginStatus ? "searchBarLogin" : "searchBar"} style={{ paddingLeft: currentSub === undefined ? "46px" : 
+          <input type="text" placeholder="Search Reddit" onChange={handleInputChange} value={searchTerm} className={loginStatus ? "searchBarLogin" : "searchBar"} style={{ paddingLeft: currentSub === undefined ? "46px" : 
                                                                                                                                         currentSub.title === "movies"           ? "174px" : 
                                                                                                                                         currentSub.title === "leagueoflegends"  ? "230px" : 
                                                                                                                                         currentSub.title === "genshinimpact"    ? "218px" : 
@@ -176,6 +190,44 @@ export default function NavBar (props: NavBarProps) {
               <h5 className="subName">r/{currentSub?.title}</h5>
               <img className="subClose" src={require("../../resources/images/close.PNG")} onClick={removeCurrentSub} />
           </div>}
+
+          <div className="searchDropdown" style={{ display: searchDropdown ? "flex" : "none" }}>
+            <div className="resultList">
+              {subreddits.map((sub, i) => {
+                if (searchTerm === "") {
+                  return;
+                }
+
+                if (sub.title.indexOf(searchTerm.toLowerCase()) !== -1) {
+                  currentRender++;
+                  if (currentRender > 5) {
+                    return;
+                  }
+
+                  console.log(sub.title);
+                  console.log(i);
+
+                  return (
+                    <div className="searchResult" style={{ display: searchItemDisplay[i - 1] === true ? "flex" : "none" }}>
+                      <div className="left">
+                        <img className="subLogo" src={require(`../../resources/images/Communities/${sub.title}/icon.png`)} />
+                        <h3 className="subTitle">r/{sub.title}</h3>
+                      </div>
+                      <img className="close" src={require("../../resources/images/close.PNG")} onClick={changeSearchItemDisplay} id={`${i}`} />
+                    </div>
+                  );
+                }
+                return;
+              })}
+            </div>
+            <div className="searchTerm">
+              <div className="left">
+                <Search className="subLogo" />
+                <h3 className="subTitle">Search for "{searchTerm}"</h3>
+              </div>
+              <img className="close" src={require("../../resources/images/close.PNG")} onClick={() => setSearchTerm("")} />
+            </div>
+          </div>
         </div>
 
         <div className="user">

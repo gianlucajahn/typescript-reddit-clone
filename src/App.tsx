@@ -16,6 +16,8 @@ function App() {
   const [subreddits, setSubreddits] = useState(subredditArray);
   const [topSubreddits, setTopSubreddits] = useState(subreddits.slice(0, 5));
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchDropdown, setSearchDropdown] = useState(false);
   const [currentAnchor, setCurrentAnchor] = useState(Number);
   const [selectedAnchor, setSelectedAnchor] = useState("");
   const [currentSub, setCurrentSub] = useState<Subreddit>();
@@ -27,6 +29,25 @@ function App() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [loginStatus, setLoginStatus] = useState(false);
+  const [searchItemDisplay, setSearchItemDisplay] = useState([
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+  ]);
   const [dropdownState, setDropdownState] = useState({
     erkunden: false,
     gaming: false,
@@ -51,6 +72,38 @@ function App() {
     subreddits[8],
     subreddits[9],
   ]);
+
+  const baseSearchArray = [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ];
+
+  useEffect(() => {
+    if (searchTerm.length === 0) {
+      setSearchDropdown(false);
+      setSearchItemDisplay(baseSearchArray);
+      return;
+    }
+
+    if (searchTerm.length >= 1) {
+        setSearchDropdown(true);
+    }
+  }, [searchTerm])
 
   const handleLoginInput = (e: ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
@@ -146,6 +199,14 @@ function App() {
   const setSort = (e: React.MouseEvent) => {
     const target = e.currentTarget as HTMLButtonElement;
     setCurrentSort(target.id);
+  }
+
+  const changeSearchItemDisplay = (e: React.MouseEvent) => {
+    const target = e.currentTarget as HTMLImageElement;
+    const targetedId = parseInt(target.id) - 1;
+    const newArray = [...searchItemDisplay];
+    newArray.splice(targetedId, 1, false);
+    setSearchItemDisplay(newArray);
   }
 
   const handleFavorite = (e: React.MouseEvent) => {
@@ -322,6 +383,11 @@ function App() {
     navigate("/submit");
   }
 
+  const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
+    const target = e.currentTarget as HTMLInputElement;
+    setSearchTerm(target.value);
+  }
+
   const handleLogin = (e: React.MouseEvent) => {
     const target = e.target as HTMLButtonElement | HTMLDivElement;
     if (target.id === "login") {
@@ -373,6 +439,12 @@ function App() {
         navToSubmit={navToSubmit}
         subreddits={subreddits}
         removeCurrentSub={removeCurrentSub}
+        handleInputChange={handleInputChange}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        searchDropdown={searchDropdown}
+        searchItemDisplay={searchItemDisplay}
+        changeSearchItemDisplay={changeSearchItemDisplay}
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/' element={<Home 

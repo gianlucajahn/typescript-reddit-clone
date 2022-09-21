@@ -1,4 +1,6 @@
-
+#app {
+  overflow-x: hidden !important;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

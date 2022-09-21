@@ -1,6 +1,7 @@
     .subredditHeadline {
         background-color: white;
         height: 100px;
+        width: 100vw;
         margin-top: -4px;
         position: relative;
         z-index: 7;
@@ -107,4 +108,8 @@
 .subredditContent {
     padding-top: 20px;
     margin-left: 464px;
+}
+
+.subredditHeadline::-webkit-scrollbar {
+    display: none;
 }
