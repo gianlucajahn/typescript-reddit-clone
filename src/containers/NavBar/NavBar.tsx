@@ -20,10 +20,12 @@ export interface NavBarProps {
   subreddits: Subreddits,
   currentSub: Subreddit | undefined,
   joinedCommunities: any,
+  notificationNum: number,
   searchDropdown: boolean,
   searchTerm: string,
   setSearchTerm: any,
   searchItemDisplay: boolean[],
+  handleNotifications: MouseEventHandler,
   changeSearchItemDisplay: MouseEventHandler<HTMLImageElement>,
   handleInputChange: FormEventHandler,
   removeCurrentSub: MouseEventHandler,
@@ -51,6 +53,7 @@ export interface NavBarProps {
 export default function NavBar (props: NavBarProps) {
   const {
     dropdownIsOpen,
+    handleNotifications,
     handleDropdown,
     navToSubmit,
     handleExpand,
@@ -61,6 +64,7 @@ export default function NavBar (props: NavBarProps) {
     handleNavigate,
     handleExpandSub,
     handleInputChange,
+    notificationNum,
     searchTerm,
     searchItemDisplay,
     changeSearchItemDisplay,
@@ -252,10 +256,10 @@ export default function NavBar (props: NavBarProps) {
                 <button className="userButton" aria-label='Chat'>
                   <img className="userIcon chat" src={require("../../resources/images/chat.PNG")} />
                 </button>
-                <button className="userButton" aria-label='Notifications'>
-                  <img className="userIcon notifications" src={require("../../resources/images/bell.PNG")} />
-                  <div className="notification">
-                    1
+                <button className="userButton noti" aria-label='Notifications' onClick={handleNotifications}>
+                  <img className="userIcon notifications noti" src={require("../../resources/images/bell.PNG")} />
+                  <div className="notification noti" style={{ display: notificationNum >= 1 ? "flex" : "none" }}>
+                    {notificationNum}
                   </div>
                 </button>
                 <button className="userButton lastBtn" aria-label='Create' onClick={navToSubmit}>

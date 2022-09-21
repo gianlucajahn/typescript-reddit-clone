@@ -14,6 +14,7 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const [subreddits, setSubreddits] = useState(subredditArray);
+  const [notificationNum, setNotificationNum] = useState(0);
   const [topSubreddits, setTopSubreddits] = useState(subreddits.slice(0, 5));
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -103,7 +104,14 @@ function App() {
     if (searchTerm.length >= 1) {
         setSearchDropdown(true);
     }
-  }, [searchTerm])
+  }, [searchTerm]);
+
+  const handleNotifications = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+    if (target.classList.contains('noti')) {
+      setNotificationNum(0);
+    } 
+  }
 
   const handleLoginInput = (e: ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
@@ -182,14 +190,15 @@ function App() {
       const subIndex = joinedCommunitiesEdited.findIndex(element => element === targetedSubreddit);
       joinedCommunitiesEdited.splice(subIndex, 1);
       setJoinedCommunities(joinedCommunitiesEdited);
+      setNotificationNum(notificationNum + 1);
       const newCurrentSub = currentSub;
       if (newCurrentSub !== undefined) {
         newCurrentSub.joined = false;
         setCurrentSub(newCurrentSub);
       }
-      setCurrentSub(newCurrentSub);
     } else if (targetedSubreddit.joined === false) {
       setJoinedCommunities([...joinedCommunities, targetedSubreddit]);
+      setNotificationNum(notificationNum + 1);
       const newCurrentSub = currentSub;
       if (newCurrentSub !== undefined) {
         newCurrentSub.joined = true;
@@ -233,6 +242,7 @@ function App() {
       }
     });
     setJoinedCommunities(newJoinedCommunities);
+    setNotificationNum(notificationNum + 1);
   }
 
   const handleHover = (e: React.MouseEvent) => {
@@ -474,6 +484,8 @@ function App() {
         searchDropdown={searchDropdown}
         searchItemDisplay={searchItemDisplay}
         changeSearchItemDisplay={changeSearchItemDisplay}
+        handleNotifications={handleNotifications}
+        notificationNum={notificationNum}
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/' element={<Home 
