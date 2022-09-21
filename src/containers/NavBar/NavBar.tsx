@@ -254,6 +254,9 @@ export default function NavBar (props: NavBarProps) {
                 </button>
                 <button className="userButton" aria-label='Notifications'>
                   <img className="userIcon notifications" src={require("../../resources/images/bell.PNG")} />
+                  <div className="notification">
+                    1
+                  </div>
                 </button>
                 <button className="userButton lastBtn" aria-label='Create' onClick={navToSubmit}>
                   <img className="userIcon create" src={require("../../resources/images/add.PNG")} />

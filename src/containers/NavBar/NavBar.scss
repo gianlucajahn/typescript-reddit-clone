@@ -168,6 +168,7 @@
                 background-color: transparent;
                 position: relative;
                 font-size: 0.7185em;
+
                 &:hover {
                     background-color: rgba(26,26,27,0.1);
                 }
@@ -192,6 +193,25 @@
                     height: 4px;
                     margin: 0 auto;
                     padding: 5px 10px 5px 10px;
+                }
+
+                .notification {
+                    position: absolute;
+                    font-size: 10px;
+                    top: -3px;
+                    right: -6px;
+                    font-family: "IBM";
+                    color: #ffffff;
+                    background-color: #ff4500;
+                    height: 20px;
+                    display: flex;
+                    padding-bottom: 1px;
+                    justify-content: center;
+                    align-items: center;
+                    box-sizing: border-box;
+                    width: 20px;
+                    border: 2px solid white;
+                    border-radius: 9999px;
                 }
 
                 img {
