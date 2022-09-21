@@ -182,8 +182,19 @@ function App() {
       const subIndex = joinedCommunitiesEdited.findIndex(element => element === targetedSubreddit);
       joinedCommunitiesEdited.splice(subIndex, 1);
       setJoinedCommunities(joinedCommunitiesEdited);
+      const newCurrentSub = currentSub;
+      if (newCurrentSub !== undefined) {
+        newCurrentSub.joined = false;
+        setCurrentSub(newCurrentSub);
+      }
+      setCurrentSub(newCurrentSub);
     } else if (targetedSubreddit.joined === false) {
       setJoinedCommunities([...joinedCommunities, targetedSubreddit]);
+      const newCurrentSub = currentSub;
+      if (newCurrentSub !== undefined) {
+        newCurrentSub.joined = true;
+        setCurrentSub(newCurrentSub);
+      }
     }
 
     const newSubredditArray = subreddits.map((sub, i) => {
