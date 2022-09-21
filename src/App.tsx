@@ -262,7 +262,7 @@ function App() {
   const handleNavigate = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     const subIndex = subreddits.findIndex(element => element.title === target.id);
-    if (target.classList.contains('join')) {
+    if (target.classList.contains('join') || target.classList.contains('close')) {
       return;
     }
     console.log(subreddits[subIndex]);
