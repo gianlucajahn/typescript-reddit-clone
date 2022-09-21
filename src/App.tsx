@@ -395,6 +395,10 @@ function App() {
   }
 
   const navToSubmit = (e: React.MouseEvent) => {
+    if (loginStatus === false) {
+      setLoginModalState("login");
+      return;
+    }
     navigate("/submit");
   }
 
