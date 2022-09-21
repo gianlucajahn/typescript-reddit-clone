@@ -549,7 +549,7 @@
         position: absolute;
         top: 93%;
         left: -1px;
-        width: 270px;
+        width: 272px;
         cursor: default;
         max-height: 500px;
         overflow-y: scroll;
@@ -720,9 +720,11 @@
             .left {
                 display: flex;
                 gap: 8px;
+                pointer-events: none;
 
                 img {
                     height: 25px;
+                    pointer-events: none;
                 }
 
                 h3 {
@@ -730,6 +732,7 @@
                     font-family: "IBM Regular";
                     color: #1c1c1c;
                     padding-top: 3px;
+                    pointer-events: none;
                 }
             }
 

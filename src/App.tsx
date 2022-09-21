@@ -253,6 +253,7 @@ function App() {
     if (target.classList.contains('join')) {
       return;
     }
+    console.log(subreddits[subIndex]);
     setCurrentSub(subreddits[subIndex]);
 
     if (target.classList.contains('favorite')) {
@@ -289,6 +290,8 @@ function App() {
     }
 
     navigate(`r/${target.id}`);
+    setSearchDropdown(false);
+    setSearchTerm("");
   }
 
   const handleExpandSub = (e: React.MouseEvent) => {

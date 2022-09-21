@@ -204,11 +204,8 @@ export default function NavBar (props: NavBarProps) {
                     return;
                   }
 
-                  console.log(sub.title);
-                  console.log(i);
-
                   return (
-                    <div className="searchResult" style={{ display: searchItemDisplay[i - 1] === true ? "flex" : "none" }}>
+                    <div className="searchResult" style={{ display: searchItemDisplay[i - 1] === true ? "flex" : "none" }} id={sub.title} onClick={handleNavigate}>
                       <div className="left">
                         <img className="subLogo" src={require(`../../resources/images/Communities/${sub.title}/icon.png`)} />
                         <h3 className="subTitle">r/{sub.title}</h3>
