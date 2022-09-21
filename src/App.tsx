@@ -171,6 +171,7 @@ function App() {
   const handleSubMembership = (e: React.MouseEvent) => {
     if (loginStatus === false) {
       setLoginModalState("login");
+      return;
     }
     const target = e.currentTarget as HTMLButtonElement;
     const subIndex = subreddits.findIndex(element => element.title === target.id);

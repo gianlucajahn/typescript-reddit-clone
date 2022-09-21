@@ -78,6 +78,7 @@ export default function SubredditPage (props: SubredditPageProps) {
         selectAnchor={selectAnchor}
         currentAnchor={currentAnchor}
         standardTheme={standardTheme}
+        loginStatus={loginStatus}
         communityTheme={communityTheme}
       />
 
