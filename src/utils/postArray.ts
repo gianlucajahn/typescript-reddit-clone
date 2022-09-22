@@ -837,40 +837,147 @@ const postArray = [
         }
     },
     {
-        title: "If you have Chris Paul on your team, there is an 80% chance your team will change ownership.",
-        id: "19",
-        type: "img",
-        src: "../../resources/images/Communities/nba/19.png",
-        author: "ChamberDavs",
-        time: "3 hours ago",
-        subreddit: "nba",
-        upvotes: "13",
+        title: "Moronic Monday - September 06, 2022 - Your Weekly Questions Thread",
+        id: "20",
+        type: "text",
+        src: "This is your safe place for questions on financial careers, homework problems and finance in general. No question in the finance domain is unwelcome. Replies are expected to be constructive and civil. Any questions about your personal finances belong in r/PersonalFinance, and career-seekers are encouraged to also visit r/FinancialCareers.",
+        author: "AutoModerator",
+        time: "17 days ago",
+        subreddit: "finance",
+        upvotes: "10",
+        awards: [
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "GigaChad450",
+                time: "16 days ago",
+                upvotes: "1",
+                content: "Stupid question - what's in it for a company to pay dividends?"
+            },
+            {
+                author: "littlepiggy",
+                time: "16 days ago",
+                upvotes: "8",
+                content: "I've been working on a free educational video series for my work and we have been covering topics such as dollar cost averaging, how fixed (indexed) annuities work, and other topics like financial planning or life insurance. It's mostly just to inform people about the basics without heavy-handedly telling people how to manage their money. Does anyone have suggestions for how/where I can share these videos?"
+            },
+            {
+                author: "Simamonas",
+                time: "15 days ago",
+                upvotes: "4",
+                content: "I have a very specific question. I will shortly sell a product and I would be able to get paid either to my US bank account or my Lithuanian bank account. I am a Lithuanian citizen living in the US. Which decision would be smarter taking into account taxes, etc.?"
+            }
+        ],
+        flair: {
+            title: "Dicussion",
+            color: "#0d7680"
+        }
+    },
+    {
+        title: "Customer psychology question",
+        id: "21",
+        type: "text",
+        src: "So I have a question. I am setting up my store and want to use some upsells. Thing is, I currently have different options, 1pack (10% off), 2pack (25% off) etc but I was wondering if that could possibly hurt my business more than it benefits me. Maybe customers think, I dont want to pay that much for a 2pack but I dont want to buy the option with lower discounts either. Maybe they feel like they would make a bad deal either way. What are your thoughts?",
+        author: "-Fellaini",
+        time: "4 hours ago",
+        subreddit: "finance",
+        upvotes: "2",
         awards: [
 
         ],
         comments: [
             {
-                author: "Next-Firefighter-753",
-                time: "3 hours ago",
-                upvotes: "19",
-                content: "The game where every one his teammates not named Pat Connaughton sold"
-            },
-            {
-                author: "agk927",
+                author: "dan_obrien",
                 time: "3 hr. ago",
-                upvotes: "7",
-                content: "The next Michael Jordan if he gets 6 more rings"
-            },
-            {
-                author: "horseshoeoverlook",
-                time: "3 hr. ago",
-                upvotes: "9",
-                content: "I legit forgot, how many pts did Tatum get here? 48?"
+                upvotes: "4",
+                content: "Maybe the solution is in absolute pricing (vs. the negative psychological impact discounts can cause). You might be able to upsell better that way."
             }
         ],
         flair: {
-            title: "Highlight",
-            color: "#e58c0e"
+            title: "Question",
+            color: "#0d7680"
+        }
+    },
+    {
+        title: "3 E-Commerce lessons For 2022 (after spending $21m on ads in 2021)",
+        id: "22",
+        type: "text",
+        src: "Hey fellow ecommerce aficionados. With the 1st month of the new year coming to an end, I wanted to pop in here to share lessons from 2021 that we'll be applying moving forward in 2022. Lesson #1 - Awesome Post Purchase Customer Experience. If you are lucky enough to be acquiring customers at or near a profit, then do not take it for granted. Wavering ad performance and instability in 2021 taught all of us just how valuable existing customers are. Lesson #2 - Testing More (& Better) Creative Negates 95% of Ad Performance Issues Again, most brands were spoiled by Facebook's accuracy and lower CPMs and took it for granted. Lesson #3 - Recurring Deals With Undervalued Macro Influencers = Money PrinterAfter working with literally thousands of influencers, we stopped being transactional and started to get to know these people.",
+        author: "AdYeti",
+        time: "8 months ago",
+        subreddit: "finance",
+        upvotes: "367",
+        awards: [
+            "platinum",
+            "gold",
+            "silver",
+            "helpful",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "smoovopr8r",
+                time: "7 months ago",
+                upvotes: "12",
+                content: "Nice writeup. How do you identify the growing rapidly but haven't 'made it' yet influencers? What kind of metrics/ranges are you looking at?"
+            },
+            {
+                author: "Leviathant",
+                time: "7 months ago",
+                upvotes: "6",
+                content: "Thanks for sharing, Simon! Really interesting reading. I thought the 'influencer' stuff at the bottom was particularly interesting, that's a topic that I rarely find any value in reading about, but you shared a thoughtful reflection on your experience that provided good context to what you found to be valuable. Kudos!"
+            },
+            {
+                author: "Ax_deimos",
+                time: "7 months ago",
+                upvotes: "4",
+                content: "I liked your notes on A) iterating your way to success with adverisements (try/evaluate/try again frequently) and, B) The point you made on establishing connections (and stable cash flow generating relationships) with influencers. By the way, what business was this that needed 21M in advertising?"
+            }
+        ],
+        flair: {
+            title: "Analysis",
+            color: "#0d7680"
+        }
+    },
+    {
+        title: "3 E-Commerce lessons For 2022 (after spending $21m on ads in 2021)",
+        id: "22",
+        type: "text",
+        src: "Hey fellow ecommerce aficionados. With the 1st month of the new year coming to an end, I wanted to pop in here to share lessons from 2021 that we'll be applying moving forward in 2022. Lesson #1 - Awesome Post Purchase Customer Experience. If you are lucky enough to be acquiring customers at or near a profit, then do not take it for granted. Wavering ad performance and instability in 2021 taught all of us just how valuable existing customers are. Lesson #2 - Testing More (& Better) Creative Negates 95% of Ad Performance Issues Again, most brands were spoiled by Facebook's accuracy and lower CPMs and took it for granted. Lesson #3 - Recurring Deals With Undervalued Macro Influencers = Money PrinterAfter working with literally thousands of influencers, we stopped being transactional and started to get to know these people.",
+        author: "AdYeti",
+        time: "8 months ago",
+        subreddit: "finance",
+        upvotes: "367",
+        awards: [
+            "platinum",
+            "gold",
+            "silver",
+            "helpful",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "smoovopr8r",
+                time: "7 months ago",
+                upvotes: "12",
+                content: "Nice writeup. How do you identify the growing rapidly but haven't 'made it' yet influencers? What kind of metrics/ranges are you looking at?"
+            },
+            {
+                author: "Leviathant",
+                time: "7 months ago",
+                upvotes: "6",
+                content: "Thanks for sharing, Simon! Really interesting reading. I thought the 'influencer' stuff at the bottom was particularly interesting, that's a topic that I rarely find any value in reading about, but you shared a thoughtful reflection on your experience that provided good context to what you found to be valuable. Kudos!"
+            },
+            {
+                author: "Ax_deimos",
+                time: "7 months ago",
+                upvotes: "4",
+                content: "I liked your notes on A) iterating your way to success with adverisements (try/evaluate/try again frequently) and, B) The point you made on establishing connections (and stable cash flow generating relationships) with influencers. By the way, what business was this that needed 21M in advertising?"
+            }
+        ],
+        flair: {
+            title: "Analysis",
+            color: "#0d7680"
         }
     },
 ]
