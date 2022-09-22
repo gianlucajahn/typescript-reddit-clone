@@ -116,7 +116,7 @@ const subredditArray = [
                 color: "#ccac2b"
             },
             {
-                title: "Media",
+                title: "Trailer",
                 color: "#ccac2b"
             }
         ],
