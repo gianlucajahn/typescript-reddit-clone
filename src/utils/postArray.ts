@@ -367,7 +367,7 @@ const postArray = [
         type: "text",
         src: "Hecarim is sporting a banrate above 70% in master+. I know that it's a quite small sample size atm, its master+ - but it is quite insane! I cant remeber a champion with this high of a banrate since Kassadins +90% banrate back in the day. Also since Hecarims performance is actually quite bad, even with the absurd banrate. Do you think it will be lower the longer the patch goes and people figure out, that his performance is quite bad or is it just because the WR is misleading? It is very interesting though.",
         author: "ukendtkunst",
-        time: "3 hr. ago",
+        time: "3 hours ago",
         subreddit: "leagueoflegends",
         upvotes: "24",
         awards: [
@@ -411,7 +411,7 @@ const postArray = [
         type: "img",
         src: "../../resources/images/Communities/genshinimpact/10.png",
         author: "Junnielocked",
-        time: "5 hr. ago",
+        time: "5 hours ago",
         subreddit: "genshinimpact",
         upvotes: "1.9k",
         awards: [
@@ -461,7 +461,7 @@ const postArray = [
         type: "img",
         src: "../../resources/images/Communities/genshinimpact/11.png",
         author: "SamManiac1998",
-        time: "3 hr. ago",
+        time: "3 hours ago",
         subreddit: "genshinimpact",
         upvotes: "905",
         awards: [
@@ -504,7 +504,7 @@ const postArray = [
         type: "img",
         src: "../../resources/images/Communities/genshinimpact/12.png",
         author: "EternalMemes30",
-        time: "16 hr. ago",
+        time: "16 hours ago",
         subreddit: "genshinimpact",
         upvotes: "8.9k",
         awards: [
@@ -561,7 +561,7 @@ const postArray = [
         type: "img",
         src: "../../resources/images/Communities/genshinimpact/13.png",
         author: "JebaTV",
-        time: "15 hr. ago",
+        time: "15 hours ago",
         subreddit: "genshinimpact",
         upvotes: "2.1k",
         awards: [
@@ -599,7 +599,7 @@ const postArray = [
         type: "text",
         src: "Ive seen occasional posts of ppl talking about emailing support and how long it takes but how does it normally happen? Emails getting compromised or ppl stealing/guessing weak passwords with a script? Ive asked a bit but ppl typically end up giving vague answers or not responding. How big of a threat is this id rather not lose my account ive been working on for the past 7 months? My passwords decent ig but idk if i need a heavy duty password for my genshin lol.",
         author: "Classic_Box-3919",
-        time: "10 hr. ago",
+        time: "10 hours ago",
         subreddit: "genshinimpact",
         upvotes: "30",
         awards: [
@@ -646,49 +646,231 @@ const postArray = [
         title: "[Wojnarowski] Boston Celtics coach Ime Udoka is likely facing a suspension for the entire 2022-2023 season for his role in a consensual relationship with a female staff member, sources tell ESPN. A formal announcement is expected as soon as today.",
         id: "15",
         type: "img",
-        src: "sed or ppl stealing/guessing weak passwords with a script? Ive asked a bit but ppl typically end up giving vague answers or not responding. How big of a threat is this id rather not lose my account ive been working on for the past 7 months? My passwords decent ig but idk if i need a heavy duty password for my genshin lol.",
-        author: "Classic_Box-3919",
-        time: "10 hr. ago",
-        subreddit: "genshinimpact",
-        upvotes: "30",
+        src: "../../resources/images/Communities/nba/15.png",
+        author: "curryybacon",
+        time: "4 hours ago",
+        subreddit: "nba",
+        upvotes: "6.2k",
+        awards: [
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "TheSmokeSalmon420",
+                time: "4 hr. ago",
+                upvotes: "4.2k",
+                content: "From Finals appearance to suspended an entire season. That is pretty wild. Horny jail basketball team has a head coach!"
+            },
+            {
+                author: "mansmurf",
+                time: "4 hr. ago",
+                upvotes: "2.4k",
+                content: "Off-season went 0-100 real quick"
+            },
+            {
+                author: "KryieWetUpCurry_",
+                time: "4 hr. ago",
+                upvotes: "2.5k",
+                content: "Craziest rise and fall of a coach, although it’s just a year."
+            },
+            {
+                author: "NevermoreSEA",
+                time: "5 hr. ago",
+                upvotes: "38",
+                content: "Was it worth it, Ime?"
+            }
+        ],
+        flair: {
+            title: "News",
+            color: "#e58c0e"
+        }
+    },
+    {
+        title: "[Mannix] Don't be surprised if Frank Vogel is considered for the Celtics bench.",
+        id: "16",
+        type: "text",
+        src: "Also: Joe Mazzulla is expected to be elevated, but the staff is thin with head coaching experience. Vogel has a longstanding relationship with Brad Stevens",
+        author: "DescriptionNo5362",
+        time: "2 hours ago",
+        subreddit: "nba",
+        upvotes: "148",
         awards: [
 
         ],
         comments: [
             {
-                author: "ScienceOfMemory",
-                time: "9 hr. ago",
-                upvotes: "65",
-                content: "Give vague answers on how it happens because 99% of the time it happens due to their own stupidity and who wants to admit that?"
+                author: "ChamberDavs",
+                time: "2 hr. ago",
+                upvotes: "172",
+                content: "IDK why people think Vogel is a bad coach. Lakers were the best defense in the league for two seasons before they decided to let all of their defenders go"
             },
             {
-                author: "Altekho",
-                time: "10 hr. ago",
-                upvotes: "26",
-                content: "Their password got stolen mostly (like, 99%) because the users' fault. Saved passwords stored in their browser got compromised by malware from phising, installing infected software, browsing carelessly with out-of-date antivirus, you name it. There's the subs for further help."
+                author: "badthird",
+                time: "2 hr. ago",
+                upvotes: "81",
+                content: "Vogel is a bad offensive coach but idk why Celtics fans arent excited to add an elite defensive coach to a team of elite defensive players, at least as an assistant."
             },
             {
-                author: "18237482",
-                time: "9 hr. ago",
-                upvotes: "7",
-                content: "Most cases is the person bought the account and didnt change the email"
-            },
-            {
-                author: "Jsomer50",
-                time: "10 hr. ago",
-                upvotes: "5",
-                content: "Someone fill me in- i tried to log into the game on my phone (created account on pc) for the first time back in the day, and it made me verify myself since it was a new device logging into the account. Wouldn’t that stop a ton of hack attempts? Since you would need the persons email as well."
-            },
-            {
-                author: "UniqueCremer1931",
-                time: "9 hr. ago",
-                upvotes: "4",
-                content: "One of the common ways is by saving your Mihoyo login credentials in your browser and then clicking on suspicious links or downloading pirated games/software that install the Redline Stealer malware on your computer. It can steal all your saved autofill usernames/passwords. I've seen a number of people from r/genshinhacked who admit to having not only their Genshin accounts but also Instagram, Facebook, etc stolen after installing pirated games (I've seen a few pirate Elden Ring in particular). Apparently most of these other services manage to recover their accounts within a week though, whereas Mihoyo takes like 40 days assuming they don't reject the recovery form."
+                author: "rostron92",
+                time: "2 hr. ago",
+                upvotes: "8",
+                content: "Solid replacement. Gotta wonder if the players respond to Vogel the same way Ime's Tough love worked on the celtics players when they were underperforming"
             }
         ],
         flair: {
-            title: "Discussion",
-            color: "#373c3f"
+            title: "Game Thread",
+            color: "#e58c0e"
+        }
+    },
+    {
+        title: "[Charania] Thunder's Shai Gilgeous-Alexander has a Grade 2 left MCL sprain and will miss the start of training camp, team says.",
+        id: "17",
+        type: "img",
+        src: "../../resources/images/Communities/nba/17.png",
+        author: "curryybacon",
+        time: "1 day ago",
+        subreddit: "nba",
+        upvotes: "3.5k",
+        awards: [
+            "gold",
+            "wholesome",
+            "helpful",
+            "silver"
+        ],
+        comments: [
+            {
+                author: "HokageEzio",
+                time: "1 day ago",
+                upvotes: "3.8k",
+                content: "Do the Thunder realize there's no 0th pick?"
+            },
+            {
+                author: "CoachJW",
+                time: "1 day ago",
+                upvotes: "1.5k",
+                content: "This off-season went from extremely hyped for us OKC fans to extremely depressing."
+            }
+        ],
+        flair: {
+            title: "News",
+            color: "#e58c0e"
+        }
+    },
+    {
+        title: "If you have Chris Paul on your team, there is an 80% chance your team will change ownership.",
+        id: "18",
+        type: "text",
+        src: "Chris Paul's teams have changed ownership 4 out of 5 times: Hornets: League Changed ownership from George Shinn to the NBA in 2010. LA Clippers: Donald Sterling to Steve Ballmer in 2014 Houston Rockets: Les Alexander to Tilman Fertitta in 2017 OKC Thunder: No ownership change Phoenix Suns: Robert Sarver to ??? So moral of this story is, if you want your current owner to sell the team just sign Chris Paul.",
+        author: "urfaselol",
+        time: "23 hours ago",
+        subreddit: "nba",
+        upvotes: "2.7k",
+        awards: [
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "raylan_givens6",
+                time: "23 hours ago",
+                upvotes: "694",
+                content: "the biggest shame was Les Alexander. One of the underrated good owners in the league, now the poor Rockets have that bum Fertitta"
+            },
+            {
+                author: "Realnonamer1",
+                time: "21 hr. ago",
+                upvotes: "115",
+                content: "This is why the lakers trade was vetoed"
+            },
+            {
+                author: "ThinkSoftware",
+                time: "23 hr. ago",
+                upvotes: "733",
+                content: "Knicks fans have entered the chat"
+            },
+            {
+                author: "nellywentdiamond",
+                time: "23 hr. ago",
+                upvotes: "132",
+                content: "Knicks fans demanding Chris Paul as I type this"
+            }
+        ],
+        flair: {
+            title: "News",
+            color: "#e58c0e"
+        }
+    },
+    {
+        title: "If you have Chris Paul on your team, there is an 80% chance your team will change ownership.",
+        id: "19",
+        type: "img",
+        src: "../../resources/images/Communities/nba/19.png",
+        author: "ChamberDavs",
+        time: "3 hours ago",
+        subreddit: "nba",
+        upvotes: "13",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "Next-Firefighter-753",
+                time: "3 hours ago",
+                upvotes: "19",
+                content: "The game where every one his teammates not named Pat Connaughton sold"
+            },
+            {
+                author: "agk927",
+                time: "3 hr. ago",
+                upvotes: "7",
+                content: "The next Michael Jordan if he gets 6 more rings"
+            },
+            {
+                author: "horseshoeoverlook",
+                time: "3 hr. ago",
+                upvotes: "9",
+                content: "I legit forgot, how many pts did Tatum get here? 48?"
+            }
+        ],
+        flair: {
+            title: "Highlight",
+            color: "#e58c0e"
+        }
+    },
+    {
+        title: "If you have Chris Paul on your team, there is an 80% chance your team will change ownership.",
+        id: "19",
+        type: "img",
+        src: "../../resources/images/Communities/nba/19.png",
+        author: "ChamberDavs",
+        time: "3 hours ago",
+        subreddit: "nba",
+        upvotes: "13",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "Next-Firefighter-753",
+                time: "3 hours ago",
+                upvotes: "19",
+                content: "The game where every one his teammates not named Pat Connaughton sold"
+            },
+            {
+                author: "agk927",
+                time: "3 hr. ago",
+                upvotes: "7",
+                content: "The next Michael Jordan if he gets 6 more rings"
+            },
+            {
+                author: "horseshoeoverlook",
+                time: "3 hr. ago",
+                upvotes: "9",
+                content: "I legit forgot, how many pts did Tatum get here? 48?"
+            }
+        ],
+        flair: {
+            title: "Highlight",
+            color: "#e58c0e"
         }
     },
 ]
