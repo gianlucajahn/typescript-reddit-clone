@@ -1235,27 +1235,240 @@ const postArray = [
         }
     },
     {
-        title: "Its a feature, not a bug...",
-        id: "29",
-        type: "img",
-        src: "../../resources/images/Communities/programmerhumor/29.png",
-        author: "Shaggy_Pop",
+        title: "Can I get some guidance on using OpenSimplex noise for random terrain?",
+        id: "30",
+        type: "text",
+        src: "Can I get some guidance on using OpenSimplex noise for random terrain?",
+        author: "LaminarEntropy",
         time: "4 hours ago",
-        subreddit: "programmerhumor",
-        upvotes: "399",
+        subreddit: "learnprogramming",
+        upvotes: "2",
         awards: [
-            "wholesome",
+            "helpful"
         ],
         comments: [
             {
-                author: "FVMAzalea",
-                time: "53 min. ago",
-                upvotes: "-2",
-                content: "This is why you use a language that minimizes those… like Rust 🦀"
+                author: "15Nova22",
+                time: "4 hr. ago",
+                upvotes: "2",
+                content: "I can recommend the Terrain Generation series by Sebastian Lague on Youtube. He uses Perlin noise I think but the kind of noise doesn’t change the algorythm as long as it is coherent noise. He goes over a lot of aspects and what those things do and you also see it right away (all made in Unity/C#)"
             }
         ],
         flair: {
-            title: "Meme",
+            title: "Topic",
+            color: "#737373"
+        }
+    },
+    {
+        title: "Fresh off passing Google and Microsoft interviews, I put together some notes and advice for Leetcode interview prep that I hope can help you. Appreciate any thoughts!",
+        id: "31",
+        type: "text",
+        src: "I posted A non-overwhelming list of resources to use for software development interview prep last week and you all liked it and seemed interested in more of my learnings from my last round of interviewing. So, I wrote up how I approach Leetcode-style interviews (coding challenges) in the same Github repository. You can read it here! I really hope it's helpful for you all and appreciate any feedback you might have. Edit: I should clarify, my goal of this isn't to be a one-size-fits-all resource but rather an opinionated, actionable resource that hopefully many others will be able to follow.",
+        author: "coffee_kazoo",
+        time: "6 days ago",
+        subreddit: "learnprogramming",
+        upvotes: "2.4k",
+        awards: [
+            "platinum",
+            "gold",
+            "silver",
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "mancinis_blessed_bat",
+                time: "5 days ago",
+                upvotes: "170",
+                content: "Thanks 🙏🏻 I am probably months away from interviewing still, but saved this and your other post, it looks very helpful"
+            },
+            {
+                author: "ikeif",
+                time: "6 days ago",
+                upvotes: "16",
+                content: "I appreciate this list - I hate interviewing in general (despite having done it off and on over 40 years) but I appreciate the work and in-depth explanations/reasonings."
+            },
+            {
+                author: "phasr0uk1",
+                time: "6 days ago",
+                upvotes: "53",
+                content: "This makes me really scared. How are we meant to know all this and also learn say react/express/mongoose at the same time? Crying :)"
+            },
+            {
+                author: "budspencer",
+                time: "4 days ago",
+                upvotes: "7",
+                content: "Let me save this post and never look it up."
+            },
+            {
+                author: "ApolloFarZenith",
+                time: "4 days ago",
+                upvotes: "2",
+                content: "Thank you for your efforts, I’m applying for a senior data scientist role after being a data scientist for nearly 4 years! All this is super useful, specifically in regards to algorithms and data structures. Been hitting LeetCode a lot lately, hopefully start interviewing in a few months."
+            },
+            {
+                author: "AngreFreshTech",
+                time: "6 days ago",
+                upvotes: "6",
+                content: "How long did you take to solve all of these questions?"
+            },
+        ],
+        flair: {
+            title: "Resource",
+            color: "#737373"
+        }
+    },
+    {
+        title: "I am amazed at the clear, concise and eloquent answers on this sub. More and more I realize that being able to communicate, both written and verbally, is an essential skill for programmers. Is there any way you can actively improve this in your experience?",
+        id: "32",
+        type: "text",
+        src: "I've often had trouble communicating what I'm trying to do, or what the problems that I'm facing are.",
+        author: "Accurare_Medicine200",
+        time: "5 days ago",
+        subreddit: "learnprogramming",
+        upvotes: "799",
+        awards: [
+            "silver",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "CreativeTechGuyGames",
+                time: "5 days ago",
+                upvotes: "167",
+                content: "This will sound obvious, but practice. Spend a ton of time talking out your ideas, problems, designs, etc with the people around you. Brainstorm constantly. Encourage the people you are talking to to not just listen but ask questions and try to understand what you are explaining, and provide input."
+            },
+            {
+                author: "SeaProfessor3312",
+                time: "4 days ago",
+                upvotes: "13",
+                content: "A trap many new folks fall into is called a black box they get so involved with learning every detail of things they lose track of the problem at hand. If you get stuck use the tools like google, stackoverflow, github message boards, the team members you work with its better than spending weeks learning things you don't need to know"
+            },
+            {
+                author: "Goldreaver",
+                time: "3 days ago",
+                upvotes: "6",
+                content: "As CreativeTechGuyGames has already said, practice is the best teacher in this situation. If you are answering mails or written questions in the regular, you tend to try to maximize the efficiency of your message, both to save time and because most people stop reading after a few seconds."
+            }
+        ],
+        flair: {
+            title: "Topic",
+            color: "#737373"
+        }
+    },
+    {
+        title: "You must learn to think like a programmer, not just learn it.",
+        id: "33",
+        type: "text",
+        src: "The most important thing is learning to THINK like a programmer. You have to put yourself into the mindset of the computer. Remember that computers don’t know what you want to do. You must be extremely logical, step my step. Use print statements/console logs to track the machine’s thinking if you’re not sure. This method of thinking takes time to develop but once it did I really started to encounter less errors and a smoother workflow. Limited knowledge of the language can take you a long way if you know how to google and the proper way to think it through. I’m starting to realize I’m capable of more than I think in this regard.",
+        author: "thedarklord176",
+        time: "2 days ago",
+        subreddit: "learnprogramming",
+        upvotes: "409",
+        awards: [
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "mbonty",
+                time: "2 days ago",
+                upvotes: "97",
+                content: "Another tip is to ask yourself.... If I only had pen and paper, how would I do this task manually? Simple but has helped me when I get stuck"
+            },
+            {
+                author: "silly_frog_lf",
+                time: "1 day ago",
+                upvotes: "23",
+                content: "Two suggestions. Make flow charts of your algorithm. This helps visualize each of the steps you make. They taught me that when I was a kid, and it is helpful. The second thing you can do is learn Little Man Computer. It is a simplified computer with instructions modeling how assembly works. Spending a week with these two can help a lot to get how programmers work. And a week is enough to gain benefits"
+            }
+        ],
+        flair: {
+            title: "Tutorial",
+            color: "#737373"
+        }
+    },
+    {
+        title: "Scared of failure",
+        id: "34",
+        type: "text",
+        src: "I am learning or trying to learn code online through Programming Hub & Solo learn I am 54 years old and I want to get a better job than I have now as a live in Home Health Aid for a disabled person. Any advice?",
+        author: "TrooKvlltBlack",
+        time: "2 days ago",
+        subreddit: "learnprogramming",
+        upvotes: "207",
+        awards: [
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "AugustGnarly",
+                time: "2 days ago",
+                upvotes: "55",
+                content: "If age related doubt creeps in, remember that you don’t need to get all of the programming jobs. Or most of the jobs. Or even some of the jobs. You just have to land one first job. This is something I keep telling myself because the ageism comments were bumming me out a few months ago."
+            },
+            {
+                author: "thesituation531",
+                time: "1 day ago",
+                upvotes: "17",
+                content: "If you mean failing as in your code not working, you will have to get used to that. Programmers face failure all the time, usually small things. You just have to be diligent and persistent. Good luck!"
+            },
+            {
+                author: "rafaover",
+                time: "2 days ago",
+                upvotes: "23",
+                content: "If you have this fear, I would start with easier paths and see where it goes, like learning html+CSS. After that maybe searching for a language that fits your demands, and stick to that despite all the outside pressure. You going to learn it, just don't feel bad if sometimes you suffer to solve little things. Take time out (1h or 1day), come back and try again. I'm 42, different reality and maybe past experience in life, but I know you can do it.if you really wants."
+            },
+            {
+                author: "YungDwight",
+                time: "1 day ago",
+                upvotes: "4",
+                content: "This keeps me going when I feel like you do. “Embarrassment is the cost of entry. If you aren’t willing to look like a foolish beginner, you’ll never become a graceful master” Denzel Washington"
+            }
+        ],
+        flair: {
+            title: "Topic",
+            color: "#737373"
+        }
+    },
+    {
+        title: "Scared of failure",
+        id: "35",
+        type: "text",
+        src: "I am learning or trying to learn code online through Programming Hub & Solo learn I am 54 years old and I want to get a better job than I have now as a live in Home Health Aid for a disabled person. Any advice?",
+        author: "TrooKvlltBlack",
+        time: "2 days ago",
+        subreddit: "todayilearned",
+        upvotes: "207",
+        awards: [
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "AugustGnarly",
+                time: "2 days ago",
+                upvotes: "55",
+                content: "If age related doubt creeps in, remember that you don’t need to get all of the programming jobs. Or most of the jobs. Or even some of the jobs. You just have to land one first job. This is something I keep telling myself because the ageism comments were bumming me out a few months ago."
+            },
+            {
+                author: "thesituation531",
+                time: "1 day ago",
+                upvotes: "17",
+                content: "If you mean failing as in your code not working, you will have to get used to that. Programmers face failure all the time, usually small things. You just have to be diligent and persistent. Good luck!"
+            },
+            {
+                author: "rafaover",
+                time: "2 days ago",
+                upvotes: "23",
+                content: "If you have this fear, I would start with easier paths and see where it goes, like learning html+CSS. After that maybe searching for a language that fits your demands, and stick to that despite all the outside pressure. You going to learn it, just don't feel bad if sometimes you suffer to solve little things. Take time out (1h or 1day), come back and try again. I'm 42, different reality and maybe past experience in life, but I know you can do it.if you really wants."
+            },
+            {
+                author: "YungDwight",
+                time: "1 day ago",
+                upvotes: "4",
+                content: "This keeps me going when I feel like you do. “Embarrassment is the cost of entry. If you aren’t willing to look like a foolish beginner, you’ll never become a graceful master” Denzel Washington"
+            }
+        ],
+        flair: {
+            title: "Topic",
             color: "#737373"
         }
     },
