@@ -980,6 +980,99 @@ const postArray = [
             color: "#0d7680"
         }
     },
+    {
+        title: "Highest number of puts/bearish contracts (33million) were purchased by traders on Friday - the most ever in a single day.",
+        id: "23",
+        type: "img",
+        src: "../../resources/images/Communities/finance/23.png",
+        author: "Wangtawang",
+        time: "7 hours ago",
+        subreddit: "finance",
+        upvotes: "8",
+        awards: [
+            "silver"
+        ],
+        comments: [
+            {
+                author: "Mysterious-Post8193",
+                time: "6 hr. ago",
+                upvotes: "5",
+                content: "Interest rate hikes are not even close to being iver"
+            },
+            {
+                author: "Dormage",
+                time: "6 hr. ago",
+                upvotes: "3",
+                content: "Its liquidation time..."
+            },
+            {
+                author: "Palpitating_Rattus",
+                time: "5 hr. ago",
+                upvotes: "3",
+                content: "Short gamma squeeze time"
+            },
+            {
+                author: "21plankton",
+                time: "5 hr. ago",
+                upvotes: "2",
+                content: "Note the dramatic use of options, hedging strategies after 2005, when quants became popular. Puts are downside protection, VIX only 30 and dropped some Friday afternoon. Probable intermediate bottom in the market this fall, or if bonds and currency dislocates a V bottom for the bear market this fall."
+            }
+        ],
+        flair: {
+            title: "Analysis",
+            color: "#0d7680"
+        }
+    },
+    {
+        title: "Charting the Global Economy: 90 Central Banks Have Increased Borrowing Costs This Year, 10 in the last 2 weeks",
+        id: "24",
+        type: "img",
+        src: "../../resources/images/Communities/finance/24.png",
+        author: "marketGOATS",
+        time: "4 hours ago",
+        subreddit: "finance",
+        upvotes: "1",
+        awards: [
+            
+        ],
+        comments: [
+            {
+                author: "ChrisStoneGermany",
+                time: "3 hr. ago",
+                upvotes: "2",
+                content: "The blue countries are those who fear the crash most"
+            }
+        ],
+        flair: {
+            title: "News",
+            color: "#0d7680"
+        }
+    },
+    {
+        title: "Charting the Global Economy: 90 Central Banks Have Increased Borrowing Costs This Year, 10 in the last 2 weeks",
+        id: "24",
+        type: "img",
+        src: "../../resources/images/Communities/finance/24.png",
+        author: "marketGOATS",
+        time: "4 hours ago",
+        subreddit: "finance",
+        upvotes: "1",
+        awards: [
+            
+        ],
+        comments: [
+            {
+                author: "ChrisStoneGermany",
+                time: "3 hr. ago",
+                upvotes: "2",
+                content: "The blue countries are those who fear the crash most"
+            }
+        ],
+        flair: {
+            title: "News",
+            color: "#0d7680"
+        }
+    },
 ]
 
 export default postArray;
