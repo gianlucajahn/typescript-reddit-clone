@@ -1430,46 +1430,208 @@ const postArray = [
         }
     },
     {
-        title: "Scared of failure",
+        title: "TIL the capstone of an ancient Egyptian pyramid was found in 1900, it's made of black basalt and weighs 4.5 tonnes .",
         id: "35",
         type: "text",
-        src: "I am learning or trying to learn code online through Programming Hub & Solo learn I am 54 years old and I want to get a better job than I have now as a live in Home Health Aid for a disabled person. Any advice?",
+        src: "There was a plan to reseat a cap on the great pyramid for the millennium celebration but it never came about.",
         author: "TrooKvlltBlack",
-        time: "2 days ago",
+        time: "22 hours ago",
         subreddit: "todayilearned",
-        upvotes: "207",
+        upvotes: "12.6k",
         awards: [
-            "wholesome"
+            "silver"
         ],
         comments: [
             {
                 author: "AugustGnarly",
-                time: "2 days ago",
-                upvotes: "55",
-                content: "If age related doubt creeps in, remember that you don’t need to get all of the programming jobs. Or most of the jobs. Or even some of the jobs. You just have to land one first job. This is something I keep telling myself because the ageism comments were bumming me out a few months ago."
+                time: "21 hr. ago",
+                upvotes: "989",
+                content: "IT BELONGS IN A MUSEUM"
             },
             {
-                author: "thesituation531",
-                time: "1 day ago",
-                upvotes: "17",
-                content: "If you mean failing as in your code not working, you will have to get used to that. Programmers face failure all the time, usually small things. You just have to be diligent and persistent. Good luck!"
+                author: "Toffeemanstar",
+                time: "21 hr. ago",
+                upvotes: "794",
+                content: "Is that another one in the background?"
             },
             {
-                author: "rafaover",
-                time: "2 days ago",
-                upvotes: "23",
-                content: "If you have this fear, I would start with easier paths and see where it goes, like learning html+CSS. After that maybe searching for a language that fits your demands, and stick to that despite all the outside pressure. You going to learn it, just don't feel bad if sometimes you suffer to solve little things. Take time out (1h or 1day), come back and try again. I'm 42, different reality and maybe past experience in life, but I know you can do it.if you really wants."
-            },
-            {
-                author: "YungDwight",
-                time: "1 day ago",
-                upvotes: "4",
-                content: "This keeps me going when I feel like you do. “Embarrassment is the cost of entry. If you aren’t willing to look like a foolish beginner, you’ll never become a graceful master” Denzel Washington"
+                author: "CBvdb",
+                time: "20 hr. ago",
+                upvotes: "1.3k",
+                content: "I remember hearing about these capstones being covered in precious metals. Is it fair to guess this is one of the many ancient treasures stripped after being stolen?"
             }
         ],
         flair: {
-            title: "Topic",
-            color: "#737373"
+            title: "People",
+            color: "#fc471e"
+        }
+    },
+    {
+        title: "TIL former Boston Red Sox pitcher Hideki Okajima's unique pitching motion was inspired by a character in Yoishi Takashi's Manga Ace! Okajima believed the motion would make him throw harder.",
+        id: "36",
+        type: "text",
+        src: "The wiki doesn't even have a video/gif.",
+        author: "samuraisports37",
+        time: "18 hours ago",
+        subreddit: "todayilearned",
+        upvotes: "846",
+        awards: [
+            "silver"
+        ],
+        comments: [
+            {
+                author: "Jazzbo64",
+                time: "17 hr. ago",
+                upvotes: "34",
+                content: "Gave up a home run on his first pitch in MLB, but after that he was virtually unhittable as a Red Sox."
+            },
+            {
+                author: "samuraisports37",
+                time: "18 hr. ago",
+                upvotes: "97",
+                content: "Misspelled the manga author's name in the title. Should be Yoichi Takahashi. Sorry."
+            },
+            {
+                author: "una_pistola",
+                time: "16 hr. ago",
+                upvotes: "85",
+                content: "He also runs the bases with his arms behind him because it makes him run faster."
+            },
+            {
+                author: "Zhou_Da",
+                time: "3 hr. ago",
+                upvotes: "2",
+                content: "Someone on YT (Because Science) actually tested this one out. Apparently it doesn't work."
+            },
+            {
+                author: "Desperate_Chim_343",
+                time: "9 hr. ago",
+                upvotes: "3",
+                content: "So did it work or not?! Come on now don't make me go google it!"
+            }
+        ],
+        flair: {
+            title: "People",
+            color: "#fc471e"
+        }
+    },
+    {
+        title: "TIL The founder of Sony hired an outspoken critic of their products so they could make better products. 20 years later, he became the president of Sony.",
+        id: "37",
+        type: "text",
+        src: "Reminds me of how Jeff “Tigole” Kaplan used to write angry forum rants criticizing the devs of EverQuest before he was hired by Blizzard to develop World of Warcraft, which supplanted EverQuest as the top MMO. Here’s an example of one of his rants.",
+        author: "types_in_airplane",
+        time: "2 days ago",
+        subreddit: "todayilearned",
+        upvotes: "39.8k",
+        awards: [
+            "wholesome",
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "CruisinJoe22",
+                time: "2 days ago",
+                upvotes: "8.6k",
+                content: "He literally wrote a letter breaking down everything wrong with the Walkman and the execs were so impressed they hired him as a consultant… 10 years later and he’d help turn Sony into the most dominant electronics brand of the 90s."
+            },
+            {
+                author: "xeenexus",
+                time: "2 days ago",
+                upvotes: "197",
+                content: "There's a business axiom I've always believed in. If you're dumb, hire smart people. If you're smart, hire smart people who disagree with you."
+            }
+        ],
+        flair: {
+            title: "Business",
+            color: "#fc471e"
+        }
+    },
+    {
+        title: "TIL the observation of the comet Kohoutek helped to support the dirty snowball hypothesis about the composition of comet nuclei. The comet was a disappointment to the public, however, because early projections for its brightness had been too optimistic.",
+        id: "38",
+        type: "text",
+        src: "Drummer Bill Berry was quoted in the early 1990s as saying that Fables of the Reconstruction sucked.",
+        author: "tidder-wave",
+        time: "1 day ago",
+        subreddit: "todayilearned",
+        upvotes: "378",
+        awards: [
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "Volfie",
+                time: "23 hr. ago",
+                upvotes: "8",
+                content: "But by the time I got to the phone, my discovery had already been reported by Principal Kohoutek... I got back at him, though... him and that little boy of his."
+            },
+            {
+                author: "cutelyaware",
+                time: "1 day ago",
+                upvotes: "16",
+                content: "Yes, it was a bust. Halley's comet even more so. But weirdest for me was when they landed a probe on a comet nucleus. It was a spectacular technical achievement, but we learned the place is just a sticky, smelly, black disgusting mess which strangely made me suddenly not as interested in comets."
+            },
+            {
+                author: "Kohouteky",
+                time: "1 day ago",
+                upvotes: "6",
+                content: "I hate disappointing people."
+            }
+        ],
+        flair: {
+            title: "Science",
+            color: "#fc471e"
+        }
+    },
+    {
+        title: "TIL Asthma is a disease of the lower airways of the lungs that affects between 1 and 5% of cats.",
+        id: "39",
+        type: "text",
+        src: "Does that mean some cats need inhalers?!",
+        author: "PoetLucy",
+        time: "2 days ago",
+        subreddit: "todayilearned",
+        upvotes: "233",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "PoetBakerBuck",
+                time: "2 days ago",
+                upvotes: "20",
+                content: "That's not where I expected this was going"
+            }
+        ],
+        flair: {
+            title: "Science",
+            color: "#fc471e"
+        }
+    },
+    {
+        title: "TIL Asthma is a disease of the lower airways of the lungs that affects between 1 and 5% of cats.",
+        id: "39",
+        type: "text",
+        src: "Does that mean some cats need inhalers?!",
+        author: "PoetLucy",
+        time: "2 days ago",
+        subreddit: "todayilearned",
+        upvotes: "233",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "PoetBakerBuck",
+                time: "2 days ago",
+                upvotes: "20",
+                content: "That's not where I expected this was going"
+            }
+        ],
+        flair: {
+            title: "Science",
+            color: "#fc471e"
         }
     },
 ]
