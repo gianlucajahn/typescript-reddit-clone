@@ -1049,28 +1049,214 @@ const postArray = [
         }
     },
     {
-        title: "Charting the Global Economy: 90 Central Banks Have Increased Borrowing Costs This Year, 10 in the last 2 weeks",
-        id: "24",
-        type: "img",
-        src: "../../resources/images/Communities/finance/24.png",
-        author: "marketGOATS",
-        time: "4 hours ago",
-        subreddit: "finance",
-        upvotes: "1",
+        title: "What are your bug bounties?",
+        id: "25",
+        type: "text",
+        src: "Everyone on our team is slated to look at the query performance bug. For some reason, no one has yet to determine why, after several sprints, our database just seems to sleep for 15 seconds when we want to get a list, but only sometimes and it can't be reproduced on local no matter what we try. Whoever finds the bug will go down in history on the team and probably other people's at the company as well. So what are your bug bounties?",
+        author: "PhantomThiefJoker",
+        time: "2 days ago",
+        subreddit: "programmerhumor",
+        upvotes: "2",
         awards: [
             
         ],
         comments: [
             {
-                author: "ChrisStoneGermany",
-                time: "3 hr. ago",
+                author: "maitreg",
+                time: "2 days ago",
+                upvotes: "3",
+                content: "One of my applications depends on a secondary sql database that runs behind an adjacent system. Every day at 2:05 PM that database becomes unresponsive for about 9 minutes, and no one knows why. There are no scheduled sql jobs, app jobs, or report dumps. The main application shows no unusual activity in the logs, and when I watch it with SQL Profiler, nothing shows up. Then after 9 minutes it returns to normal."
+            },
+            {
+                author: "GammaGargoyle",
+                time: "2 days ago",
+                upvotes: "4",
+                content: "I will deliver 300 gold doubloons to the first scallywag that brings me the head of clippy"
+            },
+            {
+                author: "OptionalMind",
+                time: "2 days ago",
                 upvotes: "2",
-                content: "The blue countries are those who fear the crash most"
+                content: "Powershell flips a $false to $true. Only this one variable. Declared and processed the same way as all the others who work fine."
+            },
+            {
+                author: "sfboots",
+                time: "2 days ago",
+                upvotes: "3",
+                content: "How is this humor? Your team needs to look at database indexes and of the db stats both in db and os. It can be tedious p. It may be an operation before the slowdown that ends up flushing the cache"
+            },
+            {
+                author: "pakidara",
+                time: "2 days ago",
+                upvotes: "1",
+                content: "There is a program that runs in response to another program running and we cannot figure out how. There are no SQL triggers that mention the program. No windows scheduler events. No job scheduler entries in IBMi. No mention of the 'triggered' program well . . . anywhere. As far as IBMi is concerned, it is flagged as orphaned. The triggering program is 3rd party so we couldn't modify it if we wanted to."
             }
         ],
         flair: {
-            title: "News",
-            color: "#0d7680"
+            title: "Meme",
+            color: "#737373"
+        }
+    },
+    {
+        title: "Ouch!",
+        id: "26",
+        type: "img",
+        src: "../../resources/images/Communities/programmerhumor/26.png",
+        author: "CrankyBear",
+        time: "3 days ago",
+        subreddit: "programmerhumor",
+        upvotes: "416",
+        awards: [
+            "gold"
+        ],
+        comments: [
+            {
+                author: "ManyFails1Win",
+                time: "2 days ago",
+                upvotes: "30",
+                content: "There are few Linux experts around. don't tell the Linux experts that 😶"
+            },
+            {
+                author: "the_man_with_none",
+                time: "3 days ago",
+                upvotes: "25",
+                content: "In mother Russia the processes SIGKILL you"
+            },
+            {
+                author: "kaloschroma",
+                time: "2 days ago",
+                upvotes: "3",
+                content: "I love Tarah. Had a beer with her once and drew her and gave that to her! She's awesome"
+            },
+            {
+                author: "Para0234",
+                time: "2 days ago",
+                upvotes: "3",
+                content: "Understandable, it's harder to throw someone off a linux"
+            }
+        ],
+        flair: {
+            title: "Other",
+            color: "#737373"
+        }
+    },
+    {
+        title: "Color themes",
+        id: "27",
+        type: "text",
+        src: "I’m especially drawn to customizing the aesthetics of my coding environment exactly when facing a shit ton of actual work. Realized that’s precisely the same phenomenon as suddenly having all the energy in the world to squeaky-clean the apartment when you should be studying for an exam. Next time you feel like tweaking your color theme; trying out a new terminal or IDE for some insignificant minor benefit; etc; I invite you to ask yourself: am I really just stressed out and what would be an actually constructive next step? 😏",
+        author: "dudelsson",
+        time: "5 days ago",
+        subreddit: "programmerhumor",
+        upvotes: "11",
+        awards: [
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "BinkanSalaryman",
+                time: "5 days ago",
+                upvotes: "5",
+                content: "It's called procrastination"
+            },
+            {
+                author: "ItsZayveeir",
+                time: "5 days ago",
+                upvotes: "3",
+                content: "I am the same way lol. It actually helps me de-stress though and I still get things done"
+            },
+            {
+                author: "sokeTek",
+                time: "4 days ago",
+                upvotes: "3",
+                content: "Perhaps obvious for most, but a nice hypothesis I think: we are all afraid to fail (get thrown out of the tribe and starve to death etc), and when faced with situations where the possibility to fail is imminent, we subconsciously seek tasks where we trust we won’t fail. Clean the house, brush the teeth etc"
+            }
+        ],
+        flair: {
+            title: "Other",
+            color: "#737373"
+        }
+    },
+    {
+        title: "Its a feature, not a bug...",
+        id: "28",
+        type: "img",
+        src: "../../resources/images/Communities/programmerhumor/28.png",
+        author: "iBudder3",
+        time: "7 hours ago",
+        subreddit: "programmerhumor",
+        upvotes: "2.6k",
+        awards: [
+            "gold",
+            "silver"
+        ],
+        comments: [
+            {
+                author: "Business-Ad-274",
+                time: "6 hr. ago",
+                upvotes: "96",
+                content: "Yep it's true"
+            },
+            {
+                author: "hrnyirawan",
+                time: "2 hr. ago",
+                upvotes: "61",
+                content: "Well, those are their intended use, for indies at least. Its a problem when AAA games do it, and the problem is more on the fact that they're selling it as a complete game. However, lots of games are quite enjoyable even as early access. Vampire Survivors is pretty fun"
+            }
+        ],
+        flair: {
+            title: "Meme",
+            color: "#737373"
+        }
+    },
+    {
+        title: "Its a feature, not a bug...",
+        id: "29",
+        type: "img",
+        src: "../../resources/images/Communities/programmerhumor/29.png",
+        author: "Shaggy_Pop",
+        time: "4 hours ago",
+        subreddit: "programmerhumor",
+        upvotes: "399",
+        awards: [
+            "wholesome",
+        ],
+        comments: [
+            {
+                author: "FVMAzalea",
+                time: "53 min. ago",
+                upvotes: "-2",
+                content: "This is why you use a language that minimizes those… like Rust 🦀"
+            }
+        ],
+        flair: {
+            title: "Meme",
+            color: "#737373"
+        }
+    },
+    {
+        title: "Its a feature, not a bug...",
+        id: "29",
+        type: "img",
+        src: "../../resources/images/Communities/programmerhumor/29.png",
+        author: "Shaggy_Pop",
+        time: "4 hours ago",
+        subreddit: "programmerhumor",
+        upvotes: "399",
+        awards: [
+            "wholesome",
+        ],
+        comments: [
+            {
+                author: "FVMAzalea",
+                time: "53 min. ago",
+                upvotes: "-2",
+                content: "This is why you use a language that minimizes those… like Rust 🦀"
+            }
+        ],
+        flair: {
+            title: "Meme",
+            color: "#737373"
         }
     },
 ]
