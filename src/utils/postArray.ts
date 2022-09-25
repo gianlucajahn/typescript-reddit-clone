@@ -1819,34 +1819,183 @@ const postArray = [
         }
     },
     {
-        title: "So you're telling me there's a chance",
+        title: "Some sketches I did this week while visiting SLS.",
         id: "45",
         type: "img",
-        src: "../../resources/images/Communities/wallstreetbets/44.png",
-        author: "petescott",
-        time: "1 day ago",
+        src: "../../resources/images/Communities/nasa/45.png",
+        author: "amdgirl",
+        time: "5 hours ago",
         subreddit: "nasa",
-        upvotes: "466",
+        upvotes: "502",
         awards: [
-            
+            "wholesome"
         ],
         comments: [
             {
-                author: "PrudentEvening",
-                time: "1 day ago",
-                upvotes: "37",
-                content: "I think I will be able to afford this house"
+                author: "Royal-Author-669",
+                time: "4 hr. ago",
+                upvotes: "8",
+                content: "Nice drawings. Thank you for sharing."
             },
             {
-                author: "AlesantroCorticeli",
-                time: "1 day ago",
-                upvotes: "5",
-                content: "Its been 2 years since i was able to actually withdraw profits from my broker account and use it in the world... Good times"
+                author: "404_Gordon_Not_Found",
+                time: "4 hr. ago",
+                upvotes: "6",
+                content: "Love the drawings, serene and dreamy"
+            },
+            {
+                author: "Wackmajor",
+                time: "3 hr. ago",
+                upvotes: "2",
+                content: "They look great! Which scetchbook is this?"
             }
         ],
         flair: {
-            title: "Meme",
-            color: "#014980"
+            title: "Creativity",
+            color: "#ff4500"
+        }
+    },
+    {
+        title: "Completing the Collection as a Gift (ISO High (printable) quality ISS picture)",
+        id: "46",
+        type: "text",
+        src: "Looking for a high quality photo of the ISS to print and frame for my partner for Christmas. It will be hanging above his Lego version of the ISS. I'm not great at understanding what makes a picture printable so your help is greatly appreciated!",
+        author: "flockofbeachturkeys",
+        time: "2 days ago",
+        subreddit: "nasa",
+        upvotes: "4",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "reddit445",
+                time: "2 days ago",
+                upvotes: "3",
+                content: "printability is going to start with the highest resolution image you can find... and you might not be able to find current pictures since the good ones were taken from Shuttles (which we haven't had for 10 years)."
+            },
+            {
+                author: "StupidDIYQs",
+                time: "16 hr. ago",
+                upvotes: "1",
+                content: "Remember, NASA is a government agency and it's works are public domain. What makes an image printable is high dpi and resolution - depends on how big you want to print."
+            }
+        ],
+        flair: {
+            title: "Self",
+            color: "#349e48"
+        }
+    },
+    {
+        title: "Completing the Collection as a Gift (ISO High (printable) quality ISS picture)",
+        id: "47",
+        type: "img",
+        src: "../../resources/images/Communities/nasa/47.png",
+        author: "nasa",
+        time: "4 days ago",
+        subreddit: "nasa",
+        upvotes: "359",
+        awards: [
+            "gold",
+            "silver"
+        ],
+        comments: [
+            {
+                author: "nasa",
+                time: "4 days ago",
+                upvotes: "8",
+                content: "160,000 light-years from Earth, N159 is full of newborn stars, which generate intense ultraviolet light that causes nearby hydrogen gas to glow. This image was captured by Hubble's Advanced Camera for Surveys, the same camera that imaged the Hubble Ultra Deep Field and many other cosmic wonders."
+            },
+            {
+                author: "THE_STOCKINGHATHERO",
+                time: "4 days ago",
+                upvotes: "5",
+                content: "When can we see the James Webb version?"
+            }
+        ],
+        flair: {
+            title: "NASA",
+            color: "#1a5dad"
+        }
+    },
+    {
+        title: "Ames contract tech jobs?",
+        id: "48",
+        type: "text",
+        src: "I moved to the bay area and would love to get a job working for the Ames research center, even if it’s only an external contract. I’m in the information technology field, can anyone recommend me contractors to look into for tech jobs at Ames?",
+        author: "brain____dead",
+        time: "5 days ago",
+        subreddit: "nasa",
+        upvotes: "2",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "AutoModerator",
+                time: "5 days ago",
+                upvotes: "1",
+                content: "This seems to be a post about working at NASA. Please review our FAQs about working at NASA as you may find the answer to your question there, including information about working for NASA without being a US citizen. You might want to check out some other recent posts on this topic by clicking on the Working@NASA tag. For intern opportunities and requirements, check out their intern website. For International Internships check out the NASA I2 program."
+            },
+            {
+                author: "sevgonlernassau",
+                time: "4 days ago",
+                upvotes: "1",
+                content: "Have you checked out the Ames Contractor Council yet?"
+            }
+        ],
+        flair: {
+            title: "Working@NASA",
+            color: "#0079d3"
+        }
+    },
+    {
+        title: "Can anyone please explain to me what happens to the rocket when its boosters detach, and why does it create a fiery shockwave like air when it separates. (Just curious and sorry for my bad English)",
+        id: "49",
+        type: "img",
+        src: "../../resources/images/Communities/nasa/49.png",
+        author: "rBasiCg",
+        time: "7 days ago",
+        subreddit: "nasa",
+        upvotes: "221",
+        awards: [
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "Jump_Like_A_Willys",
+                time: "6 days ago",
+                upvotes: "19",
+                content: "I'm not an expert, but I would guess it has something to do with the boosters suddenly disturbing the aerodynamics of the system by moving outside the slipstream when they are jettisoned."
+            },
+            {
+                author: "Outrageous_Zebra_221",
+                time: "6 days ago",
+                upvotes: "16",
+                content: "The stills aren't really illustrating exactly what aspect of this you are asking about. There are obviously a lot of forces at work here, the shuttle is moving at a pretty good clip by the time this happens. The actual separation is (or at least was I may be a little out of date here) initiated by explosive bolts that push the boosters away from the main body of the shuttle after the vector thrusts are zero'ed out to make sure they peel away as they do. Obviously it would be really bad if the booster impacted the shuttle at this point. I don't know if you're talking about the NSD/explosive bolts firing, or the way the leading edge of what is basically a visible pressure wave at the front of the craft diverges into three separate as the cones split apart."
+            },
+            {
+                author: "Cuda_BreakAway",
+                time: "6 days ago",
+                upvotes: "6",
+                content: "There are separation rockets that fire when the boosters are separated. Those rockets are located at the top cone of the srb’s. They ensure the solid rocket boosters steer clear of the shuttle."
+            },
+            {
+                author: "shmeebaloney",
+                time: "6 days ago",
+                upvotes: "2",
+                content: "when the solid rockets get jettisoned there are small rocket motors in the nose of the SRB and aft of it end helping push the solid rocket boosters away from the vehicle stack."
+            },
+            {
+                author: "black_rhombus",
+                time: "5 days ago",
+                upvotes: "1",
+                content: "The booster is detached by explosive bolts."
+            }
+        ],
+        flair: {
+            title: "Question",
+            color: "#cd3700"
         }
     },
 ]
