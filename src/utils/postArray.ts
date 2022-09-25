@@ -1610,28 +1610,243 @@ const postArray = [
         }
     },
     {
-        title: "TIL Asthma is a disease of the lower airways of the lungs that affects between 1 and 5% of cats.",
-        id: "39",
-        type: "text",
-        src: "Does that mean some cats need inhalers?!",
-        author: "PoetLucy",
-        time: "2 days ago",
-        subreddit: "todayilearned",
-        upvotes: "233",
+        title: "ALL-IN BBBY. I said it before. I am not selling until I land ON the moon (Part 2)",
+        id: "40",
+        type: "img",
+        src: "../../resources/images/Communities/wallstreetbets/40.png",
+        author: "SparePepper7250",
+        time: "10 hours ago",
+        subreddit: "wallstreetbets",
+        upvotes: "1.5k",
         awards: [
-
+            "trinity",
+            "platinum",
+            "gold",
+            "silver",
+            "helpful"
         ],
         comments: [
             {
-                author: "PoetBakerBuck",
-                time: "2 days ago",
-                upvotes: "20",
-                content: "That's not where I expected this was going"
+                author: "usernamesareclass",
+                time: "10 hr. ago",
+                upvotes: "1.1k",
+                content: "Even an unsuccessful rocket launch is spectacular"
+            },
+            {
+                author: "MyNotYours",
+                time: "10 hr. ago",
+                upvotes: "382",
+                content: "You know what they say.. always shoot for the moon. Even if you miss, you end up in your neighbor's dumpster."
+            },
+            {
+                author: "InfernalGout",
+                time: "5 hr. ago",
+                upvotes: "70",
+                content: "Oh man he's picking up the pipe again...."
+            },
+            {
+                author: "pattiemac",
+                time: "4 hr. ago",
+                upvotes: "156",
+                content: "Why do people do this? Seriously? The entire market is coming down and you think a failing home retailer is the answer?"
+            },
+            {
+                author: "NervousGuy",
+                time: "10 hr. ago",
+                upvotes: "263",
+                content: "They just need a catalyst, like buying a copper mine or selling NFT shower rings"
+            },
+            {
+                author: "GeneralA01",
+                time: "7 hr. ago",
+                upvotes: "29",
+                content: "Good luck, man."
             }
         ],
         flair: {
-            title: "Science",
-            color: "#fc471e"
+            title: "YOLO",
+            color: "#0392cf"
+        }
+    },
+    {
+        title: "Stocks and options trades to watch for September 26 2022 as major Hurricane Ian approaches Florida 🌀",
+        id: "41",
+        type: "text",
+        src: "I am watching the following stock $GNRC Generac that has 50% upside from a major analyst. Upgraded from a buy to a strong buy on Friday and one of the few that were standing green in the deep red market sell off. Heavily discounted! Beating every EPS quarter!!!! My guess is everyone will go crazy and run and buy a generator when power goes out and the companies sales increase on spikes of bad weather. Expect this to sky rocket next week! Loading up calls! 🚀",
+        author: "DeepfkingValuesDad",
+        time: "9 hours ago",
+        subreddit: "wallstreetbets",
+        upvotes: "20",
+        awards: [
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "DeepfkingValuesDad",
+                time: "9 hr. ago",
+                upvotes: "4",
+                content: "Those December otm calls $300 are not too shabby. This trend has worked for me for every major hurricane that has hit the US. Wallstreet sold it off due to market meltdown. I see some major money to be made here!"
+            },
+            {
+                author: "FritzKreig",
+                time: "9 hr. ago",
+                upvotes: "3",
+                content: "I hadn't realized how much $GNRC had come back to earth, at a 20 PE this might even be chill for shares. I'll check out the chains, but I bet this is all priced into calls in the short term. Edit: big OTM calls look like fun to me here!"
+            },
+            {
+                author: "jetah",
+                time: "9 hr. ago",
+                upvotes: "2",
+                content: "Blue tarps, who the fuck makes those because every house from the tip to base will have at least 1 blue condom on it!"
+            }
+        ],
+        flair: {
+            title: "DD",
+            color: "#365b8c"
+        }
+    },
+    {
+        title: "It’s treason then",
+        id: "42",
+        type: "img",
+        src: "../../resources/images/Communities/wallstreetbets/42.png",
+        author: "keenfeed",
+        time: "2 months ago",
+        subreddit: "wallstreetbets",
+        upvotes: "3.1k",
+        awards: [
+            "gold",
+            "silver"
+        ],
+        comments: [
+            {
+                author: "BunnyPerson",
+                time: "2 months ago",
+                upvotes: "531",
+                content: "I sold out of some long term stocks just to buy a few more."
+            },
+            {
+                author: "ErmirI",
+                time: "2 months",
+                upvotes: "2.3k",
+                content: "The real stonks are the friends we are making along the way."
+            },
+            {
+                author: "TheGenericLee",
+                time: "2 months ago",
+                upvotes: "1.4k",
+                content: "Every share counts. Every dollar you hold from them counts no matter how small"
+            }
+        ],
+        flair: {
+            title: "Meme",
+            color: "#014980"
+        }
+    },
+    {
+        title: "Used some of my GME tendies to buy Nintendo Switches from Gamestop, then donated them to a Children's Hospital",
+        id: "43",
+        type: "text",
+        src: "Got featured on the local news and brought glory to WSB. Let's go, fellow idiots. I am very proud of all of you. Let's fly to the moon together.",
+        author: "mpwrd",
+        time: "3 days ago",
+        subreddit: "wallstreetbets",
+        upvotes: "843",
+        awards: [
+            "platinum",
+            "gold"
+        ],
+        comments: [
+            {
+                author: "Texas_Persian",
+                time: "3 days ago",
+                upvotes: "510",
+                content: "Now buy more $GME."
+            },
+            {
+                author: "SpaceboysUsername",
+                time: "2 days ago",
+                upvotes: "381",
+                content: "This story is glorifying selling your GME."
+            },
+            {
+                author: "Drump21",
+                time: "2 days ago",
+                upvotes: "140",
+                content: "Hold 💎🤲. Diamond Hands, BROTHER!"
+            },
+            {
+                author: "uncondolencednole91",
+                time: "1 day ago",
+                upvotes: "69",
+                content: "I only had money for 3 shares am I supporting the cause?"
+            }
+        ],
+        flair: {
+            title: "News",
+            color: "#ffb000"
+        }
+    },
+    {
+        title: "So you're telling me there's a chance",
+        id: "44",
+        type: "img",
+        src: "../../resources/images/Communities/wallstreetbets/44.png",
+        author: "petescott",
+        time: "1 day ago",
+        subreddit: "wallstreetbets",
+        upvotes: "466",
+        awards: [
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "PrudentEvening",
+                time: "1 day ago",
+                upvotes: "37",
+                content: "I think I will be able to afford this house"
+            },
+            {
+                author: "AlesantroCorticeli",
+                time: "1 day ago",
+                upvotes: "5",
+                content: "Its been 2 years since i was able to actually withdraw profits from my broker account and use it in the world... Good times"
+            }
+        ],
+        flair: {
+            title: "Meme",
+            color: "#014980"
+        }
+    },
+    {
+        title: "So you're telling me there's a chance",
+        id: "45",
+        type: "img",
+        src: "../../resources/images/Communities/wallstreetbets/44.png",
+        author: "petescott",
+        time: "1 day ago",
+        subreddit: "nasa",
+        upvotes: "466",
+        awards: [
+            
+        ],
+        comments: [
+            {
+                author: "PrudentEvening",
+                time: "1 day ago",
+                upvotes: "37",
+                content: "I think I will be able to afford this house"
+            },
+            {
+                author: "AlesantroCorticeli",
+                time: "1 day ago",
+                upvotes: "5",
+                content: "Its been 2 years since i was able to actually withdraw profits from my broker account and use it in the world... Good times"
+            }
+        ],
+        flair: {
+            title: "Meme",
+            color: "#014980"
         }
     },
 ]
