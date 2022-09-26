@@ -2202,6 +2202,221 @@ const postArray = [
             color: "none"
         }
     },
+    {
+        title: "Gun run can be fun, but most of the matches look like this.",
+        id: "55",
+        type: "img",
+        src: "../../resources/images/Communities/apexlegends/55.png",
+        author: "kanakull",
+        time: "4 hours ago",
+        subreddit: "apexlegends",
+        upvotes: "282",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "LetsGetHivern",
+                time: "2 hr. ago",
+                upvotes: "80",
+                content: "I rarely have gun run games like this. More often it’s one whole team that leaves"
+            },
+            {
+                author: "sinned82",
+                time: "1 hr. ago",
+                upvotes: "9",
+                content: "Never happened to me. Played at least 20-30 rounds lol"
+            },
+            {
+                author: "Joe_Dirte9",
+                time: "2 hr. ago",
+                upvotes: "23",
+                content: "Honestly, I rarely run into this. Maybe it depends on the platform you're only, but I've been playing this mode a lot and I've only had maybe a handful of games like this."
+            },
+            {
+                author: "Tired_JoyBoy",
+                time: "2 hr. ago",
+                upvotes: "1",
+                content: "Gun run needed to be a Solo game mode because when the TTVSweatLord Wraiths aren’t clapping the lobby like their favorite streamers they’ll just leave while calling you out for their shortcomings. At least if it was completely solo their absence won’t be noticed or missed."
+            },
+        ],
+        flair: {
+            title: "Discussion",
+            color: "#e58c0e"
+        }
+    },
+    {
+        title: "Need advice to get better in general",
+        id: "56",
+        type: "text",
+        src: "Apex is my first shooter game, and I've been playing for about a year. But i'm not seeing much improvement, and my K/D is 0.48 this season. 0.37 overall. I want to improve more, but just don't seem to get better no matter how much I do 1v1s, ranked, arenas, BR, gun run, whatever. It just doesn't seem to help, does anybody have advice?",
+        author: "Garfield_theThird",
+        time: "2 hours ago",
+        subreddit: "apexlegends",
+        upvotes: "8",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "coldmexicantea",
+                time: "2 hr. ago",
+                upvotes: "1",
+                content: "What platform and what input do you play on?"
+            },
+            {
+                author: "_goodpraxis",
+                time: "36 min. ago",
+                upvotes: "2",
+                content: "Apex University could be of great help to you."
+            }
+        ],
+        flair: {
+            title: "Discussion",
+            color: "#e58c0e"
+        }
+    },
+    {
+        title: "Need advice to get better in general",
+        id: "57",
+        type: "img",
+        src: "../../resources/images/Communities/apexlegends/55.png",
+        author: "je36yt",
+        time: "4 days ago",
+        subreddit: "apexlegends",
+        upvotes: "8.4k",
+        awards: [
+            "silver",
+            "wholesome",
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "Iamyous3f",
+                time: "4 days ago",
+                upvotes: "679",
+                content: "I hope they add some parts of Olympis to this mode"
+            },
+            {
+                author: "ElectroFishy56",
+                time: "4 days ago",
+                upvotes: "462",
+                content: "Its a fun gamemode, but I keep getting my ass wooped"
+            },
+            {
+                author: "darksora2323",
+                time: "4 days ago",
+                upvotes: "943",
+                content: "With the new cod dropping. It would be in their best interest to have a permanent arcade mode. Let go of the LTM & have arcade rotate through different game modes. Gun run, control etc"
+            },
+            {
+                author: "LeeMBoro",
+                time: "4 days ago",
+                upvotes: "669",
+                content: "It is quite fun I think they need a few more maps like gardens and oasis mayby hydroponics and skyhook too"
+            },
+            {
+                author: "MarcLo",
+                time: "3 days ago",
+                upvotes: "113",
+                content: "Yeah. I'm hoping they have more defensive areas on the maps too cos hardly any defensive legends are used so that would be nice"
+            }
+        ],
+        flair: {
+            title: "Dev Reply Inside!",
+            color: "#e58c0e"
+        }
+    },
+    {
+        title: "Gun Run is so much fun. My only gripe is that the Kraber and sentinel are not present.. Thoughts?",
+        id: "58",
+        type: "img",
+        src: "../../resources/images/Communities/apexlegends/58.png",
+        author: "glatadurgrutur",
+        time: "2 days ago",
+        subreddit: "apexlegends",
+        upvotes: "2.3k",
+        awards: [
+            "silver"
+        ],
+        comments: [
+            {
+                author: "Mountain_-_king",
+                time: "2 days ago",
+                upvotes: "798",
+                content: "The Sentinel and the Bocek are not in cause there was a bug with dead eye tempo in the mode, and they couldnt fix it before launch. Source: FajitaSteve, the dev"
+            },
+            {
+                author: "greeneggs93",
+                time: "2 days ago",
+                upvotes: "236",
+                content: "I miss the Bocek."
+            },
+            {
+                author: "LeeMBoro",
+                time: "2 days ago",
+                upvotes: "232",
+                content: "The mastiff and rampage are so I don't see why not the kraber bow or senti"
+            }
+        ],
+        flair: {
+            title: "Discussion",
+            color: "#e58c0e"
+        }
+    },
+    {
+        title: "Still think this should be a thing in apex",
+        id: "59",
+        type: "img",
+        src: "../../resources/images/Communities/apexlegends/59.png",
+        author: "SnaxelZ",
+        time: "2 years ago",
+        subreddit: "apexlegends",
+        upvotes: "46.4k",
+        awards: [
+            "platinum",
+            "gold",
+            "silver",
+            "helpful",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "polarbearik",
+                time: "2 yr. ago",
+                upvotes: "355",
+                content: "Honestly they don’t care, they’ll keep leaving regardless"
+            },
+            {
+                author: "Mescman",
+                time: "2 yr. ago",
+                upvotes: "109",
+                content: "The leavers dont care AT ALL if they missed a victory, so that in mind this is not as clever as people think."
+            },
+            {
+                author: "BodieBroadcasts",
+                time: "2 yr. ago",
+                upvotes: "19",
+                content: "this happens in CSGO except you dont get a message. I remember dropping a 40 bomb in csgo and my team straight up vote kicked me on the last round of a match I was carrying. I was super pissed but next time I logged in, I had ranked up and received the win for that game"
+            },
+            {
+                author: "PeripheralAddition",
+                time: "2 yr. ago",
+                upvotes: "156",
+                content: "Wraith mains who left 7 games in 18 minutes: DO YOU HAVE ANY IDEA HOW LITTLE THAT NARROWS IT DOWN"
+            },
+            {
+                author: "LazySans",
+                time: "2 yr. ago",
+                upvotes: "189",
+                content: "Good idea, certainly would be a lesson to few teammates I had..."
+            },
+        ],
+        flair: {
+            title: "News",
+            color: "#e58c0e"
+        }
+    },
 ]
 
 export default postArray;
