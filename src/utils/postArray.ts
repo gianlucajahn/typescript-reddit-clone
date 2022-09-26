@@ -1998,6 +1998,210 @@ const postArray = [
             color: "#cd3700"
         }
     },
+    {
+        title: "So many people recommended Piranesi to me",
+        id: "50",
+        type: "text",
+        src: "It’s almost midnight where I live. From the moment I picked up the book 5 hours ago to now I feel like half an hour has passed. I took three sips from my glass of wine and then set it down - forgotten. I went in blind. I thought, I‘d have a relaxing sunday evening after a hell of a week… oh boy did I not know what I was getting myself into. About halfway in, I began to understand glimpses of the bigger picture and even though I was intrigued from the very first sentence on, now my curiosity was burning. I HAD TO KNOW what was going on. What and where is the house? Who is the narrator? Every page that half satisfied my hunger for more also left me wanting, and so I read on. And on and on and on until I was done. My husband has gone to sleep two hours ago, and I didn’t manage more than a „yes me too“ when he went to bed and told me he loved me, not even looking up from the pages. Sorry, love, for the gross neglectance. And sorry my beautiful pinot noir that I was so looking forward to and then simply forgot. You both deserved better. But I needed to know. I had to continue. There was no stopping this train. I thank you all for asking me to read this book. And if you haven‘t: I kept it spoiler-free on purpose, because please read this astonishing work of art!",
+        author: "onelass",
+        time: "19 hours ago",
+        subreddit: "books",
+        upvotes: "915",
+        awards: [
+            "gold",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "Captain-Marvel-92",
+                time: "19 hr. ago",
+                upvotes: "145",
+                content: "It was such a wild ride. I was eternally, increasingly confused and exhilarated at the same time 😅 Highly recommend! For such a short book, it really packs a punch."
+            },
+            {
+                author: "MiniMonkey5041",
+                time: "18 hr. ago",
+                upvotes: "97",
+                content: "Piranesi was the first book in ages that truly had me hooked. Think I finished it in one sitting. Absolutely beautifully written and stayed with me a long time afterwards. Even just thinking about it makes me want to go and read it again!"
+            },
+            {
+                author: "jefrye",
+                time: "18 hr. ago",
+                upvotes: "35",
+                content: "Ah, I just finished rereading this—one of my favorite novels. Certainly one of the most unique things I've read. What may impress me the most is Clarke's absolute mastery of tone: Piranesi's voice (especially when compared to the Other and the other writings he reads) is exquisitely controlled and nuanced. A masterpiece."
+            },
+            {
+                author: "PrettyInWeed",
+                time: "19 hr. ago",
+                upvotes: "12",
+                content: "I couldn’t put this down and finished it in like a day too. This is my only 5 star I’ve read in awhile."
+            }
+        ],
+        flair: {
+            title: "none",
+            color: "none"
+        }
+    },
+    {
+        title: "East of Eden - John Steinbeck - Don't let the Biblical references in the story turn you away.",
+        id: "51",
+        type: "text",
+        src: "It is difficult to describe a story as heartfelt as East of Eden. It is utterly absorbing and completely breathtaking, in depth and scope. Steinbeck has a divine gift for finding the beautiful within the simple. Perhaps matched only by his ability to make the complexity of human emotions easily accessible.",
+        author: "SpecialExamination41",
+        time: "22 hours ago",
+        subreddit: "books",
+        upvotes: "808",
+        awards: [
+            "helpful",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "Thomasinarina",
+                time: "21 hr. ago",
+                upvotes: "271",
+                content: "To me this is by far Steinbeck’s best book. I absolutely loved it. As others have said, it also contains the most realistic depiction of a sociopath that I have ever come across."
+            },
+            {
+                author: "LorenaBobbedIt",
+                time: "20 hr. ago",
+                upvotes: "69",
+                content: "I’m a big Steinbeck fan and I thought the bible references were intriguing, not off-putting, even though I am not religious. There are about three things about the book that interest me: First, what I find so odd about this one is that apparently he thought it was his magnum opus, even though he’d written The Grapes of Wrath 13 years earlier, to widespread acclaim. I don’t think this one rises to that standard, but what could? Second, the way the book talks about the sex industry— it figures prominently, and I guess I’m just surprised that it was published at all by such a famous author, since a large portion of the U.S. must have looked at it as simply a dirty book. I guess when you’re John Steinbeck you can publish whatever you want. The last surprise for me was that this book contains the first fictional representation I know about of a “sociopath“— the book never uses that term— somebody utterly incapable of empathizing with other people."
+            },
+            {
+                author: "zootedzillenial",
+                time: "14 hr. ago",
+                upvotes: "11",
+                content: "One of my favorite novels. High time I read it again, thanks for the reminder ☀️"
+            }
+        ],
+        flair: {
+            title: "none",
+            color: "none"
+        }
+    },
+    {
+        title: "Just finished reading 'The book thief'.",
+        id: "52",
+        type: "text",
+        src: "I absolutely loved every chapter of this book. Max is my favourite character. Really really loved every single chapter of this book. I'm a hard S.O.B but it nearly made me shed a tear. I saw it recommended here and thought the concept of the book was really good. Death narrating the book was something brilliant. It's a solid 10/10",
+        author: "sardineflavouredass",
+        time: "1 day ago",
+        subreddit: "books",
+        upvotes: "339",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "DanelleDee",
+                time: "1 day ago",
+                upvotes: "76",
+                content: "I read this in Cuba on vacation. Ugly crying on the beach over a mojito and a YA novel is my idea of a good time, apparently."
+            },
+            {
+                author: "mrssymea",
+                time: "1 day ago",
+                upvotes: "51",
+                content: "I am a school librarian and subbing at a new school for a few weeks. Because they didn’t know me, none of the teachers brought their classes to me so I had a lot of free time and a lot of maintenance projects to work on so I put on this audiobook and listened while I did the job."
+            },
+            {
+                author: "agajabigaba",
+                time: "1 day ago",
+                upvotes: "26",
+                content: "It’s an excellent book and I think it being consistently classified as YA does it a disservice."
+            },
+            {
+                author: "Particular_ad_2534",
+                time: "1 day ago",
+                upvotes: "20",
+                content: "The messenger is another great novel of his. Both books had me tearing up"
+            },
+            {
+                author: "GeneralHumanBeing",
+                time: "1 day ago",
+                upvotes: "17",
+                content: "It nearly made you shed a tear?? Don't lie, you sobbed like the rest of us."
+            }
+        ],
+        flair: {
+            title: "none",
+            color: "none"
+        }
+    },
+    {
+        title: "Owner of an Indie Bookstore here: I’m crying tears of joy over peoples response to Amazon Prime Days.",
+        id: "53",
+        type: "text",
+        src: "I own a small independent bookstore and cafe in a rural yet tourist destination town and I am so blown away by how many people are coming in and picking up books from a small indie like me and explicitly mentioning that they bought the extra titles to share with friends/libraries/teachers to support us during Amazon prime days. Margins are so slim on books it is so hard to stay afloat and positive during these times so I just want to say thank you!!! If you can’t make it out to a local indie in person please use bookshop.org instead.",
+        author: "Budsey",
+        time: "2 months ago",
+        subreddit: "books",
+        upvotes: "24.2k",
+        awards: [
+            "platinum",
+            "gold",
+            "silver",
+            "helpful",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "Space-nudibranch",
+                time: "2 mo. ago",
+                upvotes: "5.5k",
+                content: "I'm moving from a 3 bedroom house into a one room studio right now, and have six hundred-something books that I thought I would keep forever, but am now having to get rid of in a hurry. I was planning on dropping them off at a thrift store, but thanks to this post I googled, and found out that I have a local bookstore owned by two little old ladies who also volunteer at the local library. I'm going to drop all these books off to them tomorrow."
+            },
+            {
+                author: "realwitchboy335",
+                time: "2 mo. ago",
+                upvotes: "315",
+                content: "Maybe it's because my store is online only but I haven't seen any uptick in sales this month. In fact I just got my first sale of the month yesterday. Glad you're having success! Hopefully it keeps up!"
+            },
+            {
+                author: "stvbeev",
+                time: "2 mo. ago",
+                upvotes: "133",
+                content: "I need to know how in god's name do you sell enough books to make a profit? My local bookstore sells literally anything for <$10 and I'm trying to imagine a future where I can open a bookstore and actually make SOME money (ie stay out of poverty, not be rich)."
+            }
+        ],
+        flair: {
+            title: "none",
+            color: "none"
+        }
+    },
+    {
+        title: "Unpopular opinion: if it’s your own copy of a book I don’t get why dog-earing is such a big deal",
+        id: "54",
+        type: "text",
+        src: "I get it if it’s a library copy or you’re borrowing a copy from someone, that’s just basic respect of others property. But I’ve had people watch me dog-ear my own book and try and like lecture me on the fact that it’s “wrong” to do that. I get if you don’t want to dog-ear your own books but I’m kind of getting tired of this attitude that books are sacred or something and to do any “harm” to them is a terrible action. I like dog-earring my books, I like writing in my books, generally as long as the text of the book is readable I don’t care what condition it’s in.",
+        author: "OptimalMongoose2",
+        time: "3 days ago",
+        subreddit: "books",
+        upvotes: "448",
+        awards: [
+            "silver",
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "Mimiques",
+                time: "2 days ago",
+                upvotes: "47",
+                content: "You can have sex with your books for all I care"
+            },
+            {
+                author: "TheBigDuchess",
+                time: "3 days ago",
+                upvotes: "387",
+                content: "I love having physical copies of the books I like the most. Especially vintage editions or nice hardcovers. But I'm also poor. So I operate on the assumption that the book I have is the book I'll own for the rest of my life. So I take care of em."
+            }
+        ],
+        flair: {
+            title: "none",
+            color: "none"
+        }
+    },
 ]
 
 export default postArray;
