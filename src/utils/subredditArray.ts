@@ -1814,6 +1814,10 @@ const subredditArray = [
                 color: "#ff4500"
             },
             {
+                title: "Baseball",
+                color: "#ff4500"
+            },
+            {
                 title: "Cricket",
                 color: "#ff4500"
             },

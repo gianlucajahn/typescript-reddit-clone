@@ -3030,6 +3030,197 @@ const postArray = [
             color: "#8d001a"
         }
     },
+    {
+        title: "The NFL is replacing the Pro Bowl with weeklong skills competitions and a flag football game, The Associated Press has learned.",
+        id: "75",
+        type: "text",
+        src: "What do you guys think? Do you like this change or would you have preferred it if they kept it as is? Let's discuss in the comments.",
+        author: "bbakes25r",
+        time: "1 day ago",
+        subreddit: "sports",
+        upvotes: "690",
+        awards: [
+            "silver"
+        ],
+        comments: [
+            {
+                author: "Jayce86",
+                time: "1 day ago",
+                upvotes: "239",
+                content: "I mean, that’s sounds like a lot more fun than watching dudes barely give effort in a game so they don’t get injured. They should still do pro bowl selections, though."
+            },
+            {
+                author: "NickyNicotine",
+                time: "1 day ago",
+                upvotes: "122",
+                content: "Moving the pro bowl to before the Super Bowl is what killed it. Before that it was actually an elite game because you had the super bowl players showing up. After that you started having guys like Mitch Trubisky fill in for whomever didn't feel like playing because they were either in the super bowl or had just played a playoff game. Then the trickle down effect of 'well he's not showing up, neither will I'. It's a shame because I always looked forward to the pro bowl."
+            },
+            {
+                author: "PoetryIsAlive",
+                time: "1 day ago",
+                upvotes: "86",
+                content: "Maybe the players will actually have more fun playing if it’s just flag football. Looking forward to it"
+            },
+            {
+                author: "dsphilly",
+                time: "22 hr. ago",
+                upvotes: "134",
+                content: "Ive said this for years the skills competition should be more In focus than the pseudo-game they play. Just have the elite players doing dope shit showing off. A mini strongman competition between the beefiest of boys(Lifting, Sled pushing and other feats of strength), Races between the fastest WRs and CBs in the league (you could even have grudge matches that develop during the year play out in a shit talking race to end it until the next year), Best hands competition and trick catches for the technical WRs and TEs, Obstacle Courses for the RBs to complete while holding the ball, time deducted for fumbles. Then have an overall winner for people who participate in multiple events. There is the potential to have so much fun with it. And the players would be interested due to Cash bonus/prizes for winning."
+            }
+        ],
+        flair: {
+            title: "Football",
+            color: "#ff4500"
+        }
+    },
+    {
+        title: "Ahead of Thursday night's Miami vs. Cincinnati game, Dolphins WR Tyreek Hill on Bengals CB Eli Apple: 'I can't wait to go against Eli Apple. I owe you boy.'",
+        id: "76",
+        type: "img",
+        src: "../../resources/images/Communities/sports/76.png",
+        author: "B0rtles",
+        time: "1 day ago",
+        subreddit: "sports",
+        upvotes: "15",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "Sweaty_Assignment_90",
+                time: "23 hr. ago",
+                upvotes: "1",
+                content: "Well, plenty of toast for the drop in center on Friday."
+            },
+            {
+                author: "Best-Jello",
+                time: "14 hr. ago",
+                upvotes: "1",
+                content: "Owe or own? What’s he owe him?"
+            }
+        ],
+        flair: {
+            title: "Football",
+            color: "#ff4500"
+        }
+    },
+    {
+        title: "[MLB] Albert Pujols has hit career HR number 700.",
+        id: "77",
+        type: "img",
+        src: "../../resources/images/Communities/sports/77.png",
+        author: "makarmackinnonstan",
+        time: "4 days ago",
+        subreddit: "sports",
+        upvotes: "748",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "Yoshable",
+                time: "4 days ago",
+                upvotes: "533",
+                content: "The fact that a player from Backyard Baseball is still actively playing and still actively crushing dingers is astounding. He's a truly generational player."
+            },
+            {
+                author: "hiimred2",
+                time: "4 days ago",
+                upvotes: "189",
+                content: "That crowd pop in Dodger stadium, amazing."
+            },
+            {
+                author: "OverusedRedditJoke",
+                time: "4 days ago",
+                upvotes: "587",
+                content: "We will probably never again see this milestone in our lifetime. He was given less than 5% chance of reaching 700 at the beginning of the season"
+            }
+        ],
+        flair: {
+            title: "Baseball",
+            color: "#ff4500"
+        }
+    },
+    {
+        title: "Roger Federer bids farewell after an emotional night at his last career match",
+        id: "78",
+        type: "text",
+        src: "God damn, nothing like seeing your favorite sports stars retire to make you feel old, especially when they're only like a decade ahead of you ... Fantastic career Roger. Hope you enjoyed it all.",
+        author: "12C_BlaK",
+        time: "4 days ago",
+        subreddit: "sports",
+        upvotes: "520",
+        awards: [
+            "gold"
+        ],
+        comments: [
+            {
+                author: "swiftmen991",
+                time: "3 days ago",
+                upvotes: "20",
+                content: "Lmao two young Americans barely scrapping a win against two tennis giants who are well over 30!"
+            },
+            {
+                author: "TheToadstools",
+                time: "2 days ago",
+                upvotes: "2",
+                content: "Sock is one of the best double’s players on the tour at the moment"
+            }
+        ],
+        flair: {
+            title: "Tennis",
+            color: "#ff4500"
+        }
+    },
+    {
+        title: "Pittsburgh Steelers rookie George Pickens with an insane diving one-handed catch",
+        id: "79",
+        type: "img",
+        src: "../../resources/images/Communities/sports/79.png",
+        author: "tuwono_tuwono",
+        time: "5 days ago",
+        subreddit: "sports",
+        upvotes: "444",
+        awards: [
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "stingermarine",
+                time: "5 days ago",
+                upvotes: "52",
+                content: "The Steelers and drafting incredible wide receivers."
+            },
+            {
+                author: "SmackEh",
+                time: "5 days ago",
+                upvotes: "48",
+                content: "Catching that and holding onto it through that hard landing is impressive af"
+            },
+            {
+                author: "TheNextBatallion",
+                time: "4 days ago",
+                upvotes: "35",
+                content: "I'm amazed it's 2022 and there's still people named George Pickens who aren't in a home."
+            },
+            {
+                author: "AnnukinEarthwalker",
+                time: "5 days ago",
+                upvotes: "23",
+                content: "Steal of the draft. I'm a uga fan but.. Pickens at Ohio state / bama or any school that passes more and he is a lock at the first wr off the board. His catch radius is one of the most insane Ive seen as is on display here. But he is also extremely physical and can beat press coverage.. Something many first year wideouts have trouble with. Many dont like contact and he loves to initiate it. One of the best blocking wr Ive seen in the run game."
+            },
+            {
+                author: "Deavs",
+                time: "4 days ago",
+                upvotes: "-1",
+                content: "Unbelievable catch. Terrible attitude on the field/sideline the rest of the game."
+            }
+        ],
+        flair: {
+            title: "Football",
+            color: "#ff4500"
+        }
+    },
 ]
 
 export default postArray;
