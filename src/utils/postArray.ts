@@ -2636,50 +2636,215 @@ const postArray = [
         }
     },
     {
-        title: "We had a security incident. Here's what you need to know.",
+        title: "My enchanted forest cake. There's a black forest cake inside.",
         id: "65",
-        type: "text",
-        src: "What happened? On June 19, we learned that between June 14 and June 18, an attacker compromised a few of our employees’ accounts with our cloud and source code hosting providers. Already having our primary access points for code and infrastructure behind strong authentication requiring two factor authentication (2FA), we learned that SMS-based authentication is not nearly as secure as we would hope, and the main attack was via SMS intercept. We point this out to encourage everyone here to move to token-based 2FA.",
-        author: "KeyserSora",
-        time: "4 years ago",
+        type: "img",
+        src: "../../resources/images/Communities/baking/65.png",
+        author: "Certain-Rope-2624",
+        time: "3 days ago",
         subreddit: "baking",
-        upvotes: "73.3k",
+        upvotes: "5.5k",
         awards: [
-            "platinum",
-            "gold",
             "silver",
-            "helpful",
             "wholesome"
         ],
         comments: [
             {
-                author: "KeyserSora",
-                time: "4 yr. ago",
-                upvotes: "21.4k",
-                content: "In other news, we hired our very first Head of Security, and he started 2.5 months ago. I’m not going to out him in this thread for obvious reason, and he has been put through his paces in his first few months. So far he hasn’t quit."
+                author: "External_Camp",
+                time: "3 days ago",
+                upvotes: "123",
+                content: "Looks amazing. What is the moss? Looks real!"
             },
             {
-                author: "SwampYankee",
-                time: "4 yr. ago",
-                upvotes: "2.4k",
-                content: "Yay! I'm in the 12 year club so I have now been referred to as a 'very early user'! BTW, I never received an email or message saying I my data was accessed. Whats up with that?"
+                author: "ash_bishop",
+                time: "3 days ago",
+                upvotes: "53",
+                content: "How did you get such great texture for the chocolate bark? 🤯"
             },
             {
-                author: "NaturalLogofOne",
-                time: "4 yr. ago",
-                upvotes: "4.5k",
-                content: "Were you hacked because the password for reddit was hunter2?"
+                author: "closetedgae19",
+                time: "3 days ago",
+                upvotes: "14",
+                content: "amateur? What could you even do if you were a pro? It looks amazing! I couldn’t bake to save my life lol. Im only here for the photos of everyone’s amazing creations"
             },
             {
-                author: "eskeena",
-                time: "3 yr. ago",
-                upvotes: "658",
-                content: "What are the chances it was the guy who was sacrificed for the soul stone?"
+                author: "delightedknight3",
+                time: "3 days ago",
+                upvotes: "8",
+                content: "What is the type of buttercream used and what did you swirl into it? Very cleverly constructed and so beautiful."
             }
         ],
         flair: {
-            title: "News",
-            color: "#fc471e"
+            title: "No recipe",
+            color: "#737373"
+        }
+    },
+    {
+        title: "I’m a professional house painter and I made these to thank the women at our paint store. Chocolate cupcakes with vanilla smbc and semi sweet shavings on top.",
+        id: "66",
+        type: "img",
+        src: "../../resources/images/Communities/baking/66.png",
+        author: "Pale_deadflower",
+        time: "2 days ago",
+        subreddit: "baking",
+        upvotes: "1.7k",
+        awards: [
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "ibekt",
+                time: "2 days ago",
+                upvotes: "72",
+                content: "I see an alternative career in your future. Well done and very thoughtful."
+            },
+            {
+                author: "ash_bishop",
+                time: "2 days ago",
+                upvotes: "30",
+                content: "What does SMBC stand for? I doubt it’s Saturday Morning Breakfast Cereal. Or Sumitomo Mitsui Banking Corporation. Something something buttercream?"
+            },
+            {
+                author: "Bananasarelit",
+                time: "2 days ago",
+                upvotes: "5",
+                content: "They look so tasty. You did a fantastic job of frosting them!"
+            }
+        ],
+        flair: {
+            title: "No recipe",
+            color: "#737373"
+        }
+    },
+    {
+        title: "The Great British Bake Along - Week Two! Adorable Thai tea frog macarons 💚",
+        id: "67",
+        type: "img",
+        src: "../../resources/images/Communities/baking/67.png",
+        author: "Half-BloodPrincess",
+        time: "1 day ago",
+        subreddit: "baking",
+        upvotes: "1.7k",
+        awards: [
+            "silver",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "Half-BloodPrincess",
+                time: "1 day ago",
+                upvotes: "38",
+                content: "If you're checking back in after last week, welcome! If this is the first post of this series you've seen, I am baking along with the newest season of The Great British Baking Show this year and, after so much love on last week's post, sharing my progress each week! *I apologize for only photographing 12 macarons when the challenge called for 18. I actually made 24, but it was really early when I took pictures and I didn't want to get it all out and redo it once I'd realized my mistake 😅 These macarons-that-don't-look-like-typical-macarons are in honor of the Signature challenge this week, and I flavored them with a Thai tea buttercream! And I'll probably just be looking at them all day because I love them 🥲 Thank you all for being so supportive and inspiring!"
+            },
+            {
+                author: "Word62",
+                time: "1 day ago",
+                upvotes: "7",
+                content: "Super cute 🥰 as for the username inuyasha? Or something else?"
+            },
+            {
+                author: "VelociStardust",
+                time: "19 hr. ago",
+                upvotes: "3",
+                content: "This is such a fun thing to do! I’ll enjoy seeing your bakes each week as I also watch the show. I’m curious if you also bake within the same time frame the bakers are given?"
+            },
+            {
+                author: "inky0210",
+                time: "19 hr. ago",
+                upvotes: "3",
+                content: "Amazing work! Do you follow the timings they have on the show or take a more relaxed pace?"
+            },
+            {
+                author: "romychestnut",
+                time: "15 hr. ago",
+                upvotes: "5",
+                content: "These are perfect. r/frogs would definitely appreciate. 💚🐸"
+            }
+        ],
+        flair: {
+            title: "Recipe",
+            color: "#737373"
+        }
+    },
+    {
+        title: "My first ever attempt at making cookies from scratch.",
+        id: "68",
+        type: "img",
+        src: "../../resources/images/Communities/baking/68.png",
+        author: "Half-BloodPrincess",
+        time: "7 days ago",
+        subreddit: "baking",
+        upvotes: "1.7k",
+        awards: [
+            "silver",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "Half-BloodPrincess",
+                time: "7 days ago",
+                upvotes: "15",
+                content: "Looks like cookies 👍. How'd they taste?"
+            },
+            {
+                author: "Ill_Be_Myself",
+                time: "6 days ago",
+                upvotes: "1",
+                content: "A SOLID first choice. Chocolate chip might be the first ones I learned to make myself too and are probably still my favorite type of cookie! They look really good, I hope they were delicious 😋"
+            },
+            {
+                author: "Ronnee51-yay",
+                time: "6 days ago",
+                upvotes: "7",
+                content: "They look so good, I would like the recipe, unless it’s the standard recipe. I have that one"
+            }
+        ],
+        flair: {
+            title: "No recipe",
+            color: "#737373"
+        }
+    },
+    {
+        title: "I made Encanto sugar cookies",
+        id: "69",
+        type: "img",
+        src: "../../resources/images/Communities/baking/69.png",
+        author: "tnydancer444",
+        time: "4 days ago",
+        subreddit: "baking",
+        upvotes: "436",
+        awards: [
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "muchandquick",
+                time: "4 days ago",
+                upvotes: "11",
+                content: "Wow, your icing work is absolutely amazing!"
+            },
+            {
+                author: "adam1983adz",
+                time: "3 days ago",
+                upvotes: "7",
+                content: "No bruno? Oh wait...'We don't talk about Bruno, no, no, no'. Great cookies :D"
+            },
+            {
+                author: "suga-kyun",
+                time: "3 days ago",
+                upvotes: "1",
+                content: "As a digital artist who just likes to look at pretty cookies on this sub, I’ve always wondered, why do you guys choose cookies as the medium for your incredible talent? I think I might be sad for my drawings on a cookie to be eaten"
+            },
+            {
+                author: "PepsiCola7860",
+                time: "3 days ago",
+                upvotes: "3",
+                content: "The detail work is IMPECCABLE! I hope you charge your price for these. Can't imagine the amount of patience and concentration these must require!!"
+            },
+        ],
+        flair: {
+            title: "No recipe",
+            color: "#737373"
         }
     },
 ]
