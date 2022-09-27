@@ -2417,6 +2417,271 @@ const postArray = [
             color: "#e58c0e"
         }
     },
+    {
+        title: "Upcoming changes to our content policy, our board, and where we’re going from here",
+        id: "60",
+        type: "text",
+        src: "After watching people across the country mourn and demand an end to centuries of murder and violent discrimination against Black people, I wanted to speak out. I wanted to do this both as a human being, who sees this grief and pain and knows I have been spared from it myself because of the color of my skin, and as someone who literally has a platform and, with it, a duty to speak out. Earlier this week, I wrote an email to our company addressing this crisis and a few ways Reddit will respond. When we shared it, many of the responses said something like, “How can a company that has faced racism from users on its own platform over the years credibly take such a position?” These questions, which I know are coming from a place of real pain and which I take to heart, are really a statement: There is an unacceptable gap between our beliefs as people and a company, and what you see in our content policy.",
+        author: "spez",
+        time: "2 years ago",
+        subreddit: "announcements",
+        upvotes: "40.9k",
+        awards: [
+            "gold",
+            "silver",
+            "helpful",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "Georgy_K_Zhukov",
+                time: "2 yr. ago",
+                upvotes: "12.9k",
+                content: "How do I get on this? This is an issue that is very near, and dear to r/AskHistorians and we would like to be involved in this."
+            },
+            {
+                author: "Erestyn",
+                time: "2 yr. ago",
+                upvotes: "10.4k",
+                content: "Do you ever feel like you're just using words for the sake of it?"
+            },
+            {
+                author: "RampagingKoala",
+                time: "2 yr. ago",
+                upvotes: "2.2k",
+                content: "Hey /u/spez this is all well and good and all but how are you going to give moderators the tools to take definitive action against users spreading hate? Reddit does nothing to prevent these idiots from just making a new account and starting over ad infinitum."
+            },
+            {
+                author: "Abedeus",
+                time: "2 yr. ago",
+                upvotes: "947",
+                content: "Or, you know, banned like other hate subreddits instead of constantly claiming that oh mods clean it, totally, it's fine except when mods themselves were complicit in spreading hatred."
+            }
+        ],
+        flair: {
+            title: "News",
+            color: "#fc471e"
+        }
+    },
+    {
+        title: "Imposters on Reddit",
+        id: "61",
+        type: "text",
+        src: "If you’ve participated in Reddit’s April Fools’ Day tradition before, you'll know that this is the point where we normally share a confusing/cryptic message before pointing you toward some weird experience that we’ve created for your enjoyment. While we still plan to do that, we think it’s important to acknowledge that this year, things feel quite a bit different. The world is experiencing a moment of incredible uncertainty and stress; and throughout this time, it’s become even more clear how valuable Reddit is to millions of people looking for community, a place to seek and share information, provide support to one another, or simply to escape the reality of our collective ‘new normal.’",
+        author: "powerlanguage",
+        time: "6 days ago",
+        subreddit: "announcements",
+        upvotes: "839",
+        awards: [
+            "silver",
+            "helpful",
+        ],
+        comments: [
+            {
+                author: "vasiliypupkeen",
+                time: "6 days ago",
+                upvotes: "283",
+                content: "Well, looks like I won't be participating this year. See you guys next year! o/"
+            },
+            {
+                author: "Letrabotttle",
+                time: "6 days ago",
+                upvotes: "406",
+                content: "It's way easier for a bot to seem like a human pretending to be a bot than a normal human, which makes this whole thing kind of stupid because everyone is going out of their way to give bot like answers."
+            },
+            {
+                author: "R3DT1D3",
+                time: "5 days ago",
+                upvotes: "386",
+                content: "Honestly this just makes me realize how boring and unoriginal people on Reddit are. Like you could make a convincing bot just reposting the same few jokes or references and no one would be the wiser."
+            }
+        ],
+        flair: {
+            title: "Changes to ToS",
+            color: "#fc471e"
+        }
+    },
+    {
+        title: "Update regarding user profile transparency",
+        id: "62",
+        type: "text",
+        src: "Hi everyone, We collect a lot of feedback from you all, and one theme we’ve heard consistently from users is that many of you want more visibility when users follow you. As we move the new profiles out of beta, we wanted to share a transparency change we are making. In the coming months, we will allow people to see which users follow them. We know that this may be a change from existing expectations, so we want to give you time to update your settings before moving forward with this. In the immediate future (starting Aug 19th, 2019), this will only affect new follows made. In about 3 months, we will make it possible to see your full list of followers. This would include follows made while profiles were in beta. We plan to send a PM to all affected users, but wanted to make this public post as well so that you aren’t surprised when you receive it. To be clear, the usernames will only be visible to the user who was followed. No one will be able to look up your full list of subscriptions/follows and no one else will be able to see a list of followers of a profile.",
+        author: "mjmayank",
+        time: "3 years ago",
+        subreddit: "announcements",
+        upvotes: "16.9k",
+        awards: [
+            "silver",
+        ],
+        comments: [
+            {
+                author: "RadioactiveFruitCup",
+                time: "3 yr. ago",
+                upvotes: "340",
+                content: "I appreciate the staged rollout, but I don’t see anything explicitly addressing sock-puppets. If I want to stalk you, and you block me, can’t I just go register a throwaway and follow you that way?"
+            },
+            {
+                author: "Sin2k",
+                time: "3 yr. ago",
+                upvotes: "129",
+                content: "Will users be able to block people from following them?"
+            },
+            {
+                author: "KTGS",
+                time: "3 yr. ago",
+                upvotes: "595",
+                content: "I'm really unsure if I feel like I can use Reddit any further after this update. I come to reddit so I don't have to deal with interpersonal drama and I'd really rather have a place where I can say something and have anons agree/disagree with me."
+            },
+            {
+                author: "hamza1311",
+                time: "3 yr. ago",
+                upvotes: "226",
+                content: "Reddit was supposed to be anonymous. If you block someone from following you, they can easily go to your profile without being logged in and stalk you that way. Not feeding this information through API is completely BS. Why are you forcing me to use this app? It's not like I hate this app. Far from that actually. But having an open API that can be used to build 3rd party clients and then not feeding all the information through is it completely BS. First it was Reddit chat, and now this."
+            },
+            {
+                author: "iocane_",
+                time: "3 yr. ago",
+                upvotes: "37",
+                content: "Reddit is a community, not a social media. Leave it like that. If I want to be on a social media, I'll go to Instagram. If I want to privately talk to people, I'll go to discord. If I want to take part in a community of people, I come to Reddit. Don't try to turn it into a social media. I'm not aware of any other place like Reddit where you can find communities about anything, talk about it, get help from people and much more. I don't like where this is going, and I think other redditors don't either"
+            },
+        ],
+        flair: {
+            title: "Official",
+            color: "#fc471e"
+        }
+    },
+    {
+        title: "Revamping the Quarantine Function",
+        id: "63",
+        type: "text",
+        src: "On a platform as open and diverse as Reddit, there will sometimes be communities that, while not prohibited by the Content Policy, average redditors may nevertheless find highly offensive or upsetting. In other cases, communities may be dedicated to promoting hoaxes (yes we used that word) that warrant additional scrutiny, as there are some things that are either verifiable or falsifiable and not seriously up for debate (eg, the Holocaust did happen and the number of people who died is well documented). In these circumstances, Reddit administrators may apply a quarantine.",
+        author: "landoflobsters",
+        time: "4 years ago",
+        subreddit: "announcements",
+        upvotes: "7.9k",
+        awards: [
+            "silver",
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "Halaku",
+                time: "4 yr. ago",
+                upvotes: "4.0k",
+                content: "So this is a way of making sure that advertisers don't find their products displayed on racist subreddits, alternative truth hoax subreddits, or other such 'unsavory' corners of Reddit?"
+            },
+            {
+                author: "reusens",
+                time: "4 yr. ago",
+                upvotes: "2.2k",
+                content: "Wouldn't this make these communities echo chambers, where outsiders aren't even aware of what is being said. Wouldn't this also make it less likely that reportable offences get reported?"
+            },
+            {
+                author: "ILoveToEatLobster",
+                time: "4 yr. ago",
+                upvotes: "140",
+                content: "Can I be an admin and selectively quarantine subreddits we disagree with too?"
+            }
+        ],
+        flair: {
+            title: "News",
+            color: "#fc471e"
+        }
+    },
+    {
+        title: "We had a security incident. Here's what you need to know.",
+        id: "64",
+        type: "text",
+        src: "What happened? On June 19, we learned that between June 14 and June 18, an attacker compromised a few of our employees’ accounts with our cloud and source code hosting providers. Already having our primary access points for code and infrastructure behind strong authentication requiring two factor authentication (2FA), we learned that SMS-based authentication is not nearly as secure as we would hope, and the main attack was via SMS intercept. We point this out to encourage everyone here to move to token-based 2FA.",
+        author: "KeyserSora",
+        time: "4 years ago",
+        subreddit: "announcements",
+        upvotes: "73.3k",
+        awards: [
+            "platinum",
+            "gold",
+            "silver",
+            "helpful",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "KeyserSora",
+                time: "4 yr. ago",
+                upvotes: "21.4k",
+                content: "In other news, we hired our very first Head of Security, and he started 2.5 months ago. I’m not going to out him in this thread for obvious reason, and he has been put through his paces in his first few months. So far he hasn’t quit."
+            },
+            {
+                author: "SwampYankee",
+                time: "4 yr. ago",
+                upvotes: "2.4k",
+                content: "Yay! I'm in the 12 year club so I have now been referred to as a 'very early user'! BTW, I never received an email or message saying I my data was accessed. Whats up with that?"
+            },
+            {
+                author: "NaturalLogofOne",
+                time: "4 yr. ago",
+                upvotes: "4.5k",
+                content: "Were you hacked because the password for reddit was hunter2?"
+            },
+            {
+                author: "eskeena",
+                time: "3 yr. ago",
+                upvotes: "658",
+                content: "What are the chances it was the guy who was sacrificed for the soul stone?"
+            }
+        ],
+        flair: {
+            title: "News",
+            color: "#fc471e"
+        }
+    },
+    {
+        title: "We had a security incident. Here's what you need to know.",
+        id: "65",
+        type: "text",
+        src: "What happened? On June 19, we learned that between June 14 and June 18, an attacker compromised a few of our employees’ accounts with our cloud and source code hosting providers. Already having our primary access points for code and infrastructure behind strong authentication requiring two factor authentication (2FA), we learned that SMS-based authentication is not nearly as secure as we would hope, and the main attack was via SMS intercept. We point this out to encourage everyone here to move to token-based 2FA.",
+        author: "KeyserSora",
+        time: "4 years ago",
+        subreddit: "baking",
+        upvotes: "73.3k",
+        awards: [
+            "platinum",
+            "gold",
+            "silver",
+            "helpful",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "KeyserSora",
+                time: "4 yr. ago",
+                upvotes: "21.4k",
+                content: "In other news, we hired our very first Head of Security, and he started 2.5 months ago. I’m not going to out him in this thread for obvious reason, and he has been put through his paces in his first few months. So far he hasn’t quit."
+            },
+            {
+                author: "SwampYankee",
+                time: "4 yr. ago",
+                upvotes: "2.4k",
+                content: "Yay! I'm in the 12 year club so I have now been referred to as a 'very early user'! BTW, I never received an email or message saying I my data was accessed. Whats up with that?"
+            },
+            {
+                author: "NaturalLogofOne",
+                time: "4 yr. ago",
+                upvotes: "4.5k",
+                content: "Were you hacked because the password for reddit was hunter2?"
+            },
+            {
+                author: "eskeena",
+                time: "3 yr. ago",
+                upvotes: "658",
+                content: "What are the chances it was the guy who was sacrificed for the soul stone?"
+            }
+        ],
+        flair: {
+            title: "News",
+            color: "#fc471e"
+        }
+    },
 ]
 
 export default postArray;
