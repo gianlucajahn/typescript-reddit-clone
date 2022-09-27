@@ -2847,6 +2847,189 @@ const postArray = [
             color: "#737373"
         }
     },
+    {
+        title: "We did it my dudes",
+        id: "70",
+        type: "text",
+        src: "We hit the asteroid! Yay! AVENGE THE DINOSAURS! 🦖",
+        author: "Oh_Them_Again",
+        time: "18 hours ago",
+        subreddit: "astronomy",
+        upvotes: "121",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "waldohasleftus",
+                time: "17 hr. ago",
+                upvotes: "87",
+                content: "Avenge the Dinosaurs! Wee Woo!"
+            },
+            {
+                author: "Brief_Ad_1489",
+                time: "10 hr. ago",
+                upvotes: "22",
+                content: "Plot twist: they've knocked it on a trajectory for Earth"
+            },
+            {
+                author: "hhairy",
+                time: "12 hr. ago",
+                upvotes: "1",
+                content: "I'm not understanding the point of the mission. Was the mission to hit the target, or to move the target? Thanks to anyone who can clarify for me!"
+            }
+        ],
+        flair: {
+            title: "none",
+            color: "none"
+        }
+    },
+    {
+        title: "Galaxy core captured in wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+        id: "71",
+        type: "img",
+        src: "../../resources/images/Communities/astronomy/71.png",
+        author: "Dei_Photos",
+        time: "26 days ago",
+        subreddit: "astronomy",
+        upvotes: "4.1k",
+        awards: [
+            "rocket",
+            "gold",
+            "silver",
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "Dei_Photos",
+                time: "26 days ago",
+                upvotes: "36",
+                content: "Went to friends house and got the opportunity low light pollution. Captured Camera: Canon EOS Ra. Lens: Sigma 24 f1.4 Tripod: K&F. Settings: 6 images set at 6 seconds exposure. Aperture f1.8 Iso 1600 Edited on photoshop, stacked 6 images of the milky manual align and use median to soft the grain and noise."
+            },
+            {
+                author: "Umpron",
+                time: "25 days ago",
+                upvotes: "20",
+                content: "Damn and all that fits in a whale? They must be massive."
+            },
+            {
+                author: "Echo4708",
+                time: "26 days ago",
+                upvotes: "6",
+                content: "How do I know I'd something like this happens locally? Can I see it with just my eye? I would kill for a view like this one day."
+            },
+            {
+                author: "Forest_folf",
+                time: "24 days ago",
+                upvotes: "2",
+                content: "Is this what the milky way looks like when you're looking at it or is this edited? I'm going to death valley soon and I shod be able to see a lot of stars."
+            },
+        ],
+        flair: {
+            title: "Photos",
+            color: "#8d001a"
+        }
+    },
+    {
+        title: "Solar prominences and a huge filament [OC]",
+        id: "72",
+        type: "img",
+        src: "../../resources/images/Communities/astronomy/72.png",
+        author: "pomarine",
+        time: "22 days ago",
+        subreddit: "astronomy",
+        upvotes: "3.8k",
+        awards: [
+            "silver",
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "verbi420",
+                time: "22 days ago",
+                upvotes: "94",
+                content: "It looks so soft, I wanna pet it"
+            },
+            {
+                author: "pomarine",
+                time: "21 days ago",
+                upvotes: "47",
+                content: "A huge filament is visible on the Sun right now, i imaged parts of it yesterday together with prominences - superb seeing conditions."
+            }
+        ],
+        flair: {
+            title: "Photos",
+            color: "#8d001a"
+        }
+    },
+    {
+        title: "Camping in the mountains of Utah",
+        id: "73",
+        type: "img",
+        src: "../../resources/images/Communities/astronomy/73.png",
+        author: "KevinTheIdk",
+        time: "24 days ago",
+        subreddit: "astronomy",
+        upvotes: "2.3k",
+        awards: [
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "KevinTheIdk",
+                time: "24 days ago",
+                upvotes: "30",
+                content: "Went on a camping trip where I sprained both ankles. Worth it. This was shot on: FujiFilm X-T4 with a 16-80mm lens Settings: 24mm/ ISO 400/ F4/ 15sec. Edited on Lightroom. No stacking needed for this one."
+            },
+            {
+                author: "TheGreenRaccoon07",
+                time: "24 days ago",
+                upvotes: "10",
+                content: "This is stunning! Is that a National Park? If so, which one? It's so dark!"
+            },
+            {
+                author: "Cest_La_Vie_101",
+                time: "23 days ago",
+                upvotes: "5",
+                content: "Lovely shot!"
+            },
+            {
+                author: "NightcoreSpectrum",
+                time: "23 days ago",
+                upvotes: "8",
+                content: "I am very new to the world of photography. I have an s22 ultra, will using your settings (400iso, and 15s shutter) give me the same results? Or will the size of the lens make a difference in the results?"
+            }
+        ],
+        flair: {
+            title: "Photos",
+            color: "#8d001a"
+        }
+    },
+    {
+        title: "Looking for Islamic and Chinese names for features on the moon",
+        id: "74",
+        type: "text",
+        src: "I'm working on a science fiction story in which Muslim and Chinese people have settled the moon, and imposed names from their own cultures on landmarks like the Sea of Tranquility. I know there are many craters named after Chinese and Muslim people, but I'm looking for older traditional names from the Chinese and Islamic worlds. What is 'the Sea of Tranquility' in other languages?",
+        author: "ptupper",
+        time: "19 minutes ago",
+        subreddit: "astronomy",
+        upvotes: "1",
+        awards: [
+            
+        ],
+        comments: [
+            {
+                author: "ptupper",
+                time: "12 min. ago",
+                upvotes: "1",
+                content: "Would appreciate any creativity! Thanks :)"
+            }
+        ],
+        flair: {
+            title: "Studies",
+            color: "#8d001a"
+        }
+    },
 ]
 
 export default postArray;
