@@ -3221,6 +3221,236 @@ const postArray = [
             color: "#ff4500"
         }
     },
+    {
+        title: "How the f*ck is anyone actually calculating taxes on this ****?",
+        id: "80",
+        type: "text",
+        src: "So my accountant is officially telling me that i have to report my crypto gains from 2021 on my tax return and pay capital gains tax on 5 figures of paper gains... Absolutely sucks, but I am just going to bite the bullet because I don't want to wind up in tax court 3 years from now. But the problem is - how in the fuck am i actually even supposed to do this? I literally have to track down every trade / swap / yield farm I was in via metamask and track down the historical spot prices for every transaction to accurately report the gains and losses at the time of the trades.. I literally use like 6 different exchanges and many more defi protocols. Has anyone successfully used any of the crypto tax software out there? CoinLedger, CoinTracking, TokenTax etc? Or should I just pay my accountant thousands to figure it out for me?",
+        author: "stratguy56",
+        time: "2 hours ago",
+        subreddit: "crypto",
+        upvotes: "137",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "AutoModerator",
+                time: "2 hr. ago",
+                upvotes: "1",
+                content: "It looks like this post is about taxes. Tax laws vary between countries, so you may get more helpful replies if you specify the place you are asking about. Please note that Rule #4 does not allow for Tax Evasion. This is a site wide rule and a subreddit rule. Do not endorse, suggest, advocate, instruct others, or ask for help with tax evasion. Do not be coy and sarcastically recommend against it or suggest using a privacy coin in response to an IRS inquiry."
+            },
+            {
+                author: "Lilica_Golden_SHIB",
+                time: "2 hr. ago",
+                upvotes: "229",
+                content: "What gains?"
+            },
+            {
+                author: "Ineedanaccountthx",
+                time: "2 hr. ago",
+                upvotes: "26",
+                content: "In Ireland I asked what I should do and the official response I got from the tax office was Don't worry about all the trades and what happened with each exchange. Work out how much you put in and how much you too out and pay 30% on that for capital gains. That was 3 years ago so it may have changed and become more rigid since then"
+            },
+            {
+                author: "cowboy_shaman",
+                time: "2 hr. ago",
+                upvotes: "26",
+                content: "I use Koinly. Tried many others, but Koinly seemed to work the best. It still looks hours and hours to make everything line up correctly"
+            },
+            {
+                author: "MilesBrooksTax",
+                time: "2 hr. ago",
+                upvotes: "20",
+                content: "It is a mess - I definitely recommend getting into one of these tax softwares, spending your own time to see how far you can get rather than spending all this money on an accountant for work you could have done yourself."
+            }
+        ],
+        flair: {
+            title: "DISCUSSION",
+            color: "#7193ff"
+        }
+    },
+    {
+        title: "Can we trust CMC?",
+        id: "81",
+        type: "text",
+        src: "Most of us rely on the information provided on CMC for our initial research and decide if the token is worth researching further. However recently I was researching a project and noticed that CMC has all the info about the project wrong. Not just the description of the project but also the circulating supply, market cap and ranking. This makes me wonder how reliable is CMC data. I was told by the project team that they have been following up with CMC to get it fixed but CMC is not fixing the info on their site. What are your thoughts?",
+        author: "TradeRaptor",
+        time: "3 hours ago",
+        subreddit: "crypto",
+        upvotes: "7",
+        awards: [
+
+        ],
+        comments: [
+            {
+                author: "BlazingHotFireFox",
+                time: "1 hr. ago",
+                upvotes: "4",
+                content: "Coin Gecko > CMC"
+            },
+            {
+                author: "Maxx3141",
+                time: "2 hr. ago",
+                upvotes: "8",
+                content: "CMC is owned by Binance - and therefore you shouldn't expect it to be neutral. In April 2020, CoinMarketCap was acquired by Binance Capital Mgmt."
+            },
+            {
+                author: "Setyman",
+                time: "2 hr. ago",
+                upvotes: "9",
+                content: "Coingecko is way better. I remember seeing a lot of reported inconsistencies with CC, like showing the incorrect supply among others."
+            }
+        ],
+        flair: {
+            title: "TECHNOLOGY",
+            color: "#720469"
+        }
+    },
+    {
+        title: "Spice up your resume with your crypto expertise",
+        id: "82",
+        type: "text",
+        src: "That’s right. Most employers would have no idea wtf you’re talking about and you’ll sound crazy smart, or maybe just crazy. You just gotta do a little slippin jimmy showmanship. They may not even know you’re talking about blockchain! For example, I’ve been a governor in ALGO for about a year now, drop that in your in interview and your future employer will feel blessed to have the governor of ALGO working for their company. Moon farmers, say no more. Your employer will be baffled that you’ve been to the moon. Polkadot validators- well I guess a lot of folks could validate that polkadots are indeed polkadots. Ether - you’re a wizard probably ATOM stacker - you have experience as a nuclear physicist(not like Homer Simpson). Help me out here, there’s a lot more...",
+        author: "the_nibler",
+        time: "5 days ago",
+        subreddit: "crypto",
+        upvotes: "39",
+        awards: [
+            "silver",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "Rookslook",
+                time: "5 days ago",
+                upvotes: "9",
+                content: "“Spent a good amount of time playing around with my inch”"
+            },
+            {
+                author: "bad-crypto-advice",
+                time: "5 days ago",
+                upvotes: "2",
+                content: "My comment history is all the resume that I’ll ever need. I’ve helped hundreds on Reddit with my investing advice. Eventually the moon tips will start rolling in. Then YOU will be my employer."
+            },
+            {
+                author: "DynamoDylan",
+                time: "4 days ago",
+                upvotes: "6",
+                content: "Im a professional NFT artist. kekw."
+            },
+            {
+                author: "bigmaneting",
+                time: "5 days ago",
+                upvotes: "3",
+                content: "I no joke put down moon farmer at r/cryptocurrency for some crypto job recently because it was the only 'relevant' experience I had with crypto. Thought it was better than putting down nothing 🤷‍♂️"
+            }
+        ],
+        flair: {
+            title: "COMEDY",
+            color: "#cc8b00"
+        }
+    },
+    {
+        title: "A 23-year-old, self-described 'Crypto King' reportedly had his Lamborghini, BMWs, and McLarens seized after investors sued him claiming he stole $35 million",
+        id: "83",
+        type: "text",
+        src: "LMAO, my guy played himself. Did you hear about this dude before? Wonder how he's doing now. Hasn't posted in 2 days almost. Must be rough to be broke.",
+        author: "TallAssociation0",
+        time: "4 days ago",
+        subreddit: "crypto",
+        upvotes: "6.8k",
+        awards: [
+            "silver",
+            "helpful"
+        ],
+        comments: [
+            {
+                author: "coinfeeds-bot",
+                time: "4 days ago",
+                upvotes: "823",
+                content: "tldr; A 23-year-old Canadian Aiden Pleterski, who calls himself the 'Crypto King,' had $2 million worth of assets seized as he's being sued over allegations he defrauded investors. The seized assets of the man include his Lamborghini, two McLarens, and two BMWs, according to reports. He was renting a lakefront mansion in Burlington, Ontario that he spent $45,000 a month for, and previously paid for promotional articles about himself on websites like Forbes."
+            },
+            {
+                author: "bluesmaker",
+                time: "4 days ago",
+                upvotes: "52",
+                content: "My comment history is all the resume that I’ll ever need. I’ve helped hundreds on Reddit with my investing advice. Eventually the moon tips will start rolling in. Then YOU will be my employerRenting a mansion for 45k a month and owns a bunch of expensive cars? What a terrible way to use the money."
+            },
+            {
+                author: "Nuewim",
+                time: "4 days ago",
+                upvotes: "20",
+                content: "Let me quote Tywin Lannister 'Any man that call himself a king is not true king', he is not a crypto king, just a clown, nothing more. There is only one person that could be called crypto king, and it's Satoshi."
+            }
+        ],
+        flair: {
+            title: "GENERAL NEWS",
+            color: "#ff4500"
+        }
+    },
+    {
+        title: "Daily General Discussion - September 26, 2022 (GMT+0)",
+        id: "84",
+        type: "text",
+        src: "Disclaimer: Consider all information posted here with several liberal heaps of salt, and always cross check any information you may read on this thread with known sources. Any trade information posted in this open thread may be highly misleading, and could be an attempt to manipulate new readers by known 'pump and dump (PnD) groups' for their own profit. BEWARE of such practices and exercise utmost caution before acting on any trade tip mentioned here. Please be careful about what information you share and the actions you take. Do not share the amounts of your portfolios (why not just share percentage?). Do not share your private keys or wallet seed. Use strong, non-SMS 2FA if possible. Beware of scammers and be smart. Do not invest more than you can afford to lose, and do not fall for pyramid schemes, promises of unrealistic returns (get-rich-quick schemes), and other common scams.",
+        author: "CryptoDaily",
+        time: "2 days ago",
+        subreddit: "crypto",
+        upvotes: "81",
+        awards: [
+            "silver",
+            "wholesome"
+        ],
+        comments: [
+            {
+                author: "XGallonsX",
+                time: "19 hr. ago",
+                upvotes: "2",
+                content: "Does ethereum still need to be locked when staked? Are the exchanges still requiring you to lock it?"
+            },
+            {
+                author: "Wilder54321",
+                time: "21 hr. ago",
+                upvotes: "5",
+                content: "Selltember almost over, soon pumptober?"
+            },
+            {
+                author: "OpticallyMosache",
+                time: "1 day ago",
+                upvotes: "4",
+                content: "Building case for the bottom having been reached. Can't see the fed surprising anyone with worse news than what has been priced in. DXY can't peak forever. That money is going somewhere."
+            },
+            {
+                author: "One_Steack_9554",
+                time: "17 hr. ago",
+                upvotes: "9",
+                content: "Im inclined to start stacking CRO because I use Crypto.com. I generally only buy BtC and ETH but I kinda want a flashing Visa card"
+            },
+            {
+                author: "ArieJ010",
+                time: "19 hr. ago",
+                upvotes: "0",
+                content: "If next quarters earnings are bad and the stock market dumps crypto might even go up. Bad earnings could lead to slowing interest hikes, which would be great for crypto."
+            },
+            {
+                author: "CompetitiveClerk97",
+                time: "23 hr. ago",
+                upvotes: "2",
+                content: "So the experts if you can call them that, have now officially moved from fiscal tightening to sacrificing virgins to the volcano gods of Hawaii. When asked why they chose this path. 'We ran out of ideas' are their words not mine. In other news monkey knife fights will be back this fall on ESPN 13. So gather the family for great entertainment. Just remember no one under 13 should watch and it will help you remember ESPN 13. Next hour we will be hosting an hour long commercial free event. Elderly catapulting."
+            },
+            {
+                author: "maxpowerzttv",
+                time: "10 hr. ago",
+                upvotes: "1",
+                content: "What’s everyone’s opinion on BTC bottom before lambo"
+            },
+        ],
+        flair: {
+            title: "OFFICIAL",
+            color: "#f53e3e"
+        }
+    },
 ]
 
 export default postArray;
