@@ -88,6 +88,7 @@ export default function SubredditPage (props: SubredditPageProps) {
               randomIntToString={randomIntToString}
               userName={userName}
               navToSubmit={navToSubmit}
+              loginStatus={loginStatus}
             />
 
             <SortBar 

@@ -5,6 +5,7 @@ import './CreatePost.scss';
 export interface CreatePostProps {
     randomIntToString: string,
     userName: string,
+    loginStatus: boolean,
     navToSubmit: MouseEventHandler
 }
 
@@ -12,13 +13,12 @@ export default function CreatePost (props: CreatePostProps) {
   const {
     randomIntToString,
     userName,
+    loginStatus,
     navToSubmit,
   } = props;
 
-  const navigate = useNavigate();
-
   return (
-    <div className="createPostMenu" onClick={navToSubmit}>
+    <div className="createPostMenu" onClick={navToSubmit} style={{ display: loginStatus ? "flex" : "none" }}>
         <img className="avatar" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
         <input type="text" placeholder="Create Post"></input>
         <button className="imagePost">

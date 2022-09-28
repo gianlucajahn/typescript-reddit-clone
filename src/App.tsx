@@ -446,7 +446,7 @@ function App() {
   }
 
   return (
-    <div onClick={checkDropdown} id="app">
+    <div onClick={checkDropdown} style={{ maxHeight: loginModalState === "closed" ? "" : "100vh !important", overflow: loginModalState === "closed" ? "" : "hidden" }} id="app">
       {loginModalState !== "closed" ? 
       <LoginModal 
         loginModalState={loginModalState}

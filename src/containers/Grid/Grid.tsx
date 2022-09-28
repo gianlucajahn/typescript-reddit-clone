@@ -5,18 +5,20 @@ import postArray from '../../utils/postArray';
 import './Grid.scss';
 
 export interface GridProps {
-    currentSub: Subreddit | undefined
+    currentSub: Subreddit | undefined,
+    loginModalState: string
 }
 
 export default function Grid (props: GridProps) {
   const {
-    currentSub
+    currentSub,
+    loginModalState
   } = props;
 
   return (
-    <div className="grid">
+    <div className="grid" style={{  }}>
       {currentSub === undefined && postArray.map((post, i) => {
-        if (i >= 10) {
+        if (loginModalState !== "closed" && i >= 3) {
             return;
         }
 

@@ -40,12 +40,13 @@ export default function Home (props: HomeProps) {
   } = props;
 
   return (
-    <div className="home" style={{ maxHeight: loginModalState === "closed" ? "" : "92.75vh" }}>
+    <div className="home" style={{ maxHeight: loginModalState === "closed" ? "" : "92.75vh", overflow: loginModalState === "closed" ? "" : "hidden" }}>
       <div className="feed">
         <CreatePost 
           randomIntToString={randomIntToString}
           userName={userName}
           navToSubmit={navToSubmit}
+          loginStatus={loginStatus}
         />
         <SortBar 
           currentSort={currentSort}
@@ -54,6 +55,7 @@ export default function Home (props: HomeProps) {
 
         <Grid 
           currentSub={currentSub}
+          loginModalState={loginModalState}
         />
       </div>
 

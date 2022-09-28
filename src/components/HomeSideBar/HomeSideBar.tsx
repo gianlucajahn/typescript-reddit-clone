@@ -33,7 +33,7 @@ export default function HomeSideBar (props: HomeSideBarProps) {
   }
 
   return (
-    <div className="homesidebar" style={{ maxHeight: loginModalState === "closed" ? "" : "92.75vh", overflow: "hidden" }}>
+    <div className="homesidebar" style={{ maxHeight: loginModalState === "closed" ? "" : "92.75vh" }}>
         
         <div className="topCommunities">
             <div className="topBannerContainer">
