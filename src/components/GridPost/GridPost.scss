@@ -1,0 +1,9 @@
+@import "../../styles/global/variables";
+
+.gridPost {
+    width: $contentWidth;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: white;
+}
