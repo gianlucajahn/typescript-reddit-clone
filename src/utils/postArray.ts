@@ -96,9 +96,9 @@ const postArray = [
     {
         title: "All Is Vanity - Official Trailer",
         id: "2",
-        type: "video",
+        type: "img",
         pinned: false,
-        src: "https://www.youtube.com/watch?v=Ws1pZPrqmNQ",
+        src: "../../resources/images/Communities/movies/2.png",
         author: "Bennett1984",
         time: "20 hours ago",
         subreddit: "movies",
@@ -258,9 +258,9 @@ const postArray = [
     {
         title: "Warriors | Season 2020 Cinematic - League of Legends (ft. 2WEI and Edda Hayes)",
         id: "6",
-        type: "video",
+        type: "img",
         pinned: false,
-        src: "https://www.youtube.com/watch?v=aR-KAldshAE",
+        src: "../../resources/images/Communities/leagueoflegends/6.png",
         author: "IWasVennBackThen",
         time: "4 days ago",
         subreddit: "leagueoflegends",
