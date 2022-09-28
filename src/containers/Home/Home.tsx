@@ -3,12 +3,14 @@ import './Home.scss';
 import CreatePost from '../../components/CreatePost/CreatePost';
 import SortBar from '../../components/SortBar/SortBar';
 import HomeSideBar from '../../components/HomeSideBar/HomeSideBar';
-import { Subreddits } from '../../types/types';
+import { Subreddit, Subreddits } from '../../types/types';
+import Grid from '../Grid/Grid';
 
 export interface HomeProps {
   randomIntToString: string,
   userName: string,
   currentSort: string,
+  currentSub: Subreddit | undefined,
   setSort: React.MouseEventHandler;
   subreddits: Subreddits,
   topSubreddits: Subreddits,
@@ -25,6 +27,7 @@ export default function Home (props: HomeProps) {
     randomIntToString,
     userName,
     currentSort,
+    currentSub,
     setSort,
     subreddits,
     topSubreddits,
@@ -47,6 +50,10 @@ export default function Home (props: HomeProps) {
         <SortBar 
           currentSort={currentSort}
           setSort={setSort}
+        />
+
+        <Grid 
+          currentSub={currentSub}
         />
       </div>
 

@@ -501,6 +501,7 @@ function App() {
           handleNavigate={handleNavigate}
           navToSubmit={navToSubmit}
           loginModalState={loginModalState}
+          currentSub={currentSub}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
@@ -534,6 +535,7 @@ function App() {
           handleNavigate={handleNavigate}
           navToSubmit={navToSubmit}
           loginModalState={loginModalState}
+          currentSub={currentSub}
         />} />
         <Route path='/submit' element={<Home 
           randomIntToString={randomIntToString}
@@ -548,6 +550,7 @@ function App() {
           handleNavigate={handleNavigate}
           navToSubmit={navToSubmit}
           loginModalState={loginModalState}
+          currentSub={currentSub}
         />} />
         <Route path='*' element={<Home
           randomIntToString={randomIntToString}
@@ -562,6 +565,7 @@ function App() {
           handleNavigate={handleNavigate}
           navToSubmit={navToSubmit}
           loginModalState={loginModalState}
+          currentSub={currentSub}
         />} />
       </Routes>
     </div>
