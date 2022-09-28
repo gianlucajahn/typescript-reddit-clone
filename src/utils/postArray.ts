@@ -2105,7 +2105,7 @@ const postArray = [
         }
     },
     {
-        title: "Completing the Collection as a Gift (ISO High (printable) quality ISS picture)",
+        title: "Looking for high quality photo of ISS, any ideas?",
         id: "46",
         type: "text",
         pinned: false,
@@ -2149,10 +2149,15 @@ const postArray = [
         author: "nasa",
         time: "4 days ago",
         subreddit: "nasa",
-        upvotes: "359",
+        upvotes: "34.9k",
         awards: [
+            "trinity",
+            "rocket",
+            "platinum",
             "gold",
-            "silver"
+            "silver",
+            "helpful",
+            "wholesome"
         ],
         comments: [
             {
