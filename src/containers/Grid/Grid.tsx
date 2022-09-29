@@ -66,6 +66,17 @@ export default function Grid (props: GridProps) {
                  currentSub={currentSub} 
                 />
       })}
+
+      {currentSub !== undefined && postArray.map((post, i) => {
+        if (post.subreddit !== currentSub.title) {
+          return;
+        }
+
+        return <GridPost 
+                 post={postArray[i]}
+                 currentSub={currentSub} 
+                />
+      })}
     </div>
   );
 }

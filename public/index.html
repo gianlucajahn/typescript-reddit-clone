@@ -17,5 +17,17 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <script>
+      document.body.addEventListener("click", function() {
+        if (document.getElementById('loginmodal') === null) {
+          document.body.style.overflow = "";
+          document.body.style.height = "";
+        } else if (document.getElementById('loginmodal') !== null) {
+          document.body.style.overflow = "hidden";
+          document.body.style.height = "100%";
+        }
+      })
+    </script>
   </body>
 </html>

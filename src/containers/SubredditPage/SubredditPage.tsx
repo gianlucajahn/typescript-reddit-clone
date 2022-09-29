@@ -2,6 +2,7 @@ import React, { MouseEventHandler, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import CreatePost from '../../components/CreatePost/CreatePost';
 import SubredditHeadline from '../../components/SubredditHeadline/SubredditHeadline';
+import Grid from '../Grid/Grid';
 import { Subreddits, Subreddit } from '../../types/types';
 import './SubredditPage.scss';
 import SortBar from '../../components/SortBar/SortBar';
@@ -95,6 +96,13 @@ export default function SubredditPage (props: SubredditPageProps) {
               currentSort={currentSort}
               setSort={setSort}
             />
+
+            <Grid 
+              currentSub={currentSub}
+              loginModalState={loginModalState}
+              currentSort={currentSort}
+            />
+
           </div>
           <div className="sidebar">
             <div className="aboutCommunity">

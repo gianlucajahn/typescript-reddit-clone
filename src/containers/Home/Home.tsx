@@ -41,7 +41,7 @@ export default function Home (props: HomeProps) {
 
   return (
     <div className="home" style={{ maxHeight: loginModalState === "closed" ? "" : "92.75vh", overflow: loginModalState === "closed" ? "" : "hidden" }}>
-      <div className="feed">
+      <div className="feed" style={{ overflow: "hidden" }}>
         <CreatePost 
           randomIntToString={randomIntToString}
           userName={userName}

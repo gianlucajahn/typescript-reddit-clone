@@ -33,7 +33,7 @@ export default function LoginModal (props: LoginModalProps) {
   } = props;
 
   return (
-    <div className="topLevel">
+    <div className="topLevel" id="loginmodal">
         <div className="modalBackground">
 
         </div>
