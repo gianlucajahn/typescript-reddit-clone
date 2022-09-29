@@ -1,7 +1,7 @@
 const postArray = [
     {
         title: "I’d definitely love to see a movie similar to Chappie and Cyberpunk Edgerunners",
-        id: 0,
+        id: "0",
         type: "text",
         pinned: false,
         vote: 0,
@@ -50,7 +50,7 @@ const postArray = [
     },
     {
         title: "Movies that won the Razzie award that werent really that bad",
-        id: 1,
+        id: "1",
         type: "text",
         pinned: false,
         vote: 0,
@@ -295,6 +295,9 @@ const postArray = [
         subreddit: "leagueoflegends",
         upvotes: "34.8k",
         awards: [
+            "vibing",
+            "platinum",
+            "superheart",
             "gold",
             "helpful"
         ],
@@ -529,7 +532,10 @@ const postArray = [
         subreddit: "genshinimpact",
         upvotes: "905",
         awards: [
-
+            "superheart",
+            "gold",
+            "silver",
+            "wholesome"
         ],
         comments: [
             {
@@ -643,8 +649,12 @@ const postArray = [
         subreddit: "genshinimpact",
         upvotes: "2.1k",
         awards: [
-            "wholesome",
-            "silver"
+            "vibing",
+            "trinity",
+            "platinum",
+            "gold",
+            "silver",
+            "helpful"
         ],
         comments: [
             {
@@ -1904,6 +1914,9 @@ const postArray = [
         subreddit: "wallstreetbets",
         upvotes: "20",
         awards: [
+            "superheart",
+            "stonks",
+            "helpful",
             "wholesome"
         ],
         comments: [
@@ -1990,7 +2003,10 @@ const postArray = [
         upvotes: "843",
         awards: [
             "platinum",
-            "gold"
+            "stonks",
+            "helpfulgold",
+            "gold",
+            "wholesome"
         ],
         comments: [
             {
@@ -2151,9 +2167,11 @@ const postArray = [
         subreddit: "nasa",
         upvotes: "34.9k",
         awards: [
+            "vibing",
             "trinity",
             "rocket",
             "platinum",
+            "helpfulgold",
             "gold",
             "silver",
             "helpful",
@@ -3152,7 +3170,7 @@ const postArray = [
         author: "Half-BloodPrincess",
         time: "7 days ago",
         subreddit: "baking",
-        upvotes: "1.7k",
+        upvotes: "1.6k",
         awards: [
             "silver",
             "wholesome"

@@ -56,6 +56,7 @@ export default function Home (props: HomeProps) {
         <Grid 
           currentSub={currentSub}
           loginModalState={loginModalState}
+          currentSort={currentSort}
         />
       </div>
 
