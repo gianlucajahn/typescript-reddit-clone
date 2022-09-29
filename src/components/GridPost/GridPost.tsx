@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import { findAllInRenderedTree } from 'react-dom/test-utils';
 import { Subreddit } from '../../types/types';
 import './GridPost.scss';
 
 export interface GridPostProps {
     post: any,
-    currentSub: Subreddit | undefined
+    currentSub: Subreddit | undefined,
+    handleNavigate: MouseEventHandler
 }
 
 export default function GridPost (props: GridPostProps) {
   const {
     post,
-    currentSub
+    currentSub,
+    handleNavigate
   } = props;
 
   return (
@@ -29,8 +31,8 @@ export default function GridPost (props: GridPostProps) {
         </div>
         <div className="right">
             <div className="header">
-                <img className="subIcon" src={require(`../../resources/images/Communities/${post.subreddit}/icon.png`)} />
-                <h5 className="subName">r/{post.subreddit}</h5>
+                <img className="subIcon" src={require(`../../resources/images/Communities/${post.subreddit}/icon.png`)} id={post.subreddit} onClick={handleNavigate} />
+                <h5 className="subName" id={post.subreddit} onClick={handleNavigate}>r/{post.subreddit}</h5>
                 <h5 className="author">· Posted by <span>u/{post.author}</span></h5>
                 <h5 className="creationDate">· {post.time}</h5>
                 <div className="awards">

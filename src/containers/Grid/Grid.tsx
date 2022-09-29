@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import GridPost from '../../components/GridPost/GridPost';
 import { Subreddit } from '../../types/types';
 import bestOrder from '../../utils/bestOrder';
@@ -11,14 +11,16 @@ import './Grid.scss';
 export interface GridProps {
     currentSub: Subreddit | undefined,
     loginModalState: string,
-    currentSort: string
+    currentSort: string,
+    handleNavigate: MouseEventHandler
 }
 
 export default function Grid (props: GridProps) {
   const {
     currentSub,
     currentSort,
-    loginModalState
+    loginModalState,
+    handleNavigate
   } = props;
 
   return (
@@ -31,6 +33,7 @@ export default function Grid (props: GridProps) {
         return <GridPost 
                  post={postArray[num + 1]}
                  currentSub={currentSub} 
+                 handleNavigate={handleNavigate}
                 />
       })}
 
@@ -42,6 +45,7 @@ export default function Grid (props: GridProps) {
         return <GridPost 
                  post={postArray[num]}
                  currentSub={currentSub} 
+                 handleNavigate={handleNavigate}
                 />
       })}
 
@@ -53,6 +57,7 @@ export default function Grid (props: GridProps) {
         return <GridPost 
                  post={postArray[num]}
                  currentSub={currentSub} 
+                 handleNavigate={handleNavigate}
                 />
       })}
 
@@ -64,6 +69,7 @@ export default function Grid (props: GridProps) {
         return <GridPost 
                  post={postArray[num]}
                  currentSub={currentSub} 
+                 handleNavigate={handleNavigate}
                 />
       })}
 
@@ -75,6 +81,7 @@ export default function Grid (props: GridProps) {
         return <GridPost 
                  post={postArray[i]}
                  currentSub={currentSub} 
+                 handleNavigate={handleNavigate}
                 />
       })}
     </div>

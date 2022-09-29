@@ -101,6 +101,7 @@ export default function SubredditPage (props: SubredditPageProps) {
               currentSub={currentSub}
               loginModalState={loginModalState}
               currentSort={currentSort}
+              handleNavigate={handleNavigate}
             />
 
           </div>

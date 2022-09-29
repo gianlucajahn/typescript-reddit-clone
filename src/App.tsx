@@ -174,6 +174,7 @@ function App() {
 
   useEffect(() => {
     identifyCurrentSub(location.pathname);
+    window.scrollTo(0, 0);
   }, [location.pathname])
 
   const handleSubMembership = (e: React.MouseEvent) => {

@@ -15,7 +15,7 @@ export interface HomeProps {
   subreddits: Subreddits,
   topSubreddits: Subreddits,
   handleSubMembership: React.MouseEventHandler,
-  handleNavigate: MouseEventHandler<HTMLDivElement>,
+  handleNavigate: MouseEventHandler,
   navToSubmit: MouseEventHandler,
   loginStatus: boolean,
   setLoginModalState: any,
@@ -57,6 +57,7 @@ export default function Home (props: HomeProps) {
           currentSub={currentSub}
           loginModalState={loginModalState}
           currentSort={currentSort}
+          handleNavigate={handleNavigate}
         />
       </div>
 
