@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import CreatePost from '../../components/CreatePost/CreatePost';
 import SubredditHeadline from '../../components/SubredditHeadline/SubredditHeadline';
 import Grid from '../Grid/Grid';
-import { Subreddits, Subreddit } from '../../types/types';
+import { Subreddits, Subreddit, Post } from '../../types/types';
 import './SubredditPage.scss';
 import SortBar from '../../components/SortBar/SortBar';
 import Imprint from '../../components/Imprint/Imprint';
@@ -28,7 +28,7 @@ export interface SubredditPageProps {
     currentAnchor: number | undefined,
     expandRule: MouseEventHandler,
     loginModalState: string,
-    posts: 
+    posts: Post[]
 }
 
 export default function SubredditPage (props: SubredditPageProps) {
@@ -44,6 +44,7 @@ export default function SubredditPage (props: SubredditPageProps) {
     setLoginModalState,
     identifyCurrentSub,
     currentSub,
+    posts,
     currentAnchor,
     expandRule,
     setSort,
@@ -103,6 +104,7 @@ export default function SubredditPage (props: SubredditPageProps) {
               loginModalState={loginModalState}
               currentSort={currentSort}
               handleNavigate={handleNavigate}
+              posts={posts}
             />
 
           </div>

@@ -3,7 +3,7 @@ import './Home.scss';
 import CreatePost from '../../components/CreatePost/CreatePost';
 import SortBar from '../../components/SortBar/SortBar';
 import HomeSideBar from '../../components/HomeSideBar/HomeSideBar';
-import { Subreddit, Subreddits } from '../../types/types';
+import { Post, Subreddit, Subreddits } from '../../types/types';
 import Grid from '../Grid/Grid';
 
 export interface HomeProps {
@@ -19,7 +19,8 @@ export interface HomeProps {
   navToSubmit: MouseEventHandler,
   loginStatus: boolean,
   setLoginModalState: any,
-  loginModalState: string
+  loginModalState: string,
+  posts: Post[]
 }
 
 export default function Home (props: HomeProps) {
@@ -36,7 +37,8 @@ export default function Home (props: HomeProps) {
     navToSubmit,
     loginStatus,
     setLoginModalState,
-    loginModalState
+    loginModalState,
+    posts
   } = props;
 
   return (
@@ -58,6 +60,7 @@ export default function Home (props: HomeProps) {
           loginModalState={loginModalState}
           currentSort={currentSort}
           handleNavigate={handleNavigate}
+          posts={posts}
         />
       </div>
 
