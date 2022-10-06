@@ -27,7 +27,8 @@ export interface SubredditPageProps {
     selectAnchor: React.MouseEventHandler,
     currentAnchor: number | undefined,
     expandRule: MouseEventHandler,
-    loginModalState: string
+    loginModalState: string,
+    posts: 
 }
 
 export default function SubredditPage (props: SubredditPageProps) {

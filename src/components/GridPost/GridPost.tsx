@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from 'react';
+import React, { MouseEventHandler, useState } from 'react';
 import { findAllInRenderedTree } from 'react-dom/test-utils';
 import { Subreddit } from '../../types/types';
 import './GridPost.scss';
@@ -16,17 +16,45 @@ export default function GridPost (props: GridPostProps) {
     handleNavigate
   } = props;
 
+  const [hovered, setHovered] = useState({
+    upvote: false,
+    downvote: false
+  });
+
+  const handleHover = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+    if (target.id === "upvote") {
+        const newHoverState = {
+            upvote: !hovered.upvote,
+            downvote: hovered.downvote
+        };
+        setHovered(newHoverState);
+    } else if (target.id === "downvote") {
+        const newHoverState = {
+            upvote: hovered.upvote,
+            downvote: !hovered.downvote
+        };
+        setHovered(newHoverState);
+    }
+  }
+
   return (
     <div className="gridPost">
         <div className="left">
-            <button className="upvote-btn">
-                <img className="upvote" src={require(`../../resources/images/${post.vote === 0 || post.vote === -1 ? "upvote.png" : "upvoted.png"}`)} />
+            <button className="upvote-btn" onMouseEnter={handleHover} onMouseLeave={handleHover} id="upvote">
+                <img className="upvote" src={require(`../../resources/images/${post.vote === 0 || post.vote === -1 ? 
+                                                                               hovered.upvote ? "upvoteHover.png" : "upvote.png" 
+                                                                               : "upvoted.png"}`)} 
+                />
             </button>
 
             <h3 className="votes">{post.upvotes}</h3>
 
-            <button className="downvote-btn">
-                <img className="downvote" src={require(`../../resources/images/${post.vote === 0 || post.vote === 1 ? "downvote.png" : "downvoted.png"}`)} />
+            <button className="downvote-btn" onMouseEnter={handleHover} onMouseLeave={handleHover} id="downvote">
+                <img className="downvote" src={require(`../../resources/images/${post.vote === 0 || post.vote === 1 ?
+                                                                                 hovered.downvote ? "downvoteHover.png" : "downvote.png"  
+                                                                                 : "downvoted.png"}`)} 
+                />
             </button>
         </div>
         <div className="right">

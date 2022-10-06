@@ -9,6 +9,7 @@ import LoginModal from './components/LoginModal/LoginModal';
 import subredditArray from './utils/subredditArray';
 import SubredditPage from './containers/SubredditPage/SubredditPage';
 import { Subreddits, Subreddit } from "./types/types";
+import postArray from './utils/postArray';
 
 function App() {
   const location = useLocation();
@@ -93,6 +94,8 @@ function App() {
     true,
     true
   ];
+
+  const [posts, setPosts] = useState(postArray);
 
   useEffect(() => {
     if (searchTerm.length === 0) {
@@ -503,6 +506,7 @@ function App() {
           navToSubmit={navToSubmit}
           loginModalState={loginModalState}
           currentSub={currentSub}
+          posts={posts}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
@@ -522,6 +526,7 @@ function App() {
           currentAnchor={currentAnchor}
           expandRule={expandRule}
           loginModalState={loginModalState}
+          posts={posts}
         />} />
         <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -537,6 +542,7 @@ function App() {
           navToSubmit={navToSubmit}
           loginModalState={loginModalState}
           currentSub={currentSub}
+          posts={posts}
         />} />
         <Route path='/submit' element={<Home 
           randomIntToString={randomIntToString}
@@ -552,6 +558,7 @@ function App() {
           navToSubmit={navToSubmit}
           loginModalState={loginModalState}
           currentSub={currentSub}
+          posts={posts}
         />} />
         <Route path='*' element={<Home
           randomIntToString={randomIntToString}
@@ -567,6 +574,7 @@ function App() {
           navToSubmit={navToSubmit}
           loginModalState={loginModalState}
           currentSub={currentSub}
+          posts={posts}
         />} />
       </Routes>
     </div>

@@ -12,7 +12,7 @@ export type Subreddit = {
     online:          string;
     creationDate:    string;
     rules:           Rule[];
-    flairs:          Flair[];
+    flairs:          FlairSub[];
     anchors:         Anchor[] | undefined;
     buttonColor:     string;
     headerColor:     string;
@@ -27,7 +27,7 @@ export type Anchor = {
     selected: boolean
 } | undefined
 
-export type Flair = {
+export type FlairSub = {
     title: string;
     color: string;
 }
@@ -38,3 +38,32 @@ export type Rule = {
     title:    string;
     desc:     string;
 } | undefined
+
+export type Post = {
+    title:     string;
+    id:        string;
+    type:      string;
+    pinned:    boolean;
+    vote:      number;
+    src:       string;
+    author:    string;
+    time:      string;
+    subreddit: string;
+    upvotes:   string;
+    awards:    string[];
+    comments:  Comment[];
+    flair:     Flair;
+}
+
+export type Comment = {
+    author:  string;
+    vote:    number;
+    time:    string;
+    upvotes: string;
+    content: string;
+}
+
+export type Flair = {
+    title: string;
+    color: string;
+}
