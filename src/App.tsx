@@ -404,6 +404,29 @@ function App() {
     setLoginModalState(target.id);
   }
 
+  const handleLike = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+    const idString = target.parentElement!.id
+    const id = parseInt(idString);
+    let post = posts[id];
+
+    if (target.id === "upvote") {
+      if (post.vote === 1) {
+        post.vote = 0;
+      } else {
+        post.vote = 1;
+      }
+    } else if (target.id === "downvote") {
+      if (post.vote === -1) {
+        post.vote = 0;
+      } else {
+        post.vote = -1;
+      }
+    }
+
+    setPosts([...posts, posts[id] = post]);
+  }
+
   const selectAnchor = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     const index = Number(target.id);
@@ -507,6 +530,7 @@ function App() {
           loginModalState={loginModalState}
           currentSub={currentSub}
           posts={posts}
+          handleLike={handleLike}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
@@ -527,6 +551,7 @@ function App() {
           expandRule={expandRule}
           loginModalState={loginModalState}
           posts={posts}
+          handleLike={handleLike}
         />} />
         <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -543,6 +568,7 @@ function App() {
           loginModalState={loginModalState}
           currentSub={currentSub}
           posts={posts}
+          handleLike={handleLike}
         />} />
         <Route path='/submit' element={<Home 
           randomIntToString={randomIntToString}
@@ -559,6 +585,7 @@ function App() {
           loginModalState={loginModalState}
           currentSub={currentSub}
           posts={posts}
+          handleLike={handleLike}
         />} />
         <Route path='*' element={<Home
           randomIntToString={randomIntToString}
@@ -575,6 +602,7 @@ function App() {
           loginModalState={loginModalState}
           currentSub={currentSub}
           posts={posts}
+          handleLike={handleLike}
         />} />
       </Routes>
     </div>

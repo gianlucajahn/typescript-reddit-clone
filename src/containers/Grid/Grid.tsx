@@ -13,7 +13,8 @@ export interface GridProps {
     loginModalState: string,
     currentSort: string,
     posts: Post[],
-    handleNavigate: MouseEventHandler
+    handleNavigate: MouseEventHandler,
+    handleLike: MouseEventHandler
 }
 
 export default function Grid (props: GridProps) {
@@ -22,7 +23,8 @@ export default function Grid (props: GridProps) {
     currentSort,
     loginModalState,
     posts,
-    handleNavigate
+    handleNavigate,
+    handleLike
   } = props;
 
   return (
@@ -36,6 +38,7 @@ export default function Grid (props: GridProps) {
                  post={posts[num + 1]}
                  currentSub={currentSub} 
                  handleNavigate={handleNavigate}
+                 handleLike={handleLike}
                 />
       })}
 
@@ -45,9 +48,10 @@ export default function Grid (props: GridProps) {
         }
 
         return <GridPost 
-                 post={postArray[num]}
+                 post={posts[num]}
                  currentSub={currentSub} 
                  handleNavigate={handleNavigate}
+                 handleLike={handleLike}
                 />
       })}
 
@@ -57,9 +61,10 @@ export default function Grid (props: GridProps) {
         }
 
         return <GridPost 
-                 post={postArray[num]}
+                 post={posts[num]}
                  currentSub={currentSub} 
                  handleNavigate={handleNavigate}
+                 handleLike={handleLike}
                 />
       })}
 
@@ -69,9 +74,10 @@ export default function Grid (props: GridProps) {
         }
 
         return <GridPost 
-                 post={postArray[num]}
+                 post={posts[num]}
                  currentSub={currentSub} 
                  handleNavigate={handleNavigate}
+                 handleLike={handleLike}
                 />
       })}
 
@@ -81,9 +87,10 @@ export default function Grid (props: GridProps) {
         }
 
         return <GridPost 
-                 post={postArray[i]}
+                 post={posts[i]}
                  currentSub={currentSub} 
                  handleNavigate={handleNavigate}
+                 handleLike={handleLike}
                 />
       })}
     </div>

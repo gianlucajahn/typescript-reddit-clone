@@ -6,14 +6,16 @@ import './GridPost.scss';
 export interface GridPostProps {
     post: any,
     currentSub: Subreddit | undefined,
-    handleNavigate: MouseEventHandler
+    handleNavigate: MouseEventHandler,
+    handleLike: MouseEventHandler
 }
 
 export default function GridPost (props: GridPostProps) {
   const {
     post,
     currentSub,
-    handleNavigate
+    handleNavigate,
+    handleLike
   } = props;
 
   const [hovered, setHovered] = useState({
@@ -40,8 +42,8 @@ export default function GridPost (props: GridPostProps) {
 
   return (
     <div className="gridPost">
-        <div className="left">
-            <button className="upvote-btn" onMouseEnter={handleHover} onMouseLeave={handleHover} id="upvote">
+        <div className="left" id={post.id}>
+            <button className="upvote-btn" onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={handleLike} id="upvote">
                 <img className="upvote" src={require(`../../resources/images/${post.vote === 0 || post.vote === -1 ? 
                                                                                hovered.upvote ? "upvoteHover.png" : "upvote.png" 
                                                                                : "upvoted.png"}`)} 
@@ -50,7 +52,7 @@ export default function GridPost (props: GridPostProps) {
 
             <h3 className="votes">{post.upvotes}</h3>
 
-            <button className="downvote-btn" onMouseEnter={handleHover} onMouseLeave={handleHover} id="downvote">
+            <button className="downvote-btn" onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={handleLike} id="downvote">
                 <img className="downvote" src={require(`../../resources/images/${post.vote === 0 || post.vote === 1 ?
                                                                                  hovered.downvote ? "downvoteHover.png" : "downvote.png"  
                                                                                  : "downvoted.png"}`)} 
