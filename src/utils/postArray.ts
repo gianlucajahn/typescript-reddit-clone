@@ -1078,7 +1078,7 @@ const postArray = [
     },
     {
         title: "3 E-Commerce lessons For 2022 (after spending $21m on ads in 2021)",
-        id: "22",
+        id: "23",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1124,7 +1124,7 @@ const postArray = [
     },
     {
         title: "Highest number of puts/bearish contracts (33million) were purchased by traders on Friday - the most ever in a single day.",
-        id: "23",
+        id: "24",
         type: "img",
         pinned: false,
         vote: 0,
@@ -1173,7 +1173,7 @@ const postArray = [
     },
     {
         title: "Charting the Global Economy: 90 Central Banks Have Increased Borrowing Costs This Year, 10 in the last 2 weeks",
-        id: "24",
+        id: "25",
         type: "img",
         pinned: false,
         vote: 0,
@@ -1201,7 +1201,7 @@ const postArray = [
     },
     {
         title: "What are your bug bounties?",
-        id: "25",
+        id: "26",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1257,7 +1257,7 @@ const postArray = [
     },
     {
         title: "Ouch!",
-        id: "26",
+        id: "27",
         type: "img",
         pinned: false,
         vote: 0,
@@ -1306,7 +1306,7 @@ const postArray = [
     },
     {
         title: "Color themes",
-        id: "27",
+        id: "28",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1348,7 +1348,7 @@ const postArray = [
     },
     {
         title: "Its a feature, not a bug...",
-        id: "28",
+        id: "29",
         type: "img",
         pinned: false,
         vote: 0,
@@ -1384,7 +1384,7 @@ const postArray = [
     },
     {
         title: "Its a feature, not a bug...",
-        id: "29",
+        id: "30",
         type: "img",
         pinned: false,
         vote: 0,
@@ -1412,7 +1412,7 @@ const postArray = [
     },
     {
         title: "Can I get some guidance on using OpenSimplex noise for random terrain?",
-        id: "30",
+        id: "31",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1440,7 +1440,7 @@ const postArray = [
     },
     {
         title: "Fresh off passing Google and Microsoft interviews, I put together some notes and advice for Leetcode interview prep that I hope can help you. Appreciate any thoughts!",
-        id: "31",
+        id: "32",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1506,7 +1506,7 @@ const postArray = [
     },
     {
         title: "I am amazed at the clear, concise and eloquent answers on this sub. More and more I realize that being able to communicate, both written and verbally, is an essential skill for programmers. Is there any way you can actively improve this in your experience?",
-        id: "32",
+        id: "33",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1549,7 +1549,7 @@ const postArray = [
     },
     {
         title: "You must learn to think like a programmer, not just learn it.",
-        id: "33",
+        id: "34",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1584,7 +1584,7 @@ const postArray = [
     },
     {
         title: "Scared of failure",
-        id: "34",
+        id: "35",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1633,7 +1633,7 @@ const postArray = [
     },
     {
         title: "TIL the capstone of an ancient Egyptian pyramid was found in 1900, it's made of black basalt and weighs 4.5 tonnes .",
-        id: "35",
+        id: "36",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1675,7 +1675,7 @@ const postArray = [
     },
     {
         title: "TIL former Boston Red Sox pitcher Hideki Okajima's unique pitching motion was inspired by a character in Yoishi Takashi's Manga Ace! Okajima believed the motion would make him throw harder.",
-        id: "36",
+        id: "37",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1731,7 +1731,7 @@ const postArray = [
     },
     {
         title: "TIL The founder of Sony hired an outspoken critic of their products so they could make better products. 20 years later, he became the president of Sony.",
-        id: "37",
+        id: "38",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1767,7 +1767,7 @@ const postArray = [
     },
     {
         title: "TIL the observation of the comet Kohoutek helped to support the dirty snowball hypothesis about the composition of comet nuclei. The comet was a disappointment to the public, however, because early projections for its brightness had been too optimistic.",
-        id: "38",
+        id: "39",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1809,7 +1809,7 @@ const postArray = [
     },
     {
         title: "TIL Asthma is a disease of the lower airways of the lungs that affects between 1 and 5% of cats.",
-        id: "39",
+        id: "40",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1837,7 +1837,7 @@ const postArray = [
     },
     {
         title: "ALL-IN BBBY. I said it before. I am not selling until I land ON the moon (Part 2)",
-        id: "40",
+        id: "41",
         type: "img",
         pinned: false,
         vote: 0,
@@ -1904,7 +1904,7 @@ const postArray = [
     },
     {
         title: "Stocks and options trades to watch for September 26 2022 as major Hurricane Ian approaches Florida 🌀",
-        id: "41",
+        id: "42",
         type: "text",
         pinned: false,
         vote: 0,
@@ -1949,7 +1949,7 @@ const postArray = [
     },
     {
         title: "It’s treason then",
-        id: "42",
+        id: "43",
         type: "img",
         pinned: false,
         vote: 0,
@@ -1992,7 +1992,7 @@ const postArray = [
     },
     {
         title: "Used some of my GME tendies to buy Nintendo Switches from Gamestop, then donated them to a Children's Hospital",
-        id: "43",
+        id: "44",
         type: "text",
         pinned: false,
         vote: 0,
@@ -2045,7 +2045,7 @@ const postArray = [
     },
     {
         title: "So you're telling me there's a chance",
-        id: "44",
+        id: "45",
         type: "img",
         pinned: false,
         vote: 0,
@@ -2080,7 +2080,7 @@ const postArray = [
     },
     {
         title: "Some sketches I did this week while visiting SLS.",
-        id: "45",
+        id: "46",
         type: "img",
         pinned: false,
         vote: 0,
@@ -2122,7 +2122,7 @@ const postArray = [
     },
     {
         title: "Looking for high quality photo of ISS, any ideas?",
-        id: "46",
+        id: "47",
         type: "text",
         pinned: false,
         vote: 0,
@@ -2157,7 +2157,7 @@ const postArray = [
     },
     {
         title: "Completing the Collection as a Gift (ISO High (printable) quality ISS picture)",
-        id: "47",
+        id: "48",
         type: "img",
         pinned: false,
         vote: 0,
@@ -2200,7 +2200,7 @@ const postArray = [
     },
     {
         title: "Ames contract tech jobs?",
-        id: "48",
+        id: "49",
         type: "text",
         pinned: false,
         vote: 0,
@@ -2235,7 +2235,7 @@ const postArray = [
     },
     {
         title: "Can anyone please explain to me what happens to the rocket when its boosters detach, and why does it create a fiery shockwave like air when it separates. (Just curious and sorry for my bad English)",
-        id: "49",
+        id: "50",
         type: "img",
         pinned: false,
         vote: 0,
@@ -2291,7 +2291,7 @@ const postArray = [
     },
     {
         title: "So many people recommended Piranesi to me",
-        id: "50",
+        id: "51",
         type: "text",
         pinned: false,
         vote: 0,
@@ -2341,7 +2341,7 @@ const postArray = [
     },
     {
         title: "East of Eden - John Steinbeck - Don't let the Biblical references in the story turn you away.",
-        id: "51",
+        id: "52",
         type: "text",
         pinned: false,
         vote: 0,
@@ -2384,7 +2384,7 @@ const postArray = [
     },
     {
         title: "Just finished reading 'The book thief'.",
-        id: "52",
+        id: "53",
         type: "text",
         pinned: false,
         vote: 0,
@@ -2440,7 +2440,7 @@ const postArray = [
     },
     {
         title: "Owner of an Indie Bookstore here: I’m crying tears of joy over peoples response to Amazon Prime Days.",
-        id: "53",
+        id: "54",
         type: "text",
         pinned: false,
         vote: 0,
@@ -2486,7 +2486,7 @@ const postArray = [
     },
     {
         title: "Unpopular opinion: if it’s your own copy of a book I don’t get why dog-earing is such a big deal",
-        id: "54",
+        id: "55",
         type: "text",
         pinned: false,
         vote: 0,
@@ -2522,7 +2522,7 @@ const postArray = [
     },
     {
         title: "Gun run can be fun, but most of the matches look like this.",
-        id: "55",
+        id: "56",
         type: "img",
         pinned: false,
         vote: 0,
@@ -2571,7 +2571,7 @@ const postArray = [
     },
     {
         title: "Need advice to get better in general",
-        id: "56",
+        id: "57",
         type: "text",
         pinned: false,
         vote: 0,
@@ -2606,7 +2606,7 @@ const postArray = [
     },
     {
         title: "Need advice to get better in general",
-        id: "57",
+        id: "58",
         type: "img",
         pinned: false,
         vote: 0,
@@ -2664,7 +2664,7 @@ const postArray = [
     },
     {
         title: "Gun Run is so much fun. My only gripe is that the Kraber and sentinel are not present.. Thoughts?",
-        id: "58",
+        id: "59",
         type: "img",
         pinned: false,
         vote: 0,
@@ -2706,7 +2706,7 @@ const postArray = [
     },
     {
         title: "Still think this should be a thing in apex",
-        id: "59",
+        id: "60",
         type: "img",
         pinned: false,
         vote: 0,
@@ -2766,7 +2766,7 @@ const postArray = [
     },
     {
         title: "Upcoming changes to our content policy, our board, and where we’re going from here",
-        id: "60",
+        id: "61",
         type: "text",
         pinned: false,
         vote: 0,
@@ -2818,7 +2818,7 @@ const postArray = [
     },
     {
         title: "Imposters on Reddit",
-        id: "61",
+        id: "62",
         type: "text",
         pinned: false,
         vote: 0,
@@ -2861,7 +2861,7 @@ const postArray = [
     },
     {
         title: "Update regarding user profile transparency",
-        id: "62",
+        id: "63",
         type: "text",
         pinned: false,
         vote: 0,
@@ -2917,7 +2917,7 @@ const postArray = [
     },
     {
         title: "Revamping the Quarantine Function",
-        id: "63",
+        id: "64",
         type: "text",
         pinned: false,
         vote: 0,
@@ -2960,7 +2960,7 @@ const postArray = [
     },
     {
         title: "We had a security incident. Here's what you need to know.",
-        id: "64",
+        id: "65",
         type: "text",
         pinned: false,
         vote: 0,
@@ -3013,7 +3013,7 @@ const postArray = [
     },
     {
         title: "My enchanted forest cake. There's a black forest cake inside.",
-        id: "65",
+        id: "66",
         type: "img",
         pinned: false,
         vote: 0,
@@ -3063,7 +3063,7 @@ const postArray = [
     },
     {
         title: "I’m a professional house painter and I made these to thank the women at our paint store. Chocolate cupcakes with vanilla smbc and semi sweet shavings on top.",
-        id: "66",
+        id: "67",
         type: "img",
         pinned: false,
         vote: 0,
@@ -3105,7 +3105,7 @@ const postArray = [
     },
     {
         title: "The Great British Bake Along - Week Two! Adorable Thai tea frog macarons 💚",
-        id: "67",
+        id: "68",
         type: "img",
         pinned: false,
         vote: 0,
@@ -3162,7 +3162,7 @@ const postArray = [
     },
     {
         title: "My first ever attempt at making cookies from scratch.",
-        id: "68",
+        id: "69",
         type: "img",
         pinned: false,
         vote: 0,
@@ -3205,7 +3205,7 @@ const postArray = [
     },
     {
         title: "I made Encanto sugar cookies",
-        id: "69",
+        id: "70",
         type: "img",
         pinned: false,
         vote: 0,
@@ -3254,7 +3254,7 @@ const postArray = [
     },
     {
         title: "We did it my dudes",
-        id: "70",
+        id: "71",
         type: "text",
         pinned: false,
         vote: 0,
@@ -3296,7 +3296,7 @@ const postArray = [
     },
     {
         title: "Galaxy core captured in wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿",
-        id: "71",
+        id: "72",
         type: "img",
         pinned: false,
         vote: 0,
@@ -3348,7 +3348,7 @@ const postArray = [
     },
     {
         title: "Solar prominences and a huge filament [OC]",
-        id: "72",
+        id: "73",
         type: "img",
         pinned: false,
         vote: 0,
@@ -3384,7 +3384,7 @@ const postArray = [
     },
     {
         title: "Camping in the mountains of Utah",
-        id: "73",
+        id: "74",
         type: "img",
         pinned: false,
         vote: 0,
@@ -3433,7 +3433,7 @@ const postArray = [
     },
     {
         title: "Looking for Islamic and Chinese names for features on the moon",
-        id: "74",
+        id: "75",
         type: "text",
         pinned: false,
         vote: 0,
@@ -3461,7 +3461,7 @@ const postArray = [
     },
     {
         title: "The NFL is replacing the Pro Bowl with weeklong skills competitions and a flag football game, The Associated Press has learned.",
-        id: "75",
+        id: "76",
         type: "text",
         pinned: false,
         vote: 0,
@@ -3510,7 +3510,7 @@ const postArray = [
     },
     {
         title: "Ahead of Thursday night's Miami vs. Cincinnati game, Dolphins WR Tyreek Hill on Bengals CB Eli Apple: 'I can't wait to go against Eli Apple. I owe you boy.'",
-        id: "76",
+        id: "77",
         type: "img",
         pinned: false,
         vote: 0,
@@ -3545,7 +3545,7 @@ const postArray = [
     },
     {
         title: "[MLB] Albert Pujols has hit career HR number 700.",
-        id: "77",
+        id: "78",
         type: "img",
         pinned: false,
         vote: 0,
@@ -3587,7 +3587,7 @@ const postArray = [
     },
     {
         title: "Roger Federer bids farewell after an emotional night at his last career match",
-        id: "78",
+        id: "79",
         type: "text",
         pinned: false,
         vote: 0,
@@ -3622,7 +3622,7 @@ const postArray = [
     },
     {
         title: "Pittsburgh Steelers rookie George Pickens with an insane diving one-handed catch",
-        id: "79",
+        id: "80",
         type: "img",
         pinned: false,
         vote: 0,
@@ -3678,7 +3678,7 @@ const postArray = [
     },
     {
         title: "How the f*ck is anyone actually calculating taxes on this ****?",
-        id: "80",
+        id: "81",
         type: "text",
         pinned: false,
         vote: 0,
@@ -3734,7 +3734,7 @@ const postArray = [
     },
     {
         title: "Can we trust CMC?",
-        id: "81",
+        id: "82",
         type: "text",
         pinned: false,
         vote: 0,
@@ -3776,7 +3776,7 @@ const postArray = [
     },
     {
         title: "Spice up your resume with your crypto expertise",
-        id: "82",
+        id: "83",
         type: "text",
         pinned: false,
         vote: 0,
@@ -3826,7 +3826,7 @@ const postArray = [
     },
     {
         title: "A 23-year-old, self-described 'Crypto King' reportedly had his Lamborghini, BMWs, and McLarens seized after investors sued him claiming he stole $35 million",
-        id: "83",
+        id: "84",
         type: "text",
         pinned: false,
         vote: 0,
@@ -3869,7 +3869,7 @@ const postArray = [
     },
     {
         title: "Daily General Discussion - September 26, 2022 (GMT+0)",
-        id: "84",
+        id: "85",
         type: "text",
         pinned: false,
         vote: 0,
