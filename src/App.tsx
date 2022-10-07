@@ -413,13 +413,50 @@ function App() {
     if (target.id === "upvote") {
       if (post.vote === 1) {
         post.vote = 0;
+
+        if (!post.upvotes.includes('k')) {
+          let currentUpvotesString = post.upvotes;
+          let currentUpvotes = parseInt(currentUpvotesString);
+          currentUpvotes -= 1;
+          let newUpvotes = currentUpvotes.toString();
+          post.upvotes = newUpvotes;
+        }
       } else {
+        if (!post.upvotes.includes('k')) {
+          const oldVotes = post.vote;
+          const newVotes = 1;
+          let currentUpvotesString = post.upvotes;
+          let currentUpvotes = parseInt(currentUpvotesString);
+          currentUpvotes = currentUpvotes + (newVotes - oldVotes);
+          let newUpvotes = currentUpvotes.toString();
+          post.upvotes = newUpvotes;
+        }
+
         post.vote = 1;
       }
+
     } else if (target.id === "downvote") {
       if (post.vote === -1) {
         post.vote = 0;
+
+        if (!post.upvotes.includes('k')) {
+          let currentUpvotesString = post.upvotes;
+          let currentUpvotes = parseInt(currentUpvotesString);
+          currentUpvotes += 1;
+          let newUpvotes = currentUpvotes.toString();
+          post.upvotes = newUpvotes;
+        }
       } else {
+        if (!post.upvotes.includes('k')) {
+          const oldVotes = post.vote;
+          const newVotes = -1;
+          let currentUpvotesString = post.upvotes;
+          let currentUpvotes = parseInt(currentUpvotesString);
+          currentUpvotes = currentUpvotes + (newVotes - oldVotes);
+          let newUpvotes = currentUpvotes.toString();
+          post.upvotes = newUpvotes;
+        }
+        
         post.vote = -1;
       }
     }
