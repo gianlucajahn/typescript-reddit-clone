@@ -8,8 +8,9 @@ import { isReturnStatement, reduceEachTrailingCommentRange } from 'typescript';
 import LoginModal from './components/LoginModal/LoginModal';
 import subredditArray from './utils/subredditArray';
 import SubredditPage from './containers/SubredditPage/SubredditPage';
-import { Subreddits, Subreddit } from "./types/types";
+import { Subreddits, Subreddit, Post } from "./types/types";
 import postArray from './utils/postArray';
+import IndividualPost from './containers/individualPost/individualPost';
 
 function App() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
   const [currentAnchor, setCurrentAnchor] = useState(Number);
   const [selectedAnchor, setSelectedAnchor] = useState("");
   const [currentSub, setCurrentSub] = useState<Subreddit>();
+  const [currentPost, setCurrentPost] = useState<Post>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
   const [randomIntToString, setRandomIntToString] = useState(randomInt.toString());
@@ -180,6 +182,14 @@ function App() {
     window.scrollTo(0, 0);
   }, [location.pathname])
 
+  useEffect(() => {
+    if (loginModalState === "closed") {
+      return;
+    }
+
+    window.scrollTo(0, 0);
+  }, [loginModalState])
+
   const handleSubMembership = (e: React.MouseEvent) => {
     if (loginStatus === false) {
       setLoginModalState("login");
@@ -273,13 +283,31 @@ function App() {
       }
   }
 
+  const openPost = (e: React.MouseEvent) => {
+    let target = e.target as HTMLElement | null;
+    if (target!.classList.contains("dontOpenPost")) {
+      return;
+    }
+
+    while (target!.classList.contains("gridPost") === false) {
+      target = target!.parentElement;
+    }
+
+    const idString = target!.id;
+    const id = parseInt(idString);
+    const post = posts[id];
+    const subreddit = subreddits.find(sub => sub.title === post.subreddit);
+    setCurrentPost(post);
+    setCurrentSub(subreddit);
+    navigate(`/r/${subreddit?.title}/${post.id}`);
+  }
+
   const handleNavigate = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     const subIndex = subreddits.findIndex(element => element.title === target.id);
     if (target.classList.contains('join') || target.classList.contains('close')) {
       return;
     }
-    console.log(subreddits[subIndex]);
     setCurrentSub(subreddits[subIndex]);
 
     if (target.classList.contains('favorite')) {
@@ -405,8 +433,14 @@ function App() {
   }
 
   const handleLike = (e: React.MouseEvent) => {
+    if (loginStatus === false) {
+      setLoginModalState("login");
+      return;
+    }
+
     const target = e.currentTarget;
-    const idString = target.parentElement!.id
+    const targetParent = target.parentElement;
+    const idString = targetParent!.parentElement!.id
     const id = parseInt(idString);
     let post = posts[id];
 
@@ -568,6 +602,7 @@ function App() {
           currentSub={currentSub}
           posts={posts}
           handleLike={handleLike}
+          openPost={openPost}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
@@ -589,6 +624,7 @@ function App() {
           loginModalState={loginModalState}
           posts={posts}
           handleLike={handleLike}
+          openPost={openPost}
         />} />
         <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -606,6 +642,7 @@ function App() {
           currentSub={currentSub}
           posts={posts}
           handleLike={handleLike}
+          openPost={openPost}
         />} />
         <Route path='/submit' element={<Home 
           randomIntToString={randomIntToString}
@@ -623,8 +660,9 @@ function App() {
           currentSub={currentSub}
           posts={posts}
           handleLike={handleLike}
+          openPost={openPost}
         />} />
-        <Route path='*' element={<Home
+        <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}
           userName={userName}
           currentSort={currentSort}
@@ -640,6 +678,7 @@ function App() {
           currentSub={currentSub}
           posts={posts}
           handleLike={handleLike}
+          currentPost={currentPost}
         />} />
       </Routes>
     </div>

@@ -18,6 +18,7 @@ export interface HomeProps {
   handleNavigate: MouseEventHandler,
   handleLike: MouseEventHandler,
   navToSubmit: MouseEventHandler,
+  openPost: MouseEventHandler,
   loginStatus: boolean,
   setLoginModalState: any,
   loginModalState: string,
@@ -33,6 +34,7 @@ export default function Home (props: HomeProps) {
     setSort,
     subreddits,
     topSubreddits,
+    openPost,
     handleSubMembership,
     handleLike,
     handleNavigate,
@@ -64,6 +66,7 @@ export default function Home (props: HomeProps) {
           handleNavigate={handleNavigate}
           posts={posts}
           handleLike={handleLike}
+          openPost={openPost}
         />
       </div>
 

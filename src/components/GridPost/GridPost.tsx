@@ -7,7 +7,8 @@ export interface GridPostProps {
     post: any,
     currentSub: Subreddit | undefined,
     handleNavigate: MouseEventHandler,
-    handleLike: MouseEventHandler
+    handleLike: MouseEventHandler,
+    openPost: MouseEventHandler
 }
 
 export default function GridPost (props: GridPostProps) {
@@ -15,7 +16,8 @@ export default function GridPost (props: GridPostProps) {
     post,
     currentSub,
     handleNavigate,
-    handleLike
+    handleLike,
+    openPost
   } = props;
 
   const [hovered, setHovered] = useState({
@@ -41,8 +43,8 @@ export default function GridPost (props: GridPostProps) {
   }
 
   return (
-    <div className="gridPost">
-        <div className="left" id={post.id}>
+    <div className="gridPost" id={post.id} onClick={openPost}>
+        <div className="left">
             <button className="upvote-btn" onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={handleLike} id="upvote">
                 <img className="upvote" src={require(`../../resources/images/${post.vote === 0 || post.vote === -1 ? 
                                                                                hovered.upvote ? "upvoteHover.png" : "upvote.png" 
@@ -61,9 +63,9 @@ export default function GridPost (props: GridPostProps) {
         </div>
         <div className="right">
             <div className="header">
-                <img className="subIcon" src={require(`../../resources/images/Communities/${post.subreddit}/icon.png`)} id={post.subreddit} onClick={handleNavigate} />
-                <h5 className="subName" id={post.subreddit} onClick={handleNavigate}>r/{post.subreddit}</h5>
-                <h5 className="author">· Posted by <span>u/{post.author}</span></h5>
+                <img className="subIcon dontOpenPost" src={require(`../../resources/images/Communities/${post.subreddit}/icon.png`)} id={post.subreddit} onClick={handleNavigate} />
+                <h5 className="subName dontOpenPost" id={post.subreddit} onClick={handleNavigate}>r/{post.subreddit}</h5>
+                <h5 className="author dontOpenPost">· Posted by <span>u/{post.author}</span></h5>
                 <h5 className="creationDate">· {post.time}</h5>
                 <div className="awards">
                     {post.awards.map((award: string, i: number) => {

@@ -20,6 +20,7 @@ export interface SubredditPageProps {
     handleSubMembership: React.MouseEventHandler,
     handleNavigate: MouseEventHandler<HTMLDivElement>,
     navToSubmit: MouseEventHandler,
+    openPost: MouseEventHandler,
     handleLike: MouseEventHandler,
     loginStatus: boolean,
     setLoginModalState: any,
@@ -47,6 +48,7 @@ export default function SubredditPage (props: SubredditPageProps) {
     currentSub,
     posts,
     currentAnchor,
+    openPost,
     expandRule,
     handleLike,
     setSort,
@@ -108,6 +110,7 @@ export default function SubredditPage (props: SubredditPageProps) {
               handleNavigate={handleNavigate}
               posts={posts}
               handleLike={handleLike}
+              openPost={openPost}
             />
 
           </div>
