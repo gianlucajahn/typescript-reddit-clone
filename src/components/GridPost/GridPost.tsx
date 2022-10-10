@@ -95,7 +95,7 @@ export default function GridPost (props: GridPostProps) {
             <div className="headline">
                 <h2 className="headline-text" style={{ width: currentPost === undefined ? "490px" : "640px" }}>
                     {post.title}
-                    {post.flair.title !== "none" ? <button className="flair" style={{ backgroundColor: post.flair.color }}>{post.flair.title}</button> : null}
+                    {post.flair.title !== "none" ? <button className="flair" style={{ backgroundColor: post.flair.color, zIndex: 1 }}>{post.flair.title}</button> : null}
                 </h2>
             </div>
 

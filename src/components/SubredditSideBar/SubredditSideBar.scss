@@ -1,6 +1,7 @@
 .sidebar {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     gap: 16px;
 
     .aboutCommunity {

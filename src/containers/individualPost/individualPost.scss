@@ -1,6 +1,5 @@
 .post-page {
     width: 100vw;
-    overflow-x: hidden;
     min-height: 100vh;
     z-index: 7;
     display: flex;
@@ -9,14 +8,15 @@
     align-items: center;
 
     .pageHeader {
-        margin-top: 49px;
+        top: 49px;
+        z-index: 8;
         background-color: black;
         height: 47px;
         box-sizing: border-box;
         display: flex;
         align-items: center;
         gap: 482px;
-        width: 66.7vw;
+        width: 1280px;
         margin-right: 15px;
         padding-left: 120px;
         position: sticky;
@@ -51,7 +51,7 @@
             align-items: center;
             gap: 8px;
             position: absolute;
-            left: 1110px;
+            right: 120px;
 
             .cross {
                 height: 16px;
@@ -66,8 +66,9 @@
     }
 
     .postContent {
+        margin-top: 49px;
         min-height: 90vh;
-        width: 66.7vw;
+        width: 1280px;
         box-sizing: border-box;
         margin-right: 15px;
         display: flex;
