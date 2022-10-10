@@ -1,0 +1,108 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .aboutCommunity {
+        background-color: white;
+        border: 1px solid #ccc;
+        width: 312px;
+        box-sizing: border-box;
+        border-radius: 4px;
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 12px 12px 12px;
+            align-items: center;
+            border-radius: 4px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+
+            h3 {
+                font-size: 14px;
+                font-family: "IBM Regular";
+                letter-spacing: 0.03em;
+                color: #ffffff;
+                padding-bottom: 2px;
+            }
+
+            .more {
+                height: .2575em;
+                padding: 8px 4px;
+                border: 1px transparent;
+                border-radius: 2px;
+                cursor: pointer;
+                transition: 0.15s all;
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.15)
+                }
+            }
+        }
+
+        .about {
+            font-size: 14px;
+            line-height: 1.475;
+            padding: 12px 16px 0px 11px;
+            font-family: "Noto Sans Regular";
+            color: #1a1a1b;
+        }
+
+        .createdAt {
+            display: flex;
+            gap: 8px;
+            padding: 11px 16px 0px 12px;
+
+            .cake {
+                height: 1.1387em;
+                width: 1.19em;
+            }
+
+            p {
+                font-size: 14px;
+                font-family: "Noto Sans Regular";
+                color: #737373;
+            }
+        }
+
+        .memberContainer {
+            display: flex;
+            justify-content: flex-start;
+            gap: 24px;
+            margin: 17px 14px 16px 11px;
+            padding: 16px 0px;
+            border-top: 1px solid rgba(26,26,27,0.07);
+            border-bottom: 1px solid rgba(26,26,27,0.07);
+
+            .memberCount p,
+            .onlineCount p,
+            .size p {
+                font-size: 16px;
+                font-family: "IBM";
+                color: #1a1a1b;
+                margin-bottom: 3px;
+            }
+
+            .memberCount h5,
+            .onlineCount h5,
+            .size h5 {
+                font-size: 12px;
+                font-family: "IBM Light";
+                color: #737373;
+            }
+        }
+
+        .createPost {
+            padding: 5px 0px 6px 0px;
+            border: 1px solid transparent;
+            border-radius: 9999px;
+            width: 92.2%;
+            margin: 0px 12px;
+            font-size: 14px;
+            color: white;
+            font-family: "Noto Sans Bold";
+            cursor: pointer;
+        }
+    }
+}

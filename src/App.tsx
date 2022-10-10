@@ -293,11 +293,14 @@ function App() {
 
   const openPost = (e: React.MouseEvent) => {
     let target = e.target as HTMLElement | null;
-    if (target!.classList.contains("dontOpenPost")) {
+    if (target!.classList.contains("dontOpenPost") || target!.classList.contains("upvote-btn") || target!.classList.contains("downvote-btn")) {
       return;
     }
 
     while (target!.classList.contains("gridPost") === false) {
+      if (target!.classList.contains("upvote-btn") || target!.classList.contains("downvote-btn")) {
+        return;
+      }
       target = target!.parentElement;
     }
 
