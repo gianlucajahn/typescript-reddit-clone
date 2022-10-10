@@ -32,7 +32,16 @@ export interface SubredditPageProps {
     expandRule: MouseEventHandler,
     loginModalState: string,
     posts: Post[],
-    currentPost: Post | undefined
+    currentPost: Post | undefined,
+    communityTheme: boolean,
+    communityOptions : boolean,
+    switchCommunityTheme: MouseEventHandler,
+    switchCommunityOptions: MouseEventHandler,
+    standardTheme: {
+      buttonColor: string,
+      headerColor: string,
+      banner: string
+    }
 }
 
 export default function SubredditPage (props: SubredditPageProps) {
@@ -51,6 +60,11 @@ export default function SubredditPage (props: SubredditPageProps) {
     currentSub,
     posts,
     currentAnchor,
+    communityOptions,
+    communityTheme,
+    standardTheme,
+    switchCommunityOptions,
+    switchCommunityTheme,
     openPost,
     expandRule,
     handleLike,
@@ -60,23 +74,6 @@ export default function SubredditPage (props: SubredditPageProps) {
     navToSubmit,
     selectAnchor
   } = props;
-
-  const [communityTheme, setCommunityTheme] = useState(true);
-  const [communityOptions, setCommunityOptions] = useState(false);
-
-  const switchCommunityOptions = (e: React.MouseEvent) => {
-    setCommunityOptions(!communityOptions);
-  }
-
-  const switchCommunityTheme = (e: React.MouseEvent) => {
-    setCommunityTheme(!communityTheme);
-  }
-
-  const standardTheme = {
-    buttonColor: "#0079d3",
-    headerColor: "#0079d3",
-    banner: "../../resources/images/Communities/todayilearned/banner.jpg",
-  }
 
   return (
     <div className="subredditPage" style={{ backgroundColor: communityTheme ?  currentSub?.backgroundColor : "#edeff1", height: loginModalState === "closed" ? "" : "100vh", overflow: loginModalState === "closed" ? "scroll" : "hidden" }}>
@@ -131,6 +128,7 @@ export default function SubredditPage (props: SubredditPageProps) {
             userName={userName}
             switchCommunityOptions={switchCommunityOptions}
             communityOptions={communityOptions}
+            currentPost={currentPost}
           />
       </div>
     </div>

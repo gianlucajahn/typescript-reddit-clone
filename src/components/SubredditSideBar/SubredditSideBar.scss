@@ -106,3 +106,20 @@
         }
     }
 }
+
+.postHead {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    padding: 11px 12px 1px 12px;
+
+    .head-img {
+        height: 52px;
+    }
+
+    .head-p {
+        font-size: 16px;
+        font-family: "IBM";
+        color: #1a1a1b;
+    }
+}

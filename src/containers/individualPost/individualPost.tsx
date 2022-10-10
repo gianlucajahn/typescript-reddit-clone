@@ -3,6 +3,7 @@ import { Subreddits, Subreddit, Post } from '../../types/types';
 import { ReactComponent as Cross } from "../../resources/images/cross.svg";
 import './individualPost.scss';
 import GridPost from '../../components/GridPost/GridPost';
+import SubredditSideBar from '../../components/SubredditSideBar/SubredditSideBar';
 
 export interface individualPostProps {
     randomIntToString: string,
@@ -22,6 +23,16 @@ export interface individualPostProps {
     loginModalState: string,
     posts: Post[],
     currentPost: Post | undefined,
+    communityTheme: boolean,
+    communityOptions : boolean,
+    expandRule: MouseEventHandler,
+    switchCommunityTheme: MouseEventHandler,
+    switchCommunityOptions: MouseEventHandler,
+    standardTheme: {
+      buttonColor: string,
+      headerColor: string,
+      banner: string
+    }
 }
 
 export default function IndividualPost (props: individualPostProps) {
@@ -38,6 +49,12 @@ export default function IndividualPost (props: individualPostProps) {
     handleLike,
     navToSubmit,
     openPost,
+    expandRule,
+    switchCommunityOptions,
+    switchCommunityTheme,
+    communityOptions,
+    communityTheme,
+    standardTheme,
     loginStatus,
     setLoginModalState,
     loginModalState,
@@ -73,7 +90,20 @@ export default function IndividualPost (props: individualPostProps) {
         </div>
 
         <div className="right">
-
+          <SubredditSideBar
+            communityTheme={communityTheme}
+            currentSub={currentSub}
+            standardTheme={standardTheme}
+            loginStatus={loginStatus}
+            randomIntToString={randomIntToString}
+            navToSubmit={navToSubmit}
+            switchCommunityTheme={switchCommunityTheme}
+            expandRule={expandRule}
+            userName={userName}
+            switchCommunityOptions={switchCommunityOptions}
+            communityOptions={communityOptions}
+            currentPost={currentPost}
+          />
         </div>
       </div>
     </div>

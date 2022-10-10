@@ -27,6 +27,8 @@ function App() {
   const [currentPost, setCurrentPost] = useState<Post>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
+  const [communityTheme, setCommunityTheme] = useState(true);
+  const [communityOptions, setCommunityOptions] = useState(false);
   const [randomIntToString, setRandomIntToString] = useState(randomInt.toString());
   const [currentSort, setCurrentSort] = useState("best");
   const [loginModalState, setLoginModalState] = useState("closed");
@@ -554,6 +556,20 @@ function App() {
     }
   }
 
+  const switchCommunityOptions = (e: React.MouseEvent) => {
+    setCommunityOptions(!communityOptions);
+  }
+
+  const switchCommunityTheme = (e: React.MouseEvent) => {
+    setCommunityTheme(!communityTheme);
+  }
+
+  const standardTheme = {
+    buttonColor: "#0079d3",
+    headerColor: "#0079d3",
+    banner: "../../resources/images/Communities/todayilearned/banner.jpg",
+  }
+
   return (
     <div onClick={checkDropdown} style={{ maxHeight: loginModalState === "closed" ? "" : "100vh !important", overflow: loginModalState === "closed" ? "" : "hidden" }} id="app">
       {loginModalState !== "closed" ? 
@@ -638,6 +654,11 @@ function App() {
           handleLike={handleLike}
           currentPost={currentPost}
           openPost={openPost}
+          communityOptions={communityOptions}
+          communityTheme={communityTheme}
+          switchCommunityOptions={switchCommunityOptions}
+          switchCommunityTheme={switchCommunityTheme}
+          standardTheme={standardTheme}
         />} />
         <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -695,6 +716,12 @@ function App() {
           handleLike={handleLike}
           currentPost={currentPost}
           openPost={openPost}
+          communityOptions={communityOptions}
+          communityTheme={communityTheme}
+          switchCommunityOptions={switchCommunityOptions}
+          switchCommunityTheme={switchCommunityTheme}
+          standardTheme={standardTheme}
+          expandRule={expandRule}
         />} />
       </Routes>
     </div>

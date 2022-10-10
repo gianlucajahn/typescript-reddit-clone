@@ -1,7 +1,8 @@
 import React, { MouseEventHandler } from 'react';
-import { Subreddit } from '../../types/types';
+import { Post, Subreddit } from '../../types/types';
 import { ReactComponent as Pen } from "../../resources/images/pen.svg";
 import Imprint from '../Imprint/Imprint';
+import './SubredditSideBar.scss';
 
 export interface SubredditSideBarProps {
     communityTheme: boolean,
@@ -15,12 +16,14 @@ export interface SubredditSideBarProps {
     userName: string,
     switchCommunityOptions: MouseEventHandler,
     communityOptions: boolean,
+    currentPost: Post | undefined,
 }
 
 export default function SubredditSideBar (props: SubredditSideBarProps) {
   const {
     communityTheme,
     currentSub,
+    currentPost,
     standardTheme,
     loginStatus,
     randomIntToString,
@@ -35,11 +38,17 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
   return (
     <div className="sidebar">
       <div className="aboutCommunity">
-          <div className="head" style={{ backgroundColor: communityTheme ? currentSub?.headerColor : standardTheme.headerColor }}>
-            <h3>About Community</h3>
-            <img className="more" src={require("../../resources/images/more_white.PNG")} />
+          <div className="head" style={{ backgroundColor: communityTheme ? currentSub?.headerColor : standardTheme.headerColor, height: currentPost === undefined ? "" : "9px" }}>
+            {currentPost === undefined ? <h3>About Community</h3> : null}
+            {currentPost === undefined ? <img className="more" src={require("../../resources/images/more_white.PNG")} /> : null}
           </div>
 
+          {currentPost !== undefined && 
+          <div className="postHead">
+            <img className="head-img" src={require(`../../resources/images/Communities/${currentPost.subreddit}/icon.png`)} />
+            <p className="head-p">r/{currentPost.subreddit}</p>
+          </div>
+          }
           <p className="about">{currentSub?.about}</p>
           <div className="createdAt">
             <img className="cake" src={require("../../resources/images/cake.png")} />
