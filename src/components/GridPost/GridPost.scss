@@ -131,7 +131,6 @@
                 font-family: "IBM Regular";
                 color: #222222;
                 margin-right: 10px;
-                width: 490px;
 
                 button {
                     border: 1px solid transparent;
@@ -156,7 +155,6 @@
         .content {
             display: flex;
             margin-top: 5px;
-            width: 555px;
 
             p.src {
                 font-size: 14px;
@@ -167,7 +165,6 @@
             }
 
             img.src {
-                max-width: 597px;
                 justify-self: center;
             }
         }
@@ -199,6 +196,28 @@
                 img {
                     width: 18px;
                     height: max-content;
+                }
+            }
+
+            .people {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                cursor: default;
+                margin-left: 150px;
+                padding-bottom: 1px;
+
+                .people-icon {
+                    height: 23px;
+                }
+
+                .people-count {
+                    padding-bottom: 2px;
+                    font-size: 12px;
+                    color: #7C7C7C;
+                    font-family: "Noto Sans Regular";
+                    cursor: text;
                 }
             }
         }

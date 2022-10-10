@@ -22,7 +22,8 @@ export interface HomeProps {
   loginStatus: boolean,
   setLoginModalState: any,
   loginModalState: string,
-  posts: Post[]
+  posts: Post[],
+  currentPost: Post | undefined
 }
 
 export default function Home (props: HomeProps) {
@@ -31,6 +32,7 @@ export default function Home (props: HomeProps) {
     userName,
     currentSort,
     currentSub,
+    currentPost,
     setSort,
     subreddits,
     topSubreddits,
@@ -61,6 +63,7 @@ export default function Home (props: HomeProps) {
 
         <Grid 
           currentSub={currentSub}
+          currentPost={currentPost}
           loginModalState={loginModalState}
           currentSort={currentSort}
           handleNavigate={handleNavigate}

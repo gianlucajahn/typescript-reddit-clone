@@ -1,11 +1,12 @@
-import React, { MouseEventHandler, useState } from 'react';
+import React, { MouseEventHandler, useEffect, useState } from 'react';
 import { findAllInRenderedTree } from 'react-dom/test-utils';
-import { Subreddit } from '../../types/types';
+import { Post, Subreddit } from '../../types/types';
 import './GridPost.scss';
 
 export interface GridPostProps {
     post: any,
     currentSub: Subreddit | undefined,
+    currentPost: Post | undefined,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
     openPost: MouseEventHandler
@@ -15,6 +16,7 @@ export default function GridPost (props: GridPostProps) {
   const {
     post,
     currentSub,
+    currentPost,
     handleNavigate,
     handleLike,
     openPost
@@ -24,6 +26,8 @@ export default function GridPost (props: GridPostProps) {
     upvote: false,
     downvote: false
   });
+
+  const [viewers, setViewers] = useState(Math.floor(Math.random() * 50 + 12));
 
   const handleHover = (e: React.MouseEvent) => {
     const target = e.currentTarget;
@@ -42,8 +46,22 @@ export default function GridPost (props: GridPostProps) {
     }
   }
 
+  const changeViewers = (e: any) => {
+    const outcome = Math.floor(Math.random() * 2);
+    console.log(outcome)
+    if (outcome === 0) {
+        setViewers(viewers => viewers - 1);
+    } else if (outcome === 1) {
+        setViewers(viewers  => viewers + 1);
+    }
+  }
+
+  useEffect(() => {
+    setInterval(changeViewers, 6000);
+  }, [])
+
   return (
-    <div className="gridPost" id={post.id} onClick={openPost}>
+    <div className="gridPost" id={post.id} onClick={openPost} style={{ width: currentPost === undefined ? "640px" : "742px" }}>
         <div className="left">
             <button className="upvote-btn" onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={handleLike} id="upvote">
                 <img className="upvote" src={require(`../../resources/images/${post.vote === 0 || post.vote === -1 ? 
@@ -75,7 +93,7 @@ export default function GridPost (props: GridPostProps) {
             </div>
 
             <div className="headline">
-                <h2 className="headline-text">
+                <h2 className="headline-text" style={{ width: currentPost === undefined ? "490px" : "640px" }}>
                     {post.title}
                     {post.flair.title !== "none" ? <button className="flair" style={{ backgroundColor: post.flair.color }}>{post.flair.title}</button> : null}
                 </h2>
@@ -83,7 +101,7 @@ export default function GridPost (props: GridPostProps) {
 
             <div className="content">
                 {post.type === "text" ? 
-                <p className="src">{post.src}</p> : <img className="src" src={require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`)} />}
+                <p className="src" style={{ width: currentPost === undefined ? "555px" : "662px" }}>{post.src}</p> : <img className="src" src={require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`)} style={{ maxWidth: currentPost === undefined ? "597px" : "699px" }} />}
             </div>
 
             <div className="footer">
@@ -110,6 +128,11 @@ export default function GridPost (props: GridPostProps) {
                 <div className="more footer-div">
                     <img className="more-icon" src={require("../../resources/images/moregrey.png")} />
                 </div>
+
+                {currentPost === undefined ? null : <div className="people">
+                    <p className="people-count">{viewers} people here</p>
+                    <img className="people-icon" src={require("../../resources/images/people.png")} />
+                </div>}
             </div>
         </div>
     </div>

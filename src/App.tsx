@@ -111,6 +111,14 @@ function App() {
     }
   }, [searchTerm]);
 
+  useEffect(() => {
+    const endsWithNumber = /[0-9]+$/.test(location.pathname);
+    console.log(endsWithNumber);
+    if (endsWithNumber === false) {
+      setCurrentPost(undefined);
+    }
+  }, [location.pathname])
+
   const handleNotifications = (e: React.MouseEvent) => {
     const target = e.currentTarget;
     if (target.classList.contains('noti')) {
@@ -602,6 +610,7 @@ function App() {
           currentSub={currentSub}
           posts={posts}
           handleLike={handleLike}
+          currentPost={currentPost}
           openPost={openPost}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
@@ -624,6 +633,7 @@ function App() {
           loginModalState={loginModalState}
           posts={posts}
           handleLike={handleLike}
+          currentPost={currentPost}
           openPost={openPost}
         />} />
         <Route path='/profile' element={<Home
@@ -642,6 +652,7 @@ function App() {
           currentSub={currentSub}
           posts={posts}
           handleLike={handleLike}
+          currentPost={currentPost}
           openPost={openPost}
         />} />
         <Route path='/submit' element={<Home 
@@ -660,6 +671,7 @@ function App() {
           currentSub={currentSub}
           posts={posts}
           handleLike={handleLike}
+          currentPost={currentPost}
           openPost={openPost}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
@@ -679,6 +691,7 @@ function App() {
           posts={posts}
           handleLike={handleLike}
           currentPost={currentPost}
+          openPost={openPost}
         />} />
       </Routes>
     </div>

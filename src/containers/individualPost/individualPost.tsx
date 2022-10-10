@@ -2,6 +2,7 @@ import React, { MouseEventHandler } from 'react';
 import { Subreddits, Subreddit, Post } from '../../types/types';
 import { ReactComponent as Cross } from "../../resources/images/cross.svg";
 import './individualPost.scss';
+import GridPost from '../../components/GridPost/GridPost';
 
 export interface individualPostProps {
     randomIntToString: string,
@@ -15,6 +16,7 @@ export interface individualPostProps {
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
     navToSubmit: MouseEventHandler,
+    openPost: MouseEventHandler,
     loginStatus: boolean,
     setLoginModalState: any,
     loginModalState: string,
@@ -35,6 +37,7 @@ export default function IndividualPost (props: individualPostProps) {
     handleNavigate,
     handleLike,
     navToSubmit,
+    openPost,
     loginStatus,
     setLoginModalState,
     loginModalState,
@@ -59,7 +62,14 @@ export default function IndividualPost (props: individualPostProps) {
 
       <div className="postContent" style={{ backgroundColor: "#dae0e6" }}>
         <div className="left">
-
+         <GridPost 
+            post={currentPost}
+            currentSub={currentSub} 
+            currentPost={currentPost}
+            handleNavigate={handleNavigate}
+            handleLike={handleLike}
+            openPost={openPost}
+          />
         </div>
 
         <div className="right">

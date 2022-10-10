@@ -30,7 +30,8 @@ export interface SubredditPageProps {
     currentAnchor: number | undefined,
     expandRule: MouseEventHandler,
     loginModalState: string,
-    posts: Post[]
+    posts: Post[],
+    currentPost: Post | undefined
 }
 
 export default function SubredditPage (props: SubredditPageProps) {
@@ -39,6 +40,7 @@ export default function SubredditPage (props: SubredditPageProps) {
     randomIntToString,
     userName,
     currentSort,
+    currentPost,
     subreddits,
     topSubreddits,
     loginStatus,
@@ -105,6 +107,7 @@ export default function SubredditPage (props: SubredditPageProps) {
 
             <Grid 
               currentSub={currentSub}
+              currentPost={currentPost}
               loginModalState={loginModalState}
               currentSort={currentSort}
               handleNavigate={handleNavigate}

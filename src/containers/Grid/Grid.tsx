@@ -12,6 +12,7 @@ export interface GridProps {
     currentSub: Subreddit | undefined,
     loginModalState: string,
     currentSort: string,
+    currentPost: Post | undefined,
     posts: Post[],
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
@@ -21,6 +22,7 @@ export interface GridProps {
 export default function Grid (props: GridProps) {
   const {
     currentSub,
+    currentPost,
     currentSort,
     loginModalState,
     posts,
@@ -39,6 +41,7 @@ export default function Grid (props: GridProps) {
         return <GridPost 
                  post={posts[num + 1]}
                  currentSub={currentSub} 
+                 currentPost={currentPost}
                  handleNavigate={handleNavigate}
                  handleLike={handleLike}
                  openPost={openPost}
@@ -53,6 +56,7 @@ export default function Grid (props: GridProps) {
         return <GridPost 
                  post={posts[num]}
                  currentSub={currentSub} 
+                 currentPost={currentPost}
                  handleNavigate={handleNavigate}
                  handleLike={handleLike}
                  openPost={openPost}
@@ -67,6 +71,7 @@ export default function Grid (props: GridProps) {
         return <GridPost 
                  post={posts[num]}
                  currentSub={currentSub} 
+                 currentPost={currentPost}
                  handleNavigate={handleNavigate}
                  handleLike={handleLike}
                  openPost={openPost}
@@ -81,6 +86,7 @@ export default function Grid (props: GridProps) {
         return <GridPost 
                  post={posts[num]}
                  currentSub={currentSub} 
+                 currentPost={currentPost}
                  handleNavigate={handleNavigate}
                  handleLike={handleLike}
                  openPost={openPost}
@@ -95,6 +101,7 @@ export default function Grid (props: GridProps) {
         return <GridPost 
                  post={posts[i]}
                  currentSub={currentSub} 
+                 currentPost={currentPost}
                  handleNavigate={handleNavigate}
                  handleLike={handleLike}
                  openPost={openPost}

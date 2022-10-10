@@ -68,6 +68,10 @@
     .postContent {
         min-height: 90vh;
         width: 66.7vw;
+        box-sizing: border-box;
         margin-right: 15px;
+        display: flex;
+        padding-left: 106px;
+        padding-top: 31px;
     }
 }
