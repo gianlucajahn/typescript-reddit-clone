@@ -30,7 +30,7 @@ export default function GridPost (props: GridPostProps) {
     downvote: false
   });
 
-  const [viewers, setViewers] = useState(Math.floor(Math.random() * 50 + 12));
+  const [viewers, setViewers] = useState(Math.floor(Math.random() * 80 + 12));
 
   const handleHover = (e: React.MouseEvent) => {
     const target = e.currentTarget;
@@ -64,8 +64,8 @@ export default function GridPost (props: GridPostProps) {
   }, [])
 
   return (
-    <div className="gridPost" id={post.id} onClick={openPost} style={{ borderRadius: "5px", borderBottomLeftRadius: currentPost === undefined ? "5px" : "0px", borderBottomRightRadius: currentPost === undefined ? "5px" : "0px" }}>
-        <div className="upper" style={{ width: currentPost === undefined ? "640px" : "742px", borderBottomLeftRadius: currentPost === undefined ? "5px" : "0px", borderBottomRightRadius: currentPost === undefined ? "5px" : "0px", borderBottom: currentPost === undefined ? "" : "none" }}>
+    <div className="gridPost" id={post.id} onClick={openPost} style={{ width: currentPost === undefined ? "640px" : "740px", borderRadius: "5px", borderBottomLeftRadius: currentPost === undefined ? "5px" : "0px", borderBottomRightRadius: currentPost === undefined ? "5px" : "0px" }}>
+        <div className="upper" style={{ borderBottomLeftRadius: currentPost === undefined ? "5px" : "0px", borderBottomRightRadius: currentPost === undefined ? "5px" : "0px", borderBottom: currentPost === undefined ? "" : "none" }}>
         <div className="left" style={{ backgroundColor: currentPost === undefined ? "#f8f9fa" : "white" }}>
             <button className="upvote-btn" onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={handleLike} id="upvote">
                 <img className="upvote" src={require(`../../resources/images/${post.vote === 0 || post.vote === -1 ? 
@@ -105,7 +105,7 @@ export default function GridPost (props: GridPostProps) {
 
             <div className="content">
                 {post.type === "text" ? 
-                <p className="src" style={{ width: currentPost === undefined ? "555px" : "662px" }}>{post.src}</p> : <img className="src" src={require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`)} style={{ maxWidth: currentPost === undefined ? "599px" : "701px" }} />}
+                <p className="src" style={{ width: currentPost === undefined ? "555px" : "662px" }}>{post.src}</p> : <img className="src" src={require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`)} style={{ maxWidth: currentPost === undefined ? "599px" : "698px" }} />}
             </div>
 
             <div className="footer">
@@ -144,6 +144,7 @@ export default function GridPost (props: GridPostProps) {
         {currentPost === undefined ? null : <div className="lower">
             <Comments 
               userName={userName}
+              currentSub={currentSub}
             />
         </div>}
     </div>

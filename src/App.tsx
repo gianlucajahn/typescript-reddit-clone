@@ -453,7 +453,8 @@ function App() {
 
     const target = e.currentTarget;
     const targetParent = target.parentElement;
-    const idString = targetParent!.parentElement!.id
+    const ancestor = targetParent?.parentElement;
+    const idString = ancestor!.parentElement!.id
     const id = parseInt(idString);
     let post = posts[id];
 

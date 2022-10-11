@@ -7,6 +7,7 @@
 
 .gridPost {
     border: 1px solid #ccc;
+    background-color: white;
 
     &:hover {
         border: 1px solid #898989;
@@ -207,7 +208,7 @@
                 justify-content: center;
                 gap: 6px;
                 cursor: default;
-                margin-left: 150px;
+                margin-left: 140px;
                 padding-bottom: 1px;
 
                 .people-icon {

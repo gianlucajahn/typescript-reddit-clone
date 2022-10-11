@@ -1,9 +1,83 @@
 .comment-container {
     background-color: red;
-    width: 742px;
+    width: 740px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     background-color: white;
     padding: 12px 6px;
+
+    .submit-comment {
+        margin-top: 7px;
+        padding-left: 42px;
+
+        .submit-header {
+            font-family: "Noto Sans Regular";
+            color: #060606;
+            font-size: 12px;
+        }
+
+        .comment-box {
+            margin-top: 5px;
+            width: 652px;
+            max-width: 652px;
+            height: 139px;
+            border: 1px solid #edeff1;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            box-sizing: border-box;
+            border-bottom: none;
+            border-radius: 4px;
+            padding: 9px 16px;
+            font-family: "Noto Sans Regular";
+            font-size: 14px;
+            color: #878a8c;
+        }
+
+        .button-bar {
+            background-color: #f6f7f8;
+            width: 652px;
+            padding-left: 7px;
+            box-sizing: border-box;
+            border: 1px solid #edeff1;
+            border-radius: 4px;
+            padding-top: 2px;
+            border-top: none;
+            margin-top: -3px;
+            display: flex;
+            gap: 1px;
+
+            .line {
+                width: 1px;
+                height: 30px;
+                left: 702px;
+                position: absolute;
+                background-color: #edeff1;
+            }
+
+            .text-settings {
+                padding: 3px 6px;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                background-color: transparent;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #d0d1d2;
+                }
+
+                &:active {
+                    background-color: #b2b2b3;
+                }
+
+                .setting-icon {
+                    height: 21px;
+                }
+            }
+
+            .spoiler {
+                margin-right: 15px;
+            }
+        }
+    }
 }
