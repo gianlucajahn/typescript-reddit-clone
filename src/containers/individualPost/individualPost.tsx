@@ -86,6 +86,7 @@ export default function IndividualPost (props: individualPostProps) {
             handleNavigate={handleNavigate}
             handleLike={handleLike}
             openPost={openPost}
+            userName={userName}
           />
         </div>
 

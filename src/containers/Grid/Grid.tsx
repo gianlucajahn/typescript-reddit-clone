@@ -14,6 +14,7 @@ export interface GridProps {
     currentSort: string,
     currentPost: Post | undefined,
     posts: Post[],
+    userName: string,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
     openPost: MouseEventHandler
@@ -25,6 +26,7 @@ export default function Grid (props: GridProps) {
     currentPost,
     currentSort,
     loginModalState,
+    userName,
     posts,
     openPost,
     handleNavigate,
@@ -45,6 +47,7 @@ export default function Grid (props: GridProps) {
                  handleNavigate={handleNavigate}
                  handleLike={handleLike}
                  openPost={openPost}
+                 userName={userName}
                 />
       })}
 
@@ -60,6 +63,7 @@ export default function Grid (props: GridProps) {
                  handleNavigate={handleNavigate}
                  handleLike={handleLike}
                  openPost={openPost}
+                 userName={userName}
                 />
       })}
 
@@ -75,6 +79,7 @@ export default function Grid (props: GridProps) {
                  handleNavigate={handleNavigate}
                  handleLike={handleLike}
                  openPost={openPost}
+                 userName={userName}
                 />
       })}
 
@@ -90,6 +95,7 @@ export default function Grid (props: GridProps) {
                  handleNavigate={handleNavigate}
                  handleLike={handleLike}
                  openPost={openPost}
+                 userName={userName}
                 />
       })}
 
@@ -105,6 +111,7 @@ export default function Grid (props: GridProps) {
                  handleNavigate={handleNavigate}
                  handleLike={handleLike}
                  openPost={openPost}
+                 userName={userName}
                 />
       })}
     </div>

@@ -70,6 +70,7 @@ export default function Home (props: HomeProps) {
           posts={posts}
           handleLike={handleLike}
           openPost={openPost}
+          userName={userName}
         />
       </div>
 

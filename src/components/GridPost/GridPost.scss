@@ -6,22 +6,24 @@
 }
 
 .gridPost {
-    width: $contentWidth;
     border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background-color: white;
-    display: flex;
-    cursor: pointer;
 
     &:hover {
         border: 1px solid #898989;
     }
 
+    .upper {
+        width: $contentWidth;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background-color: white;
+        display: flex;
+        cursor: pointer;
+    }
+
     .left {
         width: 41px;
         box-sizing: border-box;
-        background-color: #f8f9fa;
         padding: 6px;
         display: flex;
         flex-direction: column;

@@ -112,6 +112,7 @@ export default function SubredditPage (props: SubredditPageProps) {
               posts={posts}
               handleLike={handleLike}
               openPost={openPost}
+              userName={userName}
             />
 
           </div>

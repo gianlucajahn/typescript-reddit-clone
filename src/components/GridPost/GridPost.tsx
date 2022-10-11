@@ -1,10 +1,12 @@
 import React, { MouseEventHandler, useEffect, useState } from 'react';
 import { findAllInRenderedTree } from 'react-dom/test-utils';
 import { Post, Subreddit } from '../../types/types';
+import Comments from '../Comments/Comments';
 import './GridPost.scss';
 
 export interface GridPostProps {
     post: any,
+    userName: string,
     currentSub: Subreddit | undefined,
     currentPost: Post | undefined,
     handleNavigate: MouseEventHandler,
@@ -15,6 +17,7 @@ export interface GridPostProps {
 export default function GridPost (props: GridPostProps) {
   const {
     post,
+    userName,
     currentSub,
     currentPost,
     handleNavigate,
@@ -61,8 +64,9 @@ export default function GridPost (props: GridPostProps) {
   }, [])
 
   return (
-    <div className="gridPost" id={post.id} onClick={openPost} style={{ width: currentPost === undefined ? "640px" : "742px" }}>
-        <div className="left">
+    <div className="gridPost" id={post.id} onClick={openPost} style={{ borderRadius: "5px", borderBottomLeftRadius: currentPost === undefined ? "5px" : "0px", borderBottomRightRadius: currentPost === undefined ? "5px" : "0px" }}>
+        <div className="upper" style={{ width: currentPost === undefined ? "640px" : "742px", borderBottomLeftRadius: currentPost === undefined ? "5px" : "0px", borderBottomRightRadius: currentPost === undefined ? "5px" : "0px", borderBottom: currentPost === undefined ? "" : "none" }}>
+        <div className="left" style={{ backgroundColor: currentPost === undefined ? "#f8f9fa" : "white" }}>
             <button className="upvote-btn" onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={handleLike} id="upvote">
                 <img className="upvote" src={require(`../../resources/images/${post.vote === 0 || post.vote === -1 ? 
                                                                                hovered.upvote ? "upvoteHover.png" : "upvote.png" 
@@ -101,7 +105,7 @@ export default function GridPost (props: GridPostProps) {
 
             <div className="content">
                 {post.type === "text" ? 
-                <p className="src" style={{ width: currentPost === undefined ? "555px" : "662px" }}>{post.src}</p> : <img className="src" src={require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`)} style={{ maxWidth: currentPost === undefined ? "597px" : "699px" }} />}
+                <p className="src" style={{ width: currentPost === undefined ? "555px" : "662px" }}>{post.src}</p> : <img className="src" src={require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`)} style={{ maxWidth: currentPost === undefined ? "599px" : "701px" }} />}
             </div>
 
             <div className="footer">
@@ -135,6 +139,13 @@ export default function GridPost (props: GridPostProps) {
                 </div>}
             </div>
         </div>
+        </div>
+
+        {currentPost === undefined ? null : <div className="lower">
+            <Comments 
+              userName={userName}
+            />
+        </div>}
     </div>
   );
 }
