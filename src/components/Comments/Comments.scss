@@ -20,6 +20,8 @@
         .comment-box {
             margin-top: 5px;
             width: 652px;
+            min-width: 652px;
+            min-height: 139px;
             max-width: 652px;
             height: 139px;
             border: 1px solid #edeff1;
@@ -72,6 +74,56 @@
 
                 .setting-icon {
                     height: 21px;
+                }
+            }
+
+            .markdown {
+                margin-left: 9px;
+                align-self: center;
+                cursor: pointer;
+                height: 24px;
+                border: 1px solid transparent;
+                display: flex;
+                align-items: center;
+                padding-bottom: 3px;
+                border-radius: 9999px;
+                padding-left: 7px;
+                padding-right: 7px;
+
+                p {
+                    font-size: 12px;
+                    font-family: "Noto Sans Bold";
+                }
+            }
+
+            #markdown {
+                background-color: transparent;
+
+                &:hover {
+                    background-color: #d0d1d2;
+                }
+
+                &:active {
+                    background-color: #b2b2b3;
+                }
+            }
+
+            .submit {
+                height: 24px;
+                padding-left: 19px;
+                padding-right: 21px;
+                margin-bottom: 1px;
+                margin-right: 8px;
+                color: white;
+                cursor: not-allowed;
+                border: none;
+
+                &:hover {
+                    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.125);
+                }
+
+                &:active {
+                    box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.125);
                 }
             }
 

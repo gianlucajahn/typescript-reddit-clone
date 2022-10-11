@@ -59,6 +59,14 @@ export default function Comments (props: CommentsProps) {
             <button className="text-settings">
               <img className="setting-icon" src={require("../../resources/images/dots.png")} />
             </button>
+
+            <button className="markdown" id="markdown">
+              <p style={{ color: currentSub?.buttonColor }}>Markdown Mode</p>
+            </button>
+
+            <button className="markdown submit" style={{ backgroundColor: currentSub?.buttonColor }}>
+              <p>Comment</p>
+            </button>
           </div>
         </div>
 
