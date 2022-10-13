@@ -15,8 +15,11 @@ export interface GridProps {
     currentPost: Post | undefined,
     posts: Post[],
     userName: string,
+    comment: string,
+    writeComment: any,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
+    submitComment: MouseEventHandler,
     openPost: MouseEventHandler
 }
 
@@ -28,7 +31,10 @@ export default function Grid (props: GridProps) {
     loginModalState,
     userName,
     posts,
+    comment,
+    writeComment,
     openPost,
+    submitComment,
     handleNavigate,
     handleLike
   } = props;
@@ -48,6 +54,9 @@ export default function Grid (props: GridProps) {
                  handleLike={handleLike}
                  openPost={openPost}
                  userName={userName}
+                 comment={comment}
+                 writeComment={writeComment}
+                 submitComment={submitComment}
                 />
       })}
 
@@ -64,6 +73,9 @@ export default function Grid (props: GridProps) {
                  handleLike={handleLike}
                  openPost={openPost}
                  userName={userName}
+                 comment={comment}
+                 writeComment={writeComment}
+                 submitComment={submitComment}
                 />
       })}
 
@@ -80,6 +92,9 @@ export default function Grid (props: GridProps) {
                  handleLike={handleLike}
                  openPost={openPost}
                  userName={userName}
+                 comment={comment}
+                 writeComment={writeComment}
+                 submitComment={submitComment}
                 />
       })}
 
@@ -96,6 +111,9 @@ export default function Grid (props: GridProps) {
                  handleLike={handleLike}
                  openPost={openPost}
                  userName={userName}
+                 comment={comment}
+                 writeComment={writeComment}
+                 submitComment={submitComment}
                 />
       })}
 
@@ -112,6 +130,9 @@ export default function Grid (props: GridProps) {
                  handleLike={handleLike}
                  openPost={openPost}
                  userName={userName}
+                 comment={comment}
+                 writeComment={writeComment}
+                 submitComment={submitComment}
                 />
       })}
     </div>

@@ -9,9 +9,12 @@ export interface GridPostProps {
     userName: string,
     currentSub: Subreddit | undefined,
     currentPost: Post | undefined,
+    comment: string,
+    writeComment: any,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
-    openPost: MouseEventHandler
+    openPost: MouseEventHandler,
+    submitComment: MouseEventHandler
 }
 
 export default function GridPost (props: GridPostProps) {
@@ -20,7 +23,10 @@ export default function GridPost (props: GridPostProps) {
     userName,
     currentSub,
     currentPost,
+    comment,
+    writeComment,
     handleNavigate,
+    submitComment,
     handleLike,
     openPost
   } = props;
@@ -145,6 +151,10 @@ export default function GridPost (props: GridPostProps) {
             <Comments 
               userName={userName}
               currentSub={currentSub}
+              comment={comment}
+              writeComment={writeComment}
+              currentPost={currentPost}
+              submitComment={submitComment}
             />
         </div>}
     </div>

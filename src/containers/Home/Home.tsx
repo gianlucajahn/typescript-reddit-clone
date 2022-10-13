@@ -19,11 +19,14 @@ export interface HomeProps {
   handleLike: MouseEventHandler,
   navToSubmit: MouseEventHandler,
   openPost: MouseEventHandler,
+  submitComment: MouseEventHandler,
   loginStatus: boolean,
   setLoginModalState: any,
   loginModalState: string,
   posts: Post[],
-  currentPost: Post | undefined
+  currentPost: Post | undefined,
+  comment: string,
+  writeComment: any
 }
 
 export default function Home (props: HomeProps) {
@@ -33,9 +36,12 @@ export default function Home (props: HomeProps) {
     currentSort,
     currentSub,
     currentPost,
+    comment,
+    writeComment,
     setSort,
     subreddits,
     topSubreddits,
+    submitComment,
     openPost,
     handleSubMembership,
     handleLike,
@@ -71,6 +77,9 @@ export default function Home (props: HomeProps) {
           handleLike={handleLike}
           openPost={openPost}
           userName={userName}
+          comment={comment}
+          writeComment={writeComment}
+          submitComment={submitComment}
         />
       </div>
 

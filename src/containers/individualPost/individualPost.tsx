@@ -25,8 +25,11 @@ export interface individualPostProps {
     currentPost: Post | undefined,
     communityTheme: boolean,
     communityOptions : boolean,
+    comment: string,
+    writeComment: any,
     expandRule: MouseEventHandler,
     switchCommunityTheme: MouseEventHandler,
+    submitComment: MouseEventHandler,
     switchCommunityOptions: MouseEventHandler,
     standardTheme: {
       buttonColor: string,
@@ -44,8 +47,11 @@ export default function IndividualPost (props: individualPostProps) {
     setSort,
     subreddits,
     topSubreddits,
+    comment,
+    writeComment,
     handleSubMembership,
     handleNavigate,
+    submitComment,
     handleLike,
     navToSubmit,
     openPost,
@@ -67,8 +73,8 @@ export default function IndividualPost (props: individualPostProps) {
       <div className="pageHeader">
         <div className="leftHeader">
           <img className="postIcon" src={require("../../resources/images/post.png")} />
-          <h3>{currentPost!.title.length >= 95 ? currentPost?.title.substring(0, 95) + " (...)" : currentPost?.title}</h3>
-          <button className="flairBtn" style={{ backgroundColor: currentPost?.flair.color }}>{currentPost?.flair.title}</button>
+          <h3>{currentPost!.title!.length >= 95 ? currentPost?.title!.substring(0, 95) + " (...)" : currentPost?.title}</h3>
+          <button className="flairBtn" style={{ backgroundColor: currentPost?.flair!.color }}>{currentPost?.flair!.title}</button>
         </div>
 
         <div className="rightHeader">
@@ -87,6 +93,9 @@ export default function IndividualPost (props: individualPostProps) {
             handleLike={handleLike}
             openPost={openPost}
             userName={userName}
+            comment={comment}
+            writeComment={writeComment}
+            submitComment={submitComment}
           />
         </div>
 

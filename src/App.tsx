@@ -34,6 +34,7 @@ function App() {
   const [loginModalState, setLoginModalState] = useState("closed");
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const [comment, setComment] = useState("");
   const [loginStatus, setLoginStatus] = useState(false);
   const [searchItemDisplay, setSearchItemDisplay] = useState([
     true,
@@ -135,6 +136,25 @@ function App() {
     } else if (target.id === "password") {
       setPassword(target.value);
     }
+  }
+
+  const writeComment = (e: any) => {
+    const target = e.target;
+    setComment(target.value);
+  }
+
+  const submitComment = (e: React.MouseEvent) => {
+    const target = e.currentTarget as HTMLButtonElement;
+    let postRef = currentPost
+    let newComment = {
+      author: userName,
+      vote: 0,
+      time: "Just now",
+      upvotes: "1",
+      content: comment
+    };
+    postRef?.comments?.push(newComment);
+    setCurrentPost(postRef);
   }
 
   const removeCurrentSub = (e: React.MouseEvent) => {
@@ -632,6 +652,9 @@ function App() {
           handleLike={handleLike}
           currentPost={currentPost}
           openPost={openPost}
+          comment={comment}
+          writeComment={writeComment}
+          submitComment={submitComment}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
@@ -660,6 +683,9 @@ function App() {
           switchCommunityOptions={switchCommunityOptions}
           switchCommunityTheme={switchCommunityTheme}
           standardTheme={standardTheme}
+          comment={comment}
+          writeComment={writeComment}
+          submitComment={submitComment}
         />} />
         <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -679,6 +705,9 @@ function App() {
           handleLike={handleLike}
           currentPost={currentPost}
           openPost={openPost}
+          comment={comment}
+          writeComment={writeComment}
+          submitComment={submitComment}
         />} />
         <Route path='/submit' element={<Home 
           randomIntToString={randomIntToString}
@@ -698,6 +727,9 @@ function App() {
           handleLike={handleLike}
           currentPost={currentPost}
           openPost={openPost}
+          comment={comment}
+          writeComment={writeComment}
+          submitComment={submitComment}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}
@@ -723,6 +755,9 @@ function App() {
           switchCommunityTheme={switchCommunityTheme}
           standardTheme={standardTheme}
           expandRule={expandRule}
+          comment={comment}
+          writeComment={writeComment}
+          submitComment={submitComment}
         />} />
       </Routes>
     </div>

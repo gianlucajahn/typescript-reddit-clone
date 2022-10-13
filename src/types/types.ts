@@ -53,7 +53,7 @@ export type Post = {
     awards:    string[];
     comments:  Comment[];
     flair:     Flair;
-}
+} 
 
 export type Comment = {
     author:  string;
