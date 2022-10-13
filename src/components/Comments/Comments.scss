@@ -167,6 +167,11 @@
             color: #1a1a1b;
             font-family: "IBM Regular";
             padding-bottom: 7px;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         .comment-timestamp {
@@ -179,6 +184,7 @@
         .comment-avatar {
             height: 37px;
             margin-right: 3px;
+            cursor: pointer;
         }
     }
 }
