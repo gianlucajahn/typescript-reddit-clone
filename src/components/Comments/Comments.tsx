@@ -101,7 +101,14 @@ export default function Comments (props: CommentsProps) {
                 <h4 className="comment-author">{comment.author}</h4>
                 <h4 className="comment-timestamp">· {comment.time}</h4>
               </div>
-              <p>{comment.content}</p>
+              <div className="comment-content-container">
+                <div className="left">
+                  <div className="comment-line"></div>
+                </div>
+                <div className="right">
+                  <p>{comment.content}</p>
+                </div>
+              </div>
             </div>
           })}
         </div>
