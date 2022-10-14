@@ -663,6 +663,10 @@ function App() {
     setCommunityTheme(!communityTheme);
   }
 
+  const quickNavigate = (e: React.MouseEvent) => {
+    navigate(`r/${currentSub}`);
+  }
+
   const standardTheme = {
     buttonColor: "#0079d3",
     headerColor: "#0079d3",
@@ -710,6 +714,7 @@ function App() {
         changeSearchItemDisplay={changeSearchItemDisplay}
         handleNotifications={handleNotifications}
         notificationNum={notificationNum}
+        quickNavigate={quickNavigate}
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/' element={<Home 

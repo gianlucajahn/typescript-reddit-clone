@@ -35,6 +35,7 @@ export interface NavBarProps {
   handleExpand: MouseEventHandler<HTMLDivElement>,
   handleExpandSub: MouseEventHandler<HTMLDivElement>,
   handleNavigate: MouseEventHandler<HTMLDivElement>,
+  quickNavigate: MouseEventHandler,
   handleLoginModal: MouseEventHandler<HTMLElement>,
   dropdownState: {
     erkunden: boolean,
@@ -56,6 +57,7 @@ export default function NavBar (props: NavBarProps) {
     handleNotifications,
     handleDropdown,
     navToSubmit,
+    quickNavigate,
     handleExpand,
     handleLoginModal,
     handleLogin,
@@ -190,8 +192,8 @@ export default function NavBar (props: NavBarProps) {
           </input>
           {currentSub !== undefined && 
           <div className="subredditIndicator">
-              <img className="subLogo" src={require(`../../resources/images/Communities/${currentSub?.title}/icon.png`)} />
-              <h5 className="subName">r/{currentSub?.title}</h5>
+              <img className="subLogo" src={require(`../../resources/images/Communities/${currentSub?.title}/icon.png`)} onClick={quickNavigate} />
+              <h5 className="subName" onClick={quickNavigate}>r/{currentSub?.title}</h5>
               <img className="subClose" src={require("../../resources/images/close.PNG")} onClick={removeCurrentSub} />
           </div>}
 
