@@ -143,6 +143,11 @@ function App() {
   }
 
   const submitComment = (e: React.MouseEvent) => {
+    if (loginStatus === false) {
+      setLoginModalState("login");
+      return;
+    }
+
     const target = e.currentTarget as HTMLButtonElement;
     let postRef = currentPost
     let newComment = {
@@ -154,6 +159,7 @@ function App() {
     };
     postRef?.comments?.unshift(newComment);
     setCurrentPost(postRef);
+    setNotificationNum(notificationNum + 1);
   }
 
   const removeCurrentSub = (e: React.MouseEvent) => {
@@ -208,6 +214,7 @@ function App() {
 
   useEffect(() => {
     identifyCurrentSub(location.pathname);
+    setComment("");
     window.scrollTo(0, 0);
   }, [location.pathname])
 
@@ -218,6 +225,13 @@ function App() {
 
     window.scrollTo(0, 0);
   }, [loginModalState])
+
+  useEffect(() => {
+    if (loginStatus === false) {
+      setPosts(postArray);
+      setComment("");
+    }
+  }, [loginStatus])
 
   const handleSubMembership = (e: React.MouseEvent) => {
     if (loginStatus === false) {
@@ -533,6 +547,11 @@ function App() {
 
   const handleLikeComment = (e: React.MouseEvent) => {
     if (currentPost === undefined) {
+      return;
+    }
+
+    if (loginStatus === false) {
+      setLoginModalState("login");
       return;
     }
 

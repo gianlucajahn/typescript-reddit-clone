@@ -105,7 +105,7 @@ export default function Comments (props: CommentsProps) {
           <h3 className="submit-header">Comment as <span style={{ color: currentSub?.buttonColor }}>{userName !== "" ? userName : "User"}</span></h3>
 
           <div className="hoverArea" style={{ border: focussed ? "1px solid black" : "1px solid transparent" }}>
-              <textarea className="comment-box" placeholder="What are your thoughts?" value={comment} onChange={writeComment} onFocus={() => setFocussed(true)} onBlur={() => setFocussed(false)}></textarea>
+              <textarea className="comment-box" style={{ color: comment.length >= 1 ? "#060606" : "#878a8c" }} placeholder="What are your thoughts?" value={comment} onChange={writeComment} onFocus={() => setFocussed(true)} onBlur={() => setFocussed(false)}></textarea>
 
               <div className="button-bar">
                 <button className="text-settings" aria-label="Bold">
