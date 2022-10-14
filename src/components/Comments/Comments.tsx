@@ -10,7 +10,8 @@ export interface CommentsProps {
   comment: string,
   writeComment: any,
   currentPost: Post,
-  submitComment: MouseEventHandler
+  submitComment: MouseEventHandler,
+  handleLikeComment: MouseEventHandler
 }
 
 export default function Comments (props: CommentsProps) {
@@ -20,10 +21,83 @@ export default function Comments (props: CommentsProps) {
     comment,
     writeComment,
     currentPost,
-    submitComment
+    submitComment,
+    handleLikeComment
   } = props;
 
   const [focussed, setFocussed] = useState(false);
+  const [hovered, setHovered] = useState({
+    upvote: false,
+    downvote: false
+  });
+
+  const [hoveredComments, setHoveredComments] = useState([
+    {
+      upvote: false,
+      downvote: false
+    },
+    {
+      upvote: false,
+      downvote: false
+    },
+    {
+      upvote: false,
+      downvote: false
+    },
+    {
+      upvote: false,
+      downvote: false
+    },
+    {
+      upvote: false,
+      downvote: false
+    },
+    {
+      upvote: false,
+      downvote: false
+    },
+    {
+      upvote: false,
+      downvote: false
+    }
+  ])
+
+  const handleHoverComment = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+    const idString = target.classList[0];
+    const id = parseInt(idString);
+    if (target.id === "upvote") {
+        const newHoverState = {
+            upvote: !hoveredComments[id].upvote,
+            downvote: hoveredComments[id].downvote
+        };
+        const newHoveredArray = [...hoveredComments];
+        const exchange = newHoveredArray.map((state, i) => {
+          if (i === id) {
+            state = newHoverState;
+            return state;
+          } else {
+            return state;
+          }
+        });
+        setHoveredComments(exchange);
+    } else if (target.id === "downvote") {
+        const newHoverState = {
+          upvote: hoveredComments[id].upvote,
+          downvote: !hoveredComments[id].downvote
+        };
+        const newHoveredArray = [...hoveredComments];
+        const exchange = newHoveredArray.map((state, i) => {
+          if (i === id) {
+            state = newHoverState;
+            return state;
+          } else {
+            return state;
+          }
+        });
+        setHoveredComments(exchange);
+    }
+  }
 
   return (
     <div className="comment-container">
@@ -97,7 +171,7 @@ export default function Comments (props: CommentsProps) {
           <div className="divider"></div>
 
           {currentPost.comments.map((comment, i) => {
-            return <div className="comment">
+            return <div className="comment" id={`${i}`}>
               <div className="comment-header">
                 <img className="comment-avatar" src={require("../../resources/images/avatar3.PNG")} />
                 <h4 className="comment-author">{comment.author}</h4>
@@ -107,6 +181,23 @@ export default function Comments (props: CommentsProps) {
                     <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1" }}></div>
                     <div className="right">
                       <p id="content">{comment.content}</p>
+                      <div className="comment-footer">
+                          <button className={`${i}`} onMouseEnter={handleHoverComment} onMouseLeave={handleHoverComment} onClick={handleLikeComment} id="upvote">
+                            <img className="upvote" src={require(`../../resources/images/${comment.vote === 0 || comment.vote === -1 ? 
+                                                                                           hoveredComments[i].upvote ? "upvoteHover.png" : "upvote.png" 
+                                                                                           : "upvoted.png"}`)} 
+                            />
+                          </button>
+        
+                          <h3 className="votes">{comment.upvotes}</h3>
+        
+                          <button className={`${i}`} onMouseEnter={handleHoverComment} onMouseLeave={handleHoverComment} onClick={handleLikeComment} id="downvote">
+                            <img className="downvote" src={require(`../../resources/images/${comment.vote === 0 || comment.vote === 1 ?
+                                                                                            hoveredComments[i].downvote ? "downvoteHover.png" : "downvote.png"  
+                                                                                            : "downvoted.png"}`)} 
+                            />
+                          </button>
+                      </div>
                     </div>
               </div>
             </div>

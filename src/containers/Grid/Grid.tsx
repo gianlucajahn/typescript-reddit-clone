@@ -19,6 +19,7 @@ export interface GridProps {
     writeComment: any,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
+    handleLikeComment: MouseEventHandler,
     submitComment: MouseEventHandler,
     openPost: MouseEventHandler
 }
@@ -34,6 +35,7 @@ export default function Grid (props: GridProps) {
     comment,
     writeComment,
     openPost,
+    handleLikeComment,
     submitComment,
     handleNavigate,
     handleLike
@@ -57,6 +59,7 @@ export default function Grid (props: GridProps) {
                  comment={comment}
                  writeComment={writeComment}
                  submitComment={submitComment}
+                 handleLikeComment={handleLikeComment}
                 />
       })}
 
@@ -76,6 +79,7 @@ export default function Grid (props: GridProps) {
                  comment={comment}
                  writeComment={writeComment}
                  submitComment={submitComment}
+                 handleLikeComment={handleLikeComment}
                 />
       })}
 
@@ -95,6 +99,7 @@ export default function Grid (props: GridProps) {
                  comment={comment}
                  writeComment={writeComment}
                  submitComment={submitComment}
+                 handleLikeComment={handleLikeComment}
                 />
       })}
 
@@ -114,6 +119,7 @@ export default function Grid (props: GridProps) {
                  comment={comment}
                  writeComment={writeComment}
                  submitComment={submitComment}
+                 handleLikeComment={handleLikeComment}
                 />
       })}
 
@@ -133,6 +139,7 @@ export default function Grid (props: GridProps) {
                  comment={comment}
                  writeComment={writeComment}
                  submitComment={submitComment}
+                 handleLikeComment={handleLikeComment}
                 />
       })}
     </div>

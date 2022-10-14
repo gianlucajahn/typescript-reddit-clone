@@ -531,6 +531,59 @@ function App() {
     setPosts([...posts, posts[id] = post]);
   }
 
+  const handleLikeComment = (e: React.MouseEvent) => {
+    if (currentPost === undefined) {
+      return;
+    }
+
+    const target = e.target as HTMLButtonElement;
+    const commentId = parseInt(target.classList[0]);
+    const postId = parseInt(currentPost?.id);
+    const updatedPost = currentPost;
+    if (target.id === "upvote") {
+      const oldVotes = updatedPost.comments[commentId].vote;
+      const newVotes = oldVotes === 1 ? 0 : 1;
+      let currentUpvotesString = updatedPost.comments[commentId].upvotes;
+      let currentUpvotes = parseInt(currentUpvotesString);
+      currentUpvotes = currentUpvotes + (newVotes - oldVotes);
+      let newUpvotes = currentUpvotes.toString();
+      const updatedCommentArray = updatedPost.comments.map((comment, i) => {
+        if (i === commentId) {
+          comment.vote = newVotes;
+          if (comment.upvotes.includes('k')) {
+            return comment;
+          }
+          comment.upvotes = newUpvotes;
+          return comment;
+        } else {
+          return comment;
+        }
+      });
+      updatedPost.comments = updatedCommentArray;
+      setPosts([...posts, posts[postId] = updatedPost]);
+    } else if (target.id === "downvote") {
+      const oldVotes = updatedPost.comments[commentId].vote;
+      const newVotes = oldVotes === -1 ? 0 : -1;
+      let currentUpvotesString = updatedPost.comments[commentId].upvotes;
+      let currentUpvotes = parseInt(currentUpvotesString);
+      currentUpvotes = currentUpvotes + (newVotes - oldVotes);
+      let newUpvotes = currentUpvotes.toString();
+      updatedPost.comments.map((comment, i) => {
+        if (i === commentId) {
+          comment.vote = newVotes;
+          if (comment.upvotes.includes('k')) {
+            return comment;
+          }
+          comment.upvotes = newUpvotes;
+          return comment;
+        } else {
+          return comment;
+        }
+      });
+      setPosts([...posts, posts[postId] = updatedPost]);
+    }
+  }
+
   const selectAnchor = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     const index = Number(target.id);
@@ -654,6 +707,7 @@ function App() {
           comment={comment}
           writeComment={writeComment}
           submitComment={submitComment}
+          handleLikeComment={handleLikeComment}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
@@ -685,6 +739,7 @@ function App() {
           comment={comment}
           writeComment={writeComment}
           submitComment={submitComment}
+          handleLikeComment={handleLikeComment}
         />} />
         <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -707,6 +762,7 @@ function App() {
           comment={comment}
           writeComment={writeComment}
           submitComment={submitComment}
+          handleLikeComment={handleLikeComment}
         />} />
         <Route path='/submit' element={<Home 
           randomIntToString={randomIntToString}
@@ -729,6 +785,7 @@ function App() {
           comment={comment}
           writeComment={writeComment}
           submitComment={submitComment}
+          handleLikeComment={handleLikeComment}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}
@@ -757,6 +814,7 @@ function App() {
           comment={comment}
           writeComment={writeComment}
           submitComment={submitComment}
+          handleLikeComment={handleLikeComment}
         />} />
       </Routes>
     </div>

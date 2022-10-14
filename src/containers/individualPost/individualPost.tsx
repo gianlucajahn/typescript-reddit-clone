@@ -28,6 +28,7 @@ export interface individualPostProps {
     comment: string,
     writeComment: any,
     expandRule: MouseEventHandler,
+    handleLikeComment: MouseEventHandler,
     switchCommunityTheme: MouseEventHandler,
     submitComment: MouseEventHandler,
     switchCommunityOptions: MouseEventHandler,
@@ -57,6 +58,7 @@ export default function IndividualPost (props: individualPostProps) {
     openPost,
     expandRule,
     switchCommunityOptions,
+    handleLikeComment,
     switchCommunityTheme,
     communityOptions,
     communityTheme,
@@ -96,6 +98,7 @@ export default function IndividualPost (props: individualPostProps) {
             comment={comment}
             writeComment={writeComment}
             submitComment={submitComment}
+            handleLikeComment={handleLikeComment}
           />
         </div>
 

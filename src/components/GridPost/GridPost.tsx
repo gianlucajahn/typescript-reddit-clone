@@ -13,6 +13,7 @@ export interface GridPostProps {
     writeComment: any,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
+    handleLikeComment: MouseEventHandler,
     openPost: MouseEventHandler,
     submitComment: MouseEventHandler
 }
@@ -28,6 +29,7 @@ export default function GridPost (props: GridPostProps) {
     handleNavigate,
     submitComment,
     handleLike,
+    handleLikeComment,
     openPost
   } = props;
 
@@ -154,6 +156,7 @@ export default function GridPost (props: GridPostProps) {
               writeComment={writeComment}
               currentPost={currentPost}
               submitComment={submitComment}
+              handleLikeComment={handleLikeComment}
             />
         </div>}
     </div>

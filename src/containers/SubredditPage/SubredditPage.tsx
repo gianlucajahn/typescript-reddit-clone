@@ -39,6 +39,7 @@ export interface SubredditPageProps {
     writeComment: any,
     switchCommunityTheme: MouseEventHandler,
     submitComment: MouseEventHandler,
+    handleLikeComment: MouseEventHandler,
     switchCommunityOptions: MouseEventHandler,
     standardTheme: {
       buttonColor: string,
@@ -68,6 +69,7 @@ export default function SubredditPage (props: SubredditPageProps) {
     standardTheme,
     comment,
     writeComment,
+    handleLikeComment,
     switchCommunityOptions,
     switchCommunityTheme,
     openPost,
@@ -122,6 +124,7 @@ export default function SubredditPage (props: SubredditPageProps) {
               comment={comment}
               writeComment={writeComment}
               submitComment={submitComment}
+              handleLikeComment={handleLikeComment}
             />
 
           </div>
