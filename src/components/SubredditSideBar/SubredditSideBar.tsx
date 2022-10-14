@@ -15,6 +15,7 @@ export interface SubredditSideBarProps {
     expandRule: MouseEventHandler,
     userName: string,
     switchCommunityOptions: MouseEventHandler,
+    handleNavigate: MouseEventHandler,
     communityOptions: boolean,
     currentPost: Post | undefined,
 }
@@ -27,6 +28,7 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
     standardTheme,
     loginStatus,
     randomIntToString,
+    handleNavigate,
     navToSubmit,
     switchCommunityTheme,
     expandRule,
@@ -44,7 +46,7 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
           </div>
 
           {currentPost !== undefined && 
-          <div className="postHead">
+          <div className="postHead" id={currentPost.subreddit} onClick={handleNavigate}>
             <img className="head-img" src={require(`../../resources/images/Communities/${currentPost.subreddit}/icon.png`)} />
             <p className="head-p">r/{currentPost.subreddit}</p>
           </div>

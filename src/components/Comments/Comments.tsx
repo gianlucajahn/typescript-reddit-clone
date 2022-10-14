@@ -1,5 +1,5 @@
 import { AnyNaptrRecord } from 'dns';
-import React, { MouseEventHandler, useState } from 'react';
+import React, { MouseEventHandler, useEffect, useState } from 'react';
 import { Post, Subreddit } from '../../types/types';
 import './Comments.scss';
 import { ReactComponent as Dropdown } from "../../resources/images/dropdown.svg";
@@ -10,6 +10,7 @@ export interface CommentsProps {
   comment: string,
   writeComment: any,
   currentPost: Post,
+  loginStatus: boolean,
   submitComment: MouseEventHandler,
   handleLikeComment: MouseEventHandler
 }
@@ -21,6 +22,7 @@ export default function Comments (props: CommentsProps) {
     comment,
     writeComment,
     currentPost,
+    loginStatus,
     submitComment,
     handleLikeComment
   } = props;
@@ -61,6 +63,43 @@ export default function Comments (props: CommentsProps) {
       downvote: false
     }
   ])
+
+  const basicCommentHoverState = [
+    {
+      upvote: false,
+      downvote: false,
+    },
+    {
+      upvote: false,
+      downvote: false
+    },
+    {
+      upvote: false,
+      downvote: false
+    },
+    {
+      upvote: false,
+      downvote: false
+    },
+    {
+      upvote: false,
+      downvote: false
+    },
+    {
+      upvote: false,
+      downvote: false
+    },
+    {
+      upvote: false,
+      downvote: false
+    }
+  ];
+
+  useEffect(() => {
+    if (loginStatus === false) {
+      setHoveredComments(basicCommentHoverState);
+    }
+  }, [loginStatus])
 
   const handleHoverComment = (e: React.MouseEvent) => {
     const target = e.currentTarget;

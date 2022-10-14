@@ -83,6 +83,7 @@ export default function Home (props: HomeProps) {
           writeComment={writeComment}
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}
+          loginStatus={loginStatus}
         />
       </div>
 

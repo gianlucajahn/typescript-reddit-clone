@@ -125,6 +125,7 @@ export default function SubredditPage (props: SubredditPageProps) {
               writeComment={writeComment}
               submitComment={submitComment}
               handleLikeComment={handleLikeComment}
+              loginStatus={loginStatus}
             />
 
           </div>
@@ -142,6 +143,7 @@ export default function SubredditPage (props: SubredditPageProps) {
             switchCommunityOptions={switchCommunityOptions}
             communityOptions={communityOptions}
             currentPost={currentPost}
+            handleNavigate={handleNavigate}
           />
       </div>
     </div>

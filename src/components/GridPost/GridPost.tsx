@@ -11,6 +11,7 @@ export interface GridPostProps {
     currentPost: Post | undefined,
     comment: string,
     writeComment: any,
+    loginStatus: boolean,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
     handleLikeComment: MouseEventHandler,
@@ -26,6 +27,7 @@ export default function GridPost (props: GridPostProps) {
     currentPost,
     comment,
     writeComment,
+    loginStatus,
     handleNavigate,
     submitComment,
     handleLike,
@@ -157,6 +159,7 @@ export default function GridPost (props: GridPostProps) {
               currentPost={currentPost}
               submitComment={submitComment}
               handleLikeComment={handleLikeComment}
+              loginStatus={loginStatus}
             />
         </div>}
     </div>

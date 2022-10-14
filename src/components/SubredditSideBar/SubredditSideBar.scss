@@ -113,6 +113,11 @@
     gap: 9px;
     align-items: center;
     padding: 11px 12px 1px 12px;
+    cursor: pointer;
+
+    * {
+        pointer-events: none;
+    }
 
     .head-img {
         height: 52px;

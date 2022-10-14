@@ -17,6 +17,7 @@ export interface GridProps {
     userName: string,
     comment: string,
     writeComment: any,
+    loginStatus: boolean,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
     handleLikeComment: MouseEventHandler,
@@ -32,6 +33,7 @@ export default function Grid (props: GridProps) {
     loginModalState,
     userName,
     posts,
+    loginStatus,
     comment,
     writeComment,
     openPost,
@@ -60,6 +62,7 @@ export default function Grid (props: GridProps) {
                  writeComment={writeComment}
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
+                 loginStatus={loginStatus}
                 />
       })}
 
@@ -80,6 +83,7 @@ export default function Grid (props: GridProps) {
                  writeComment={writeComment}
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
+                 loginStatus={loginStatus}
                 />
       })}
 
@@ -100,6 +104,7 @@ export default function Grid (props: GridProps) {
                  writeComment={writeComment}
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
+                 loginStatus={loginStatus}
                 />
       })}
 
@@ -120,6 +125,7 @@ export default function Grid (props: GridProps) {
                  writeComment={writeComment}
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
+                 loginStatus={loginStatus}
                 />
       })}
 
@@ -140,6 +146,7 @@ export default function Grid (props: GridProps) {
                  writeComment={writeComment}
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
+                 loginStatus={loginStatus}
                 />
       })}
     </div>

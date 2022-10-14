@@ -99,6 +99,7 @@ export default function IndividualPost (props: individualPostProps) {
             writeComment={writeComment}
             submitComment={submitComment}
             handleLikeComment={handleLikeComment}
+            loginStatus={loginStatus}
           />
         </div>
 
@@ -116,6 +117,7 @@ export default function IndividualPost (props: individualPostProps) {
             switchCommunityOptions={switchCommunityOptions}
             communityOptions={communityOptions}
             currentPost={currentPost}
+            handleNavigate={handleNavigate}
           />
         </div>
       </div>
