@@ -398,6 +398,13 @@ function App() {
     setSubDropdownIsOpen(!subDropdownIsOpen);
   }
 
+  const closePost = (e: React.MouseEvent) => {
+    navigate("/");
+    setCurrentPost(undefined);
+    setCurrentSub(undefined);
+    setComment("");
+  }
+
   const handleDropdown = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     if (target.id === "link") {
@@ -834,6 +841,7 @@ function App() {
           writeComment={writeComment}
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}
+          closePost={closePost}
         />} />
       </Routes>
     </div>

@@ -31,6 +31,7 @@ export interface individualPostProps {
     handleLikeComment: MouseEventHandler,
     switchCommunityTheme: MouseEventHandler,
     submitComment: MouseEventHandler,
+    closePost: MouseEventHandler,
     switchCommunityOptions: MouseEventHandler,
     standardTheme: {
       buttonColor: string,
@@ -51,6 +52,7 @@ export default function IndividualPost (props: individualPostProps) {
     comment,
     writeComment,
     handleSubMembership,
+    closePost,
     handleNavigate,
     submitComment,
     handleLike,
@@ -79,7 +81,7 @@ export default function IndividualPost (props: individualPostProps) {
           <button className="flairBtn" style={{ backgroundColor: currentPost?.flair!.color }}>{currentPost?.flair!.title}</button>
         </div>
 
-        <div className="rightHeader">
+        <div className="rightHeader" onClick={closePost}>
           <img className="cross" src={require("../../resources/images/cross.png")} />
           <h3>Close</h3>
         </div>
