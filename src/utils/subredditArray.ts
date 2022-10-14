@@ -565,7 +565,7 @@ const subredditArray = [
                 number: 2,
                 expanded: false,
                 title: "Titles Must be High-Effort and Descriptive",
-                desc: "Posts with misleading/sensationalized/editorialized/ambiguous titles are prohibited. The title must clearly and thoroughly describe the post."
+                desc: "Posts with misleading / sensationalized / editorialized / ambiguous titles are prohibited. The title must clearly and thoroughly describe the post."
             },
             {
                 number: 3,

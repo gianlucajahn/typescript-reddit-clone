@@ -94,6 +94,8 @@ export default function Comments (props: CommentsProps) {
             />
           </div>
 
+          <div className="divider"></div>
+
           {currentPost.comments.map((comment, i) => {
             return <div className="comment">
               <div className="comment-header">
@@ -102,12 +104,10 @@ export default function Comments (props: CommentsProps) {
                 <h4 className="comment-timestamp">· {comment.time}</h4>
               </div>
               <div className="comment-content-container">
-                <div className="left">
-                  <div className="comment-line"></div>
-                </div>
-                <div className="right">
-                  <p>{comment.content}</p>
-                </div>
+                    <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1" }}></div>
+                    <div className="right">
+                      <p id="content">{comment.content}</p>
+                    </div>
               </div>
             </div>
           })}

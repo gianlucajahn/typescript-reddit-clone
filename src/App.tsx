@@ -116,7 +116,6 @@ function App() {
 
   useEffect(() => {
     const endsWithNumber = /[0-9]+$/.test(location.pathname);
-    console.log(endsWithNumber);
     if (endsWithNumber === false) {
       setCurrentPost(undefined);
     }
@@ -153,7 +152,7 @@ function App() {
       upvotes: "1",
       content: comment
     };
-    postRef?.comments?.push(newComment);
+    postRef?.comments?.unshift(newComment);
     setCurrentPost(postRef);
   }
 

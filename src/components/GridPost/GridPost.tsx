@@ -57,7 +57,6 @@ export default function GridPost (props: GridPostProps) {
 
   const changeViewers = (e: any) => {
     const outcome = Math.floor(Math.random() * 2);
-    console.log(outcome)
     if (outcome === 0) {
         setViewers(viewers => viewers - 1);
     } else if (outcome === 1) {

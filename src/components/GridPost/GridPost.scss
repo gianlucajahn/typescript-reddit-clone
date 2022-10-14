@@ -111,15 +111,21 @@
                 }
             }
 
+            .creationDate {
+                cursor: default;
+            }
+
             .awards {
                 margin-left: 3px;
                 display: flex;
                 gap: 5px;
+                cursor: default;
 
                 .award {
                     padding-top: 2px;
                     height: 18px;
                     width: 18px;
+                    cursor: default;
                 }
             }
         }
