@@ -667,6 +667,10 @@ function App() {
     navigate(`r/${currentSub}`);
   }
 
+  const handleNestedComment = (e: React.MouseEvent) => {
+    
+  }
+
   const standardTheme = {
     buttonColor: "#0079d3",
     headerColor: "#0079d3",

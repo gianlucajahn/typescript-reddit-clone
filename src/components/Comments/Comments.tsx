@@ -96,9 +96,7 @@ export default function Comments (props: CommentsProps) {
   ];
 
   useEffect(() => {
-    if (loginStatus === false) {
-      setHoveredComments(basicCommentHoverState);
-    }
+    setHoveredComments(basicCommentHoverState);
   }, [loginStatus])
 
   const handleHoverComment = (e: React.MouseEvent) => {
@@ -236,6 +234,31 @@ export default function Comments (props: CommentsProps) {
                                                                                             : "downvoted.png"}`)} 
                             />
                           </button>
+
+                          <div className="reply comment-footer-box" id="reply">
+                            <img className="reply-icon" src={require("../../resources/images/comments.png")} />
+                            <h3>Reply</h3>
+                          </div>
+
+                          <div className="comment-footer-box">
+                            <h3>Give Award</h3>
+                          </div>
+
+                          <div className="comment-footer-box">
+                            <h3>Share</h3>
+                          </div>
+
+                          <div className="comment-footer-box">
+                            <h3>Report</h3>
+                          </div>
+
+                          <div className="comment-footer-box">
+                            <h3>Save</h3>
+                          </div>
+
+                          <div className="comment-footer-box">
+                            <h3>Follow</h3>
+                          </div>
                       </div>
                     </div>
               </div>

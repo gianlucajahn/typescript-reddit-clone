@@ -232,6 +232,37 @@
                         pointer-events: none;
                     }
                 }
+
+                .comment-footer-box {
+                    display: flex;
+                    gap: 6px;
+                    font-size: 11px;
+                    font-family: "IBM";
+                    color: #878a8c;
+                    padding: 4px 7px;
+                    align-items: center;
+                    justify-content: center;
+                    padding-top: 2px;
+                    cursor: pointer;
+
+                    * {
+                        pointer-events: none;
+                    }
+
+                    &:hover {
+                        background-color: #e7e7e7;
+                        border-radius: 4px;
+                    }
+
+                    h3 {
+                        padding-bottom: 2px;
+                        padding-top: 2px;
+                    }
+
+                    img {
+                        height: 20px;
+                    }
+                }
         
                 #upvote {
                     border: 1px solid transparent;
@@ -245,6 +276,7 @@
         
                 #downvote {
                     border: 1px solid transparent;
+                    margin-right: 2px;
         
                     .downvote {
                         height: 20px;
