@@ -697,7 +697,7 @@ function App() {
       const targetedPost = {...currentPost};
       targetedPost.comments = targetedPost.comments?.map((comment, i) => {
         const commentId = parseInt(commentIdString);
-        if (i === commentId) {
+        if (i === commentId && target.classList.contains("replyable") === false) {
           comment.nesting === "none" ? comment.nesting = "edit" : comment.nesting = "edit";
           comment.nested_comments.unshift({
             author: userName,

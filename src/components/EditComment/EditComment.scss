@@ -25,6 +25,7 @@
         padding-top: 2px;
         border-top: none;
         margin-top: -3px;
+        justify-content: space-between;
         display: flex;
         gap: 1px;
 
@@ -86,6 +87,28 @@
                 font-size: 12px;
                 font-family: "Noto Sans Bold";
             }
+        }
+
+        .btn {
+            background-color: transparent;
+
+            &:hover {
+                background-color: #d0d1d2;
+            }
+
+            &:active {
+                background-color: #b2b2b3;
+            }
+
+            * {
+                pointer-events: none;
+            }
+        }
+
+        .end {
+            height: 32px;
+            align-items: center;
+            display: flex;
         }
 
         #markdown {

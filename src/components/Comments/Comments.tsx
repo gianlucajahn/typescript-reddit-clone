@@ -201,10 +201,10 @@ export default function Comments (props: CommentsProps) {
                             />
                           </button>
 
-                          <div className="reply comment-footer-box" id={`${i}`} onClick={handleNestedComment}>
+                          {comment.nested_comments.length < 1 && <div className="reply comment-footer-box" id={`${i}`} onClick={handleNestedComment}>
                             <img className="reply-icon" src={require("../../resources/images/comments.png")} />
                             <h3>Reply</h3>
-                          </div>
+                          </div>}
 
                           <div className="comment-footer-box">
                             <h3>Give Award</h3>
@@ -245,6 +245,7 @@ export default function Comments (props: CommentsProps) {
                   writeNestedComment={writeNestedComment}
                   submitNestedComment={submitNestedComment}
                   currentEditedComment={currentEditedComment}
+                  handleNestedComment={handleNestedComment}
                 />
               </div>
               }
