@@ -68,24 +68,28 @@ export default function EditComment  (props: EditCommentProps) {
   
         <div className="line"></div>
   
-        <button className="text-settings" aria-label="Heading">
-          <img className="setting-icon" src={require("../../resources/images/heading.png")} />
-        </button>
-        <button className="text-settings" aria-label="Bulleted">
-          <img className="setting-icon" src={require("../../resources/images/bulleted.png")} />
-        </button>
-        <button className="text-settings" aria-label="Numbered"> 
-          <img className="setting-icon" src={require("../../resources/images/numbered.png")} />
-        </button>
-        <button className="text-settings" aria-label="Quote Block">
-          <img className="setting-icon" src={require("../../resources/images/quote.png")} />
-        </button>
+        {!nested && (
+          <>
+            <button className="text-settings" aria-label="Heading">
+              <img className="setting-icon" src={require("../../resources/images/heading.png")} />
+            </button>
+            <button className="text-settings" aria-label="Bulleted">
+              <img className="setting-icon" src={require("../../resources/images/bulleted.png")} />
+            </button>
+            <button className="text-settings" aria-label="Numbered"> 
+              <img className="setting-icon" src={require("../../resources/images/numbered.png")} />
+            </button>
+            <button className="text-settings" aria-label="Quote Block">
+              <img className="setting-icon" src={require("../../resources/images/quote.png")} />
+            </button>
+          </>
+        )}
         <button className="text-settings" aria-label="More">
           <img className="setting-icon" src={require("../../resources/images/dots.png")} />
         </button>
   
         <button className="markdown" id="markdown">
-          <p style={{ color: currentSub?.buttonColor }}>Markdown Mode</p>
+          <p style={{ color: currentSub?.buttonColor }}>{nested ? "Cancel" : "Markdown Mode"}</p>
         </button>
   
         <button className="markdown submit" style={{ backgroundColor: comment.length >= 1 ? currentSub?.buttonColor : "#9a9a9a", color: comment.length >= 1 ? "white" : "#cdcdcd", cursor: comment.length >= 1 ? "pointer" : "not-allowed" }} onClick={submitComment}>
