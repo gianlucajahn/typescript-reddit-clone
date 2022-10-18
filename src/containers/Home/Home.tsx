@@ -31,7 +31,7 @@ export interface HomeProps {
   loginModalState: string,
   posts: Post[],
   currentPost: Post | undefined,
-  comment: string,
+  mainComment: string,
   writeComment: any
 }
 
@@ -42,7 +42,7 @@ export default function Home (props: HomeProps) {
     currentSort,
     currentSub,
     currentPost,
-    comment,
+    mainComment,
     writeComment,
     setSort,
     subreddits,
@@ -89,7 +89,7 @@ export default function Home (props: HomeProps) {
           handleLike={handleLike}
           openPost={openPost}
           userName={userName}
-          comment={comment}
+          mainComment={mainComment}
           writeComment={writeComment}
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}

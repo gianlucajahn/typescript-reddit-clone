@@ -9,7 +9,7 @@ export interface GridPostProps {
     userName: string,
     currentSub: Subreddit | undefined,
     currentPost: Post | undefined,
-    comment: string,
+    mainComment: string,
     writeComment: any,
     currentEditedComment: string,
     loginStatus: boolean,
@@ -30,7 +30,7 @@ export default function GridPost (props: GridPostProps) {
     userName,
     currentSub,
     currentPost,
-    comment,
+    mainComment,
     writeComment,
     currentEditedComment,
     loginStatus,
@@ -164,7 +164,7 @@ export default function GridPost (props: GridPostProps) {
             <Comments 
               userName={userName}
               currentSub={currentSub}
-              comment={comment}
+              mainComment={mainComment}
               writeComment={writeComment}
               currentPost={currentPost}
               submitComment={submitComment}

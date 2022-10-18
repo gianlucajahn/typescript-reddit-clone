@@ -35,7 +35,7 @@ function App() {
   const [loginModalState, setLoginModalState] = useState("closed");
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [comment, setComment] = useState("");
+  const [mainComment, setMainComment] = useState("");
   const [index, setIndex] = useState<number | undefined>(undefined);
   const [loginStatus, setLoginStatus] = useState(false);
   const [searchItemDisplay, setSearchItemDisplay] = useState([
@@ -141,7 +141,7 @@ function App() {
 
   const writeComment = (e: any) => {
     const target = e.target;
-    setComment(target.value);
+    setMainComment(target.value);
   }
 
   const writeNestedComment = (e: any) => {
@@ -150,7 +150,16 @@ function App() {
   }
 
   const submitNestedComment = (e: React.MouseEvent) => {
+    if (currentPost === undefined) {
+      return;
+    }
 
+    const target = e.currentTarget;
+    const commentId = parseInt(target.id);
+    let comment = {...currentPost?.comments[commentId]};
+    comment.nested_comments![0].content = currentEditedComment;
+    comment.nesting = "posted";
+    setCurrentPost({...currentPost, ...currentPost.comments[commentId] = comment});
   }
 
   const submitComment = (e: React.MouseEvent) => {
@@ -167,7 +176,7 @@ function App() {
       vote: 0,
       time: "Just now",
       upvotes: "1",
-      content: comment,
+      content: mainComment,
       nested_lvl: 0,
       nested_comments: [
         
@@ -230,7 +239,7 @@ function App() {
 
   useEffect(() => {
     identifyCurrentSub(location.pathname);
-    setComment("");
+    setMainComment("");
     window.scrollTo(0, 0);
   }, [location.pathname])
 
@@ -245,7 +254,7 @@ function App() {
   useEffect(() => {
     if (loginStatus === false) {
       setPosts(postArray);
-      setComment("");
+      setMainComment("");
     }
   }, [loginStatus])
 
@@ -418,7 +427,7 @@ function App() {
     navigate("/");
     setCurrentPost(undefined);
     setCurrentSub(undefined);
-    setComment("");
+    setMainComment("");
   }
 
   const handleDropdown = (e: React.MouseEvent) => {
@@ -583,47 +592,90 @@ function App() {
     const postId = parseInt(currentPost?.id);
     const updatedPost = currentPost;
     if (target.id === "upvote") {
-      const oldVotes = updatedPost.comments[commentId].vote;
-      const newVotes = oldVotes === 1 ? 0 : 1;
-      let currentUpvotesString = updatedPost.comments[commentId].upvotes;
-      let currentUpvotes = parseInt(currentUpvotesString);
-      currentUpvotes = currentUpvotes + (newVotes - oldVotes);
-      let newUpvotes = currentUpvotes.toString();
-      const updatedCommentArray = updatedPost.comments.map((comment, i) => {
-        if (i === commentId) {
-          comment.vote = newVotes;
-          if (comment.upvotes.includes('k')) {
+      console.log(target.classList);
+      if (target.classList.contains('nested')) {
+        console.log("upvote nest");
+        const oldVotes = updatedPost.comments[commentId].nested_comments[0].vote;
+        const newVotes = oldVotes === 1 ? 0 : 1;
+        let currentUpvotesString = updatedPost.comments[commentId].nested_comments[0].upvotes;
+        let currentUpvotes = parseInt(currentUpvotesString);
+        currentUpvotes = currentUpvotes + (newVotes - oldVotes);
+        let newUpvotes = currentUpvotes.toString();
+        const updatedCommentArray = updatedPost.comments.map((comment, i) => {
+          if (i === commentId) {
+            console.log("upvote nest 2");
+            comment.nested_comments[0].vote = newVotes;
+            comment.nested_comments[0].upvotes = newUpvotes;
+            return comment;
+          } else {
             return comment;
           }
-          comment.upvotes = newUpvotes;
-          return comment;
-        } else {
-          return comment;
-        }
-      });
-      updatedPost.comments = updatedCommentArray;
-      setPosts([...posts, posts[postId] = updatedPost]);
+        });
+        updatedPost.comments = updatedCommentArray;
+        setPosts([...posts, posts[postId] = updatedPost]);
+      } else {
+        const oldVotes = updatedPost.comments[commentId].vote;
+        const newVotes = oldVotes === 1 ? 0 : 1;
+        let currentUpvotesString = updatedPost.comments[commentId].upvotes;
+        let currentUpvotes = parseInt(currentUpvotesString);
+        currentUpvotes = currentUpvotes + (newVotes - oldVotes);
+        let newUpvotes = currentUpvotes.toString();
+        const updatedCommentArray = updatedPost.comments.map((comment, i) => {
+          if (i === commentId) {
+            comment.vote = newVotes;
+            if (comment.upvotes.includes('k')) {
+              return comment;
+            }
+            comment.upvotes = newUpvotes;
+            return comment;
+          } else {
+            return comment;
+          }
+        });
+        updatedPost.comments = updatedCommentArray;
+        setPosts([...posts, posts[postId] = updatedPost]);
+      }
     } else if (target.id === "downvote") {
-      const oldVotes = updatedPost.comments[commentId].vote;
-      const newVotes = oldVotes === -1 ? 0 : -1;
-      let currentUpvotesString = updatedPost.comments[commentId].upvotes;
-      let currentUpvotes = parseInt(currentUpvotesString);
-      currentUpvotes = currentUpvotes + (newVotes - oldVotes);
-      let newUpvotes = currentUpvotes.toString();
-      const updatedCommentArray = updatedPost.comments.map((comment, i) => {
-        if (i === commentId) {
-          comment.vote = newVotes;
-          if (comment.upvotes.includes('k')) {
+      if (target.classList.contains('nested')) {
+        const oldVotes = updatedPost.comments[commentId].nested_comments[0].vote;
+        const newVotes = oldVotes === -1 ? 0 : -1;
+        let currentUpvotesString = updatedPost.comments[commentId].nested_comments[0].upvotes;
+        let currentUpvotes = parseInt(currentUpvotesString);
+        currentUpvotes = currentUpvotes + (newVotes - oldVotes);
+        let newUpvotes = currentUpvotes.toString();
+        const updatedCommentArray = updatedPost.comments.map((comment, i) => {
+          if (i === commentId) {
+            comment.nested_comments[0].vote = newVotes;
+            comment.nested_comments[0].upvotes = newUpvotes;
+            return comment;
+          } else {
             return comment;
           }
-          comment.upvotes = newUpvotes;
-          return comment;
-        } else {
-          return comment;
-        }
-      });
-      updatedPost.comments = updatedCommentArray;
-      setPosts([...posts, posts[postId] = updatedPost]);
+        });
+        updatedPost.comments = updatedCommentArray;
+        setPosts([...posts, posts[postId] = updatedPost]);
+      } else {
+        const oldVotes = updatedPost.comments[commentId].vote;
+        const newVotes = oldVotes === -1 ? 0 : -1;
+        let currentUpvotesString = updatedPost.comments[commentId].upvotes;
+        let currentUpvotes = parseInt(currentUpvotesString);
+        currentUpvotes = currentUpvotes + (newVotes - oldVotes);
+        let newUpvotes = currentUpvotes.toString();
+        const updatedCommentArray = updatedPost.comments.map((comment, i) => {
+          if (i === commentId) {
+            comment.vote = newVotes;
+            if (comment.upvotes.includes('k')) {
+              return comment;
+            }
+            comment.upvotes = newUpvotes;
+            return comment;
+          } else {
+            return comment;
+          }
+        });
+        updatedPost.comments = updatedCommentArray;
+        setPosts([...posts, posts[postId] = updatedPost]);
+      }
     }
   }
 
@@ -685,6 +737,11 @@ function App() {
   }
 
   const handleNestedComment = (e: React.MouseEvent) => {
+    if (loginStatus === false) {
+      setLoginModalState("login");
+      return;
+    }
+
     const target = e.currentTarget;
     setCurrentEditedComment("");
     
@@ -791,7 +848,7 @@ function App() {
           handleLike={handleLike}
           currentPost={currentPost}
           openPost={openPost}
-          comment={comment}
+          mainComment={mainComment}
           writeComment={writeComment}
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}
@@ -828,7 +885,7 @@ function App() {
           switchCommunityOptions={switchCommunityOptions}
           switchCommunityTheme={switchCommunityTheme}
           standardTheme={standardTheme}
-          comment={comment}
+          mainComment={mainComment}
           writeComment={writeComment}
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}
@@ -856,7 +913,7 @@ function App() {
           handleLike={handleLike}
           currentPost={currentPost}
           openPost={openPost}
-          comment={comment}
+          mainComment={mainComment}
           writeComment={writeComment}
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}
@@ -884,7 +941,7 @@ function App() {
           handleLike={handleLike}
           currentPost={currentPost}
           openPost={openPost}
-          comment={comment}
+          mainComment={mainComment}
           writeComment={writeComment}
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}
@@ -918,7 +975,7 @@ function App() {
           switchCommunityTheme={switchCommunityTheme}
           standardTheme={standardTheme}
           expandRule={expandRule}
-          comment={comment}
+          mainComment={mainComment}
           writeComment={writeComment}
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}

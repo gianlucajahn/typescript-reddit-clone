@@ -3,7 +3,7 @@ import { Comment, Subreddit } from '../../types/types';
 import './EditComment.scss';
 
 export interface EditCommentProps {
-    comment: any,
+    mainComment: string,
     targetedComment?: Comment | undefined,
     index?: number,
     writeComment: any,
@@ -19,7 +19,7 @@ export interface EditCommentProps {
 
 export default function EditComment  (props: EditCommentProps) {
   const {
-    comment,
+    mainComment,
     targetedComment,
     index,
     currentEditedComment,
@@ -43,7 +43,7 @@ export default function EditComment  (props: EditCommentProps) {
 
   return (
     <div className="hoverArea" style={{ marginTop: nested ? "18px" : "5px", marginLeft: nested ? "20px" : "", width: nested ? "608px" : "652px", minWidth: nested ? "608px" : "652px", border: focussed ? "1px solid black" : "1px solid transparent" }}>
-      <textarea id={index?.toString()} className="comment-box" style={{ height: nested ? "130px" : "139px", minHeight: nested ? "130px" : "139px" , width: nested ? "608px" : "652px", minWidth: nested ? "608px" : "652px", maxWidth: nested ? "608px" : "652px", color: nested ? currentEditedComment!.length >= 1 ? "#060606" : "#878a8c" : comment.length >= 1 ? "#060606" : "#878a8c" }} placeholder="What are your thoughts?" value={nested ? currentEditedComment : comment} onChange={nested ? writeNestedComment : writeComment} onFocus={() => setFocussed(true)} onBlur={() => setFocussed(false)}></textarea>
+      <textarea id={index?.toString()} className="comment-box" style={{ height: nested ? "130px" : "139px", minHeight: nested ? "130px" : "139px" , width: nested ? "608px" : "652px", minWidth: nested ? "608px" : "652px", maxWidth: nested ? "608px" : "652px", color: nested ? currentEditedComment!.length >= 1 ? "#060606" : "#878a8c" : mainComment.length >= 1 ? "#060606" : "#878a8c" }} placeholder="What are your thoughts?" value={nested ? currentEditedComment : mainComment} onChange={nested ? writeNestedComment : writeComment} onFocus={() => setFocussed(true)} onBlur={() => setFocussed(false)}></textarea>
 
       <div className="button-bar">
         <div className="start">
@@ -101,7 +101,7 @@ export default function EditComment  (props: EditCommentProps) {
               <p style={{ color: currentSub?.buttonColor }}>Cancel</p>
             </button>}
       
-            <button className="markdown submit" style={{ backgroundColor: comment.length >= 1 ? currentSub?.buttonColor : "#9a9a9a", color: comment.length >= 1 ? "white" : "#cdcdcd", cursor: comment.length >= 1 ? "pointer" : "not-allowed" }} onClick={submitComment}>
+            <button className="markdown submit" style={{ backgroundColor: nested ? currentEditedComment!.length >= 1 ? currentSub?.buttonColor : "#9a9a9a" : mainComment.length >= 1 ? currentSub?.buttonColor : "#9a9a9a", color: nested ? currentEditedComment!.length >= 1 ? "white" : "#cdcdcd" : mainComment.length >= 1 ? "white" : "#cdcdcd", cursor: nested ? currentEditedComment!.length >= 1 ? "pointer" : "not-allowed" : mainComment.length >= 1 ? "pointer" : "not-allowed" }} onClick={nested ? submitNestedComment : submitComment} id={`${index}`}>
               <p>Comment</p>
             </button>
         </div>

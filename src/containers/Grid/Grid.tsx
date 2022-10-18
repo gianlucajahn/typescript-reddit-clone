@@ -15,7 +15,7 @@ export interface GridProps {
     currentPost: Post | undefined,
     posts: Post[],
     userName: string,
-    comment: string,
+    mainComment: string,
     writeComment: any,
     currentEditedComment: string,
     loginStatus: boolean,
@@ -40,7 +40,7 @@ export default function Grid (props: GridProps) {
     currentEditedComment,
     posts,
     loginStatus,
-    comment,
+    mainComment,
     writeComment,
     setIndex,
     writeNestedComment,
@@ -68,7 +68,7 @@ export default function Grid (props: GridProps) {
                  handleLike={handleLike}
                  openPost={openPost}
                  userName={userName}
-                 comment={comment}
+                 mainComment={mainComment}
                  writeComment={writeComment}
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
@@ -94,7 +94,7 @@ export default function Grid (props: GridProps) {
                  handleLike={handleLike}
                  openPost={openPost}
                  userName={userName}
-                 comment={comment}
+                 mainComment={mainComment}
                  writeComment={writeComment}
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
@@ -120,7 +120,7 @@ export default function Grid (props: GridProps) {
                  handleLike={handleLike}
                  openPost={openPost}
                  userName={userName}
-                 comment={comment}
+                 mainComment={mainComment}
                  writeComment={writeComment}
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
@@ -146,7 +146,7 @@ export default function Grid (props: GridProps) {
                  handleLike={handleLike}
                  openPost={openPost}
                  userName={userName}
-                 comment={comment}
+                 mainComment={mainComment}
                  writeComment={writeComment}
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
@@ -172,7 +172,7 @@ export default function Grid (props: GridProps) {
                  handleLike={handleLike}
                  openPost={openPost}
                  userName={userName}
-                 comment={comment}
+                 mainComment={mainComment}
                  writeComment={writeComment}
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}

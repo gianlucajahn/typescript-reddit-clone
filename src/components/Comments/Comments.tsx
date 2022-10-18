@@ -4,11 +4,13 @@ import { Post, Subreddit, Comment } from '../../types/types';
 import './Comments.scss';
 import { ReactComponent as Dropdown } from "../../resources/images/dropdown.svg";
 import EditComment from '../EditComment/EditComment';
+import PostedComment from '../PostedComment/PostedComment';
+
 
 export interface CommentsProps {
   userName: string,
   currentSub: Subreddit | undefined,
-  comment: string,
+  mainComment: string,
   writeComment: any,
   currentEditedComment: string,
   currentPost: Post,
@@ -25,7 +27,7 @@ export default function Comments (props: CommentsProps) {
   const {
     userName,
     currentSub,
-    comment,
+    mainComment,
     writeComment,
     currentEditedComment,
     currentPost,
@@ -153,7 +155,7 @@ export default function Comments (props: CommentsProps) {
           <h3 className="submit-header">Comment as <span style={{ color: currentSub?.buttonColor }}>{userName !== "" ? userName : "User"}</span></h3>
 
           <EditComment 
-            comment={comment}
+            mainComment={mainComment}
             writeComment={writeComment}
             submitComment={submitComment}
             currentSub={currentSub}
@@ -174,83 +176,25 @@ export default function Comments (props: CommentsProps) {
           <div className="divider"></div>
 
           {currentPost.comments.map((comment, i) => {
-            return <div className="comment" id={`${i}`}>
-              <div className="comment-header">
-                <img className="comment-avatar" src={require("../../resources/images/avatar3.PNG")} />
-                <h4 className="comment-author">{comment.author}</h4>
-                <h4 className="comment-timestamp">· {comment.time}</h4>
-              </div>
-              <div className="comment-content-container">
-                    <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1" }}></div>
-                    <div className="right">
-                      <p id="content">{comment.content}</p>
-                      <div className="comment-footer">
-                          <button className={`${i}`} onMouseEnter={handleHoverComment} onMouseLeave={handleHoverComment} onClick={handleLikeComment} id="upvote">
-                            <img className="upvote" src={require(`../../resources/images/${comment.vote === 0 || comment.vote === -1 ? 
-                                                                                           hoveredComments[i].upvote ? "upvoteHover.png" : "upvote.png" 
-                                                                                           : "upvoted.png"}`)} 
-                            />
-                          </button>
-        
-                          <h3 className="votes">{comment.upvotes}</h3>
-        
-                          <button className={`${i}`} onMouseEnter={handleHoverComment} onMouseLeave={handleHoverComment} onClick={handleLikeComment} id="downvote">
-                            <img className="downvote" src={require(`../../resources/images/${comment.vote === 0 || comment.vote === 1 ?
-                                                                                            hoveredComments[i].downvote ? "downvoteHover.png" : "downvote.png"  
-                                                                                            : "downvoted.png"}`)} 
-                            />
-                          </button>
-
-                          {comment.nested_comments.length < 1 && <div className="reply comment-footer-box" id={`${i}`} onClick={handleNestedComment}>
-                            <img className="reply-icon" src={require("../../resources/images/comments.png")} />
-                            <h3>Reply</h3>
-                          </div>}
-
-                          <div className="comment-footer-box">
-                            <h3>Give Award</h3>
-                          </div>
-
-                          <div className="comment-footer-box">
-                            <h3>Share</h3>
-                          </div>
-
-                          <div className="comment-footer-box">
-                            <h3>Report</h3>
-                          </div>
-
-                          <div className="comment-footer-box">
-                            <h3>Save</h3>
-                          </div>
-
-                          <div className="comment-footer-box">
-                            <h3>Follow</h3>
-                          </div>
-                      </div>
-                    </div>
-              </div>
-
-              {comment.nesting === "edit" && 
-              <div className="nestedComment">
-                <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1" }}></div>
-                <div className="comment-line second-row-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1" }}></div>
-                <EditComment 
-                  comment={comment}
-                  index={i}
-                  targetedComment={currentPost.comments[i].nested_comments[0]}
-                  writeComment={writeComment}
-                  submitComment={submitComment}
-                  currentSub={currentSub}
-                  nested={true}
-                  setIndex={setIndex}
-                  writeNestedComment={writeNestedComment}
-                  submitNestedComment={submitNestedComment}
-                  currentEditedComment={currentEditedComment}
-                  handleNestedComment={handleNestedComment}
-                />
-              </div>
-              }
-              {comment.nesting === "posted" && <h3>Posted</h3>}
-            </div>
+            return <PostedComment
+                     index={i}
+                     currentPost={currentPost}
+                     mainComment={mainComment}
+                     handleHoverComment={handleHoverComment}
+                     handleLikeComment={handleLikeComment}
+                     handleNestedComment={handleNestedComment}
+                     hoveredComments={hoveredComments}
+                     commentObj={comment}
+                     targetedComment={currentPost.comments[i].nested_comments[0]}
+                     writeComment={writeComment}
+                     submitComment={submitComment}
+                     currentSub={currentSub}
+                     nested={false}
+                     setIndex={setIndex}
+                     writeNestedComment={writeNestedComment}
+                     submitNestedComment={submitNestedComment}
+                     currentEditedComment={currentEditedComment}
+                    />
           })}
         </div>
     </div>

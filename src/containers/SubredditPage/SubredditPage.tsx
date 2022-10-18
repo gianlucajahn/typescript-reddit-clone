@@ -36,7 +36,7 @@ export interface SubredditPageProps {
     communityTheme: boolean,
     currentEditedComment: string,
     communityOptions : boolean,
-    comment: string,
+    mainComment: string,
     writeComment: any,
     setIndex: Dispatch<SetStateAction<number | undefined>>
     writeNestedComment: any,
@@ -73,7 +73,7 @@ export default function SubredditPage (props: SubredditPageProps) {
     communityOptions,
     communityTheme,
     standardTheme,
-    comment,
+    mainComment,
     writeComment,
     setIndex,
     writeNestedComment,
@@ -131,7 +131,7 @@ export default function SubredditPage (props: SubredditPageProps) {
               handleLike={handleLike}
               openPost={openPost}
               userName={userName}
-              comment={comment}
+              mainComment={mainComment}
               writeComment={writeComment}
               submitComment={submitComment}
               handleLikeComment={handleLikeComment}

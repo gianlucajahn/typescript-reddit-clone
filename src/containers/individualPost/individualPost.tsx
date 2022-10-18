@@ -26,7 +26,7 @@ export interface individualPostProps {
     currentPost: Post | undefined,
     communityTheme: boolean,
     communityOptions : boolean,
-    comment: string,
+    mainComment: string,
     writeComment: any,
     setIndex: Dispatch<SetStateAction<number | undefined>>
     writeNestedComment: any,
@@ -55,7 +55,7 @@ export default function IndividualPost (props: individualPostProps) {
     subreddits,
     topSubreddits,
     currentEditedComment,
-    comment,
+    mainComment,
     writeComment,
     setIndex,
     writeNestedComment,
@@ -107,7 +107,7 @@ export default function IndividualPost (props: individualPostProps) {
             handleLike={handleLike}
             openPost={openPost}
             userName={userName}
-            comment={comment}
+            mainComment={mainComment}
             writeComment={writeComment}
             submitComment={submitComment}
             handleLikeComment={handleLikeComment}
