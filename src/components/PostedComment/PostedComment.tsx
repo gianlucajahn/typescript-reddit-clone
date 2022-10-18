@@ -86,7 +86,7 @@ export default function PostedComment (props: PostedCommentProps) {
                         />
                     </button>
                     <h3 className="votes">{nested ? commentObj.nested_comments[0].upvotes : commentObj.upvotes}</h3>
-                    <button className={nested ? `${index} nested` : `${index}`} onMouseEnter={handleHoverComment} onMouseLeave={handleHoverComment} onClick={handleLikeComment} id="downvote">
+                    <button className={nested ? `${index} nested` : `${index}`} onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={handleLikeComment} id="downvote">
                         <img className="downvote" src={require(`../../resources/images/${nested ? commentObj.nested_comments[0].vote === 0 || commentObj.nested_comments[0].vote === 1 ? hover.downvote ? "downvoteHover.png" : "downvote.png" : "downvoted.png" : commentObj.vote === 0 || commentObj.vote === 1 ?
                                                                                             hover.downvote ? "downvoteHover.png" : "downvote.png"  
                                                                                             : "downvoted.png"}`)} 
