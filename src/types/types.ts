@@ -55,12 +55,15 @@ export type Post = {
     flair:     Flair;
 } 
 
-export type Comment = {
+export interface Comment {
     author:  string;
+    nesting: string;
     vote:    number;
     time:    string;
     upvotes: string;
     content: string;
+    nested_lvl: number;
+    nested_comments: Comment[];
 }
 
 export type Flair = {

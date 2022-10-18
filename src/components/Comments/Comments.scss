@@ -327,3 +327,23 @@
     padding: 0;
     margin: 0;
 }
+
+.nestedComment {
+    display: flex;
+
+    .comment-line {
+        margin-top: 6px;
+        margin-left: 12px;
+        width: 2px;
+        height: inherit;
+        cursor: pointer;
+    }
+
+    .second-row-line {
+        margin-top: 18px;
+        margin-left: 22px;
+        width: 2px;
+        height: inherit;
+        cursor: pointer;
+    }
+}

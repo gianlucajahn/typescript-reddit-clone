@@ -1,18 +1,24 @@
 import { AnyNaptrRecord } from 'dns';
-import React, { MouseEventHandler, useEffect, useState } from 'react';
-import { Post, Subreddit } from '../../types/types';
+import React, { MouseEventHandler, useEffect, useState, Dispatch, SetStateAction } from 'react';
+import { Post, Subreddit, Comment } from '../../types/types';
 import './Comments.scss';
 import { ReactComponent as Dropdown } from "../../resources/images/dropdown.svg";
+import EditComment from '../EditComment/EditComment';
 
 export interface CommentsProps {
   userName: string,
   currentSub: Subreddit | undefined,
   comment: string,
   writeComment: any,
+  currentEditedComment: string,
   currentPost: Post,
   loginStatus: boolean,
+  setIndex: Dispatch<SetStateAction<number | undefined>>,
+  writeNestedComment: any,
+  submitNestedComment: MouseEventHandler,
   submitComment: MouseEventHandler,
-  handleLikeComment: MouseEventHandler
+  handleLikeComment: MouseEventHandler,
+  handleNestedComment: MouseEventHandler
 }
 
 export default function Comments (props: CommentsProps) {
@@ -21,10 +27,15 @@ export default function Comments (props: CommentsProps) {
     currentSub,
     comment,
     writeComment,
+    currentEditedComment,
     currentPost,
     loginStatus,
+    setIndex,
+    writeNestedComment,
+    submitNestedComment,
     submitComment,
-    handleLikeComment
+    handleLikeComment,
+    handleNestedComment
   } = props;
 
   const [focussed, setFocussed] = useState(false);
@@ -141,59 +152,14 @@ export default function Comments (props: CommentsProps) {
         <div className="submit-comment">
           <h3 className="submit-header">Comment as <span style={{ color: currentSub?.buttonColor }}>{userName !== "" ? userName : "User"}</span></h3>
 
-          <div className="hoverArea" style={{ border: focussed ? "1px solid black" : "1px solid transparent" }}>
-              <textarea className="comment-box" style={{ color: comment.length >= 1 ? "#060606" : "#878a8c" }} placeholder="What are your thoughts?" value={comment} onChange={writeComment} onFocus={() => setFocussed(true)} onBlur={() => setFocussed(false)}></textarea>
-
-              <div className="button-bar">
-                <button className="text-settings" aria-label="Bold">
-                  <img className="setting-icon" src={require("../../resources/images/bold.png")} />
-                </button>
-                <button className="text-settings" aria-label="Italic">
-                  <img className="setting-icon" src={require("../../resources/images/italic.png")} />
-                </button>
-                <button className="text-settings" aria-label="Link">
-                  <img className="setting-icon" src={require("../../resources/images/clip.png")} />
-                </button>
-                <button className="text-settings" aria-label="Striked">
-                  <img className="setting-icon" src={require("../../resources/images/strikethrough.png")} />
-                </button>
-                <button className="text-settings" aria-label="Inline Code">
-                  <img className="setting-icon" src={require("../../resources/images/inline.png")} />
-                </button>
-                <button className="text-settings" aria-label="Superscript">
-                  <img className="setting-icon" src={require("../../resources/images/superscript.png")} />
-                </button>
-                <button className="text-settings spoiler" aria-label="Spoiler">
-                  <img className="setting-icon" src={require("../../resources/images/spoiler.png")} />
-                </button>
-    
-                <div className="line"></div>
-    
-                <button className="text-settings" aria-label="Heading">
-                  <img className="setting-icon" src={require("../../resources/images/heading.png")} />
-                </button>
-                <button className="text-settings" aria-label="Bulleted">
-                  <img className="setting-icon" src={require("../../resources/images/bulleted.png")} />
-                </button>
-                <button className="text-settings" aria-label="Numbered"> 
-                  <img className="setting-icon" src={require("../../resources/images/numbered.png")} />
-                </button>
-                <button className="text-settings" aria-label="Quote Block">
-                  <img className="setting-icon" src={require("../../resources/images/quote.png")} />
-                </button>
-                <button className="text-settings" aria-label="More">
-                  <img className="setting-icon" src={require("../../resources/images/dots.png")} />
-                </button>
-    
-                <button className="markdown" id="markdown">
-                  <p style={{ color: currentSub?.buttonColor }}>Markdown Mode</p>
-                </button>
-
-                <button className="markdown submit" style={{ backgroundColor: comment.length >= 1 ? currentSub?.buttonColor : "#9a9a9a", color: comment.length >= 1 ? "white" : "#cdcdcd", cursor: comment.length >= 1 ? "pointer" : "not-allowed" }} onClick={submitComment}>
-                  <p>Comment</p>
-                </button>
-              </div>
-          </div>
+          <EditComment 
+            comment={comment}
+            writeComment={writeComment}
+            submitComment={submitComment}
+            currentSub={currentSub}
+            nested={false}
+            setIndex={setIndex}
+          />
         </div>
 
         <div className="comment-list">
@@ -235,7 +201,7 @@ export default function Comments (props: CommentsProps) {
                             />
                           </button>
 
-                          <div className="reply comment-footer-box" id="reply">
+                          <div className="reply comment-footer-box" id={`${i}`} onClick={handleNestedComment}>
                             <img className="reply-icon" src={require("../../resources/images/comments.png")} />
                             <h3>Reply</h3>
                           </div>
@@ -262,6 +228,27 @@ export default function Comments (props: CommentsProps) {
                       </div>
                     </div>
               </div>
+
+              {comment.nesting === "edit" && 
+              <div className="nestedComment">
+                <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1" }}></div>
+                <div className="comment-line second-row-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1" }}></div>
+                <EditComment 
+                  comment={comment}
+                  index={i}
+                  targetedComment={currentPost.comments[i].nested_comments[0]}
+                  writeComment={writeComment}
+                  submitComment={submitComment}
+                  currentSub={currentSub}
+                  nested={true}
+                  setIndex={setIndex}
+                  writeNestedComment={writeNestedComment}
+                  submitNestedComment={submitNestedComment}
+                  currentEditedComment={currentEditedComment}
+                />
+              </div>
+              }
+              {comment.nesting === "posted" && <h3>Posted</h3>}
             </div>
           })}
         </div>

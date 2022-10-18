@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from 'react';
+import React, { MouseEventHandler, Dispatch, SetStateAction } from 'react';
 import { Subreddits, Subreddit, Post } from '../../types/types';
 import { ReactComponent as Cross } from "../../resources/images/cross.svg";
 import './individualPost.scss';
@@ -21,18 +21,23 @@ export interface individualPostProps {
     loginStatus: boolean,
     setLoginModalState: any,
     loginModalState: string,
+    currentEditedComment: string,
     posts: Post[],
     currentPost: Post | undefined,
     communityTheme: boolean,
     communityOptions : boolean,
     comment: string,
     writeComment: any,
+    setIndex: Dispatch<SetStateAction<number | undefined>>
+    writeNestedComment: any,
+    submitNestedComment: MouseEventHandler
     expandRule: MouseEventHandler,
     handleLikeComment: MouseEventHandler,
     switchCommunityTheme: MouseEventHandler,
     submitComment: MouseEventHandler,
     closePost: MouseEventHandler,
     switchCommunityOptions: MouseEventHandler,
+    handleNestedComment: MouseEventHandler,
     standardTheme: {
       buttonColor: string,
       headerColor: string,
@@ -49,9 +54,14 @@ export default function IndividualPost (props: individualPostProps) {
     setSort,
     subreddits,
     topSubreddits,
+    currentEditedComment,
     comment,
     writeComment,
+    setIndex,
+    writeNestedComment,
+    submitNestedComment,
     handleSubMembership,
+    handleNestedComment,
     closePost,
     handleNavigate,
     submitComment,
@@ -102,6 +112,11 @@ export default function IndividualPost (props: individualPostProps) {
             submitComment={submitComment}
             handleLikeComment={handleLikeComment}
             loginStatus={loginStatus}
+            handleNestedComment={handleNestedComment}
+            setIndex={setIndex}
+            writeNestedComment={writeNestedComment}
+            submitNestedComment={submitNestedComment}
+            currentEditedComment={currentEditedComment}
           />
         </div>
 

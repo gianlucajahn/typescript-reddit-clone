@@ -20,7 +20,11 @@ const postArray = [
                 upvotes: "1",
                 content: "You’ll probably love Upgrade (2018) then. It’s a cyberpunk action movie and it is crazy!",
                 vote: 0,
-                nesting: "none"
+                nesting: "none",
+                nested_lvl: 0,
+                nested_comments: [
+                    
+                ]
             },
             {
                 author: "Sure_Whatever",
@@ -28,7 +32,11 @@ const postArray = [
                 upvotes: "1",
                 content: "Robcop, maybe",
                 vote: 0,
-                nesting: "none"
+                nesting: "none",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ]
             },
             {
                 author: "SaltySteveD87",
@@ -37,6 +45,10 @@ const postArray = [
                 time: "12 hr. ago",
                 upvotes: "2",
                 content: "Dead serious: Short Circuit 2. It has a genuinely good story with solid characters and some touching conversations about humanity and loneliness.",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ]
             },
             {
                 author: "Kindofhera",
@@ -44,7 +56,11 @@ const postArray = [
                 vote: 0,
                 time: "11 hr. ago",
                 upvotes: "4",
-                content: "Artificial Intelligence (androids) and Frankenstein (the monster)!"
+                content: "Artificial Intelligence (androids) and Frankenstein (the monster)!",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ]
             }
         ],
         flair: {
@@ -73,7 +89,11 @@ const postArray = [
                 vote: 0,
                 time: "7 hr. ago",
                 upvotes: "47",
-                content: "The Shining."
+                content: "The Shining.",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ]
             },
             {
                 author: "Longjumping-B",
@@ -81,7 +101,11 @@ const postArray = [
                 vote: 0,
                 time: "6 hr. ago",
                 upvotes: "8",
-                content: "They never admitted it but Sandra Bullock was right when she accepted her razzie. All About Steve wasn’t really that bad. At least she was a good sport about it and she won best actress the same year for The Blind Side."
+                content: "They never admitted it but Sandra Bullock was right when she accepted her razzie. All About Steve wasn’t really that bad. At least she was a good sport about it and she won best actress the same year for The Blind Side.",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ]
             },
             {
                 author: "Lower_Cantaloupe1970",
@@ -90,6 +114,10 @@ const postArray = [
                 time: "6 hr. ago",
                 upvotes: "16",
                 content: "Tangerine Dream won for worst score for thief, which is perhaps one of the best scores ever.",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ]
             },
             {
                 author: "darkness_escape",
@@ -97,7 +125,11 @@ const postArray = [
                 vote: 0,
                 time: "6 hr. ago",
                 upvotes: "13",
-                content: "Didn't win but was nominated for worse picture. Cliffhanger. Which is a really fun action movie"
+                content: "Didn't win but was nominated for worse picture. Cliffhanger. Which is a really fun action movie",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ]
             },
             {
                 author: "secoccular",
@@ -105,7 +137,11 @@ const postArray = [
                 vote: 0,
                 time: "7 hr. ago",
                 upvotes: "14",
-                content: "Year of the Dragon. Not great, but not as awful as the Razzies claimed. Tarantino has also praised the shoot out scene at the end, it's frankly a good and tense climax. Heaven's Gate and the reviews probably helped destroy Cimino's career and now is quite well critically received."
+                content: "Year of the Dragon. Not great, but not as awful as the Razzies claimed. Tarantino has also praised the shoot out scene at the end, it's frankly a good and tense climax. Heaven's Gate and the reviews probably helped destroy Cimino's career and now is quite well critically received.",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ]
             }
         ],
         flair: {
@@ -134,7 +170,11 @@ const postArray = [
                 vote: 0,
                 time: "20 hr. ago",
                 upvotes: "2",
-                content: "Not sure how I feel."
+                content: "Not sure how I feel.",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ]
             },
             {
                 author: "donsanedrin",
@@ -142,7 +182,11 @@ const postArray = [
                 vote: 0,
                 time: "19 hr. ago",
                 upvotes: "1",
-                content: "I think its cool when I realize during the middle of a trailer, that they were able to create a premise in which in takes place in one location, and that's probably why this small indie movie was able to get made."
+                content: "I think its cool when I realize during the middle of a trailer, that they were able to create a premise in which in takes place in one location, and that's probably why this small indie movie was able to get made.",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ]
             }
         ],
         flair: {
@@ -171,7 +215,11 @@ const postArray = [
                 vote: 0,
                 time: "2 days ago",
                 upvotes: "7.2k",
-                content: "CAST: The Movie"
+                content: "CAST: The Movie",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ]
             },
             {
                 author: "Writing_Gods",
@@ -179,7 +227,11 @@ const postArray = [
                 vote: 0,
                 time: "2 days ago",
                 upvotes: "2.4k",
-                content: "It looks like an Amsterdam poster or the movie IMAX"
+                content: "It looks like an Amsterdam poster or the movie IMAX",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ]
             },
             {
                 author: "TetrisCube",
@@ -187,7 +239,11 @@ const postArray = [
                 vote: 0,
                 time: "2 days ago",
                 upvotes: "673",
-                content: "So disappointed that this movie doesn't even take place in Amsterdam."
+                content: "So disappointed that this movie doesn't even take place in Amsterdam.",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ]
             }
         ],
         flair: {
@@ -213,6 +269,10 @@ const postArray = [
         comments: [
             {
                 author: "StuckInBronze",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 vote: 0,
                 nesting: "none",
                 time: "7 days ago",
@@ -221,6 +281,10 @@ const postArray = [
             },
             {
                 author: "Youthsonic",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 days ago",
@@ -229,6 +293,10 @@ const postArray = [
             },
             {
                 author: "oldnative",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "7 days ago",
@@ -237,6 +305,10 @@ const postArray = [
             },
             {
                 author: "castzpg",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "7 days ago",
@@ -269,6 +341,10 @@ const postArray = [
         comments: [
             {
                 author: "Killerack",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -277,6 +353,10 @@ const postArray = [
             },
             {
                 author: "AshKetchup",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -285,6 +365,10 @@ const postArray = [
             },
             {
                 author: "Tyler1",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -293,6 +377,10 @@ const postArray = [
             },
             {
                 author: "HenriqueAlberti",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -326,6 +414,10 @@ const postArray = [
         comments: [
             {
                 author: "TeemoG0d69",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -334,6 +426,10 @@ const postArray = [
             },
             {
                 author: "Floh_the_6th",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -342,6 +438,10 @@ const postArray = [
             },
             {
                 author: "caioxisd",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -371,6 +471,10 @@ const postArray = [
         comments: [
             {
                 author: "asiantuttle",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -379,6 +483,10 @@ const postArray = [
             },
             {
                 author: "Lowsmithy",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "20 hr. ago",
@@ -387,6 +495,10 @@ const postArray = [
             },
             {
                 author: "MacNReee",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "14 hr. ago",
@@ -395,6 +507,10 @@ const postArray = [
             },
             {
                 author: "[deleted]",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "10 hr. ago",
@@ -424,6 +540,10 @@ const postArray = [
         comments: [
             {
                 author: "[deleted]",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -432,6 +552,10 @@ const postArray = [
             },
             {
                 author: "User_330001435",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "23 hr. ago",
@@ -462,6 +586,10 @@ const postArray = [
         comments: [
             {
                 author: "Adventurous_File_798",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "20 min. ago",
@@ -470,6 +598,10 @@ const postArray = [
             },
             {
                 author: "thatonejungler",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -478,6 +610,10 @@ const postArray = [
             },
             {
                 author: "doglop",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 hr. ago",
@@ -486,6 +622,10 @@ const postArray = [
             },
             {
                 author: "Dianamita",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 hr. ago",
@@ -516,6 +656,10 @@ const postArray = [
         comments: [
             {
                 author: "Anniran",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -524,6 +668,10 @@ const postArray = [
             },
             {
                 author: "LivingASlothsLife",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 hr. ago",
@@ -532,6 +680,10 @@ const postArray = [
             },
             {
                 author: "IamPlatycus",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 hr. ago",
@@ -540,6 +692,10 @@ const postArray = [
             },
             {
                 author: "Ikcatcher",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "57 min. ago",
@@ -548,6 +704,10 @@ const postArray = [
             },
             {
                 author: "Mana_Transfer",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -580,6 +740,10 @@ const postArray = [
         comments: [
             {
                 author: "natsingsing",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -588,6 +752,10 @@ const postArray = [
             },
             {
                 author: "LordSirLance",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -596,6 +764,10 @@ const postArray = [
             },
             {
                 author: "Rikallion",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 hr. ago",
@@ -604,6 +776,10 @@ const postArray = [
             },
             {
                 author: "Sir_Tea_Of_Bags",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -635,6 +811,10 @@ const postArray = [
         comments: [
             {
                 author: "SeniorGuava881",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "16 hr. ago",
@@ -643,6 +823,10 @@ const postArray = [
             },
             {
                 author: "Mynorskull",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "15 hr. ago",
@@ -651,6 +835,10 @@ const postArray = [
             },
             {
                 author: "Rikallion",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 hr. ago",
@@ -659,6 +847,10 @@ const postArray = [
             },
             {
                 author: "Skeither",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "13 hr. ago",
@@ -667,6 +859,10 @@ const postArray = [
             },
             {
                 author: "choccymilk0560",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "13 hr. ago",
@@ -675,6 +871,10 @@ const postArray = [
             },
             {
                 author: "MayureshMJ",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "10 hr. ago",
@@ -709,6 +909,10 @@ const postArray = [
         comments: [
             {
                 author: "MrHvedrungr",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "15 hr. ago",
@@ -717,6 +921,10 @@ const postArray = [
             },
             {
                 author: "K_Shou",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "14 hr. ago",
@@ -725,6 +933,10 @@ const postArray = [
             },
             {
                 author: "Psychological_Ad3329",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "13 hr. ago",
@@ -754,6 +966,10 @@ const postArray = [
         comments: [
             {
                 author: "ScienceOfMemory",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "9 hr. ago",
@@ -762,6 +978,10 @@ const postArray = [
             },
             {
                 author: "Altekho",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "10 hr. ago",
@@ -770,6 +990,10 @@ const postArray = [
             },
             {
                 author: "18237482",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "9 hr. ago",
@@ -778,6 +1002,10 @@ const postArray = [
             },
             {
                 author: "Jsomer50",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "10 hr. ago",
@@ -786,6 +1014,10 @@ const postArray = [
             },
             {
                 author: "UniqueCremer1931",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "9 hr. ago",
@@ -815,6 +1047,10 @@ const postArray = [
         comments: [
             {
                 author: "TheSmokeSalmon420",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 hr. ago",
@@ -823,6 +1059,10 @@ const postArray = [
             },
             {
                 author: "mansmurf",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 hr. ago",
@@ -831,6 +1071,10 @@ const postArray = [
             },
             {
                 author: "KryieWetUpCurry_",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 hr. ago",
@@ -839,6 +1083,10 @@ const postArray = [
             },
             {
                 author: "NevermoreSEA",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 hr. ago",
@@ -868,6 +1116,10 @@ const postArray = [
         comments: [
             {
                 author: "ChamberDavs",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -876,6 +1128,10 @@ const postArray = [
             },
             {
                 author: "badthird",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -884,6 +1140,10 @@ const postArray = [
             },
             {
                 author: "rostron92",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -916,6 +1176,10 @@ const postArray = [
         comments: [
             {
                 author: "HokageEzio",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -924,6 +1188,10 @@ const postArray = [
             },
             {
                 author: "CoachJW",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -953,6 +1221,10 @@ const postArray = [
         comments: [
             {
                 author: "raylan_givens6",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "23 hours ago",
@@ -961,6 +1233,10 @@ const postArray = [
             },
             {
                 author: "Realnonamer1",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "21 hr. ago",
@@ -969,6 +1245,10 @@ const postArray = [
             },
             {
                 author: "ThinkSoftware",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "23 hr. ago",
@@ -977,6 +1257,10 @@ const postArray = [
             },
             {
                 author: "nellywentdiamond",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "23 hr. ago",
@@ -1006,6 +1290,10 @@ const postArray = [
         comments: [
             {
                 author: "Next-Firefighter-753",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 hours ago",
@@ -1014,6 +1302,10 @@ const postArray = [
             },
             {
                 author: "agk927",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 hr. ago",
@@ -1022,6 +1314,10 @@ const postArray = [
             },
             {
                 author: "horseshoeoverlook",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 hr. ago",
@@ -1051,6 +1347,10 @@ const postArray = [
         comments: [
             {
                 author: "GigaChad450",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "16 days ago",
@@ -1059,6 +1359,10 @@ const postArray = [
             },
             {
                 author: "littlepiggy",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "16 days ago",
@@ -1067,6 +1371,10 @@ const postArray = [
             },
             {
                 author: "Simamonas",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "15 days ago",
@@ -1096,6 +1404,10 @@ const postArray = [
         comments: [
             {
                 author: "dan_obrien",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 hr. ago",
@@ -1129,6 +1441,10 @@ const postArray = [
         comments: [
             {
                 author: "smoovopr8r",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "7 months ago",
@@ -1137,6 +1453,10 @@ const postArray = [
             },
             {
                 author: "Leviathant",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "7 months ago",
@@ -1145,6 +1465,10 @@ const postArray = [
             },
             {
                 author: "Ax_deimos",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "7 months ago",
@@ -1178,6 +1502,10 @@ const postArray = [
         comments: [
             {
                 author: "smoovopr8r",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "7 months ago",
@@ -1186,6 +1514,10 @@ const postArray = [
             },
             {
                 author: "Leviathant",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "7 months ago",
@@ -1194,6 +1526,10 @@ const postArray = [
             },
             {
                 author: "Ax_deimos",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "7 months ago",
@@ -1223,6 +1559,10 @@ const postArray = [
         comments: [
             {
                 author: "Mysterious-Post8193",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 hr. ago",
@@ -1231,6 +1571,10 @@ const postArray = [
             },
             {
                 author: "Dormage",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 hr. ago",
@@ -1239,6 +1583,10 @@ const postArray = [
             },
             {
                 author: "Palpitating_Rattus",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 hr. ago",
@@ -1247,6 +1595,10 @@ const postArray = [
             },
             {
                 author: "21plankton",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 hr. ago",
@@ -1276,6 +1628,10 @@ const postArray = [
         comments: [
             {
                 author: "ChrisStoneGermany",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 hr. ago",
@@ -1305,6 +1661,10 @@ const postArray = [
         comments: [
             {
                 author: "maitreg",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1313,6 +1673,10 @@ const postArray = [
             },
             {
                 author: "GammaGargoyle",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1321,6 +1685,10 @@ const postArray = [
             },
             {
                 author: "OptionalMind",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1329,6 +1697,10 @@ const postArray = [
             },
             {
                 author: "sfboots",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1337,6 +1709,10 @@ const postArray = [
             },
             {
                 author: "pakidara",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1366,6 +1742,10 @@ const postArray = [
         comments: [
             {
                 author: "ManyFails1Win",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1374,6 +1754,10 @@ const postArray = [
             },
             {
                 author: "the_man_with_none",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -1382,6 +1766,10 @@ const postArray = [
             },
             {
                 author: "kaloschroma",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1390,6 +1778,10 @@ const postArray = [
             },
             {
                 author: "Para0234",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1419,6 +1811,10 @@ const postArray = [
         comments: [
             {
                 author: "BinkanSalaryman",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 days ago",
@@ -1427,6 +1823,10 @@ const postArray = [
             },
             {
                 author: "ItsZayveeir",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 days ago",
@@ -1435,6 +1835,10 @@ const postArray = [
             },
             {
                 author: "sokeTek",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -1465,6 +1869,10 @@ const postArray = [
         comments: [
             {
                 author: "Business-Ad-274",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 hr. ago",
@@ -1473,6 +1881,10 @@ const postArray = [
             },
             {
                 author: "hrnyirawan",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -1502,6 +1914,10 @@ const postArray = [
         comments: [
             {
                 author: "FVMAzalea",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "53 min. ago",
@@ -1531,6 +1947,10 @@ const postArray = [
         comments: [
             {
                 author: "15Nova22",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 hr. ago",
@@ -1563,6 +1983,10 @@ const postArray = [
         comments: [
             {
                 author: "mancinis_blessed_bat",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 days ago",
@@ -1571,6 +1995,10 @@ const postArray = [
             },
             {
                 author: "ikeif",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 days ago",
@@ -1579,6 +2007,10 @@ const postArray = [
             },
             {
                 author: "phasr0uk1",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 days ago",
@@ -1587,6 +2019,10 @@ const postArray = [
             },
             {
                 author: "budspencer",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -1595,6 +2031,10 @@ const postArray = [
             },
             {
                 author: "ApolloFarZenith",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -1603,6 +2043,10 @@ const postArray = [
             },
             {
                 author: "AngreFreshTech",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 days ago",
@@ -1633,6 +2077,10 @@ const postArray = [
         comments: [
             {
                 author: "CreativeTechGuyGames",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 days ago",
@@ -1641,6 +2089,10 @@ const postArray = [
             },
             {
                 author: "SeaProfessor3312",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -1649,6 +2101,10 @@ const postArray = [
             },
             {
                 author: "Goldreaver",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -1678,6 +2134,10 @@ const postArray = [
         comments: [
             {
                 author: "mbonty",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1686,6 +2146,10 @@ const postArray = [
             },
             {
                 author: "silly_frog_lf",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -1715,6 +2179,10 @@ const postArray = [
         comments: [
             {
                 author: "AugustGnarly",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1723,6 +2191,10 @@ const postArray = [
             },
             {
                 author: "thesituation531",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -1731,6 +2203,10 @@ const postArray = [
             },
             {
                 author: "rafaover",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1739,6 +2215,10 @@ const postArray = [
             },
             {
                 author: "YungDwight",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -1768,6 +2248,10 @@ const postArray = [
         comments: [
             {
                 author: "AugustGnarly",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "21 hr. ago",
@@ -1776,6 +2260,10 @@ const postArray = [
             },
             {
                 author: "Toffeemanstar",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "21 hr. ago",
@@ -1784,6 +2272,10 @@ const postArray = [
             },
             {
                 author: "CBvdb",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "20 hr. ago",
@@ -1813,6 +2305,10 @@ const postArray = [
         comments: [
             {
                 author: "Jazzbo64",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "17 hr. ago",
@@ -1821,6 +2317,10 @@ const postArray = [
             },
             {
                 author: "samuraisports37",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "18 hr. ago",
@@ -1829,6 +2329,10 @@ const postArray = [
             },
             {
                 author: "una_pistola",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "16 hr. ago",
@@ -1837,6 +2341,10 @@ const postArray = [
             },
             {
                 author: "Zhou_Da",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 hr. ago",
@@ -1845,6 +2353,10 @@ const postArray = [
             },
             {
                 author: "Desperate_Chim_343",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "9 hr. ago",
@@ -1875,6 +2387,10 @@ const postArray = [
         comments: [
             {
                 author: "CruisinJoe22",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1883,6 +2399,10 @@ const postArray = [
             },
             {
                 author: "xeenexus",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1912,6 +2432,10 @@ const postArray = [
         comments: [
             {
                 author: "Volfie",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "23 hr. ago",
@@ -1920,6 +2444,10 @@ const postArray = [
             },
             {
                 author: "cutelyaware",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -1928,6 +2456,10 @@ const postArray = [
             },
             {
                 author: "Kohouteky",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -1957,6 +2489,10 @@ const postArray = [
         comments: [
             {
                 author: "PoetBakerBuck",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -1990,6 +2526,10 @@ const postArray = [
         comments: [
             {
                 author: "usernamesareclass",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "10 hr. ago",
@@ -1998,6 +2538,10 @@ const postArray = [
             },
             {
                 author: "MyNotYours",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "10 hr. ago",
@@ -2006,6 +2550,10 @@ const postArray = [
             },
             {
                 author: "InfernalGout",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 hr. ago",
@@ -2014,6 +2562,10 @@ const postArray = [
             },
             {
                 author: "pattiemac",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 hr. ago",
@@ -2022,6 +2574,10 @@ const postArray = [
             },
             {
                 author: "NervousGuy",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "10 hr. ago",
@@ -2030,6 +2586,10 @@ const postArray = [
             },
             {
                 author: "GeneralA01",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "7 hr. ago",
@@ -2062,6 +2622,10 @@ const postArray = [
         comments: [
             {
                 author: "DeepfkingValuesDad",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "9 hr. ago",
@@ -2070,6 +2634,10 @@ const postArray = [
             },
             {
                 author: "FritzKreig",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "9 hr. ago",
@@ -2078,6 +2646,10 @@ const postArray = [
             },
             {
                 author: "jetah",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "9 hr. ago",
@@ -2108,6 +2680,10 @@ const postArray = [
         comments: [
             {
                 author: "BunnyPerson",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 months ago",
@@ -2116,6 +2692,10 @@ const postArray = [
             },
             {
                 author: "ErmirI",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 months",
@@ -2124,6 +2704,10 @@ const postArray = [
             },
             {
                 author: "TheGenericLee",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 months ago",
@@ -2157,6 +2741,10 @@ const postArray = [
         comments: [
             {
                 author: "Texas_Persian",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -2165,6 +2753,10 @@ const postArray = [
             },
             {
                 author: "SpaceboysUsername",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -2173,6 +2765,10 @@ const postArray = [
             },
             {
                 author: "Drump21",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -2181,6 +2777,10 @@ const postArray = [
             },
             {
                 author: "uncondolencednole91",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -2210,6 +2810,10 @@ const postArray = [
         comments: [
             {
                 author: "PrudentEvening",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -2218,6 +2822,10 @@ const postArray = [
             },
             {
                 author: "AlesantroCorticeli",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -2247,6 +2855,10 @@ const postArray = [
         comments: [
             {
                 author: "Royal-Author-669",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 hr. ago",
@@ -2255,6 +2867,10 @@ const postArray = [
             },
             {
                 author: "404_Gordon_Not_Found",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 hr. ago",
@@ -2263,6 +2879,10 @@ const postArray = [
             },
             {
                 author: "Wackmajor",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 hr. ago",
@@ -2292,6 +2912,10 @@ const postArray = [
         comments: [
             {
                 author: "reddit445",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -2300,6 +2924,10 @@ const postArray = [
             },
             {
                 author: "StupidDIYQs",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "16 hr. ago",
@@ -2337,6 +2965,10 @@ const postArray = [
         comments: [
             {
                 author: "nasa",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -2345,6 +2977,10 @@ const postArray = [
             },
             {
                 author: "THE_STOCKINGHATHERO",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -2374,6 +3010,10 @@ const postArray = [
         comments: [
             {
                 author: "AutoModerator",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 days ago",
@@ -2382,6 +3022,10 @@ const postArray = [
             },
             {
                 author: "sevgonlernassau",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -2411,6 +3055,10 @@ const postArray = [
         comments: [
             {
                 author: "Jump_Like_A_Willys",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 days ago",
@@ -2419,6 +3067,10 @@ const postArray = [
             },
             {
                 author: "Outrageous_Zebra_221",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 days ago",
@@ -2427,6 +3079,10 @@ const postArray = [
             },
             {
                 author: "Cuda_BreakAway",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 days ago",
@@ -2435,6 +3091,10 @@ const postArray = [
             },
             {
                 author: "shmeebaloney",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 days ago",
@@ -2443,6 +3103,10 @@ const postArray = [
             },
             {
                 author: "black_rhombus",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 days ago",
@@ -2473,6 +3137,10 @@ const postArray = [
         comments: [
             {
                 author: "Captain-Marvel-92",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "19 hr. ago",
@@ -2481,6 +3149,10 @@ const postArray = [
             },
             {
                 author: "MiniMonkey5041",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "18 hr. ago",
@@ -2489,6 +3161,10 @@ const postArray = [
             },
             {
                 author: "jefrye",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "18 hr. ago",
@@ -2497,6 +3173,10 @@ const postArray = [
             },
             {
                 author: "PrettyInWeed",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "19 hr. ago",
@@ -2527,6 +3207,10 @@ const postArray = [
         comments: [
             {
                 author: "Thomasinarina",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "21 hr. ago",
@@ -2535,6 +3219,10 @@ const postArray = [
             },
             {
                 author: "LorenaBobbedIt",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "20 hr. ago",
@@ -2543,6 +3231,10 @@ const postArray = [
             },
             {
                 author: "zootedzillenial",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "14 hr. ago",
@@ -2572,6 +3264,10 @@ const postArray = [
         comments: [
             {
                 author: "DanelleDee",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -2580,6 +3276,10 @@ const postArray = [
             },
             {
                 author: "mrssymea",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -2588,6 +3288,10 @@ const postArray = [
             },
             {
                 author: "agajabigaba",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -2596,6 +3300,10 @@ const postArray = [
             },
             {
                 author: "Particular_ad_2534",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -2604,6 +3312,10 @@ const postArray = [
             },
             {
                 author: "GeneralHumanBeing",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -2637,6 +3349,10 @@ const postArray = [
         comments: [
             {
                 author: "Space-nudibranch",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 mo. ago",
@@ -2645,6 +3361,10 @@ const postArray = [
             },
             {
                 author: "realwitchboy335",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 mo. ago",
@@ -2653,6 +3373,10 @@ const postArray = [
             },
             {
                 author: "stvbeev",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 mo. ago",
@@ -2683,6 +3407,10 @@ const postArray = [
         comments: [
             {
                 author: "Mimiques",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -2691,6 +3419,10 @@ const postArray = [
             },
             {
                 author: "TheBigDuchess",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -2720,6 +3452,10 @@ const postArray = [
         comments: [
             {
                 author: "LetsGetHivern",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -2728,6 +3464,10 @@ const postArray = [
             },
             {
                 author: "sinned82",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 hr. ago",
@@ -2736,6 +3476,10 @@ const postArray = [
             },
             {
                 author: "Joe_Dirte9",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -2744,6 +3488,10 @@ const postArray = [
             },
             {
                 author: "Tired_JoyBoy",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -2773,6 +3521,10 @@ const postArray = [
         comments: [
             {
                 author: "coldmexicantea",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -2781,6 +3533,10 @@ const postArray = [
             },
             {
                 author: "_goodpraxis",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "36 min. ago",
@@ -2812,6 +3568,10 @@ const postArray = [
         comments: [
             {
                 author: "Iamyous3f",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -2820,6 +3580,10 @@ const postArray = [
             },
             {
                 author: "ElectroFishy56",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -2828,6 +3592,10 @@ const postArray = [
             },
             {
                 author: "darksora2323",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -2836,6 +3604,10 @@ const postArray = [
             },
             {
                 author: "LeeMBoro",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -2844,6 +3616,10 @@ const postArray = [
             },
             {
                 author: "MarcLo",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -2873,6 +3649,10 @@ const postArray = [
         comments: [
             {
                 author: "Mountain_-_king",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -2881,6 +3661,10 @@ const postArray = [
             },
             {
                 author: "greeneggs93",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -2889,6 +3673,10 @@ const postArray = [
             },
             {
                 author: "LeeMBoro",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -2922,6 +3710,10 @@ const postArray = [
         comments: [
             {
                 author: "polarbearik",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 yr. ago",
@@ -2930,6 +3722,10 @@ const postArray = [
             },
             {
                 author: "Mescman",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 yr. ago",
@@ -2938,6 +3734,10 @@ const postArray = [
             },
             {
                 author: "BodieBroadcasts",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 yr. ago",
@@ -2946,6 +3746,10 @@ const postArray = [
             },
             {
                 author: "PeripheralAddition",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 yr. ago",
@@ -2954,6 +3758,10 @@ const postArray = [
             },
             {
                 author: "LazySans",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 yr. ago",
@@ -2986,6 +3794,10 @@ const postArray = [
         comments: [
             {
                 author: "Georgy_K_Zhukov",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 yr. ago",
@@ -2994,6 +3806,10 @@ const postArray = [
             },
             {
                 author: "Erestyn",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 yr. ago",
@@ -3002,6 +3818,10 @@ const postArray = [
             },
             {
                 author: "RampagingKoala",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 yr. ago",
@@ -3010,6 +3830,10 @@ const postArray = [
             },
             {
                 author: "Abedeus",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 yr. ago",
@@ -3040,6 +3864,10 @@ const postArray = [
         comments: [
             {
                 author: "vasiliypupkeen",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 days ago",
@@ -3048,6 +3876,10 @@ const postArray = [
             },
             {
                 author: "Letrabotttle",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 days ago",
@@ -3056,6 +3888,10 @@ const postArray = [
             },
             {
                 author: "R3DT1D3",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 days ago",
@@ -3085,6 +3921,10 @@ const postArray = [
         comments: [
             {
                 author: "RadioactiveFruitCup",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 yr. ago",
@@ -3093,6 +3933,10 @@ const postArray = [
             },
             {
                 author: "Sin2k",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 yr. ago",
@@ -3101,6 +3945,10 @@ const postArray = [
             },
             {
                 author: "KTGS",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 yr. ago",
@@ -3109,6 +3957,10 @@ const postArray = [
             },
             {
                 author: "hamza1311",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 yr. ago",
@@ -3117,6 +3969,10 @@ const postArray = [
             },
             {
                 author: "iocane_",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 yr. ago",
@@ -3147,6 +4003,10 @@ const postArray = [
         comments: [
             {
                 author: "Halaku",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 yr. ago",
@@ -3155,6 +4015,10 @@ const postArray = [
             },
             {
                 author: "reusens",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 yr. ago",
@@ -3163,6 +4027,10 @@ const postArray = [
             },
             {
                 author: "ILoveToEatLobster",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 yr. ago",
@@ -3196,6 +4064,10 @@ const postArray = [
         comments: [
             {
                 author: "KeyserSora",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 yr. ago",
@@ -3204,6 +4076,10 @@ const postArray = [
             },
             {
                 author: "SwampYankee",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 yr. ago",
@@ -3212,6 +4088,10 @@ const postArray = [
             },
             {
                 author: "NaturalLogofOne",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 yr. ago",
@@ -3220,6 +4100,10 @@ const postArray = [
             },
             {
                 author: "eskeena",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 yr. ago",
@@ -3250,6 +4134,10 @@ const postArray = [
         comments: [
             {
                 author: "External_Camp",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -3258,6 +4146,10 @@ const postArray = [
             },
             {
                 author: "ash_bishop",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -3266,6 +4158,10 @@ const postArray = [
             },
             {
                 author: "closetedgae19",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -3274,6 +4170,10 @@ const postArray = [
             },
             {
                 author: "delightedknight3",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -3303,6 +4203,10 @@ const postArray = [
         comments: [
             {
                 author: "ibekt",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -3311,6 +4215,10 @@ const postArray = [
             },
             {
                 author: "ash_bishop",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -3319,6 +4227,10 @@ const postArray = [
             },
             {
                 author: "Bananasarelit",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -3349,6 +4261,10 @@ const postArray = [
         comments: [
             {
                 author: "Half-BloodPrincess",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -3357,6 +4273,10 @@ const postArray = [
             },
             {
                 author: "Word62",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -3365,6 +4285,10 @@ const postArray = [
             },
             {
                 author: "VelociStardust",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "19 hr. ago",
@@ -3373,6 +4297,10 @@ const postArray = [
             },
             {
                 author: "inky0210",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "19 hr. ago",
@@ -3381,6 +4309,10 @@ const postArray = [
             },
             {
                 author: "romychestnut",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "15 hr. ago",
@@ -3411,6 +4343,10 @@ const postArray = [
         comments: [
             {
                 author: "Half-BloodPrincess",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "7 days ago",
@@ -3419,6 +4355,10 @@ const postArray = [
             },
             {
                 author: "Ill_Be_Myself",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 days ago",
@@ -3427,6 +4367,10 @@ const postArray = [
             },
             {
                 author: "Ronnee51-yay",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "6 days ago",
@@ -3456,6 +4400,10 @@ const postArray = [
         comments: [
             {
                 author: "muchandquick",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -3464,6 +4412,10 @@ const postArray = [
             },
             {
                 author: "adam1983adz",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -3472,6 +4424,10 @@ const postArray = [
             },
             {
                 author: "suga-kyun",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -3480,6 +4436,10 @@ const postArray = [
             },
             {
                 author: "PepsiCola7860",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -3509,6 +4469,10 @@ const postArray = [
         comments: [
             {
                 author: "waldohasleftus",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "17 hr. ago",
@@ -3517,6 +4481,10 @@ const postArray = [
             },
             {
                 author: "Brief_Ad_1489",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "10 hr. ago",
@@ -3525,6 +4493,10 @@ const postArray = [
             },
             {
                 author: "hhairy",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "12 hr. ago",
@@ -3557,6 +4529,10 @@ const postArray = [
         comments: [
             {
                 author: "Dei_Photos",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "26 days ago",
@@ -3565,6 +4541,10 @@ const postArray = [
             },
             {
                 author: "Umpron",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "25 days ago",
@@ -3573,6 +4553,10 @@ const postArray = [
             },
             {
                 author: "Echo4708",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "26 days ago",
@@ -3581,6 +4565,10 @@ const postArray = [
             },
             {
                 author: "Forest_folf",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "24 days ago",
@@ -3611,6 +4599,10 @@ const postArray = [
         comments: [
             {
                 author: "verbi420",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "22 days ago",
@@ -3619,6 +4611,10 @@ const postArray = [
             },
             {
                 author: "pomarine",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "21 days ago",
@@ -3648,6 +4644,10 @@ const postArray = [
         comments: [
             {
                 author: "KevinTheIdk",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "24 days ago",
@@ -3656,6 +4656,10 @@ const postArray = [
             },
             {
                 author: "TheGreenRaccoon07",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "24 days ago",
@@ -3664,6 +4668,10 @@ const postArray = [
             },
             {
                 author: "Cest_La_Vie_101",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "23 days ago",
@@ -3672,6 +4680,10 @@ const postArray = [
             },
             {
                 author: "NightcoreSpectrum",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "23 days ago",
@@ -3701,6 +4713,10 @@ const postArray = [
         comments: [
             {
                 author: "ptupper",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "12 min. ago",
@@ -3730,6 +4746,10 @@ const postArray = [
         comments: [
             {
                 author: "Jayce86",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -3738,6 +4758,10 @@ const postArray = [
             },
             {
                 author: "NickyNicotine",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -3746,6 +4770,10 @@ const postArray = [
             },
             {
                 author: "PoetryIsAlive",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -3754,6 +4782,10 @@ const postArray = [
             },
             {
                 author: "dsphilly",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "22 hr. ago",
@@ -3783,6 +4815,10 @@ const postArray = [
         comments: [
             {
                 author: "Sweaty_Assignment_90",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "23 hr. ago",
@@ -3791,6 +4827,10 @@ const postArray = [
             },
             {
                 author: "Best-Jello",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "14 hr. ago",
@@ -3820,6 +4860,10 @@ const postArray = [
         comments: [
             {
                 author: "Yoshable",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -3828,6 +4872,10 @@ const postArray = [
             },
             {
                 author: "hiimred2",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -3836,6 +4884,10 @@ const postArray = [
             },
             {
                 author: "OverusedRedditJoke",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -3865,6 +4917,10 @@ const postArray = [
         comments: [
             {
                 author: "swiftmen991",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "3 days ago",
@@ -3873,6 +4929,10 @@ const postArray = [
             },
             {
                 author: "TheToadstools",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -3902,6 +4962,10 @@ const postArray = [
         comments: [
             {
                 author: "stingermarine",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 days ago",
@@ -3910,6 +4974,10 @@ const postArray = [
             },
             {
                 author: "SmackEh",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 days ago",
@@ -3918,6 +4986,10 @@ const postArray = [
             },
             {
                 author: "TheNextBatallion",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -3926,6 +4998,10 @@ const postArray = [
             },
             {
                 author: "AnnukinEarthwalker",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 days ago",
@@ -3934,6 +5010,10 @@ const postArray = [
             },
             {
                 author: "Deavs",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -3963,6 +5043,10 @@ const postArray = [
         comments: [
             {
                 author: "AutoModerator",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -3971,6 +5055,10 @@ const postArray = [
             },
             {
                 author: "Lilica_Golden_SHIB",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -3979,6 +5067,10 @@ const postArray = [
             },
             {
                 author: "Ineedanaccountthx",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -3987,6 +5079,10 @@ const postArray = [
             },
             {
                 author: "cowboy_shaman",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -3995,6 +5091,10 @@ const postArray = [
             },
             {
                 author: "MilesBrooksTax",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -4024,6 +5124,10 @@ const postArray = [
         comments: [
             {
                 author: "BlazingHotFireFox",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 hr. ago",
@@ -4032,6 +5136,10 @@ const postArray = [
             },
             {
                 author: "Maxx3141",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -4040,6 +5148,10 @@ const postArray = [
             },
             {
                 author: "Setyman",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "2 hr. ago",
@@ -4070,6 +5182,10 @@ const postArray = [
         comments: [
             {
                 author: "Rookslook",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 days ago",
@@ -4078,6 +5194,10 @@ const postArray = [
             },
             {
                 author: "bad-crypto-advice",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 days ago",
@@ -4086,6 +5206,10 @@ const postArray = [
             },
             {
                 author: "DynamoDylan",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -4094,6 +5218,10 @@ const postArray = [
             },
             {
                 author: "bigmaneting",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "5 days ago",
@@ -4124,6 +5252,10 @@ const postArray = [
         comments: [
             {
                 author: "coinfeeds-bot",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -4132,6 +5264,10 @@ const postArray = [
             },
             {
                 author: "bluesmaker",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -4140,6 +5276,10 @@ const postArray = [
             },
             {
                 author: "Nuewim",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "4 days ago",
@@ -4170,6 +5310,10 @@ const postArray = [
         comments: [
             {
                 author: "XGallonsX",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "19 hr. ago",
@@ -4178,6 +5322,10 @@ const postArray = [
             },
             {
                 author: "Wilder54321",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "21 hr. ago",
@@ -4186,6 +5334,10 @@ const postArray = [
             },
             {
                 author: "OpticallyMosache",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "1 day ago",
@@ -4194,6 +5346,10 @@ const postArray = [
             },
             {
                 author: "One_Steack_9554",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "17 hr. ago",
@@ -4202,6 +5358,10 @@ const postArray = [
             },
             {
                 author: "ArieJ010",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "19 hr. ago",
@@ -4210,6 +5370,10 @@ const postArray = [
             },
             {
                 author: "CompetitiveClerk97",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "23 hr. ago",
@@ -4218,6 +5382,10 @@ const postArray = [
             },
             {
                 author: "maxpowerzttv",
+                nested_lvl: 0,
+                nested_comments: [
+
+                ],
                 nesting: "none",
                 vote: 0,
                 time: "10 hr. ago",

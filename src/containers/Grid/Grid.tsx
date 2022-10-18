@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from 'react';
+import React, { MouseEventHandler, SetStateAction, Dispatch } from 'react';
 import GridPost from '../../components/GridPost/GridPost';
 import { Post, Subreddit } from '../../types/types';
 import bestOrder from '../../utils/bestOrder';
@@ -17,12 +17,17 @@ export interface GridProps {
     userName: string,
     comment: string,
     writeComment: any,
+    currentEditedComment: string,
     loginStatus: boolean,
+    setIndex: Dispatch<SetStateAction<number | undefined>>
+    writeNestedComment: any,
+    submitNestedComment: MouseEventHandler
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
     handleLikeComment: MouseEventHandler,
     submitComment: MouseEventHandler,
-    openPost: MouseEventHandler
+    openPost: MouseEventHandler,
+    handleNestedComment: MouseEventHandler,
 }
 
 export default function Grid (props: GridProps) {
@@ -32,12 +37,17 @@ export default function Grid (props: GridProps) {
     currentSort,
     loginModalState,
     userName,
+    currentEditedComment,
     posts,
     loginStatus,
     comment,
     writeComment,
+    setIndex,
+    writeNestedComment,
+    submitNestedComment,
     openPost,
     handleLikeComment,
+    handleNestedComment,
     submitComment,
     handleNavigate,
     handleLike
@@ -63,6 +73,11 @@ export default function Grid (props: GridProps) {
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
                  loginStatus={loginStatus}
+                 handleNestedComment={handleNestedComment}
+                 setIndex={setIndex}
+                 writeNestedComment={writeNestedComment}
+                 submitNestedComment={submitNestedComment}
+                 currentEditedComment={currentEditedComment}
                 />
       })}
 
@@ -84,6 +99,11 @@ export default function Grid (props: GridProps) {
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
                  loginStatus={loginStatus}
+                 handleNestedComment={handleNestedComment}
+                 setIndex={setIndex}
+                 writeNestedComment={writeNestedComment}
+                 submitNestedComment={submitNestedComment}
+                 currentEditedComment={currentEditedComment}
                 />
       })}
 
@@ -105,6 +125,11 @@ export default function Grid (props: GridProps) {
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
                  loginStatus={loginStatus}
+                 handleNestedComment={handleNestedComment}
+                 setIndex={setIndex}
+                 writeNestedComment={writeNestedComment}
+                 submitNestedComment={submitNestedComment}
+                 currentEditedComment={currentEditedComment}
                 />
       })}
 
@@ -126,6 +151,11 @@ export default function Grid (props: GridProps) {
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
                  loginStatus={loginStatus}
+                 handleNestedComment={handleNestedComment}
+                 setIndex={setIndex}
+                 writeNestedComment={writeNestedComment}
+                 submitNestedComment={submitNestedComment}
+                 currentEditedComment={currentEditedComment}
                 />
       })}
 
@@ -147,6 +177,11 @@ export default function Grid (props: GridProps) {
                  submitComment={submitComment}
                  handleLikeComment={handleLikeComment}
                  loginStatus={loginStatus}
+                 handleNestedComment={handleNestedComment}
+                 setIndex={setIndex}
+                 writeNestedComment={writeNestedComment}
+                 submitNestedComment={submitNestedComment}
+                 currentEditedComment={currentEditedComment}
                 />
       })}
     </div>

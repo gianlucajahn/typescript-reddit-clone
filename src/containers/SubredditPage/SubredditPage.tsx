@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useEffect, useState } from 'react';
+import React, { MouseEventHandler, useEffect, useState, Dispatch, SetStateAction } from 'react';
 import { useLocation } from 'react-router-dom';
 import CreatePost from '../../components/CreatePost/CreatePost';
 import SubredditHeadline from '../../components/SubredditHeadline/SubredditHeadline';
@@ -34,13 +34,18 @@ export interface SubredditPageProps {
     posts: Post[],
     currentPost: Post | undefined,
     communityTheme: boolean,
+    currentEditedComment: string,
     communityOptions : boolean,
     comment: string,
     writeComment: any,
+    setIndex: Dispatch<SetStateAction<number | undefined>>
+    writeNestedComment: any,
+    submitNestedComment: MouseEventHandler
     switchCommunityTheme: MouseEventHandler,
     submitComment: MouseEventHandler,
     handleLikeComment: MouseEventHandler,
     switchCommunityOptions: MouseEventHandler,
+    handleNestedComment: MouseEventHandler,
     standardTheme: {
       buttonColor: string,
       headerColor: string,
@@ -53,6 +58,7 @@ export default function SubredditPage (props: SubredditPageProps) {
   const {
     randomIntToString,
     userName,
+    currentEditedComment,
     currentSort,
     currentPost,
     subreddits,
@@ -69,7 +75,11 @@ export default function SubredditPage (props: SubredditPageProps) {
     standardTheme,
     comment,
     writeComment,
+    setIndex,
+    writeNestedComment,
+    submitNestedComment,
     handleLikeComment,
+    handleNestedComment,
     switchCommunityOptions,
     switchCommunityTheme,
     openPost,
@@ -126,6 +136,11 @@ export default function SubredditPage (props: SubredditPageProps) {
               submitComment={submitComment}
               handleLikeComment={handleLikeComment}
               loginStatus={loginStatus}
+              handleNestedComment={handleNestedComment}
+              setIndex={setIndex}
+              writeNestedComment={writeNestedComment}
+              submitNestedComment={submitNestedComment}
+              currentEditedComment={currentEditedComment}
             />
 
           </div>

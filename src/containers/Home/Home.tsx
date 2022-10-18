@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from 'react';
+import React, { MouseEventHandler, Dispatch, SetStateAction } from 'react';
 import './Home.scss';
 import CreatePost from '../../components/CreatePost/CreatePost';
 import SortBar from '../../components/SortBar/SortBar';
@@ -14,6 +14,10 @@ export interface HomeProps {
   setSort: React.MouseEventHandler;
   subreddits: Subreddits,
   topSubreddits: Subreddits,
+  currentEditedComment: string,
+  setIndex: Dispatch<SetStateAction<number | undefined>>
+  writeNestedComment: any,
+  submitNestedComment: MouseEventHandler
   handleSubMembership: React.MouseEventHandler,
   handleNavigate: MouseEventHandler,
   handleLike: MouseEventHandler,
@@ -21,6 +25,7 @@ export interface HomeProps {
   openPost: MouseEventHandler,
   submitComment: MouseEventHandler,
   handleLikeComment: MouseEventHandler,
+  handleNestedComment: MouseEventHandler,
   loginStatus: boolean,
   setLoginModalState: any,
   loginModalState: string,
@@ -42,6 +47,11 @@ export default function Home (props: HomeProps) {
     setSort,
     subreddits,
     topSubreddits,
+    setIndex,
+    currentEditedComment,
+    writeNestedComment,
+    submitNestedComment,
+    handleNestedComment,
     handleLikeComment,
     submitComment,
     openPost,
@@ -84,6 +94,11 @@ export default function Home (props: HomeProps) {
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}
           loginStatus={loginStatus}
+          handleNestedComment={handleNestedComment}
+          setIndex={setIndex}
+          writeNestedComment={writeNestedComment}
+          submitNestedComment={submitNestedComment}
+          currentEditedComment={currentEditedComment}
         />
       </div>
 

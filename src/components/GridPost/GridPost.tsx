@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useEffect, useState } from 'react';
+import React, { MouseEventHandler, useEffect, useState, Dispatch, SetStateAction } from 'react';
 import { findAllInRenderedTree } from 'react-dom/test-utils';
 import { Post, Subreddit } from '../../types/types';
 import Comments from '../Comments/Comments';
@@ -11,12 +11,17 @@ export interface GridPostProps {
     currentPost: Post | undefined,
     comment: string,
     writeComment: any,
+    currentEditedComment: string,
     loginStatus: boolean,
+    setIndex: Dispatch<SetStateAction<number | undefined>>,
+    writeNestedComment: any,
+    submitNestedComment: MouseEventHandler,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
     handleLikeComment: MouseEventHandler,
     openPost: MouseEventHandler,
-    submitComment: MouseEventHandler
+    submitComment: MouseEventHandler,
+    handleNestedComment: MouseEventHandler,
 }
 
 export default function GridPost (props: GridPostProps) {
@@ -27,11 +32,16 @@ export default function GridPost (props: GridPostProps) {
     currentPost,
     comment,
     writeComment,
+    currentEditedComment,
     loginStatus,
+    setIndex,
+    writeNestedComment,
+    submitNestedComment,
     handleNavigate,
     submitComment,
     handleLike,
     handleLikeComment,
+    handleNestedComment,
     openPost
   } = props;
 
@@ -160,6 +170,11 @@ export default function GridPost (props: GridPostProps) {
               submitComment={submitComment}
               handleLikeComment={handleLikeComment}
               loginStatus={loginStatus}
+              handleNestedComment={handleNestedComment}
+              setIndex={setIndex}
+              writeNestedComment={writeNestedComment}
+              submitNestedComment={submitNestedComment}
+              currentEditedComment={currentEditedComment}
             />
         </div>}
     </div>

@@ -8,7 +8,7 @@ import { isReturnStatement, reduceEachTrailingCommentRange } from 'typescript';
 import LoginModal from './components/LoginModal/LoginModal';
 import subredditArray from './utils/subredditArray';
 import SubredditPage from './containers/SubredditPage/SubredditPage';
-import { Subreddits, Subreddit, Post } from "./types/types";
+import { Subreddits, Subreddit, Post, Comment } from "./types/types";
 import postArray from './utils/postArray';
 import IndividualPost from './containers/individualPost/individualPost';
 
@@ -16,6 +16,7 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const [subreddits, setSubreddits] = useState(subredditArray);
+  const [currentEditedComment, setCurrentEditedComment] = useState("");
   const [notificationNum, setNotificationNum] = useState(0);
   const [topSubreddits, setTopSubreddits] = useState(subreddits.slice(0, 5));
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
@@ -35,6 +36,7 @@ function App() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [comment, setComment] = useState("");
+  const [index, setIndex] = useState<number | undefined>(undefined);
   const [loginStatus, setLoginStatus] = useState(false);
   const [searchItemDisplay, setSearchItemDisplay] = useState([
     true,
@@ -100,7 +102,7 @@ function App() {
     true
   ];
 
-  const [posts, setPosts] = useState(postArray);
+  const [posts, setPosts] = useState<Post[]>(postArray);
 
   useEffect(() => {
     if (searchTerm.length === 0) {
@@ -142,6 +144,15 @@ function App() {
     setComment(target.value);
   }
 
+  const writeNestedComment = (e: any) => {
+    let target = e.target;
+    setCurrentEditedComment(target.value);
+  }
+
+  const submitNestedComment = (e: React.MouseEvent) => {
+
+  }
+
   const submitComment = (e: React.MouseEvent) => {
     if (loginStatus === false) {
       setLoginModalState("login");
@@ -152,10 +163,15 @@ function App() {
     let postRef = currentPost
     let newComment = {
       author: userName,
+      nesting: "none",
       vote: 0,
       time: "Just now",
       upvotes: "1",
-      content: comment
+      content: comment,
+      nested_lvl: 0,
+      nested_comments: [
+        
+      ]
     };
     postRef?.comments?.unshift(newComment);
     setCurrentPost(postRef);
@@ -594,7 +610,7 @@ function App() {
       let currentUpvotes = parseInt(currentUpvotesString);
       currentUpvotes = currentUpvotes + (newVotes - oldVotes);
       let newUpvotes = currentUpvotes.toString();
-      updatedPost.comments.map((comment, i) => {
+      const updatedCommentArray = updatedPost.comments.map((comment, i) => {
         if (i === commentId) {
           comment.vote = newVotes;
           if (comment.upvotes.includes('k')) {
@@ -606,6 +622,7 @@ function App() {
           return comment;
         }
       });
+      updatedPost.comments = updatedCommentArray;
       setPosts([...posts, posts[postId] = updatedPost]);
     }
   }
@@ -668,7 +685,42 @@ function App() {
   }
 
   const handleNestedComment = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+    setCurrentEditedComment("");
     
+    if (target.classList.contains("nested") === false) {
+      target.classList.add("nested");
+    }
+
+    const commentIdString = target.id;
+    if (currentPost !== undefined) {
+      const targetedPost = {...currentPost};
+      targetedPost.comments = targetedPost.comments?.map((comment, i) => {
+        const commentId = parseInt(commentIdString);
+        if (i === commentId) {
+          comment.nesting === "none" ? comment.nesting = "edit" : comment.nesting = "edit";
+          comment.nested_comments.unshift({
+            author: userName,
+            time: "Just Now",
+            upvotes: "1",
+            content: "",
+            vote: 0,
+            nesting: "none",
+            nested_lvl: 1,
+            nested_comments: [
+                
+            ]
+          });
+          return comment;
+        } else {
+          comment.nesting === "edit" ? comment.nesting = "none" : comment.nesting = comment.nesting;
+          comment.nested_comments.splice(0, 1);
+          return comment;
+        }
+      });
+      setCurrentPost(targetedPost);
+      console.log(targetedPost)
+    }
   }
 
   const standardTheme = {
@@ -743,6 +795,11 @@ function App() {
           writeComment={writeComment}
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}
+          handleNestedComment={handleNestedComment}
+          setIndex={setIndex}
+          writeNestedComment={writeNestedComment}
+          submitNestedComment={submitNestedComment}
+          currentEditedComment={currentEditedComment}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
@@ -775,6 +832,11 @@ function App() {
           writeComment={writeComment}
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}
+          handleNestedComment={handleNestedComment}
+          setIndex={setIndex}
+          writeNestedComment={writeNestedComment}
+          submitNestedComment={submitNestedComment}
+          currentEditedComment={currentEditedComment}
         />} />
         <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -798,6 +860,11 @@ function App() {
           writeComment={writeComment}
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}
+          handleNestedComment={handleNestedComment}
+          setIndex={setIndex}
+          writeNestedComment={writeNestedComment}
+          submitNestedComment={submitNestedComment}
+          currentEditedComment={currentEditedComment}
         />} />
         <Route path='/submit' element={<Home 
           randomIntToString={randomIntToString}
@@ -821,6 +888,11 @@ function App() {
           writeComment={writeComment}
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}
+          handleNestedComment={handleNestedComment}
+          setIndex={setIndex}
+          writeNestedComment={writeNestedComment}
+          submitNestedComment={submitNestedComment}
+          currentEditedComment={currentEditedComment}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}
@@ -851,6 +923,11 @@ function App() {
           submitComment={submitComment}
           handleLikeComment={handleLikeComment}
           closePost={closePost}
+          handleNestedComment={handleNestedComment}
+          setIndex={setIndex}
+          writeNestedComment={writeNestedComment}
+          submitNestedComment={submitNestedComment}
+          currentEditedComment={currentEditedComment}
         />} />
       </Routes>
     </div>
