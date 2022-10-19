@@ -770,13 +770,15 @@ function App() {
           });
           return comment;
         } else {
-          comment.nesting === "edit" ? comment.nesting = "none" : comment.nesting = comment.nesting;
-          comment.nested_comments.splice(0, 1);
+          if (target.classList.contains("cancel")) {
+            comment.nesting === "edit" ? comment.nesting = "none" : comment.nesting = comment.nesting;
+            comment.nested_comments.splice(0, 1);
+          }
           return comment;
         }
       });
       setCurrentPost(targetedPost);
-      console.log(targetedPost)
+      console.log(targetedPost);
     }
   }
 

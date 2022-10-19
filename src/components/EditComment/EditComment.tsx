@@ -97,7 +97,7 @@ export default function EditComment  (props: EditCommentProps) {
               <p style={{ color: currentSub?.buttonColor }}>Markdown Mode</p>
             </button>
 
-            {nested && <button className="markdown btn" onClick={handleNestedComment}>
+            {nested && <button className="markdown btn cancel" onClick={handleNestedComment}>
               <p style={{ color: currentSub?.buttonColor }}>Cancel</p>
             </button>}
       
