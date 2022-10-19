@@ -67,7 +67,7 @@ export default function PostedComment (props: PostedCommentProps) {
   }
 
   return (
-    <div className="comment" id={`${index}`}>
+    <div className="comment" id={`${index}`} style={{ marginLeft: nested ? "10px" : "", marginTop: nested ? "12px" : "", marginBottom: nested ? "10px" : "20px" }}>
         <div className="comment-header">
             <img className="comment-avatar" src={require("../../resources/images/avatar3.PNG")} />
             <h4 className="comment-author">{nested ? commentObj.nested_comments[0].author : commentObj.author}</h4>
@@ -75,7 +75,7 @@ export default function PostedComment (props: PostedCommentProps) {
         </div>
 
         <div className="comment-content-container">
-            <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1" }}></div>
+            <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1", height: commentObj.nested_lvl === 0 ? "100%" : "80%" }}></div>
             <div className="right">
                 <p id="content">{nested ? commentObj.nested_comments[0].content : commentObj.content}</p>
                 <div className="comment-footer">
@@ -143,8 +143,7 @@ export default function PostedComment (props: PostedCommentProps) {
 
         {commentObj.nesting === "posted" && noFurtherNesting === undefined &&
             <div className="nestedComment">
-                <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1" }}></div>
-                <div className="comment-line second-row-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1" }}></div>
+                <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1", height: "inherit" }}></div>
                 <PostedComment
                      index={index}
                      noFurtherNesting={true}

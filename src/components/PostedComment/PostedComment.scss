@@ -1,3 +1,340 @@
 #content {
     cursor: text;
 }
+
+.submit-comment {
+    margin-top: 7px;
+    padding-left: 42px;
+
+    .submit-header {
+        font-family: "Noto Sans Regular";
+        color: #060606;
+        font-size: 12px;
+    }
+
+    .comment-box {
+        width: 652px;
+        min-width: 652px;
+        min-height: 139px;
+        max-width: 652px;
+        height: 139px;
+        border: 1px solid #edeff1;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        box-sizing: border-box;
+        border-bottom: none;
+        border-radius: 4px;
+        padding: 9px 16px;
+        font-family: "Noto Sans Regular";
+        font-size: 14px;
+        outline: none;
+    }
+
+    .button-bar {
+        background-color: #f6f7f8;
+        width: 652px;
+        padding-left: 7px;
+        box-sizing: border-box;
+        border: 1px solid #edeff1;
+        border-radius: 4px;
+        padding-top: 2px;
+        border-top: none;
+        margin-top: -3px;
+        display: flex;
+        gap: 1px;
+
+        .line {
+            width: 1px;
+            height: 30px;
+            left: 702px;
+            position: absolute;
+            background-color: #edeff1;
+        }
+
+        .text-settings {
+            padding: 3px 6px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            background-color: transparent;
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+                background-color: #d0d1d2;
+            }
+
+            &:hover::after {
+                position: absolute;
+                margin: 0 auto;
+                left: -12px;
+                bottom: 36px;
+                padding: 5px 10px 5px 10px;
+                border-radius: 4px;
+                background-color: black;
+                color: white;
+                content: attr(aria-label);
+            }
+
+            &:active {
+                background-color: #b2b2b3;
+            }
+
+            .setting-icon {
+                height: 21px;
+            }
+        }
+
+        .markdown {
+            margin-left: 9px;
+            align-self: center;
+            cursor: pointer;
+            height: 24px;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            padding-bottom: 3px;
+            border-radius: 9999px;
+            padding-left: 7px;
+            padding-right: 7px;
+
+            p {
+                font-size: 12px;
+                font-family: "Noto Sans Bold";
+            }
+        }
+
+        #markdown {
+            background-color: transparent;
+
+            &:hover {
+                background-color: #d0d1d2;
+            }
+
+            &:active {
+                background-color: #b2b2b3;
+            }
+        }
+
+        .submit {
+            height: 24px;
+            padding-left: 19px;
+            padding-right: 21px;
+            margin-bottom: 1px;
+            margin-right: 8px;
+            cursor: not-allowed;
+            border: none;
+
+            &:hover {
+                box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.125);
+            }
+
+            &:active {
+                box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.125);
+            }
+        }
+
+        .spoiler {
+            margin-right: 15px;
+        }
+    }
+}
+
+.hoverArea {
+margin-top: 5px;
+width: 652px;
+border: 1px solid transparent;
+border-radius: 4px;
+}
+
+.comment {
+margin-bottom: 22px;
+padding-left: 5px;
+
+.comment-header {
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+
+    .comment-author {
+        font-size: 12px;
+        color: #1a1a1b;
+        font-family: "IBM Regular";
+        padding-bottom: 7px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .comment-timestamp {
+        font-size: 11px;
+        font-family: "Noto Sans Regular";
+        color: #7c7c7c;
+        padding-bottom: 7px;
+    }
+
+    .comment-avatar {
+        height: 37px;
+        margin-right: 3px;
+        cursor: pointer;
+    }
+}
+
+.comment-content-container {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: auto 1fr;
+    grid-auto-rows: 1fr;
+    margin-right: 30px;
+    position: relative;
+    
+    .comment-line {
+        margin-top: 6px;
+        margin-left: 12px;
+        width: 2px;
+        cursor: pointer;
+    }
+
+    .right {
+        padding-top: 4px;
+
+        #content {
+            margin-left: 5px;
+        }
+
+        .comment-footer {
+            display: flex;
+            align-items: center;
+            margin-top: 2px;
+    
+            #upvote,
+            #downvote {
+                cursor: pointer;
+                padding: 2px 2px 1px 2px;
+                background-color: transparent;
+    
+                &:hover {
+                    background-color: #e1e2e3;
+                    border-radius: 4px;
+                }
+
+                * {
+                    pointer-events: none;
+                }
+            }
+
+            .comment-footer-box {
+                display: flex;
+                gap: 6px;
+                font-size: 11px;
+                font-family: "IBM";
+                color: #878a8c;
+                padding: 4px 7px;
+                align-items: center;
+                justify-content: center;
+                padding-top: 2px;
+                cursor: pointer;
+
+                * {
+                    pointer-events: none;
+                }
+
+                &:hover {
+                    background-color: #e7e7e7;
+                    border-radius: 4px;
+                }
+
+                h3 {
+                    padding-bottom: 2px;
+                    padding-top: 2px;
+                }
+
+                img {
+                    height: 20px;
+                }
+            }
+    
+            #upvote {
+                border: 1px solid transparent;
+                margin-right: 3px;
+    
+                .upvote {
+                    height: 20px;
+                    width: 19px;
+                }
+            }
+    
+            #downvote {
+                border: 1px solid transparent;
+                margin-right: 2px;
+    
+                .downvote {
+                    height: 20px;
+                    width: 19px;
+                }
+            }
+    
+            .votes {
+                margin-top: 4px;
+                font-family: "IBM Regular";
+                font-size: 0.75em;
+                padding-bottom: 5px;
+                margin-right: 3px;
+            }
+        }
+    }
+}
+}
+
+.sorter {
+display: flex;
+align-items: center;
+padding-left: 42px;
+margin-top: 23px;
+font-family: "IBM";
+font-size: 11px;
+cursor: pointer;
+
+.dropdown {
+    height: 22px;
+    padding-bottom: 1px;
+}
+}
+
+.divider {
+margin-top: 6px;
+height: 1px;
+width: 652px;
+margin-left: 42px;
+background-color: #edeff1;
+margin-bottom: 22px;
+}
+
+#content {
+font-family: "Noto Sans Regular";
+color: #060606;
+font-size: 14px;
+padding: 0;
+margin: 0;
+}
+
+.nestedComment {
+    display: flex;
+
+    .comment-line {
+        margin-top: 6px;
+        margin-left: 12px;
+        width: 2px;
+        cursor: pointer;
+    }
+    .second-row-line {
+        margin-top: 18px;
+        margin-left: 22px;
+        width: 2px;
+        height: inherit;
+        cursor: pointer;
+}
+}
