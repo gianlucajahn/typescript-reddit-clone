@@ -179,6 +179,7 @@ export default function Comments (props: CommentsProps) {
             return <PostedComment
                      index={i}
                      currentPost={currentPost}
+                     userName={userName}
                      mainComment={mainComment}
                      handleHoverComment={handleHoverComment}
                      handleLikeComment={handleLikeComment}

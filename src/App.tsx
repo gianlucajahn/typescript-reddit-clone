@@ -184,6 +184,7 @@ function App() {
     };
     postRef?.comments?.unshift(newComment);
     setCurrentPost(postRef);
+    setMainComment("");
     setNotificationNum(notificationNum + 1);
   }
 

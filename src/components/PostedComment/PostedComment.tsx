@@ -10,6 +10,7 @@ export interface PostedCommentProps {
     handleNestedComment: MouseEventHandler,
     hoveredComments: any,
     commentObj: Comment,
+    userName: string,
     noFurtherNesting?: boolean,
     mainComment: string,
     targetedComment: Comment,
@@ -32,6 +33,7 @@ export default function PostedComment (props: PostedCommentProps) {
     handleNestedComment,
     hoveredComments,
     mainComment,
+    userName,
     noFurtherNesting,
     commentObj,
     targetedComment,
@@ -93,7 +95,17 @@ export default function PostedComment (props: PostedCommentProps) {
                         />
                     </button>
 
-                    {commentObj.nested_comments.length < 1 && <div className="reply comment-footer-box" id={`${index}`} onClick={handleNestedComment}>
+                    {nested && commentObj.nested_comments[0].author === userName && <div className="edit comment-footer-box" id={`${index}`} onClick={handleNestedComment}>
+                        <img className="edit-icon" src={require("../../resources/images/pencil.png")} />
+                        <h3>Edit</h3>
+                    </div>}
+
+                    {nested === false && commentObj.author === userName && <div className="edit comment-footer-box" id={`${index}`} onClick={handleNestedComment}>
+                        <img className="edit-icon" src={require("../../resources/images/pencil.png")} />
+                        <h3>Edit</h3>
+                    </div>}
+
+                    {commentObj.nested_comments.length < 1 && commentObj.author !== userName && <div className="reply comment-footer-box" id={`${index}`} onClick={handleNestedComment}>
                         <img className="reply-icon" src={require("../../resources/images/comments.png")} />
                         <h3>Reply</h3>
                     </div>}
@@ -143,10 +155,11 @@ export default function PostedComment (props: PostedCommentProps) {
 
         {commentObj.nesting === "posted" && noFurtherNesting === undefined &&
             <div className="nestedComment">
-                <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1", height: "inherit" }}></div>
+                <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1", height: "inherit", width: "2px" }}></div>
                 <PostedComment
                      index={index}
                      noFurtherNesting={true}
+                     userName={userName}
                      mainComment={mainComment}
                      currentPost={currentPost}
                      handleHoverComment={handleHoverComment}
