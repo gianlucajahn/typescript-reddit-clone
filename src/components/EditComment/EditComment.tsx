@@ -149,7 +149,14 @@ export default function EditComment  (props: EditCommentProps) {
               <p style={{ color: currentSub?.buttonColor }}>Cancel</p>
             </button>}
       
-            <button className="markdown submit submitcomment" style={{ backgroundColor: nested ? currentEditedComment!.length >= 1 ? currentSub?.buttonColor : "#9a9a9a" : mainComment.length >= 1 ? currentSub?.buttonColor : "#9a9a9a", color: nested ? currentEditedComment!.length >= 1 ? "white" : "#cdcdcd" : mainComment.length >= 1 ? "white" : "#cdcdcd", cursor: nested ? currentEditedComment!.length >= 1 ? "pointer" : "not-allowed" : mainComment.length >= 1 ? "pointer" : "not-allowed" }} onClick={nestedEdited ? submitNestedComment : isMainBox ? (e) => {submitComment(e); console.log("kb mehr 2");} : (e) => {submitComment(e); switchEdit!(e); console.log("kb mehr")}} id={`${index}`}>
+            <button className="markdown submit submitcomment" 
+              style={{ 
+                backgroundColor: nested ? commentObj!.nested_comments[0].content.length >= 1 ? currentSub?.buttonColor : "#9a9a9a" : isMainBox ? mainComment.length >= 1 ? currentSub?.buttonColor : "#9a9a9a" : boxId! >= 1 ? commentObj!.content.length >= 1 ? currentSub?.buttonColor : "#9a9a9a" : mainComment.length >= 1 ? currentSub?.buttonColor : "#9a9a9a", 
+                color: nested ? commentObj!.nested_comments[0].content.length >= 1 ? "white" : "#cdcdcd" : isMainBox ? mainComment.length >= 1 ? "white" : "#cdcdcd" : boxId! >= 1 ? commentObj!.content.length >= 1 ? "white" : "#cdcdcd" : mainComment.length >= 1 ? "white" : "#cdcdcd", 
+                cursor: nested ? currentEditedComment!.length >= 1 ? "pointer" : "not-allowed" : mainComment.length >= 1 ? "pointer" : "not-allowed" }} 
+                onClick={nestedEdited ? submitNestedComment : isMainBox ? (e) => {submitComment(e);} : (e) => {submitComment(e); switchEdit!(e);}} 
+                id={`${index}`}
+              >
               <p>Comment</p>
             </button>
         </div>
