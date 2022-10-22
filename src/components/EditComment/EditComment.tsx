@@ -153,8 +153,8 @@ export default function EditComment  (props: EditCommentProps) {
               style={{ 
                 backgroundColor: nested ? commentObj!.nested_comments[0].content.length >= 1 ? currentSub?.buttonColor : "#9a9a9a" : isMainBox ? mainComment.length >= 1 ? currentSub?.buttonColor : "#9a9a9a" : boxId! >= 1 ? commentObj!.content.length >= 1 ? currentSub?.buttonColor : "#9a9a9a" : mainComment.length >= 1 ? currentSub?.buttonColor : "#9a9a9a", 
                 color: nested ? commentObj!.nested_comments[0].content.length >= 1 ? "white" : "#cdcdcd" : isMainBox ? mainComment.length >= 1 ? "white" : "#cdcdcd" : boxId! >= 1 ? commentObj!.content.length >= 1 ? "white" : "#cdcdcd" : mainComment.length >= 1 ? "white" : "#cdcdcd", 
-                cursor: nested ? currentEditedComment!.length >= 1 ? "pointer" : "not-allowed" : mainComment.length >= 1 ? "pointer" : "not-allowed" }} 
-                onClick={nestedEdited ? submitNestedComment : isMainBox ? (e) => {submitComment(e);} : (e) => {submitComment(e); switchEdit!(e);}} 
+                cursor: nested ? commentObj!.nested_comments[0].content.length >= 1 ? "pointer" : "not-allowed" : isMainBox ? mainComment.length >= 1 ? "pointer" : "not-allowed" : boxId! >= 1 ? commentObj!.content.length >= 1 ? "pointer" : "not-allowed" : mainComment.length >= 1 ? "pointer" : "not-allowed" }} 
+                onClick={nestedEdited ? commentObj!.nested_comments[0].content.length >= 1 ? submitNestedComment : (e) => {} : isMainBox ? mainComment.length >= 1 ? (e) => {submitComment(e);} : (e) => {} : boxId! >= 1 ? commentObj!.content.length >= 1 ? (e) => {submitComment(e); switchEdit!(e);} : (e) => {} : mainComment.length >= 1 ? (e) => {submitComment(e);} : (e) => {}} 
                 id={`${index}`}
               >
               <p>Comment</p>
