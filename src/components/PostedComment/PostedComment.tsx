@@ -133,10 +133,10 @@ export default function PostedComment (props: PostedCommentProps) {
                         <h3>Edit</h3>
                     </div>}
 
-                    <div className="reply comment-footer-box" id={`${index}`} onClick={(e) => { handleNestedComment(e); switchNestedEdit(e);}}>
+                    {commentObj.nesting === "none" && <div className="reply comment-footer-box" id={`${index}`} onClick={(e) => { handleNestedComment(e); switchNestedEdit(e);}}>
                         <img className="reply-icon" src={require("../../resources/images/comments.png")} />
                         <h3>Reply</h3>
-                    </div>
+                    </div>}
 
                     <div className="comment-footer-box">
                         <h3>Give Award</h3>
