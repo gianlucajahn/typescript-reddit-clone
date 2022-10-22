@@ -186,7 +186,12 @@ export default function PostedComment (props: PostedCommentProps) {
 
         {commentObj.nesting === "edit" && 
             <div className="nestedComment">
-                <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1" }}></div>
+                <div 
+                  className="comment-line" 
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} 
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} 
+                  style={{ backgroundColor: "#edeff1" }}>
+                </div>
                 <div className="comment-line second-row-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1" }}></div>
                 <EditComment 
                   mainComment={mainComment}
@@ -215,7 +220,12 @@ export default function PostedComment (props: PostedCommentProps) {
 
         {commentObj.nesting === "posted" && noFurtherNesting === undefined &&
             <div className="nestedComment">
-                <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1", height: "inherit", width: "2px" }}></div>
+                <div 
+                  className="comment-line" 
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} 
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} 
+                  style={{ backgroundColor: "#edeff1", height: "inherit", width: "2px" }}>
+                </div>
                 <PostedComment
                      index={index}
                      noFurtherNesting={true}
