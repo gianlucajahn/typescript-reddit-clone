@@ -9,11 +9,16 @@
         border-bottom-right-radius: 0px;
         box-sizing: border-box;
         border-bottom: none;
+        color: #060606;
         border-radius: 4px;
         padding: 9px 16px;
         font-family: "Noto Sans Regular";
         font-size: 14px;
         outline: none;
+    }
+
+    .comment-box::placeholder {
+        color: #878a8c;
     }
 
     .button-bar {

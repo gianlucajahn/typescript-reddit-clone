@@ -84,8 +84,7 @@ export default function EditComment  (props: EditCommentProps) {
         minHeight: nested ? "130px" : "139px" , 
         width: nested ? "608px" : "652px", 
         minWidth: nested ? "608px" : "652px", 
-        maxWidth: nested ? "608px" : "652px", 
-        color: nested ? currentEditedComment!.length >= 1 ? "#060606" : "#878a8c" : mainComment.length >= 1 ? "#060606" : "#878a8c" }} 
+        maxWidth: nested ? "608px" : "652px" }} 
         placeholder="What are your thoughts?" 
         value={nestedEdited ? commentObj?.nested_comments[0].content : nested ? commentObj?.nested_comments[0].content : isMainBox ? mainComment : commentObj?.content} 
         onChange={nestedEdited ? editNestedComment : nested ? (e) => console.log(edited + " " + nested + " " + nestedEdited) : (e) => {e.target.id === "" ? writeComment(e) : editComment(e)}} 
