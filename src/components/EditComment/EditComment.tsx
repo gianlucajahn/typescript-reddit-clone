@@ -145,7 +145,7 @@ export default function EditComment  (props: EditCommentProps) {
               <p style={{ color: currentSub?.buttonColor }}>Markdown Mode</p>
             </button>
 
-            {mainBox !== true && <button className="markdown btn cancel" onClick={nestedEdited ? commentObj?.nested_comments[0].content.length === 0 ? (e) => {handleNestedComment!(e); switchNestedEdit(e); console.log(commentObj.nesting)} : commentObj?.nested_comments[0].hasBeenSubmittedYet ? (e) => {commentObj.nested_comments[0].content = commentObj.nested_comments[0].lastSubmitContent!; commentObj.nesting = "posted";} : (e) => {handleNestedComment!(e); switchNestedEdit(e);} : (e) => console.log("not nested")}>
+            {mainBox !== true && <button className="markdown btn cancel" onClick={nestedEdited ? commentObj?.nested_comments[0].content.length === 0 ? (e) => {handleNestedComment!(e); switchNestedEdit(e);} : commentObj?.nested_comments[0].hasBeenSubmittedYet ? (e) => {commentObj.nested_comments[0].content = commentObj.nested_comments[0].lastSubmitContent!; commentObj.nesting = "posted";} : (e) => {handleNestedComment!(e); switchNestedEdit(e);} : (e) => {if (commentObj!.lastSubmitContent !== undefined && commentObj !== undefined) {commentObj.content = commentObj?.lastSubmitContent}; switchEdit!(e);}}>
               <p style={{ color: currentSub?.buttonColor }}>Cancel</p>
             </button>}
       
