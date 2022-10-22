@@ -15,6 +15,8 @@ export interface PostedCommentProps {
     mainComment: string,
     targetedComment: Comment,
     writeComment: any,
+    editComment: any,
+    editNestedComment: any,
     submitComment: MouseEventHandler,
     currentSub: Subreddit | undefined,
     currentPost: Post,
@@ -44,6 +46,8 @@ export default function PostedComment (props: PostedCommentProps) {
     nested,
     setIndex,
     writeNestedComment,
+    editComment,
+    editNestedComment,
     submitNestedComment,
     currentEditedComment
   } = props;
@@ -52,6 +56,20 @@ export default function PostedComment (props: PostedCommentProps) {
     upvote: false,
     downvote: false
   })
+
+  const [edited, setEdited] = useState(false);
+  const [nestedEdited, setNestedEdited] = useState(false);
+
+  const switchEdit = (e: React.MouseEvent) => {
+    setEdited(!edited);
+  }
+
+  const switchNestedEdit = (e: React.MouseEvent) => {
+    if (userName === "") {
+        return;
+    }
+    setNestedEdited(!nestedEdited);
+  }
 
   const handleHover = (e: React.MouseEvent) => {
     const target = e.currentTarget;
@@ -78,7 +96,7 @@ export default function PostedComment (props: PostedCommentProps) {
 
         <div className="comment-content-container">
             <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1", height: commentObj.nested_lvl === 0 ? "100%" : "80%" }}></div>
-            <div className="right">
+            {!edited ? <div className="right">
                 <p id="content">{nested ? commentObj.nested_comments[0].content : commentObj.content}</p>
                 <div className="comment-footer">
                     <button className={nested ? `${index} nested` : `${index}`} onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={handleLikeComment} id="upvote">
@@ -95,17 +113,17 @@ export default function PostedComment (props: PostedCommentProps) {
                         />
                     </button>
 
-                    {nested && commentObj.nested_comments[0].author === userName && <div className="edit comment-footer-box" id={`${index}`} onClick={handleNestedComment}>
+                    {nested && commentObj.nested_comments[0].author === userName && <div className="edit comment-footer-box" id={`${index}`} onClick={(e) => { handleNestedComment(e); switchNestedEdit(e);}}>
                         <img className="edit-icon" src={require("../../resources/images/pencil.png")} />
                         <h3>Edit</h3>
                     </div>}
 
-                    {nested === false && commentObj.author === userName && <div className="edit comment-footer-box" id={`${index}`} onClick={handleNestedComment}>
+                    {nested === false && commentObj.author === userName && <div className="edit comment-footer-box" id={`${index}`} onClick={switchEdit}>
                         <img className="edit-icon" src={require("../../resources/images/pencil.png")} />
                         <h3>Edit</h3>
                     </div>}
 
-                    {commentObj.nested_comments.length < 1 && commentObj.author !== userName && <div className="reply comment-footer-box" id={`${index}`} onClick={handleNestedComment}>
+                    {commentObj.nested_comments.length < 1 && commentObj.author !== userName && <div className="reply comment-footer-box" id={`${index}`} onClick={(e) => { handleNestedComment(e); switchNestedEdit(e);}}>
                         <img className="reply-icon" src={require("../../resources/images/comments.png")} />
                         <h3>Reply</h3>
                     </div>}
@@ -130,7 +148,27 @@ export default function PostedComment (props: PostedCommentProps) {
                         <h3>Follow</h3>
                     </div>
                 </div>
-            </div>
+            </div> :
+            <EditComment 
+              mainComment={mainComment}
+              index={index}
+              edited={edited}
+              nestedEdited={nestedEdited}
+              targetedComment={targetedComment}
+              writeComment={writeComment}
+              submitComment={submitComment}
+              currentSub={currentSub}
+              nested={false}
+              switchNestedEdit={switchNestedEdit}
+              setIndex={setIndex}
+              switchEdit={switchEdit}
+              writeNestedComment={writeNestedComment}
+              submitNestedComment={submitNestedComment}
+              currentEditedComment={currentEditedComment}
+              handleNestedComment={handleNestedComment}
+              editComment={editComment}
+              editNestedComment={editNestedComment}
+            />}
         </div>
 
         {commentObj.nesting === "edit" && 
@@ -140,16 +178,23 @@ export default function PostedComment (props: PostedCommentProps) {
                 <EditComment 
                   mainComment={mainComment}
                   index={index}
+                  edited={true}
+                  nestedEdited={nestedEdited}
+                  commentObj={commentObj}
                   targetedComment={targetedComment}
                   writeComment={writeComment}
                   submitComment={submitComment}
+                  switchNestedEdit={switchNestedEdit}
                   currentSub={currentSub}
                   nested={true}
                   setIndex={setIndex}
+                  switchEdit={switchEdit}
                   writeNestedComment={writeNestedComment}
                   submitNestedComment={submitNestedComment}
                   currentEditedComment={currentEditedComment}
                   handleNestedComment={handleNestedComment}
+                  editComment={editComment}
+                  editNestedComment={editNestedComment}
                 />
             </div>}
 
@@ -176,6 +221,8 @@ export default function PostedComment (props: PostedCommentProps) {
                      writeNestedComment={writeNestedComment}
                      submitNestedComment={submitNestedComment}
                      currentEditedComment={currentEditedComment}
+                     editComment={editComment}
+                     editNestedComment={editNestedComment}
                 />
             </div>
         }

@@ -40,6 +40,8 @@ export interface SubredditPageProps {
     writeComment: any,
     setIndex: Dispatch<SetStateAction<number | undefined>>
     writeNestedComment: any,
+    editComment: any,
+    editNestedComment: any,
     submitNestedComment: MouseEventHandler
     switchCommunityTheme: MouseEventHandler,
     submitComment: MouseEventHandler,
@@ -77,6 +79,8 @@ export default function SubredditPage (props: SubredditPageProps) {
     writeComment,
     setIndex,
     writeNestedComment,
+    editComment,
+    editNestedComment,
     submitNestedComment,
     handleLikeComment,
     handleNestedComment,
@@ -141,6 +145,8 @@ export default function SubredditPage (props: SubredditPageProps) {
               writeNestedComment={writeNestedComment}
               submitNestedComment={submitNestedComment}
               currentEditedComment={currentEditedComment}
+              editComment={editComment}
+              editNestedComment={editNestedComment}
             />
 
           </div>

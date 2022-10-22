@@ -30,6 +30,8 @@ export interface individualPostProps {
     writeComment: any,
     setIndex: Dispatch<SetStateAction<number | undefined>>
     writeNestedComment: any,
+    editComment: any,
+    editNestedComment: any,
     submitNestedComment: MouseEventHandler
     expandRule: MouseEventHandler,
     handleLikeComment: MouseEventHandler,
@@ -59,6 +61,8 @@ export default function IndividualPost (props: individualPostProps) {
     writeComment,
     setIndex,
     writeNestedComment,
+    editComment,
+    editNestedComment,
     submitNestedComment,
     handleSubMembership,
     handleNestedComment,
@@ -117,6 +121,8 @@ export default function IndividualPost (props: individualPostProps) {
             writeNestedComment={writeNestedComment}
             submitNestedComment={submitNestedComment}
             currentEditedComment={currentEditedComment}
+            editComment={editComment}
+            editNestedComment={editNestedComment}
           />
         </div>
 

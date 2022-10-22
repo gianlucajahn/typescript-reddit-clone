@@ -62,6 +62,8 @@ export interface Comment {
     time:    string;
     upvotes: string;
     content: string;
+    hasBeenSubmittedYet?: boolean,
+    lastSubmitContent?: string,
     nested_lvl: number;
     nested_comments: Comment[];
 }

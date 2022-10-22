@@ -17,6 +17,8 @@ export interface HomeProps {
   currentEditedComment: string,
   setIndex: Dispatch<SetStateAction<number | undefined>>
   writeNestedComment: any,
+  editComment: any,
+  editNestedComment: any,
   submitNestedComment: MouseEventHandler
   handleSubMembership: React.MouseEventHandler,
   handleNavigate: MouseEventHandler,
@@ -50,6 +52,8 @@ export default function Home (props: HomeProps) {
     setIndex,
     currentEditedComment,
     writeNestedComment,
+    editComment,
+    editNestedComment,
     submitNestedComment,
     handleNestedComment,
     handleLikeComment,
@@ -99,6 +103,8 @@ export default function Home (props: HomeProps) {
           writeNestedComment={writeNestedComment}
           submitNestedComment={submitNestedComment}
           currentEditedComment={currentEditedComment}
+          editComment={editComment}
+          editNestedComment={editNestedComment}
         />
       </div>
 

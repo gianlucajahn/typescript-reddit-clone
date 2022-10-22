@@ -149,6 +149,32 @@ function App() {
     setCurrentEditedComment(target.value);
   }
 
+  const editComment = (e: any) => {
+    let target = e.target;
+    let commentId = e.target.id;
+
+    if (currentPost === undefined) {
+      return;
+    }
+
+    let updatedPost = {...currentPost};
+    updatedPost.comments![commentId].content = target.value;
+    setCurrentPost(updatedPost);
+  }
+
+  const editNestedComment = (e: any) => {
+    let target = e.target;
+    let commentId = e.target.id;
+
+    if (currentPost === undefined) {
+      return;
+    }
+
+    let updatedPost = {...currentPost};
+    updatedPost.comments![commentId].nested_comments[0].content = target.value;
+    setCurrentPost(updatedPost);
+  }
+
   const submitNestedComment = (e: React.MouseEvent) => {
     if (currentPost === undefined) {
       return;
@@ -157,7 +183,8 @@ function App() {
     const target = e.currentTarget;
     const commentId = parseInt(target.id);
     let comment = {...currentPost?.comments[commentId]};
-    comment.nested_comments![0].content = currentEditedComment;
+    comment.nested_comments![0].hasBeenSubmittedYet = true;
+    comment.nested_comments[0].lastSubmitContent = comment.nested_comments[0].content;
     comment.nesting = "posted";
     setCurrentPost({...currentPost, ...currentPost.comments[commentId] = comment});
   }
@@ -176,6 +203,8 @@ function App() {
       vote: 0,
       time: "Just now",
       upvotes: "1",
+      hasBeenSubmittedYet: true,
+      lastSubmitContent: mainComment,
       content: mainComment,
       nested_lvl: 0,
       nested_comments: [
@@ -756,19 +785,25 @@ function App() {
       targetedPost.comments = targetedPost.comments?.map((comment, i) => {
         const commentId = parseInt(commentIdString);
         if (i === commentId && target.classList.contains("replyable") === false) {
-          comment.nesting === "none" ? comment.nesting = "edit" : comment.nesting = "edit";
-          comment.nested_comments.unshift({
-            author: userName,
-            time: "Just Now",
-            upvotes: "1",
-            content: "",
-            vote: 0,
-            nesting: "none",
-            nested_lvl: 1,
-            nested_comments: [
-                
-            ]
-          });
+          comment.nesting = "edit";
+
+          if (comment.nested_comments.length == 0) {
+            comment.nested_comments.unshift({
+              author: userName,
+              time: "Just Now",
+              upvotes: "1",
+              content: "",
+              vote: 0,
+              nesting: "none",
+              nested_lvl: 1,
+              hasBeenSubmittedYet: false,
+              lastSubmitContent: "",
+              nested_comments: [
+                  
+              ]
+            });
+          }
+
           return comment;
         } else {
           if (target.classList.contains("cancel")) {
@@ -779,7 +814,6 @@ function App() {
         }
       });
       setCurrentPost(targetedPost);
-      console.log(targetedPost);
     }
   }
 
@@ -860,6 +894,8 @@ function App() {
           writeNestedComment={writeNestedComment}
           submitNestedComment={submitNestedComment}
           currentEditedComment={currentEditedComment}
+          editComment={editComment}
+          editNestedComment={editNestedComment}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
@@ -897,6 +933,8 @@ function App() {
           writeNestedComment={writeNestedComment}
           submitNestedComment={submitNestedComment}
           currentEditedComment={currentEditedComment}
+          editComment={editComment}
+          editNestedComment={editNestedComment}
         />} />
         <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -925,6 +963,8 @@ function App() {
           writeNestedComment={writeNestedComment}
           submitNestedComment={submitNestedComment}
           currentEditedComment={currentEditedComment}
+          editComment={editComment}
+          editNestedComment={editNestedComment}
         />} />
         <Route path='/submit' element={<Home 
           randomIntToString={randomIntToString}
@@ -953,6 +993,8 @@ function App() {
           writeNestedComment={writeNestedComment}
           submitNestedComment={submitNestedComment}
           currentEditedComment={currentEditedComment}
+          editComment={editComment}
+          editNestedComment={editNestedComment}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}
@@ -988,6 +1030,8 @@ function App() {
           writeNestedComment={writeNestedComment}
           submitNestedComment={submitNestedComment}
           currentEditedComment={currentEditedComment}
+          editComment={editComment}
+          editNestedComment={editNestedComment}
         />} />
       </Routes>
     </div>

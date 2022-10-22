@@ -15,6 +15,8 @@ export interface GridPostProps {
     loginStatus: boolean,
     setIndex: Dispatch<SetStateAction<number | undefined>>,
     writeNestedComment: any,
+    editComment: any,
+    editNestedComment: any,
     submitNestedComment: MouseEventHandler,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
@@ -36,6 +38,8 @@ export default function GridPost (props: GridPostProps) {
     loginStatus,
     setIndex,
     writeNestedComment,
+    editComment,
+    editNestedComment,
     submitNestedComment,
     handleNavigate,
     submitComment,
@@ -175,6 +179,8 @@ export default function GridPost (props: GridPostProps) {
               writeNestedComment={writeNestedComment}
               submitNestedComment={submitNestedComment}
               currentEditedComment={currentEditedComment}
+              editComment={editComment}
+              editNestedComment={editNestedComment}
             />
         </div>}
     </div>

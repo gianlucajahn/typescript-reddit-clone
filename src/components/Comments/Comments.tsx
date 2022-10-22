@@ -17,6 +17,8 @@ export interface CommentsProps {
   loginStatus: boolean,
   setIndex: Dispatch<SetStateAction<number | undefined>>,
   writeNestedComment: any,
+  editComment: any,
+  editNestedComment: any,
   submitNestedComment: MouseEventHandler,
   submitComment: MouseEventHandler,
   handleLikeComment: MouseEventHandler,
@@ -34,6 +36,8 @@ export default function Comments (props: CommentsProps) {
     loginStatus,
     setIndex,
     writeNestedComment,
+    editComment,
+    editNestedComment,
     submitNestedComment,
     submitComment,
     handleLikeComment,
@@ -159,8 +163,12 @@ export default function Comments (props: CommentsProps) {
             writeComment={writeComment}
             submitComment={submitComment}
             currentSub={currentSub}
+            mainBox={true}
             nested={false}
+            edited={true}
             setIndex={setIndex}
+            editComment={editComment}
+            editNestedComment={editNestedComment}
           />
         </div>
 
@@ -195,6 +203,8 @@ export default function Comments (props: CommentsProps) {
                      writeNestedComment={writeNestedComment}
                      submitNestedComment={submitNestedComment}
                      currentEditedComment={currentEditedComment}
+                     editComment={editComment}
+                     editNestedComment={editNestedComment}
                     />
           })}
         </div>

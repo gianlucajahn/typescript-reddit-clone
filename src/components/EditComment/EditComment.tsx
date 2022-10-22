@@ -4,14 +4,23 @@ import './EditComment.scss';
 
 export interface EditCommentProps {
     mainComment: string,
+    mainBox?: boolean,
     targetedComment?: Comment | undefined,
     index?: number,
     writeComment: any,
     currentEditedComment?: string,
+    einhorn?: string,
+    commentObj?: Comment,
     currentSub: Subreddit | undefined,
+    nestedEdited?: boolean,
     nested: boolean,
+    edited?: boolean,
     setIndex: Dispatch<SetStateAction<number | undefined>>,
     writeNestedComment?: any,
+    editComment: any,
+    editNestedComment: any,
+    switchNestedEdit?: any,
+    switchEdit?: MouseEventHandler,
     submitNestedComment?: MouseEventHandler,
     handleNestedComment?: MouseEventHandler,
     submitComment: MouseEventHandler,
@@ -22,12 +31,21 @@ export default function EditComment  (props: EditCommentProps) {
     mainComment,
     targetedComment,
     index,
+    switchNestedEdit,
+    mainBox,
+    einhorn,
+    commentObj,
     currentEditedComment,
+    edited,
     writeComment,
     nested,
     currentSub,
     setIndex,
     writeNestedComment,
+    editComment,
+    editNestedComment,
+    nestedEdited,
+    switchEdit,
     handleNestedComment,
     submitNestedComment,
     submitComment
@@ -43,7 +61,7 @@ export default function EditComment  (props: EditCommentProps) {
 
   return (
     <div className="hoverArea" style={{ marginTop: nested ? "18px" : "5px", marginLeft: nested ? "20px" : "", width: nested ? "608px" : "652px", minWidth: nested ? "608px" : "652px", border: focussed ? "1px solid black" : "1px solid transparent" }}>
-      <textarea id={index?.toString()} className="comment-box" style={{ height: nested ? "130px" : "139px", minHeight: nested ? "130px" : "139px" , width: nested ? "608px" : "652px", minWidth: nested ? "608px" : "652px", maxWidth: nested ? "608px" : "652px", color: nested ? currentEditedComment!.length >= 1 ? "#060606" : "#878a8c" : mainComment.length >= 1 ? "#060606" : "#878a8c" }} placeholder="What are your thoughts?" value={nested ? currentEditedComment : mainComment} onChange={nested ? writeNestedComment : writeComment} onFocus={() => setFocussed(true)} onBlur={() => setFocussed(false)}></textarea>
+      <textarea id={index?.toString()} className="comment-box" style={{ height: nested ? "130px" : "139px", minHeight: nested ? "130px" : "139px" , width: nested ? "608px" : "652px", minWidth: nested ? "608px" : "652px", maxWidth: nested ? "608px" : "652px", color: nested ? currentEditedComment!.length >= 1 ? "#060606" : "#878a8c" : mainComment.length >= 1 ? "#060606" : "#878a8c" }} placeholder="What are your thoughts?" value={edited ? nested ? commentObj?.nested_comments[0].content : commentObj?.content : nested ? currentEditedComment : mainComment} onChange={nestedEdited ? editNestedComment : edited ? editComment : writeComment} onFocus={() => setFocussed(true)} onBlur={() => setFocussed(false)}></textarea>
 
       <div className="button-bar">
         <div className="start">
@@ -71,7 +89,7 @@ export default function EditComment  (props: EditCommentProps) {
       
             <div className="line"></div>
       
-            {!nested && (
+            {mainBox && (
               <>
                 <button className="text-settings" aria-label="Heading">
                   <img className="setting-icon" src={require("../../resources/images/heading.png")} />
@@ -97,11 +115,11 @@ export default function EditComment  (props: EditCommentProps) {
               <p style={{ color: currentSub?.buttonColor }}>Markdown Mode</p>
             </button>
 
-            {nested && <button className="markdown btn cancel" onClick={handleNestedComment}>
+            {mainBox !== true && <button className="markdown btn cancel" onClick={nestedEdited ? commentObj?.nested_comments[0].content.length === 0 ? (e) => {handleNestedComment!(e); switchNestedEdit(e);} : commentObj?.nested_comments[0].hasBeenSubmittedYet ? (e) => {commentObj.nested_comments[0].content = commentObj.nested_comments[0].lastSubmitContent!; commentObj.nesting = "posted";} : handleNestedComment : (e) => console.log("not nested")}>
               <p style={{ color: currentSub?.buttonColor }}>Cancel</p>
             </button>}
       
-            <button className="markdown submit" style={{ backgroundColor: nested ? currentEditedComment!.length >= 1 ? currentSub?.buttonColor : "#9a9a9a" : mainComment.length >= 1 ? currentSub?.buttonColor : "#9a9a9a", color: nested ? currentEditedComment!.length >= 1 ? "white" : "#cdcdcd" : mainComment.length >= 1 ? "white" : "#cdcdcd", cursor: nested ? currentEditedComment!.length >= 1 ? "pointer" : "not-allowed" : mainComment.length >= 1 ? "pointer" : "not-allowed" }} onClick={nested ? submitNestedComment : submitComment} id={`${index}`}>
+            <button className="markdown submit" style={{ backgroundColor: nested ? currentEditedComment!.length >= 1 ? currentSub?.buttonColor : "#9a9a9a" : mainComment.length >= 1 ? currentSub?.buttonColor : "#9a9a9a", color: nested ? currentEditedComment!.length >= 1 ? "white" : "#cdcdcd" : mainComment.length >= 1 ? "white" : "#cdcdcd", cursor: nested ? currentEditedComment!.length >= 1 ? "pointer" : "not-allowed" : mainComment.length >= 1 ? "pointer" : "not-allowed" }} onClick={nestedEdited ? submitNestedComment : submitComment} id={`${index}`}>
               <p>Comment</p>
             </button>
         </div>

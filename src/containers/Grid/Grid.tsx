@@ -21,6 +21,8 @@ export interface GridProps {
     loginStatus: boolean,
     setIndex: Dispatch<SetStateAction<number | undefined>>
     writeNestedComment: any,
+    editComment: any,
+    editNestedComment: any,
     submitNestedComment: MouseEventHandler
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
@@ -44,6 +46,8 @@ export default function Grid (props: GridProps) {
     writeComment,
     setIndex,
     writeNestedComment,
+    editComment,
+    editNestedComment,
     submitNestedComment,
     openPost,
     handleLikeComment,
@@ -78,6 +82,8 @@ export default function Grid (props: GridProps) {
                  writeNestedComment={writeNestedComment}
                  submitNestedComment={submitNestedComment}
                  currentEditedComment={currentEditedComment}
+                 editComment={editComment}
+                 editNestedComment={editNestedComment}
                 />
       })}
 
@@ -104,6 +110,8 @@ export default function Grid (props: GridProps) {
                  writeNestedComment={writeNestedComment}
                  submitNestedComment={submitNestedComment}
                  currentEditedComment={currentEditedComment}
+                 editComment={editComment}
+                 editNestedComment={editNestedComment}
                 />
       })}
 
@@ -130,6 +138,8 @@ export default function Grid (props: GridProps) {
                  writeNestedComment={writeNestedComment}
                  submitNestedComment={submitNestedComment}
                  currentEditedComment={currentEditedComment}
+                 editComment={editComment}
+                 editNestedComment={editNestedComment}
                 />
       })}
 
@@ -156,6 +166,8 @@ export default function Grid (props: GridProps) {
                  writeNestedComment={writeNestedComment}
                  submitNestedComment={submitNestedComment}
                  currentEditedComment={currentEditedComment}
+                 editComment={editComment}
+                 editNestedComment={editNestedComment}
                 />
       })}
 
@@ -182,6 +194,8 @@ export default function Grid (props: GridProps) {
                  writeNestedComment={writeNestedComment}
                  submitNestedComment={submitNestedComment}
                  currentEditedComment={currentEditedComment}
+                 editComment={editComment}
+                 editNestedComment={editNestedComment}
                 />
       })}
     </div>
