@@ -15,6 +15,8 @@ export interface PostedCommentProps {
     mainComment: string,
     targetedComment: Comment,
     writeComment: any,
+    boxId?: number | undefined,
+    setBoxId?: any,
     editComment: any,
     editNestedComment: any,
     submitComment: MouseEventHandler,
@@ -35,6 +37,8 @@ export default function PostedComment (props: PostedCommentProps) {
     handleNestedComment,
     hoveredComments,
     mainComment,
+    boxId,
+    setBoxId,
     userName,
     noFurtherNesting,
     commentObj,
@@ -88,15 +92,21 @@ export default function PostedComment (props: PostedCommentProps) {
 
   return (
     <div className="comment" id={`${index}`} style={{ marginLeft: nested ? "10px" : "", marginTop: nested ? "12px" : "", marginBottom: nested ? "10px" : "20px" }}>
-        <div className="comment-header">
+        {(nested && commentObj.nested_comments.length !== 0) && <div className="comment-header">
             <img className="comment-avatar" src={require("../../resources/images/avatar3.PNG")} />
             <h4 className="comment-author">{nested ? commentObj.nested_comments[0].author : commentObj.author}</h4>
             <h4 className="comment-timestamp">· {nested ? commentObj.nested_comments[0].time : commentObj.time}</h4>
-        </div>
+        </div>}
+
+        {(!nested && !edited) && <div className="comment-header">
+            <img className="comment-avatar" src={require("../../resources/images/avatar3.PNG")} />
+            <h4 className="comment-author">{nested ? commentObj.nested_comments[0].author : commentObj.author}</h4>
+            <h4 className="comment-timestamp">· {nested ? commentObj.nested_comments[0].time : commentObj.time}</h4>
+        </div>}
 
         <div className="comment-content-container">
             <div className="comment-line" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = currentSub!.buttonColor} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#edeff1"} style={{ backgroundColor: "#edeff1", height: commentObj.nested_lvl === 0 ? "100%" : "80%" }}></div>
-            {!edited ? <div className="right">
+            {!edited && !nested || nested && commentObj.nested_comments.length !== 0 ? <div className="right">
                 <p id="content">{nested ? commentObj.nested_comments[0].content : commentObj.content}</p>
                 <div className="comment-footer">
                     <button className={nested ? `${index} nested` : `${index}`} onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={handleLikeComment} id="upvote">
@@ -123,10 +133,10 @@ export default function PostedComment (props: PostedCommentProps) {
                         <h3>Edit</h3>
                     </div>}
 
-                    {commentObj.nested_comments.length < 1 && commentObj.author !== userName && <div className="reply comment-footer-box" id={`${index}`} onClick={(e) => { handleNestedComment(e); switchNestedEdit(e);}}>
+                    <div className="reply comment-footer-box" id={`${index}`} onClick={(e) => { handleNestedComment(e); switchNestedEdit(e);}}>
                         <img className="reply-icon" src={require("../../resources/images/comments.png")} />
                         <h3>Reply</h3>
-                    </div>}
+                    </div>
 
                     <div className="comment-footer-box">
                         <h3>Give Award</h3>
@@ -153,6 +163,7 @@ export default function PostedComment (props: PostedCommentProps) {
               mainComment={mainComment}
               index={index}
               edited={edited}
+              commentObj={commentObj}
               nestedEdited={nestedEdited}
               targetedComment={targetedComment}
               writeComment={writeComment}
@@ -168,6 +179,8 @@ export default function PostedComment (props: PostedCommentProps) {
               handleNestedComment={handleNestedComment}
               editComment={editComment}
               editNestedComment={editNestedComment}
+              boxId={boxId}
+              setBoxId={setBoxId}
             />}
         </div>
 
@@ -195,6 +208,8 @@ export default function PostedComment (props: PostedCommentProps) {
                   handleNestedComment={handleNestedComment}
                   editComment={editComment}
                   editNestedComment={editNestedComment}
+                  boxId={boxId}
+                  setBoxId={setBoxId}
                 />
             </div>}
 

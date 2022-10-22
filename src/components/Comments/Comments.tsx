@@ -50,6 +50,7 @@ export default function Comments (props: CommentsProps) {
     downvote: false
   });
 
+  const [boxId, setBoxId] = useState(0);
   const [hoveredComments, setHoveredComments] = useState([
     {
       upvote: false,
@@ -169,6 +170,8 @@ export default function Comments (props: CommentsProps) {
             setIndex={setIndex}
             editComment={editComment}
             editNestedComment={editNestedComment}
+            boxId={boxId}
+            setBoxId={setBoxId}
           />
         </div>
 
@@ -205,6 +208,8 @@ export default function Comments (props: CommentsProps) {
                      currentEditedComment={currentEditedComment}
                      editComment={editComment}
                      editNestedComment={editNestedComment}
+                     boxId={boxId}
+                     setBoxId={setBoxId}
                     />
           })}
         </div>

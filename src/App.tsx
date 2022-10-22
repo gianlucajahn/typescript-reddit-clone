@@ -187,34 +187,61 @@ function App() {
     comment.nested_comments[0].lastSubmitContent = comment.nested_comments[0].content;
     comment.nesting = "posted";
     setCurrentPost({...currentPost, ...currentPost.comments[commentId] = comment});
+    setNotificationNum(notificationNum + 1);
   }
 
   const submitComment = (e: React.MouseEvent) => {
+    const target = e.currentTarget as HTMLButtonElement;
+
     if (loginStatus === false) {
       setLoginModalState("login");
       return;
     }
 
-    const target = e.currentTarget as HTMLButtonElement;
-    let postRef = currentPost
-    let newComment = {
-      author: userName,
-      nesting: "none",
-      vote: 0,
-      time: "Just now",
-      upvotes: "1",
-      hasBeenSubmittedYet: true,
-      lastSubmitContent: mainComment,
-      content: mainComment,
-      nested_lvl: 0,
-      nested_comments: [
-        
-      ]
-    };
-    postRef?.comments?.unshift(newComment);
-    setCurrentPost(postRef);
-    setMainComment("");
-    setNotificationNum(notificationNum + 1);
+    let commentId = parseInt(target.id);
+    for (let i = 0; i < 10; i++) {
+      if (commentId === i) {
+        let postRef = currentPost;
+        let newComment = {
+          author: userName,
+          nesting: "none",
+          vote: 0,
+          time: "Just now",
+          upvotes: "1",
+          hasBeenSubmittedYet: true,
+          lastSubmitContent: postRef?.comments[commentId].content,
+          content: postRef!.comments[commentId].content,
+          nested_lvl: 0,
+          nested_comments: [
+            
+          ]
+        };
+        postRef!.comments[commentId] = newComment;
+        setCurrentPost(postRef);
+      }
+    }
+    if (isNaN(commentId)) {
+      let postRef = currentPost;
+      let newComment = {
+        author: userName,
+        nesting: "none",
+        vote: 0,
+        time: "Just now",
+        upvotes: "1",
+        hasBeenSubmittedYet: true,
+        lastSubmitContent: mainComment,
+        content: mainComment,
+        nested_lvl: 0,
+        nested_comments: [
+          
+        ]
+      };
+      postRef?.comments?.unshift(newComment);
+      setCurrentPost(postRef);
+      setMainComment("");
+      setNotificationNum(notificationNum + 1);
+      setMainComment("");
+    }
   }
 
   const removeCurrentSub = (e: React.MouseEvent) => {
@@ -808,7 +835,9 @@ function App() {
         } else {
           if (target.classList.contains("cancel")) {
             comment.nesting === "edit" ? comment.nesting = "none" : comment.nesting = comment.nesting;
-            comment.nested_comments.splice(0, 1);
+            if (comment.nesting === "edit") {
+              comment.nested_comments.splice(0, 1);
+            }
           }
           return comment;
         }
