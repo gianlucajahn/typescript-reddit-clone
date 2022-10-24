@@ -431,7 +431,9 @@ function App() {
     if (target.classList.contains('join') || target.classList.contains('close')) {
       return;
     }
-    setCurrentSub(subreddits[subIndex]);
+    if (subIndex !== -1) {
+      setCurrentSub(subreddits[subIndex]);
+    }
 
     if (target.classList.contains('favorite')) {
       return;
@@ -439,15 +441,23 @@ function App() {
       setCurrentSub(subreddits[11]);
       navigate("/r/gaming");
       return;
+    } else if (target.classList.contains('apexlegends') || (target.parentElement?.classList.contains("apexlegends"))) {
+      setCurrentSub(subreddits[11]);
+      navigate("/r/apexlegends");
+      return;
+    } else if (target.classList.contains('genshinimpact') || (target.parentElement?.classList.contains("genshinimpact"))) {
+      setCurrentSub(subreddits[2]);
+      navigate("/r/genshinimpact");
+      return;
     } else if (target.classList.contains('sports') || (target.parentElement?.classList.contains("sports"))) {
       setCurrentSub(subreddits[15]);
       navigate("/r/sports");
       return;
-    } else if (target.classList.contains('television') || (target.parentElement?.classList.contains("television"))) {
+    } else if (target.classList.contains('movies') || (target.parentElement?.classList.contains("television"))) {
       setCurrentSub(subreddits[0]);
       navigate("/r/movies");
       return;
-    } else if (target.classList.contains('business') || (target.parentElement?.classList.contains("business"))) {
+    } else if (target.classList.contains('finance') || (target.parentElement?.classList.contains("business"))) {
       setCurrentSub(subreddits[4]);
       navigate("/r/finance");
       return;

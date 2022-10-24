@@ -335,43 +335,43 @@ export default function NavBar (props: NavBarProps) {
                   <img className={ dropdownState.gaming ? "expanded" : "expand" } src={require("../../resources/images/expandblack.png")} />
                 </div>
 
-                <div className="dropdownItem nested gaming" style={{ display: dropdownState.gaming ? "flex" : "none" }} onClick={handleNavigate}>
-                  <h3>Valheim</h3>
+                <div className="dropdownItem nested apexlegends" style={{ display: dropdownState.gaming ? "flex" : "none" }} onClick={handleNavigate}>
+                  <h3>Apex Legends</h3>
                 </div>
 
-                <div className="dropdownItem nested gaming" style={{ display: dropdownState.gaming ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested genshinimpact" style={{ display: dropdownState.gaming ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Genshin Impact</h3>
                 </div>
 
-                <div className="dropdownItem nested gaming" style={{ display: dropdownState.gaming ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
                   <h3>Minecraft</h3>
                 </div>
 
-                <div className="dropdownItem nested gaming" style={{ display: dropdownState.gaming ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
                   <h3>Pokimane</h3>
                 </div>
 
-                <div className="dropdownItem nested gaming" style={{ display: dropdownState.gaming ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
                   <h3>Halo Infinite</h3>
                 </div>
 
-                <div className="dropdownItem nested gaming" style={{ display: dropdownState.gaming ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
                   <h3>Call of Duty: Warzone</h3>
                 </div>
 
-                <div className="dropdownItem nested gaming" style={{ display: dropdownState.gaming ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
                   <h3>Path of Exile</h3>
                 </div>
 
-                <div className="dropdownItem nested gaming" style={{ display: dropdownState.gaming ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
                   <h3>Hollow Knight</h3>
                 </div>
 
-                <div className="dropdownItem nested gaming" style={{ display: dropdownState.gaming ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
                   <h3>Escape from Tarkov</h3>
                 </div>
 
-                <div className="dropdownItem nested lastChild gaming" style={{ display: dropdownState.gaming ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested lastChild" style={{ display: dropdownState.gaming ? "flex" : "none" }}>
                   <h3>Watch Dogs: Legion</h3>
                 </div>
 
@@ -384,7 +384,7 @@ export default function NavBar (props: NavBarProps) {
                   <h3>NFL</h3>
                 </div>
 
-                <div className="dropdownItem nested sports" style={{ display: dropdownState.sports ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested nba" style={{ display: dropdownState.sports ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>NBA</h3>
                 </div>
 
@@ -421,39 +421,39 @@ export default function NavBar (props: NavBarProps) {
                   <img className={ dropdownState.television ? "expanded" : "expand" } src={require("../../resources/images/expandblack.png")} />
                 </div>
 
-                <div className="dropdownItem nested television" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested movies" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Game of Thrones</h3>
                 </div>
 
-                <div className="dropdownItem nested television" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested movies" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Breaking Bad</h3>
                 </div>
 
-                <div className="dropdownItem nested television" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested movies" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Rick &#38; Morty</h3>
                 </div>
 
-                <div className="dropdownItem nested television" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested movies" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>The Walking Dead</h3>
                 </div>
 
-                <div className="dropdownItem nested television" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested movies" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>House of Cards</h3>
                 </div>
 
-                <div className="dropdownItem nested television" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested movies" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Prison Break</h3>
                 </div>
 
-                <div className="dropdownItem nested television" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested movies" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Sherlock</h3>
                 </div>
 
-                <div className="dropdownItem nested television" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested movies" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Suits</h3>
                 </div>
 
-                <div className="dropdownItem nested lastChild television" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested lastChild movies" style={{ display: dropdownState.television ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Dark</h3>
                 </div>
 
@@ -462,39 +462,39 @@ export default function NavBar (props: NavBarProps) {
                   <img className={ dropdownState.celebrity ? "expanded" : "expand" } src={require("../../resources/images/expandblack.png")} />
                 </div>
 
-                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }}>
                   <h3>Tom Hiddleston</h3>
                 </div>
 
-                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }}>
                   <h3>Benedict Cumberbatch</h3>
                 </div>
 
-                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }}>
                   <h3>Mark Ruffalo</h3>
                 </div>
 
-                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }}>
                   <h3>Robert Downey Jr.</h3>
                 </div>
 
-                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }}>
                   <h3>Tom Holland</h3>
                 </div>
 
-                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }}>
                   <h3>Zendaya</h3>
                 </div>
 
-                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }}>
                   <h3>Chris Hemsworth</h3>
                 </div>
 
-                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }}>
                   <h3>Scarlett Johansson</h3>
                 </div>
 
-                <div className="dropdownItem nested lastChild celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested lastChild celebrity" style={{ display: dropdownState.celebrity ? "flex" : "none" }}>
                   <h3>Samuel L. Jackson</h3>
                 </div>
 
@@ -503,39 +503,39 @@ export default function NavBar (props: NavBarProps) {
                   <img className={ dropdownState.business ? "expanded" : "expand" } src={require("../../resources/images/expandblack.png")} />
                 </div>
 
-                <div className="dropdownItem nested business" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested finance" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Berkshire Hathaway</h3>
                 </div>
 
-                <div className="dropdownItem nested business" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested finance" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Tesla</h3>
                 </div>
 
-                <div className="dropdownItem nested business" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested finance" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>SpaceX</h3>
                 </div>
 
-                <div className="dropdownItem nested business" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested finance" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Best Buy</h3>
                 </div>
 
-                <div className="dropdownItem nested business" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested finance" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Walgreens</h3>
                 </div>
 
-                <div className="dropdownItem nested business" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested finance" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Nvidia</h3>
                 </div>
 
-                <div className="dropdownItem nested business" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested finance" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Alphabet</h3>
                 </div>
 
-                <div className="dropdownItem nested business" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested finance" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>Apple</h3>
                 </div>
 
-                <div className="dropdownItem nested lastChild business" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
+                <div className="dropdownItem nested lastChild finance" style={{ display: dropdownState.business ? "flex" : "none" }} onClick={handleNavigate}>
                   <h3>GameStop</h3>
                 </div>
 
