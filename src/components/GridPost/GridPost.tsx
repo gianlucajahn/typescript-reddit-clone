@@ -6,6 +6,7 @@ import './GridPost.scss';
 
 export interface GridPostProps {
     post: any,
+    posts: Post[],
     userName: string,
     currentSub: Subreddit | undefined,
     currentPost: Post | undefined,
@@ -30,6 +31,7 @@ export interface GridPostProps {
 export default function GridPost (props: GridPostProps) {
   const {
     post,
+    posts,
     userName,
     currentSub,
     currentPost,
@@ -81,6 +83,30 @@ export default function GridPost (props: GridPostProps) {
         setViewers(viewers => viewers - 1);
     } else if (outcome === 1) {
         setViewers(viewers  => viewers + 1);
+    }
+  }
+
+  const addUpComments = (posting: Post | undefined) => {
+    if (currentPost === undefined) {
+        let postId = posts.findIndex(postObject => postObject.title === post.title);
+        let targetedPost = posts[postId];
+        let totalCommentCount: number = 0;
+        let baseCommentCount: number = targetedPost.comments.length;
+        let nestedCommentCount: number = 0;
+        targetedPost.comments.map((comment, i) => {
+            nestedCommentCount += comment.nested_comments.length;
+        });
+        totalCommentCount = nestedCommentCount + baseCommentCount;
+        return totalCommentCount;
+    } else {
+        let totalCommentCount: number = 0;
+        let baseCommentCount: number = currentPost.comments.length;
+        let nestedCommentCount: number = 0;
+        currentPost.comments.map((comment, i) => {
+            nestedCommentCount += comment.nested_comments.length;
+        });
+        totalCommentCount = nestedCommentCount + baseCommentCount;
+        return totalCommentCount;
     }
   }
 
@@ -136,7 +162,7 @@ export default function GridPost (props: GridPostProps) {
             <div className="footer">
                 <div className="comments footer-div">
                     <img className="comments-icon" src={require("../../resources/images/comments.png")} />
-                    <h4>{post.comments.length} Comments</h4>
+                    <h4>{addUpComments(currentPost)} Comments</h4>
                 </div>
 
                 <div className="awards-footer footer-div">

@@ -68,6 +68,7 @@ export default function Grid (props: GridProps) {
 
         return <GridPost 
                  post={posts[num + 1]}
+                 posts={posts}
                  currentSub={currentSub} 
                  currentPost={currentPost}
                  handleNavigate={handleNavigate}
@@ -97,6 +98,7 @@ export default function Grid (props: GridProps) {
 
         return <GridPost 
                  post={posts[num]}
+                 posts={posts}
                  currentSub={currentSub} 
                  currentPost={currentPost}
                  handleNavigate={handleNavigate}
@@ -126,6 +128,7 @@ export default function Grid (props: GridProps) {
 
         return <GridPost 
                  post={posts[num]}
+                 posts={posts}
                  currentSub={currentSub} 
                  currentPost={currentPost}
                  handleNavigate={handleNavigate}
@@ -155,6 +158,7 @@ export default function Grid (props: GridProps) {
 
         return <GridPost 
                  post={posts[num]}
+                 posts={posts}
                  currentSub={currentSub} 
                  currentPost={currentPost}
                  handleNavigate={handleNavigate}
@@ -184,6 +188,7 @@ export default function Grid (props: GridProps) {
 
         return <GridPost 
                  post={posts[i]}
+                 posts={posts}
                  currentSub={currentSub} 
                  currentPost={currentPost}
                  handleNavigate={handleNavigate}

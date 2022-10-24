@@ -69,6 +69,11 @@ export interface Comment {
     nested_comments: Comment[];
 }
 
+export interface UserData {
+    username: string;
+    password: string;
+}
+
 export type Flair = {
     title: string;
     color: string;

@@ -105,6 +105,7 @@ export default function IndividualPost (props: individualPostProps) {
         <div className="left">
          <GridPost 
             post={currentPost}
+            posts={posts}
             currentSub={currentSub} 
             currentPost={currentPost}
             handleNavigate={handleNavigate}

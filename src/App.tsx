@@ -8,7 +8,7 @@ import { isReturnStatement, reduceEachTrailingCommentRange } from 'typescript';
 import LoginModal from './components/LoginModal/LoginModal';
 import subredditArray from './utils/subredditArray';
 import SubredditPage from './containers/SubredditPage/SubredditPage';
-import { Subreddits, Subreddit, Post, Comment } from "./types/types";
+import { Subreddits, Subreddit, Post, Comment, UserData } from "./types/types";
 import postArray from './utils/postArray';
 import IndividualPost from './containers/individualPost/individualPost';
 
@@ -24,6 +24,8 @@ function App() {
   const [searchDropdown, setSearchDropdown] = useState(false);
   const [currentAnchor, setCurrentAnchor] = useState(Number);
   const [selectedAnchor, setSelectedAnchor] = useState("");
+  const [cachedPosts, setCachedPosts] = useState<Post[]>();
+  const [cachedUserData, setCachedUserData] = useState<UserData>();
   const [currentSub, setCurrentSub] = useState<Subreddit>();
   const [currentPost, setCurrentPost] = useState<Post>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
@@ -769,8 +771,6 @@ function App() {
     } else if (target.id === "logout") {
       setDropdownIsOpen(false);
       setLoginStatus(false);
-      setUserName("");
-      setPassword("");
     }
   }
 
@@ -841,6 +841,14 @@ function App() {
 
   useEffect(() => {
     if (loginStatus === false) {
+      setCachedPosts([...posts]);
+      setCachedUserData({
+        username: userName,
+        password: password
+      });
+      setUserName("");
+      setPassword("");
+
       let updatedPosts = [...posts];
       let postsAfterVoteReset = posts.map((post, i) => {
         post.vote = 0;
