@@ -33,6 +33,7 @@ export interface NavBarProps {
   handleLogin: MouseEventHandler,
   handleDropdown: MouseEventHandler<HTMLDivElement>,
   handleExpand: MouseEventHandler<HTMLDivElement>,
+  handleSelectSort: MouseEventHandler,
   handleExpandSub: MouseEventHandler<HTMLDivElement>,
   handleNavigate: MouseEventHandler<HTMLDivElement>,
   quickNavigate: MouseEventHandler,
@@ -58,6 +59,7 @@ export default function NavBar (props: NavBarProps) {
     handleDropdown,
     navToSubmit,
     quickNavigate,
+    handleSelectSort,
     handleExpand,
     handleLoginModal,
     handleLogin,
@@ -150,19 +152,19 @@ export default function NavBar (props: NavBarProps) {
                           </div>;
                 })}
                 <h6 className="communityList feeds">FEEDS</h6>
-                <div className="subItem sub" id="/" onClick={handleNavigate}>
+                <div className="subItem sub" id="best" onClick={handleSelectSort}>
                   <img className="subIcon sub noPointerEvents" src={require(`../../resources/images/home.png`)} />
                   <h3 className="sub noPointerEvents">Home</h3>
                 </div>
-                <div className="subItem sub" id="/popular" onClick={handleNavigate}>
+                <div className="subItem sub" id="hot" onClick={handleSelectSort}>
                   <img className="subIcon sub noPointerEvents" src={require(`../../resources/images/popular.PNG`)} />
                   <h3 className="sub noPointerEvents">Popular</h3>
                 </div>
-                <div className="subItem sub" id="/all" onClick={handleNavigate}>
+                <div className="subItem sub" id="top" onClick={handleSelectSort}>
                   <img className="subIcon sub noPointerEvents" src={require(`../../resources/images/all.PNG`)} />
                   <h3 className="sub noPointerEvents">All</h3>
                 </div>
-                <div className="subItem sub" id="/live" onClick={handleNavigate}>
+                <div className="subItem sub" id="new" onClick={handleSelectSort}>
                   <img className="subIcon sub noPointerEvents" src={require(`../../resources/images/live.PNG`)} />
                   <h3 className="sub noPointerEvents">Reddit Live</h3>
                 </div>

@@ -89,6 +89,11 @@ export default function GridPost (props: GridPostProps) {
   const addUpComments = (posting: Post | undefined) => {
     if (currentPost === undefined) {
         let postId = posts.findIndex(postObject => postObject.title === post.title);
+
+        if (postId === -1) {
+            return;
+        }
+        
         let targetedPost = posts[postId];
         let totalCommentCount: number = 0;
         let baseCommentCount: number = targetedPost.comments.length;

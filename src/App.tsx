@@ -745,6 +745,12 @@ function App() {
     });
   }
 
+  const handleSelectSort = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+    navigate("/");
+    setCurrentSort(target.id);
+  }
+
   const navToSubmit = (e: React.MouseEvent) => {
     if (loginStatus === false) {
       setLoginModalState("login");
@@ -895,6 +901,7 @@ function App() {
       /> : null}
       <NavBar 
         dropdownIsOpen={dropdownIsOpen}
+        handleSelectSort={handleSelectSort}
         dropdownState={dropdownState}
         handleDropdown={handleDropdown}
         handleExpand={handleExpand}
