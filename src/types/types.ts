@@ -64,6 +64,7 @@ export interface Comment {
     content: string;
     hasBeenSubmittedYet?: boolean,
     lastSubmitContent?: string,
+    avatar?: string,
     nested_lvl: number;
     nested_comments: Comment[];
 }
