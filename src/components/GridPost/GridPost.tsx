@@ -1,5 +1,6 @@
 import React, { MouseEventHandler, useEffect, useState, Dispatch, SetStateAction } from 'react';
 import { findAllInRenderedTree } from 'react-dom/test-utils';
+import { useLocation } from 'react-router-dom';
 import { Post, Subreddit } from '../../types/types';
 import Comments from '../Comments/Comments';
 import './GridPost.scss';
@@ -59,6 +60,7 @@ export default function GridPost (props: GridPostProps) {
   });
 
   const [viewers, setViewers] = useState(Math.floor(Math.random() * 80 + 12));
+  const location = useLocation();
 
   const handleHover = (e: React.MouseEvent) => {
     const target = e.currentTarget;
@@ -93,7 +95,7 @@ export default function GridPost (props: GridPostProps) {
         if (postId === -1) {
             return;
         }
-        
+
         let targetedPost = posts[postId];
         let totalCommentCount: number = 0;
         let baseCommentCount: number = targetedPost.comments.length;
@@ -152,11 +154,14 @@ export default function GridPost (props: GridPostProps) {
                 </div>
             </div>
 
-            <div className="headline">
+            <div className="headline" style={{ gap: /[0-9]+$/.test(location.pathname) ? "3px" : "0px" }}>
                 <h2 className="headline-text" style={{ width: currentPost === undefined ? "490px" : "640px" }}>
                     {post.title}
-                    {post.flair.title !== "none" ? <button className="flair" style={{ backgroundColor: post.flair.color, zIndex: 1 }}>{post.flair.title}</button> : null}
+                    {post.flair.title !== "none" ? location.pathname.substring(1, 2) !== "r" ? <button className="flair" style={{ backgroundColor: post.flair.color, zIndex: 1 }}>{post.flair.title}</button> : /[0-9]+$/.test(location.pathname) ? null : <button className="flair" style={{ backgroundColor: post.flair.color, zIndex: 1 }}>{post.flair.title}</button> : null}
                 </h2>
+                <div className="individualPost">
+                    {post.flair.title !== "none" ? location.pathname.substring(1, 2) === "r" ? /[0-9]+$/.test(location.pathname) ? <button className="flair" style={{ backgroundColor: post.flair.color, zIndex: 1 }}>{post.flair.title}</button> : null : null : null}
+                </div>
             </div>
 
             <div className="content">
