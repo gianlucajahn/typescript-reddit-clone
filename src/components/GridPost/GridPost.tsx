@@ -16,6 +16,7 @@ export interface GridPostProps {
     setIndex: Dispatch<SetStateAction<number | undefined>>,
     writeNestedComment: any,
     editComment: any,
+    randomIntToString: string,
     editNestedComment: any,
     submitNestedComment: MouseEventHandler,
     handleNavigate: MouseEventHandler,
@@ -39,6 +40,7 @@ export default function GridPost (props: GridPostProps) {
     setIndex,
     writeNestedComment,
     editComment,
+    randomIntToString,
     editNestedComment,
     submitNestedComment,
     handleNavigate,
@@ -181,6 +183,7 @@ export default function GridPost (props: GridPostProps) {
               currentEditedComment={currentEditedComment}
               editComment={editComment}
               editNestedComment={editNestedComment}
+              randomIntToString={randomIntToString}
             />
         </div>}
     </div>

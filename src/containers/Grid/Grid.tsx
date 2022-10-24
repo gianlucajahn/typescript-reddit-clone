@@ -17,6 +17,7 @@ export interface GridProps {
     userName: string,
     mainComment: string,
     writeComment: any,
+    randomIntToString: string,
     currentEditedComment: string,
     loginStatus: boolean,
     setIndex: Dispatch<SetStateAction<number | undefined>>
@@ -48,6 +49,7 @@ export default function Grid (props: GridProps) {
     writeNestedComment,
     editComment,
     editNestedComment,
+    randomIntToString,
     submitNestedComment,
     openPost,
     handleLikeComment,
@@ -84,6 +86,7 @@ export default function Grid (props: GridProps) {
                  currentEditedComment={currentEditedComment}
                  editComment={editComment}
                  editNestedComment={editNestedComment}
+                 randomIntToString={randomIntToString}
                 />
       })}
 
@@ -112,6 +115,7 @@ export default function Grid (props: GridProps) {
                  currentEditedComment={currentEditedComment}
                  editComment={editComment}
                  editNestedComment={editNestedComment}
+                 randomIntToString={randomIntToString}
                 />
       })}
 
@@ -140,6 +144,7 @@ export default function Grid (props: GridProps) {
                  currentEditedComment={currentEditedComment}
                  editComment={editComment}
                  editNestedComment={editNestedComment}
+                 randomIntToString={randomIntToString}
                 />
       })}
 
@@ -168,6 +173,7 @@ export default function Grid (props: GridProps) {
                  currentEditedComment={currentEditedComment}
                  editComment={editComment}
                  editNestedComment={editNestedComment}
+                 randomIntToString={randomIntToString}
                 />
       })}
 
@@ -196,6 +202,7 @@ export default function Grid (props: GridProps) {
                  currentEditedComment={currentEditedComment}
                  editComment={editComment}
                  editNestedComment={editNestedComment}
+                 randomIntToString={randomIntToString}
                 />
       })}
     </div>

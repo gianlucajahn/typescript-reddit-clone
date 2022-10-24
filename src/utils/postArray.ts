@@ -29,7 +29,7 @@ const postArray = [
             },
             {
                 author: "Sure_Whatever",
-                avatar: "7",
+                avatar: "2",
                 time: "5 hr. ago",
                 upvotes: "1",
                 content: "Robcop, maybe",
@@ -128,7 +128,7 @@ const postArray = [
             },
             {
                 author: "darkness_escape",
-                avatar: "7",
+                avatar: "4",
                 nesting: "none",
                 vote: 0,
                 time: "6 hr. ago",
@@ -509,7 +509,7 @@ const postArray = [
             },
             {
                 author: "Lowsmithy",
-                avatar: "7",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -730,7 +730,7 @@ const postArray = [
             },
             {
                 author: "Ikcatcher",
-                avatar: "7",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -959,7 +959,7 @@ const postArray = [
         comments: [
             {
                 author: "MrHvedrungr",
-                avatar: "7",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1058,7 +1058,7 @@ const postArray = [
             },
             {
                 author: "Jsomer50",
-                avatar: "7",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1854,7 +1854,7 @@ const postArray = [
 
                 ],
                 nesting: "none",
-                avatar: "7",
+                avatar: "1",
                 vote: 0,
                 time: "3 days ago",
                 upvotes: "25",
@@ -2393,7 +2393,7 @@ const postArray = [
                 content: "Is that another one in the background?"
             },
             {
-                avatar: "7",
+                avatar: "6",
                 author: "CBvdb",
                 nested_lvl: 0,
                 nested_comments: [
@@ -2660,7 +2660,7 @@ const postArray = [
         comments: [
             {
                 author: "usernamesareclass",
-                avatar: "7",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2788,7 +2788,7 @@ const postArray = [
             },
             {
                 author: "jetah",
-                avatar: "7",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3342,7 +3342,7 @@ const postArray = [
             },
             {
                 author: "PrettyInWeed",
-                avatar: "7",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3390,7 +3390,7 @@ const postArray = [
             },
             {
                 author: "LorenaBobbedIt",
-                avatar: "7",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3527,7 +3527,7 @@ const postArray = [
         comments: [
             {
                 author: "Space-nudibranch",
-                avatar: "7",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3783,7 +3783,7 @@ const postArray = [
             },
             {
                 author: "darksora2323",
-                avatar: "7",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 

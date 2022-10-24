@@ -147,6 +147,7 @@ export default function SubredditPage (props: SubredditPageProps) {
               currentEditedComment={currentEditedComment}
               editComment={editComment}
               editNestedComment={editNestedComment}
+              randomIntToString={randomIntToString}
             />
 
           </div>

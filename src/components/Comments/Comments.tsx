@@ -11,6 +11,7 @@ export interface CommentsProps {
   userName: string,
   currentSub: Subreddit | undefined,
   mainComment: string,
+  randomIntToString: string,
   writeComment: any,
   currentEditedComment: string,
   currentPost: Post,
@@ -34,6 +35,7 @@ export default function Comments (props: CommentsProps) {
     currentEditedComment,
     currentPost,
     loginStatus,
+    randomIntToString,
     setIndex,
     writeNestedComment,
     editComment,
@@ -172,6 +174,7 @@ export default function Comments (props: CommentsProps) {
             editNestedComment={editNestedComment}
             boxId={boxId}
             setBoxId={setBoxId}
+            randomIntToString={randomIntToString}
           />
         </div>
 
@@ -210,6 +213,7 @@ export default function Comments (props: CommentsProps) {
                      editNestedComment={editNestedComment}
                      boxId={boxId}
                      setBoxId={setBoxId}
+                     randomIntToString={randomIntToString}
                     />
           })}
         </div>

@@ -308,13 +308,6 @@ function App() {
     window.scrollTo(0, 0);
   }, [loginModalState])
 
-  useEffect(() => {
-    if (loginStatus === false) {
-      setPosts(postArray);
-      setMainComment("");
-    }
-  }, [loginStatus])
-
   const handleSubMembership = (e: React.MouseEvent) => {
     if (loginStatus === false) {
       setLoginModalState("login");
@@ -845,6 +838,32 @@ function App() {
       setCurrentPost(targetedPost);
     }
   }
+
+  useEffect(() => {
+    if (loginStatus === false) {
+      let updatedPosts = [...posts];
+      let postsAfterVoteReset = posts.map((post, i) => {
+        post.vote = 0;
+        let updatedComments = post.comments.map((comment, i) => {
+          comment.vote = 0;
+          let updatedNestedComments = comment.nested_comments.map((nestedComment, i) => {
+            nestedComment.vote = 0;
+            return nestedComment;
+          });
+          comment.nested_comments = updatedNestedComments;
+          return comment;
+        });
+        post.comments = updatedComments;
+        return post;
+      });
+      setPosts(postsAfterVoteReset);
+
+      if (currentPost !== undefined) {
+        let postId = postsAfterVoteReset.findIndex(post => post.title === currentPost.title);
+        setCurrentPost(postsAfterVoteReset[postId]);
+      }
+    }
+  }, [loginStatus])
 
   const standardTheme = {
     buttonColor: "#0079d3",

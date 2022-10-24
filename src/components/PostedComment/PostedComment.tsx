@@ -11,6 +11,7 @@ export interface PostedCommentProps {
     hoveredComments: any,
     commentObj: Comment,
     userName: string,
+    randomIntToString: string,
     noFurtherNesting?: boolean,
     mainComment: string,
     targetedComment: Comment,
@@ -38,6 +39,7 @@ export default function PostedComment (props: PostedCommentProps) {
     hoveredComments,
     mainComment,
     boxId,
+    randomIntToString,
     setBoxId,
     userName,
     noFurtherNesting,
@@ -93,13 +95,13 @@ export default function PostedComment (props: PostedCommentProps) {
   return (
     <div className="comment" id={`${index}`} style={{ marginLeft: nested ? "10px" : "", marginTop: nested ? "12px" : "", marginBottom: nested ? "10px" : "20px" }}>
         {(nested && commentObj.nested_comments.length !== 0) && <div className="comment-header">
-            <img className="comment-avatar" src={require("../../resources/images/avatar3.PNG")} />
+            <img className="comment-avatar" src={nested ? commentObj.nested_comments[0].author === "Nikola Tesla" ? require("../../resources/images/avatartesla.PNG") : require(`../../resources/images/avatar${randomIntToString}.PNG`) : userName === "Nikola Tesla" ? require("../../resources/images/avatartesla.PNG") : commentObj.author === userName ? require(`../../resources/images/avatar${randomIntToString}.PNG`) : require(`../../resources/images/base_variants/default${commentObj.avatar}.png`)} />
             <h4 className="comment-author">{nested ? commentObj.nested_comments[0].author : commentObj.author}</h4>
             <h4 className="comment-timestamp">· {nested ? commentObj.nested_comments[0].time : commentObj.time}</h4>
         </div>}
 
         {(!nested && !edited) && <div className="comment-header">
-            <img className="comment-avatar" src={require("../../resources/images/avatar3.PNG")} />
+            <img className="comment-avatar" src={nested ? commentObj.author === "Nikola Tesla" ? require("../../resources/images/avatartesla.PNG") : require(`../../resources/images/avatar${randomIntToString}.PNG`) : commentObj.author === "Nikola Tesla" ? require("../../resources/images/avatartesla.PNG") : commentObj.author === userName ? require(`../../resources/images/avatar${randomIntToString}.PNG`) : require(`../../resources/images/base_variants/default${commentObj.avatar}.png`)} />
             <h4 className="comment-author">{nested ? commentObj.nested_comments[0].author : commentObj.author}</h4>
             <h4 className="comment-timestamp">· {nested ? commentObj.nested_comments[0].time : commentObj.time}</h4>
         </div>}
@@ -181,6 +183,7 @@ export default function PostedComment (props: PostedCommentProps) {
               editNestedComment={editNestedComment}
               boxId={boxId}
               setBoxId={setBoxId}
+              randomIntToString={randomIntToString}
             />}
         </div>
 
@@ -215,6 +218,7 @@ export default function PostedComment (props: PostedCommentProps) {
                   editNestedComment={editNestedComment}
                   boxId={boxId}
                   setBoxId={setBoxId}
+                  randomIntToString={randomIntToString}
                 />
             </div>}
 
@@ -248,6 +252,7 @@ export default function PostedComment (props: PostedCommentProps) {
                      currentEditedComment={currentEditedComment}
                      editComment={editComment}
                      editNestedComment={editNestedComment}
+                     randomIntToString={randomIntToString}
                 />
             </div>
         }

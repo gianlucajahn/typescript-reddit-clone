@@ -123,6 +123,7 @@ export default function IndividualPost (props: individualPostProps) {
             currentEditedComment={currentEditedComment}
             editComment={editComment}
             editNestedComment={editNestedComment}
+            randomIntToString={randomIntToString}
           />
         </div>
 

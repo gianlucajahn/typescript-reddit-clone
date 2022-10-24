@@ -105,6 +105,7 @@ export default function Home (props: HomeProps) {
           currentEditedComment={currentEditedComment}
           editComment={editComment}
           editNestedComment={editNestedComment}
+          randomIntToString={randomIntToString}
         />
       </div>
 
