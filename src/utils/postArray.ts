@@ -17,6 +17,7 @@ const postArray = [
             {
                 author: "KindOfOblivious",
                 time: "7 hr. ago",
+                avatar: "5",
                 upvotes: "1",
                 content: "You’ll probably love Upgrade (2018) then. It’s a cyberpunk action movie and it is crazy!",
                 vote: 0,
@@ -28,6 +29,7 @@ const postArray = [
             },
             {
                 author: "Sure_Whatever",
+                avatar: "7",
                 time: "5 hr. ago",
                 upvotes: "1",
                 content: "Robcop, maybe",
@@ -40,6 +42,7 @@ const postArray = [
             },
             {
                 author: "SaltySteveD87",
+                avatar: "9",
                 nesting: "none",
                 vote: 0,
                 time: "12 hr. ago",
@@ -52,6 +55,7 @@ const postArray = [
             },
             {
                 author: "Kindofhera",
+                avatar: "11",
                 nesting: "none",
                 vote: 0,
                 time: "11 hr. ago",
@@ -85,6 +89,7 @@ const postArray = [
         comments: [
             {
                 author: "ZorroMeansFox",
+                avatar: "1",
                 nesting: "none",
                 vote: 0,
                 time: "7 hr. ago",
@@ -97,6 +102,7 @@ const postArray = [
             },
             {
                 author: "Longjumping-B",
+                avatar: "2",
                 nesting: "none",
                 vote: 0,
                 time: "6 hr. ago",
@@ -109,6 +115,7 @@ const postArray = [
             },
             {
                 author: "Lower_Cantaloupe1970",
+                avatar: "13",
                 nesting: "none",
                 vote: 0,
                 time: "6 hr. ago",
@@ -121,6 +128,7 @@ const postArray = [
             },
             {
                 author: "darkness_escape",
+                avatar: "7",
                 nesting: "none",
                 vote: 0,
                 time: "6 hr. ago",
@@ -133,6 +141,7 @@ const postArray = [
             },
             {
                 author: "secoccular",
+                avatar: "8",
                 nesting: "none",
                 vote: 0,
                 time: "7 hr. ago",
@@ -166,6 +175,7 @@ const postArray = [
         comments: [
             {
                 author: "HopScotchiScotch",
+                avatar: "10",
                 nesting: "none",
                 vote: 0,
                 time: "20 hr. ago",
@@ -178,6 +188,7 @@ const postArray = [
             },
             {
                 author: "donsanedrin",
+                avatar: "11",
                 nesting: "none",
                 vote: 0,
                 time: "19 hr. ago",
@@ -211,6 +222,7 @@ const postArray = [
         comments: [
             {
                 author: "robodrew",
+                avatar: "12",
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -223,6 +235,7 @@ const postArray = [
             },
             {
                 author: "Writing_Gods",
+                avatar: "6",
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -235,6 +248,7 @@ const postArray = [
             },
             {
                 author: "TetrisCube",
+                avatar: "4",
                 nesting: "none",
                 vote: 0,
                 time: "2 days ago",
@@ -275,6 +289,7 @@ const postArray = [
                 ],
                 vote: 0,
                 nesting: "none",
+                avatar: "13",
                 time: "7 days ago",
                 upvotes: "634",
                 content: "Apocalypto gained some passionate champions in the Hollywood community. Actor Robert Duvall called it maybe the best movie I've seen in 25 years. Director Quentin Tarantino said, I think it's a masterpiece. It was perhaps the best film of that year. I think it was the best artistic film of that year. Martin Scorsese, writing about the film, called it a vision, adding, Many pictures today don't go into troubling areas like this, the importance of violence in the perpetuation of whats known as civilization. I admire Apocalypto for its frankness, but also for the power and artistry of the filmmaking. Actor Edward James Olmos said, I was totally caught off guard. Its arguably the best movie Ive seen in years. I was blown away. In 2013, director Spike Lee put the film on his list of all-time essential films."
@@ -286,6 +301,7 @@ const postArray = [
 
                 ],
                 nesting: "none",
+                avatar: "1",
                 vote: 0,
                 time: "6 days ago",
                 upvotes: "380",
@@ -293,6 +309,7 @@ const postArray = [
             },
             {
                 author: "oldnative",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -305,6 +322,7 @@ const postArray = [
             },
             {
                 author: "castzpg",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -341,6 +359,7 @@ const postArray = [
         comments: [
             {
                 author: "Killerack",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -353,6 +372,7 @@ const postArray = [
             },
             {
                 author: "AshKetchup",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -365,6 +385,7 @@ const postArray = [
             },
             {
                 author: "Tyler1",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -377,6 +398,7 @@ const postArray = [
             },
             {
                 author: "HenriqueAlberti",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -414,6 +436,7 @@ const postArray = [
         comments: [
             {
                 author: "TeemoG0d69",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -426,6 +449,7 @@ const postArray = [
             },
             {
                 author: "Floh_the_6th",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -438,6 +462,7 @@ const postArray = [
             },
             {
                 author: "caioxisd",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -471,6 +496,7 @@ const postArray = [
         comments: [
             {
                 author: "asiantuttle",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -483,6 +509,7 @@ const postArray = [
             },
             {
                 author: "Lowsmithy",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -495,6 +522,7 @@ const postArray = [
             },
             {
                 author: "MacNReee",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -507,6 +535,7 @@ const postArray = [
             },
             {
                 author: "[deleted]",
+                avatar: "13",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -540,6 +569,7 @@ const postArray = [
         comments: [
             {
                 author: "[deleted]",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -552,6 +582,7 @@ const postArray = [
             },
             {
                 author: "User_330001435",
+                avatar: "14",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -586,6 +617,7 @@ const postArray = [
         comments: [
             {
                 author: "Adventurous_File_798",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -598,6 +630,7 @@ const postArray = [
             },
             {
                 author: "thatonejungler",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -610,6 +643,7 @@ const postArray = [
             },
             {
                 author: "doglop",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -622,6 +656,7 @@ const postArray = [
             },
             {
                 author: "Dianamita",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -656,6 +691,7 @@ const postArray = [
         comments: [
             {
                 author: "Anniran",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -668,6 +704,7 @@ const postArray = [
             },
             {
                 author: "LivingASlothsLife",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -680,6 +717,7 @@ const postArray = [
             },
             {
                 author: "IamPlatycus",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -692,6 +730,7 @@ const postArray = [
             },
             {
                 author: "Ikcatcher",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -704,6 +743,7 @@ const postArray = [
             },
             {
                 author: "Mana_Transfer",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -740,6 +780,7 @@ const postArray = [
         comments: [
             {
                 author: "natsingsing",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -752,6 +793,7 @@ const postArray = [
             },
             {
                 author: "LordSirLance",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -764,6 +806,7 @@ const postArray = [
             },
             {
                 author: "Rikallion",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -776,6 +819,7 @@ const postArray = [
             },
             {
                 author: "Sir_Tea_Of_Bags",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -811,6 +855,7 @@ const postArray = [
         comments: [
             {
                 author: "SeniorGuava881",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -823,6 +868,7 @@ const postArray = [
             },
             {
                 author: "Mynorskull",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -835,6 +881,7 @@ const postArray = [
             },
             {
                 author: "Rikallion",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -847,6 +894,7 @@ const postArray = [
             },
             {
                 author: "Skeither",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -859,6 +907,7 @@ const postArray = [
             },
             {
                 author: "choccymilk0560",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -871,6 +920,7 @@ const postArray = [
             },
             {
                 author: "MayureshMJ",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -909,6 +959,7 @@ const postArray = [
         comments: [
             {
                 author: "MrHvedrungr",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -921,6 +972,7 @@ const postArray = [
             },
             {
                 author: "K_Shou",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -933,6 +985,7 @@ const postArray = [
             },
             {
                 author: "Psychological_Ad3329",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -966,6 +1019,7 @@ const postArray = [
         comments: [
             {
                 author: "ScienceOfMemory",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -978,6 +1032,7 @@ const postArray = [
             },
             {
                 author: "Altekho",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -990,6 +1045,7 @@ const postArray = [
             },
             {
                 author: "18237482",
+                avatar: "13",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1002,6 +1058,7 @@ const postArray = [
             },
             {
                 author: "Jsomer50",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1014,6 +1071,7 @@ const postArray = [
             },
             {
                 author: "UniqueCremer1931",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1047,6 +1105,7 @@ const postArray = [
         comments: [
             {
                 author: "TheSmokeSalmon420",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1059,6 +1118,7 @@ const postArray = [
             },
             {
                 author: "mansmurf",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1071,6 +1131,7 @@ const postArray = [
             },
             {
                 author: "KryieWetUpCurry_",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1083,6 +1144,7 @@ const postArray = [
             },
             {
                 author: "NevermoreSEA",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1116,6 +1178,7 @@ const postArray = [
         comments: [
             {
                 author: "ChamberDavs",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1128,6 +1191,7 @@ const postArray = [
             },
             {
                 author: "badthird",
+                avatar: "14",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1140,6 +1204,7 @@ const postArray = [
             },
             {
                 author: "rostron92",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1176,6 +1241,7 @@ const postArray = [
         comments: [
             {
                 author: "HokageEzio",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1188,6 +1254,7 @@ const postArray = [
             },
             {
                 author: "CoachJW",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1221,6 +1288,7 @@ const postArray = [
         comments: [
             {
                 author: "raylan_givens6",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1233,6 +1301,7 @@ const postArray = [
             },
             {
                 author: "Realnonamer1",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1245,6 +1314,7 @@ const postArray = [
             },
             {
                 author: "ThinkSoftware",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1257,6 +1327,7 @@ const postArray = [
             },
             {
                 author: "nellywentdiamond",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1290,6 +1361,7 @@ const postArray = [
         comments: [
             {
                 author: "Next-Firefighter-753",
+                avatar: "14",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1302,6 +1374,7 @@ const postArray = [
             },
             {
                 author: "agk927",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1314,6 +1387,7 @@ const postArray = [
             },
             {
                 author: "horseshoeoverlook",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1347,6 +1421,7 @@ const postArray = [
         comments: [
             {
                 author: "GigaChad450",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1359,6 +1434,7 @@ const postArray = [
             },
             {
                 author: "littlepiggy",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1371,6 +1447,7 @@ const postArray = [
             },
             {
                 author: "Simamonas",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1404,6 +1481,7 @@ const postArray = [
         comments: [
             {
                 author: "dan_obrien",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1441,6 +1519,7 @@ const postArray = [
         comments: [
             {
                 author: "smoovopr8r",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1453,6 +1532,7 @@ const postArray = [
             },
             {
                 author: "Leviathant",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1465,6 +1545,7 @@ const postArray = [
             },
             {
                 author: "Ax_deimos",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1502,6 +1583,7 @@ const postArray = [
         comments: [
             {
                 author: "smoovopr8r",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1514,6 +1596,7 @@ const postArray = [
             },
             {
                 author: "Leviathant",
+                avatar: "13",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1526,6 +1609,7 @@ const postArray = [
             },
             {
                 author: "Ax_deimos",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1559,6 +1643,7 @@ const postArray = [
         comments: [
             {
                 author: "Mysterious-Post8193",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1571,6 +1656,7 @@ const postArray = [
             },
             {
                 author: "Dormage",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1583,6 +1669,7 @@ const postArray = [
             },
             {
                 author: "Palpitating_Rattus",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1595,6 +1682,7 @@ const postArray = [
             },
             {
                 author: "21plankton",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1628,6 +1716,7 @@ const postArray = [
         comments: [
             {
                 author: "ChrisStoneGermany",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1661,6 +1750,7 @@ const postArray = [
         comments: [
             {
                 author: "maitreg",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1673,6 +1763,7 @@ const postArray = [
             },
             {
                 author: "GammaGargoyle",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1685,6 +1776,7 @@ const postArray = [
             },
             {
                 author: "OptionalMind",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1697,6 +1789,7 @@ const postArray = [
             },
             {
                 author: "sfboots",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1709,6 +1802,7 @@ const postArray = [
             },
             {
                 author: "pakidara",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1742,6 +1836,7 @@ const postArray = [
         comments: [
             {
                 author: "ManyFails1Win",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1759,6 +1854,7 @@ const postArray = [
 
                 ],
                 nesting: "none",
+                avatar: "7",
                 vote: 0,
                 time: "3 days ago",
                 upvotes: "25",
@@ -1766,6 +1862,7 @@ const postArray = [
             },
             {
                 author: "kaloschroma",
+                avatar: "13",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1778,6 +1875,7 @@ const postArray = [
             },
             {
                 author: "Para0234",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1811,6 +1909,7 @@ const postArray = [
         comments: [
             {
                 author: "BinkanSalaryman",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1823,6 +1922,7 @@ const postArray = [
             },
             {
                 author: "ItsZayveeir",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1835,6 +1935,7 @@ const postArray = [
             },
             {
                 author: "sokeTek",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1869,6 +1970,7 @@ const postArray = [
         comments: [
             {
                 author: "Business-Ad-274",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1881,6 +1983,7 @@ const postArray = [
             },
             {
                 author: "hrnyirawan",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1914,6 +2017,7 @@ const postArray = [
         comments: [
             {
                 author: "FVMAzalea",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1947,6 +2051,7 @@ const postArray = [
         comments: [
             {
                 author: "15Nova22",
+                avatar: "14",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1983,6 +2088,7 @@ const postArray = [
         comments: [
             {
                 author: "mancinis_blessed_bat",
+                avatar: "13",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -1995,6 +2101,7 @@ const postArray = [
             },
             {
                 author: "ikeif",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2007,6 +2114,7 @@ const postArray = [
             },
             {
                 author: "phasr0uk1",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2019,6 +2127,7 @@ const postArray = [
             },
             {
                 author: "budspencer",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2031,6 +2140,7 @@ const postArray = [
             },
             {
                 author: "ApolloFarZenith",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2043,6 +2153,7 @@ const postArray = [
             },
             {
                 author: "AngreFreshTech",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2077,6 +2188,7 @@ const postArray = [
         comments: [
             {
                 author: "CreativeTechGuyGames",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2088,6 +2200,7 @@ const postArray = [
                 content: "This will sound obvious, but practice. Spend a ton of time talking out your ideas, problems, designs, etc with the people around you. Brainstorm constantly. Encourage the people you are talking to to not just listen but ask questions and try to understand what you are explaining, and provide input."
             },
             {
+                avatar: "11",
                 author: "SeaProfessor3312",
                 nested_lvl: 0,
                 nested_comments: [
@@ -2101,6 +2214,7 @@ const postArray = [
             },
             {
                 author: "Goldreaver",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2134,6 +2248,7 @@ const postArray = [
         comments: [
             {
                 author: "mbonty",
+                avatar: "13",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2146,6 +2261,7 @@ const postArray = [
             },
             {
                 author: "silly_frog_lf",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2179,6 +2295,7 @@ const postArray = [
         comments: [
             {
                 author: "AugustGnarly",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2191,6 +2308,7 @@ const postArray = [
             },
             {
                 author: "thesituation531",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2203,6 +2321,7 @@ const postArray = [
             },
             {
                 author: "rafaover",
+                avatar: "13",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2215,6 +2334,7 @@ const postArray = [
             },
             {
                 author: "YungDwight",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2248,6 +2368,7 @@ const postArray = [
         comments: [
             {
                 author: "AugustGnarly",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2260,6 +2381,7 @@ const postArray = [
             },
             {
                 author: "Toffeemanstar",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2271,6 +2393,7 @@ const postArray = [
                 content: "Is that another one in the background?"
             },
             {
+                avatar: "7",
                 author: "CBvdb",
                 nested_lvl: 0,
                 nested_comments: [
@@ -2305,6 +2428,7 @@ const postArray = [
         comments: [
             {
                 author: "Jazzbo64",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2317,6 +2441,7 @@ const postArray = [
             },
             {
                 author: "samuraisports37",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2329,6 +2454,7 @@ const postArray = [
             },
             {
                 author: "una_pistola",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2341,6 +2467,7 @@ const postArray = [
             },
             {
                 author: "Zhou_Da",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2353,6 +2480,7 @@ const postArray = [
             },
             {
                 author: "Desperate_Chim_343",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2387,6 +2515,7 @@ const postArray = [
         comments: [
             {
                 author: "CruisinJoe22",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2399,6 +2528,7 @@ const postArray = [
             },
             {
                 author: "xeenexus",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2432,6 +2562,7 @@ const postArray = [
         comments: [
             {
                 author: "Volfie",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2444,6 +2575,7 @@ const postArray = [
             },
             {
                 author: "cutelyaware",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2456,6 +2588,7 @@ const postArray = [
             },
             {
                 author: "Kohouteky",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2489,6 +2622,7 @@ const postArray = [
         comments: [
             {
                 author: "PoetBakerBuck",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2526,6 +2660,7 @@ const postArray = [
         comments: [
             {
                 author: "usernamesareclass",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2538,6 +2673,7 @@ const postArray = [
             },
             {
                 author: "MyNotYours",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2550,6 +2686,7 @@ const postArray = [
             },
             {
                 author: "InfernalGout",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2562,6 +2699,7 @@ const postArray = [
             },
             {
                 author: "pattiemac",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2574,6 +2712,7 @@ const postArray = [
             },
             {
                 author: "NervousGuy",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2586,6 +2725,7 @@ const postArray = [
             },
             {
                 author: "GeneralA01",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2622,6 +2762,7 @@ const postArray = [
         comments: [
             {
                 author: "DeepfkingValuesDad",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2634,6 +2775,7 @@ const postArray = [
             },
             {
                 author: "FritzKreig",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2646,6 +2788,7 @@ const postArray = [
             },
             {
                 author: "jetah",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2680,6 +2823,7 @@ const postArray = [
         comments: [
             {
                 author: "BunnyPerson",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2692,6 +2836,7 @@ const postArray = [
             },
             {
                 author: "ErmirI",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2704,6 +2849,7 @@ const postArray = [
             },
             {
                 author: "TheGenericLee",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2741,6 +2887,7 @@ const postArray = [
         comments: [
             {
                 author: "Texas_Persian",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2753,6 +2900,7 @@ const postArray = [
             },
             {
                 author: "SpaceboysUsername",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2765,6 +2913,7 @@ const postArray = [
             },
             {
                 author: "Drump21",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2777,6 +2926,7 @@ const postArray = [
             },
             {
                 author: "uncondolencednole91",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2810,6 +2960,7 @@ const postArray = [
         comments: [
             {
                 author: "PrudentEvening",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2822,6 +2973,7 @@ const postArray = [
             },
             {
                 author: "AlesantroCorticeli",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2855,6 +3007,7 @@ const postArray = [
         comments: [
             {
                 author: "Royal-Author-669",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2867,6 +3020,7 @@ const postArray = [
             },
             {
                 author: "404_Gordon_Not_Found",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2879,6 +3033,7 @@ const postArray = [
             },
             {
                 author: "Wackmajor",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2912,6 +3067,7 @@ const postArray = [
         comments: [
             {
                 author: "reddit445",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2924,6 +3080,7 @@ const postArray = [
             },
             {
                 author: "StupidDIYQs",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2965,6 +3122,7 @@ const postArray = [
         comments: [
             {
                 author: "nasa",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -2977,6 +3135,7 @@ const postArray = [
             },
             {
                 author: "THE_STOCKINGHATHERO",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3010,6 +3169,7 @@ const postArray = [
         comments: [
             {
                 author: "AutoModerator",
+                avatar: "15",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3022,6 +3182,7 @@ const postArray = [
             },
             {
                 author: "sevgonlernassau",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3055,6 +3216,7 @@ const postArray = [
         comments: [
             {
                 author: "Jump_Like_A_Willys",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3067,6 +3229,7 @@ const postArray = [
             },
             {
                 author: "Outrageous_Zebra_221",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3079,6 +3242,7 @@ const postArray = [
             },
             {
                 author: "Cuda_BreakAway",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3091,6 +3255,7 @@ const postArray = [
             },
             {
                 author: "shmeebaloney",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3103,6 +3268,7 @@ const postArray = [
             },
             {
                 author: "black_rhombus",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3137,6 +3303,7 @@ const postArray = [
         comments: [
             {
                 author: "Captain-Marvel-92",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3149,6 +3316,7 @@ const postArray = [
             },
             {
                 author: "MiniMonkey5041",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3161,6 +3329,7 @@ const postArray = [
             },
             {
                 author: "jefrye",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3173,6 +3342,7 @@ const postArray = [
             },
             {
                 author: "PrettyInWeed",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3207,6 +3377,7 @@ const postArray = [
         comments: [
             {
                 author: "Thomasinarina",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3219,6 +3390,7 @@ const postArray = [
             },
             {
                 author: "LorenaBobbedIt",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3231,6 +3403,7 @@ const postArray = [
             },
             {
                 author: "zootedzillenial",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3264,6 +3437,7 @@ const postArray = [
         comments: [
             {
                 author: "DanelleDee",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3276,6 +3450,7 @@ const postArray = [
             },
             {
                 author: "mrssymea",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3288,6 +3463,7 @@ const postArray = [
             },
             {
                 author: "agajabigaba",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3300,6 +3476,7 @@ const postArray = [
             },
             {
                 author: "Particular_ad_2534",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3312,6 +3489,7 @@ const postArray = [
             },
             {
                 author: "GeneralHumanBeing",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3349,6 +3527,7 @@ const postArray = [
         comments: [
             {
                 author: "Space-nudibranch",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3361,6 +3540,7 @@ const postArray = [
             },
             {
                 author: "realwitchboy335",
+                avatar: "14",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3373,6 +3553,7 @@ const postArray = [
             },
             {
                 author: "stvbeev",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3407,6 +3588,7 @@ const postArray = [
         comments: [
             {
                 author: "Mimiques",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3419,6 +3601,7 @@ const postArray = [
             },
             {
                 author: "TheBigDuchess",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3452,6 +3635,7 @@ const postArray = [
         comments: [
             {
                 author: "LetsGetHivern",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3464,6 +3648,7 @@ const postArray = [
             },
             {
                 author: "sinned82",
+                avatar: "13",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3476,6 +3661,7 @@ const postArray = [
             },
             {
                 author: "Joe_Dirte9",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3488,6 +3674,7 @@ const postArray = [
             },
             {
                 author: "Tired_JoyBoy",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3521,6 +3708,7 @@ const postArray = [
         comments: [
             {
                 author: "coldmexicantea",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3533,6 +3721,7 @@ const postArray = [
             },
             {
                 author: "_goodpraxis",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3568,6 +3757,7 @@ const postArray = [
         comments: [
             {
                 author: "Iamyous3f",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3580,6 +3770,7 @@ const postArray = [
             },
             {
                 author: "ElectroFishy56",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3592,6 +3783,7 @@ const postArray = [
             },
             {
                 author: "darksora2323",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3604,6 +3796,7 @@ const postArray = [
             },
             {
                 author: "LeeMBoro",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3616,6 +3809,7 @@ const postArray = [
             },
             {
                 author: "MarcLo",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3649,6 +3843,7 @@ const postArray = [
         comments: [
             {
                 author: "Mountain_-_king",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3661,6 +3856,7 @@ const postArray = [
             },
             {
                 author: "greeneggs93",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3673,6 +3869,7 @@ const postArray = [
             },
             {
                 author: "LeeMBoro",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3710,6 +3907,7 @@ const postArray = [
         comments: [
             {
                 author: "polarbearik",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3722,6 +3920,7 @@ const postArray = [
             },
             {
                 author: "Mescman",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3734,6 +3933,7 @@ const postArray = [
             },
             {
                 author: "BodieBroadcasts",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3746,6 +3946,7 @@ const postArray = [
             },
             {
                 author: "PeripheralAddition",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3758,6 +3959,7 @@ const postArray = [
             },
             {
                 author: "LazySans",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3794,6 +3996,7 @@ const postArray = [
         comments: [
             {
                 author: "Georgy_K_Zhukov",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3806,6 +4009,7 @@ const postArray = [
             },
             {
                 author: "Erestyn",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3818,6 +4022,7 @@ const postArray = [
             },
             {
                 author: "RampagingKoala",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3830,6 +4035,7 @@ const postArray = [
             },
             {
                 author: "Abedeus",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3864,6 +4070,7 @@ const postArray = [
         comments: [
             {
                 author: "vasiliypupkeen",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3876,6 +4083,7 @@ const postArray = [
             },
             {
                 author: "Letrabotttle",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3888,6 +4096,7 @@ const postArray = [
             },
             {
                 author: "R3DT1D3",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3921,6 +4130,7 @@ const postArray = [
         comments: [
             {
                 author: "RadioactiveFruitCup",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3933,6 +4143,7 @@ const postArray = [
             },
             {
                 author: "Sin2k",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3945,6 +4156,7 @@ const postArray = [
             },
             {
                 author: "KTGS",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3957,6 +4169,7 @@ const postArray = [
             },
             {
                 author: "hamza1311",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -3969,6 +4182,7 @@ const postArray = [
             },
             {
                 author: "iocane_",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4003,6 +4217,7 @@ const postArray = [
         comments: [
             {
                 author: "Halaku",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4015,6 +4230,7 @@ const postArray = [
             },
             {
                 author: "reusens",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4027,6 +4243,7 @@ const postArray = [
             },
             {
                 author: "ILoveToEatLobster",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4064,6 +4281,7 @@ const postArray = [
         comments: [
             {
                 author: "KeyserSora",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4076,6 +4294,7 @@ const postArray = [
             },
             {
                 author: "SwampYankee",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4088,6 +4307,7 @@ const postArray = [
             },
             {
                 author: "NaturalLogofOne",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4100,6 +4320,7 @@ const postArray = [
             },
             {
                 author: "eskeena",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4134,6 +4355,7 @@ const postArray = [
         comments: [
             {
                 author: "External_Camp",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4146,6 +4368,7 @@ const postArray = [
             },
             {
                 author: "ash_bishop",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4158,6 +4381,7 @@ const postArray = [
             },
             {
                 author: "closetedgae19",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4170,6 +4394,7 @@ const postArray = [
             },
             {
                 author: "delightedknight3",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4203,6 +4428,7 @@ const postArray = [
         comments: [
             {
                 author: "ibekt",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4215,6 +4441,7 @@ const postArray = [
             },
             {
                 author: "ash_bishop",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4227,6 +4454,7 @@ const postArray = [
             },
             {
                 author: "Bananasarelit",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4261,6 +4489,7 @@ const postArray = [
         comments: [
             {
                 author: "Half-BloodPrincess",
+                avatar: "14",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4273,6 +4502,7 @@ const postArray = [
             },
             {
                 author: "Word62",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4285,6 +4515,7 @@ const postArray = [
             },
             {
                 author: "VelociStardust",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4297,6 +4528,7 @@ const postArray = [
             },
             {
                 author: "inky0210",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4309,6 +4541,7 @@ const postArray = [
             },
             {
                 author: "romychestnut",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4343,6 +4576,7 @@ const postArray = [
         comments: [
             {
                 author: "Half-BloodPrincess",
+                avatar: "14",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4355,6 +4589,7 @@ const postArray = [
             },
             {
                 author: "Ill_Be_Myself",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4367,6 +4602,7 @@ const postArray = [
             },
             {
                 author: "Ronnee51-yay",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4400,6 +4636,7 @@ const postArray = [
         comments: [
             {
                 author: "muchandquick",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4412,6 +4649,7 @@ const postArray = [
             },
             {
                 author: "adam1983adz",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4424,6 +4662,7 @@ const postArray = [
             },
             {
                 author: "suga-kyun",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4436,6 +4675,7 @@ const postArray = [
             },
             {
                 author: "PepsiCola7860",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4469,6 +4709,7 @@ const postArray = [
         comments: [
             {
                 author: "waldohasleftus",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4481,6 +4722,7 @@ const postArray = [
             },
             {
                 author: "Brief_Ad_1489",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4493,6 +4735,7 @@ const postArray = [
             },
             {
                 author: "hhairy",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4529,6 +4772,7 @@ const postArray = [
         comments: [
             {
                 author: "Dei_Photos",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4541,6 +4785,7 @@ const postArray = [
             },
             {
                 author: "Umpron",
+                avatar: "3",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4553,6 +4798,7 @@ const postArray = [
             },
             {
                 author: "Echo4708",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4565,6 +4811,7 @@ const postArray = [
             },
             {
                 author: "Forest_folf",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4599,6 +4846,7 @@ const postArray = [
         comments: [
             {
                 author: "verbi420",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4611,6 +4859,7 @@ const postArray = [
             },
             {
                 author: "pomarine",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4644,6 +4893,7 @@ const postArray = [
         comments: [
             {
                 author: "KevinTheIdk",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4656,6 +4906,7 @@ const postArray = [
             },
             {
                 author: "TheGreenRaccoon07",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4668,6 +4919,7 @@ const postArray = [
             },
             {
                 author: "Cest_La_Vie_101",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4680,6 +4932,7 @@ const postArray = [
             },
             {
                 author: "NightcoreSpectrum",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4713,6 +4966,7 @@ const postArray = [
         comments: [
             {
                 author: "ptupper",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4746,6 +5000,7 @@ const postArray = [
         comments: [
             {
                 author: "Jayce86",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4758,6 +5013,7 @@ const postArray = [
             },
             {
                 author: "NickyNicotine",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4770,6 +5026,7 @@ const postArray = [
             },
             {
                 author: "PoetryIsAlive",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4782,6 +5039,7 @@ const postArray = [
             },
             {
                 author: "dsphilly",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4815,6 +5073,7 @@ const postArray = [
         comments: [
             {
                 author: "Sweaty_Assignment_90",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4827,6 +5086,7 @@ const postArray = [
             },
             {
                 author: "Best-Jello",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4860,6 +5120,7 @@ const postArray = [
         comments: [
             {
                 author: "Yoshable",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4872,6 +5133,7 @@ const postArray = [
             },
             {
                 author: "hiimred2",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4884,6 +5146,7 @@ const postArray = [
             },
             {
                 author: "OverusedRedditJoke",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4917,6 +5180,7 @@ const postArray = [
         comments: [
             {
                 author: "swiftmen991",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4929,6 +5193,7 @@ const postArray = [
             },
             {
                 author: "TheToadstools",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4962,6 +5227,7 @@ const postArray = [
         comments: [
             {
                 author: "stingermarine",
+                avatar: "10",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4974,6 +5240,7 @@ const postArray = [
             },
             {
                 author: "SmackEh",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4986,6 +5253,7 @@ const postArray = [
             },
             {
                 author: "TheNextBatallion",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -4998,6 +5266,7 @@ const postArray = [
             },
             {
                 author: "AnnukinEarthwalker",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5010,6 +5279,7 @@ const postArray = [
             },
             {
                 author: "Deavs",
+                avatar: "13",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5043,6 +5313,7 @@ const postArray = [
         comments: [
             {
                 author: "AutoModerator",
+                avatar: "15",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5055,6 +5326,7 @@ const postArray = [
             },
             {
                 author: "Lilica_Golden_SHIB",
+                avatar: "12",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5067,6 +5339,7 @@ const postArray = [
             },
             {
                 author: "Ineedanaccountthx",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5079,6 +5352,7 @@ const postArray = [
             },
             {
                 author: "cowboy_shaman",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5091,6 +5365,7 @@ const postArray = [
             },
             {
                 author: "MilesBrooksTax",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5124,6 +5399,7 @@ const postArray = [
         comments: [
             {
                 author: "BlazingHotFireFox",
+                avatar: "14",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5136,6 +5412,7 @@ const postArray = [
             },
             {
                 author: "Maxx3141",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5148,6 +5425,7 @@ const postArray = [
             },
             {
                 author: "Setyman",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5182,6 +5460,7 @@ const postArray = [
         comments: [
             {
                 author: "Rookslook",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5194,6 +5473,7 @@ const postArray = [
             },
             {
                 author: "bad-crypto-advice",
+                avatar: "5",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5206,6 +5486,7 @@ const postArray = [
             },
             {
                 author: "DynamoDylan",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5218,6 +5499,7 @@ const postArray = [
             },
             {
                 author: "bigmaneting",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5252,6 +5534,7 @@ const postArray = [
         comments: [
             {
                 author: "coinfeeds-bot",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5264,6 +5547,7 @@ const postArray = [
             },
             {
                 author: "bluesmaker",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5276,6 +5560,7 @@ const postArray = [
             },
             {
                 author: "Nuewim",
+                avatar: "2",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5310,6 +5595,7 @@ const postArray = [
         comments: [
             {
                 author: "XGallonsX",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5322,6 +5608,7 @@ const postArray = [
             },
             {
                 author: "Wilder54321",
+                avatar: "4",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5334,6 +5621,7 @@ const postArray = [
             },
             {
                 author: "OpticallyMosache",
+                avatar: "8",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5346,6 +5634,7 @@ const postArray = [
             },
             {
                 author: "One_Steack_9554",
+                avatar: "11",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5358,6 +5647,7 @@ const postArray = [
             },
             {
                 author: "ArieJ010",
+                avatar: "6",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5370,6 +5660,7 @@ const postArray = [
             },
             {
                 author: "CompetitiveClerk97",
+                avatar: "7",
                 nested_lvl: 0,
                 nested_comments: [
 
@@ -5382,6 +5673,7 @@ const postArray = [
             },
             {
                 author: "maxpowerzttv",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
