@@ -31,6 +31,7 @@ function App() {
   const [currentPost, setCurrentPost] = useState<Post>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [submitPage, setSubmitPage] = useState(false);
+  const [submitPostType, setSubmitPostType] = useState();
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
   const [communityTheme, setCommunityTheme] = useState(true);
   const [communityOptions, setCommunityOptions] = useState(false);
@@ -1060,6 +1061,8 @@ function App() {
         />} />
         <Route path='/submit' element={<SubmitPage
           randomIntToString={randomIntToString}
+          submitPostType={submitPostType}
+          setSubmitPostType={setSubmitPostType}
           draftAmount={draftAmount}
           handleDraft={handleDraft}
           userName={userName}

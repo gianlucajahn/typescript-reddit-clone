@@ -10,6 +10,7 @@
         flex-direction: column;
         margin-left: 422px;
         width: 740px;
+        box-sizing: border-box;
 
         .divider {
             width: inherit;
@@ -96,6 +97,113 @@
             .expand {
                 margin-right: 6px;
                 cursor: pointer;
+            }
+        }
+
+        .post-options {
+            margin-top: 8px;
+            display: flex;
+            flex-direction: column;
+            width: 738px;
+            height: 514px;
+            background-color: white;
+            border: 1px solid transparent;
+            border-radius: 4px;
+
+
+            .post-types {
+                display: flex;
+                height: 50px;
+                border-bottom: 1px solid #edeff1;
+
+                .post-type {
+                    display: flex;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    justify-content: center;
+                    align-content: center;
+                    gap: 8px;
+                    background-color: white;
+                    cursor: pointer;
+
+                    .greyed-out {
+                        color: #c3c4c5;
+                    }
+
+                    .text {
+                        height: 20px;
+                        margin-top: 2px;
+                    }
+
+                    .image {
+                        height: 20px;
+                        margin-top: 2px;
+                    }
+
+                    .link {
+                        height: 23px;
+                        margin-top: 1px;
+                        margin-right: 2px;
+                    }
+
+                    .poll {
+                        height: 21px;
+                        margin-top: 3px;
+                    }
+
+                    .talk {
+                        height: 22px;
+                        margin-top: 2px;
+                    }
+
+                    h2 {
+                        margin-top: 2px;
+                        font-size: 15px;
+                        font-family: "IBM";
+                    }
+                }
+
+                .not-allowed {
+                    cursor: not-allowed;
+                }
+
+                .hoverable {
+
+                    &:hover {
+                        background-color: #f2f8fd;
+                    }
+                }
+
+                .post {
+                    padding-left: 42px;
+                    padding-right: 41px;
+                    border-top-left-radius: 4px;
+                    border-right: 1px solid #edeff1;
+                }
+
+                .img {
+                    padding-left: 15px;
+                    padding-right: 14px;
+                    border-right: 1px solid #edeff1;
+                }
+
+                .links {
+                    padding-left: 43px;
+                    padding-right: 43px;
+                    border-right: 1px solid #edeff1;
+                }
+
+                .polls {
+                    padding-left: 43px;
+                    padding-right: 43px;
+                    border-right: 1px solid #edeff1;
+                }
+
+                .talks {
+                    padding-left: 43px;
+                    padding-right: 44px;
+                    border-top-right-radius: 4px;
+                }
             }
         }
     }
