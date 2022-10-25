@@ -54,6 +54,14 @@ export default function SubmitPage (props: SubmitPageProps) {
 
         <div className="divider"></div>
 
+        <button className="community-selector">
+          <div className="start">
+              <img className="community-icon" src={require(`../../resources/images/Communities/${currentSub !== undefined ? `${currentSub.title}/icon` : "placeholder"}.png`)} />
+              <h4 className="community-title">{currentSub !== undefined ? "r/" + currentSub.title : "Choose a community"}</h4>
+          </div>
+          <img className="expand" src={require("../../resources/images/expand.png")} />
+        </button>
+
       </div>
 
       <div className="right">
