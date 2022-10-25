@@ -30,6 +30,7 @@ function App() {
   const [currentSub, setCurrentSub] = useState<Subreddit>();
   const [currentPost, setCurrentPost] = useState<Post>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
+  const [submitPage, setSubmitPage] = useState(false);
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
   const [communityTheme, setCommunityTheme] = useState(true);
   const [communityOptions, setCommunityOptions] = useState(false);
@@ -121,6 +122,12 @@ function App() {
   }, [searchTerm]);
 
   useEffect(() => {
+    if (location.pathname.substring(1) === "submit") {
+      setSubmitPage(true);
+    } else {
+      setSubmitPage(false);
+    }
+
     const endsWithNumber = /[0-9]+$/.test(location.pathname);
     if (endsWithNumber === false) {
       setCurrentPost(undefined);
@@ -927,6 +934,7 @@ function App() {
         handleDropdown={handleDropdown}
         handleExpand={handleExpand}
         handleLoginModal={handleLoginModal}
+        submitPage={submitPage}
         userName={userName}
         loginStatus={loginStatus}
         handleLogin={handleLogin}

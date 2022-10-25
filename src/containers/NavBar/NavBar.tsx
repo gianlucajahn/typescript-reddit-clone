@@ -18,6 +18,7 @@ export interface NavBarProps {
   randomIntToString: string,
   navToSubmit: MouseEventHandler,
   subreddits: Subreddits,
+  submitPage: boolean,
   currentSub: Subreddit | undefined,
   joinedCommunities: any,
   notificationNum: number,
@@ -75,6 +76,7 @@ export default function NavBar (props: NavBarProps) {
     dropdownState,
     subreddits,
     setSearchTerm,
+    submitPage,
     currentSub,
     userName,
     loginStatus,
@@ -118,8 +120,8 @@ export default function NavBar (props: NavBarProps) {
 
           <div className="subredditContainer" id="subredditContainer" style={{ display: loginStatus ? "flex" : "none", border: subDropdownIsOpen ? "1px solid #EDEFF1" : "1px solid transparent" }} onClick={handleExpandSub} onMouseEnter={handleHoverSubMenu} onMouseLeave={handleHoverSubMenu}>
             <div>
-              <img className="currentSubreddit return" src={currentSub !== undefined ?  require(`../../resources/images/Communities/${currentSub.title}/icon.png`) : require("../../resources/images/home.png")} style={{ height: currentSub !== undefined ? "21px" : "18px" }}/>
-              <h4 className="return subText">{currentSub !== undefined ? "r/" + currentSub.title : "Home"}</h4>
+              <img className="currentSubreddit return" src={submitPage ? require("../../resources/images/add.PNG") :  currentSub !== undefined ?  require(`../../resources/images/Communities/${currentSub.title}/icon.png`) : require("../../resources/images/home.png")} style={{ height: currentSub !== undefined ? "21px" : "18px" }}/>
+              <h4 className="return subText">{submitPage ? "Create Post" : currentSub !== undefined ? "r/" + currentSub.title : "Home"}</h4>
             </div>
             <img src={require("../../resources/images/expand.png")} className="expand return" />
             <div className="subredditDropdown" id="subredditDropdown" style={{ display: subDropdownIsOpen ? "block" : "none", borderTop: "1px solid transparent" }}>
