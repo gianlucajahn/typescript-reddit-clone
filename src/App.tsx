@@ -11,6 +11,7 @@ import SubredditPage from './containers/SubredditPage/SubredditPage';
 import { Subreddits, Subreddit, Post, Comment, UserData } from "./types/types";
 import postArray from './utils/postArray';
 import IndividualPost from './containers/individualPost/individualPost';
+import SubmitPage from './containers/SubmitPage/SubmitPage';
 
 function App() {
   const location = useLocation();
@@ -40,6 +41,7 @@ function App() {
   const [mainComment, setMainComment] = useState("");
   const [index, setIndex] = useState<number | undefined>(undefined);
   const [loginStatus, setLoginStatus] = useState(false);
+  const [draftAmount, setDraftAmount] = useState(0);
   const [searchItemDisplay, setSearchItemDisplay] = useState([
     true,
     true,
@@ -243,6 +245,15 @@ function App() {
       setMainComment("");
       setNotificationNum(notificationNum + 1);
       setMainComment("");
+    }
+  }
+
+  const handleDraft = (e: React.MouseEvent) => {
+    let target = e.currentTarget;
+    if (target.id === "add") {
+      setDraftAmount(draftAmount + 1);
+    } else if (target.id === "remove") {
+      setDraftAmount(draftAmount - 1);
     }
   }
 
@@ -1039,14 +1050,12 @@ function App() {
           editComment={editComment}
           editNestedComment={editNestedComment}
         />} />
-        <Route path='/submit' element={<Home 
+        <Route path='/submit' element={<SubmitPage
           randomIntToString={randomIntToString}
+          draftAmount={draftAmount}
+          handleDraft={handleDraft}
           userName={userName}
-          currentSort={currentSort}
-          setSort={setSort}
           subreddits={subreddits}
-          topSubreddits={topSubreddits}
-          handleSubMembership={handleSubMembership}
           loginStatus={loginStatus}
           setLoginModalState={setLoginModalState}
           handleNavigate={handleNavigate}
@@ -1054,20 +1063,10 @@ function App() {
           loginModalState={loginModalState}
           currentSub={currentSub}
           posts={posts}
-          handleLike={handleLike}
           currentPost={currentPost}
           openPost={openPost}
-          mainComment={mainComment}
-          writeComment={writeComment}
-          submitComment={submitComment}
-          handleLikeComment={handleLikeComment}
-          handleNestedComment={handleNestedComment}
           setIndex={setIndex}
-          writeNestedComment={writeNestedComment}
-          submitNestedComment={submitNestedComment}
-          currentEditedComment={currentEditedComment}
-          editComment={editComment}
-          editNestedComment={editNestedComment}
+          standardTheme={standardTheme}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}
