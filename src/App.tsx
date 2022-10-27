@@ -8,7 +8,7 @@ import { isReturnStatement, reduceEachTrailingCommentRange } from 'typescript';
 import LoginModal from './components/LoginModal/LoginModal';
 import subredditArray from './utils/subredditArray';
 import SubredditPage from './containers/SubredditPage/SubredditPage';
-import { Subreddits, Subreddit, Post, Comment, UserData } from "./types/types";
+import { Subreddits, Subreddit, Post, Comment, UserData, baseCustomPost } from "./types/types";
 import postArray from './utils/postArray';
 import IndividualPost from './containers/individualPost/individualPost';
 import SubmitPage from './containers/SubmitPage/SubmitPage';
@@ -31,7 +31,7 @@ function App() {
   const [currentPost, setCurrentPost] = useState<Post>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [submitPage, setSubmitPage] = useState(false);
-  const [submitPostType, setSubmitPostType] = useState();
+  const [submitPostType, setSubmitPostType] = useState("");
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
   const [communityTheme, setCommunityTheme] = useState(true);
   const [communityOptions, setCommunityOptions] = useState(false);
@@ -109,6 +109,7 @@ function App() {
   ];
 
   const [posts, setPosts] = useState<Post[]>(postArray);
+  const [customPost, setCustomPost] = useState<Post>(baseCustomPost);
 
   useEffect(() => {
     if (searchTerm.length === 0) {
@@ -786,11 +787,19 @@ function App() {
       return;
     }
     navigate("/submit");
+    setSubmitPostType("text");
   }
 
   const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
     const target = e.currentTarget as HTMLInputElement;
     setSearchTerm(target.value);
+  }
+
+  const editPostTitle = (e: any) => {
+    const target = e.target;
+    let updatedCustomPost = {...customPost};
+    updatedCustomPost.title = target.value;
+    setCustomPost(updatedCustomPost);
   }
 
   const handleLogin = (e: React.MouseEvent) => {
@@ -1078,6 +1087,8 @@ function App() {
           openPost={openPost}
           setIndex={setIndex}
           standardTheme={standardTheme}
+          customPost={customPost}
+          editPostTitle={editPostTitle}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}

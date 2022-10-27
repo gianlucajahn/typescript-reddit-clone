@@ -20,7 +20,9 @@ export interface SubmitPageProps {
   currentPost: Post | undefined,
   standardTheme: any,
   openPost: MouseEventHandler,
-  setIndex: any
+  setIndex: any,
+  customPost: Post,
+  editPostTitle: any,
 }
 
 export default function SubmitPage (props: SubmitPageProps) {
@@ -28,12 +30,14 @@ export default function SubmitPage (props: SubmitPageProps) {
     randomIntToString,
     userName,
     subreddits,
+    customPost,
     submitPostType,
     loginStatus,
     draftAmount,
     handleDraft,
     setLoginModalState,
     setSubmitPostType,
+    editPostTitle,
     handleNavigate,
     navToSubmit,
     loginModalState,
@@ -51,6 +55,7 @@ export default function SubmitPage (props: SubmitPageProps) {
     link: false
   });
 
+  const [focussed, setFocussed] = useState(false);
   const handleHover = (e: React.MouseEvent) => {
     const target = e.currentTarget;
     if (target.id === "text") {
@@ -129,6 +134,65 @@ export default function SubmitPage (props: SubmitPageProps) {
               <img className="talk" src={require(`../../resources/images/typetalk.png`)} />
               <h2 className="greyed-out">Talk</h2>
             </div>
+          </div>
+
+          <div className="title-container">
+              <input type="text" placeholder="Title" className="title" onChange={(e) => editPostTitle(e)} value={customPost.title} />
+              <div className="counter">{customPost.title.length}/300</div>
+          </div>
+
+          <div className="src-container" onClick={(e) => setFocussed(true)} onBlur={(e) => setFocussed(false)} style={{ border: focussed ? "1px solid #1c1c1c" : "1px solid transparent" }}>
+              <div className="button-bar-top">
+                <div className="start">
+                    <button className="text-settings" aria-label="Bold">
+                      <img className="setting-icon" src={require("../../resources/images/bold.png")} />
+                    </button>
+                    <button className="text-settings" aria-label="Italic">
+                      <img className="setting-icon" src={require("../../resources/images/italic.png")} />
+                    </button>
+                    <button className="text-settings" aria-label="Link">
+                      <img className="setting-icon" src={require("../../resources/images/clip.png")} />
+                    </button>
+                    <button className="text-settings" aria-label="Striked">
+                      <img className="setting-icon" src={require("../../resources/images/strikethrough.png")} />
+                    </button>
+                    <button className="text-settings" aria-label="Inline Code">
+                      <img className="setting-icon" src={require("../../resources/images/inline.png")} />
+                    </button>
+                    <button className="text-settings" aria-label="Superscript">
+                      <img className="setting-icon" src={require("../../resources/images/superscript.png")} />
+                    </button>
+                    <button className="text-settings spoiler" aria-label="Spoiler">
+                      <img className="setting-icon" src={require("../../resources/images/spoiler.png")} />
+                    </button>
+              
+                    <div className="line"></div>
+        
+                    <button className="text-settings" aria-label="Heading">
+                      <img className="setting-icon" src={require("../../resources/images/heading.png")} />
+                    </button>
+                    <button className="text-settings" aria-label="Bulleted">
+                      <img className="setting-icon" src={require("../../resources/images/bulleted.png")} />
+                    </button>
+                    <button className="text-settings" aria-label="Numbered"> 
+                      <img className="setting-icon" src={require("../../resources/images/numbered.png")} />
+                    </button>
+                    <button className="text-settings" aria-label="Quote Block">
+                      <img className="setting-icon" src={require("../../resources/images/quote.png")} />
+                    </button>
+                    <button className="text-settings" aria-label="More">
+                      <img className="setting-icon" src={require("../../resources/images/dots.png")} />
+                    </button>
+                </div>
+    
+                <div className="end">
+                        <button className="markdown btn" id="markdown">
+                          <p style={{ color: currentSub?.buttonColor }}>Markdown Mode</p>
+                        </button>
+                </div>
+              </div>
+
+              <textarea placeholder="Text (optional)" className="src-field" />
           </div>
         </div>
       </div>
