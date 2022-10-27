@@ -802,6 +802,13 @@ function App() {
     setCustomPost(updatedCustomPost);
   }
 
+  const editPostSrc = (e: any) => {
+    const target = e.target;
+    let updatedCustomPost = {...customPost};
+    updatedCustomPost.src = target.value;
+    setCustomPost(updatedCustomPost);
+  }
+
   const handleLogin = (e: React.MouseEvent) => {
     const target = e.target as HTMLButtonElement | HTMLDivElement;
     if (target.id === "login") {
@@ -1089,6 +1096,7 @@ function App() {
           standardTheme={standardTheme}
           customPost={customPost}
           editPostTitle={editPostTitle}
+          editPostSrc={editPostSrc}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}

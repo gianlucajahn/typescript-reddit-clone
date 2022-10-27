@@ -52,6 +52,10 @@
                     background-color: #cad0d6;
                 }
 
+                &:active {
+                    background-color: #acb0b5;
+                }
+
                 .draft-num {
                     margin-top: 3px;
                     align-items: center;
@@ -408,6 +412,7 @@
     padding-left: 15px;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
+    padding-right: 20px;
 }
 
 .src-container {
@@ -417,4 +422,48 @@
     width: 708px;
     box-sizing: border-box;
     border-radius: 4px;
+}
+
+.flair-container {
+    display: flex;
+    gap: 4px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+
+    .greyed-out {
+        border: 1px solid #c4c4c4 !important;
+        cursor: not-allowed !important;
+    }
+
+    .flair-btn {
+        background-color: white;
+        border: 1px solid #878a8c;
+        padding: 4px 16px;
+        gap: 7px;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .flair-icon {
+            height: 22px;
+        }
+        
+        h3 {
+            font-family: "Noto Sans Bold";
+            color: #878a8c;
+            font-size: 14px;
+            margin-bottom: 1px;
+        }
+
+        .grey {
+            color: #c4c4c4 !important;
+        }
+
+        .expand {
+            margin-left: 3px;
+        }
+    }
 }

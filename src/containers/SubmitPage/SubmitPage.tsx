@@ -23,6 +23,7 @@ export interface SubmitPageProps {
   setIndex: any,
   customPost: Post,
   editPostTitle: any,
+  editPostSrc: any,
 }
 
 export default function SubmitPage (props: SubmitPageProps) {
@@ -38,6 +39,7 @@ export default function SubmitPage (props: SubmitPageProps) {
     setLoginModalState,
     setSubmitPostType,
     editPostTitle,
+    editPostSrc,
     handleNavigate,
     navToSubmit,
     loginModalState,
@@ -192,7 +194,30 @@ export default function SubmitPage (props: SubmitPageProps) {
                 </div>
               </div>
 
-              <textarea placeholder="Text (optional)" className="src-field" />
+              <textarea placeholder="Text (optional)" className="src-field" onChange={editPostSrc} value={customPost.src} />
+          </div>
+
+          <div className="flair-container">
+            <button type="button" className="flair-btn"> 
+              <img className="flair-icon" src={require("../../resources/images/add.PNG")} />
+              <h3 className="active">OC</h3>
+            </button>
+
+            <button type="button" className="flair-btn">
+              <img className="flair-icon" src={require("../../resources/images/add.PNG")} />
+              <h3 className="active">Spoiler</h3>
+            </button>
+
+            <button type="button" className="flair-btn">
+              <img className="flair-icon" src={require("../../resources/images/add.PNG")} />
+              <h3 className="active">NSFW</h3>
+            </button>
+
+            <button type="button" className="flair-btn greyed-out">
+              <img className="flair-icon" src={require("../../resources/images/flair.PNG")} />
+              <h3 className="grey">Flair</h3>
+              <img className="expand" src={require("../../resources/images/expandgrey.png")} />
+            </button>
           </div>
         </div>
       </div>
