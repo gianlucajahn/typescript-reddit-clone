@@ -81,6 +81,10 @@ export default function SubmitPage (props: SubmitPageProps) {
     }
   }
 
+  const [OC, setOC] = useState(false);
+  const [spoiler, setSpoiler] = useState(false);
+  const [NSFW, setNSFW] = useState(false);
+
   const resetHover = (e: React.MouseEvent) => {
     setTypeHover({
       text: false,
@@ -198,19 +202,19 @@ export default function SubmitPage (props: SubmitPageProps) {
           </div>
 
           <div className="flair-container">
-            <button type="button" className="flair-btn"> 
-              <img className="flair-icon" src={require("../../resources/images/add.PNG")} />
-              <h3 className="active">OC</h3>
+            <button type="button" className="flair-btn" style={{ backgroundColor: OC ? "#4ac150" : "white", border: OC ? "1px solid #4ac150" : "1px solid #878a8c", gap: OC ? "9px" : "7px" }} onClick={(e) => setOC(!OC)}> 
+              <img className={OC ? "check-icon" : "flair-icon"} src={OC ? require("../../resources/images/check.png") : require("../../resources/images/add.PNG")} />
+              <h3 className="active" style={{ color: OC ? "white" : "#878a8c" }}>OC</h3>
             </button>
 
-            <button type="button" className="flair-btn">
-              <img className="flair-icon" src={require("../../resources/images/add.PNG")} />
-              <h3 className="active">Spoiler</h3>
+            <button type="button" className="flair-btn" style={{ backgroundColor: spoiler ? "black" : "white", border: spoiler ? "1px solid black" : "1px solid #878a8c", gap: spoiler ? "9px" : "7px" }} onClick={(e) => setSpoiler(!spoiler)}>
+              <img className={spoiler ? "check-icon" : "flair-icon"} src={spoiler ? require("../../resources/images/check.png") : require("../../resources/images/add.PNG")} />
+              <h3 className="active" style={{ color: spoiler ? "white" : "#878a8c" }}>Spoiler</h3>
             </button>
 
-            <button type="button" className="flair-btn">
-              <img className="flair-icon" src={require("../../resources/images/add.PNG")} />
-              <h3 className="active">NSFW</h3>
+            <button type="button" className="flair-btn" style={{ backgroundColor: NSFW ? "rgb(255, 88, 91)" : "white", border: NSFW ? "1px solid rgb(255, 88, 91)" : "1px solid #878a8c", gap: NSFW ? "9px" : "7px" }} onClick={(e) => setNSFW(!NSFW)}>
+              <img className={NSFW ? "check-icon" : "flair-icon"} src={NSFW ? require("../../resources/images/check.png") : require("../../resources/images/add.PNG")} />
+              <h3 className="active" style={{ color: NSFW ? "white" : "#878a8c" }}>NSFW</h3>
             </button>
 
             <button type="button" className="flair-btn greyed-out">
@@ -219,6 +223,19 @@ export default function SubmitPage (props: SubmitPageProps) {
               <img className="expand" src={require("../../resources/images/expandgrey.png")} />
             </button>
           </div>
+
+          <div className="divider"></div>
+
+          <div className="submit-container">
+            <button type="button" className="submit-btn save-draft" style={{ border: customPost.title.length >= 1 ? currentSub !== undefined ? `1px solid ${currentSub.buttonColor}` : `1px solid ${standardTheme.buttonColor}` : "1px solid #b2b2b2" }}>
+              <h3 className="active" style={{ color: customPost.title.length >= 1 ? currentSub !== undefined ? currentSub.buttonColor : standardTheme.buttonColor : "#b2b2b2" }}>Save Draft</h3>
+            </button>
+
+            <button type="button" className="submit-btn" style={{ backgroundColor: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484", border: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484" }} onClick={(e) => setNSFW(!NSFW)}>
+              <h3 className="active" style={{ color: currentSub !== undefined ? customPost.title.length >= 1 ? "white" : "#b2b2b2" : "#b2b2b2" }}>Post</h3>
+            </button>
+          </div>
+
         </div>
       </div>
 

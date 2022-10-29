@@ -116,6 +116,11 @@
             border: 1px solid transparent;
             border-radius: 4px;
 
+            .divider {
+                margin: 6px 16px 0 16px;
+                width: 708px;
+            }
+
             .title-container {
                 position: relative;
                 padding: 15px 15px 0px 15px;
@@ -434,12 +439,12 @@
     .greyed-out {
         border: 1px solid #c4c4c4 !important;
         cursor: not-allowed !important;
+        background-color: white;
     }
 
     .flair-btn {
-        background-color: white;
-        border: 1px solid #878a8c;
         padding: 4px 16px;
+        transition: 0.2s all;
         gap: 7px;
         border-radius: 9999px;
         display: flex;
@@ -453,7 +458,6 @@
         
         h3 {
             font-family: "Noto Sans Bold";
-            color: #878a8c;
             font-size: 14px;
             margin-bottom: 1px;
         }
@@ -465,5 +469,32 @@
         .expand {
             margin-left: 3px;
         }
+    }
+}
+
+.check-icon {
+    width: 19px;
+}
+
+.submit-container {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+    padding: 16px 15px;
+
+    .submit-btn {
+        padding: 4px 16px;
+        transition: 0.2s all;
+        gap: 7px;
+        height: 32px;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .save-draft {
+        background-color: white;
     }
 }
