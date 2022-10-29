@@ -4,6 +4,7 @@ import { ReactComponent as Cross } from "../../resources/images/cross.svg";
 import './individualPost.scss';
 import GridPost from '../../components/GridPost/GridPost';
 import SubredditSideBar from '../../components/SubredditSideBar/SubredditSideBar';
+import SubmitPage from '../SubmitPage/SubmitPage';
 
 export interface individualPostProps {
     randomIntToString: string,
@@ -20,6 +21,7 @@ export interface individualPostProps {
     openPost: MouseEventHandler,
     loginStatus: boolean,
     setLoginModalState: any,
+    submitPage: boolean,
     loginModalState: string,
     currentEditedComment: string,
     posts: Post[],
@@ -58,6 +60,7 @@ export default function IndividualPost (props: individualPostProps) {
     topSubreddits,
     currentEditedComment,
     mainComment,
+    submitPage,
     writeComment,
     setIndex,
     writeNestedComment,
@@ -143,6 +146,7 @@ export default function IndividualPost (props: individualPostProps) {
             communityOptions={communityOptions}
             currentPost={currentPost}
             handleNavigate={handleNavigate}
+            submitPage={submitPage}
           />
         </div>
       </div>

@@ -136,6 +136,15 @@ function App() {
     }
   }, [location.pathname])
 
+  useEffect(() => {
+    if (submitPage) {
+      if (currentSub !== undefined) {
+        const subNum = subreddits.findIndex(sub => sub.title === currentSub.title);
+        setCurrentPost(posts[subNum * 5 + 1]);
+      }
+    }
+  }, [submitPage])
+
   const handleNotifications = (e: React.MouseEvent) => {
     const target = e.currentTarget;
     if (target.classList.contains('noti')) {
@@ -1044,6 +1053,7 @@ function App() {
           currentEditedComment={currentEditedComment}
           editComment={editComment}
           editNestedComment={editNestedComment}
+          submitPage={submitPage}
         />} />
         <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -1097,6 +1107,11 @@ function App() {
           customPost={customPost}
           editPostTitle={editPostTitle}
           editPostSrc={editPostSrc}
+          switchCommunityTheme={switchCommunityTheme}
+          switchCommunityOptions={switchCommunityOptions}
+          expandRule={expandRule}
+          communityOptions={communityOptions}
+          submitPage={submitPage}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}
@@ -1134,6 +1149,7 @@ function App() {
           currentEditedComment={currentEditedComment}
           editComment={editComment}
           editNestedComment={editNestedComment}
+          submitPage={submitPage}
         />} />
       </Routes>
     </div>

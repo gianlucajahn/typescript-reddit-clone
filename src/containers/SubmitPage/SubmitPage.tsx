@@ -1,4 +1,5 @@
 import React, { MouseEventHandler, useState } from 'react';
+import SubredditSideBar from '../../components/SubredditSideBar/SubredditSideBar';
 import { Post, Subreddit, Subreddits } from '../../types/types';
 import './SubmitPage.scss';
 
@@ -11,9 +12,14 @@ export interface SubmitPageProps {
   loginStatus: boolean,
   setLoginModalState: any,
   submitPostType: string | undefined,
+  submitPage: boolean,
   setSubmitPostType: any,
   handleNavigate: MouseEventHandler,
   navToSubmit: MouseEventHandler,
+  switchCommunityTheme: MouseEventHandler,
+  switchCommunityOptions: MouseEventHandler,
+  communityOptions: boolean,
+  expandRule: MouseEventHandler,
   loginModalState: string,
   currentSub: Subreddit | undefined,
   posts: Post[],
@@ -33,6 +39,7 @@ export default function SubmitPage (props: SubmitPageProps) {
     subreddits,
     customPost,
     submitPostType,
+    submitPage,
     loginStatus,
     draftAmount,
     handleDraft,
@@ -40,6 +47,10 @@ export default function SubmitPage (props: SubmitPageProps) {
     setSubmitPostType,
     editPostTitle,
     editPostSrc,
+    communityOptions,
+    switchCommunityOptions,
+    switchCommunityTheme,
+    expandRule,
     handleNavigate,
     navToSubmit,
     loginModalState,
@@ -251,6 +262,24 @@ export default function SubmitPage (props: SubmitPageProps) {
       </div>
 
       <div className="right">
+      {currentSub !== undefined && 
+        <SubredditSideBar 
+          communityTheme={true}
+          currentSub={currentSub}
+          currentPost={currentPost}
+          standardTheme={standardTheme}
+          loginStatus={loginStatus}
+          randomIntToString={randomIntToString}
+          handleNavigate={handleNavigate}
+          navToSubmit={navToSubmit}
+          userName={userName}
+          switchCommunityTheme={switchCommunityTheme}
+          expandRule={expandRule}
+          switchCommunityOptions={switchCommunityOptions}
+          communityOptions={communityOptions}
+          submitPage={submitPage}
+        />}
+
         <div className="rediquette-container">
           <div className="rq-header">
             <div className="flex">
@@ -285,6 +314,8 @@ export default function SubmitPage (props: SubmitPageProps) {
             <div className="line lastline"></div>
           </div>
         </div>
+
+        <p className="extra">Please be mindful of reddit's <span>content policy</span> and practice good <span>reddiquette</span>.</p>
       </div>
     </div>
   );

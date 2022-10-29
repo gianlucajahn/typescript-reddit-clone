@@ -6,6 +6,7 @@ import './SubredditSideBar.scss';
 
 export interface SubredditSideBarProps {
     communityTheme: boolean,
+    submitPage: boolean,
     currentSub: Subreddit | undefined,
     standardTheme: any,
     loginStatus: boolean,
@@ -26,6 +27,7 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
     currentSub,
     currentPost,
     standardTheme,
+    submitPage,
     loginStatus,
     randomIntToString,
     handleNavigate,
@@ -141,7 +143,7 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
 
 
 
-    <div className="flairsContainer">
+    {submitPage === false && <div className="flairsContainer">
         <div className="head" style={{ backgroundColor: communityTheme ? currentSub?.headerColor : standardTheme.headerColor }}>
             <h3>Search by flair</h3>
         </div>
@@ -155,11 +157,11 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
             )
           })}
         </div>
-    </div>
+    </div>}
 
 
 
-    <Imprint />
+    {submitPage === false && <Imprint />}
   </div>
   );
 }

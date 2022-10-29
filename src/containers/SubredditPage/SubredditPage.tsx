@@ -24,6 +24,7 @@ export interface SubredditPageProps {
     openPost: MouseEventHandler,
     handleLike: MouseEventHandler,
     loginStatus: boolean,
+    submitPage: boolean,
     setLoginModalState: any,
     identifyCurrentSub: any,
     currentSub: Subreddit | undefined,
@@ -71,6 +72,7 @@ export default function SubredditPage (props: SubredditPageProps) {
     identifyCurrentSub,
     currentSub,
     posts,
+    submitPage,
     currentAnchor,
     communityOptions,
     communityTheme,
@@ -166,6 +168,7 @@ export default function SubredditPage (props: SubredditPageProps) {
             communityOptions={communityOptions}
             currentPost={currentPost}
             handleNavigate={handleNavigate}
+            submitPage={submitPage}
           />
       </div>
     </div>
