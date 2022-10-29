@@ -5,12 +5,11 @@ import './SubmitPage.scss';
 
 export interface SubmitPageProps {
   randomIntToString: string,
-  draftAmount: number,
-  handleDraft: any,
   userName: string,
   subreddits: Subreddits,
   loginStatus: boolean,
   setLoginModalState: any,
+  communityTheme: boolean,
   submitPostType: string | undefined,
   submitPage: boolean,
   setSubmitPostType: any,
@@ -41,8 +40,7 @@ export default function SubmitPage (props: SubmitPageProps) {
     submitPostType,
     submitPage,
     loginStatus,
-    draftAmount,
-    handleDraft,
+    communityTheme,
     setLoginModalState,
     setSubmitPostType,
     editPostTitle,
@@ -68,6 +66,7 @@ export default function SubmitPage (props: SubmitPageProps) {
     link: false
   });
 
+  const [draftAmount, setDraftAmount] = useState(0);
   const [focussed, setFocussed] = useState(false);
   const handleHover = (e: React.MouseEvent) => {
     const target = e.currentTarget;
@@ -238,11 +237,11 @@ export default function SubmitPage (props: SubmitPageProps) {
           <div className="divider"></div>
 
           <div className="submit-container">
-            <button type="button" className="submit-btn save-draft" style={{ border: customPost.title.length >= 1 ? currentSub !== undefined ? `1px solid ${currentSub.buttonColor}` : `1px solid ${standardTheme.buttonColor}` : "1px solid #b2b2b2" }}>
-              <h3 className="active" style={{ color: customPost.title.length >= 1 ? currentSub !== undefined ? currentSub.buttonColor : standardTheme.buttonColor : "#b2b2b2" }}>Save Draft</h3>
+            <button type="button" className="submit-btn save-draft" style={{ border: customPost.title.length >= 1 ? currentSub !== undefined ? draftAmount > 0 ? "1px solid #b2b2b2" : `1px solid ${currentSub.buttonColor}` : draftAmount > 0 ? "1px solid #b2b2b2" : `1px solid ${standardTheme.buttonColor}` : "1px solid #b2b2b2", cursor: draftAmount > 0 ? "not-allowed" : "pointer" }} onClick={draftAmount <= 0 ? (e) => {setDraftAmount(draftAmount + 1)} : (e) => null}>
+              <h3 className="active" style={{ color: customPost.title.length >= 1 ? draftAmount > 0 ? "#b2b2b2" : currentSub !== undefined ? currentSub.buttonColor : draftAmount > 0 ? "#b2b2b2" : standardTheme.buttonColor : "#b2b2b2" }}>{draftAmount > 0 ? "Saved!" : "Save Draft"}</h3>
             </button>
 
-            <button type="button" className="submit-btn" style={{ backgroundColor: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484", border: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484" }}>
+            <button type="button" className="submit-btn" style={{ backgroundColor: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484", border: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484", cursor: currentSub !== undefined ? draftAmount > 0 ? "not-allowed" : customPost.title.length >= 1 ? "pointer" : "not-allowed" : "not-allowed" }}>
               <h3 className="active" style={{ color: currentSub !== undefined ? customPost.title.length >= 1 ? "white" : "#b2b2b2" : "#b2b2b2" }}>Post</h3>
             </button>
           </div>
@@ -264,7 +263,7 @@ export default function SubmitPage (props: SubmitPageProps) {
       <div className="right">
       {currentSub !== undefined && 
         <SubredditSideBar 
-          communityTheme={true}
+          communityTheme={communityTheme}
           currentSub={currentSub}
           currentPost={currentPost}
           standardTheme={standardTheme}

@@ -8,7 +8,7 @@ import { isReturnStatement, reduceEachTrailingCommentRange } from 'typescript';
 import LoginModal from './components/LoginModal/LoginModal';
 import subredditArray from './utils/subredditArray';
 import SubredditPage from './containers/SubredditPage/SubredditPage';
-import { Subreddits, Subreddit, Post, Comment, UserData, baseCustomPost } from "./types/types";
+import { Subreddits, Subreddit, Post, Comment, UserData, baseCustomPost, Draft } from "./types/types";
 import postArray from './utils/postArray';
 import IndividualPost from './containers/individualPost/individualPost';
 import SubmitPage from './containers/SubmitPage/SubmitPage';
@@ -43,7 +43,6 @@ function App() {
   const [mainComment, setMainComment] = useState("");
   const [index, setIndex] = useState<number | undefined>(undefined);
   const [loginStatus, setLoginStatus] = useState(false);
-  const [draftAmount, setDraftAmount] = useState(0);
   const [searchItemDisplay, setSearchItemDisplay] = useState([
     true,
     true,
@@ -263,15 +262,6 @@ function App() {
       setMainComment("");
       setNotificationNum(notificationNum + 1);
       setMainComment("");
-    }
-  }
-
-  const handleDraft = (e: React.MouseEvent) => {
-    let target = e.currentTarget;
-    if (target.id === "add") {
-      setDraftAmount(draftAmount + 1);
-    } else if (target.id === "remove") {
-      setDraftAmount(draftAmount - 1);
     }
   }
 
@@ -1089,8 +1079,6 @@ function App() {
           randomIntToString={randomIntToString}
           submitPostType={submitPostType}
           setSubmitPostType={setSubmitPostType}
-          draftAmount={draftAmount}
-          handleDraft={handleDraft}
           userName={userName}
           subreddits={subreddits}
           loginStatus={loginStatus}
@@ -1112,6 +1100,7 @@ function App() {
           expandRule={expandRule}
           communityOptions={communityOptions}
           submitPage={submitPage}
+          communityTheme={communityTheme}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}

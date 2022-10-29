@@ -79,6 +79,14 @@ export type Flair = {
     color: string;
 }
 
+export type Draft = {
+    title: string;
+    type: string;
+    src: string;
+    time: string;
+    subreddit: string;
+}
+
 export const baseCustomPost = {
     id: "86",
     src: "",
