@@ -111,7 +111,7 @@
             display: flex;
             flex-direction: column;
             width: 738px;
-            height: 514px;
+            height: 512px;
             background-color: white;
             border: 1px solid transparent;
             border-radius: 4px;
@@ -492,9 +492,61 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        font-size: 12px;
     }
 
     .save-draft {
         background-color: white;
+    }
+}
+
+.footer-container {
+    background-color: #f6f7f8;
+    height: 86px;
+    width: 736px;
+    border-top: 1px solid #edeff1 !important;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    .notification-container {
+        padding: 17px 16px 8px 16px;
+        display: flex;
+        gap: 9px;
+
+        h4 {
+            font-size: 14px;
+            font-family: "IBM Regular";
+            color: #1c1c1c;
+            cursor: pointer;
+        }
+
+        input {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    }
+
+    .connection-container {
+        display: flex;
+        gap: 7px;
+        padding-left: 14px;
+        margin-top: 5px;
+
+        h4 {
+            font-size: 14px;
+            font-family: "IBM Regular";
+            color: #1c1c1c;
+            color: #0079d3;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .info {
+            height: 20px;
+            cursor: default;
+        }
     }
 }

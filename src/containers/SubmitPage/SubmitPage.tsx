@@ -236,6 +236,17 @@ export default function SubmitPage (props: SubmitPageProps) {
             </button>
           </div>
 
+          <div className="footer-container">
+            <div className="notification-container">
+              <input type="checkbox" className="notification" />
+              <h4>Send me post reply notifications</h4>
+            </div>
+
+            <div className="connection-container">
+              <h4>Connect accounts to share your post</h4>
+              <img className="info" src={require("../../resources/images/infos_grey.png")} />
+            </div>
+          </div>
         </div>
       </div>
 
