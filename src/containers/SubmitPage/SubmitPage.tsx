@@ -231,7 +231,7 @@ export default function SubmitPage (props: SubmitPageProps) {
               <h3 className="active" style={{ color: customPost.title.length >= 1 ? currentSub !== undefined ? currentSub.buttonColor : standardTheme.buttonColor : "#b2b2b2" }}>Save Draft</h3>
             </button>
 
-            <button type="button" className="submit-btn" style={{ backgroundColor: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484", border: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484" }} onClick={(e) => setNSFW(!NSFW)}>
+            <button type="button" className="submit-btn" style={{ backgroundColor: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484", border: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484" }}>
               <h3 className="active" style={{ color: currentSub !== undefined ? customPost.title.length >= 1 ? "white" : "#b2b2b2" : "#b2b2b2" }}>Post</h3>
             </button>
           </div>
@@ -251,7 +251,40 @@ export default function SubmitPage (props: SubmitPageProps) {
       </div>
 
       <div className="right">
+        <div className="rediquette-container">
+          <div className="rq-header">
+            <div className="flex">
+                <img src={require("../../resources/images/rediquette.png")} className="rq-icon" />
+                <h3>Posting to Reddit</h3>
+            </div>
+            <div className="line"></div>
+          </div>
 
+          <div className="rq-rule">
+            <h4>1. Remember the human</h4>
+            <div className="line"></div>
+          </div>
+
+          <div className="rq-rule">
+            <h4>2. Behave like you would in real life</h4>
+            <div className="line"></div>
+          </div>
+
+          <div className="rq-rule">
+            <h4>3. Look for the original source of content</h4>
+            <div className="line"></div>
+          </div>
+
+          <div className="rq-rule">
+            <h4>4. Search for duplicates before posting</h4>
+            <div className="line"></div>
+          </div>
+
+          <div className="rq-rule">
+            <h4>5. Read the community's rules</h4>
+            <div className="line lastline"></div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -261,7 +261,68 @@
     }
 
     .right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 23px;
+        margin-top: 22px;
+        width: 314px;
 
+        .rediquette-container {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            border-radius: 4px;
+            background-color: white;
+            border: 1px solid #edeff1;
+
+            .rq-header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .line {
+                    width: 288px;
+                    margin-left: 10px;
+                    margin-top: 7px;
+                }
+
+                .flex {
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+                    padding: 13px 12px 0px 12px;
+
+                    .rq-icon {
+                        height: 37px;
+                    }
+
+                    h3 {
+                        font-size: 16px;
+                        margin-top: 6px;
+                        font-family: "IBM Regular";
+                        color: #1c1c1c;
+                        cursor: text;
+                    }
+                }
+            }
+
+            .rq-rule {
+                padding-left: 17px;
+
+                h4 {
+                    font-size: 14px;
+                    margin-top: -3px;
+                    font-family: "IBM Regular";
+                    color: #1c1c1c;
+                    cursor: text;
+                }
+
+                .lastline {
+                    margin-bottom: 11px;
+                }
+            }
+        }
     }
 }
 
