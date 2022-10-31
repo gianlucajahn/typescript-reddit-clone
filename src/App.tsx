@@ -39,6 +39,7 @@ function App() {
   const [currentSort, setCurrentSort] = useState("best");
   const [loginModalState, setLoginModalState] = useState("closed");
   const [userName, setUserName] = useState("");
+  const [submitDropdownState, setSubmitDropdownState] = useState(false);
   const [password, setPassword] = useState("");
   const [mainComment, setMainComment] = useState("");
   const [index, setIndex] = useState<number | undefined>(undefined);
@@ -209,6 +210,28 @@ function App() {
     comment.nesting = "posted";
     setCurrentPost({...currentPost, ...currentPost.comments[commentId] = comment});
     setNotificationNum(notificationNum + 1);
+  }
+
+  const selectSubmitDropdown = (e: React.MouseEvent) => {
+    setSubmitDropdownState(true);
+  }
+
+  const selectSubmitSubreddit = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+
+    if (target.id === "none") {
+      setCurrentSub(undefined);
+      setSubmitDropdownState(false);
+    }
+
+    const subId = subreddits.findIndex(sub => sub.title === target.id);
+    if (subId === -1) {
+      return;
+    } else {
+      setCurrentSub(subreddits[subId]);
+      setCurrentPost(posts[subId * 5 + 1]);
+      setSubmitDropdownState(false);
+    }
   }
 
   const submitComment = (e: React.MouseEvent) => {
@@ -485,6 +508,7 @@ function App() {
       navigate("/r/crypto");
       return;
     } else if (target.classList.contains('returnHome')) {
+      setCurrentSub(undefined);
       navigate("/");
       return;
     } else if (target.classList.contains('books')) {
@@ -891,6 +915,8 @@ function App() {
 
   useEffect(() => {
     if (loginStatus === false) {
+      
+
       setCachedPosts([...posts]);
       setCachedUserData({
         username: userName,
@@ -1101,6 +1127,9 @@ function App() {
           communityOptions={communityOptions}
           submitPage={submitPage}
           communityTheme={communityTheme}
+          selectSubmitDropdown={selectSubmitDropdown}
+          submitDropdownState={submitDropdownState}
+          selectSubmitSubreddit={selectSubmitSubreddit}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}

@@ -77,9 +77,9 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
             </div>
           </div>
     
-          <button className="createPost" style={{ backgroundColor: communityTheme ? currentSub?.buttonColor : standardTheme.buttonColor }} onClick={navToSubmit}>
+          {submitPage === false && <button className="createPost" style={{ backgroundColor: communityTheme ? currentSub?.buttonColor : standardTheme.buttonColor }} onClick={navToSubmit}>
             Create Post
-          </button>
+          </button>}
     
           <div className="userFlair" style={{ display: loginStatus ? "block" : "none" }}>
             <div className="userFlairDesc">

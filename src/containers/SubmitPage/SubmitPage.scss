@@ -74,35 +74,141 @@
 
         .community-selector {
             display: flex;
+            flex-direction: column;
             background-color: white;
             border: 1px solid #edeff1;
             padding: 7px 7px 8px 8px;
             align-items: center;
+            position: relative;
             justify-content: space-between;
             border-radius: 4px;
             width: 300px;
 
-            .start {
+            .top {
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+                width: 300px;
 
-                .community-icon {
-                    height: 23px;
-                    margin-right: 7px;
-                    cursor: pointer;
+                .start {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 8px;
+    
+                    .community-icon {
+                        height: 23px;
+                        margin-right: 7px;
+                        cursor: pointer;
+                    }
+        
+                    .community-title {
+                        font-size: 14px;
+                        color: #222222;
+                        font-family: "IBM Regular";
+                        cursor: text;
+                    }
                 }
     
-                .community-title {
-                    font-size: 14px;
-                    color: #222222;
-                    font-family: "IBM Regular";
-                    cursor: text;
+                .expand {
+                    margin-right: 15px;
+                    cursor: pointer;
                 }
             }
 
-            .expand {
-                margin-right: 6px;
-                cursor: pointer;
+            .dropdown {
+                width: 300px;
+                box-sizing: border-box;
+                position: absolute;
+                z-index: 11;
+                top: 99%;
+                left: -1px;
+                align-items: flex-start;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #edeff1;
+                max-height: 402px;
+                overflow: scroll;
+                overflow-x: hidden;
+                box-shadow: 0px 3px 5px #edeff1;
+
+                h4 {
+                    font-size: 0.78em;
+                    padding-top: 8px;
+                    padding-left: 8px;
+                    margin-left: 8px;
+                    margin-top: 6px;
+                    color: #878a8c;
+                    font-family: "Noto Sans Bold";
+                    cursor: text;
+                }
+
+                .profile {
+                    padding-top: 5px;
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 9px;
+                    width: 300px;
+                    border-bottom: 1px solid #edeff1;
+                    gap: 7px;
+
+                    img {
+                        height: 41px;
+                        padding-left: 7px;
+                        cursor: pointer;
+                    }
+
+                    h3 {
+                        font-size: 13px;
+                        margin-top: 8px;
+                        font-family: "Noto Sans";
+                        color: #1c1c1c;
+                        cursor: pointer;
+                    }
+                }
+
+                #crypto {
+                    padding-bottom: 16px;
+                }
+
+                .sub-container {
+                    display: flex;
+                    gap: 8px;
+                    width: 300px;
+                    padding-top: 19px;
+                    justify-content: flex-start;
+                    cursor: pointer;
+
+                    .sub-icon {
+                        height: 33px;
+                        margin-left: 9px;
+                        margin-right: 1px;
+                        padding: 0;
+                    }
+
+                    #league {
+                        margin-left: 11px;
+                    }
+
+                    .sub-info {
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        .sub-title {
+                            font-family: "Noto Sans";
+                            font-size: 13px;
+                        }
+    
+                        .sub-members {
+                            font-family: "Noto Sans";
+                            margin: 0;
+                            padding: 0;
+                            cursor: pointer;
+                        }
+                    }
+                    }
             }
         }
 
@@ -111,7 +217,6 @@
             display: flex;
             flex-direction: column;
             width: 738px;
-            height: 512px;
             background-color: white;
             border: 1px solid transparent;
             border-radius: 4px;
@@ -558,6 +663,7 @@
 
     .save-draft {
         background-color: white;
+        transition: 0.2s all;
     }
 }
 
@@ -623,5 +729,52 @@
     span {
         color: #0079d3;
         font-family: "IBM";
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.img-submit {
+    border: 1px solid #edeff1;
+    margin: 0px 15px;
+    border-radius: 4px;
+    display: flex;
+    gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+    padding: 120px 140px;
+
+    h3 {
+        font-size: 16px;
+        font-family: "IBM Light";
+        color: #0079d3;
+        cursor: text;
+    }
+
+    button {
+        margin-top: 6px;
+        border: 1px solid #0079d3;
+        border-radius: 9999px;
+        padding: 6px 14px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        font-family: "Noto Sans Bold";
+        color: #0079d3;
+        background-color: white;
+        cursor: pointer;
+        transition: 0.2s all;
+
+        &:hover {
+            background-color: rgb(227, 243, 253);
+        }
+
+        &:active {
+            background-color: rgb(200, 233, 255);
+        }
     }
 }

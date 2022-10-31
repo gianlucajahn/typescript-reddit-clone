@@ -16,9 +16,12 @@ export interface SubmitPageProps {
   handleNavigate: MouseEventHandler,
   navToSubmit: MouseEventHandler,
   switchCommunityTheme: MouseEventHandler,
+  selectSubmitSubreddit: MouseEventHandler,
   switchCommunityOptions: MouseEventHandler,
+  selectSubmitDropdown: MouseEventHandler,
   communityOptions: boolean,
   expandRule: MouseEventHandler,
+  submitDropdownState: boolean
   loginModalState: string,
   currentSub: Subreddit | undefined,
   posts: Post[],
@@ -46,6 +49,9 @@ export default function SubmitPage (props: SubmitPageProps) {
     editPostTitle,
     editPostSrc,
     communityOptions,
+    submitDropdownState,
+    selectSubmitSubreddit,
+    selectSubmitDropdown,
     switchCommunityOptions,
     switchCommunityTheme,
     expandRule,
@@ -116,15 +122,42 @@ export default function SubmitPage (props: SubmitPageProps) {
 
         <div className="divider"></div>
 
-        <button className="community-selector">
-          <div className="start">
-              <img className="community-icon" src={require(`../../resources/images/Communities/${currentSub !== undefined ? `${currentSub.title}/icon` : "placeholder"}.png`)} />
-              <h4 className="community-title">{currentSub !== undefined ? "r/" + currentSub.title : "Choose a community"}</h4>
+        <button className="community-selector" style={{ borderBottomLeftRadius: submitDropdownState ? "0px" : "4px", borderBottomRightRadius: submitDropdownState ? "0px" : "4px" }}>
+          <div className="top" onClick={selectSubmitDropdown}>
+              <div className="start">
+                  <img className="community-icon" src={require(`../../resources/images/Communities/${currentSub !== undefined ? `${currentSub.title}/icon` : "placeholder"}.png`)} />
+                  <h4 className="community-title">{currentSub !== undefined ? "r/" + currentSub.title : "Choose a community"}</h4>
+              </div>
+              <img className="expand" src={require("../../resources/images/expand.png")} />
           </div>
-          <img className="expand" src={require("../../resources/images/expand.png")} />
+          
+          <div className="dropdown" style={{ display: submitDropdownState ? "flex" : "none" }}>
+            <h4>YOUR PROFILE</h4>
+            <div className="profile">
+              <img src={require(`../../resources/images/avatar${loginStatus ? userName === "Nikola Tesla" ? "tesla" : randomIntToString : randomIntToString}.PNG`)} />
+              <h3>u/{userName}</h3>
+            </div>
+            <h4>YOUR COMMUNITIES</h4>
+            {currentSub !== undefined && <div className="sub-container" id="none" onClick={selectSubmitSubreddit}>
+                <img className="sub-icon" src={require(`../../resources/images/Communities/placeholder.png`)} />
+                <div className="sub-info">
+                  <h3 className="sub-title">Remove Subreddit</h3>
+                  <h4 className="sub-members">Click here to reset</h4>
+                </div>
+              </div>}
+            {subreddits.map((sub, i) => {
+              return <div className="sub-container" id={sub.title} onClick={selectSubmitSubreddit}>
+                <img className="sub-icon" src={require(`../../resources/images/Communities/${sub.title}/icon.png`)} id={sub.title === "leagueoflegends" ? "league" : ""}/>
+                <div className="sub-info">
+                  <h3 className="sub-title">r/{sub.title}</h3>
+                  <h4 className="sub-members">{sub.members} members</h4>
+                </div>
+              </div>
+            })}
+          </div>
         </button>
 
-        <div className="post-options">
+        <div className="post-options" style={{ height: submitPostType === "image" ? "608px" : "512px" }}>
           <div className="post-types">
             <div className="post-type post hoverable" style={{ backgroundColor: submitPostType === "text" ? "#f2f8fd" : typeHover.text ? "#f2f8fd" : "white", borderBottom: submitPostType === "text" ? "2px solid #0079d3" : "" }} id="text" onClick={(e) => setSubmitPostType("text")} onMouseEnter={handleHover} onMouseLeave={resetHover}>
               <img className="text" src={require(`../../resources/images/${submitPostType === "text" ? "typetext_selected" : "typetext"}.png`)} />
@@ -157,7 +190,7 @@ export default function SubmitPage (props: SubmitPageProps) {
               <div className="counter">{customPost.title.length}/300</div>
           </div>
 
-          <div className="src-container" onClick={(e) => setFocussed(true)} onBlur={(e) => setFocussed(false)} style={{ border: focussed ? "1px solid #1c1c1c" : "1px solid transparent" }}>
+          {submitPostType !== "image" && <div className="src-container" onClick={(e) => setFocussed(true)} onBlur={(e) => setFocussed(false)} style={{ border: focussed ? "1px solid #1c1c1c" : "1px solid transparent" }}>
               <div className="button-bar-top">
                 <div className="start">
                     <button className="text-settings" aria-label="Bold">
@@ -208,8 +241,13 @@ export default function SubmitPage (props: SubmitPageProps) {
                 </div>
               </div>
 
-              <textarea placeholder="Text (optional)" className="src-field" onChange={editPostSrc} value={customPost.src} />
-          </div>
+              <textarea placeholder={submitPostType === "link" ? "URL" : "Text (optional)"} className="src-field" onChange={editPostSrc} value={customPost.src} />
+          </div>}
+
+          {submitPostType === "image" && <div className="img-submit">
+            <h3>Drag and drop images or</h3>
+            <button type="button" className="img-submit-btn">Upload</button>
+          </div>}
 
           <div className="flair-container">
             <button type="button" className="flair-btn" style={{ backgroundColor: OC ? "#4ac150" : "white", border: OC ? "1px solid #4ac150" : "1px solid #878a8c", gap: OC ? "9px" : "7px" }} onClick={(e) => setOC(!OC)}> 
