@@ -122,35 +122,35 @@ export default function SubmitPage (props: SubmitPageProps) {
 
         <div className="divider"></div>
 
-        <button className="community-selector" style={{ borderBottomLeftRadius: submitDropdownState ? "0px" : "4px", borderBottomRightRadius: submitDropdownState ? "0px" : "4px" }}>
-          <div className="top" onClick={selectSubmitDropdown}>
-              <div className="start">
-                  <img className="community-icon" src={require(`../../resources/images/Communities/${currentSub !== undefined ? `${currentSub.title}/icon` : "placeholder"}.png`)} />
-                  <h4 className="community-title">{currentSub !== undefined ? "r/" + currentSub.title : "Choose a community"}</h4>
+        <button className="community-selector closeSelector" id="community-selector" style={{ borderBottomLeftRadius: submitDropdownState ? "0px" : "4px", borderBottomRightRadius: submitDropdownState ? "0px" : "4px" }}>
+          <div className="top closeSelector" onClick={selectSubmitDropdown}>
+              <div className="start closeSelector">
+                  <img className="community-icon closeSelector" src={require(`../../resources/images/Communities/${currentSub !== undefined ? `${currentSub.title}/icon` : "placeholder"}.png`)} />
+                  <h4 className="community-title closeSelector">{currentSub !== undefined ? "r/" + currentSub.title : "Choose a community"}</h4>
               </div>
-              <img className="expand" src={require("../../resources/images/expand.png")} />
+              <img className="expand closeSelector" src={require("../../resources/images/expand.png")} />
           </div>
           
-          <div className="dropdown" style={{ display: submitDropdownState ? "flex" : "none" }}>
-            <h4>YOUR PROFILE</h4>
-            <div className="profile">
-              <img src={require(`../../resources/images/avatar${loginStatus ? userName === "Nikola Tesla" ? "tesla" : randomIntToString : randomIntToString}.PNG`)} />
-              <h3>u/{userName}</h3>
+          <div className="dropdown closeSelector" style={{ display: submitDropdownState ? "flex" : "none" }}>
+            <h4 className="closeSelector">YOUR PROFILE</h4>
+            <div className="profile closeSelector">
+              <img src={require(`../../resources/images/avatar${loginStatus ? userName === "Nikola Tesla" ? "tesla" : randomIntToString : randomIntToString}.PNG`)} className="closeSelector" />
+              <h3 className="closeSelector">u/{userName}</h3>
             </div>
-            <h4>YOUR COMMUNITIES</h4>
-            {currentSub !== undefined && <div className="sub-container" id="none" onClick={selectSubmitSubreddit}>
-                <img className="sub-icon" src={require(`../../resources/images/Communities/placeholder.png`)} />
-                <div className="sub-info">
-                  <h3 className="sub-title">Remove Subreddit</h3>
-                  <h4 className="sub-members">Click here to reset</h4>
+            <h4 className="closeSelector">YOUR COMMUNITIES</h4>
+            {currentSub !== undefined && <div className="sub-container closeSelector" id="none" onClick={selectSubmitSubreddit}>
+                <img className="sub-icon closeSelector" src={require(`../../resources/images/Communities/placeholder.png`)} />
+                <div className="sub-info closeSelector">
+                  <h3 className="sub-title closeSelector">Remove Subreddit</h3>
+                  <h4 className="sub-members closeSelector">Click here to reset</h4>
                 </div>
               </div>}
             {subreddits.map((sub, i) => {
-              return <div className="sub-container" id={sub.title} onClick={selectSubmitSubreddit}>
-                <img className="sub-icon" src={require(`../../resources/images/Communities/${sub.title}/icon.png`)} id={sub.title === "leagueoflegends" ? "league" : ""}/>
-                <div className="sub-info">
-                  <h3 className="sub-title">r/{sub.title}</h3>
-                  <h4 className="sub-members">{sub.members} members</h4>
+              return <div className="sub-container closeSelector" id={sub.title} onClick={selectSubmitSubreddit}>
+                <img className="sub-icon closeSelector" src={require(`../../resources/images/Communities/${sub.title}/icon.png`)} id={sub.title === "leagueoflegends" ? "league" : ""}/>
+                <div className="sub-info closeSelector">
+                  <h3 className="sub-title closeSelector">r/{sub.title}</h3>
+                  <h4 className="sub-members closeSelector">{sub.members} members</h4>
                 </div>
               </div>
             })}

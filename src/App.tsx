@@ -558,6 +558,11 @@ function App() {
     const dropdownMenu = document.getElementById('dropdownMenu');
     const searchDropdown = document.getElementById('searchDropdown');
     const subredditDropdown = document.getElementById('subredditDropdown');
+    const communitySelector = document.getElementById('community-selector');
+
+    if (e.target.classList.contains('closeSelector') === false) {
+      setSubmitDropdownState(false);
+    }
 
     if (e.target.id === "link") {
       setSearchDropdown(false);
