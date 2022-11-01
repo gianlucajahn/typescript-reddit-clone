@@ -755,8 +755,8 @@
         cursor: text;
     }
 
-    button {
-        margin-top: 6px;
+    label {
+        margin-top: 3px;
         border: 1px solid #0079d3;
         border-radius: 9999px;
         padding: 6px 14px;
@@ -776,5 +776,35 @@
         &:active {
             background-color: rgb(200, 233, 255);
         }
+    }
+}
+
+#blah {
+    width: 705px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border: 1px solid #edeff1;
+    border-radius: 8px;
+    align-self: center;
+}
+
+.delete {
+    display: flex;
+    background-color: black;
+    border: 1px solid transparent;
+    border-radius: 9999px;
+    position: absolute;
+    padding: 6px;
+    cursor: pointer;
+    top: 318px;
+    transition: 0.2s all;
+    left: 1104px;
+
+    &:hover {
+        background-color: #1c1c1c;
+    }
+
+    .remove {
+        height: 16px;
     }
 }

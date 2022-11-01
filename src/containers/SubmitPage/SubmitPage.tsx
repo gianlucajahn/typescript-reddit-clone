@@ -13,12 +13,14 @@ export interface SubmitPageProps {
   submitPostType: string | undefined,
   submitPage: boolean,
   setSubmitPostType: any,
+  onImgUpload: any,
   handleNavigate: MouseEventHandler,
   navToSubmit: MouseEventHandler,
   switchCommunityTheme: MouseEventHandler,
   selectSubmitSubreddit: MouseEventHandler,
   switchCommunityOptions: MouseEventHandler,
   selectSubmitDropdown: MouseEventHandler,
+  removeUploadedImg: MouseEventHandler,
   communityOptions: boolean,
   expandRule: MouseEventHandler,
   submitDropdownState: boolean
@@ -27,6 +29,7 @@ export interface SubmitPageProps {
   posts: Post[],
   currentPost: Post | undefined,
   standardTheme: any,
+  imageUploaded: boolean,
   openPost: MouseEventHandler,
   setIndex: any,
   customPost: Post,
@@ -40,6 +43,7 @@ export default function SubmitPage (props: SubmitPageProps) {
     userName,
     subreddits,
     customPost,
+    imageUploaded,
     submitPostType,
     submitPage,
     loginStatus,
@@ -50,6 +54,8 @@ export default function SubmitPage (props: SubmitPageProps) {
     editPostSrc,
     communityOptions,
     submitDropdownState,
+    onImgUpload,
+    removeUploadedImg,
     selectSubmitSubreddit,
     selectSubmitDropdown,
     switchCommunityOptions,
@@ -157,7 +163,7 @@ export default function SubmitPage (props: SubmitPageProps) {
           </div>
         </button>
 
-        <div className="post-options" style={{ height: submitPostType === "image" ? "608px" : "512px" }}>
+        <div className="post-options" >
           <div className="post-types">
             <div className="post-type post hoverable" style={{ backgroundColor: submitPostType === "text" ? "#f2f8fd" : typeHover.text ? "#f2f8fd" : "white", borderBottom: submitPostType === "text" ? "2px solid #0079d3" : "" }} id="text" onClick={(e) => setSubmitPostType("text")} onMouseEnter={handleHover} onMouseLeave={resetHover}>
               <img className="text" src={require(`../../resources/images/${submitPostType === "text" ? "typetext_selected" : "typetext"}.png`)} />
@@ -244,10 +250,16 @@ export default function SubmitPage (props: SubmitPageProps) {
               <textarea placeholder={submitPostType === "link" ? "URL" : "Text (optional)"} className="src-field" onChange={editPostSrc} value={customPost.src} />
           </div>}
 
-          {submitPostType === "image" && <div className="img-submit">
+          {imageUploaded === false && submitPostType === "image" && <div className="img-submit">
             <h3>Drag and drop images or</h3>
-            <button type="button" className="img-submit-btn">Upload</button>
+            <input type="file" accept='image/*' id="upload" onChange={onImgUpload} className="img-submit-btn" style={{ display: "none" }}></input>
+            <label htmlFor="upload">Upload</label>
           </div>}
+
+          {submitPostType === "image" && <img id="blah" src={imageUploaded ? `${customPost.src}` : "#"} alt="Your Image" style={{ visibility: imageUploaded ? "visible" : "hidden" }}/>}
+          {submitPostType === "image" && imageUploaded && <button className="delete" type="button" onClick={removeUploadedImg}>
+              <img className="remove" src={require("../../resources/images/remove.png")} />
+            </button>}
 
           <div className="flair-container">
             <button type="button" className="flair-btn" style={{ backgroundColor: OC ? "#4ac150" : "white", border: OC ? "1px solid #4ac150" : "1px solid #878a8c", gap: OC ? "9px" : "7px" }} onClick={(e) => setOC(!OC)}> 

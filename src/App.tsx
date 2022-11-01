@@ -30,6 +30,7 @@ function App() {
   const [currentSub, setCurrentSub] = useState<Subreddit>();
   const [currentPost, setCurrentPost] = useState<Post>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
+  const [imageUploaded, setImageUploaded] = useState(false);
   const [submitPage, setSubmitPage] = useState(false);
   const [submitPostType, setSubmitPostType] = useState("");
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
@@ -41,6 +42,7 @@ function App() {
   const [userName, setUserName] = useState("");
   const [submitDropdownState, setSubmitDropdownState] = useState(false);
   const [password, setPassword] = useState("");
+  const [imageUploadCount, setImageUploadCount] = useState(0);
   const [mainComment, setMainComment] = useState("");
   const [index, setIndex] = useState<number | undefined>(undefined);
   const [loginStatus, setLoginStatus] = useState(false);
@@ -124,6 +126,17 @@ function App() {
   }, [searchTerm]);
 
   useEffect(() => {
+    if (imageUploaded) {
+      setImageUploadCount(imageUploadCount + 1);
+
+      if (imageUploadCount >= 1) {
+        setImageUploaded(false);
+        setImageUploadCount(0);
+      }
+    }
+  }, [customPost.src])
+
+  useEffect(() => {
     if (location.pathname.substring(1) === "submit") {
       setSubmitPage(true);
     } else {
@@ -182,6 +195,15 @@ function App() {
     let updatedPost = {...currentPost};
     updatedPost.comments![commentId].content = target.value;
     setCurrentPost(updatedPost);
+  }
+
+  const removeUploadedImg = (e: React.MouseEvent) => {
+    setImageUploadCount(0);
+    setImageUploaded(false);
+
+    let updatedCustomPost = {...customPost};
+    updatedCustomPost.src = "";
+    setCustomPost(updatedCustomPost);
   }
 
   const editNestedComment = (e: any) => {
@@ -687,6 +709,18 @@ function App() {
     setPosts([...posts, posts[id] = post]);
   }
 
+  const onImgUpload = (e: any) => {
+    setImageUploaded(true);
+    const target = e.target as HTMLInputElement;
+    const imgElement = document.getElementById('blah') as HTMLImageElement;
+    const file = target.files;
+    if (file) {
+      let updatedCustomPost = {...customPost};
+      updatedCustomPost.src = URL.createObjectURL(file[0]);
+      setCustomPost(updatedCustomPost);
+    }
+  }
+
   const handleLikeComment = (e: React.MouseEvent) => {
     if (currentPost === undefined) {
       return;
@@ -1135,6 +1169,9 @@ function App() {
           selectSubmitDropdown={selectSubmitDropdown}
           submitDropdownState={submitDropdownState}
           selectSubmitSubreddit={selectSubmitSubreddit}
+          onImgUpload={onImgUpload}
+          imageUploaded={imageUploaded}
+          removeUploadedImg={removeUploadedImg}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}
