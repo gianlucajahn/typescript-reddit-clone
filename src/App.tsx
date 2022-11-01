@@ -954,6 +954,12 @@ function App() {
 
   useEffect(() => {
     if (loginStatus === false) {
+      if (location.pathname === "/submit") {
+        navigate("/");
+      }
+    }
+
+    if (loginStatus === false) {
       
 
       setCachedPosts([...posts]);
