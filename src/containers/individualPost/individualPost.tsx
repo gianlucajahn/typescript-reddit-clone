@@ -95,7 +95,7 @@ export default function IndividualPost (props: individualPostProps) {
         <div className="leftHeader">
           <img className="postIcon" src={require("../../resources/images/post.png")} />
           <h3>{currentPost!.title!.length >= 95 ? currentPost?.title!.substring(0, 95) + " (...)" : currentPost?.title}</h3>
-          <button className="flairBtn" style={{ backgroundColor: currentPost?.flair!.color }}>{currentPost?.flair!.title}</button>
+          {currentPost?.flair.title !== "none" && <button className="flairBtn" style={{ backgroundColor: currentPost?.flair!.color }}>{currentPost?.flair!.title}</button>}
         </div>
 
         <div className="rightHeader" onClick={closePost}>
