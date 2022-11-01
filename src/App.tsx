@@ -256,6 +256,31 @@ function App() {
     }
   }
 
+  const submitCustomPost = (e: React.MouseEvent) => {
+    if (currentSub === undefined) {
+      return;
+    }
+
+    let submittedCustomPost = {...customPost};
+    submittedCustomPost.author = userName;
+    submittedCustomPost.id = posts.length.toString();
+    submittedCustomPost.subreddit = currentSub.title;
+
+    if (submitPostType === "text" || submitPostType === "link") {
+      submittedCustomPost.type = "text";
+    } else if (submitPostType === "image") {
+      submittedCustomPost.type = "img";
+    }
+
+    setCurrentPost(submittedCustomPost);
+    let updatedPosts = [...posts];
+    let postId = parseInt(submittedCustomPost.id);
+    updatedPosts.push(submittedCustomPost);
+    setPosts(updatedPosts);
+    navigate(`/r/${currentSub.title}/${postId}`);
+    setCustomPost(baseCustomPost);
+  }
+
   const submitComment = (e: React.MouseEvent) => {
     const target = e.currentTarget as HTMLButtonElement;
 
@@ -1178,6 +1203,7 @@ function App() {
           onImgUpload={onImgUpload}
           imageUploaded={imageUploaded}
           removeUploadedImg={removeUploadedImg}
+          submitCustomPost={submitCustomPost}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}

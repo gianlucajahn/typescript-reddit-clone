@@ -20,6 +20,7 @@ export interface SubmitPageProps {
   selectSubmitSubreddit: MouseEventHandler,
   switchCommunityOptions: MouseEventHandler,
   selectSubmitDropdown: MouseEventHandler,
+  submitCustomPost: MouseEventHandler,
   removeUploadedImg: MouseEventHandler,
   communityOptions: boolean,
   expandRule: MouseEventHandler,
@@ -55,6 +56,7 @@ export default function SubmitPage (props: SubmitPageProps) {
     communityOptions,
     submitDropdownState,
     onImgUpload,
+    submitCustomPost,
     removeUploadedImg,
     selectSubmitSubreddit,
     selectSubmitDropdown,
@@ -291,7 +293,7 @@ export default function SubmitPage (props: SubmitPageProps) {
               <h3 className="active" style={{ color: customPost.title.length >= 1 ? draftAmount > 0 ? "#b2b2b2" : currentSub !== undefined ? currentSub.buttonColor : draftAmount > 0 ? "#b2b2b2" : standardTheme.buttonColor : "#b2b2b2" }}>{draftAmount > 0 ? "Saved!" : "Save Draft"}</h3>
             </button>
 
-            <button type="button" className="submit-btn" style={{ backgroundColor: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484", border: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484", cursor: currentSub !== undefined ? draftAmount > 0 ? "not-allowed" : customPost.title.length >= 1 ? "pointer" : "not-allowed" : "not-allowed" }}>
+            <button type="button" className="submit-btn" style={{ backgroundColor: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484", border: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484", cursor: currentSub !== undefined ? draftAmount > 0 ? "not-allowed" : customPost.title.length >= 1 ? "pointer" : "not-allowed" : "not-allowed" }} onClick={customPost.title.length >= 1 ? currentSub !== undefined ? submitCustomPost : (e) => null: (e) => null}>
               <h3 className="active" style={{ color: currentSub !== undefined ? customPost.title.length >= 1 ? "white" : "#b2b2b2" : "#b2b2b2" }}>Post</h3>
             </button>
           </div>
