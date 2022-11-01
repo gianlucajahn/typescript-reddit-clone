@@ -277,6 +277,7 @@ function App() {
     let postId = parseInt(submittedCustomPost.id);
     updatedPosts.push(submittedCustomPost);
     setPosts(updatedPosts);
+    setNotificationNum(notificationNum + 1);
     navigate(`/r/${currentSub.title}/${postId}`);
     setCustomPost(baseCustomPost);
   }
