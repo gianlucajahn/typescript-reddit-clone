@@ -1054,28 +1054,31 @@ function App() {
   }
 
   const handleLogin = (e: React.MouseEvent) => {
-    if (userName.length < 4 || password.length < 6) {
-      if (userName.length < 4 && password.length < 6) {
-        setShowAuthAlert({
-          username: true,
-          password: true
-        });
-      } else if (userName.length < 4 && password.length >= 6) {
-        setShowAuthAlert({
-          username: true,
-          password: false
-        });
-      } else if (userName.length >= 4 && password.length < 6) {
-        setShowAuthAlert({
-          username: false,
-          password: true
-        });
-      }
+    const target = e.target as HTMLButtonElement | HTMLDivElement;
 
-      return;
+    if (userName.length < 4 || password.length < 6) {
+      if (target.id !== "demo") {
+        if (userName.length < 4 && password.length < 6) {
+          setShowAuthAlert({
+            username: true,
+            password: true
+          });
+        } else if (userName.length < 4 && password.length >= 6) {
+          setShowAuthAlert({
+            username: true,
+            password: false
+          });
+        } else if (userName.length >= 4 && password.length < 6) {
+          setShowAuthAlert({
+            username: false,
+            password: true
+          });
+        }
+  
+        return;
+      }
     }
 
-    const target = e.target as HTMLButtonElement | HTMLDivElement;
     if (target.id === "login") {
       setLoginStatus(true);
       setLoginModalState("closed");
