@@ -1,0 +1,22 @@
+.back-to-top {
+    background-color: #0079d3;
+    padding: 4px 12px 5px 12px;
+    border: 1px solid transparent;
+    border-radius: 9999px;
+    position: sticky;
+    width: 120px;
+    top: 898px;
+    align-self: center;
+    font-family: "Noto Sans Bold";
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #1086e0;
+    }
+
+    &:active {
+        background-color: #016fc4;
+    }
+}

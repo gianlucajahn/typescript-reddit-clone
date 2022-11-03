@@ -2,6 +2,7 @@ import React, { MouseEventHandler } from 'react';
 import { Post, Subreddit } from '../../types/types';
 import { ReactComponent as Pen } from "../../resources/images/pen.svg";
 import Imprint from '../Imprint/Imprint';
+import BackToTopButton from '../BackToTopButton/BackToTopButton';
 import './SubredditSideBar.scss';
 
 export interface SubredditSideBarProps {
@@ -162,6 +163,7 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
 
 
     {submitPage === false && <Imprint />}
+    <BackToTopButton />
   </div>
   );
 }

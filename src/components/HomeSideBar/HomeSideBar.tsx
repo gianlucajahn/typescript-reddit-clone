@@ -2,6 +2,7 @@ import React, { useState, MouseEventHandler } from 'react';
 import './HomeSideBar.scss';
 import { Subreddits } from '../../types/types';
 import Imprint from '../Imprint/Imprint';
+import BackToTopButton from '../BackToTopButton/BackToTopButton';
 
 export interface HomeSideBarProps {
     subreddits: Subreddits,
@@ -103,6 +104,7 @@ export default function HomeSideBar (props: HomeSideBarProps) {
         </div>
 
         <Imprint />
+        <BackToTopButton />
     </div>
   );
 }
