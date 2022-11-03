@@ -124,7 +124,7 @@ export default function SubmitPage (props: SubmitPageProps) {
       <div className="left">
         <div className="head">
           <h3 className="head-text">Create a post</h3>
-          <button className="drafts" style={{ color: currentSub !== undefined ? currentSub.buttonColor : standardTheme.buttonColor }}>
+          <button className="drafts" style={{ color: currentSub !== undefined ? communityTheme ? currentSub.buttonColor : standardTheme.buttonColor : standardTheme.buttonColor }}>
             DRAFTS
             <div className="draft-num">{draftAmount}</div>
           </button>
@@ -246,7 +246,7 @@ export default function SubmitPage (props: SubmitPageProps) {
     
                 <div className="end">
                         <button className="markdown btn" id="markdown">
-                          <p style={{ color: currentSub?.buttonColor }}>Markdown Mode</p>
+                          <p style={{ color: communityTheme ? currentSub?.buttonColor : standardTheme.buttonColor }}>Markdown Mode</p>
                         </button>
                 </div>
               </div>
