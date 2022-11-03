@@ -1253,7 +1253,6 @@ function App() {
         position="bottom-right"
         autoClose={5000}
         hideProgressBar={false}
-        newestOnTop
         style={{ width: "350px" }}
         closeOnClick
         rtl={false}
