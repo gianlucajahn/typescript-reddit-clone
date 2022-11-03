@@ -53,6 +53,7 @@ export type Post = {
     awards:    string[];
     comments:  Comment[];
     flair:     Flair;
+    saved:     boolean;
 } 
 
 export interface Comment {
@@ -96,6 +97,7 @@ export const baseCustomPost = {
     title: "",
     type: "text",
     vote: 1,
+    saved: false,
     time: "Just Now",
     upvotes: "1",
     awards: [

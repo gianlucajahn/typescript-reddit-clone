@@ -1007,6 +1007,52 @@ function App() {
     setCustomPost(updatedCustomPost);
   }
 
+  const savePost = (e: React.MouseEvent) => {
+    if (loginStatus === false) {
+      setLoginModalState('login');
+      return;
+    }
+
+    const target = e.currentTarget;
+    let node = target;
+
+    while (node.classList.contains('gridPost') === false) {
+      if (node === null ||  node.parentElement === null) {
+        return;
+      }
+      node = node.parentElement;
+    }
+    const postIdString = node.id;
+    const postId = parseInt(postIdString);
+
+    let updatedPosts = [...posts];
+    updatedPosts = updatedPosts.map((post, i) => {
+      if (i === postId) {
+        post.saved = !post.saved;
+        return post;
+      } else {
+        return post;
+      }
+    });
+    setPosts(updatedPosts);
+    saveNotification(e);
+  }
+
+  const saveNotification = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+
+    toast.success(`Post ${target.id === "save" ? "saved" : "unsaved"} successfully`, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
+
   const handleLogin = (e: React.MouseEvent) => {
     if (userName.length < 4 || password.length < 6) {
       if (userName.length < 4 && password.length < 6) {
@@ -1247,6 +1293,7 @@ function App() {
           editComment={editComment}
           editNestedComment={editNestedComment}
           enablePremium={enablePremium}
+          savePost={savePost}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
@@ -1287,6 +1334,7 @@ function App() {
           editComment={editComment}
           editNestedComment={editNestedComment}
           submitPage={submitPage}
+          savePost={savePost}
         />} />
         <Route path='/profile' element={<Home
           randomIntToString={randomIntToString}
@@ -1318,6 +1366,7 @@ function App() {
           editComment={editComment}
           editNestedComment={editNestedComment}
           enablePremium={enablePremium}
+          savePost={savePost}
         />} />
         <Route path='/submit' element={<SubmitPage
           randomIntToString={randomIntToString}
@@ -1391,6 +1440,7 @@ function App() {
           editComment={editComment}
           editNestedComment={editNestedComment}
           submitPage={submitPage}
+          savePost={savePost}
         />} />
       </Routes>
     </div>

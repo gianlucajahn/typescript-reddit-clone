@@ -47,6 +47,7 @@ export interface SubredditPageProps {
     switchCommunityTheme: MouseEventHandler,
     submitComment: MouseEventHandler,
     handleLikeComment: MouseEventHandler,
+    savePost: MouseEventHandler,
     switchCommunityOptions: MouseEventHandler,
     handleNestedComment: MouseEventHandler,
     standardTheme: {
@@ -83,6 +84,7 @@ export default function SubredditPage (props: SubredditPageProps) {
     writeNestedComment,
     editComment,
     editNestedComment,
+    savePost,
     submitNestedComment,
     handleLikeComment,
     handleNestedComment,
@@ -150,6 +152,7 @@ export default function SubredditPage (props: SubredditPageProps) {
               editComment={editComment}
               editNestedComment={editNestedComment}
               randomIntToString={randomIntToString}
+              savePost={savePost}
             />
 
           </div>

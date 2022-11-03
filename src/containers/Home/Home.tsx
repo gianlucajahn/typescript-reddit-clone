@@ -19,6 +19,7 @@ export interface HomeProps {
   writeNestedComment: any,
   editComment: any,
   editNestedComment: any,
+  savePost: MouseEventHandler,
   enablePremium: MouseEventHandler,
   submitNestedComment: MouseEventHandler
   handleSubMembership: React.MouseEventHandler,
@@ -56,6 +57,7 @@ export default function Home (props: HomeProps) {
     editComment,
     enablePremium,
     editNestedComment,
+    savePost,
     submitNestedComment,
     handleNestedComment,
     handleLikeComment,
@@ -108,6 +110,7 @@ export default function Home (props: HomeProps) {
           editComment={editComment}
           editNestedComment={editNestedComment}
           randomIntToString={randomIntToString}
+          savePost={savePost}
         />
       </div>
 

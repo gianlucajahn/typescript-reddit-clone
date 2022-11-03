@@ -24,6 +24,7 @@ export interface GridProps {
     writeNestedComment: any,
     editComment: any,
     editNestedComment: any,
+    savePost: MouseEventHandler,
     submitNestedComment: MouseEventHandler
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
@@ -50,6 +51,7 @@ export default function Grid (props: GridProps) {
     editComment,
     editNestedComment,
     randomIntToString,
+    savePost,
     submitNestedComment,
     openPost,
     handleLikeComment,
@@ -88,6 +90,7 @@ export default function Grid (props: GridProps) {
                  editComment={editComment}
                  editNestedComment={editNestedComment}
                  randomIntToString={randomIntToString}
+                 savePost={savePost}
                 />
       })}
 
@@ -118,6 +121,7 @@ export default function Grid (props: GridProps) {
                  editComment={editComment}
                  editNestedComment={editNestedComment}
                  randomIntToString={randomIntToString}
+                 savePost={savePost}
                 />
       })}
 
@@ -148,6 +152,7 @@ export default function Grid (props: GridProps) {
                  editComment={editComment}
                  editNestedComment={editNestedComment}
                  randomIntToString={randomIntToString}
+                 savePost={savePost}
                 />
       })}
 
@@ -178,6 +183,7 @@ export default function Grid (props: GridProps) {
                  editComment={editComment}
                  editNestedComment={editNestedComment}
                  randomIntToString={randomIntToString}
+                 savePost={savePost}
                 />
       })}
 
@@ -208,6 +214,7 @@ export default function Grid (props: GridProps) {
                  editComment={editComment}
                  editNestedComment={editNestedComment}
                  randomIntToString={randomIntToString}
+                 savePost={savePost}
                 />
       })}
     </div>

@@ -20,6 +20,7 @@ export interface GridPostProps {
     editComment: any,
     randomIntToString: string,
     editNestedComment: any,
+    savePost: MouseEventHandler,
     submitNestedComment: MouseEventHandler,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
@@ -45,6 +46,7 @@ export default function GridPost (props: GridPostProps) {
     editComment,
     randomIntToString,
     editNestedComment,
+    savePost,
     submitNestedComment,
     handleNavigate,
     submitComment,
@@ -185,9 +187,9 @@ export default function GridPost (props: GridPostProps) {
                     <h4>Share</h4>
                 </div>
 
-                <div className="save footer-div">
-                    <img className="save-icon" src={require("../../resources/images/save.png")} />
-                    <h4>Save</h4>
+                <div className="save footer-div save-div dontOpenPost" onClick={savePost} id={post.saved ? "saved" : "save"}>
+                    <img className="save-icon" src={require(`../../resources/images/${post.saved ? "saved" : "save"}.png`)} />
+                    <h4>{post.saved ? "Unsave" : "Save"}</h4>
                 </div>
 
                 <div className="more footer-div">

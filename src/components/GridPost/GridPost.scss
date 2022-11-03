@@ -229,7 +229,7 @@
                 justify-content: center;
                 gap: 6px;
                 cursor: default;
-                margin-left: 140px;
+                margin-left: 130px;
                 padding-bottom: 1px;
 
                 .people-icon {
@@ -245,5 +245,12 @@
                 }
             }
         }
+    }
+}
+
+.save-div {
+
+    * {
+        pointer-events: none;
     }
 }

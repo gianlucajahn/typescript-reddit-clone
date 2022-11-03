@@ -41,6 +41,7 @@ export interface individualPostProps {
     submitComment: MouseEventHandler,
     closePost: MouseEventHandler,
     switchCommunityOptions: MouseEventHandler,
+    savePost: MouseEventHandler,
     handleNestedComment: MouseEventHandler,
     standardTheme: {
       buttonColor: string,
@@ -66,6 +67,7 @@ export default function IndividualPost (props: individualPostProps) {
     writeNestedComment,
     editComment,
     editNestedComment,
+    savePost,
     submitNestedComment,
     handleSubMembership,
     handleNestedComment,
@@ -90,7 +92,7 @@ export default function IndividualPost (props: individualPostProps) {
   } = props;
 
   return (
-    <div className="post-page" style={{ backgroundColor: currentSub?.backgroundColor }}>
+    <div className="post-page" style={{ backgroundColor: currentSub?.backgroundColor === "#edeff1" ? "#2e2f2f" : currentSub?.backgroundColor }}>
       <div className="pageHeader">
         <div className="leftHeader">
           <img className="postIcon" src={require("../../resources/images/post.png")} />
@@ -128,6 +130,7 @@ export default function IndividualPost (props: individualPostProps) {
             editComment={editComment}
             editNestedComment={editNestedComment}
             randomIntToString={randomIntToString}
+            savePost={savePost}
           />
         </div>
 
