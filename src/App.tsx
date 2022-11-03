@@ -22,6 +22,7 @@ function App() {
   const [topSubreddits, setTopSubreddits] = useState(subreddits.slice(0, 5));
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [submitLoading, setSubmitLoading] = useState(false);
   const [searchDropdown, setSearchDropdown] = useState(false);
   const [currentAnchor, setCurrentAnchor] = useState(Number);
   const [selectedAnchor, setSelectedAnchor] = useState("");
@@ -261,25 +262,29 @@ function App() {
       return;
     }
 
-    let submittedCustomPost = {...customPost};
-    submittedCustomPost.author = userName;
-    submittedCustomPost.id = posts.length.toString();
-    submittedCustomPost.subreddit = currentSub.title;
-
-    if (submitPostType === "text" || submitPostType === "link") {
-      submittedCustomPost.type = "text";
-    } else if (submitPostType === "image") {
-      submittedCustomPost.type = "img";
-    }
-
-    setCurrentPost(submittedCustomPost);
-    let updatedPosts = [...posts];
-    let postId = parseInt(submittedCustomPost.id);
-    updatedPosts.push(submittedCustomPost);
-    setPosts(updatedPosts);
-    setNotificationNum(notificationNum + 1);
-    navigate(`/r/${currentSub.title}/${postId}`);
-    setCustomPost(baseCustomPost);
+    setSubmitLoading(true);
+    setTimeout((e: any) => {
+      let submittedCustomPost = {...customPost};
+      submittedCustomPost.author = userName;
+      submittedCustomPost.id = posts.length.toString();
+      submittedCustomPost.subreddit = currentSub.title;
+  
+      if (submitPostType === "text" || submitPostType === "link") {
+        submittedCustomPost.type = "text";
+      } else if (submitPostType === "image") {
+        submittedCustomPost.type = "img";
+      }
+  
+      setCurrentPost(submittedCustomPost);
+      let updatedPosts = [...posts];
+      let postId = parseInt(submittedCustomPost.id);
+      updatedPosts.push(submittedCustomPost);
+      setPosts(updatedPosts);
+      setNotificationNum(notificationNum + 1);
+      navigate(`/r/${currentSub.title}/${postId}`);
+      setCustomPost(baseCustomPost);
+      setSubmitLoading(false);
+    }, 2150);
   }
 
   const submitComment = (e: React.MouseEvent) => {
@@ -1205,6 +1210,7 @@ function App() {
           imageUploaded={imageUploaded}
           removeUploadedImg={removeUploadedImg}
           submitCustomPost={submitCustomPost}
+          submitLoading={submitLoading}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}

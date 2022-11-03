@@ -32,6 +32,7 @@ export interface SubmitPageProps {
   standardTheme: any,
   imageUploaded: boolean,
   openPost: MouseEventHandler,
+  submitLoading: boolean,
   setIndex: any,
   customPost: Post,
   editPostTitle: any,
@@ -50,6 +51,7 @@ export default function SubmitPage (props: SubmitPageProps) {
     loginStatus,
     communityTheme,
     setLoginModalState,
+    submitLoading,
     setSubmitPostType,
     editPostTitle,
     editPostSrc,
@@ -294,6 +296,7 @@ export default function SubmitPage (props: SubmitPageProps) {
             </button>
 
             <button type="button" className="submit-btn" style={{ backgroundColor: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484", border: currentSub !== undefined ? customPost.title.length >= 1 ? currentSub.buttonColor : "#848484" : "#848484", cursor: currentSub !== undefined ? draftAmount > 0 ? "not-allowed" : customPost.title.length >= 1 ? "pointer" : "not-allowed" : "not-allowed" }} onClick={customPost.title.length >= 1 ? currentSub !== undefined ? submitCustomPost : (e) => null: (e) => null}>
+              {submitLoading && <div className="lds-ring"><div></div><div></div><div></div><div></div></div>}
               <h3 className="active" style={{ color: currentSub !== undefined ? customPost.title.length >= 1 ? "white" : "#b2b2b2" : "#b2b2b2" }}>Post</h3>
             </button>
           </div>
