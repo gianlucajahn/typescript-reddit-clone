@@ -59,7 +59,7 @@ export default function HomeSideBar (props: HomeSideBarProps) {
                     <img className="logo" src={require(`../../resources/images/Communities/${subreddit.title}/icon.png`)} />
                     <h3 className="title">{"r/" + subreddit.title}</h3>
 
-                    <button className="join" onClick={handleSubMembership} id={subreddit.title} style={{
+                    <button className={subreddit.joined ? "leave" : "join"} onClick={handleSubMembership} id={subreddit.title} style={{
                         padding: subreddit.joined ? loginStatus ? "2px 10px 4px 9px" : "2px 16px 4px 15px" : "2px 16px 4px 15px",
                         backgroundColor: subreddit.joined ? loginStatus ? "white" : "#0079d3" : "#0079d3",
                         color: subreddit.joined ? loginStatus ? "#0079d3" : "white" : "white",

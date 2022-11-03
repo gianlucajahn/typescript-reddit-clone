@@ -134,7 +134,7 @@ export default function NavBar (props: NavBarProps) {
                       return <div className="subItem sub" id={community.title} onClick={handleNavigate}>
                         <img className="subIcon sub noPointerEvents" src={require(`../../resources/images/Communities/${community.title}/icon.png`)} />
                         <h3 className="sub noPointerEvents">r/{community.title}</h3>
-                        <img className="favorite join" src={require("../../resources/images/favorited.PNG")} onClick={handleFavorite} id={community.title} /> 
+                        <img className="favorite join leave" src={require("../../resources/images/favorited.PNG")} onClick={handleFavorite} id={community.title} /> 
                       </div>
                     }
                   })}

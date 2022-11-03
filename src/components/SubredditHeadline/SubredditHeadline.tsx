@@ -33,7 +33,7 @@ export default function SubredditHeadline (props: SubredditHeadlineProps) {
         <h1>{currentSub?.officialTitle}</h1>
         <h3>{"r/" + currentSub?.title}</h3>
       </div>
-      <button className="headlineJoin" style={{ backgroundColor: communityTheme ? currentSub?.buttonColor : standardTheme.buttonColor }} onClick={handleSubMembership} id={currentSub?.title}>{currentSub?.joined ? loginStatus ? "Leave"  : "Join" : "Join"}</button>
+      <button className={currentSub?.joined ? "leave" : "join"} style={{ backgroundColor: communityTheme ? currentSub?.buttonColor : standardTheme.buttonColor }} onClick={handleSubMembership} id={currentSub?.title}>{currentSub?.joined ? loginStatus ? "Leave"  : "Join" : "Join"}</button>
     </div>
     <div className="headlineBottom">
         {currentSub?.anchors?.map((anchor, i) => {

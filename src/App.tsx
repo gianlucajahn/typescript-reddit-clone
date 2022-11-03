@@ -12,6 +12,8 @@ import { Subreddits, Subreddit, Post, Comment, UserData, baseCustomPost, Draft }
 import postArray from './utils/postArray';
 import IndividualPost from './containers/individualPost/individualPost';
 import SubmitPage from './containers/SubmitPage/SubmitPage';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const location = useLocation();
@@ -225,6 +227,7 @@ function App() {
       return;
     }
 
+    commentNotification(e);
     const target = e.currentTarget;
     const commentId = parseInt(target.id);
     let comment = {...currentPost?.comments[commentId]};
@@ -288,6 +291,7 @@ function App() {
   }
 
   const submitComment = (e: React.MouseEvent) => {
+    commentNotification(e);
     const target = e.currentTarget as HTMLButtonElement;
 
     if (loginStatus === false) {
@@ -410,6 +414,8 @@ function App() {
       setLoginModalState("login");
       return;
     }
+
+    membershipNotification(e);
     const target = e.currentTarget as HTMLButtonElement;
     const subIndex = subreddits.findIndex(element => element.title === target.id);
     const targetedSubreddit = subreddits[subIndex];
@@ -460,6 +466,8 @@ function App() {
   }
 
   const handleFavorite = (e: React.MouseEvent) => {
+    favoriteNotification(e);
+
     const target = e.currentTarget;
     const targetedIndex = joinedCommunities.findIndex(sub => sub.title === target.id);
     const newJoinedCommunities = joinedCommunities.map((community, index) => {
@@ -523,7 +531,7 @@ function App() {
   const handleNavigate = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     const subIndex = subreddits.findIndex(element => element.title === target.id);
-    if (target.classList.contains('join') || target.classList.contains('close')) {
+    if (target.classList.contains('join') || target.classList.contains('leave') || target.classList.contains('close')) {
       return;
     }
     if (subIndex !== -1) {
@@ -738,6 +746,49 @@ function App() {
     }
 
     setPosts([...posts, posts[id] = post]);
+  }
+
+  const commentNotification = (e: React.MouseEvent) => {
+    toast.success('You submitted a comment. Thanks!', {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
+
+  const favoriteNotification = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+
+    toast.info(`You ${target.classList.contains('leave') ? "removed" : "added"} r/${target.id} ${target.classList.contains('leave') ? "from" : "to"} your favorites`, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
+
+  const membershipNotification = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+
+    toast.info(`You just ${target.classList[0] === "join" ? "joined" : "left"} r/${target.id}.`, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
   }
 
   const onImgUpload = (e: any) => {
@@ -1075,6 +1126,19 @@ function App() {
         handleNotifications={handleNotifications}
         notificationNum={notificationNum}
         quickNavigate={quickNavigate}
+      />
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        style={{ width: "350px" }}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
       />
       <Routes key={location.pathname} location={location}>
         <Route path='/' element={<Home 
