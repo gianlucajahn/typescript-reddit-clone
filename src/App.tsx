@@ -265,6 +265,7 @@ function App() {
       return;
     }
 
+
     setSubmitLoading(true);
     setTimeout((e: any) => {
       let submittedCustomPost = {...customPost};
@@ -287,6 +288,7 @@ function App() {
       navigate(`/r/${currentSub.title}/${postId}`);
       setCustomPost(baseCustomPost);
       setSubmitLoading(false);
+      submitPostNotification(e);
     }, 2150);
   }
 
@@ -450,6 +452,37 @@ function App() {
       }
     });
     setSubreddits(newSubredditArray);
+  }
+
+  const enablePremium = (e: React.MouseEvent) => {
+    if (loginStatus === false) {
+      setLoginModalState("login");
+      return;
+    }
+
+    toast.error('Premium is currently unavailable!', {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
+
+  const submitPostNotification = (e: React.MouseEvent) => {
+    toast.success('Thanks for submitting a post! 💘', {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
   }
 
   const setSort = (e: React.MouseEvent) => {
@@ -1170,6 +1203,7 @@ function App() {
           currentEditedComment={currentEditedComment}
           editComment={editComment}
           editNestedComment={editNestedComment}
+          enablePremium={enablePremium}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
@@ -1240,6 +1274,7 @@ function App() {
           currentEditedComment={currentEditedComment}
           editComment={editComment}
           editNestedComment={editNestedComment}
+          enablePremium={enablePremium}
         />} />
         <Route path='/submit' element={<SubmitPage
           randomIntToString={randomIntToString}

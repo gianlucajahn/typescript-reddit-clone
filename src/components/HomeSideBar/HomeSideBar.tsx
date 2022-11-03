@@ -7,6 +7,7 @@ export interface HomeSideBarProps {
     subreddits: Subreddits,
     topSubreddits: Subreddits,
     handleSubMembership: React.MouseEventHandler,
+    enablePremium: MouseEventHandler,
     handleNavigate: MouseEventHandler<HTMLElement>,
     navToSubmit: MouseEventHandler,
     loginStatus: boolean,
@@ -19,6 +20,7 @@ export default function HomeSideBar (props: HomeSideBarProps) {
     subreddits,
     topSubreddits,
     handleSubMembership,
+    enablePremium,
     handleNavigate,
     navToSubmit,
     loginStatus,
@@ -87,7 +89,7 @@ export default function HomeSideBar (props: HomeSideBarProps) {
             </div>
           </div>
 
-          <button className="premium-button">Try Now</button>
+          <button className="premium-button" onClick={enablePremium}>Try Now</button>
         </div>
 
         <div className="homeContainer">

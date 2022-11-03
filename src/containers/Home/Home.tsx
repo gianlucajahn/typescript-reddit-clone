@@ -19,6 +19,7 @@ export interface HomeProps {
   writeNestedComment: any,
   editComment: any,
   editNestedComment: any,
+  enablePremium: MouseEventHandler,
   submitNestedComment: MouseEventHandler
   handleSubMembership: React.MouseEventHandler,
   handleNavigate: MouseEventHandler,
@@ -53,6 +54,7 @@ export default function Home (props: HomeProps) {
     currentEditedComment,
     writeNestedComment,
     editComment,
+    enablePremium,
     editNestedComment,
     submitNestedComment,
     handleNestedComment,
@@ -119,6 +121,7 @@ export default function Home (props: HomeProps) {
           handleNavigate={handleNavigate}
           navToSubmit={navToSubmit}
           loginModalState={loginModalState}
+          enablePremium={enablePremium}
         />
       </div>
     </div>
