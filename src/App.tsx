@@ -18,6 +18,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
+  const [currentlyRenderedPosts, setCurrentlyRenderedPosts] = useState(8);
   const [subreddits, setSubreddits] = useState(subredditArray);
   const [currentEditedComment, setCurrentEditedComment] = useState("");
   const [notificationNum, setNotificationNum] = useState(0);
@@ -33,6 +34,10 @@ function App() {
   const [currentSub, setCurrentSub] = useState<Subreddit>();
   const [currentPost, setCurrentPost] = useState<Post>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
+  const [showAuthAlert, setShowAuthAlert] = useState({
+    username: false,
+    password: false
+  });
   const [imageUploaded, setImageUploaded] = useState(false);
   const [submitPage, setSubmitPage] = useState(false);
   const [submitPostType, setSubmitPostType] = useState("");
@@ -172,8 +177,20 @@ function App() {
     const target = e.target as HTMLInputElement;
     if (target.id === "username") {
       setUserName(target.value);
+      if (target.value.length >= 4) {
+        setShowAuthAlert({
+          username: false,
+          password: showAuthAlert.password
+        });
+      }
     } else if (target.id === "password") {
       setPassword(target.value);
+      if (target.value.length >= 6) {
+        setShowAuthAlert({
+          username: showAuthAlert.username,
+          password: false
+        });
+      }
     }
   }
 
@@ -207,6 +224,10 @@ function App() {
     let updatedCustomPost = {...customPost};
     updatedCustomPost.src = "";
     setCustomPost(updatedCustomPost);
+  }
+
+  const addPostsToRender = (e: React.MouseEvent) => {
+    setCurrentlyRenderedPosts(currentlyRenderedPosts + 8);
   }
 
   const editNestedComment = (e: any) => {
@@ -987,6 +1008,27 @@ function App() {
   }
 
   const handleLogin = (e: React.MouseEvent) => {
+    if (userName.length < 4 || password.length < 6) {
+      if (userName.length < 4 && password.length < 6) {
+        setShowAuthAlert({
+          username: true,
+          password: true
+        });
+      } else if (userName.length < 4 && password.length >= 6) {
+        setShowAuthAlert({
+          username: true,
+          password: false
+        });
+      } else if (userName.length >= 4 && password.length < 6) {
+        setShowAuthAlert({
+          username: false,
+          password: true
+        });
+      }
+
+      return;
+    }
+
     const target = e.target as HTMLButtonElement | HTMLDivElement;
     if (target.id === "login") {
       setLoginStatus(true);
@@ -1128,6 +1170,7 @@ function App() {
         password={password}
         loginStatus={loginStatus}
         handleLogin={handleLogin}
+        showAuthAlert={showAuthAlert}
       /> : null}
       <NavBar 
         dropdownIsOpen={dropdownIsOpen}

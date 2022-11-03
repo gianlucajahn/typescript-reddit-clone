@@ -13,6 +13,10 @@ export interface LoginModalProps {
     userName: string,
     password: string,
     loginStatus: boolean,
+    showAuthAlert: {
+      username: boolean,
+      password: boolean
+    },
     handleLoginInput: ChangeEventHandler<HTMLInputElement>,
     handleLoginModal: MouseEventHandler<HTMLButtonElement>,
     handleHover: MouseEventHandler<HTMLInputElement>
@@ -26,6 +30,7 @@ export default function LoginModal (props: LoginModalProps) {
     userName,
     password,
     loginStatus,
+    showAuthAlert,
     handleLogin,
     handleLoginInput,
     handleLoginModal,
@@ -64,11 +69,13 @@ export default function LoginModal (props: LoginModalProps) {
                 <span className="label">{loginModalState === "login" ? "USERNAME" : "PREFERED USERNAME"}</span>
                 <div className="circle" style={{ display: hoverState.username === false ? userName.length <= 1 ? "block" : "none" : "none", left: loginModalState === "login" ? "19.5%" : "33.75%" }}></div>
             </div>
+            {showAuthAlert.username && <h4 className="typecheck">! Username must contain 4 characters or more</h4>}
             <div className="container password">
                 <input className="inputField" type="password" required spellCheck="false" id="password" onChange={handleLoginInput} onMouseEnter={handleHover} onMouseLeave={handleHover} />
                 <span className="label">{loginModalState === "login" ? "PASSWORD" : "PREFERED PASSWORD"}</span>
                 <div className="circle" style={{ display: hoverState.password === false ? password.length <= 1 ? "block" : "none" : "none", left: loginModalState === "login" ? "19.5%" : "33.65%" }}></div>
             </div>
+            {showAuthAlert.password && <h4 className="typecheck second-typecheck">! Password must contain 6 characters or more</h4>}
 
             <button className="anmelden" id="login" onClick={handleLogin}>
                 {loginModalState === "login" ? "Login" : "Sign Up"}
