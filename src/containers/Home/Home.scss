@@ -72,10 +72,12 @@
     align-self: center;
     margin-bottom: 14px;
     margin-top: -30px;
-}
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
 
-.feed {
-    display: flex;
-    flex-direction: column;
+    &:hover {
+        background-color: #0781df;
+    }
 }
 

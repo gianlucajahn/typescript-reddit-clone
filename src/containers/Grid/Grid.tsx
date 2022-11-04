@@ -105,6 +105,10 @@ export default function Grid (props: GridProps) {
             return;
         }
 
+        if (i > renderNum!) {
+          return;
+        }
+
         return <GridPost 
                  post={posts[num]}
                  posts={posts}
@@ -136,6 +140,10 @@ export default function Grid (props: GridProps) {
             return;
         }
 
+        if (i > renderNum!) {
+          return;
+        }
+
         return <GridPost 
                  post={posts[num]}
                  posts={posts}
@@ -165,6 +173,10 @@ export default function Grid (props: GridProps) {
       {currentSub === undefined && currentSort === "hot" && hotOrder.map((num, i) => {
         if (loginModalState !== "closed" && i >= 3) {
             return;
+        }
+
+        if (i > renderNum!) {
+          return;
         }
 
         return <GridPost 

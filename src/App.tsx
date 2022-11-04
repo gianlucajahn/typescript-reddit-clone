@@ -40,6 +40,7 @@ function App() {
   });
   const [imageUploaded, setImageUploaded] = useState(false);
   const [submitPage, setSubmitPage] = useState(false);
+  const [renderNum, setRenderNum] = useState(5);
   const [submitPostType, setSubmitPostType] = useState("");
   const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
   const [communityTheme, setCommunityTheme] = useState(true);
@@ -165,6 +166,10 @@ function App() {
       }
     }
   }, [submitPage])
+
+  useEffect(() => {
+    setRenderNum(5);
+  }, [currentSort])
 
   const handleNotifications = (e: React.MouseEvent) => {
     const target = e.currentTarget;
@@ -1296,6 +1301,8 @@ function App() {
           editNestedComment={editNestedComment}
           enablePremium={enablePremium}
           savePost={savePost}
+          renderNum={renderNum}
+          setRenderNum={setRenderNum}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
@@ -1369,6 +1376,8 @@ function App() {
           editNestedComment={editNestedComment}
           enablePremium={enablePremium}
           savePost={savePost}
+          renderNum={renderNum}
+          setRenderNum={setRenderNum}
         />} />
         <Route path='/submit' element={<SubmitPage
           randomIntToString={randomIntToString}

@@ -14,6 +14,8 @@ export interface HomeProps {
   setSort: React.MouseEventHandler;
   subreddits: Subreddits,
   topSubreddits: Subreddits,
+  renderNum: number,
+  setRenderNum: Dispatch<SetStateAction<number>>,
   currentEditedComment: string,
   setIndex: Dispatch<SetStateAction<number | undefined>>
   writeNestedComment: any,
@@ -41,13 +43,14 @@ export interface HomeProps {
 
 export default function Home (props: HomeProps) {
   const ref = useRef<HTMLDivElement | null>(null)
-  const [renderNum, setRenderNum] = useState(5);
 
   const {
     randomIntToString,
     userName,
     currentSort,
     currentSub,
+    renderNum,
+    setRenderNum,
     currentPost,
     mainComment,
     writeComment,
@@ -128,10 +131,10 @@ export default function Home (props: HomeProps) {
           renderNum={renderNum}
         />
 
-        {renderNum <= 85 && <div className="loading" ref={ref}>
+        <div className="loading" ref={ref}>
           <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
           Loading more...
-        </div>}
+        </div>
       </div>
 
       <div className="info">
