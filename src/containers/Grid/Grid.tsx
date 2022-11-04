@@ -23,6 +23,7 @@ export interface GridProps {
     setIndex: Dispatch<SetStateAction<number | undefined>>
     writeNestedComment: any,
     editComment: any,
+    renderNum?: number,
     editNestedComment: any,
     savePost: MouseEventHandler,
     submitNestedComment: MouseEventHandler
@@ -43,6 +44,7 @@ export default function Grid (props: GridProps) {
     userName,
     currentEditedComment,
     posts,
+    renderNum,
     loginStatus,
     mainComment,
     writeComment,
@@ -66,6 +68,10 @@ export default function Grid (props: GridProps) {
       {currentSub === undefined && currentSort === "best" && bestOrder.map((num, i) => {
         if (loginModalState !== "closed" && i >= 3) {
             return;
+        }
+
+        if (i > renderNum!) {
+          return;
         }
 
         return <GridPost 

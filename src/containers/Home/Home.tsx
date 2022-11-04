@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, Dispatch, SetStateAction } from 'react';
+import React, { MouseEventHandler, Dispatch, SetStateAction, useRef, useEffect, useState } from 'react';
 import './Home.scss';
 import CreatePost from '../../components/CreatePost/CreatePost';
 import SortBar from '../../components/SortBar/SortBar';
@@ -40,6 +40,9 @@ export interface HomeProps {
 }
 
 export default function Home (props: HomeProps) {
+  const ref = useRef<HTMLDivElement | null>(null)
+  const [renderNum, setRenderNum] = useState(5);
+
   const {
     randomIntToString,
     userName,
@@ -72,6 +75,17 @@ export default function Home (props: HomeProps) {
     loginModalState,
     posts
   } = props;
+
+  useEffect(() => {
+    if (!ref.current) return
+
+    const cachedRef = ref.current
+    const observer = new IntersectionObserver(() => {
+      setTimeout(() => setRenderNum((prev) => prev + 2), 750);
+    })
+
+    observer.observe(cachedRef)
+  }, [ref])
 
   return (
     <div className="home" style={{ maxHeight: loginModalState === "closed" ? "" : "92.75vh", overflow: loginModalState === "closed" ? "" : "hidden" }}>
@@ -111,7 +125,13 @@ export default function Home (props: HomeProps) {
           editNestedComment={editNestedComment}
           randomIntToString={randomIntToString}
           savePost={savePost}
+          renderNum={renderNum}
         />
+
+        {renderNum <= 85 && <div className="loading" ref={ref}>
+          <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+          Loading more...
+        </div>}
       </div>
 
       <div className="info">
