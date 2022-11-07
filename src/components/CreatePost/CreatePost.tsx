@@ -18,14 +18,14 @@ export default function CreatePost (props: CreatePostProps) {
   } = props;
 
   return (
-    <div className="createPostMenu" onClick={navToSubmit} style={{ display: loginStatus ? "flex" : "none" }}>
-        <img className="avatar" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
-        <input type="text" placeholder="Create Post"></input>
-        <button className="imagePost">
-            <img className="icon" src={require("../../resources/images/img.PNG")} />
+    <div className="createPostMenu" style={{ display: loginStatus ? "flex" : "none" }}>
+        <img className="avatar" onClick={navToSubmit} src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
+        <input type="text" onClick={navToSubmit} placeholder="Create Post"></input>
+        <button className="imagePost image" onClick={navToSubmit}>
+            <img className="icon image" src={require("../../resources/images/img.PNG")} />
         </button>
-        <button className="linkPost">
-            <img className="icon" src={require("../../resources/images/link.PNG")} />
+        <button className="linkPost link" onClick={navToSubmit}>
+            <img className="icon link" src={require("../../resources/images/link.PNG")} />
         </button>
     </div>
   );

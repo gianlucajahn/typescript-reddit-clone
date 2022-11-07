@@ -8,7 +8,7 @@ import { ReactComponent as Expand } from "../../resources/images/expand.svg";
 import { ReactComponent as Star } from "../../resources/images/star.svg";
 import { ReactComponent as User } from "../../resources/images/user.svg";
 import { ObjectType } from 'typescript';
-import { Subreddit, Subreddits } from '../../types/types';
+import { Notification, Subreddit, Subreddits } from '../../types/types';
 
 export interface NavBarProps {
   dropdownIsOpen: boolean,
@@ -25,6 +25,7 @@ export interface NavBarProps {
   searchDropdown: boolean,
   searchTerm: string,
   setSearchTerm: any,
+  notificationArray: Notification[],
   searchItemDisplay: boolean[],
   handleNotifications: MouseEventHandler,
   changeSearchItemDisplay: MouseEventHandler<HTMLImageElement>,
@@ -80,6 +81,7 @@ export default function NavBar (props: NavBarProps) {
     currentSub,
     userName,
     loginStatus,
+    notificationArray,
     searchDropdown,
     joinedCommunities,
     subDropdownIsOpen,

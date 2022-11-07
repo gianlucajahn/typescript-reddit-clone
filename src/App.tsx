@@ -1064,12 +1064,21 @@ function App() {
   }
 
   const navToSubmit = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+
     if (loginStatus === false) {
       setLoginModalState("login");
       return;
     }
+
+    if (target.classList.contains('image')) {
+      setSubmitPostType("image");
+    } else if (target.classList.contains("link")) {
+      setSubmitPostType("link");
+    } else {
+      setSubmitPostType("text");
+    }
     navigate("/submit");
-    setSubmitPostType("text");
   }
 
   const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -1335,6 +1344,7 @@ function App() {
         handleNotifications={handleNotifications}
         notificationNum={notificationNum}
         quickNavigate={quickNavigate}
+        notificationArray={notificationArray}
       />
       <ToastContainer
         position="bottom-right"
