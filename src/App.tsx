@@ -22,6 +22,7 @@ function App() {
   const [subreddits, setSubreddits] = useState(subredditArray);
   const [currentEditedComment, setCurrentEditedComment] = useState("");
   const [notificationNum, setNotificationNum] = useState(0);
+  const [notificationDropdown, setNotificiationDropdown] = useState(false);
   const [topSubreddits, setTopSubreddits] = useState(subreddits.slice(0, 5));
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -763,6 +764,10 @@ function App() {
       setSubmitDropdownState(false);
     }
 
+    if (e.target.classList.contains("dd") === false) {
+      setNotificiationDropdown(false);
+    }
+
     if (e.target.id === "link") {
       setSearchDropdown(false);
       return;
@@ -1345,6 +1350,8 @@ function App() {
         notificationNum={notificationNum}
         quickNavigate={quickNavigate}
         notificationArray={notificationArray}
+        notificationDropdown={notificationDropdown}
+        setNotificationDropdown={setNotificiationDropdown}
       />
       <ToastContainer
         position="bottom-right"

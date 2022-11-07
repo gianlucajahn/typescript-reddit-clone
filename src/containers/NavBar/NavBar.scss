@@ -155,6 +155,34 @@
                 background-color: #edeff1;
             }
 
+            .hov {
+                position: relative;
+
+                &:hover::after {
+                    position: absolute;
+                    top: 117.5%;
+                    border-radius: 4px;
+                    background-color: black;
+                    color: white;
+                    z-index: 20;
+                    height: 12px;
+                    margin: 0 auto;
+                    padding: 5px 10px 5px 10px;
+                    content: attr(aria-label);
+                }
+
+                &:hover::before {
+                    position: absolute;
+                    top: 112.5%;
+                    background-color: black;
+                    color: white;
+                    z-index: 20;
+                    height: 4px;
+                    margin: 0 auto;
+                    padding: 5px 10px 5px 10px;
+                }
+            }
+
             .userButton {
                 margin-top: 1px;
                 cursor: pointer;
@@ -171,28 +199,6 @@
 
                 &:hover {
                     background-color: rgba(26,26,27,0.1);
-                }
-
-                &:hover::after {
-                    position: absolute;
-                    top: 117.5%;
-                    border-radius: 4px;
-                    background-color: black;
-                    color: white;
-                    height: 12px;
-                    margin: 0 auto;
-                    padding: 5px 10px 5px 10px;
-                    content: attr(aria-label);
-                }
-
-                &:hover::before {
-                    position: absolute;
-                    top: 112.5%;
-                    background-color: black;
-                    color: white;
-                    height: 4px;
-                    margin: 0 auto;
-                    padding: 5px 10px 5px 10px;
                 }
 
                 .notification {
@@ -798,5 +804,67 @@
     .close {
         height: 20px;
         cursor: pointer;
+    }
+}
+
+.noti {
+    position: relative;
+
+    .notification-dropdown {
+        position: absolute;
+        background-color: white;
+        top: 120%;
+        right: -168%;
+        width: 375px;
+        height: 600px;
+        border: 1px solid #edeff1;
+        display: flex;
+        flex-direction: column;
+        border-radius: 4px;
+        overflow-x: hidden;
+        box-shadow: 0px 5px 6px #707070;
+        cursor: default;
+
+        .notification-header {
+            margin-top: 14px;
+            padding-left: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: default;
+
+            h3 {
+                font-family: "IBM";
+                color: #1c1c1c;
+                font-size: 14px;
+                cursor: text;
+            }
+
+            .header-right {
+                display: flex;
+                gap: 8px;
+                margin-top: 1px;
+                align-items: center;
+                margin-left: 115px;
+
+                h4 {
+                    font-family: "Noto Sans Bold";
+                    color: #7c7c7c;
+                    font-size: 13px;
+                    cursor: pointer;
+                }
+
+                .line {
+                    height: 18px;
+                    width: 1px;
+                    background-color: #edeff1;
+                    margin-right: 0px;
+                }
+
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }

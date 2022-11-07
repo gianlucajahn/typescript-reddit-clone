@@ -24,6 +24,7 @@ export interface NavBarProps {
   notificationNum: number,
   searchDropdown: boolean,
   searchTerm: string,
+  notificationDropdown: boolean,
   setSearchTerm: any,
   notificationArray: Notification[],
   searchItemDisplay: boolean[],
@@ -36,6 +37,7 @@ export interface NavBarProps {
   handleDropdown: MouseEventHandler<HTMLDivElement>,
   handleExpand: MouseEventHandler<HTMLDivElement>,
   handleSelectSort: MouseEventHandler,
+  setNotificationDropdown: any,
   handleExpandSub: MouseEventHandler<HTMLDivElement>,
   handleNavigate: MouseEventHandler<HTMLDivElement>,
   quickNavigate: MouseEventHandler,
@@ -61,6 +63,7 @@ export default function NavBar (props: NavBarProps) {
     handleDropdown,
     navToSubmit,
     quickNavigate,
+    setNotificationDropdown,
     handleSelectSort,
     handleExpand,
     handleLoginModal,
@@ -73,6 +76,7 @@ export default function NavBar (props: NavBarProps) {
     notificationNum,
     searchTerm,
     searchItemDisplay,
+    notificationDropdown,
     changeSearchItemDisplay,
     dropdownState,
     subreddits,
@@ -249,28 +253,44 @@ export default function NavBar (props: NavBarProps) {
             {loginStatus ? 
             
             <div className="userButtons">
-                <button className="userButton" aria-label='Popular'>
+                <button className="userButton hov" aria-label='Popular'>
                   <img className="userIcon popular" src={require("../../resources/images/popular.PNG")} />
                 </button>
-                <button className="userButton" aria-label='All'>
+                <button className="userButton hov" aria-label='All'>
                   <img className="userIcon all" src={require("../../resources/images/all.PNG")} />
                 </button>
-                <button className="userButton" aria-label='Live'>
+                <button className="userButton hov" aria-label='Live'>
                   <img className="userIcon live" src={require("../../resources/images/live.PNG")} />
                 </button>
 
                 <div className="vertical-line"></div>
 
-                <button className="userButton" aria-label='Chat'>
+                <button className="userButton hov" aria-label='Chat'>
                   <img className="userIcon chat" src={require("../../resources/images/chat.PNG")} />
                 </button>
-                <button className="userButton noti" aria-label='Notifications' onClick={handleNotifications}>
-                  <img className="userIcon notifications noti" src={require("../../resources/images/bell.PNG")} />
-                  <div className="notification noti" style={{ display: notificationNum >= 1 ? "flex" : "none" }}>
+                <button className="userButton noti dd" aria-label='Notifications' onClick={(e) => { setNotificationDropdown(true); handleNotifications(e)}}>
+                  <img className="userIcon notifications noti dd" src={require("../../resources/images/bell.PNG")} />
+                  <div className="notification noti dd" style={{ display: notificationNum >= 1 ? "flex" : "none" }}>
                     {notificationNum}
                   </div>
+
+                  {notificationDropdown && <div className="notification-dropdown dd">
+                    <div className="notification-header dd">
+                      <h3 className="headline dd">Notifications</h3>
+                      <div className="header-right dd">
+                        <h4 className="dd">Messages</h4>
+                        <div className="dd line"></div>
+                        <img className="dd check notification-icon" src={require("../../resources/images/noti_check.png")} />
+                        <img className="dd settings notification-icon" src={require("../../resources/images/noti_settings.png")} />
+                      </div>
+
+                      <div className="notification-list dd">
+
+                      </div>
+                    </div>
+                  </div>}
                 </button>
-                <button className="userButton lastBtn" aria-label='Create' onClick={navToSubmit}>
+                <button className="userButton lastBtn hov" aria-label='Create' onClick={navToSubmit}>
                   <img className="userIcon create" src={require("../../resources/images/add.PNG")} />
                 </button>
                 <button className="auth shopAvatar" type="button">
