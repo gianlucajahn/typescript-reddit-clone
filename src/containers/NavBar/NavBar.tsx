@@ -283,12 +283,24 @@ export default function NavBar (props: NavBarProps) {
                         <img className="dd check notification-icon" src={require("../../resources/images/noti_check.png")} />
                         <img className="dd settings notification-icon" src={require("../../resources/images/noti_settings.png")} />
                       </div>
+                    </div>
 
                       <div className="notification-list dd">
-
+                        {notificationArray.map((notificationObj, i) => {
+                          return <div className="notification-container">
+                            <img className="sub-icon" src={require(`../../resources/images/Communities/${notificationObj.subreddit}/icon.png`)} />
+                            <div className="notification-info">
+                              <div className="top">
+                                <h3 className="title dd">{notificationObj.subreddit}:</h3>
+                                <h3 className="time dd">· {notificationObj.time}</h3>
+                                <img className="more" src={require("../../resources/images/more.PNG")} />
+                              </div>
+                              <h3 className="content" id="content">{notificationObj.content}</h3>
+                            </div>
+                          </div>
+                        })}
                       </div>
-                    </div>
-                  </div>}
+                    </div>}
                 </button>
                 <button className="userButton lastBtn hov" aria-label='Create' onClick={navToSubmit}>
                   <img className="userIcon create" src={require("../../resources/images/add.PNG")} />

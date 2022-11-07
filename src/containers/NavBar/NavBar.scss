@@ -825,8 +825,66 @@
         box-shadow: 0px 5px 6px #707070;
         cursor: default;
 
+        .notification-list {
+            display: flex;
+            flex-direction: column;
+
+            .notification-container {
+                display: flex;
+                padding-left: 16px;
+                padding-top: 11px;
+                background-color: #e2f2ff;
+
+                img {
+                    height: 32px;
+                    margin-top: 6px;
+
+                }
+
+                .notification-info {
+                    margin-top: 6px;
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 10px;
+                    text-align: start;
+
+                    #content {
+                        margin-top: 4px;
+                        color: #7c7c7c;
+                        font-family: "Noto Sans";
+                    }
+
+                    .top {
+                        display: flex;
+                        align-items: center;
+
+                        .title {
+                            font-size: 14px;
+                            font-family: "Noto Sans";
+                            color: #1c1c1c;
+                        }
+
+                        .time {
+                            font-size: 13px;
+                            margin-left: 8px;
+                            font-family: "Noto Sans";
+                            color: #7c7c7c
+                        }
+
+                        .more {
+                            margin-top: -2px;
+                            margin-left: 79px;
+                            width: 17px;
+                            height: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
         .notification-header {
             margin-top: 14px;
+            margin-bottom: 10px;
             padding-left: 16px;
             display: flex;
             justify-content: space-between;
@@ -845,7 +903,7 @@
                 gap: 8px;
                 margin-top: 1px;
                 align-items: center;
-                margin-left: 115px;
+                margin-right: 16px;
 
                 h4 {
                     font-family: "Noto Sans Bold";
