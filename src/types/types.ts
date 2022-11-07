@@ -32,6 +32,17 @@ export type FlairSub = {
     color: string;
 }
 
+export type Notifications = Notification[];
+
+export type Notification = {
+    number: number;
+    type: string;
+    subreddit: string;
+    time: string;
+    title: string;
+    content: string;
+}
+
 export type Rule = {
     number:   number;
     expanded: boolean;

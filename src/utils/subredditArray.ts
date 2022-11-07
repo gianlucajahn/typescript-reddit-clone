@@ -623,7 +623,7 @@ const subredditArray = [
         logo: "../../resources/images/Communities/programmerhumor/icon.png",
         category: "Entertainment",
         favorite: false,
-        joined: false,
+        joined: true,
         about: "Dedicated to humor and jokes relating to programmers and programming.",
         members: "2.3m",
         online: "24.0k",

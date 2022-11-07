@@ -8,7 +8,7 @@ import { isReturnStatement, reduceEachTrailingCommentRange } from 'typescript';
 import LoginModal from './components/LoginModal/LoginModal';
 import subredditArray from './utils/subredditArray';
 import SubredditPage from './containers/SubredditPage/SubredditPage';
-import { Subreddits, Subreddit, Post, Comment, UserData, baseCustomPost, Draft } from "./types/types";
+import { Subreddits, Subreddit, Post, Comment, UserData, baseCustomPost, Draft, Notifications } from "./types/types";
 import postArray from './utils/postArray';
 import IndividualPost from './containers/individualPost/individualPost';
 import SubmitPage from './containers/SubmitPage/SubmitPage';
@@ -27,6 +27,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [submitLoading, setSubmitLoading] = useState(false);
   const [searchDropdown, setSearchDropdown] = useState(false);
+  const [notificationArray, setNotificationArray] = useState<Notifications>([]);
   const [currentAnchor, setCurrentAnchor] = useState(Number);
   const [selectedAnchor, setSelectedAnchor] = useState("");
   const [cachedPosts, setCachedPosts] = useState<Post[]>();
@@ -261,7 +262,20 @@ function App() {
     comment.nested_comments[0].lastSubmitContent = comment.nested_comments[0].content;
     comment.nesting = "posted";
     setCurrentPost({...currentPost, ...currentPost.comments[commentId] = comment});
+
     setNotificationNum(notificationNum + 1);
+
+    const newNotification = {
+      number: notificationArray.length,
+      type: "comment",
+      subreddit: currentSub!.title,
+      time: "Just Now",
+      title: `Thanks for submitting a comment in r/${currentSub!.title}!`,
+      content: `We'll let you know if someone replies to your comment. Thanks for using our service!`
+    };
+    let newNotificationArray = [...notificationArray];
+    newNotificationArray.push(newNotification);
+    setNotificationArray(newNotificationArray);
   }
 
   const selectSubmitDropdown = (e: React.MouseEvent) => {
@@ -310,7 +324,20 @@ function App() {
       let postId = parseInt(submittedCustomPost.id);
       updatedPosts.push(submittedCustomPost);
       setPosts(updatedPosts);
+
       setNotificationNum(notificationNum + 1);
+      const newNotification = {
+        number: notificationArray.length,
+        type: "post",
+        subreddit: currentSub!.title,
+        time: "Just Now",
+        title: `Thanks for creating your post in r/${currentSub!.title}!`,
+        content: `You just created your very own post! Come back later to see if anyone talks about it.`
+      };
+      let newNotificationArray = [...notificationArray];
+      newNotificationArray.push(newNotification);
+      setNotificationArray(newNotificationArray);
+
       navigate(`/r/${currentSub.title}/${postId}`);
       setCustomPost(baseCustomPost);
       setSubmitLoading(false);
@@ -368,7 +395,20 @@ function App() {
       postRef?.comments?.unshift(newComment);
       setCurrentPost(postRef);
       setMainComment("");
+
       setNotificationNum(notificationNum + 1);
+      const newNotification = {
+        number: notificationArray.length,
+        type: "comment",
+        subreddit: currentSub!.title,
+        time: "Just Now",
+        title: `Thanks for submitting a comment in r/${currentSub!.title}!`,
+        content: `We'll let you know if someone replies to your comment. Thanks for using our service!`
+      };
+      let newNotificationArray = [...notificationArray];
+      newNotificationArray.push(newNotification);
+      setNotificationArray(newNotificationArray);
+
       setMainComment("");
     }
   }
@@ -447,13 +487,27 @@ function App() {
     const target = e.currentTarget as HTMLButtonElement;
     const subIndex = subreddits.findIndex(element => element.title === target.id);
     const targetedSubreddit = subreddits[subIndex];
+    console.log(targetedSubreddit);
 
     if (targetedSubreddit.joined) {
       const joinedCommunitiesEdited = [...joinedCommunities];
       const subIndex = joinedCommunitiesEdited.findIndex(element => element === targetedSubreddit);
       joinedCommunitiesEdited.splice(subIndex, 1);
       setJoinedCommunities(joinedCommunitiesEdited);
+
       setNotificationNum(notificationNum + 1);
+      const newNotification = {
+        number: notificationArray.length,
+        type: "subreddit",
+        subreddit: targetedSubreddit.title,
+        time: "Just Now",
+        title: `You just left r/${targetedSubreddit.title}!`,
+        content: `Sorry to see you go! We hope you'll be having fun in other communities.`
+      };
+      let newNotificationArray = [...notificationArray];
+      newNotificationArray.push(newNotification);
+      setNotificationArray(newNotificationArray);
+
       const newCurrentSub = currentSub;
       if (newCurrentSub !== undefined) {
         newCurrentSub.joined = false;
@@ -461,7 +515,20 @@ function App() {
       }
     } else if (targetedSubreddit.joined === false) {
       setJoinedCommunities([...joinedCommunities, targetedSubreddit]);
+
       setNotificationNum(notificationNum + 1);
+      const newNotification = {
+        number: notificationArray.length,
+        type: "comment",
+        subreddit: targetedSubreddit.title,
+        time: "Just Now",
+        title: `You just joined r/${targetedSubreddit.title}!`,
+        content: `Welcome to the sub! Make sure to checkout r/${targetedSubreddit.title}'s newest posts.`
+      };
+      let newNotificationArray = [...notificationArray];
+      newNotificationArray.push(newNotification);
+      setNotificationArray(newNotificationArray);
+
       const newCurrentSub = currentSub;
       if (newCurrentSub !== undefined) {
         newCurrentSub.joined = true;
@@ -538,7 +605,19 @@ function App() {
       }
     });
     setJoinedCommunities(newJoinedCommunities);
+
     setNotificationNum(notificationNum + 1);
+    const newNotification = {
+      number: notificationArray.length,
+      type: "favorite",
+      subreddit: joinedCommunities[targetedIndex].title,
+      time: "Just Now",
+      title: `You just ${target.classList.contains("leave") ? "left" : "joined"} r/${joinedCommunities[targetedIndex].title}!`,
+      content: `${target.classList.contains("leave") ? "Sad to see you're removing this sub from your favorites. Feel free to leave us some constructive criticism if you like!" : "Great to see you're loving this community. We'll make sure to provide you with the best of content!"}`
+    };
+    let newNotificationArray = [...notificationArray];
+    newNotificationArray.push(newNotification);
+    setNotificationArray(newNotificationArray);
   }
 
   const handleHover = (e: React.MouseEvent) => {
