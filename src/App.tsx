@@ -548,6 +548,15 @@ function App() {
     setSubreddits(newSubredditArray);
   }
 
+  const clickNotification = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+    const subId = subreddits.findIndex(sub => sub.title === target.id);
+    if (subId !== -1) {
+      setCurrentSub(subreddits[subId]);
+      navigate(`/r/${subreddits[subId].title}`);
+    }
+  }
+
   const enablePremium = (e: React.MouseEvent) => {
     if (loginStatus === false) {
       setLoginModalState("login");
@@ -1342,6 +1351,7 @@ function App() {
         removeCurrentSub={removeCurrentSub}
         handleInputChange={handleInputChange}
         searchTerm={searchTerm}
+        clickNotification={clickNotification}
         setSearchTerm={setSearchTerm}
         searchDropdown={searchDropdown}
         searchItemDisplay={searchItemDisplay}

@@ -33,6 +33,7 @@ export interface NavBarProps {
   handleInputChange: FormEventHandler,
   removeCurrentSub: MouseEventHandler,
   handleFavorite: MouseEventHandler<HTMLImageElement>,
+  clickNotification: MouseEventHandler,
   handleLogin: MouseEventHandler,
   handleDropdown: MouseEventHandler<HTMLDivElement>,
   handleExpand: MouseEventHandler<HTMLDivElement>,
@@ -62,6 +63,7 @@ export default function NavBar (props: NavBarProps) {
     handleNotifications,
     handleDropdown,
     navToSubmit,
+    clickNotification,
     quickNavigate,
     setNotificationDropdown,
     handleSelectSort,
@@ -93,6 +95,7 @@ export default function NavBar (props: NavBarProps) {
   } = props;
 
   const location = useLocation();
+  const [noti, setNoti] = useState(false);
   const [paddingLeft, setPaddingLeft] = useState("");
   const handleHoverLink = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
@@ -268,7 +271,7 @@ export default function NavBar (props: NavBarProps) {
                 <button className="userButton hov" aria-label='Chat'>
                   <img className="userIcon chat" src={require("../../resources/images/chat.PNG")} />
                 </button>
-                <button className="userButton noti dd" aria-label='Notifications' onClick={(e) => { setNotificationDropdown(true); handleNotifications(e)}}>
+                <button className="userButton noti dd" aria-label='Notifications' onClick={(e) => { setNotificationDropdown(true); handleNotifications(e)}} style={{ backgroundColor: notificationDropdown ? "rgba(26,26,27,0.1)" : noti ? "rgba(26,26,27,0.1)" : "white" }} onMouseEnter={(e) => setNoti(true)} onMouseLeave={(e) => setNoti(false)}>
                   <img className="userIcon notifications noti dd" src={require("../../resources/images/bell.PNG")} />
                   <div className="notification noti dd" style={{ display: notificationNum >= 1 ? "flex" : "none" }}>
                     {notificationNum}
@@ -286,19 +289,27 @@ export default function NavBar (props: NavBarProps) {
                     </div>
 
                       <div className="notification-list dd">
-                        {notificationArray.map((notificationObj, i) => {
-                          return <div className="notification-container">
-                            <img className="sub-icon" src={require(`../../resources/images/Communities/${notificationObj.subreddit}/icon.png`)} />
-                            <div className="notification-info">
-                              <div className="top">
-                                <h3 className="title dd">{notificationObj.subreddit}:</h3>
-                                <h3 className="time dd">· {notificationObj.time}</h3>
-                                <img className="more" src={require("../../resources/images/more.PNG")} />
-                              </div>
-                              <h3 className="content" id="content">{notificationObj.content}</h3>
+                        {notificationArray.slice(0).reverse().map((notificationObj, i) => {
+                          return <div className="notification-container" style={{ backgroundColor: i === 0 ? "#e2f2ff" : "white"}} id={notificationObj.subreddit} onClick={(e) => {clickNotification(e); setNoti(false)}}>
+                            <div className="flex-container">
+                                <img className="sub-icon" src={require(`../../resources/images/Communities/${notificationObj.subreddit}/icon.png`)} />
+                                <div className="notification-info">
+                                  <div className="top">
+                                    <div className="left">
+                                        <h3 className="title dd">{notificationObj.subreddit}:</h3>
+                                        <h3 className="time dd">· {notificationObj.time}</h3>
+                                    </div>
+                                    <img className="more" src={require("../../resources/images/more.PNG")} />
+                                  </div>
+                                  <h3 className="content" id="content">{notificationObj.content}</h3>
+                                </div>
                             </div>
                           </div>
                         })}
+                      </div>
+
+                      <div className="notification-footer" onClick={(e) => setNoti(false)}>
+                        <h3>SEE ALL</h3>
                       </div>
                     </div>}
                 </button>
