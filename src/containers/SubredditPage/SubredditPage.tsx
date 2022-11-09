@@ -22,6 +22,7 @@ export interface SubredditPageProps {
     handleNavigate: MouseEventHandler<HTMLDivElement>,
     navToSubmit: MouseEventHandler,
     openPost: MouseEventHandler,
+    navToProfile: MouseEventHandler,
     handleLike: MouseEventHandler,
     loginStatus: boolean,
     submitPage: boolean,
@@ -33,6 +34,7 @@ export interface SubredditPageProps {
     expandRule: MouseEventHandler,
     loginModalState: string,
     posts: Post[],
+    navToUserProfile: MouseEventHandler,
     currentPost: Post | undefined,
     communityTheme: boolean,
     currentEditedComment: string,
@@ -84,8 +86,10 @@ export default function SubredditPage (props: SubredditPageProps) {
     writeNestedComment,
     editComment,
     editNestedComment,
+    navToUserProfile,
     savePost,
     submitNestedComment,
+    navToProfile,
     handleLikeComment,
     handleNestedComment,
     switchCommunityOptions,
@@ -153,6 +157,7 @@ export default function SubredditPage (props: SubredditPageProps) {
               editNestedComment={editNestedComment}
               randomIntToString={randomIntToString}
               savePost={savePost}
+              navToUserProfile={navToUserProfile}
             />
 
           </div>
@@ -172,6 +177,7 @@ export default function SubredditPage (props: SubredditPageProps) {
             currentPost={currentPost}
             handleNavigate={handleNavigate}
             submitPage={submitPage}
+            navToProfile={navToProfile}
           />
       </div>
     </div>

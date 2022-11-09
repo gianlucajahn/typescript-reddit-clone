@@ -36,6 +36,7 @@ export interface HomeProps {
   setLoginModalState: any,
   loginModalState: string,
   posts: Post[],
+  navToUserProfile: MouseEventHandler,
   currentPost: Post | undefined,
   mainComment: string,
   writeComment: any
@@ -58,6 +59,7 @@ export default function Home (props: HomeProps) {
     subreddits,
     topSubreddits,
     setIndex,
+    navToUserProfile,
     currentEditedComment,
     writeNestedComment,
     editComment,
@@ -129,6 +131,7 @@ export default function Home (props: HomeProps) {
           randomIntToString={randomIntToString}
           savePost={savePost}
           renderNum={renderNum}
+          navToUserProfile={navToUserProfile}
         />
 
         <div className="loading" ref={ref}>

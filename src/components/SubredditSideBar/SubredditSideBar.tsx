@@ -12,6 +12,7 @@ export interface SubredditSideBarProps {
     standardTheme: any,
     loginStatus: boolean,
     randomIntToString: string,
+    navToProfile: MouseEventHandler,
     navToSubmit: MouseEventHandler,
     switchCommunityTheme: MouseEventHandler,
     expandRule: MouseEventHandler,
@@ -31,6 +32,7 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
     submitPage,
     loginStatus,
     randomIntToString,
+    navToProfile,
     handleNavigate,
     navToSubmit,
     switchCommunityTheme,
@@ -93,7 +95,7 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
               />
             </div>
     
-            <div className="user">
+            <div className="user" onClick={navToProfile}>
               <img className="avatar" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
               <p className="userName">{userName}</p>
             </div>

@@ -17,6 +17,7 @@ export interface individualPostProps {
     handleSubMembership: MouseEventHandler,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
+    navToUserProfile: MouseEventHandler,
     navToSubmit: MouseEventHandler,
     openPost: MouseEventHandler,
     loginStatus: boolean,
@@ -34,6 +35,7 @@ export interface individualPostProps {
     writeNestedComment: any,
     editComment: any,
     editNestedComment: any,
+    navToProfile: MouseEventHandler,
     submitNestedComment: MouseEventHandler
     expandRule: MouseEventHandler,
     handleLikeComment: MouseEventHandler,
@@ -67,9 +69,11 @@ export default function IndividualPost (props: individualPostProps) {
     writeNestedComment,
     editComment,
     editNestedComment,
+    navToProfile,
     savePost,
     submitNestedComment,
     handleSubMembership,
+    navToUserProfile,
     handleNestedComment,
     closePost,
     handleNavigate,
@@ -131,6 +135,7 @@ export default function IndividualPost (props: individualPostProps) {
             editNestedComment={editNestedComment}
             randomIntToString={randomIntToString}
             savePost={savePost}
+            navToUserProfile={navToUserProfile}
           />
         </div>
 
@@ -150,6 +155,7 @@ export default function IndividualPost (props: individualPostProps) {
             currentPost={currentPost}
             handleNavigate={handleNavigate}
             submitPage={submitPage}
+            navToProfile={navToProfile}
           />
         </div>
       </div>

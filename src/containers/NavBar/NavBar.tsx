@@ -28,6 +28,7 @@ export interface NavBarProps {
   setSearchTerm: any,
   notificationArray: Notification[],
   searchItemDisplay: boolean[],
+  navToProfile: MouseEventHandler,
   handleNotifications: MouseEventHandler,
   changeSearchItemDisplay: MouseEventHandler<HTMLImageElement>,
   handleInputChange: FormEventHandler,
@@ -83,6 +84,7 @@ export default function NavBar (props: NavBarProps) {
     dropdownState,
     subreddits,
     setSearchTerm,
+    navToProfile,
     submitPage,
     currentSub,
     userName,
@@ -341,10 +343,10 @@ export default function NavBar (props: NavBarProps) {
               </div>
               <div className={loginStatus ? "dropdownMenu dropdownMenuLogin" : "dropdownMenu"} style={{ display: dropdownIsOpen ? "block" : "none", right: loginStatus ? "12px" : "20px" }} id="dropdownMenu">
                 {loginStatus ? <div className="dropdownItem dropdownProfile">
-                  <img className="avatarBig" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
+                  <img className="avatarBig" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} onClick={navToProfile} />
                   <div className="profile">
                     <h3 className="username">{userName}</h3>
-                    <button className="toProfile auth shopAvatar">
+                    <button className="toProfile auth shopAvatar" onClick={navToProfile}>
                       <img className="toProfileImg" src={require("../../resources/images/profile.png")} />
                       Profile
                     </button>

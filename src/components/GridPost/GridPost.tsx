@@ -20,6 +20,7 @@ export interface GridPostProps {
     editComment: any,
     randomIntToString: string,
     editNestedComment: any,
+    navToUserProfile: MouseEventHandler,
     savePost: MouseEventHandler,
     submitNestedComment: MouseEventHandler,
     handleNavigate: MouseEventHandler,
@@ -49,6 +50,7 @@ export default function GridPost (props: GridPostProps) {
     savePost,
     submitNestedComment,
     handleNavigate,
+    navToUserProfile,
     submitComment,
     handleLike,
     handleLikeComment,
@@ -147,7 +149,7 @@ export default function GridPost (props: GridPostProps) {
             <div className="header">
                 <img className="subIcon dontOpenPost" src={require(`../../resources/images/Communities/${post.subreddit}/icon.png`)} id={post.subreddit} onClick={handleNavigate} />
                 <h5 className="subName dontOpenPost" id={post.subreddit} onClick={handleNavigate}>r/{post.subreddit}</h5>
-                <h5 className="author dontOpenPost">· Posted by <span>u/{post.author}</span></h5>
+                <h5 className="author dontOpenPost">· Posted by <span className="span" id={post.author} onClick={navToUserProfile}>u/{post.author}</span></h5>
                 <h5 className="creationDate">· {post.time}</h5>
                 <div className="awards">
                     {post.awards.map((award: string, i: number) => {

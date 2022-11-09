@@ -21,6 +21,7 @@ export interface SubmitPageProps {
   switchCommunityOptions: MouseEventHandler,
   selectSubmitDropdown: MouseEventHandler,
   submitCustomPost: MouseEventHandler,
+  navToProfile: MouseEventHandler,
   removeUploadedImg: MouseEventHandler,
   communityOptions: boolean,
   expandRule: MouseEventHandler,
@@ -57,6 +58,7 @@ export default function SubmitPage (props: SubmitPageProps) {
     editPostSrc,
     communityOptions,
     submitDropdownState,
+    navToProfile,
     onImgUpload,
     submitCustomPost,
     removeUploadedImg,
@@ -143,7 +145,7 @@ export default function SubmitPage (props: SubmitPageProps) {
           
           <div className="dropdown closeSelector" style={{ display: submitDropdownState ? "flex" : "none" }}>
             <h4 className="closeSelector">YOUR PROFILE</h4>
-            <div className="profile closeSelector">
+            <div className="profile closeSelector" onClick={navToProfile}>
               <img src={require(`../../resources/images/avatar${loginStatus ? userName === "Nikola Tesla" ? "tesla" : randomIntToString : randomIntToString}.PNG`)} className="closeSelector" />
               <h3 className="closeSelector">u/{userName}</h3>
             </div>
@@ -332,6 +334,7 @@ export default function SubmitPage (props: SubmitPageProps) {
           switchCommunityOptions={switchCommunityOptions}
           communityOptions={communityOptions}
           submitPage={submitPage}
+          navToProfile={navToProfile}
         />}
 
         <div className="rediquette-container">

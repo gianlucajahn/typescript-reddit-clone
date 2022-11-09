@@ -14,6 +14,7 @@ import IndividualPost from './containers/individualPost/individualPost';
 import SubmitPage from './containers/SubmitPage/SubmitPage';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ProfilePage from './containers/ProfilePage/ProfilePage';
 
 function App() {
   const location = useLocation();
@@ -654,9 +655,20 @@ function App() {
       }
   }
 
+  const navToProfile = (e: React.MouseEvent) => {
+    setCurrentSub(undefined);
+    navigate(`/user/${userName}`);
+  }
+
+  const navToUserProfile = (e: React.MouseEvent) => {
+    const target = e.currentTarget;
+    setCurrentSub(undefined);
+    navigate(`/user/${target.id}`);
+  }
+
   const openPost = (e: React.MouseEvent) => {
     let target = e.target as HTMLElement | null;
-    if (target!.classList.contains("dontOpenPost") || target!.classList.contains("upvote-btn") || target!.classList.contains("downvote-btn")) {
+    if (target!.classList.contains("dontOpenPost") || target!.classList.contains("upvote-btn") || target!.classList.contains("downvote-btn") || target!.classList.contains("span")) {
       return;
     }
 
@@ -1357,6 +1369,7 @@ function App() {
         searchItemDisplay={searchItemDisplay}
         changeSearchItemDisplay={changeSearchItemDisplay}
         handleNotifications={handleNotifications}
+        navToProfile={navToProfile}
         notificationNum={notificationNum}
         quickNavigate={quickNavigate}
         notificationArray={notificationArray}
@@ -1409,6 +1422,7 @@ function App() {
           savePost={savePost}
           renderNum={renderNum}
           setRenderNum={setRenderNum}
+          navToUserProfile={navToUserProfile}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
@@ -1450,8 +1464,10 @@ function App() {
           editNestedComment={editNestedComment}
           submitPage={submitPage}
           savePost={savePost}
+          navToUserProfile={navToUserProfile}
+          navToProfile={navToProfile}
         />} />
-        <Route path='/profile' element={<Home
+        <Route path='/user/:userId' element={<ProfilePage
           randomIntToString={randomIntToString}
           userName={userName}
           currentSort={currentSort}
@@ -1519,6 +1535,7 @@ function App() {
           removeUploadedImg={removeUploadedImg}
           submitCustomPost={submitCustomPost}
           submitLoading={submitLoading}
+          navToProfile={navToProfile}
         />} />
         <Route path='/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}
@@ -1558,6 +1575,8 @@ function App() {
           editNestedComment={editNestedComment}
           submitPage={submitPage}
           savePost={savePost}
+          navToUserProfile={navToUserProfile}
+          navToProfile={navToProfile}
         />} />
       </Routes>
     </div>

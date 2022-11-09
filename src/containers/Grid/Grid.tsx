@@ -25,6 +25,7 @@ export interface GridProps {
     editComment: any,
     renderNum?: number,
     editNestedComment: any,
+    navToUserProfile: MouseEventHandler,
     savePost: MouseEventHandler,
     submitNestedComment: MouseEventHandler
     handleNavigate: MouseEventHandler,
@@ -53,6 +54,7 @@ export default function Grid (props: GridProps) {
     editComment,
     editNestedComment,
     randomIntToString,
+    navToUserProfile,
     savePost,
     submitNestedComment,
     openPost,
@@ -97,6 +99,7 @@ export default function Grid (props: GridProps) {
                  editNestedComment={editNestedComment}
                  randomIntToString={randomIntToString}
                  savePost={savePost}
+                 navToUserProfile={navToUserProfile}
                 />
       })}
 
@@ -132,6 +135,7 @@ export default function Grid (props: GridProps) {
                  editNestedComment={editNestedComment}
                  randomIntToString={randomIntToString}
                  savePost={savePost}
+                 navToUserProfile={navToUserProfile}
                 />
       })}
 
@@ -167,6 +171,7 @@ export default function Grid (props: GridProps) {
                  editNestedComment={editNestedComment}
                  randomIntToString={randomIntToString}
                  savePost={savePost}
+                 navToUserProfile={navToUserProfile}
                 />
       })}
 
@@ -202,6 +207,7 @@ export default function Grid (props: GridProps) {
                  editNestedComment={editNestedComment}
                  randomIntToString={randomIntToString}
                  savePost={savePost}
+                 navToUserProfile={navToUserProfile}
                 />
       })}
 
@@ -233,6 +239,7 @@ export default function Grid (props: GridProps) {
                  editNestedComment={editNestedComment}
                  randomIntToString={randomIntToString}
                  savePost={savePost}
+                 navToUserProfile={navToUserProfile}
                 />
       })}
     </div>
