@@ -662,6 +662,11 @@ function App() {
 
   const navToUserProfile = (e: React.MouseEvent) => {
     const target = e.currentTarget;
+
+    if (loginStatus === false) {
+      setLoginModalState("login");
+      return;
+    }
     setCurrentSub(undefined);
     navigate(`/user/${target.id}`);
   }
