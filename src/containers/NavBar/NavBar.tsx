@@ -296,6 +296,7 @@ export default function NavBar (props: NavBarProps) {
                     </div>
 
                       <div className="notification-list dd">
+                        {notificationArray.length === 0 && <h3 className="no-noti dd">No notifications yet! Come back later!</h3>}
                         {notificationArray.slice(0).reverse().map((notificationObj, i) => {
                           return <div className="notification-container" style={{ backgroundColor: i === 0 ? "#e2f2ff" : "white"}} id={notificationObj.subreddit} onClick={(e) => {clickNotification(e); setNoti(false)}}>
                             <div className="flex-container">

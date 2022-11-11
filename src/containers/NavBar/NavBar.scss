@@ -975,3 +975,18 @@
     margin-bottom: 2px !important;
     margin-right: 16px !important;
 }
+
+.no-noti {
+    font-family: "Noto Sans Bold";
+    font-size: 14px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.25s all;
+
+    &:hover {
+        color: #0079d3;
+    }
+}

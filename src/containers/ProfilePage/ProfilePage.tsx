@@ -1,4 +1,5 @@
 import React, { MouseEventHandler, useState, SetStateAction, Dispatch } from 'react';
+import SortBar from '../../components/SortBar/SortBar';
 import { Subreddits, Subreddit, Post } from '../../types/types';
 import './ProfilePage.scss';
 
@@ -132,12 +133,18 @@ export default function ProfilePage (props:  ProfilePageProps) {
 
       <div className="profile-content">
         <div className="feed">
-
+          <SortBar
+          currentSort={currentSort}
+          setSort={setSort}
+          />
         </div>
 
         <div className="info">
           <div className="card">
-            <div className="box" />
+            <div className="box">
+              <img className="add-photo" src={require("../../resources/images/addphoto.png")} />
+            </div>
+            <img className="settings" src={require("../../resources/images/bluesettings.png")} />
             <div className="d-card" onMouseMove={hoverCard} id="card" onMouseLeave={resetCard}>
               <div className="card-content">
                 <img className="card-icon" src={userName === "Nikola Tesla" ? userName === currentlyInspectedUser ? require(`../../resources/images/avatartesla_head.png`) : require("../../resources/images/base_variants/default1.png") : userName === currentlyInspectedUser ? require(`../../resources/images/avatar${randomIntToString}_head.png`) : require("../../resources/images/base_variants/default1.png")} />
