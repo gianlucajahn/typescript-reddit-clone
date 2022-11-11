@@ -673,7 +673,7 @@ function App() {
 
   const openPost = (e: React.MouseEvent) => {
     let target = e.target as HTMLElement | null;
-    if (target!.classList.contains("dontOpenPost") || target!.classList.contains("upvote-btn") || target!.classList.contains("downvote-btn") || target!.classList.contains("span")) {
+    if (target!.classList.contains("dontOpenPost") || target!.classList.contains("upvote-btn") || target!.classList.contains("downvote-btn") || target!.classList.contains("span") || target!.classList.contains("comment-author")) {
       return;
     }
 
@@ -788,6 +788,11 @@ function App() {
 
     if (e.target.classList.contains('closeSelector') === false) {
       setSubmitDropdownState(false);
+    }
+
+    if (e.target.classList.contains('profil')) {
+      setDropdownIsOpen(false);
+      return;
     }
 
     if (e.target.classList.contains("dd") === false) {
@@ -1428,6 +1433,7 @@ function App() {
           renderNum={renderNum}
           setRenderNum={setRenderNum}
           navToUserProfile={navToUserProfile}
+          navToProfile={navToProfile}
         />} />
         <Route path='/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}

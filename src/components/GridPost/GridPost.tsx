@@ -17,10 +17,11 @@ export interface GridPostProps {
     loginStatus: boolean,
     setIndex: Dispatch<SetStateAction<number | undefined>>,
     writeNestedComment: any,
+    navToProfile?: MouseEventHandler | undefined,
     editComment: any,
     randomIntToString: string,
     editNestedComment: any,
-    navToUserProfile: MouseEventHandler,
+    navToUserProfile: MouseEventHandler | undefined,
     savePost: MouseEventHandler,
     submitNestedComment: MouseEventHandler,
     handleNavigate: MouseEventHandler,
@@ -47,6 +48,7 @@ export default function GridPost (props: GridPostProps) {
     editComment,
     randomIntToString,
     editNestedComment,
+    navToProfile,
     savePost,
     submitNestedComment,
     handleNavigate,
@@ -224,6 +226,8 @@ export default function GridPost (props: GridPostProps) {
               editComment={editComment}
               editNestedComment={editNestedComment}
               randomIntToString={randomIntToString}
+              navToProfile={navToProfile}
+              navToUserProfile={navToUserProfile}
             />
         </div>}
     </div>

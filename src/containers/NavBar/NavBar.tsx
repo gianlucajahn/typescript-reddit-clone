@@ -351,8 +351,8 @@ export default function NavBar (props: NavBarProps) {
                   <img className="avatarBig" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} onClick={navToProfile} />
                   <div className="profile">
                     <h3 className="username">{userName}</h3>
-                    <button className="toProfile auth shopAvatar" onClick={navToProfile}>
-                      <img className="toProfileImg" src={require("../../resources/images/profile.png")} />
+                    <button className="toProfile auth shopAvatar profil" onClick={navToProfile}>
+                      <img className="toProfileImg profil" src={require("../../resources/images/profile.png")} />
                       Profile
                     </button>
                   </div>

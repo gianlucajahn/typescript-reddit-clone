@@ -7,4 +7,41 @@
     background-color: $mainPageBackground;
     min-height: 100vh;
     width: 100vw;
+
+    .head {
+        height: 39px;
+        border-bottom: 1px solid #edeff1;
+        background-color: white;
+        width: 100vw;
+        padding-top: 48px;
+        display: flex;
+        gap: 11px;
+        padding-left: 464px;
+        align-items: center;
+        font-family: "IBM Regular";
+        font-size: 12px;
+        color: #1a1a1b;
+
+        .section {
+            height: 39px;
+            cursor: pointer;
+            padding: 0px 8px;
+
+            h3 {
+                margin-top: 12px;
+
+                &:hover {
+                    color: #0079d3;
+                }
+            }
+        }
+
+        .overview {
+            border-bottom: 2px solid #0079d3;
+
+            h3 {
+                color: #0079d3;
+            }
+        }
+    }
 }

@@ -37,6 +37,7 @@ export interface HomeProps {
   loginModalState: string,
   posts: Post[],
   navToUserProfile: MouseEventHandler,
+  navToProfile: MouseEventHandler,
   currentPost: Post | undefined,
   mainComment: string,
   writeComment: any
@@ -53,6 +54,7 @@ export default function Home (props: HomeProps) {
     renderNum,
     setRenderNum,
     currentPost,
+    navToProfile,
     mainComment,
     writeComment,
     setSort,
@@ -132,6 +134,7 @@ export default function Home (props: HomeProps) {
           savePost={savePost}
           renderNum={renderNum}
           navToUserProfile={navToUserProfile}
+          navToProfile={navToProfile}
         />
 
         <div className="loading" ref={ref}>

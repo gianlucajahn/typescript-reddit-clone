@@ -136,6 +136,7 @@ export default function IndividualPost (props: individualPostProps) {
             randomIntToString={randomIntToString}
             savePost={savePost}
             navToUserProfile={navToUserProfile}
+            navToProfile={navToProfile}
           />
         </div>
 

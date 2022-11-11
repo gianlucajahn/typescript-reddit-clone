@@ -75,7 +75,35 @@ export default function ProfilePage (props:  ProfilePageProps) {
 
   return (
     <div className="profile-page">
-      
+      <div className="head">
+        <div className="section overview">
+          <h3>OVERVIEW</h3>
+        </div>
+
+        <div className="section posts">
+          <h3>POSTS</h3>
+        </div>
+
+        <div className="section comments">
+          <h3>COMMENTS</h3>
+        </div>
+
+        <div className="section saved">
+          <h3>SAVED</h3>
+        </div>
+
+        <div className="section upvoted">
+          <h3>UPVOTED</h3>
+        </div>
+
+        <div className="section downvoted">
+          <h3>DOWNVOTED</h3>
+        </div>
+
+        <div className="section following">
+          <h3>FOLLOWING</h3>
+        </div>
+      </div>
     </div>
   );
 }

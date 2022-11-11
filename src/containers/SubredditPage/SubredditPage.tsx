@@ -158,6 +158,7 @@ export default function SubredditPage (props: SubredditPageProps) {
               randomIntToString={randomIntToString}
               savePost={savePost}
               navToUserProfile={navToUserProfile}
+              navToProfile={navToProfile}
             />
 
           </div>

@@ -20,6 +20,8 @@ export interface CommentsProps {
   writeNestedComment: any,
   editComment: any,
   editNestedComment: any,
+  navToProfile: MouseEventHandler | undefined,
+  navToUserProfile: MouseEventHandler | undefined,
   submitNestedComment: MouseEventHandler,
   submitComment: MouseEventHandler,
   handleLikeComment: MouseEventHandler,
@@ -36,6 +38,8 @@ export default function Comments (props: CommentsProps) {
     currentPost,
     loginStatus,
     randomIntToString,
+    navToProfile,
+    navToUserProfile,
     setIndex,
     writeNestedComment,
     editComment,
@@ -214,6 +218,8 @@ export default function Comments (props: CommentsProps) {
                      boxId={boxId}
                      setBoxId={setBoxId}
                      randomIntToString={randomIntToString}
+                     navToUserProfile={navToUserProfile}
+                     navToProfile={navToProfile}
                     />
           })}
         </div>
