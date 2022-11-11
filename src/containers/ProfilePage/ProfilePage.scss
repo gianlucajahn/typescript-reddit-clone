@@ -35,12 +35,72 @@
                 }
             }
         }
+    }
 
-        .overview {
-            border-bottom: 2px solid #0079d3;
+    .profile-content {
+        display: flex;
+        gap: 24px;
+        margin-top: 20px;
 
-            h3 {
-                color: #0079d3;
+        .feed {
+            margin-left: 464px;
+            width: 640px;
+        }
+
+        .info {
+
+
+            .card {
+                position: relative;
+                width: 310px;
+                height: 600px;
+                background-color: white;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+
+                .box {
+                    width: 310px;
+                    height: 94px;
+                    border-top-left-radius: 4px;
+                    border-top-right-radius: 4px;
+                    background-color: #33a8ff;
+                }
+
+                .d-card {
+                    position: absolute;
+                    top: 14px;
+                    width: 210px;
+                    height: 278px;
+                    left: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgb(129, 193, 253);
+                    transform-style: preserve-3d;
+                    border-radius: 18px;
+                    cursor: grab;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 18px;
+                        left: 0;
+                        bottom: 0px;
+                        box-shadow: 0 30px 20px rgba(0, 0, 0, .3);
+                      }
+
+                    .card-content {
+                        transform-style: preserve-3d;
+                        text-align: center;
+                      }
+
+                    img {
+                        height: 120px;
+                        margin-bottom: 10px;
+                    }
+                }
             }
         }
     }

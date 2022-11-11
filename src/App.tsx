@@ -31,6 +31,7 @@ function App() {
   const [searchDropdown, setSearchDropdown] = useState(false);
   const [notificationArray, setNotificationArray] = useState<Notifications>([]);
   const [currentAnchor, setCurrentAnchor] = useState(Number);
+  const [currentlyInspectedUser, setCurrentlyInspectedUser] = useState("");
   const [selectedAnchor, setSelectedAnchor] = useState("");
   const [cachedPosts, setCachedPosts] = useState<Post[]>();
   const [cachedUserData, setCachedUserData] = useState<UserData>();
@@ -657,6 +658,7 @@ function App() {
 
   const navToProfile = (e: React.MouseEvent) => {
     setCurrentSub(undefined);
+    setCurrentlyInspectedUser(userName);
     navigate(`/user/${userName}`);
   }
 
@@ -668,6 +670,7 @@ function App() {
       return;
     }
     setCurrentSub(undefined);
+    setCurrentlyInspectedUser(target.id);
     navigate(`/user/${target.id}`);
   }
 
@@ -1511,6 +1514,7 @@ function App() {
           savePost={savePost}
           renderNum={renderNum}
           setRenderNum={setRenderNum}
+          currentlyInspectedUser={currentlyInspectedUser}
         />} />
         <Route path='/submit' element={<SubmitPage
           randomIntToString={randomIntToString}
