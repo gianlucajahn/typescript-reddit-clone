@@ -86,8 +86,8 @@ export default function ProfilePage (props:  ProfilePageProps) {
     const hoverCard = (e: React.MouseEvent) => {
       let card = document.getElementById('card');
       card!.style.transition = "0s all";
-      let xAxis = (window.innerWidth / 2 - e.pageX) / 30;
-      let yAxis = (window.innerHeight / 2 - e.pageY) / 15;
+      let xAxis = (window.innerWidth / 2 - e.pageX) / 47.5;
+      let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
       card!.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
     }
 
@@ -150,6 +150,19 @@ export default function ProfilePage (props:  ProfilePageProps) {
                 <img className="card-icon" src={userName === "Nikola Tesla" ? userName === currentlyInspectedUser ? require(`../../resources/images/avatartesla_head.png`) : require("../../resources/images/base_variants/default1.png") : userName === currentlyInspectedUser ? require(`../../resources/images/avatar${randomIntToString}_head.png`) : require("../../resources/images/base_variants/default1.png")} />
               </div>
             </div>
+
+            <button className="details">
+              <img className="hexagon" src={require("../../resources/images/hexagon.png")} />        
+              Details    
+            </button>
+            
+            <h1>{userName}</h1>
+            <h4>u/{userName} · 1d</h4>
+
+            <button className="style">
+              <img className="shirt" src={require("../../resources/images/shirt.png")} />
+              Style Avatar
+            </button>
           </div>
 
           <div className="trophies">

@@ -121,6 +121,38 @@
                         margin-bottom: 10px;
                     }
                 }
+
+                .details {
+                    margin-top: 179px;
+                    background-color: #f1f3f5;
+                    border-radius: 9999px;
+                    border: 1px solid transparent;
+                    display: flex;
+                    align-self: center;
+                    gap: 6px;
+                    box-sizing: border-box;
+                    padding: 4px 10px;
+                    justify-content: center;
+                    align-items: center;
+                    width: 110px;
+                    color: #1a1a1b;
+                    font-family: "Noto Sans Bold";
+                    font-size: 11px;
+                    padding-bottom: 7px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #e7e8e9;
+                    }
+
+                    &:active {
+                        background-color: #d3d5d6;
+                    }
+
+                    .hexagon {
+                        height: 16px;
+                    }
+                }
             }
         }
     }
