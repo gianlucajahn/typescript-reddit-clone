@@ -164,6 +164,18 @@ export default function ProfilePage (props:  ProfilePageProps) {
           currentSort={currentSort}
           setSort={setSort}
           />
+
+          <div className="grid">
+            {posts.map((post, i) => {
+              if (post.author !== currentlyInspectedUser) {
+                return;
+              }
+
+              return <div>
+
+              </div>
+            })}
+          </div>
         </div>
 
         <div className="info">

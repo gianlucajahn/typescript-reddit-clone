@@ -27,6 +27,7 @@
                 letter-spacing: 0.03em;
                 color: #ffffff;
                 padding-bottom: 2px;
+                cursor: text;
             }
 
             .more {
@@ -49,10 +50,12 @@
             padding: 12px 16px 0px 11px;
             font-family: "Noto Sans Regular";
             color: #1a1a1b;
+            cursor: text;
         }
 
         .createdAt {
             display: flex;
+            cursor: text;
             gap: 8px;
             padding: 11px 16px 0px 12px;
 
@@ -84,6 +87,7 @@
                 font-family: "IBM";
                 color: #1a1a1b;
                 margin-bottom: 3px;
+                cursor: pointer;
             }
 
             .memberCount h5,
@@ -92,6 +96,7 @@
                 font-size: 12px;
                 font-family: "IBM Light";
                 color: #737373;
+                cursor: text;
             }
         }
 
