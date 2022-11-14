@@ -175,8 +175,8 @@ export default function ProfilePage (props:  ProfilePageProps) {
               Details    
             </button>
             
-            <h1>{userName}</h1>
-            <h4>u/{userName} · 1d</h4>
+            <h1>{currentlyInspectedUser === userName ? userName : currentlyInspectedUser}</h1>
+            <h4>u/{currentlyInspectedUser === userName ? userName : currentlyInspectedUser} · 1d</h4>
 
             <button className="style">
               <img className="shirt" src={require("../../resources/images/shirt.png")} />
@@ -199,6 +199,18 @@ export default function ProfilePage (props:  ProfilePageProps) {
                   <h4>{creationDate}</h4>
                 </div>
               </div>
+            </div>
+
+            <div className="social-container">
+              <button className="social">
+                <img className="add" src={require("../../resources/images/add.PNG")} />
+                <h3>Add social link</h3>
+              </button>
+
+              <button className="social">
+                <img className="add" src={require("../../resources/images/add.PNG")} />
+                <h3>Add GitHub</h3>
+              </button>
             </div>
           </div>
 

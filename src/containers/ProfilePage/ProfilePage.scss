@@ -208,6 +208,84 @@
                         transform: scaleY(0.95);
                     }
                 }
+
+                .userdata {
+                    display: flex;
+                    margin-left: 12px;
+                    margin-top: 8px;
+                    gap: 102px;
+
+                    .karma-container,
+                    .cake-container {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 10px;
+
+                        h3 {
+                            font-family: "IBM Regular";
+                            color: #222222;
+                            font-size: 14px;
+                        }
+
+                        .flexbox {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            gap: 4px;
+
+                            .karma {
+                                width: 12px;
+                                height: 12px;
+                            }
+
+                            .cake {
+                                height: 10px;
+                                margin-right: 1px;
+                            }
+
+                            h4 {
+                                margin-top: 4px;
+                            }
+                        }
+                    }
+                }
+
+                .social-container {
+                    display: flex;
+                    gap: 8px;
+                    padding-left: 12px;
+
+                    .social {
+                        background-color: #edeff1;
+                        border: none;
+                        border-radius: 9999px;
+                        gap: 6px;
+                        cursor: pointer;
+                        font-family: "IBM";
+                        align-items: center;
+                        font-size: 10px;
+                        color: #1c1c1c;
+                        display: flex;
+                        padding: 9px 12px;
+
+                        &:hover {
+                            background-color: #dfe0e0;
+                        }
+    
+                        &:active {
+                            background-color: #c7c8c9;
+                        }
+
+                        .add {
+                            height: 22px;
+                        }
+
+                        h3 {
+                            margin-right: 2px;
+                            margin-bottom: 2px;
+                        }
+                    }
+                }
             }
         }
     }
