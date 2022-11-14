@@ -1,14 +1,15 @@
 import React, { MouseEventHandler, Dispatch, SetStateAction, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Comment, Post, Subreddit } from '../../types/types';
 import EditComment from '../EditComment/EditComment';
 import './PostedComment.scss';
 
 export interface PostedCommentProps {
     index: number,
-    handleHoverComment: MouseEventHandler,
+    handleHoverComment?: MouseEventHandler,
     handleLikeComment: MouseEventHandler,
     handleNestedComment: MouseEventHandler,
-    hoveredComments: any,
+    hoveredComments?: any,
     commentObj: Comment,
     userName: string,
     randomIntToString: string,
@@ -67,6 +68,7 @@ export default function PostedComment (props: PostedCommentProps) {
     downvote: false
   })
 
+  const location = useLocation();
   const [edited, setEdited] = useState(false);
   const [nestedEdited, setNestedEdited] = useState(false);
 
@@ -129,17 +131,17 @@ export default function PostedComment (props: PostedCommentProps) {
                         />
                     </button>
 
-                    {nested && commentObj.nested_comments[0].author === userName && <div className="edit comment-footer-box" id={`${index}`} onClick={(e) => { handleNestedComment(e); switchNestedEdit(e);}}>
+                    {nested && commentObj.nested_comments[0].author === userName && location.pathname.includes("user") === false && <div className="edit comment-footer-box" id={`${index}`} onClick={(e) => { handleNestedComment(e); switchNestedEdit(e);}}>
                         <img className="edit-icon" src={require("../../resources/images/pencil.png")} />
                         <h3>Edit</h3>
                     </div>}
 
-                    {nested === false && commentObj.author === userName && <div className="edit comment-footer-box" id={`${index}`} onClick={switchEdit}>
+                    {nested === false && commentObj.author === userName && location.pathname.includes("user") === false && <div className="edit comment-footer-box" id={`${index}`} onClick={switchEdit}>
                         <img className="edit-icon" src={require("../../resources/images/pencil.png")} />
                         <h3>Edit</h3>
                     </div>}
 
-                    {commentObj.nesting === "none" && <div className="reply comment-footer-box" id={`${index}`} onClick={(e) => { handleNestedComment(e); switchNestedEdit(e);}}>
+                    {commentObj.nesting === "none" && location.pathname.includes("user") === false && <div className="reply comment-footer-box" id={`${index}`} onClick={(e) => { handleNestedComment(e); switchNestedEdit(e);}}>
                         <img className="reply-icon" src={require("../../resources/images/comments.png")} />
                         <h3>Reply</h3>
                     </div>}

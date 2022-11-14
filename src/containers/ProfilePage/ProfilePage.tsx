@@ -1,5 +1,6 @@
 import React, { MouseEventHandler, useState, SetStateAction, Dispatch } from 'react';
 import GridPost from '../../components/GridPost/GridPost';
+import PostedComment from '../../components/PostedComment/PostedComment';
 import SortBar from '../../components/SortBar/SortBar';
 import { Subreddits, Subreddit, Post } from '../../types/types';
 import './ProfilePage.scss';
@@ -84,7 +85,6 @@ export default function ProfilePage (props:  ProfilePageProps) {
     const [currentProfileSection, setCurrentProfileSection] = useState("overview");
     const [optionsExpanded, setOptionsExpanded] = useState(false);
     const [hoveredSection, setHoveredSection] = useState("none");
-    console.log(posts);
 
     const date = new Date();
     let day = date.getDate();
@@ -172,6 +172,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
           />
 
           <div className="grid">
+            <>
             {currentProfileSection === "overview" && posts.map((post, i) => {
               if (post.author !== currentlyInspectedUser) {
                 return;
@@ -181,7 +182,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
               post={post}
               posts={posts}
               currentSub={currentSub} 
-              currentPost={currentPost}
+              currentPost={undefined}
               handleNavigate={handleNavigate}
               handleLike={handleLike}
               openPost={openPost}
@@ -204,6 +205,179 @@ export default function ProfilePage (props:  ProfilePageProps) {
               navToProfile={navToProfile}
              />
             })}
+            
+            {currentProfileSection === "overview" && posts.map((post, i) => {
+                if (post.comments[0].author === currentlyInspectedUser) {
+                  return <div className="whiteBox"><PostedComment
+                  index={i}
+                  currentPost={post}
+                  userName={userName}
+                  mainComment={mainComment}
+                  handleLikeComment={handleLikeComment}
+                  handleNestedComment={handleNestedComment}
+                  commentObj={post.comments[0]}
+                  targetedComment={post.comments[i]}
+                  writeComment={writeComment}
+                  submitComment={submitComment}
+                  currentSub={currentSub}
+                  nested={false}
+                  setIndex={setIndex}
+                  writeNestedComment={writeNestedComment}
+                  submitNestedComment={submitNestedComment}
+                  currentEditedComment={currentEditedComment}
+                  editComment={editComment}
+                  editNestedComment={editNestedComment}
+                  randomIntToString={randomIntToString}
+                  navToUserProfile={navToUserProfile}
+                  navToProfile={navToProfile}
+                 /></div>
+                }
+
+                if (post.comments.length < 2) {
+                  return;
+                }
+                if (post.comments[1].author === currentlyInspectedUser) {
+                  return <div className="whiteBox"><PostedComment
+                  index={i}
+                  currentPost={post}
+                  userName={userName}
+                  mainComment={mainComment}
+                  handleLikeComment={handleLikeComment}
+                  handleNestedComment={handleNestedComment}
+                  commentObj={post.comments[1]}
+                  targetedComment={post.comments[i]}
+                  writeComment={writeComment}
+                  submitComment={submitComment}
+                  currentSub={currentSub}
+                  nested={false}
+                  setIndex={setIndex}
+                  writeNestedComment={writeNestedComment}
+                  submitNestedComment={submitNestedComment}
+                  currentEditedComment={currentEditedComment}
+                  editComment={editComment}
+                  editNestedComment={editNestedComment}
+                  randomIntToString={randomIntToString}
+                  navToUserProfile={navToUserProfile}
+                  navToProfile={navToProfile}
+                 /></div>
+                }
+
+                if (post.comments.length < 3) {
+                  return;
+                }
+                if (post.comments[2].author === currentlyInspectedUser) {
+                  return <div className="whiteBox"><PostedComment
+                  index={i}
+                  currentPost={post}
+                  userName={userName}
+                  mainComment={mainComment}
+                  handleLikeComment={handleLikeComment}
+                  handleNestedComment={handleNestedComment}
+                  commentObj={post.comments[2]}
+                  targetedComment={post.comments[i]}
+                  writeComment={writeComment}
+                  submitComment={submitComment}
+                  currentSub={currentSub}
+                  nested={false}
+                  setIndex={setIndex}
+                  writeNestedComment={writeNestedComment}
+                  submitNestedComment={submitNestedComment}
+                  currentEditedComment={currentEditedComment}
+                  editComment={editComment}
+                  editNestedComment={editNestedComment}
+                  randomIntToString={randomIntToString}
+                  navToUserProfile={navToUserProfile}
+                  navToProfile={navToProfile}
+                 /></div>
+                }
+
+                if (post.comments.length < 4) {
+                  return;
+                }
+                if (post.comments[3].author === currentlyInspectedUser) {
+                  return <div className="whiteBox"><PostedComment
+                  index={i}
+                  currentPost={post}
+                  userName={userName}
+                  mainComment={mainComment}
+                  handleLikeComment={handleLikeComment}
+                  handleNestedComment={handleNestedComment}
+                  commentObj={post.comments[3]}
+                  targetedComment={post.comments[i]}
+                  writeComment={writeComment}
+                  submitComment={submitComment}
+                  currentSub={currentSub}
+                  nested={false}
+                  setIndex={setIndex}
+                  writeNestedComment={writeNestedComment}
+                  submitNestedComment={submitNestedComment}
+                  currentEditedComment={currentEditedComment}
+                  editComment={editComment}
+                  editNestedComment={editNestedComment}
+                  randomIntToString={randomIntToString}
+                  navToUserProfile={navToUserProfile}
+                  navToProfile={navToProfile}
+                 /></div>
+                }
+
+                if (post.comments.length < 5) {
+                  return;
+                }
+                if (post.comments[4].author === currentlyInspectedUser) {
+                  return <div className="whiteBox"><PostedComment
+                  index={i}
+                  currentPost={post}
+                  userName={userName}
+                  mainComment={mainComment}
+                  handleLikeComment={handleLikeComment}
+                  handleNestedComment={handleNestedComment}
+                  commentObj={post.comments[4]}
+                  targetedComment={post.comments[i]}
+                  writeComment={writeComment}
+                  submitComment={submitComment}
+                  currentSub={currentSub}
+                  nested={false}
+                  setIndex={setIndex}
+                  writeNestedComment={writeNestedComment}
+                  submitNestedComment={submitNestedComment}
+                  currentEditedComment={currentEditedComment}
+                  editComment={editComment}
+                  editNestedComment={editNestedComment}
+                  randomIntToString={randomIntToString}
+                  navToUserProfile={navToUserProfile}
+                  navToProfile={navToProfile}
+                 /></div>
+                }
+
+                if (post.comments.length < 6) {
+                  return;
+                }
+                if (post.comments[5].author === currentlyInspectedUser) {
+                  return <div className="whiteBox"><PostedComment
+                  index={i}
+                  currentPost={post}
+                  userName={userName}
+                  mainComment={mainComment}
+                  handleLikeComment={handleLikeComment}
+                  handleNestedComment={handleNestedComment}
+                  commentObj={post.comments[5]}
+                  targetedComment={post.comments[i]}
+                  writeComment={writeComment}
+                  submitComment={submitComment}
+                  currentSub={currentSub}
+                  nested={false}
+                  setIndex={setIndex}
+                  writeNestedComment={writeNestedComment}
+                  submitNestedComment={submitNestedComment}
+                  currentEditedComment={currentEditedComment}
+                  editComment={editComment}
+                  editNestedComment={editNestedComment}
+                  randomIntToString={randomIntToString}
+                  navToUserProfile={navToUserProfile}
+                  navToProfile={navToProfile}
+                 /></div>
+                }
+              })}
             
             {currentProfileSection === "posts" && posts.map((post, i) => {
               if (post.author !== currentlyInspectedUser) {
@@ -239,37 +413,178 @@ export default function ProfilePage (props:  ProfilePageProps) {
             })}
             
             {currentProfileSection === "comments" && posts.map((post, i) => {
-              if (post.author !== currentlyInspectedUser) {
-                return;
-              }
+                if (post.comments[0].author === currentlyInspectedUser) {
+                  return <div className="whiteBox"><PostedComment
+                  index={i}
+                  currentPost={post}
+                  userName={userName}
+                  mainComment={mainComment}
+                  handleLikeComment={handleLikeComment}
+                  handleNestedComment={handleNestedComment}
+                  commentObj={post.comments[0]}
+                  targetedComment={post.comments[i]}
+                  writeComment={writeComment}
+                  submitComment={submitComment}
+                  currentSub={currentSub}
+                  nested={false}
+                  setIndex={setIndex}
+                  writeNestedComment={writeNestedComment}
+                  submitNestedComment={submitNestedComment}
+                  currentEditedComment={currentEditedComment}
+                  editComment={editComment}
+                  editNestedComment={editNestedComment}
+                  randomIntToString={randomIntToString}
+                  navToUserProfile={navToUserProfile}
+                  navToProfile={navToProfile}
+                 /></div>
+                }
 
-              return <GridPost 
-              post={post}
-              posts={posts}
-              currentSub={currentSub} 
-              currentPost={currentPost}
-              handleNavigate={handleNavigate}
-              handleLike={handleLike}
-              openPost={openPost}
-              userName={userName}
-              mainComment={mainComment}
-              writeComment={writeComment}
-              submitComment={submitComment}
-              handleLikeComment={handleLikeComment}
-              loginStatus={loginStatus}
-              handleNestedComment={handleNestedComment}
-              setIndex={setIndex}
-              writeNestedComment={writeNestedComment}
-              submitNestedComment={submitNestedComment}
-              currentEditedComment={currentEditedComment}
-              editComment={editComment}
-              editNestedComment={editNestedComment}
-              randomIntToString={randomIntToString}
-              savePost={savePost}
-              navToUserProfile={navToUserProfile}
-              navToProfile={navToProfile}
-             />
-            })}
+                if (post.comments.length < 2) {
+                  return;
+                }
+                if (post.comments[1].author === currentlyInspectedUser) {
+                  return <div className="whiteBox"><PostedComment
+                  index={i}
+                  currentPost={post}
+                  userName={userName}
+                  mainComment={mainComment}
+                  handleLikeComment={handleLikeComment}
+                  handleNestedComment={handleNestedComment}
+                  commentObj={post.comments[1]}
+                  targetedComment={post.comments[i]}
+                  writeComment={writeComment}
+                  submitComment={submitComment}
+                  currentSub={currentSub}
+                  nested={false}
+                  setIndex={setIndex}
+                  writeNestedComment={writeNestedComment}
+                  submitNestedComment={submitNestedComment}
+                  currentEditedComment={currentEditedComment}
+                  editComment={editComment}
+                  editNestedComment={editNestedComment}
+                  randomIntToString={randomIntToString}
+                  navToUserProfile={navToUserProfile}
+                  navToProfile={navToProfile}
+                 /></div>
+                }
+
+                if (post.comments.length < 3) {
+                  return;
+                }
+                if (post.comments[2].author === currentlyInspectedUser) {
+                  return <div className="whiteBox"><PostedComment
+                  index={i}
+                  currentPost={post}
+                  userName={userName}
+                  mainComment={mainComment}
+                  handleLikeComment={handleLikeComment}
+                  handleNestedComment={handleNestedComment}
+                  commentObj={post.comments[2]}
+                  targetedComment={post.comments[i]}
+                  writeComment={writeComment}
+                  submitComment={submitComment}
+                  currentSub={currentSub}
+                  nested={false}
+                  setIndex={setIndex}
+                  writeNestedComment={writeNestedComment}
+                  submitNestedComment={submitNestedComment}
+                  currentEditedComment={currentEditedComment}
+                  editComment={editComment}
+                  editNestedComment={editNestedComment}
+                  randomIntToString={randomIntToString}
+                  navToUserProfile={navToUserProfile}
+                  navToProfile={navToProfile}
+                 /></div>
+                }
+
+                if (post.comments.length < 4) {
+                  return;
+                }
+                if (post.comments[3].author === currentlyInspectedUser) {
+                  return <div className="whiteBox"><PostedComment
+                  index={i}
+                  currentPost={post}
+                  userName={userName}
+                  mainComment={mainComment}
+                  handleLikeComment={handleLikeComment}
+                  handleNestedComment={handleNestedComment}
+                  commentObj={post.comments[3]}
+                  targetedComment={post.comments[i]}
+                  writeComment={writeComment}
+                  submitComment={submitComment}
+                  currentSub={currentSub}
+                  nested={false}
+                  setIndex={setIndex}
+                  writeNestedComment={writeNestedComment}
+                  submitNestedComment={submitNestedComment}
+                  currentEditedComment={currentEditedComment}
+                  editComment={editComment}
+                  editNestedComment={editNestedComment}
+                  randomIntToString={randomIntToString}
+                  navToUserProfile={navToUserProfile}
+                  navToProfile={navToProfile}
+                 /></div>
+                }
+
+                if (post.comments.length < 5) {
+                  return;
+                }
+                if (post.comments[4].author === currentlyInspectedUser) {
+                  return <div className="whiteBox"><PostedComment
+                  index={i}
+                  currentPost={post}
+                  userName={userName}
+                  mainComment={mainComment}
+                  handleLikeComment={handleLikeComment}
+                  handleNestedComment={handleNestedComment}
+                  commentObj={post.comments[4]}
+                  targetedComment={post.comments[i]}
+                  writeComment={writeComment}
+                  submitComment={submitComment}
+                  currentSub={currentSub}
+                  nested={false}
+                  setIndex={setIndex}
+                  writeNestedComment={writeNestedComment}
+                  submitNestedComment={submitNestedComment}
+                  currentEditedComment={currentEditedComment}
+                  editComment={editComment}
+                  editNestedComment={editNestedComment}
+                  randomIntToString={randomIntToString}
+                  navToUserProfile={navToUserProfile}
+                  navToProfile={navToProfile}
+                 /></div>
+                }
+
+                if (post.comments.length < 6) {
+                  return;
+                }
+                if (post.comments[5].author === currentlyInspectedUser) {
+                  return <div className="whiteBox"><PostedComment
+                  index={i}
+                  currentPost={post}
+                  userName={userName}
+                  mainComment={mainComment}
+                  handleLikeComment={handleLikeComment}
+                  handleNestedComment={handleNestedComment}
+                  commentObj={post.comments[5]}
+                  targetedComment={post.comments[i]}
+                  writeComment={writeComment}
+                  submitComment={submitComment}
+                  currentSub={currentSub}
+                  nested={false}
+                  setIndex={setIndex}
+                  writeNestedComment={writeNestedComment}
+                  submitNestedComment={submitNestedComment}
+                  currentEditedComment={currentEditedComment}
+                  editComment={editComment}
+                  editNestedComment={editNestedComment}
+                  randomIntToString={randomIntToString}
+                  navToUserProfile={navToUserProfile}
+                  navToProfile={navToProfile}
+                 /></div>
+                }
+              })}
+            </>
           </div>
         </div>
 

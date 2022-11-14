@@ -864,6 +864,7 @@ function App() {
       return;
     }
 
+    console.log(posts);
     const target = e.currentTarget;
     const targetParent = target.parentElement;
     const ancestor = targetParent?.parentElement;

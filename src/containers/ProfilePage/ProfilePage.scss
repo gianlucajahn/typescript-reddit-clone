@@ -61,6 +61,7 @@
                     font-family: "IBM Regular";
                     color: #1a1a1b;
                     margin-bottom: 23px;
+                    cursor: pointer;
                 }
 
                 .trophy-container {
@@ -69,12 +70,14 @@
                     img {
                         height: 41px;
                         width: 41px;
+                        cursor: pointer;
                     }
 
                     h3 {
                         font-family: "IBM Light";
                         margin-left: 8px;
                         margin-top: 3px;
+                        cursor: text;
                         font-size: 14px;
                     }
                 }
@@ -384,4 +387,12 @@
             }
         }
     }
+}
+
+.whiteBox {
+    background-color: white;
+    padding-top: 12px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 1px;
 }
