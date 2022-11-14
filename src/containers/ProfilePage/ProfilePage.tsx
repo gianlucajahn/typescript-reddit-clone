@@ -183,6 +183,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
               posts={posts}
               currentSub={currentSub} 
               currentPost={undefined}
+              currentlyInspectedUser={currentlyInspectedUser}
               handleNavigate={handleNavigate}
               handleLike={handleLike}
               openPost={openPost}
@@ -391,6 +392,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
               currentPost={currentPost}
               handleNavigate={handleNavigate}
               handleLike={handleLike}
+              currentlyInspectedUser={currentlyInspectedUser}
               openPost={openPost}
               userName={userName}
               mainComment={mainComment}
