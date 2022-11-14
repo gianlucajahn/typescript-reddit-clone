@@ -1,4 +1,5 @@
 import React, { MouseEventHandler, useState, SetStateAction, Dispatch } from 'react';
+import GridPost from '../../components/GridPost/GridPost';
 import SortBar from '../../components/SortBar/SortBar';
 import { Subreddits, Subreddit, Post } from '../../types/types';
 import './ProfilePage.scss';
@@ -29,6 +30,8 @@ export interface ProfilePageProps {
     openPost: MouseEventHandler,
     submitComment: MouseEventHandler,
     handleLikeComment: MouseEventHandler,
+    navToProfile: MouseEventHandler,
+    navToUserProfile: MouseEventHandler,
     handleNestedComment: MouseEventHandler,
     loginStatus: boolean,
     setLoginModalState: any,
@@ -51,6 +54,8 @@ export default function ProfilePage (props:  ProfilePageProps) {
     mainComment,
     writeComment,
     setSort,
+    navToProfile,
+    navToUserProfile,
     subreddits,
     topSubreddits,
     setIndex,
@@ -79,6 +84,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
     const [currentProfileSection, setCurrentProfileSection] = useState("overview");
     const [optionsExpanded, setOptionsExpanded] = useState(false);
     const [hoveredSection, setHoveredSection] = useState("none");
+    console.log(posts);
 
     const date = new Date();
     let day = date.getDate();
@@ -166,14 +172,103 @@ export default function ProfilePage (props:  ProfilePageProps) {
           />
 
           <div className="grid">
-            {posts.map((post, i) => {
+            {currentProfileSection === "overview" && posts.map((post, i) => {
               if (post.author !== currentlyInspectedUser) {
                 return;
               }
 
-              return <div>
+              return <GridPost 
+              post={post}
+              posts={posts}
+              currentSub={currentSub} 
+              currentPost={currentPost}
+              handleNavigate={handleNavigate}
+              handleLike={handleLike}
+              openPost={openPost}
+              userName={userName}
+              mainComment={mainComment}
+              writeComment={writeComment}
+              submitComment={submitComment}
+              handleLikeComment={handleLikeComment}
+              loginStatus={loginStatus}
+              handleNestedComment={handleNestedComment}
+              setIndex={setIndex}
+              writeNestedComment={writeNestedComment}
+              submitNestedComment={submitNestedComment}
+              currentEditedComment={currentEditedComment}
+              editComment={editComment}
+              editNestedComment={editNestedComment}
+              randomIntToString={randomIntToString}
+              savePost={savePost}
+              navToUserProfile={navToUserProfile}
+              navToProfile={navToProfile}
+             />
+            })}
+            
+            {currentProfileSection === "posts" && posts.map((post, i) => {
+              if (post.author !== currentlyInspectedUser) {
+                return;
+              }
 
-              </div>
+              return <GridPost 
+              post={post}
+              posts={posts}
+              currentSub={currentSub} 
+              currentPost={currentPost}
+              handleNavigate={handleNavigate}
+              handleLike={handleLike}
+              openPost={openPost}
+              userName={userName}
+              mainComment={mainComment}
+              writeComment={writeComment}
+              submitComment={submitComment}
+              handleLikeComment={handleLikeComment}
+              loginStatus={loginStatus}
+              handleNestedComment={handleNestedComment}
+              setIndex={setIndex}
+              writeNestedComment={writeNestedComment}
+              submitNestedComment={submitNestedComment}
+              currentEditedComment={currentEditedComment}
+              editComment={editComment}
+              editNestedComment={editNestedComment}
+              randomIntToString={randomIntToString}
+              savePost={savePost}
+              navToUserProfile={navToUserProfile}
+              navToProfile={navToProfile}
+             />
+            })}
+            
+            {currentProfileSection === "comments" && posts.map((post, i) => {
+              if (post.author !== currentlyInspectedUser) {
+                return;
+              }
+
+              return <GridPost 
+              post={post}
+              posts={posts}
+              currentSub={currentSub} 
+              currentPost={currentPost}
+              handleNavigate={handleNavigate}
+              handleLike={handleLike}
+              openPost={openPost}
+              userName={userName}
+              mainComment={mainComment}
+              writeComment={writeComment}
+              submitComment={submitComment}
+              handleLikeComment={handleLikeComment}
+              loginStatus={loginStatus}
+              handleNestedComment={handleNestedComment}
+              setIndex={setIndex}
+              writeNestedComment={writeNestedComment}
+              submitNestedComment={submitNestedComment}
+              currentEditedComment={currentEditedComment}
+              editComment={editComment}
+              editNestedComment={editNestedComment}
+              randomIntToString={randomIntToString}
+              savePost={savePost}
+              navToUserProfile={navToUserProfile}
+              navToProfile={navToProfile}
+             />
             })}
           </div>
         </div>

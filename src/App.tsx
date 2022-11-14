@@ -921,8 +921,16 @@ function App() {
         post.vote = -1;
       }
     }
-
-    setPosts([...posts, posts[id] = post]);
+    let copiedPosts = [...posts];
+    let newPosts = copiedPosts.map((posting, i) => {
+      if (posting.id !== post.id) {
+        return posting;
+      } else {
+        posting = post;
+        return posting;
+      }
+    })
+    setPosts(newPosts);
   }
 
   const commentNotification = (e: React.MouseEvent) => {
@@ -1515,6 +1523,8 @@ function App() {
           renderNum={renderNum}
           setRenderNum={setRenderNum}
           currentlyInspectedUser={currentlyInspectedUser}
+          navToProfile={navToProfile}
+          navToUserProfile={navToUserProfile}
         />} />
         <Route path='/submit' element={<SubmitPage
           randomIntToString={randomIntToString}
