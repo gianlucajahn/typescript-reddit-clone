@@ -631,6 +631,86 @@ export default function ProfilePage (props:  ProfilePageProps) {
               currentProfileSection={currentProfileSection}
              />
             })}
+            
+            {currentProfileSection === "upvoted" && posts.map((post, i) => {
+              if (post.vote !== 1) {
+                return;
+              }
+
+              if (post.author === userName) {
+                return;
+              }
+
+              return <GridPost 
+              post={post}
+              posts={posts}
+              currentSub={currentSub} 
+              currentPost={currentPost}
+              handleNavigate={handleNavigate}
+              handleLike={handleLike}
+              currentlyInspectedUser={currentlyInspectedUser}
+              openPost={openPost}
+              userName={userName}
+              mainComment={mainComment}
+              writeComment={writeComment}
+              submitComment={submitComment}
+              handleLikeComment={handleLikeComment}
+              loginStatus={loginStatus}
+              handleNestedComment={handleNestedComment}
+              setIndex={setIndex}
+              writeNestedComment={writeNestedComment}
+              submitNestedComment={submitNestedComment}
+              currentEditedComment={currentEditedComment}
+              editComment={editComment}
+              editNestedComment={editNestedComment}
+              randomIntToString={randomIntToString}
+              savePost={savePost}
+              navToUserProfile={navToUserProfile}
+              navToProfile={navToProfile}
+              nonUserData={nonUserData}
+              currentProfileSection={currentProfileSection}
+             />
+            })}
+            
+            {currentProfileSection === "downvoted" && posts.map((post, i) => {
+              if (post.vote !== -1) {
+                return;
+              }
+
+              if (post.author === userName) {
+                return;
+              }
+
+              return <GridPost 
+              post={post}
+              posts={posts}
+              currentSub={currentSub} 
+              currentPost={currentPost}
+              handleNavigate={handleNavigate}
+              handleLike={handleLike}
+              currentlyInspectedUser={currentlyInspectedUser}
+              openPost={openPost}
+              userName={userName}
+              mainComment={mainComment}
+              writeComment={writeComment}
+              submitComment={submitComment}
+              handleLikeComment={handleLikeComment}
+              loginStatus={loginStatus}
+              handleNestedComment={handleNestedComment}
+              setIndex={setIndex}
+              writeNestedComment={writeNestedComment}
+              submitNestedComment={submitNestedComment}
+              currentEditedComment={currentEditedComment}
+              editComment={editComment}
+              editNestedComment={editNestedComment}
+              randomIntToString={randomIntToString}
+              savePost={savePost}
+              navToUserProfile={navToUserProfile}
+              navToProfile={navToProfile}
+              nonUserData={nonUserData}
+              currentProfileSection={currentProfileSection}
+             />
+            })}
             </>
           </div>
         </div>
