@@ -78,6 +78,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
 
     const [currentProfileSection, setCurrentProfileSection] = useState("overview");
     const [optionsExpanded, setOptionsExpanded] = useState(false);
+    const [hoveredSection, setHoveredSection] = useState("none");
 
     const date = new Date();
     let day = date.getDate();
@@ -120,35 +121,40 @@ export default function ProfilePage (props:  ProfilePageProps) {
       card!.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
     }
 
+    const hoverSection = (e: React.MouseEvent) => {
+      const target = e.currentTarget;
+      setHoveredSection(target.id);
+    }
+
   return (
     <div className="profile-page">
       <div className="head">
-        <div className="section overview" id="overview" onClick={switchProfileSection} style={{ borderBottom: currentProfileSection === "overview" ? "2px solid #0079d3" : ""}}>
-          <h3 style={{ color: currentProfileSection === "overview" ? "#0079d3" : "#1a1a1b"}}>OVERVIEW</h3>
+        <div className="section overview" id="overview" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "overview" ? "2px solid #0079d3" : ""}}>
+          <h3 style={{ color: currentProfileSection === "overview" ? "#0079d3" : hoveredSection === "overview" ? "#0079d3" : "#1a1a1b"}}>OVERVIEW</h3>
         </div>
 
-        <div className="section posts" id="posts" onClick={switchProfileSection} style={{ borderBottom: currentProfileSection === "posts" ? "2px solid #0079d3" : ""}}>
-          <h3 style={{ color: currentProfileSection === "posts" ? "#0079d3" : "#1a1a1b"}}>POSTS</h3>
+        <div className="section posts" id="posts" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "posts" ? "2px solid #0079d3" : ""}}>
+          <h3 style={{ color: currentProfileSection === "posts" ? "#0079d3" : hoveredSection === "posts" ? "#0079d3" : "#1a1a1b"}}>POSTS</h3>
         </div>
 
-        <div className="section comments" id="comments" onClick={switchProfileSection} style={{ borderBottom: currentProfileSection === "comments" ? "2px solid #0079d3" : ""}}>
-          <h3 style={{ color: currentProfileSection === "comments" ? "#0079d3" : "#1a1a1b"}}>COMMENTS</h3>
+        <div className="section comments" id="comments" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "comments" ? "2px solid #0079d3" : ""}}>
+          <h3 style={{ color: currentProfileSection === "comments" ? "#0079d3" : hoveredSection === "comments" ? "#0079d3" : "#1a1a1b"}}>COMMENTS</h3>
         </div>
 
-        <div className="section saved" id="saved" onClick={switchProfileSection} style={{ borderBottom: currentProfileSection === "saved" ? "2px solid #0079d3" : ""}}>
-          <h3 style={{ color: currentProfileSection === "saved" ? "#0079d3" : "#1a1a1b"}}>SAVED</h3>
+        <div className="section saved" id="saved" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "saved" ? "2px solid #0079d3" : ""}}>
+          <h3 style={{ color: currentProfileSection === "saved" ? "#0079d3" : hoveredSection === "saved" ? "#0079d3" : "#1a1a1b"}}>SAVED</h3>
         </div>
 
-        <div className="section upvoted" id="upvoted" onClick={switchProfileSection} style={{ borderBottom: currentProfileSection === "upvoted" ? "2px solid #0079d3" : ""}}>
-          <h3 style={{ color: currentProfileSection === "upvoted" ? "#0079d3" : "#1a1a1b"}}>UPVOTED</h3>
+        <div className="section upvoted" id="upvoted" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "upvoted" ? "2px solid #0079d3" : ""}}>
+          <h3 style={{ color: currentProfileSection === "upvoted" ? "#0079d3" : hoveredSection === "upvoted" ? "#0079d3" : "#1a1a1b"}}>UPVOTED</h3>
         </div>
 
-        <div className="section downvoted" id="downvoted" onClick={switchProfileSection} style={{ borderBottom: currentProfileSection === "downvoted" ? "2px solid #0079d3" : ""}}>
-          <h3 style={{ color: currentProfileSection === "downvoted" ? "#0079d3" : "#1a1a1b"}}>DOWNVOTED</h3>
+        <div className="section downvoted" id="downvoted" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "downvoted" ? "2px solid #0079d3" : ""}}>
+          <h3 style={{ color: currentProfileSection === "downvoted" ? "#0079d3" : hoveredSection === "downvoted" ? "#0079d3" : "#1a1a1b"}}>DOWNVOTED</h3>
         </div>
 
-        <div className="section following" id="following" onClick={switchProfileSection} style={{ borderBottom: currentProfileSection === "following" ? "2px solid #0079d3" : ""}}>
-          <h3 style={{ color: currentProfileSection === "following" ? "#0079d3" : "#1a1a1b"}}>FOLLOWING</h3>
+        <div className="section following" id="following" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "following" ? "2px solid #0079d3" : ""}}>
+          <h3 style={{ color: currentProfileSection === "following" ? "#0079d3" : hoveredSection === "following" ? "#0079d3" : "#1a1a1b"}}>FOLLOWING</h3>
         </div>
       </div>
 
