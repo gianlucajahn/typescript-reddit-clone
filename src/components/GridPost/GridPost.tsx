@@ -22,6 +22,8 @@ export interface GridPostProps {
     randomIntToString: string,
     currentlyInspectedUser?: string | undefined,
     editNestedComment: any,
+    currentProfileSection?: string,
+    nonUserData?: any,
     navToUserProfile: MouseEventHandler | undefined,
     savePost: MouseEventHandler,
     submitNestedComment: MouseEventHandler,
@@ -42,6 +44,8 @@ export default function GridPost (props: GridPostProps) {
     currentPost,
     currentlyInspectedUser,
     mainComment,
+    currentProfileSection,
+    nonUserData,
     writeComment,
     currentEditedComment,
     loginStatus,
@@ -174,7 +178,7 @@ export default function GridPost (props: GridPostProps) {
 
             <div className="content">
                 {post.type === "text" ? 
-                <p className="src" style={{ width: currentPost === undefined ? "555px" : "662px" }}>{post.src}</p> : <img className="src" src={currentPost?.author === userName ? currentPost.src : location.pathname.includes("user") ? currentlyInspectedUser === userName ? post.src : require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`) : require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`)} style={{ maxWidth: currentPost === undefined ? "599px" : "698px" }} />}
+                <p className="src" style={{ width: currentPost === undefined ? "555px" : "662px" }}>{post.src}</p> : <img className="src" src={currentPost?.author === userName ? currentPost.src : location.pathname.includes("user") ? currentlyInspectedUser === userName ? nonUserData.includes(currentProfileSection) ? require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`) : post.src : require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`) : require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`)} style={{ maxWidth: currentPost === undefined ? "599px" : "698px" }} />}
             </div>
 
             <div className="footer">

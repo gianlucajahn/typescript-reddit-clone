@@ -86,6 +86,11 @@ export default function ProfilePage (props:  ProfilePageProps) {
     const [optionsExpanded, setOptionsExpanded] = useState(false);
     const [hoveredSection, setHoveredSection] = useState("none");
 
+    const nonUserData = [
+      "saved",
+      "upvoted",
+      "downvoted"
+    ];
     const date = new Date();
     let day = date.getDate();
     let monthNum = date.getMonth() + 1;
@@ -204,6 +209,8 @@ export default function ProfilePage (props:  ProfilePageProps) {
               savePost={savePost}
               navToUserProfile={navToUserProfile}
               navToProfile={navToProfile}
+              nonUserData={nonUserData}
+              currentProfileSection={currentProfileSection}
              />
             })}
             
@@ -411,6 +418,8 @@ export default function ProfilePage (props:  ProfilePageProps) {
               savePost={savePost}
               navToUserProfile={navToUserProfile}
               navToProfile={navToProfile}
+              nonUserData={nonUserData}
+              currentProfileSection={currentProfileSection}
              />
             })}
             
@@ -586,6 +595,42 @@ export default function ProfilePage (props:  ProfilePageProps) {
                  /></div>
                 }
               })}
+              
+              {currentProfileSection === "saved" && posts.map((post, i) => {
+              if (post.saved === false) {
+                return;
+              }
+
+              return <GridPost 
+              post={post}
+              posts={posts}
+              currentSub={currentSub} 
+              currentPost={currentPost}
+              handleNavigate={handleNavigate}
+              handleLike={handleLike}
+              currentlyInspectedUser={currentlyInspectedUser}
+              openPost={openPost}
+              userName={userName}
+              mainComment={mainComment}
+              writeComment={writeComment}
+              submitComment={submitComment}
+              handleLikeComment={handleLikeComment}
+              loginStatus={loginStatus}
+              handleNestedComment={handleNestedComment}
+              setIndex={setIndex}
+              writeNestedComment={writeNestedComment}
+              submitNestedComment={submitNestedComment}
+              currentEditedComment={currentEditedComment}
+              editComment={editComment}
+              editNestedComment={editNestedComment}
+              randomIntToString={randomIntToString}
+              savePost={savePost}
+              navToUserProfile={navToUserProfile}
+              navToProfile={navToProfile}
+              nonUserData={nonUserData}
+              currentProfileSection={currentProfileSection}
+             />
+            })}
             </>
           </div>
         </div>
