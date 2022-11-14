@@ -77,6 +77,8 @@ export default function ProfilePage (props:  ProfilePageProps) {
     } = props;
 
     const [currentProfileSection, setCurrentProfileSection] = useState("overview");
+    const [optionsExpanded, setOptionsExpanded] = useState(false);
+
     const date = new Date();
     let day = date.getDate();
     let monthNum = date.getMonth() + 1;
@@ -159,7 +161,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
         </div>
 
         <div className="info">
-          <div className="card">
+          <div className="card" style={{ height: optionsExpanded ? "722px" : "616px" }}>
             <div className="box">
               <img className="add-photo" src={require("../../resources/images/addphoto.png")} />
             </div>
@@ -212,10 +214,39 @@ export default function ProfilePage (props:  ProfilePageProps) {
                 <h3>Add GitHub</h3>
               </button>
             </div>
+
+            <button className="create" onClick={navToSubmit}>
+              New Post
+            </button>
+
+            {
+              optionsExpanded ? <div className="option-container">
+                <a href="https://reddit.zendesk.com/hc/en-us/articles/115002454126-What-kind-of-profile-moderation-tools-do-I-have-" target="_blank"><button className="optionButton">
+                  Profile Moderation
+                </button></a>
+
+                <a href="https://reddit.zendesk.com/hc/en-us/articles/360043043412-What-is-a-custom-feed-and-how-do-I-make-one-" target="_blank"><button className="optionButton">
+                  Add to Custom Feed
+                </button></a>
+
+                <button className="optionButton">
+                  Invite someone to chat
+                </button>
+              </div> : null
+            }
+
+            <button className="expandProfile switcher" onClick={(e) => setOptionsExpanded(!optionsExpanded)}>
+              {optionsExpanded ? "Fewer Options" : "More Options"}
+            </button>
           </div>
 
           <div className="trophies">
+            <h3>Trophy Case (1)</h3>
 
+            <div className="trophy-container">
+              <img className="tropy-icon" src={require("../../resources/images/onedayclub.png")} />
+              <h3>One-Day Club</h3>
+            </div>
           </div>
         </div>
       </div>
