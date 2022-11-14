@@ -77,6 +77,25 @@ export default function ProfilePage (props:  ProfilePageProps) {
     } = props;
 
     const [currentProfileSection, setCurrentProfileSection] = useState("overview");
+    const date = new Date();
+    let day = date.getDate();
+    let monthNum = date.getMonth() + 1;
+    let year = date.getFullYear();
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "June",
+      "Juli",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
+    let month = monthNames[monthNum - 1];
+    let creationDate = `${month} ${day}${day - 20 === 1 ? "st" : day - 30 === 1 ? "st" : day === 1 ? "st" : day - 20 === 2 ? "nd" : day === 2 ? "nd" : "th"}, ${year}`;
 
     const switchProfileSection = (e: React.MouseEvent) => {
       const target = e.currentTarget;
@@ -163,6 +182,24 @@ export default function ProfilePage (props:  ProfilePageProps) {
               <img className="shirt" src={require("../../resources/images/shirt.png")} />
               <h3>Style Avatar</h3>
             </button>
+
+            <div className="userdata">
+              <div className="karma-container">
+                <h3>Karma</h3>
+                <div className="flexbox">
+                  <img className="karma" src={require("../../resources/images/karma_blue.png")} />
+                  <h4>1</h4>
+                </div>
+              </div>
+
+              <div className="cake-container">
+                <h3>Cake day</h3>
+                <div className="flexbox">
+                  <img className="cake" src={require("../../resources/images/cake.png")} />
+                  <h4>{creationDate}</h4>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="trophies">
