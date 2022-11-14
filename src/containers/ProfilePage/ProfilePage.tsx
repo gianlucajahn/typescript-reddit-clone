@@ -161,7 +161,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
 
             <button className="style">
               <img className="shirt" src={require("../../resources/images/shirt.png")} />
-              Style Avatar
+              <h3>Style Avatar</h3>
             </button>
           </div>
 
