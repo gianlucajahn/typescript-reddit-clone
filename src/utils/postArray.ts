@@ -2331,7 +2331,7 @@ const postArray = [
         comments: [
             {
                 author: "AugustGnarly",
-                avatar: "10",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
