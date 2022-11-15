@@ -4509,7 +4509,7 @@ const postArray = [
             },
             {
                 author: "ash_bishop",
-                avatar: "7",
+                avatar: "9",
                 nested_lvl: 0,
                 nested_comments: [
 

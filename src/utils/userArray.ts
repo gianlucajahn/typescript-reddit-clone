@@ -2647,11 +2647,108 @@ const userArray = [
         added: false,
     },
     {
-        username: "Sin2k",
+        username: "thesituation531",
+        password: "defaultpassword",
+        avatar: "8",
+        trophies: [
+            "twoyearclub",
+            "commenter"
+        ],
+        following: [
+            ""
+        ],
+        reported: false,
+        added: false,
+    },
+    {
+        username: "rafaover",
+        password: "defaultpassword",
+        avatar: "13",
+        trophies: [
+            "fouryearclub",
+            "commenter"
+        ],
+        following: [
+            ""
+        ],
+        reported: false,
+        added: false,
+    },
+    {
+        username: "YungDwight",
+        password: "defaultpassword",
+        avatar: "2",
+        trophies: [
+            "commenter"
+        ],
+        following: [
+            ""
+        ],
+        reported: false,
+        added: false,
+    },
+    {
+        username: "amdgirl",
         password: "defaultpassword",
         avatar: "12",
         trophies: [
-            "threeyearclub",
+            "twoyearclub",
+            "photograph",
+            "poster"
+        ],
+        following: [
+            ""
+        ],
+        reported: false,
+        added: false,
+    },
+    {
+        username: "Royal-Author-669",
+        password: "defaultpassword",
+        avatar: "1",
+        trophies: [
+            "sixyearclub",
+            "commenter"
+        ],
+        following: [
+            ""
+        ],
+        reported: false,
+        added: false,
+    },
+    {
+        username: "404_Gordon_Not_Found",
+        password: "defaultpassword",
+        avatar: "8",
+        trophies: [
+            "twoyearclub",
+            "commenter"
+        ],
+        following: [
+            ""
+        ],
+        reported: false,
+        added: false,
+    },
+    {
+        username: "Wackmajor",
+        password: "defaultpassword",
+        avatar: "11",
+        trophies: [
+            "commenter"
+        ],
+        following: [
+            ""
+        ],
+        reported: false,
+        added: false,
+    },
+    {
+        username: "Pale_deadflower",
+        password: "defaultpassword",
+        avatar: "8",
+        trophies: [
+            "twoyearclub",
             "commenter"
         ],
         following: [
