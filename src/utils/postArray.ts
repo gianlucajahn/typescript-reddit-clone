@@ -543,7 +543,7 @@ const postArray = [
             },
             {
                 author: "[deleted]",
-                avatar: "13",
+                avatar: "1",
                 nested_lvl: 0,
                 nested_comments: [
 
