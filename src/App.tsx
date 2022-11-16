@@ -8,13 +8,14 @@ import { isReturnStatement, reduceEachTrailingCommentRange } from 'typescript';
 import LoginModal from './components/LoginModal/LoginModal';
 import subredditArray from './utils/subredditArray';
 import SubredditPage from './containers/SubredditPage/SubredditPage';
-import { Subreddits, Subreddit, Post, Comment, UserData, baseCustomPost, Draft, Notifications } from "./types/types";
+import { Subreddits, Subreddit, Post, Comment, UserData, baseCustomPost, Draft, Notifications, userObjectArray, userObject } from "./types/types";
 import postArray from './utils/postArray';
 import IndividualPost from './containers/individualPost/individualPost';
 import SubmitPage from './containers/SubmitPage/SubmitPage';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ProfilePage from './containers/ProfilePage/ProfilePage';
+import userArray from './utils/userArray';
 
 function App() {
   const location = useLocation();
@@ -27,6 +28,8 @@ function App() {
   const [topSubreddits, setTopSubreddits] = useState(subreddits.slice(0, 5));
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [userData, setUserData] = useState<userObjectArray>(userArray);
+  const [currentUserData, setCurrentUserData] = useState<userObject>();
   const [submitLoading, setSubmitLoading] = useState(false);
   const [searchDropdown, setSearchDropdown] = useState(false);
   const [notificationArray, setNotificationArray] = useState<Notifications>([]);
@@ -671,6 +674,13 @@ function App() {
     }
     setCurrentSub(undefined);
     setCurrentlyInspectedUser(target.id);
+    let userId = userData.findIndex(user => user.username === target.id);
+
+    if (userId === -1) {
+      return;
+    }
+
+    setCurrentUserData(userData[userId]);
     navigate(`/user/${target.id}`);
   }
 
@@ -1397,6 +1407,8 @@ function App() {
         notificationArray={notificationArray}
         notificationDropdown={notificationDropdown}
         setNotificationDropdown={setNotificiationDropdown}
+        userData={userData}
+        currentUserData={currentUserData}
       />
       <ToastContainer
         position="bottom-right"
@@ -1526,6 +1538,8 @@ function App() {
           currentlyInspectedUser={currentlyInspectedUser}
           navToProfile={navToProfile}
           navToUserProfile={navToUserProfile}
+          userData={userData}
+          currentUserData={currentUserData}
         />} />
         <Route path='/submit' element={<SubmitPage
           randomIntToString={randomIntToString}

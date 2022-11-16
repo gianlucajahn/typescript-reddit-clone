@@ -2,7 +2,7 @@ import React, { MouseEventHandler, useState, SetStateAction, Dispatch } from 're
 import GridPost from '../../components/GridPost/GridPost';
 import PostedComment from '../../components/PostedComment/PostedComment';
 import SortBar from '../../components/SortBar/SortBar';
-import { Subreddits, Subreddit, Post } from '../../types/types';
+import { Subreddits, Subreddit, Post, userObjectArray, userObject } from '../../types/types';
 import './ProfilePage.scss';
 
 export interface ProfilePageProps {
@@ -40,7 +40,9 @@ export interface ProfilePageProps {
     posts: Post[],
     currentPost: Post | undefined,
     mainComment: string,
-    writeComment: any
+    writeComment: any,
+    userData: userObjectArray,
+    currentUserData: userObject | undefined
 }
 
 export default function ProfilePage (props:  ProfilePageProps) {
@@ -79,7 +81,9 @@ export default function ProfilePage (props:  ProfilePageProps) {
     loginStatus,
     setLoginModalState,
     loginModalState,
-    posts
+    posts,
+    userData,
+    currentUserData
     } = props;
 
     const [currentProfileSection, setCurrentProfileSection] = useState("overview");

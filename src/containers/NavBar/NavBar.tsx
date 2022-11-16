@@ -8,7 +8,7 @@ import { ReactComponent as Expand } from "../../resources/images/expand.svg";
 import { ReactComponent as Star } from "../../resources/images/star.svg";
 import { ReactComponent as User } from "../../resources/images/user.svg";
 import { ObjectType } from 'typescript';
-import { Notification, Subreddit, Subreddits } from '../../types/types';
+import { Notification, Subreddit, Subreddits, userObject, userObjectArray } from '../../types/types';
 
 export interface NavBarProps {
   dropdownIsOpen: boolean,
@@ -24,6 +24,8 @@ export interface NavBarProps {
   notificationNum: number,
   searchDropdown: boolean,
   searchTerm: string,
+  userData: userObjectArray,
+  currentUserData: userObject | undefined,
   notificationDropdown: boolean,
   setSearchTerm: any,
   notificationArray: Notification[],
@@ -90,6 +92,8 @@ export default function NavBar (props: NavBarProps) {
     userName,
     loginStatus,
     notificationArray,
+    userData,
+    currentUserData,
     searchDropdown,
     joinedCommunities,
     subDropdownIsOpen,
@@ -136,7 +140,7 @@ export default function NavBar (props: NavBarProps) {
                 currentSub !== undefined ?  require(`../../resources/images/Communities/${currentSub.title}/icon.png`) 
                 : location.pathname.substring(0, 5) === "/user" 
                 ? require(`../../resources/images/${location.pathname.substring(6, 10) === userName.substring(0, 4) 
-                ? userName === "Nikola Tesla" ? "avatartesla_head.png" : `avatar${randomIntToString}_head.png` : "base_variants/default1.png"}`) : require("../../resources/images/home.png")} style={{ height: currentSub !== undefined ? "21px" : "18px" }} />
+                ? userName === "Nikola Tesla" ? "avatartesla_head.png" : `avatar${randomIntToString}_head.png` : `base_variants/default${currentUserData?.avatar}.png`}`) : require("../../resources/images/home.png")} style={{ height: currentSub !== undefined ? "21px" : "18px" }} />
               <h4 className="return subText">{submitPage ? "Create Post" : currentSub !== undefined ? "r/" + currentSub.title : location.pathname.substring(6, 10) === userName.substring(0, 4) ? `u/${userName}` : location.pathname.substring(0, 5) === "/user" ? `u/${location.pathname.substring(6)}` : "Home"}</h4>
             </div>
             <img src={require("../../resources/images/expand.png")} className="expand return" />

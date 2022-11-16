@@ -67,6 +67,18 @@ export type Post = {
     saved:     boolean;
 } 
 
+export type userObject = {
+    username: string;
+    password: string;
+    avatar: string;
+    trophies: string[];
+    following: string[];
+    reported: boolean;
+    added: boolean;
+}
+
+export type userObjectArray = userObject[];
+
 export interface Comment {
     author:  string;
     nesting: string;
@@ -134,3 +146,4 @@ export const baseCustomPost = {
       color: "#edeff1"
     }
 }
+
