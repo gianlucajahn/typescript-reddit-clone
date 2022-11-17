@@ -4889,6 +4889,7 @@ const userArray = [
         avatar: "2",
         trophies: [
             "fiveyearclub",
+            "poster",
             "commenter"
         ],
         following: [

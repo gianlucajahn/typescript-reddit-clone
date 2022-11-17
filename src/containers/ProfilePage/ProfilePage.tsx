@@ -835,7 +835,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
                 <h3>Cake day</h3>
                 <div className="flexbox">
                   <img className="cake" src={require("../../resources/images/cake.png")} />
-                  <h4>{creationDate}</h4>
+                  <h4>{currentlyInspectedUser === userName ? creationDate : currentUserData?.cakeday}</h4>
                 </div>
               </div>
             </div>
