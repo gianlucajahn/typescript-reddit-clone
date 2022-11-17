@@ -139,6 +139,32 @@ export default function ProfilePage (props:  ProfilePageProps) {
           setBackgroundColor("#46d160");
           break;
       }
+
+      if (userName === currentlyInspectedUser) {
+        if (userName === "Nikola Tesla") {
+          setBackgroundColor("#7193ff")
+        } else if (randomIntToString === "1") {
+          setBackgroundColor("#ff4500");
+        } else if (randomIntToString === "2") {
+          setBackgroundColor("#00b7d0");
+        } else if (randomIntToString === "3") {
+          setBackgroundColor("#ff4500");
+        } else if (randomIntToString === "4") {
+          setBackgroundColor("#ff4500");
+        } else if (randomIntToString === "5") {
+          setBackgroundColor("#d0c3c3");
+        } else if (randomIntToString === "6") {
+          setBackgroundColor("#ffeb0f");
+        } else if (randomIntToString === "7") {
+          setBackgroundColor("#14d8c3");
+        } else if (randomIntToString === "8") {
+          setBackgroundColor("#7193ff");
+        } else if (randomIntToString === "9") {
+          setBackgroundColor("#7193ff");
+        } else if (randomIntToString === "10") {
+          setBackgroundColor("#5dbbf6");
+        }
+      }
     }, []);
 
     const nonUserData = [
