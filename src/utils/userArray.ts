@@ -15,6 +15,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "10.482",
+        age: "5y",
+        color: "#7eed56"
     },
     {
         username: "THE_STOCKINGHATHERO",
@@ -29,6 +32,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "248",
+        age: "2y",
+        color: "#4856a3"
     },
     {
         username: "JebaTV",
@@ -45,6 +51,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "4.106",
+        age: "8mo",
+        color: "#94b3ff"
     },
     {
         username: "MrHvedrungr",
@@ -59,6 +68,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "102",
+        age: "3y",
+        color: "#e4abff"
     },
     {
         username: "K_Shou",
@@ -74,6 +86,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "4.729",
+        age: "9mo",
+        color: "#"
     },
     {
         username: "Psychological_Ad3329",
@@ -88,6 +103,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "95",
+        age: "1y",
+        color: "#"
     },
     {
         username: "mpwrd",
@@ -102,6 +120,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "482",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Texas_Persian",
@@ -116,6 +137,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "193",
+        age: "2y",
+        color: "#"
     },
     {
         username: "SpaceboysUsername",
@@ -130,6 +154,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "392",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Drump21",
@@ -143,6 +170,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "48",
+        age: "1y",
+        color: "#"
     },
     {
         username: "uncondolencednole91",
@@ -157,6 +187,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "938",
+        age: "4y",
+        color: "#"
     },
     {
         username: "SnaxelZ",
@@ -167,13 +200,15 @@ const userArray = [
             "popularpost",
             "poster",
             "commenter",
-            "newuser"
         ],
         following: [
             ""
         ],
         reported: false,
         added: false,
+        karma: "48.294",
+        age: "2y",
+        color: "#"
     },
     {
         username: "polarbearik",
@@ -188,6 +223,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "810",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Mescman",
@@ -202,6 +240,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "1.080",
+        age: "7y",
+        color: "#"
     },
     {
         username: "BodieBroadcasts",
@@ -216,6 +257,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "228",
+        age: "2y",
+        color: "#"
     },
     {
         username: "PeripheralAddition",
@@ -230,6 +274,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "184",
+        age: "2y",
+        color: "#"
     },
     {
         username: "LazySans",
@@ -244,6 +291,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "418",
+        age: "5y",
+        color: "#"
     },
     {
         username: "IWasVennBackThen",
@@ -260,6 +310,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "8.676",
+        age: "2y",
+        color: "#"
     },
     {
         username: "TeemoG0d69",
@@ -274,6 +327,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "988",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Floh_the_6th",
@@ -288,6 +344,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "118",
+        age: "2y",
+        color: "#"
     },
     {
         username: "caioxisd",
@@ -302,6 +361,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "285",
+        age: "6y",
+        color: "#"
     },
     {
         username: "AdYeti",
@@ -316,6 +378,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "108",
+        age: "2y",
+        color: "#"
     },
     {
         username: "smoovopr8r",
@@ -330,6 +395,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "578",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Leviathant",
@@ -344,6 +412,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "778",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Axdeimos",
@@ -357,6 +428,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "472",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Budsey",
@@ -371,6 +445,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "2.192",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Space-nudibranch",
@@ -384,6 +461,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "740",
+        age: "1y",
+        color: "#"
     },
     
     {
@@ -399,6 +479,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "402",
+        age: "7y",
+        color: "#"
     },
     {
         username: "stvbeev",
@@ -413,6 +496,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "364",
+        age: "2y",
+        color: "#"
     },
     {
         username: "KeyserSora",
@@ -430,6 +516,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "92.498",
+        age: "5y",
+        color: "#"
     },
     {
         username: "SwampYankee",
@@ -445,6 +534,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "4.270",
+        age: "4y",
+        color: "#"
     },
     {
         username: "NaturalLogofOne",
@@ -460,6 +552,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "2.477",
+        age: "4y",
+        color: "#"
     },
     {
         username: "eskeena",
@@ -474,6 +569,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "294",
+        age: "2y",
+        color: "#"
     },
     {
         username: "BuruArtLol",
@@ -490,6 +588,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "6.498",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Killerack",
@@ -504,6 +605,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "908",
+        age: "5y",
+        color: "#"
     },
     {
         username: "AshKetchup",
@@ -517,6 +621,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "572",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Tyler1",
@@ -531,6 +638,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "284",
+        age: "6y",
+        color: "#"
     },
     {
         username: "HenriqueAlberti",
@@ -545,6 +655,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "556",
+        age: "2y",
+        color: "#"
     },
     {
         username: "coffee_kazoo",
@@ -560,6 +673,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "5.382",
+        age: "4y",
+        color: "#"
     },
     {
         username: "mancinis_blessed_bat",
@@ -573,6 +689,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "48",
+        age: "1y",
+        color: "#"
     },
     {
         username: "ikeif",
@@ -587,6 +706,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "198",
+        age: "2y",
+        color: "#"
     },
     {
         username: "phasr0uk1",
@@ -601,6 +723,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "486",
+        age: "3y",
+        color: "#"
     },
     {
         username: "budspencer",
@@ -614,6 +739,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "220",
+        age: "1y",
+        color: "#"
     },
     {
         username: "ApolloFarZenith",
@@ -628,6 +756,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "194",
+        age: "2y",
+        color: "#"
     },
     {
         username: "AngreFreshTech",
@@ -642,6 +773,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "395",
+        age: "7y",
+        color: "#"
     },
     {
         username: "Dei_Photos",
@@ -659,6 +793,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "3.572",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Umpron",
@@ -673,6 +810,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "749",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Echo4708",
@@ -687,6 +827,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "567",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Forest_folf",
@@ -700,6 +843,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "372",
+        age: "1y",
+        color: "#"
     },
     {
         username: "spez",
@@ -715,6 +861,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "2.591",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Georgy_K_Zhukov",
@@ -730,6 +879,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "989",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Erestyn",
@@ -745,6 +897,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "958",
+        age: "2y",
+        color: "#"
     },
     {
         username: "RampagingKoala",
@@ -760,6 +915,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "4.272",
+        age: "4y",
+        color: "#"
     },
     {
         username: "Abedeus",
@@ -774,6 +932,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "732",
+        age: "2y",
+        color: "#"
     },
     {
         username: "SamManiac1998",
@@ -788,6 +949,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "126",
+        age: "1y",
+        color: "#"
     },
     {
         username: "natsingsing",
@@ -802,6 +966,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "327",
+        age: "2y",
+        color: "#"
     },
     {
         username: "LordSirLance",
@@ -816,6 +983,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "218",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Rikallion",
@@ -830,6 +1000,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "839",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Sir_Tea_Of_Bags",
@@ -843,6 +1016,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "217",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Junnielocked",
@@ -858,6 +1034,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "8.318",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Anniran",
@@ -871,6 +1050,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "538",
+        age: "1y",
+        color: "#"
     },
     {
         username: "LivingASlothsLife",
@@ -885,6 +1067,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "290",
+        age: "6y",
+        color: "#"
     },
     {
         username: "IamPlatycus",
@@ -899,6 +1084,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "281",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Ikcatcher",
@@ -912,6 +1100,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "103",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Mana_Transfer",
@@ -926,6 +1117,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "312",
+        age: "4y",
+        color: "#"
     },
     {
         username: "EternalMemes30",
@@ -942,6 +1136,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "5.729",
+        age: "4y",
+        color: "#"
     },
     {
         username: "SeniorGuava881",
@@ -956,6 +1153,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "482",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Mynorskull",
@@ -970,6 +1170,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "384",
+        age: "7y",
+        color: "#"
     },
     {
         username: "Skeither",
@@ -984,6 +1187,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "295",
+        age: "2y",
+        color: "#"
     },
     {
         username: "choccymilk0560",
@@ -998,6 +1204,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "184",
+        age: "3y",
+        color: "#"
     },
     {
         username: "MayureshMJ",
@@ -1012,6 +1221,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "308",
+        age: "3y",
+        color: "#"
     },
     {
         username: "onelass",
@@ -1025,6 +1237,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "371",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Captain-Marvel-92",
@@ -1039,6 +1254,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "487",
+        age: "3y",
+        color: "#"
     },
     {
         username: "MiniMonkey5041",
@@ -1053,6 +1271,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "732",
+        age: "5y",
+        color: "#"
     },
     {
         username: "jefrye",
@@ -1067,6 +1288,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "482",
+        age: "2y",
+        color: "#"
     },
     {
         username: "PrettyInWeed",
@@ -1080,6 +1304,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "100",
+        age: "1y",
+        color: "#"
     },
     {
         username: "iBudder3",
@@ -1095,6 +1322,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "5.328",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Business-Ad-274",
@@ -1109,6 +1339,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "344",
+        age: "2y",
+        color: "#"
     },
     {
         username: "hrnyirawan",
@@ -1123,6 +1356,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "877",
+        age: "6y",
+        color: "#"
     },
     {
         username: "ukendtkunst",
@@ -1137,6 +1373,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "472",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Adventurous_File_798",
@@ -1151,6 +1390,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "490",
+        age: "4y",
+        color: "#"
     },
     {
         username: "thatonejungler",
@@ -1164,6 +1406,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "92",
+        age: "1y",
+        color: "#"
     },
     {
         username: "doglop",
@@ -1177,6 +1422,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "78",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Dianamita",
@@ -1191,6 +1439,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "292",
+        age: "5y",
+        color: "#"
     },
     {
         username: "CrankyBear",
@@ -1207,6 +1458,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "499",
+        age: "3y",
+        color: "#"
     },
     {
         username: "ManyFails1Win",
@@ -1220,6 +1474,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "318",
+        age: "1y",
+        color: "#"
     },
     {
         username: "the_man_with_none",
@@ -1234,6 +1491,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "329",
+        age: "6y",
+        color: "#"
     },
     {
         username: "kaloschroma",
@@ -1248,6 +1508,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "739",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Para0234",
@@ -1261,6 +1524,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "229",
+        age: "1y",
+        color: "#"
     },
     {
         username: "12C_BlaK",
@@ -1274,6 +1540,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "164",
+        age: "1y",
+        color: "#"
     },
     {
         username: "swiftmen991",
@@ -1287,6 +1556,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "162",
+        age: "1y",
+        color: "#"
     },
     {
         username: "TheToadstools",
@@ -1301,6 +1573,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "492",
+        age: "4y",
+        color: "#"
     },
     {
         username: "xm1l1tiax",
@@ -1315,6 +1590,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "3.201",
+        age: "11mo",
+        color: "#"
     },
     {
         username: "StuckInBronze",
@@ -1329,6 +1607,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "820",
+        age: "7y",
+        color: "#"
     },
     {
         username: "Youthsonic",
@@ -1343,6 +1624,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "261",
+        age: "2y",
+        color: "#"
     },
     {
         username: "oldnative",
@@ -1357,6 +1641,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "294",
+        age: "3y",
+        color: "#"
     },
     {
         username: "castzpg",
@@ -1370,6 +1657,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "195",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Accurare_Medicine200",
@@ -1383,6 +1673,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "649",
+        age: "1y",
+        color: "#"
     },
     {
         username: "CreativeTechGuyGames",
@@ -1397,6 +1690,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "788",
+        age: "5y",
+        color: "#"
     },
     {
         username: "SeaProfessor3312",
@@ -1411,6 +1707,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "762",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Goldreaver",
@@ -1424,6 +1723,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "281",
+        age: "1y",
+        color: "#"
     },
     {
         username: "types_in_airplane",
@@ -1439,6 +1741,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "1.930",
+        age: "2y",
+        color: "#"
     },
     {
         username: "CruisinJoe22",
@@ -1454,6 +1759,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "6.382",
+        age: "3y",
+        color: "#"
     },
     {
         username: "xeenexus",
@@ -1468,6 +1776,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "829",
+        age: "4y",
+        color: "#"
     },
     {
         username: "SpecialExamination41",
@@ -1482,6 +1793,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "392",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Thomasinarina",
@@ -1496,6 +1810,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "298",
+        age: "4y",
+        color: "#"
     },
     {
         username: "LorenaBobbedIt",
@@ -1509,6 +1826,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "146",
+        age: "1y",
+        color: "#"
     },
     {
         username: "zootedzillenial",
@@ -1523,6 +1843,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "382",
+        age: "3y",
+        color: "#"
     },
     {
         username: "OptimalMongoose2",
@@ -1537,6 +1860,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "284",
+        age: "6y",
+        color: "#"
     },
     {
         username: "Mimiques",
@@ -1551,6 +1877,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "192",
+        age: "3y",
+        color: "#"
     },
     {
         username: "TheBigDuchess",
@@ -1565,6 +1894,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "930",
+        age: "4y",
+        color: "#"
     },
     {
         username: "powerlanguage",
@@ -1579,6 +1911,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "972",
+        age: "4y",
+        color: "#"
     },
     {
         username: "vasilypupkeen",
@@ -1592,6 +1927,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "290",
+        age: "7mo",
+        color: "#"
     },
     {
         username: "Letrabotttle",
@@ -1606,6 +1944,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "668",
+        age: "2y",
+        color: "#"
     },
     {
         username: "R3DT1D3",
@@ -1620,6 +1961,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "762",
+        age: "2y",
+        color: "#"
     },
     {
         username: "landoflobsters",
@@ -1635,6 +1979,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "3.592",
+        age: "4y",
+        color: "#"
     },
     {
         username: "Halaku",
@@ -1650,6 +1997,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "7.674",
+        age: "5y",
+        color: "#"
     },
     {
         username: "reusens",
@@ -1665,6 +2015,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "1.098",
+        age: "6y",
+        color: "#"
     },
     {
         username: "ILoveToEatLobster",
@@ -1679,6 +2032,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "128",
+        age: "4y",
+        color: "#"
     },
     {
         username: "Certain-Rope-2624",
@@ -1694,6 +2050,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "887",
+        age: "1y",
+        color: "#"
     },
     {
         username: "External_Camp",
@@ -1708,6 +2067,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "394",
+        age: "2y",
+        color: "#"
     },
     {
         username: "ash_bishop",
@@ -1722,6 +2084,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "37",
+        age: "3y",
+        color: "#"
     },
     {
         username: "closetedgae19",
@@ -1736,6 +2101,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "110",
+        age: "2y",
+        color: "#"
     },
     {
         username: "delightedknight3",
@@ -1749,6 +2117,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "90",
+        age: "1y",
+        color: "#"
     },
     {
         username: "CryptoDaily",
@@ -1763,6 +2134,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "674",
+        age: "7y",
+        color: "#"
     },
     {
         username: "XGallonsX",
@@ -1777,6 +2151,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "232",
+        age: "4y",
+        color: "#"
     },
     {
         username: "Wilder54321",
@@ -1790,6 +2167,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "222",
+        age: "1y",
+        color: "#"
     },
     {
         username: "OpticallyMosache",
@@ -1804,6 +2184,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "109",
+        age: "5y",
+        color: "#"
     },
     {
         username: "One_Steack_9554",
@@ -1817,6 +2200,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "482",
+        age: "1y",
+        color: "#"
     },
     {
         username: "ArieJ010",
@@ -1831,6 +2217,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "183",
+        age: "3y",
+        color: "#"
     },
     {
         username: "CompetitiveClerk97",
@@ -1845,6 +2234,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "333",
+        age: "4y",
+        color: "#"
     },
     {
         username: "maxpowerzttv",
@@ -1859,6 +2251,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "297",
+        age: "2y",
+        color: "#"
     },
     {
         username: "pomarine",
@@ -1876,6 +2271,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "11.294",
+        age: "4y",
+        color: "#"
     },
     {
         username: "verbi420",
@@ -1889,6 +2287,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "372",
+        age: "9mo",
+        color: "#"
     },
     {
         username: "TallAssociation0",
@@ -1904,6 +2305,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "1.110",
+        age: "4y",
+        color: "#"
     },
     {
         username: "coinfeeds-bot",
@@ -1918,6 +2322,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "378",
+        age: "2y",
+        color: "#"
     },
     {
         username: "bluesmaker",
@@ -1931,6 +2338,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "510",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Nuewim",
@@ -1945,6 +2355,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "508",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Half-BloodPrincess",
@@ -1962,6 +2375,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "401",
+        age: "6y",
+        color: "#"
     },
     {
         username: "Word62",
@@ -1976,6 +2392,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "602",
+        age: "4y",
+        color: "#"
     },
     {
         username: "VelociStardust",
@@ -1990,6 +2409,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "104",
+        age: "5y",
+        color: "#"
     },
     {
         username: "inky0210",
@@ -2004,6 +2426,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "218",
+        age: "7y",
+        color: "#"
     },
     {
         username: "romychestnut",
@@ -2017,6 +2442,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "163",
+        age: "1y",
+        color: "#"
     },
     {
         username: "the_nibler",
@@ -2031,6 +2459,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "227",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Rookslook",
@@ -2044,6 +2475,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "119",
+        age: "1y",
+        color: "#"
     },
     {
         username: "bad-crypto-advice",
@@ -2058,6 +2492,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "739",
+        age: "5y",
+        color: "#"
     },
     {
         username: "DynamoDylan",
@@ -2071,6 +2508,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "97",
+        age: "1y",
+        color: "#"
     },
     {
         username: "bigmaneting",
@@ -2085,6 +2525,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "444",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Ill_Be_Myself",
@@ -2099,6 +2542,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "375",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Ronnee51-yay",
@@ -2112,6 +2558,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "220",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Wangtawang",
@@ -2127,6 +2576,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "763",
+        age: "5y",
+        color: "#"
     },
     {
         username: "Mysterious-Post8193",
@@ -2141,6 +2593,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "86",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Dormage",
@@ -2155,6 +2610,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "120",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Palpitating_Rattus",
@@ -2169,6 +2627,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "392",
+        age: "4y",
+        color: "#"
     },
     {
         username: "21plankton",
@@ -2182,6 +2643,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "103",
+        age: "1y",
+        color: "#"
     },
     {
         username: "TrooKvlltBlack",
@@ -2196,6 +2660,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "2.402",
+        age: "1y",
+        color: "#"
     },
     {
         username: "AugustGnarly",
@@ -2210,6 +2677,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "583",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Toffeemanstar",
@@ -2224,6 +2694,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "438",
+        age: "7y",
+        color: "#"
     },
     {
         username: "CBvdb",
@@ -2239,6 +2712,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "7.492",
+        age: "3y",
+        color: "#"
     },
     {
         username: "glatadurgrutur",
@@ -2255,6 +2731,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "16.988",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Mountain_-_king",
@@ -2268,6 +2747,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "950",
+        age: "1y",
+        color: "#"
     },
     {
         username: "greeneggs93",
@@ -2282,6 +2764,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "186",
+        age: "2y",
+        color: "#"
     },
     {
         username: "LeeMBoro",
@@ -2296,6 +2781,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "294",
+        age: "3y",
+        color: "#"
     },
     {
         username: "samuraisports37",
@@ -2311,6 +2799,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "492",
+        age: "5y",
+        color: "#"
     },
     {
         username: "Jazzbo64",
@@ -2325,6 +2816,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "755",
+        age: "2y",
+        color: "#"
     },
     {
         username: "una_pistola",
@@ -2338,6 +2832,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "184",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Zhou_Da",
@@ -2351,6 +2848,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "65",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Desperate_Chim_343",
@@ -2365,6 +2865,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "802",
+        age: "4y",
+        color: "#"
     },
     {
         username: "mjmayank",
@@ -2380,6 +2883,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "3.335",
+        age: "3y",
+        color: "#"
     },
     {
         username: "RadioactiveFruitCup",
@@ -2394,6 +2900,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "295",
+        age: "4y",
+        color: "#"
     },
     {
         username: "Sin2k",
@@ -2408,6 +2917,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "546",
+        age: "3y",
+        color: "#"
     },
     {
         username: "KTGS",
@@ -2422,6 +2934,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "548",
+        age: "3y",
+        color: "#"
     },
     {
         username: "hamza1311",
@@ -2436,6 +2951,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "682",
+        age: "5y",
+        color: "#"
     },
     {
         username: "iocane_",
@@ -2450,6 +2968,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "111",
+        age: "3y",
+        color: "#"
     },
     {
         username: "bbakes25r",
@@ -2464,6 +2985,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "573",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Jayce86",
@@ -2478,6 +3002,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "308",
+        age: "2y",
+        color: "#"
     },
     {
         username: "NickyNicotine",
@@ -2492,6 +3019,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "742",
+        age: "5y",
+        color: "#"
     },
     {
         username: "PoetryIsAlive",
@@ -2506,6 +3036,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "372",
+        age: "7y",
+        color: "#"
     },
     {
         username: "dsphilly",
@@ -2519,6 +3052,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "208",
+        age: "1y",
+        color: "#"
     },
     {
         username: "dudelsson",
@@ -2533,6 +3069,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "304",
+        age: "2y",
+        color: "#"
     },
     {
         username: "BinkanSalaryman",
@@ -2546,6 +3085,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "308",
+        age: "1y",
+        color: "#"
     },
     {
         username: "ItsZayveeir",
@@ -2560,6 +3102,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "405",
+        age: "3y",
+        color: "#"
     },
     {
         username: "sokeTek",
@@ -2574,6 +3119,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "424",
+        age: "4y",
+        color: "#"
     },
     {
         username: "Shaggy_Pop",
@@ -2588,6 +3136,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "302",
+        age: "1y",
+        color: "#"
     },
     {
         username: "FVMAzalea",
@@ -2602,6 +3153,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "338",
+        age: "6y",
+        color: "#"
     },
     {
         username: "petescott",
@@ -2617,6 +3171,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "576",
+        age: "4y",
+        color: "#"
     },
     
     {
@@ -2631,6 +3188,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "194",
+        age: "1y",
+        color: "#"
     },
     {
         username: "AlesantroCorticeli",
@@ -2645,6 +3205,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "154",
+        age: "2y",
+        color: "#"
     },
     {
         username: "thesituation531",
@@ -2659,6 +3222,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "284",
+        age: "2y",
+        color: "#"
     },
     {
         username: "rafaover",
@@ -2673,6 +3239,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "205",
+        age: "4y",
+        color: "#"
     },
     {
         username: "YungDwight",
@@ -2686,6 +3255,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "90",
+        age: "1y",
+        color: "#"
     },
     {
         username: "amdgirl",
@@ -2701,6 +3273,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "358",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Royal-Author-669",
@@ -2715,6 +3290,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "402",
+        age: "6y",
+        color: "#"
     },
     {
         username: "404_Gordon_Not_Found",
@@ -2729,6 +3307,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "105",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Wackmajor",
@@ -2742,6 +3323,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "260",
+        age: "4mo",
+        color: "#"
     },
     {
         username: "Pale_deadflower",
@@ -2758,6 +3342,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "5.802",
+        age: "3y",
+        color: "#"
     },
     {
         username: "ibekt",
@@ -2772,6 +3359,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "427",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Bananasarelit",
@@ -2786,6 +3376,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "127",
+        age: "5y",
+        color: "#"
     },
     {
         username: "KevinTheIdk",
@@ -2803,6 +3396,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "11.709",
+        age: "7y",
+        color: "#"
     },
     {
         username: "TheGreenRaccoon07",
@@ -2817,6 +3413,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "466",
+        age: "5y",
+        color: "#"
     },
     {
         username: "Cest_La_Vie_101",
@@ -2831,6 +3430,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "342",
+        age: "4y",
+        color: "#"
     },
     {
         username: "NightcoreSpectrum",
@@ -2844,6 +3446,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "78",
+        age: "6mo",
+        color: "#"
     },
     {
         username: "ilovepaninies",
@@ -2858,6 +3463,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "663",
+        age: "3y",
+        color: "#"
     },
     {
         username: "[deleted]",
@@ -2872,6 +3480,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "0",
+        age: "4y",
+        color: "#"
     },
     
     {
@@ -2886,21 +3497,25 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "6",
+        age: "1y",
+        color: "#"
     },
     {
         username: "AutoModerator",
         password: "defaultpassword",
         avatar: "15",
         trophies: [
-            "threeyearclub",
-            "poster",
-            "commenter"
+
         ],
         following: [
             ""
         ],
         reported: false,
         added: false,
+        karma: "100.000",
+        age: "17y",
+        color: "#"
     },
     {
         username: "GigaChad450",
@@ -2915,6 +3530,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "284",
+        age: "2y",
+        color: "#"
     },
     {
         username: "littlepiggy",
@@ -2929,6 +3547,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "239",
+        age: "6y",
+        color: "#"
     },
     {
         username: "Simamonas",
@@ -2943,6 +3564,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "348",
+        age: "5y",
+        color: "#"
     },
     
     {
@@ -2958,6 +3582,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "382",
+        age: "2y",
+        color: "#"
     },
     {
         username: "15Nova22",
@@ -2972,6 +3599,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "56",
+        age: "4y",
+        color: "#"
     },
     {
         username: "tidder-wave",
@@ -2986,6 +3616,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "178",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Volfie",
@@ -3000,6 +3633,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "200",
+        age: "6y",
+        color: "#"
     },
     {
         username: "cutelyaware",
@@ -3014,6 +3650,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "160",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Kohouteky",
@@ -3028,6 +3667,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "158",
+        age: "5y",
+        color: "#"
     },
     {
         username: "thedarklord176",
@@ -3042,6 +3684,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "358",
+        age: "2y",
+        color: "#"
     },
     {
         username: "mbonty",
@@ -3055,6 +3700,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "74",
+        age: "8mo",
+        color: "#"
     },
     {
         username: "silly_frog_lf",
@@ -3069,6 +3717,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "502",
+        age: "3y",
+        color: "#"
     },
     {
         username: "rBasiCg",
@@ -3084,6 +3735,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "416",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Jump_Like_A_Willys",
@@ -3097,6 +3751,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "305",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Outrageous_Zebra_221",
@@ -3111,6 +3768,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "308",
+        age: "6y",
+        color: "#"
     },
     {
         username: "Cuda_BreakAway",
@@ -3125,6 +3785,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "489",
+        age: "7y",
+        color: "#"
     },
     {
         username: "shmeebaloney",
@@ -3139,6 +3802,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "530",
+        age: "2y",
+        color: "#"
     },
     {
         username: "black_rhombus",
@@ -3152,6 +3818,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "105",
+        age: "1y",
+        color: "#"
     },
     {
         username: "tnydancer444",
@@ -3167,6 +3836,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "608",
+        age: "5y",
+        color: "#"
     },
     {
         username: "muchandquick",
@@ -3181,6 +3853,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "486",
+        age: "5y",
+        color: "#"
     },
     {
         username: "adam1983adz",
@@ -3195,6 +3870,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "338",
+        age: "4y",
+        color: "#"
     },
     {
         username: "suga-kyun",
@@ -3209,6 +3887,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "366",
+        age: "7y",
+        color: "#"
     },
     {
         username: "PepsiCola7860",
@@ -3223,6 +3904,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "492",
+        age: "5y",
+        color: "#"
     },
     {
         username: "tuwono_tuwono",
@@ -3238,6 +3922,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "723",
+        age: "2y",
+        color: "#"
     },
     {
         username: "stingermarine",
@@ -3252,6 +3939,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "201",
+        age: "2y",
+        color: "#"
     },
     {
         username: "SmackEh",
@@ -3266,6 +3956,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "194",
+        age: "3y",
+        color: "#"
     },
     {
         username: "TheNextBatallion",
@@ -3280,6 +3973,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "295",
+        age: "4y",
+        color: "#"
     },
     {
         username: "AnnukinEarthwalker",
@@ -3293,6 +3989,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "108",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Deavs",
@@ -3306,6 +4005,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "284",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Tortious_Tortoise",
@@ -3320,6 +4022,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "638",
+        age: "7y",
+        color: "#"
     },
     {
         username: "asiantuttle",
@@ -3333,6 +4038,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "332",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Lowsmithy",
@@ -3347,6 +4055,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "264",
+        age: "2y",
+        color: "#"
     },
     {
         username: "MacNReee",
@@ -3361,6 +4072,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "572",
+        age: "4y",
+        color: "#"
     },
     {
         username: "MarvelsGrantMan136",
@@ -3377,6 +4091,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "5.540",
+        age: "3y",
+        color: "#"
     },
     {
         username: "robodrew",
@@ -3392,6 +4109,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "1.832",
+        age: "4y",
+        color: "#"
     },
     {
         username: "Writing_Gods",
@@ -3407,6 +4127,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "728",
+        age: "2y",
+        color: "#"
     },
     {
         username: "TetrisCube",
@@ -3421,6 +4144,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "294",
+        age: "6y",
+        color: "#"
     },
     {
         username: "curryybacon",
@@ -3437,6 +4163,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "2.749",
+        age: "2y",
+        color: "#"
     },
     {
         username: "HokageEzio",
@@ -3452,6 +4181,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "1.458",
+        age: "7y",
+        color: "#"
     },
     {
         username: "CoachJW",
@@ -3467,6 +4199,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "1.038",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Bennett1984",
@@ -3482,6 +4217,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "748",
+        age: "5y",
+        color: "#"
     },
     {
         username: "HopScotchiScotch",
@@ -3496,6 +4234,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "72",
+        age: "6y",
+        color: "#"
     },
     {
         username: "donsanedrin",
@@ -3510,6 +4251,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "228",
+        age: "7y",
+        color: "#"
     },
     {
         username: "TheSmokeSalmon420",
@@ -3525,6 +4269,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "748",
+        age: "2y",
+        color: "#"
     },
     {
         username: "mansmurf",
@@ -3540,6 +4287,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "535",
+        age: "6y",
+        color: "#"
     },
     {
         username: "KyrieWetUpCurry_",
@@ -3555,6 +4305,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "682",
+        age: "3y",
+        color: "#"
     },
     {
         username: "NevermoreSEA",
@@ -3569,6 +4322,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "203",
+        age: "2y",
+        color: "#"
     },
     {
         username: "PhantomThiefJoker",
@@ -3583,6 +4339,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "404",
+        age: "5y",
+        color: "#"
     },
     {
         username: "maitreg",
@@ -3597,6 +4356,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "175",
+        age: "2y",
+        color: "#"
     },
     {
         username: "GammaGargoyle",
@@ -3611,6 +4373,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "107",
+        age: "4y",
+        color: "#"
     },
     {
         username: "OptionalMind",
@@ -3624,6 +4389,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "55",
+        age: "1y",
+        color: "#"
     },
     {
         username: "sfboots",
@@ -3638,6 +4406,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "396",
+        age: "5y",
+        color: "#"
     },
     {
         username: "pakidara",
@@ -3652,6 +4423,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "210",
+        age: "2y",
+        color: "#"
     },
     {
         username: "marketGOATS",
@@ -3667,6 +4441,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "488",
+        age: "3y",
+        color: "#"
     },
     {
         username: "ChrisStoneGermany",
@@ -3681,6 +4458,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "292",
+        age: "5y",
+        color: "#"
     },
     {
         username: "PoetLucy",
@@ -3694,6 +4474,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "285",
+        age: "1y",
+        color: "#"
     },
     {
         username: "PoetBakerBuck",
@@ -3708,6 +4491,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "390",
+        age: "7y",
+        color: "#"
     },
     {
         username: "flockofbeachturkeys",
@@ -3722,6 +4508,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "402",
+        age: "3y",
+        color: "#"
     },
     {
         username: "reddit445",
@@ -3736,6 +4525,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "277",
+        age: "5y",
+        color: "#"
     },
     {
         username: "StupidDIYQs",
@@ -3749,6 +4541,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "154",
+        age: "1y",
+        color: "#"
     },
     {
         username: "brain____dead",
@@ -3763,6 +4558,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "308",
+        age: "7y",
+        color: "#"
     },
     {
         username: "sevgonlernassau",
@@ -3777,6 +4575,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "166",
+        age: "2y",
+        color: "#"
     },
     {
         username: "sardineflavouredass",
@@ -3791,6 +4592,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "358",
+        age: "6y",
+        color: "#"
     },
     {
         username: "DanelleDee",
@@ -3805,6 +4609,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "340",
+        age: "5y",
+        color: "#"
     },
     {
         username: "mrssymea",
@@ -3819,6 +4626,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "102",
+        age: "5y",
+        color: "#"
     },
     {
         username: "agajabigaba",
@@ -3832,6 +4642,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "200",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Particular_ad_2534",
@@ -3845,6 +4658,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "112",
+        age: "1y",
+        color: "#"
     },
     {
         username: "GeneralHumanBeing",
@@ -3859,6 +4675,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "329",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Oh_Them_Again",
@@ -3873,6 +4692,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "296",
+        age: "2y",
+        color: "#"
     },
     {
         username: "waldohasleftus",
@@ -3886,6 +4708,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "92",
+        age: "8mo",
+        color: "#"
     },
     {
         username: "Brief_Ad_1489",
@@ -3900,6 +4725,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "328",
+        age: "4y",
+        color: "#"
     },
     {
         username: "hhairy",
@@ -3914,6 +4742,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "284",
+        age: "6y",
+        color: "#"
     },
     {
         username: "kanakull",
@@ -3929,6 +4760,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "591",
+        age: "2y",
+        color: "#"
     },
     {
         username: "LetsGetHivern",
@@ -3943,6 +4777,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "449",
+        age: "4y",
+        color: "#"
     },
     {
         username: "sinned82",
@@ -3957,6 +4794,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "388",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Joe_Dirte9",
@@ -3970,6 +4810,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "90",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Tired_JoyBoy",
@@ -3984,6 +4827,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "187",
+        age: "2y",
+        color: "#"
     },
     {
         username: "ptupper",
@@ -3999,6 +4845,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "683",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Garfield_theThird",
@@ -4013,6 +4862,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "620",
+        age: "3y",
+        color: "#"
     },
     {
         username: "coldmexicantea",
@@ -4027,6 +4879,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "210",
+        age: "2y",
+        color: "#"
     },
     {
         username: "_goodpraxis",
@@ -4041,6 +4896,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "240",
+        age: "3y",
+        color: "#"
     },
     {
         username: "B0rtles",
@@ -4056,6 +4914,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "233",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Sweaty_Assignment_90",
@@ -4070,6 +4931,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "166",
+        age: "5y",
+        color: "#"
     },
     {
         username: "Best-Jello",
@@ -4083,6 +4947,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "37",
+        age: "1y",
+        color: "#"
     },
     {
         username: "stratguy56",
@@ -4097,6 +4964,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "420",
+        age: "2y",
+        color: "#"
     },
     {
         username: "Lilica_Golden_SHIB",
@@ -4111,6 +4981,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "206",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Ineedanaccountthx",
@@ -4125,6 +4998,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "308",
+        age: "7y",
+        color: "#"
     },
     {
         username: "cowboy_shaman",
@@ -4139,6 +5015,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "276",
+        age: "4y",
+        color: "#"
     },
     {
         username: "MilesBrooksTax",
@@ -4152,6 +5031,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "281",
+        age: "1y",
+        color: "#"
     },
     {
         username: "UhhhWhatHappen",
@@ -4166,6 +5048,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "184",
+        age: "3y",
+        color: "#"
     },
     {
         username: "ZorroMeansFox",
@@ -4179,6 +5064,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "194",
+        age: "1y",
+        color: "#"
     },
     {
         username: "Longjumping-B",
@@ -4193,6 +5081,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "299",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Lower_Cantaloupe1970",
@@ -4207,6 +5098,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "362",
+        age: "6y",
+        color: "#"
     },
     {
         username: "darkness_escape",
@@ -4221,6 +5115,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "144",
+        age: "2y",
+        color: "#"
     },
     {
         username: "secoccular",
@@ -4235,6 +5132,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "374",
+        age: "4y",
+        color: "#"
     },
     {
         username: "makarmackinnonstan",
@@ -4250,6 +5150,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "470",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Yoshable",
@@ -4263,6 +5166,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "122",
+        age: "1y",
+        color: "#"
     },
     {
         username: "hiimred2",
@@ -4277,6 +5183,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "84",
+        age: "2y",
+        color: "#"
     },
     {
         username: "OverusedRedditJoke",
@@ -4291,6 +5200,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "182",
+        age: "3y",
+        color: "#"
     },
     {
         username: "-Fellaini",
@@ -4305,6 +5217,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "294",
+        age: "2y",
+        color: "#"
     },
     {
         username: "dan_obrien",
@@ -4318,6 +5233,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "107",
+        age: "1y",
+        color: "#"
     },
     {
         username: "DescriptionNo5362",
@@ -4332,6 +5250,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "211",
+        age: "3y",
+        color: "#"
     },
     {
         username: "ChamberDavs",
@@ -4346,6 +5267,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "208",
+        age: "2y",
+        color: "#"
     },
     {
         username: "badthird",
@@ -4360,6 +5284,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "205",
+        age: "6y",
+        color: "#"
     },
     {
         username: "rostron92",
@@ -4373,6 +5300,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "173",
+        age: "1y",
+        color: "#"
     },
     {
         username: "TradeRaptor",
@@ -4387,6 +5317,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "160",
+        age: "3y",
+        color: "#"
     },
     {
         username: "BlazingHotFireFox",
@@ -4401,6 +5334,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "478",
+        age: "7y",
+        color: "#"
     },
     {
         username: "Maxx3141",
@@ -4415,6 +5351,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "208",
+        age: "3y",
+        color: "#"
     },
     {
         username: "Setyman",
@@ -4429,6 +5368,9 @@ const userArray = [
         ],
         reported: false,
         added: false,
+        karma: "158",
+        age: "2y",
+        color: "#"
     },
 ]
 

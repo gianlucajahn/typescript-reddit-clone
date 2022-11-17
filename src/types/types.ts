@@ -75,6 +75,9 @@ export type userObject = {
     following: string[];
     reported: boolean;
     added: boolean;
+    karma: string;
+    age: string;
+    color: string;
 }
 
 export type userObjectArray = userObject[];

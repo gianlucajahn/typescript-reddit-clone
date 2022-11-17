@@ -156,21 +156,21 @@ export default function ProfilePage (props:  ProfilePageProps) {
           <h3 style={{ color: currentProfileSection === "comments" ? "#0079d3" : hoveredSection === "comments" ? "#0079d3" : "#1a1a1b"}}>COMMENTS</h3>
         </div>
 
-        <div className="section saved" id="saved" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "saved" ? "2px solid #0079d3" : ""}}>
+        {currentlyInspectedUser === userName && <div className="section saved" id="saved" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "saved" ? "2px solid #0079d3" : ""}}>
           <h3 style={{ color: currentProfileSection === "saved" ? "#0079d3" : hoveredSection === "saved" ? "#0079d3" : "#1a1a1b"}}>SAVED</h3>
-        </div>
+        </div>}
 
-        <div className="section upvoted" id="upvoted" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "upvoted" ? "2px solid #0079d3" : ""}}>
+        {currentlyInspectedUser === userName && <div className="section upvoted" id="upvoted" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "upvoted" ? "2px solid #0079d3" : ""}}>
           <h3 style={{ color: currentProfileSection === "upvoted" ? "#0079d3" : hoveredSection === "upvoted" ? "#0079d3" : "#1a1a1b"}}>UPVOTED</h3>
-        </div>
+        </div>}
 
-        <div className="section downvoted" id="downvoted" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "downvoted" ? "2px solid #0079d3" : ""}}>
+        {currentlyInspectedUser === userName && <div className="section downvoted" id="downvoted" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "downvoted" ? "2px solid #0079d3" : ""}}>
           <h3 style={{ color: currentProfileSection === "downvoted" ? "#0079d3" : hoveredSection === "downvoted" ? "#0079d3" : "#1a1a1b"}}>DOWNVOTED</h3>
-        </div>
+        </div>}
 
-        <div className="section following" id="following" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "following" ? "2px solid #0079d3" : ""}}>
+        {currentlyInspectedUser === userName && <div className="section following" id="following" onClick={switchProfileSection} onMouseEnter={(e) => setHoveredSection(e.currentTarget.id)} onMouseLeave={(e) => setHoveredSection("none")} style={{ borderBottom: currentProfileSection === "following" ? "2px solid #0079d3" : ""}}>
           <h3 style={{ color: currentProfileSection === "following" ? "#0079d3" : hoveredSection === "following" ? "#0079d3" : "#1a1a1b"}}>FOLLOWING</h3>
-        </div>
+        </div>}
       </div>
 
       <div className="profile-content">
@@ -727,7 +727,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
             <img className="settings" src={require("../../resources/images/bluesettings.png")} />
             <div className="d-card" onMouseMove={hoverCard} id="card" onMouseLeave={resetCard}>
               <div className="card-content">
-                <img className="card-icon" src={userName === "Nikola Tesla" ? userName === currentlyInspectedUser ? require(`../../resources/images/avatartesla_head.png`) : require("../../resources/images/base_variants/default1.png") : userName === currentlyInspectedUser ? require(`../../resources/images/avatar${randomIntToString}_head.png`) : require("../../resources/images/base_variants/default1.png")} />
+                <img className="card-icon" src={userName === "Nikola Tesla" ? userName === currentlyInspectedUser ? require(`../../resources/images/avatartesla_head.png`) : require(`../../resources/images/base_variants/default${currentUserData?.avatar}.png`) : userName === currentlyInspectedUser ? require(`../../resources/images/avatar${randomIntToString}_head.png`) : require("../../resources/images/base_variants/default1.png")} />
               </div>
             </div>
 
