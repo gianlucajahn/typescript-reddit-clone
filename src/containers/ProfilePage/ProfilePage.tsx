@@ -118,7 +118,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
           setBackgroundColor("#7eed56");
           break;
         case "9":
-          setBackgroundColor("#212224");
+          setBackgroundColor("#4856a3");
           break;
         case "10":
           setBackgroundColor("#d4e815");
@@ -877,12 +877,27 @@ export default function ProfilePage (props:  ProfilePageProps) {
           </div>
 
           <div className="trophies">
-            <h3>Trophy Case (1)</h3>
+            <h3>Trophy Case ({currentUserData?.trophies.length})</h3>
 
-            <div className="trophy-container">
-              <img className="tropy-icon" src={require("../../resources/images/onedayclub.png")} />
-              <h3>One-Day Club</h3>
-            </div>
+            {currentUserData?.trophies.map((trophy, i) => {
+              return <div className="trophy-container">
+                <img className="tropy-icon" src={require(`../../resources/images/${trophy}.png`)} />
+                <h3>{trophy === "sevenyearclub" ? "Seven-Year Club" : 
+                     trophy === "sixyearclub" ? "Six-Year Club" : 
+                     trophy === "fiveyearclub" ? "Five-Year Club" :
+                     trophy === "fouryearclub" ? "Four-Year Club" :
+                     trophy === "threeyearclub" ? "Three-Year Club" :
+                     trophy === "twoyearclub" ? "Two-Year Club" :
+                     trophy === "onedayclub" ? "One-Day Club" :
+                     trophy === "popularpost" ? "Popular Post" :
+                     trophy === "photograph" ? "Photographer" :
+                     trophy === "poster" ? "Post Creator" :
+                     trophy === "popularcomment" ? "Popular Comment" :
+                     trophy === "commenter" ? "Commenter" :
+                     trophy === "betauser" ? "Beta User" :
+                     trophy === "newuser" ? "New User" : ""}</h3>
+              </div>
+            })}
           </div>
         </div>
       </div>

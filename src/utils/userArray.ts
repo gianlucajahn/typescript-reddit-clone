@@ -310,7 +310,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "8.676",
+        karma: "28.676",
         age: "2y",
         color: "#"
     },
