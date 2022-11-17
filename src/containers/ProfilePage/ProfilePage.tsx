@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState, SetStateAction, Dispatch } from 'react';
+import React, { MouseEventHandler, useState, SetStateAction, Dispatch, useEffect } from 'react';
 import GridPost from '../../components/GridPost/GridPost';
 import PostedComment from '../../components/PostedComment/PostedComment';
 import SortBar from '../../components/SortBar/SortBar';
@@ -89,6 +89,57 @@ export default function ProfilePage (props:  ProfilePageProps) {
     const [currentProfileSection, setCurrentProfileSection] = useState("overview");
     const [optionsExpanded, setOptionsExpanded] = useState(false);
     const [hoveredSection, setHoveredSection] = useState("none");
+    const [backgroundColor, setBackgroundColor] = useState("");
+
+    useEffect(() => {
+      switch (currentUserData?.avatar) {
+        case "1":
+          setBackgroundColor("#51e9f4");
+          break;
+        case "2":
+          setBackgroundColor("#ffd635");
+          break;
+        case "3":
+          setBackgroundColor("#0079d3");
+          break;
+        case "4":
+          setBackgroundColor("#94b3ff");
+          break;
+        case "5":
+          setBackgroundColor("#e4abff");
+          break;
+        case "6":
+          setBackgroundColor("#ff99aa");
+          break;
+        case "7":
+          setBackgroundColor("#0079d2");
+          break;
+        case "8":
+          setBackgroundColor("#7eed56");
+          break;
+        case "9":
+          setBackgroundColor("#212224");
+          break;
+        case "10":
+          setBackgroundColor("#d4e815");
+          break;
+        case "11":
+          setBackgroundColor("#ffb470");
+          break;
+        case "12":
+          setBackgroundColor("#ff66ac");
+          break;
+        case "13":
+          setBackgroundColor("#c18d42");
+          break;
+        case "14":
+          setBackgroundColor("#ff5105");
+          break;
+        case "15":
+          setBackgroundColor("#46d160");
+          break;
+      }
+    }, []);
 
     const nonUserData = [
       "saved",
@@ -725,7 +776,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
               <img className="add-photo" src={require("../../resources/images/addphoto.png")} />
             </div>
             <img className="settings" src={require("../../resources/images/bluesettings.png")} />
-            <div className="d-card" onMouseMove={hoverCard} id="card" onMouseLeave={resetCard}>
+            <div className="d-card" onMouseMove={hoverCard} id="card" onMouseLeave={resetCard} style={{ backgroundColor: backgroundColor }}>
               <div className="card-content">
                 <img className="card-icon" src={userName === "Nikola Tesla" ? userName === currentlyInspectedUser ? require(`../../resources/images/avatartesla_head.png`) : require(`../../resources/images/base_variants/default${currentUserData?.avatar}.png`) : userName === currentlyInspectedUser ? require(`../../resources/images/avatar${randomIntToString}_head.png`) : require("../../resources/images/base_variants/default1.png")} />
               </div>
@@ -737,7 +788,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
             </button>
             
             <h1>{currentlyInspectedUser === userName ? userName : currentlyInspectedUser}</h1>
-            <h4>u/{currentlyInspectedUser === userName ? userName : currentlyInspectedUser} · 1d</h4>
+            <h4>u/{currentlyInspectedUser === userName ? userName : currentlyInspectedUser} · {currentlyInspectedUser === userName ? "1d" : currentUserData?.age}</h4>
 
             <button className="style">
               <img className="shirt" src={require("../../resources/images/shirt.png")} />
@@ -749,7 +800,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
                 <h3>Karma</h3>
                 <div className="flexbox">
                   <img className="karma" src={require("../../resources/images/karma_blue.png")} />
-                  <h4>1</h4>
+                  <h4>{currentlyInspectedUser === userName ? "1" : currentUserData?.karma}</h4>
                 </div>
               </div>
 

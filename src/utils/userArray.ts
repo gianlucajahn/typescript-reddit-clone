@@ -4612,6 +4612,22 @@ const userArray = [
         karma: "340",
         age: "5y",
         color: "#"
+    },    {
+        username: "DeepfkingValuesDad",
+        password: "defaultpassword",
+        avatar: "2",
+        trophies: [
+            "fiveyearclub",
+            "commenter"
+        ],
+        following: [
+            ""
+        ],
+        reported: false,
+        added: false,
+        karma: "290",
+        age: "5y",
+        color: "#"
     },
     {
         username: "mrssymea",
