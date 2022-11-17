@@ -15,7 +15,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "10.482",
+        karma: "30.482",
         age: "5y",
         color: "#7eed56"
     },
@@ -3506,7 +3506,9 @@ const userArray = [
         password: "defaultpassword",
         avatar: "15",
         trophies: [
-
+            "betauser",
+            "poster",
+            "commenter"
         ],
         following: [
             ""

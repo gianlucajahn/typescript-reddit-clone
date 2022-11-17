@@ -1,4 +1,5 @@
 import React, { MouseEventHandler, useState, SetStateAction, Dispatch, useEffect } from 'react';
+import BackToTopButton from '../../components/BackToTopButton/BackToTopButton';
 import GridPost from '../../components/GridPost/GridPost';
 import PostedComment from '../../components/PostedComment/PostedComment';
 import SortBar from '../../components/SortBar/SortBar';
@@ -799,7 +800,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
         <div className="info">
           <div className="card" style={{ height: optionsExpanded ? "722px" : "616px" }}>
             <div className="box">
-              <img className="add-photo" src={require("../../resources/images/addphoto.png")} />
+              {currentlyInspectedUser === userName && <img className="add-photo" src={require("../../resources/images/addphoto.png")} />}
             </div>
             <img className="settings" src={require("../../resources/images/bluesettings.png")} />
             <div className="d-card" onMouseMove={hoverCard} id="card" onMouseLeave={resetCard} style={{ backgroundColor: backgroundColor }}>
@@ -898,6 +899,10 @@ export default function ProfilePage (props:  ProfilePageProps) {
                      trophy === "newuser" ? "New User" : ""}</h3>
               </div>
             })}
+          </div>
+
+          <div className="button-div">
+            <BackToTopButton />
           </div>
         </div>
       </div>
