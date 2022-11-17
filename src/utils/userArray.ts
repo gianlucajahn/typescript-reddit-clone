@@ -17,7 +17,8 @@ const userArray = [
         added: false,
         karma: "30.482",
         age: "5y",
-        color: "#7eed56"
+        color: "#7eed56",
+        cakeday: "October 5th, 2017"
     },
     {
         username: "THE_STOCKINGHATHERO",
@@ -34,7 +35,8 @@ const userArray = [
         added: false,
         karma: "248",
         age: "2y",
-        color: "#4856a3"
+        color: "#4856a3",
+        cakeday: "August 3rd, 2020"
     },
     {
         username: "JebaTV",
@@ -53,7 +55,8 @@ const userArray = [
         added: false,
         karma: "4.106",
         age: "8mo",
-        color: "#94b3ff"
+        color: "#94b3ff",
+        cakeday: "March 22nd, 2022"
     },
     {
         username: "MrHvedrungr",
@@ -70,7 +73,8 @@ const userArray = [
         added: false,
         karma: "102",
         age: "3y",
-        color: "#e4abff"
+        color: "#e4abff",
+        cakeday: "August 9th, 2019"
     },
     {
         username: "K_Shou",
@@ -88,7 +92,8 @@ const userArray = [
         added: false,
         karma: "4.729",
         age: "9mo",
-        color: "#"
+        color: "#",
+        cakeday: "February 1st, 2022"
     },
     {
         username: "Psychological_Ad3329",
@@ -105,7 +110,8 @@ const userArray = [
         added: false,
         karma: "95",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "May 24th, 2021"
     },
     {
         username: "mpwrd",
@@ -122,7 +128,8 @@ const userArray = [
         added: false,
         karma: "482",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "June 5th, 2019"
     },
     {
         username: "Texas_Persian",
@@ -139,7 +146,8 @@ const userArray = [
         added: false,
         karma: "193",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 3rd, 2020"
     },
     {
         username: "SpaceboysUsername",
@@ -156,7 +164,8 @@ const userArray = [
         added: false,
         karma: "392",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "July 9th, 2021"
     },
     {
         username: "Drump21",
@@ -172,7 +181,8 @@ const userArray = [
         added: false,
         karma: "48",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 3rd, 2021"
     },
     {
         username: "uncondolencednole91",
@@ -189,7 +199,8 @@ const userArray = [
         added: false,
         karma: "938",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "March 1st, 2018"
     },
     {
         username: "SnaxelZ",
@@ -208,7 +219,8 @@ const userArray = [
         added: false,
         karma: "48.294",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "May 11th, 2020"
     },
     {
         username: "polarbearik",
@@ -225,7 +237,8 @@ const userArray = [
         added: false,
         karma: "810",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 3rd, 2020"
     },
     {
         username: "Mescman",
@@ -242,7 +255,8 @@ const userArray = [
         added: false,
         karma: "1.080",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "January 20th, 2015"
     },
     {
         username: "BodieBroadcasts",
@@ -259,7 +273,8 @@ const userArray = [
         added: false,
         karma: "228",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "May 5th, 2020"
     },
     {
         username: "PeripheralAddition",
@@ -276,7 +291,8 @@ const userArray = [
         added: false,
         karma: "184",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 17th, 2020"
     },
     {
         username: "LazySans",
@@ -293,7 +309,8 @@ const userArray = [
         added: false,
         karma: "418",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "January 3rd, 2017"
     },
     {
         username: "IWasVennBackThen",
@@ -329,7 +346,8 @@ const userArray = [
         added: false,
         karma: "988",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 29th, 2019"
     },
     {
         username: "Floh_the_6th",
@@ -346,7 +364,8 @@ const userArray = [
         added: false,
         karma: "118",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 3rd, 2020"
     },
     {
         username: "caioxisd",
@@ -363,7 +382,8 @@ const userArray = [
         added: false,
         karma: "285",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "May 4th, 2016"
     },
     {
         username: "AdYeti",
@@ -380,7 +400,8 @@ const userArray = [
         added: false,
         karma: "108",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "September 27th, 2020"
     },
     {
         username: "smoovopr8r",
@@ -397,7 +418,8 @@ const userArray = [
         added: false,
         karma: "578",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 4th, 2019"
     },
     {
         username: "Leviathant",
@@ -414,7 +436,8 @@ const userArray = [
         added: false,
         karma: "778",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "January 8th, 2020"
     },
     {
         username: "Axdeimos",
@@ -430,7 +453,8 @@ const userArray = [
         added: false,
         karma: "472",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "December 6th, 2021"
     },
     {
         username: "Budsey",
@@ -447,7 +471,8 @@ const userArray = [
         added: false,
         karma: "2.192",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "February 26th, 2021"
     },
     {
         username: "Space-nudibranch",
@@ -463,7 +488,8 @@ const userArray = [
         added: false,
         karma: "740",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "November 8th, 2021"
     },
     
     {
@@ -481,7 +507,8 @@ const userArray = [
         added: false,
         karma: "402",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "March 13th, 2015"
     },
     {
         username: "stvbeev",
@@ -498,7 +525,8 @@ const userArray = [
         added: false,
         karma: "364",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "September 18th, 2020"
     },
     {
         username: "KeyserSora",
@@ -518,7 +546,8 @@ const userArray = [
         added: false,
         karma: "92.498",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "April 1st, 2017"
     },
     {
         username: "SwampYankee",
@@ -536,7 +565,8 @@ const userArray = [
         added: false,
         karma: "4.270",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "April 10th, 2018"
     },
     {
         username: "NaturalLogofOne",
@@ -554,7 +584,8 @@ const userArray = [
         added: false,
         karma: "2.477",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "December 23rd, 2017"
     },
     {
         username: "eskeena",
@@ -571,7 +602,8 @@ const userArray = [
         added: false,
         karma: "294",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2020"
     },
     {
         username: "BuruArtLol",
@@ -590,7 +622,8 @@ const userArray = [
         added: false,
         karma: "6.498",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "July 18th, 2019"
     },
     {
         username: "Killerack",
@@ -607,7 +640,8 @@ const userArray = [
         added: false,
         karma: "908",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "June 2nd, 2017"
     },
     {
         username: "AshKetchup",
@@ -623,7 +657,8 @@ const userArray = [
         added: false,
         karma: "572",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "November 28th, 2021"
     },
     {
         username: "Tyler1",
@@ -640,7 +675,8 @@ const userArray = [
         added: false,
         karma: "284",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "August 29th, 2016"
     },
     {
         username: "HenriqueAlberti",
@@ -657,7 +693,8 @@ const userArray = [
         added: false,
         karma: "556",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "February 11th, 2020"
     },
     {
         username: "coffee_kazoo",
@@ -675,7 +712,8 @@ const userArray = [
         added: false,
         karma: "5.382",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "June 5th, 2018"
     },
     {
         username: "mancinis_blessed_bat",
@@ -691,7 +729,8 @@ const userArray = [
         added: false,
         karma: "48",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 7th, 2021"
     },
     {
         username: "ikeif",
@@ -708,7 +747,8 @@ const userArray = [
         added: false,
         karma: "198",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "January 2nd, 2020"
     },
     {
         username: "phasr0uk1",
@@ -725,7 +765,8 @@ const userArray = [
         added: false,
         karma: "486",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "April 20th, 2019"
     },
     {
         username: "budspencer",
@@ -741,7 +782,8 @@ const userArray = [
         added: false,
         karma: "220",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 14th, 2021"
     },
     {
         username: "ApolloFarZenith",
@@ -758,7 +800,8 @@ const userArray = [
         added: false,
         karma: "194",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "September 2nd, 2020"
     },
     {
         username: "AngreFreshTech",
@@ -775,7 +818,8 @@ const userArray = [
         added: false,
         karma: "395",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "March 4th, 2015"
     },
     {
         username: "Dei_Photos",
@@ -795,7 +839,8 @@ const userArray = [
         added: false,
         karma: "3.572",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "May 20th, 2020"
     },
     {
         username: "Umpron",
@@ -812,7 +857,8 @@ const userArray = [
         added: false,
         karma: "749",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "October 30th, 2020"
     },
     {
         username: "Echo4708",
@@ -829,7 +875,8 @@ const userArray = [
         added: false,
         karma: "567",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "June 22nd, 2019"
     },
     {
         username: "Forest_folf",
@@ -845,7 +892,8 @@ const userArray = [
         added: false,
         karma: "372",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "May 3rd, 2021"
     },
     {
         username: "spez",
@@ -863,7 +911,8 @@ const userArray = [
         added: false,
         karma: "2.591",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "November 17th, 2020"
     },
     {
         username: "Georgy_K_Zhukov",
@@ -881,7 +930,8 @@ const userArray = [
         added: false,
         karma: "989",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "January 31st, 2019"
     },
     {
         username: "Erestyn",
@@ -899,7 +949,8 @@ const userArray = [
         added: false,
         karma: "958",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 24th, 2020"
     },
     {
         username: "RampagingKoala",
@@ -917,7 +968,8 @@ const userArray = [
         added: false,
         karma: "4.272",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "July 15th, 2018"
     },
     {
         username: "Abedeus",
@@ -934,7 +986,8 @@ const userArray = [
         added: false,
         karma: "732",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "June 1st, 2020"
     },
     {
         username: "SamManiac1998",
@@ -951,7 +1004,8 @@ const userArray = [
         added: false,
         karma: "126",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 3rd, 2021"
     },
     {
         username: "natsingsing",
@@ -968,7 +1022,8 @@ const userArray = [
         added: false,
         karma: "327",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 23rd, 2020"
     },
     {
         username: "LordSirLance",
@@ -985,7 +1040,8 @@ const userArray = [
         added: false,
         karma: "218",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "May 6th, 2019"
     },
     {
         username: "Rikallion",
@@ -1002,7 +1058,8 @@ const userArray = [
         added: false,
         karma: "839",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "July 18th, 2020"
     },
     {
         username: "Sir_Tea_Of_Bags",
@@ -1018,7 +1075,8 @@ const userArray = [
         added: false,
         karma: "217",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "September 9th, 2021"
     },
     {
         username: "Junnielocked",
@@ -1036,7 +1094,8 @@ const userArray = [
         added: false,
         karma: "8.318",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "September 11th, 2021"
     },
     {
         username: "Anniran",
@@ -1052,7 +1111,8 @@ const userArray = [
         added: false,
         karma: "538",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "November 21st, 2021"
     },
     {
         username: "LivingASlothsLife",
@@ -1069,7 +1129,8 @@ const userArray = [
         added: false,
         karma: "290",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "August 3rd, 2016"
     },
     {
         username: "IamPlatycus",
@@ -1086,7 +1147,8 @@ const userArray = [
         added: false,
         karma: "281",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "October 4th, 2020"
     },
     {
         username: "Ikcatcher",
@@ -1102,7 +1164,8 @@ const userArray = [
         added: false,
         karma: "103",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "March 19th, 2021"
     },
     {
         username: "Mana_Transfer",
@@ -1119,7 +1182,8 @@ const userArray = [
         added: false,
         karma: "312",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "March 2nd, 2018"
     },
     {
         username: "EternalMemes30",
@@ -1138,7 +1202,8 @@ const userArray = [
         added: false,
         karma: "5.729",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "May 12th, 2018"
     },
     {
         username: "SeniorGuava881",
@@ -1155,7 +1220,8 @@ const userArray = [
         added: false,
         karma: "482",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2020"
     },
     {
         username: "Mynorskull",
@@ -1172,7 +1238,8 @@ const userArray = [
         added: false,
         karma: "384",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "April 28th, 2015"
     },
     {
         username: "Skeither",
@@ -1189,7 +1256,8 @@ const userArray = [
         added: false,
         karma: "295",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "September 27th, 2020"
     },
     {
         username: "choccymilk0560",
@@ -1206,7 +1274,8 @@ const userArray = [
         added: false,
         karma: "184",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "January 20th, 2019"
     },
     {
         username: "MayureshMJ",
@@ -1223,7 +1292,8 @@ const userArray = [
         added: false,
         karma: "308",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "February 7th, 2019"
     },
     {
         username: "onelass",
@@ -1239,7 +1309,8 @@ const userArray = [
         added: false,
         karma: "371",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "February 5th, 2021"
     },
     {
         username: "Captain-Marvel-92",
@@ -1256,7 +1327,8 @@ const userArray = [
         added: false,
         karma: "487",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "October 8th, 2019"
     },
     {
         username: "MiniMonkey5041",
@@ -1273,7 +1345,8 @@ const userArray = [
         added: false,
         karma: "732",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "August 18th, 2017"
     },
     {
         username: "jefrye",
@@ -1290,7 +1363,8 @@ const userArray = [
         added: false,
         karma: "482",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "November 1st, 2020"
     },
     {
         username: "PrettyInWeed",
@@ -1306,7 +1380,8 @@ const userArray = [
         added: false,
         karma: "100",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "November 19th, 2021"
     },
     {
         username: "iBudder3",
@@ -1324,7 +1399,8 @@ const userArray = [
         added: false,
         karma: "5.328",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "Business-Ad-274",
@@ -1341,7 +1417,8 @@ const userArray = [
         added: false,
         karma: "344",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 8th, 2020"
     },
     {
         username: "hrnyirawan",
@@ -1358,7 +1435,8 @@ const userArray = [
         added: false,
         karma: "877",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2016"
     },
     {
         username: "ukendtkunst",
@@ -1375,7 +1453,8 @@ const userArray = [
         added: false,
         karma: "472",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2019"
     },
     {
         username: "Adventurous_File_798",
@@ -1392,7 +1471,8 @@ const userArray = [
         added: false,
         karma: "490",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2018"
     },
     {
         username: "thatonejungler",
@@ -1408,7 +1488,8 @@ const userArray = [
         added: false,
         karma: "92",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "doglop",
@@ -1424,7 +1505,8 @@ const userArray = [
         added: false,
         karma: "78",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "Dianamita",
@@ -1441,7 +1523,8 @@ const userArray = [
         added: false,
         karma: "292",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2017"
     },
     {
         username: "CrankyBear",
@@ -1460,7 +1543,8 @@ const userArray = [
         added: false,
         karma: "499",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2019"
     },
     {
         username: "ManyFails1Win",
@@ -1476,7 +1560,8 @@ const userArray = [
         added: false,
         karma: "318",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "the_man_with_none",
@@ -1493,7 +1578,8 @@ const userArray = [
         added: false,
         karma: "329",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2016"
     },
     {
         username: "kaloschroma",
@@ -1510,7 +1596,8 @@ const userArray = [
         added: false,
         karma: "739",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2020"
     },
     {
         username: "Para0234",
@@ -1526,7 +1613,8 @@ const userArray = [
         added: false,
         karma: "229",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "12C_BlaK",
@@ -1542,7 +1630,8 @@ const userArray = [
         added: false,
         karma: "164",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "swiftmen991",
@@ -1558,7 +1647,8 @@ const userArray = [
         added: false,
         karma: "162",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "TheToadstools",
@@ -1575,7 +1665,8 @@ const userArray = [
         added: false,
         karma: "492",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2018"
     },
     {
         username: "xm1l1tiax",
@@ -1592,7 +1683,8 @@ const userArray = [
         added: false,
         karma: "3.201",
         age: "11mo",
-        color: "#"
+        color: "#",
+        cakeday: "January 17th, 2022"
     },
     {
         username: "StuckInBronze",
@@ -1609,7 +1701,8 @@ const userArray = [
         added: false,
         karma: "820",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "March 21st, 2015"
     },
     {
         username: "Youthsonic",
@@ -1626,7 +1719,8 @@ const userArray = [
         added: false,
         karma: "261",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2022"
     },
     {
         username: "oldnative",
@@ -1643,7 +1737,8 @@ const userArray = [
         added: false,
         karma: "294",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 4th, 2019"
     },
     {
         username: "castzpg",
@@ -1659,7 +1754,8 @@ const userArray = [
         added: false,
         karma: "195",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "Accurare_Medicine200",
@@ -1675,7 +1771,8 @@ const userArray = [
         added: false,
         karma: "649",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "May 15th, 2021"
     },
     {
         username: "CreativeTechGuyGames",
@@ -1692,7 +1789,8 @@ const userArray = [
         added: false,
         karma: "788",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "November 3rd, 2017"
     },
     {
         username: "SeaProfessor3312",
@@ -1709,7 +1807,8 @@ const userArray = [
         added: false,
         karma: "762",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 16th, 2020"
     },
     {
         username: "Goldreaver",
@@ -1725,7 +1824,8 @@ const userArray = [
         added: false,
         karma: "281",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "types_in_airplane",
@@ -1743,7 +1843,8 @@ const userArray = [
         added: false,
         karma: "1.930",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2020"
     },
     {
         username: "CruisinJoe22",
@@ -1761,7 +1862,8 @@ const userArray = [
         added: false,
         karma: "6.382",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2019"
     },
     {
         username: "xeenexus",
@@ -1778,7 +1880,8 @@ const userArray = [
         added: false,
         karma: "829",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2018"
     },
     {
         username: "SpecialExamination41",
@@ -1795,7 +1898,8 @@ const userArray = [
         added: false,
         karma: "392",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2020"
     },
     {
         username: "Thomasinarina",
@@ -1812,7 +1916,8 @@ const userArray = [
         added: false,
         karma: "298",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2018"
     },
     {
         username: "LorenaBobbedIt",
@@ -1828,7 +1933,8 @@ const userArray = [
         added: false,
         karma: "146",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "zootedzillenial",
@@ -1845,7 +1951,8 @@ const userArray = [
         added: false,
         karma: "382",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2019"
     },
     {
         username: "OptimalMongoose2",
@@ -1862,7 +1969,8 @@ const userArray = [
         added: false,
         karma: "284",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2016"
     },
     {
         username: "Mimiques",
@@ -1879,7 +1987,8 @@ const userArray = [
         added: false,
         karma: "192",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2019"
     },
     {
         username: "TheBigDuchess",
@@ -1896,7 +2005,8 @@ const userArray = [
         added: false,
         karma: "930",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2018"
     },
     {
         username: "powerlanguage",
@@ -1913,7 +2023,8 @@ const userArray = [
         added: false,
         karma: "972",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2018"
     },
     {
         username: "vasilypupkeen",
@@ -1929,7 +2040,8 @@ const userArray = [
         added: false,
         karma: "290",
         age: "7mo",
-        color: "#"
+        color: "#",
+        cakeday: "May 29th, 2022"
     },
     {
         username: "Letrabotttle",
@@ -1946,7 +2058,8 @@ const userArray = [
         added: false,
         karma: "668",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "March 5th, 2020"
     },
     {
         username: "R3DT1D3",
@@ -1963,7 +2076,8 @@ const userArray = [
         added: false,
         karma: "762",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "January 11th, 2020"
     },
     {
         username: "landoflobsters",
@@ -1981,7 +2095,8 @@ const userArray = [
         added: false,
         karma: "3.592",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "August 25th, 2018"
     },
     {
         username: "Halaku",
@@ -1999,7 +2114,8 @@ const userArray = [
         added: false,
         karma: "7.674",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "May 5th, 2017"
     },
     {
         username: "reusens",
@@ -2017,7 +2133,8 @@ const userArray = [
         added: false,
         karma: "1.098",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2016"
     },
     {
         username: "ILoveToEatLobster",
@@ -2034,7 +2151,8 @@ const userArray = [
         added: false,
         karma: "128",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2018"
     },
     {
         username: "Certain-Rope-2624",
@@ -2052,7 +2170,8 @@ const userArray = [
         added: false,
         karma: "887",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "External_Camp",
@@ -2069,7 +2188,8 @@ const userArray = [
         added: false,
         karma: "394",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2020"
     },
     {
         username: "ash_bishop",
@@ -2086,7 +2206,8 @@ const userArray = [
         added: false,
         karma: "37",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2019"
     },
     {
         username: "closetedgae19",
@@ -2103,7 +2224,8 @@ const userArray = [
         added: false,
         karma: "110",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2020"
     },
     {
         username: "delightedknight3",
@@ -2119,7 +2241,8 @@ const userArray = [
         added: false,
         karma: "90",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "CryptoDaily",
@@ -2136,7 +2259,8 @@ const userArray = [
         added: false,
         karma: "674",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "August 8th, 2015"
     },
     {
         username: "XGallonsX",
@@ -2153,7 +2277,8 @@ const userArray = [
         added: false,
         karma: "232",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "March 22nd, 2018"
     },
     {
         username: "Wilder54321",
@@ -2169,7 +2294,8 @@ const userArray = [
         added: false,
         karma: "222",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "OpticallyMosache",
@@ -2186,7 +2312,8 @@ const userArray = [
         added: false,
         karma: "109",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "November 14th, 2017"
     },
     {
         username: "One_Steack_9554",
@@ -2202,7 +2329,8 @@ const userArray = [
         added: false,
         karma: "482",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "ArieJ010",
@@ -2219,7 +2347,8 @@ const userArray = [
         added: false,
         karma: "183",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2019"
     },
     {
         username: "CompetitiveClerk97",
@@ -2236,7 +2365,8 @@ const userArray = [
         added: false,
         karma: "333",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2018"
     },
     {
         username: "maxpowerzttv",
@@ -2253,7 +2383,8 @@ const userArray = [
         added: false,
         karma: "297",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2020"
     },
     {
         username: "pomarine",
@@ -2273,7 +2404,8 @@ const userArray = [
         added: false,
         karma: "11.294",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2018"
     },
     {
         username: "verbi420",
@@ -2289,7 +2421,8 @@ const userArray = [
         added: false,
         karma: "372",
         age: "9mo",
-        color: "#"
+        color: "#",
+        cakeday: "March 4th, 2022"
     },
     {
         username: "TallAssociation0",
@@ -2307,7 +2440,8 @@ const userArray = [
         added: false,
         karma: "1.110",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "September 16th, 2018"
     },
     {
         username: "coinfeeds-bot",
@@ -2324,7 +2458,8 @@ const userArray = [
         added: false,
         karma: "378",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "July 3rd, 2020"
     },
     {
         username: "bluesmaker",
@@ -2340,7 +2475,8 @@ const userArray = [
         added: false,
         karma: "510",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 11th, 2021"
     },
     {
         username: "Nuewim",
@@ -2357,7 +2493,8 @@ const userArray = [
         added: false,
         karma: "508",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2019"
     },
     {
         username: "Half-BloodPrincess",
@@ -2377,7 +2514,8 @@ const userArray = [
         added: false,
         karma: "401",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "May 1st, 2016"
     },
     {
         username: "Word62",
@@ -2394,7 +2532,8 @@ const userArray = [
         added: false,
         karma: "602",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "July 2nd, 2018"
     },
     {
         username: "VelociStardust",
@@ -2411,7 +2550,8 @@ const userArray = [
         added: false,
         karma: "104",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "June 8th, 2017"
     },
     {
         username: "inky0210",
@@ -2428,7 +2568,8 @@ const userArray = [
         added: false,
         karma: "218",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "August 22nd, 2015"
     },
     {
         username: "romychestnut",
@@ -2444,7 +2585,8 @@ const userArray = [
         added: false,
         karma: "163",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 17th, 2021"
     },
     {
         username: "the_nibler",
@@ -2461,7 +2603,8 @@ const userArray = [
         added: false,
         karma: "227",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 21st, 2020"
     },
     {
         username: "Rookslook",
@@ -2477,7 +2620,8 @@ const userArray = [
         added: false,
         karma: "119",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "July 3rd, 2021"
     },
     {
         username: "bad-crypto-advice",
@@ -2494,7 +2638,8 @@ const userArray = [
         added: false,
         karma: "739",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "March 5th, 2017"
     },
     {
         username: "DynamoDylan",
@@ -2510,7 +2655,8 @@ const userArray = [
         added: false,
         karma: "97",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 15th, 2021"
     },
     {
         username: "bigmaneting",
@@ -2527,7 +2673,8 @@ const userArray = [
         added: false,
         karma: "444",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "September 26th, 2019"
     },
     {
         username: "Ill_Be_Myself",
@@ -2544,7 +2691,8 @@ const userArray = [
         added: false,
         karma: "375",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 3rd, 2019"
     },
     {
         username: "Ronnee51-yay",
@@ -2560,7 +2708,8 @@ const userArray = [
         added: false,
         karma: "220",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "January 29th, 2021"
     },
     {
         username: "Wangtawang",
@@ -2578,7 +2727,8 @@ const userArray = [
         added: false,
         karma: "763",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "May 9th, 2017"
     },
     {
         username: "Mysterious-Post8193",
@@ -2595,7 +2745,8 @@ const userArray = [
         added: false,
         karma: "86",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 12th, 2022"
     },
     {
         username: "Dormage",
@@ -2612,7 +2763,8 @@ const userArray = [
         added: false,
         karma: "120",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "December 2nd, 2019"
     },
     {
         username: "Palpitating_Rattus",
@@ -2629,7 +2781,8 @@ const userArray = [
         added: false,
         karma: "392",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "March 21st, 2018"
     },
     {
         username: "21plankton",
@@ -2645,7 +2798,8 @@ const userArray = [
         added: false,
         karma: "103",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "January 6th, 2021"
     },
     {
         username: "TrooKvlltBlack",
@@ -2662,7 +2816,8 @@ const userArray = [
         added: false,
         karma: "2.402",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "AugustGnarly",
@@ -2679,7 +2834,8 @@ const userArray = [
         added: false,
         karma: "583",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "June 30th, 2020"
     },
     {
         username: "Toffeemanstar",
@@ -2696,7 +2852,8 @@ const userArray = [
         added: false,
         karma: "438",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "July 27th, 2015"
     },
     {
         username: "CBvdb",
@@ -2714,7 +2871,8 @@ const userArray = [
         added: false,
         karma: "7.492",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 17th, 2019"
     },
     {
         username: "glatadurgrutur",
@@ -2733,7 +2891,8 @@ const userArray = [
         added: false,
         karma: "16.988",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "March 6th, 2019"
     },
     {
         username: "Mountain_-_king",
@@ -2749,7 +2908,8 @@ const userArray = [
         added: false,
         karma: "950",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 7th, 2021"
     },
     {
         username: "greeneggs93",
@@ -2766,7 +2926,8 @@ const userArray = [
         added: false,
         karma: "186",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "March 2nd, 2020"
     },
     {
         username: "LeeMBoro",
@@ -2783,7 +2944,8 @@ const userArray = [
         added: false,
         karma: "294",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "May 9th, 2019"
     },
     {
         username: "samuraisports37",
@@ -2801,7 +2963,8 @@ const userArray = [
         added: false,
         karma: "492",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "February 7th, 2017"
     },
     {
         username: "Jazzbo64",
@@ -2818,7 +2981,8 @@ const userArray = [
         added: false,
         karma: "755",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "April 1st, 2020"
     },
     {
         username: "una_pistola",
@@ -2834,7 +2998,8 @@ const userArray = [
         added: false,
         karma: "184",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "September 3rd, 2021"
     },
     {
         username: "Zhou_Da",
@@ -2850,7 +3015,8 @@ const userArray = [
         added: false,
         karma: "65",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "January 21st, 2021"
     },
     {
         username: "Desperate_Chim_343",
@@ -2867,7 +3033,8 @@ const userArray = [
         added: false,
         karma: "802",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "March 25th, 2018"
     },
     {
         username: "mjmayank",
@@ -2885,7 +3052,8 @@ const userArray = [
         added: false,
         karma: "3.335",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 18th, 2019"
     },
     {
         username: "RadioactiveFruitCup",
@@ -2902,7 +3070,8 @@ const userArray = [
         added: false,
         karma: "295",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2018"
     },
     {
         username: "Sin2k",
@@ -2919,7 +3088,8 @@ const userArray = [
         added: false,
         karma: "546",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "September 7th, 2019"
     },
     {
         username: "KTGS",
@@ -2936,7 +3106,8 @@ const userArray = [
         added: false,
         karma: "548",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "October 22nd, 2019"
     },
     {
         username: "hamza1311",
@@ -2953,7 +3124,8 @@ const userArray = [
         added: false,
         karma: "682",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "August 7th, 2017"
     },
     {
         username: "iocane_",
@@ -2970,7 +3142,8 @@ const userArray = [
         added: false,
         karma: "111",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "October 8th, 2019"
     },
     {
         username: "bbakes25r",
@@ -2987,7 +3160,8 @@ const userArray = [
         added: false,
         karma: "573",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "October 14th, 2020"
     },
     {
         username: "Jayce86",
@@ -3004,7 +3178,8 @@ const userArray = [
         added: false,
         karma: "308",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "April 4th, 2020"
     },
     {
         username: "NickyNicotine",
@@ -3021,7 +3196,8 @@ const userArray = [
         added: false,
         karma: "742",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "July 4th, 2017"
     },
     {
         username: "PoetryIsAlive",
@@ -3038,7 +3214,8 @@ const userArray = [
         added: false,
         karma: "372",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "August 23rd, 2015"
     },
     {
         username: "dsphilly",
@@ -3054,7 +3231,8 @@ const userArray = [
         added: false,
         karma: "208",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2021"
     },
     {
         username: "dudelsson",
@@ -3071,7 +3249,8 @@ const userArray = [
         added: false,
         karma: "304",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 5th, 2020"
     },
     {
         username: "BinkanSalaryman",
@@ -3087,7 +3266,8 @@ const userArray = [
         added: false,
         karma: "308",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "January 21st, 2021"
     },
     {
         username: "ItsZayveeir",
@@ -3104,7 +3284,8 @@ const userArray = [
         added: false,
         karma: "405",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "September 24th, 2019"
     },
     {
         username: "sokeTek",
@@ -3121,7 +3302,8 @@ const userArray = [
         added: false,
         karma: "424",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "April 18th, 2018"
     },
     {
         username: "Shaggy_Pop",
@@ -3138,7 +3320,8 @@ const userArray = [
         added: false,
         karma: "302",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "September 4th, 2021"
     },
     {
         username: "FVMAzalea",
@@ -3155,7 +3338,8 @@ const userArray = [
         added: false,
         karma: "338",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "July 19th, 2016"
     },
     {
         username: "petescott",
@@ -3173,9 +3357,9 @@ const userArray = [
         added: false,
         karma: "576",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "January 30th, 2018"
     },
-    
     {
         username: "PrudentEvening",
         password: "defaultpassword",
@@ -3190,7 +3374,8 @@ const userArray = [
         added: false,
         karma: "194",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "May 9th, 2021"
     },
     {
         username: "AlesantroCorticeli",
@@ -3207,7 +3392,8 @@ const userArray = [
         added: false,
         karma: "154",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 10th, 2020"
     },
     {
         username: "thesituation531",
@@ -3224,7 +3410,8 @@ const userArray = [
         added: false,
         karma: "284",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "June 8th, 2020"
     },
     {
         username: "rafaover",
@@ -3241,7 +3428,8 @@ const userArray = [
         added: false,
         karma: "205",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "November 8th, 2018"
     },
     {
         username: "YungDwight",
@@ -3257,7 +3445,8 @@ const userArray = [
         added: false,
         karma: "90",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "November 17th, 2021"
     },
     {
         username: "amdgirl",
@@ -3275,7 +3464,8 @@ const userArray = [
         added: false,
         karma: "358",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 28th, 2020"
     },
     {
         username: "Royal-Author-669",
@@ -3292,7 +3482,8 @@ const userArray = [
         added: false,
         karma: "402",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "October 4th, 2016"
     },
     {
         username: "404_Gordon_Not_Found",
@@ -3309,7 +3500,8 @@ const userArray = [
         added: false,
         karma: "105",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "Feburary 23rd, 2020"
     },
     {
         username: "Wackmajor",
@@ -3325,7 +3517,8 @@ const userArray = [
         added: false,
         karma: "260",
         age: "4mo",
-        color: "#"
+        color: "#",
+        cakeday: "August 11th, 2022"
     },
     {
         username: "Pale_deadflower",
@@ -3344,7 +3537,8 @@ const userArray = [
         added: false,
         karma: "5.802",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "May 2nd, 2019"
     },
     {
         username: "ibekt",
@@ -3361,7 +3555,8 @@ const userArray = [
         added: false,
         karma: "427",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2019"
     },
     {
         username: "Bananasarelit",
@@ -3378,7 +3573,8 @@ const userArray = [
         added: false,
         karma: "127",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "August 23rd, 2017"
     },
     {
         username: "KevinTheIdk",
@@ -3398,7 +3594,8 @@ const userArray = [
         added: false,
         karma: "11.709",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "March 2nd, 2015"
     },
     {
         username: "TheGreenRaccoon07",
@@ -3415,7 +3612,8 @@ const userArray = [
         added: false,
         karma: "466",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "July 17th, 2017"
     },
     {
         username: "Cest_La_Vie_101",
@@ -3432,7 +3630,8 @@ const userArray = [
         added: false,
         karma: "342",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "June 12th, 2018"
     },
     {
         username: "NightcoreSpectrum",
@@ -3448,7 +3647,8 @@ const userArray = [
         added: false,
         karma: "78",
         age: "6mo",
-        color: "#"
+        color: "#",
+        cakeday: "June 12th, 2022"
     },
     {
         username: "ilovepaninies",
@@ -3465,7 +3665,8 @@ const userArray = [
         added: false,
         karma: "663",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "October 8th, 2019"
     },
     {
         username: "[deleted]",
@@ -3482,7 +3683,8 @@ const userArray = [
         added: false,
         karma: "0",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "March 7th, 2018"
     },
     
     {
@@ -3499,7 +3701,8 @@ const userArray = [
         added: false,
         karma: "6",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "January 11th, 2021"
     },
     {
         username: "AutoModerator",
@@ -3517,7 +3720,8 @@ const userArray = [
         added: false,
         karma: "100.000",
         age: "17y",
-        color: "#"
+        color: "#",
+        cakeday: "September 7th, 2005"
     },
     {
         username: "GigaChad450",
@@ -3534,7 +3738,8 @@ const userArray = [
         added: false,
         karma: "284",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 2nd, 2020"
     },
     {
         username: "littlepiggy",
@@ -3551,7 +3756,8 @@ const userArray = [
         added: false,
         karma: "239",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "August 7th, 2016"
     },
     {
         username: "Simamonas",
@@ -3568,7 +3774,8 @@ const userArray = [
         added: false,
         karma: "348",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "August 9th, 2017"
     },
     
     {
@@ -3586,7 +3793,8 @@ const userArray = [
         added: false,
         karma: "382",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "March 7th, 2020"
     },
     {
         username: "15Nova22",
@@ -3603,7 +3811,8 @@ const userArray = [
         added: false,
         karma: "56",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "April 17th, 2018"
     },
     {
         username: "tidder-wave",
@@ -3620,7 +3829,8 @@ const userArray = [
         added: false,
         karma: "178",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "May 1st, 2019"
     },
     {
         username: "Volfie",
@@ -3637,7 +3847,8 @@ const userArray = [
         added: false,
         karma: "200",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "March 19th, 2016"
     },
     {
         username: "cutelyaware",
@@ -3654,7 +3865,8 @@ const userArray = [
         added: false,
         karma: "160",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "October 5th, 2020"
     },
     {
         username: "Kohouteky",
@@ -3671,7 +3883,8 @@ const userArray = [
         added: false,
         karma: "158",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "November 13th, 2017"
     },
     {
         username: "thedarklord176",
@@ -3688,7 +3901,8 @@ const userArray = [
         added: false,
         karma: "358",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 7th, 2020"
     },
     {
         username: "mbonty",
@@ -3704,7 +3918,8 @@ const userArray = [
         added: false,
         karma: "74",
         age: "8mo",
-        color: "#"
+        color: "#",
+        cakeday: "April 3rd, 2022"
     },
     {
         username: "silly_frog_lf",
@@ -3721,7 +3936,8 @@ const userArray = [
         added: false,
         karma: "502",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 7th, 2019"
     },
     {
         username: "rBasiCg",
@@ -3739,7 +3955,8 @@ const userArray = [
         added: false,
         karma: "416",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "October 1st, 2020"
     },
     {
         username: "Jump_Like_A_Willys",
@@ -3755,7 +3972,8 @@ const userArray = [
         added: false,
         karma: "305",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "September 22nd, 2021"
     },
     {
         username: "Outrageous_Zebra_221",
@@ -3772,7 +3990,8 @@ const userArray = [
         added: false,
         karma: "308",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "March 26th, 2016"
     },
     {
         username: "Cuda_BreakAway",
@@ -3789,7 +4008,8 @@ const userArray = [
         added: false,
         karma: "489",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "February 8th, 2015"
     },
     {
         username: "shmeebaloney",
@@ -3806,7 +4026,8 @@ const userArray = [
         added: false,
         karma: "530",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "December 1st, 2020"
     },
     {
         username: "black_rhombus",
@@ -3822,7 +4043,8 @@ const userArray = [
         added: false,
         karma: "105",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "July 12th, 2021"
     },
     {
         username: "tnydancer444",
@@ -3840,7 +4062,8 @@ const userArray = [
         added: false,
         karma: "608",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "June 9th, 2017"
     },
     {
         username: "muchandquick",
@@ -3857,7 +4080,8 @@ const userArray = [
         added: false,
         karma: "486",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "July 24th, 2017"
     },
     {
         username: "adam1983adz",
@@ -3874,7 +4098,8 @@ const userArray = [
         added: false,
         karma: "338",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "August 7th, 2018"
     },
     {
         username: "suga-kyun",
@@ -3891,7 +4116,8 @@ const userArray = [
         added: false,
         karma: "366",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "September 25th, 2015"
     },
     {
         username: "PepsiCola7860",
@@ -3908,7 +4134,8 @@ const userArray = [
         added: false,
         karma: "492",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "January 21st, 2017"
     },
     {
         username: "tuwono_tuwono",
@@ -3926,7 +4153,8 @@ const userArray = [
         added: false,
         karma: "723",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "May 27th, 2020"
     },
     {
         username: "stingermarine",
@@ -3943,7 +4171,8 @@ const userArray = [
         added: false,
         karma: "201",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 19th, 2020"
     },
     {
         username: "SmackEh",
@@ -3960,7 +4189,8 @@ const userArray = [
         added: false,
         karma: "194",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "June 3rd, 2019"
     },
     {
         username: "TheNextBatallion",
@@ -3977,7 +4207,8 @@ const userArray = [
         added: false,
         karma: "295",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "June 4th, 2018"
     },
     {
         username: "AnnukinEarthwalker",
@@ -3993,7 +4224,8 @@ const userArray = [
         added: false,
         karma: "108",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "July 1st, 2021"
     },
     {
         username: "Deavs",
@@ -4009,7 +4241,8 @@ const userArray = [
         added: false,
         karma: "284",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "March 11th, 2021"
     },
     {
         username: "Tortious_Tortoise",
@@ -4026,7 +4259,8 @@ const userArray = [
         added: false,
         karma: "638",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "August 14th, 2015"
     },
     {
         username: "asiantuttle",
@@ -4042,7 +4276,8 @@ const userArray = [
         added: false,
         karma: "332",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "October 15th, 2021"
     },
     {
         username: "Lowsmithy",
@@ -4059,7 +4294,8 @@ const userArray = [
         added: false,
         karma: "264",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "December 1st, 2020"
     },
     {
         username: "MacNReee",
@@ -4076,7 +4312,8 @@ const userArray = [
         added: false,
         karma: "572",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "August 22nd, 2018"
     },
     {
         username: "MarvelsGrantMan136",
@@ -4095,7 +4332,8 @@ const userArray = [
         added: false,
         karma: "5.540",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 5th, 2019"
     },
     {
         username: "robodrew",
@@ -4113,7 +4351,8 @@ const userArray = [
         added: false,
         karma: "1.832",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "July 16th, 2018"
     },
     {
         username: "Writing_Gods",
@@ -4131,7 +4370,8 @@ const userArray = [
         added: false,
         karma: "728",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "October 7th, 2020"
     },
     {
         username: "TetrisCube",
@@ -4148,7 +4388,8 @@ const userArray = [
         added: false,
         karma: "294",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "September 8th, 2016"
     },
     {
         username: "curryybacon",
@@ -4167,7 +4408,8 @@ const userArray = [
         added: false,
         karma: "2.749",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "November 7th, 2020"
     },
     {
         username: "HokageEzio",
@@ -4185,7 +4427,8 @@ const userArray = [
         added: false,
         karma: "1.458",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "April 26th, 2015"
     },
     {
         username: "CoachJW",
@@ -4203,7 +4446,8 @@ const userArray = [
         added: false,
         karma: "1.038",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 3rd, 2020"
     },
     {
         username: "Bennett1984",
@@ -4221,7 +4465,8 @@ const userArray = [
         added: false,
         karma: "748",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "January 31st, 2017"
     },
     {
         username: "HopScotchiScotch",
@@ -4238,7 +4483,8 @@ const userArray = [
         added: false,
         karma: "72",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "August 30th, 2016"
     },
     {
         username: "donsanedrin",
@@ -4255,7 +4501,8 @@ const userArray = [
         added: false,
         karma: "228",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "February 1st, 2015"
     },
     {
         username: "TheSmokeSalmon420",
@@ -4273,7 +4520,8 @@ const userArray = [
         added: false,
         karma: "748",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "July 12th, 2020"
     },
     {
         username: "mansmurf",
@@ -4291,7 +4539,8 @@ const userArray = [
         added: false,
         karma: "535",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "June 3rd, 2016"
     },
     {
         username: "KyrieWetUpCurry_",
@@ -4309,7 +4558,8 @@ const userArray = [
         added: false,
         karma: "682",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 8th, 2019"
     },
     {
         username: "NevermoreSEA",
@@ -4326,7 +4576,8 @@ const userArray = [
         added: false,
         karma: "203",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 11th, 2020"
     },
     {
         username: "PhantomThiefJoker",
@@ -4343,7 +4594,8 @@ const userArray = [
         added: false,
         karma: "404",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "November 15th, 2017"
     },
     {
         username: "maitreg",
@@ -4360,7 +4612,8 @@ const userArray = [
         added: false,
         karma: "175",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 7th, 2020"
     },
     {
         username: "GammaGargoyle",
@@ -4377,7 +4630,8 @@ const userArray = [
         added: false,
         karma: "107",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "May 8th, 2018"
     },
     {
         username: "OptionalMind",
@@ -4393,7 +4647,8 @@ const userArray = [
         added: false,
         karma: "55",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "July 18th, 2021"
     },
     {
         username: "sfboots",
@@ -4410,7 +4665,8 @@ const userArray = [
         added: false,
         karma: "396",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "December 2nd, 2017"
     },
     {
         username: "pakidara",
@@ -4427,7 +4683,8 @@ const userArray = [
         added: false,
         karma: "210",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "January 4th, 2020"
     },
     {
         username: "marketGOATS",
@@ -4445,7 +4702,8 @@ const userArray = [
         added: false,
         karma: "488",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "February 8th, 2019"
     },
     {
         username: "ChrisStoneGermany",
@@ -4462,7 +4720,8 @@ const userArray = [
         added: false,
         karma: "292",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "July 13th, 2017"
     },
     {
         username: "PoetLucy",
@@ -4478,7 +4737,8 @@ const userArray = [
         added: false,
         karma: "285",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "October 11th, 2021"
     },
     {
         username: "PoetBakerBuck",
@@ -4495,7 +4755,8 @@ const userArray = [
         added: false,
         karma: "390",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "September 16th, 2015"
     },
     {
         username: "flockofbeachturkeys",
@@ -4512,7 +4773,8 @@ const userArray = [
         added: false,
         karma: "402",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "May 3rd, 2019"
     },
     {
         username: "reddit445",
@@ -4529,7 +4791,8 @@ const userArray = [
         added: false,
         karma: "277",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "December 1st, 2017"
     },
     {
         username: "StupidDIYQs",
@@ -4545,7 +4808,8 @@ const userArray = [
         added: false,
         karma: "154",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "November 8th, 2021"
     },
     {
         username: "brain____dead",
@@ -4562,7 +4826,8 @@ const userArray = [
         added: false,
         karma: "308",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "August 20th, 2015"
     },
     {
         username: "sevgonlernassau",
@@ -4579,7 +4844,8 @@ const userArray = [
         added: false,
         karma: "166",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 13th, 2020"
     },
     {
         username: "sardineflavouredass",
@@ -4596,7 +4862,8 @@ const userArray = [
         added: false,
         karma: "358",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "April 2nd, 2016"
     },
     {
         username: "DanelleDee",
@@ -4613,8 +4880,10 @@ const userArray = [
         added: false,
         karma: "340",
         age: "5y",
-        color: "#"
-    },    {
+        color: "#",
+        cakeday: "July 14th, 2017"
+    },    
+    {
         username: "DeepfkingValuesDad",
         password: "defaultpassword",
         avatar: "2",
@@ -4629,7 +4898,8 @@ const userArray = [
         added: false,
         karma: "290",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "August 8th, 2017"
     },
     {
         username: "mrssymea",
@@ -4646,7 +4916,8 @@ const userArray = [
         added: false,
         karma: "102",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "August 24th, 2017"
     },
     {
         username: "agajabigaba",
@@ -4662,7 +4933,8 @@ const userArray = [
         added: false,
         karma: "200",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "March 18th, 2021"
     },
     {
         username: "Particular_ad_2534",
@@ -4678,7 +4950,8 @@ const userArray = [
         added: false,
         karma: "112",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "May 9th, 2021"
     },
     {
         username: "GeneralHumanBeing",
@@ -4695,7 +4968,8 @@ const userArray = [
         added: false,
         karma: "329",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "February 11th, 2019"
     },
     {
         username: "Oh_Them_Again",
@@ -4712,7 +4986,8 @@ const userArray = [
         added: false,
         karma: "296",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "September 1st, 2020"
     },
     {
         username: "waldohasleftus",
@@ -4728,7 +5003,8 @@ const userArray = [
         added: false,
         karma: "92",
         age: "8mo",
-        color: "#"
+        color: "#",
+        cakeday: "April 1st, 2022"
     },
     {
         username: "Brief_Ad_1489",
@@ -4745,7 +5021,8 @@ const userArray = [
         added: false,
         karma: "328",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "October 6th, 2018"
     },
     {
         username: "hhairy",
@@ -4762,7 +5039,8 @@ const userArray = [
         added: false,
         karma: "284",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "November 9th, 2016"
     },
     {
         username: "kanakull",
@@ -4780,7 +5058,8 @@ const userArray = [
         added: false,
         karma: "591",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "July 19th, 2020"
     },
     {
         username: "LetsGetHivern",
@@ -4797,7 +5076,8 @@ const userArray = [
         added: false,
         karma: "449",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "January 21st, 2018"
     },
     {
         username: "sinned82",
@@ -4814,7 +5094,8 @@ const userArray = [
         added: false,
         karma: "388",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "August 7th, 2019"
     },
     {
         username: "Joe_Dirte9",
@@ -4830,7 +5111,8 @@ const userArray = [
         added: false,
         karma: "90",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "September 8th, 2021"
     },
     {
         username: "Tired_JoyBoy",
@@ -4847,7 +5129,8 @@ const userArray = [
         added: false,
         karma: "187",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "July 13th, 2020"
     },
     {
         username: "ptupper",
@@ -4865,7 +5148,8 @@ const userArray = [
         added: false,
         karma: "683",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "May 3rd, 2019"
     },
     {
         username: "Garfield_theThird",
@@ -4882,7 +5166,8 @@ const userArray = [
         added: false,
         karma: "620",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "October 29th, 2019"
     },
     {
         username: "coldmexicantea",
@@ -4899,7 +5184,8 @@ const userArray = [
         added: false,
         karma: "210",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 4th, 2020"
     },
     {
         username: "_goodpraxis",
@@ -4916,7 +5202,8 @@ const userArray = [
         added: false,
         karma: "240",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "October 24th, 2019"
     },
     {
         username: "B0rtles",
@@ -4934,7 +5221,8 @@ const userArray = [
         added: false,
         karma: "233",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "January 2nd, 2020"
     },
     {
         username: "Sweaty_Assignment_90",
@@ -4951,7 +5239,8 @@ const userArray = [
         added: false,
         karma: "166",
         age: "5y",
-        color: "#"
+        color: "#",
+        cakeday: "August 18th, 2017"
     },
     {
         username: "Best-Jello",
@@ -4967,7 +5256,8 @@ const userArray = [
         added: false,
         karma: "37",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "May 7th, 2021"
     },
     {
         username: "stratguy56",
@@ -4984,7 +5274,8 @@ const userArray = [
         added: false,
         karma: "420",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "February 26th, 2020"
     },
     {
         username: "Lilica_Golden_SHIB",
@@ -5001,7 +5292,8 @@ const userArray = [
         added: false,
         karma: "206",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "November 5th, 2019"
     },
     {
         username: "Ineedanaccountthx",
@@ -5018,7 +5310,8 @@ const userArray = [
         added: false,
         karma: "308",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "June 8th, 2015"
     },
     {
         username: "cowboy_shaman",
@@ -5035,7 +5328,8 @@ const userArray = [
         added: false,
         karma: "276",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "September 12th, 2018"
     },
     {
         username: "MilesBrooksTax",
@@ -5051,7 +5345,8 @@ const userArray = [
         added: false,
         karma: "281",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "March 16th, 2021"
     },
     {
         username: "UhhhWhatHappen",
@@ -5068,7 +5363,8 @@ const userArray = [
         added: false,
         karma: "184",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "April 22nd, 2019"
     },
     {
         username: "ZorroMeansFox",
@@ -5084,7 +5380,8 @@ const userArray = [
         added: false,
         karma: "194",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "July 28th, 2021"
     },
     {
         username: "Longjumping-B",
@@ -5101,7 +5398,8 @@ const userArray = [
         added: false,
         karma: "299",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "March 1st, 2019"
     },
     {
         username: "Lower_Cantaloupe1970",
@@ -5118,7 +5416,8 @@ const userArray = [
         added: false,
         karma: "362",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "May 6th, 2016"
     },
     {
         username: "darkness_escape",
@@ -5135,7 +5434,8 @@ const userArray = [
         added: false,
         karma: "144",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 27th, 2020"
     },
     {
         username: "secoccular",
@@ -5152,7 +5452,8 @@ const userArray = [
         added: false,
         karma: "374",
         age: "4y",
-        color: "#"
+        color: "#",
+        cakeday: "October 11th, 2018"
     },
     {
         username: "makarmackinnonstan",
@@ -5170,7 +5471,8 @@ const userArray = [
         added: false,
         karma: "470",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "November 10th, 2019"
     },
     {
         username: "Yoshable",
@@ -5186,7 +5488,8 @@ const userArray = [
         added: false,
         karma: "122",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "October 7th, 2021"
     },
     {
         username: "hiimred2",
@@ -5203,7 +5506,8 @@ const userArray = [
         added: false,
         karma: "84",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "August 1st, 2020"
     },
     {
         username: "OverusedRedditJoke",
@@ -5220,7 +5524,8 @@ const userArray = [
         added: false,
         karma: "182",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "March 12th, 2019"
     },
     {
         username: "-Fellaini",
@@ -5237,7 +5542,8 @@ const userArray = [
         added: false,
         karma: "294",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "June 3rd, 2020"
     },
     {
         username: "dan_obrien",
@@ -5253,7 +5559,8 @@ const userArray = [
         added: false,
         karma: "107",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "January 8th, 2021"
     },
     {
         username: "DescriptionNo5362",
@@ -5270,7 +5577,8 @@ const userArray = [
         added: false,
         karma: "211",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "March 21st, 2019"
     },
     {
         username: "ChamberDavs",
@@ -5287,7 +5595,8 @@ const userArray = [
         added: false,
         karma: "208",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "October 1st, 2020"
     },
     {
         username: "badthird",
@@ -5304,7 +5613,8 @@ const userArray = [
         added: false,
         karma: "205",
         age: "6y",
-        color: "#"
+        color: "#",
+        cakeday: "May 9th, 2016"
     },
     {
         username: "rostron92",
@@ -5320,7 +5630,8 @@ const userArray = [
         added: false,
         karma: "173",
         age: "1y",
-        color: "#"
+        color: "#",
+        cakeday: "September 8th, 2021"
     },
     {
         username: "TradeRaptor",
@@ -5337,7 +5648,8 @@ const userArray = [
         added: false,
         karma: "160",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "September 3rd, 2019"
     },
     {
         username: "BlazingHotFireFox",
@@ -5354,7 +5666,8 @@ const userArray = [
         added: false,
         karma: "478",
         age: "7y",
-        color: "#"
+        color: "#",
+        cakeday: "March 8th, 2015"
     },
     {
         username: "Maxx3141",
@@ -5371,7 +5684,8 @@ const userArray = [
         added: false,
         karma: "208",
         age: "3y",
-        color: "#"
+        color: "#",
+        cakeday: "May 30th, 2019"
     },
     {
         username: "Setyman",
@@ -5388,7 +5702,8 @@ const userArray = [
         added: false,
         karma: "158",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "June 29th, 2020"
     },
 ]
 

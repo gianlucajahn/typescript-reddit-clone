@@ -78,6 +78,7 @@ export type userObject = {
     karma: string;
     age: string;
     color: string;
+    cakeday?: string;
 }
 
 export type userObjectArray = userObject[];
