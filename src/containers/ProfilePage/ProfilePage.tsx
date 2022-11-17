@@ -34,6 +34,8 @@ export interface ProfilePageProps {
     handleLikeComment: MouseEventHandler,
     navToProfile: MouseEventHandler,
     navToUserProfile: MouseEventHandler,
+    reportUser: MouseEventHandler,
+    addFriend: MouseEventHandler,
     handleNestedComment: MouseEventHandler,
     loginStatus: boolean,
     setLoginModalState: any,
@@ -74,6 +76,8 @@ export default function ProfilePage (props:  ProfilePageProps) {
     handleNestedComment,
     handleLikeComment,
     submitComment,
+    reportUser,
+    addFriend,
     openPost,
     handleSubMembership,
     handleLike,
@@ -862,25 +866,28 @@ export default function ProfilePage (props:  ProfilePageProps) {
             })}
 
             <div className="social-container">
-              <button className="social">
-                <img className="add" src={require("../../resources/images/add.PNG")} />
-                <h3>Add social link</h3>
+              <button className={currentlyInspectedUser !== userName ? currentUserData?.added ? "social-true" : "social" : "social"} onClick={currentlyInspectedUser !== userName ? addFriend : (e) => null}>
+                <img className={currentlyInspectedUser !== userName ? currentUserData?.added ? "added" : "add" : "add"} src={currentlyInspectedUser !== userName ? currentUserData?.added ? require("../../resources/images/checkblack.png") : require("../../resources/images/add.PNG") : require("../../resources/images/add.PNG") } />
+                <h3>{currentlyInspectedUser === userName ? "Add social link" : currentUserData?.added ? "Request sent" : "Add As Friend"}</h3>
               </button>
 
-              <button className="social">
-                <img className="add" src={require("../../resources/images/add.PNG")} />
-                <h3>Add GitHub</h3>
+              <button className={currentlyInspectedUser !== userName ? currentUserData?.reported ? "social-reported" : "social" : "social"} onClick={currentlyInspectedUser !== userName ? reportUser : (e) => null}>
+                <img className="add" src={currentlyInspectedUser === userName ? require("../../resources/images/add.PNG") : require("../../resources/images/report.png")} style={{ marginRight: userName === currentlyInspectedUser ? "" : "4px", marginLeft: userName === currentlyInspectedUser ? "" : "4px" }} />
+                <h3>{currentlyInspectedUser === userName ? "Add GitHub" : currentUserData?.reported ? "Report sent" : "Report User"}</h3>
               </button>
             </div>
 
-            <button className="create" onClick={navToSubmit}>
+            {currentlyInspectedUser === userName ? <button className="create" onClick={navToSubmit}>
               New Post
-            </button>
+            </button> : <div className="social-buttons">
+                <button className="create">Follow</button>
+                <button className="create" style={{ cursor: "not-allowed" }}>Chat</button>
+              </div>}
 
             {
               optionsExpanded ? <div className="option-container">
                 <a href="https://reddit.zendesk.com/hc/en-us/articles/115002454126-What-kind-of-profile-moderation-tools-do-I-have-" target="_blank"><button className="optionButton">
-                  Profile Moderation
+                  {currentlyInspectedUser === userName ? "Profile Moderation" : "Get Them Help and Support"}
                 </button></a>
 
                 <a href="https://reddit.zendesk.com/hc/en-us/articles/360043043412-What-is-a-custom-feed-and-how-do-I-make-one-" target="_blank"><button className="optionButton">
@@ -888,7 +895,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
                 </button></a>
 
                 <button className="optionButton">
-                  Invite someone to chat
+                  {currentlyInspectedUser === userName ? "User Settings" : "Invite someone to chat"}
                 </button>
               </div> : null
             }

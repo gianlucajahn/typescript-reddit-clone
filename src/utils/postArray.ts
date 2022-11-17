@@ -1555,7 +1555,7 @@ const postArray = [
             },
             {
                 author: "Leviathant",
-                avatar: "10",
+                avatar: "13",
                 nested_lvl: 0,
                 nested_comments: [
 

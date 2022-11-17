@@ -3718,7 +3718,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "100.000",
+        karma: "9.999",
         age: "17y",
         color: "#",
         cakeday: "September 7th, 2005"

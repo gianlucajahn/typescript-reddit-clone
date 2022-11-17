@@ -1231,13 +1231,58 @@ function App() {
     }
 
     if (target.id === "login") {
-      setLoginStatus(true);
-      setLoginModalState("closed");
+
+      if (loginModalState === "login") {
+        let userId = userData.findIndex(user => user.username === userName);
+        if (userId !== -1) {
+          if (password === userData[userId].password) {
+            setLoginStatus(true);
+            setLoginModalState("closed");
+          } else {
+            // tell user the entered password is wrong
+          }
+        } else {
+          // tell user the entered username does not exist
+        }
+      }
+
+      if (loginModalState === "register") {
+        let userId = userData.findIndex(user => user.username === userName);
+        if (userId !== -1) {
+          // tell user the username is already taken
+          return;
+        }
+
+        setLoginStatus(true);
+        setLoginModalState("closed");
+      }
     } else if (target.id === "demo") {
       setLoginStatus(true);
       setUserName("Nikola Tesla");
       setPassword("electricity");
       setLoginModalState("closed");
+      if (userData.findIndex(user => user.username === "Nikola Tesla") === -1) {
+        let demoUserData = {
+          username: "Nikola Tesla",
+          password: "electricity",
+          avatar: "tesla",
+          trophies: [
+
+          ],
+          following: [
+
+          ],
+          reported: false,
+          added: false,
+          karma: "1",
+          age: "1d",
+          color: "#7193ff",
+          cakeday: ""
+        };
+        let updatedUserData = [...userData];
+        updatedUserData.push(demoUserData);
+        setUserData(updatedUserData);
+      }
     } else if (target.id === "logout") {
       setDropdownIsOpen(false);
       setLoginStatus(false);
@@ -1254,6 +1299,26 @@ function App() {
 
   const quickNavigate = (e: React.MouseEvent) => {
     navigate(`r/${currentSub}`);
+  }
+
+  const followUser = (e: React.MouseEvent) => {
+
+  }
+
+  const addFriend = (e: React.MouseEvent) => {
+    const friendName = currentlyInspectedUser;
+    let friendId = userData.findIndex(user => user.username === friendName);
+    let updatedUserData = [...userData];
+    updatedUserData[friendId].added = !updatedUserData[friendId].added;
+    setUserData(updatedUserData);
+  }
+
+  const reportUser = (e: React.MouseEvent) => {
+    const reportName = currentlyInspectedUser;
+    let reportId = userData.findIndex(user => user.username === reportName);
+    let updatedUserData = [...userData];
+    updatedUserData[reportId].reported = !updatedUserData[reportId].reported;
+    setUserData(updatedUserData);
   }
 
   const handleNestedComment = (e: React.MouseEvent) => {
@@ -1540,6 +1605,8 @@ function App() {
           navToUserProfile={navToUserProfile}
           userData={userData}
           currentUserData={currentUserData}
+          reportUser={reportUser}
+          addFriend={addFriend}
         />} />
         <Route path='/submit' element={<SubmitPage
           randomIntToString={randomIntToString}

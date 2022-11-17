@@ -293,14 +293,68 @@
                     gap: 8px;
                     padding-left: 12px;
 
-                    .social {
-                        background-color: #edeff1;
+                    .social-reported {
+                        background-color: rgb(238, 45, 45);
                         border: none;
                         border-radius: 9999px;
                         gap: 6px;
                         cursor: pointer;
                         font-family: "IBM";
                         align-items: center;
+                        transition: 0.2s all;
+                        width: 130px;
+                        box-sizing: border-box;
+                        font-size: 10px;
+                        color: #1c1c1c;
+                        display: flex;
+                        padding: 9px 16px 9px 12px;
+
+                        .added {
+                            width: 22px;
+                            margin-right: 2px;
+                        }
+
+                        .add {
+                            height: 22px;
+                        }
+                    }
+
+                    .social-true {
+                        background-color: rgb(47, 230, 47);
+                        background-size: 200% auto;   
+                        box-shadow: 0 0 20px #eee;
+                        border: none;
+                        border-radius: 9999px;
+                        gap: 6px;
+                        cursor: pointer;
+                        font-family: "IBM";
+                        align-items: center;
+                        transition: 0.2s all;
+                        width: 130px;
+                        font-size: 10px;
+                        color: #1c1c1c;
+                        display: flex;
+                        padding: 9px 16px 9px 12px;
+
+                        .added {
+                            width: 22px;
+                            margin-right: 2px;
+                        }
+
+                        .add {
+                            height: 22px;
+                        }
+                    }
+
+                    .social {
+                        border: none;
+                        border-radius: 9999px;
+                        gap: 6px;
+                        width: 130px;
+                        cursor: pointer;
+                        font-family: "IBM";
+                        align-items: center;
+                        transition: 0.2s all;
                         font-size: 10px;
                         color: #1c1c1c;
                         display: flex;
@@ -316,6 +370,11 @@
 
                         .add {
                             height: 22px;
+                        }
+
+                        .added {
+                            width: 22px;
+                            margin-right: 5px;
                         }
 
                         h3 {
@@ -423,5 +482,17 @@
         align-self: flex-end;
         margin-left: 4px;
         margin-bottom: 2px;
+    }
+}
+
+.social-buttons {
+    display: flex;
+    padding-left: 14px;
+    gap: 8px;
+
+    .create {
+        padding: 7px 48px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
