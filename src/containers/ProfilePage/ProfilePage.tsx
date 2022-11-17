@@ -817,10 +817,10 @@ export default function ProfilePage (props:  ProfilePageProps) {
             <h1>{currentlyInspectedUser === userName ? userName : currentlyInspectedUser}</h1>
             <h4>u/{currentlyInspectedUser === userName ? userName : currentlyInspectedUser} · {currentlyInspectedUser === userName ? "1d" : currentUserData?.age}</h4>
 
-            <button className="style">
+            {currentlyInspectedUser === userName && <button className="style">
               <img className="shirt" src={require("../../resources/images/shirt.png")} />
               <h3>Style Avatar</h3>
-            </button>
+            </button>}
 
             <div className="userdata">
               <div className="karma-container">
@@ -839,6 +839,27 @@ export default function ProfilePage (props:  ProfilePageProps) {
                 </div>
               </div>
             </div>
+
+            {posts.map((post, i) => {
+              if (post.author !== currentlyInspectedUser) {
+                return;
+              } else if (post.awards.length === 0) {
+                return;
+              }
+
+              return <div className="awards-display">
+                <img className="award" src={require(`../../resources/images/${post.awards[0]}.png`)} />
+                {post.awards.length >= 2 && <img className="award" src={require(`../../resources/images/${post.awards[1]}.png`)} />}
+                {post.awards.length >= 3 && <img className="award" src={require(`../../resources/images/${post.awards[2]}.png`)} />}
+                {post.awards.length >= 4 && <img className="award" src={require(`../../resources/images/${post.awards[3]}.png`)} />}
+                {post.awards.length >= 5 && <img className="award" src={require(`../../resources/images/${post.awards[4]}.png`)} />}
+                {post.awards.length >= 6 && <img className="award" src={require(`../../resources/images/${post.awards[5]}.png`)} />}
+                {post.awards.length >= 7 && <img className="award" src={require(`../../resources/images/${post.awards[6]}.png`)} />}
+                {post.awards.length >= 8 && <img className="award" src={require(`../../resources/images/${post.awards[7]}.png`)} />}
+                {post.awards.length >= 9 && <img className="award" src={require(`../../resources/images/${post.awards[8]}.png`)} />}
+                <p>received</p>
+              </div>
+            })}
 
             <div className="social-container">
               <button className="social">

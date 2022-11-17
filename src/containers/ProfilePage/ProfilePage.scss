@@ -404,3 +404,24 @@
     justify-content: center;
     margin-bottom: 50px;
 }
+
+.awards-display {
+    padding-left: 18px;
+    margin-bottom: 9px;
+    display: flex;
+    gap: 3px;
+
+    .award {
+        height: 20px;
+        cursor: pointer;
+    }
+
+    p {
+        font-family: "IBM";
+        color: #1a1a1b;
+        font-size: 12px;
+        align-self: flex-end;
+        margin-left: 4px;
+        margin-bottom: 2px;
+    }
+}
