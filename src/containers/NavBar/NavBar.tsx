@@ -346,7 +346,7 @@ export default function NavBar (props: NavBarProps) {
                       <h4>{userName}</h4>
                       <div className="karmaContainer">
                         <img className="karma" src={require("../../resources/images/karma.PNG")} />
-                        <p>1 karma</p>
+                        <p>{userData[userData.findIndex(user => user.username === userName)].karma} karma</p>
                       </div>
                     </div>
                   </div> : null}
