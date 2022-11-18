@@ -43,7 +43,10 @@ function App() {
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [showAuthAlert, setShowAuthAlert] = useState({
     username: false,
-    password: false
+    password: false,
+    wrongPassword: false,
+    usernameDoesNotExist: false,
+    usernameTaken: false
   });
   const [imageUploaded, setImageUploaded] = useState(false);
   const [submitPage, setSubmitPage] = useState(false);
@@ -192,7 +195,10 @@ function App() {
       if (target.value.length >= 4) {
         setShowAuthAlert({
           username: false,
-          password: showAuthAlert.password
+          password: showAuthAlert.password,
+          usernameDoesNotExist: false,
+          wrongPassword: false,
+          usernameTaken: false
         });
       }
     } else if (target.id === "password") {
@@ -200,7 +206,10 @@ function App() {
       if (target.value.length >= 6) {
         setShowAuthAlert({
           username: showAuthAlert.username,
-          password: false
+          password: false,
+          usernameDoesNotExist: false,
+          wrongPassword: false,
+          usernameTaken: false
         });
       }
     }
@@ -930,6 +939,13 @@ function App() {
     const target = e.target as HTMLElement;
     setDropdownIsOpen(false);
     setLoginModalState(target.id);
+    setShowAuthAlert({
+      username: false,
+      password: false,
+      wrongPassword: false,
+      usernameDoesNotExist: false,
+      usernameTaken: false
+    });
   }
 
   const handleLike = (e: React.MouseEvent) => {
@@ -1307,17 +1323,26 @@ function App() {
         if (userName.length < 4 && password.length < 6) {
           setShowAuthAlert({
             username: true,
-            password: true
+            password: true,
+            usernameDoesNotExist: showAuthAlert.usernameDoesNotExist,
+            wrongPassword: showAuthAlert.wrongPassword,
+            usernameTaken: showAuthAlert.usernameTaken
           });
         } else if (userName.length < 4 && password.length >= 6) {
           setShowAuthAlert({
             username: true,
-            password: false
+            password: false,
+            usernameDoesNotExist: showAuthAlert.usernameDoesNotExist,
+            wrongPassword: showAuthAlert.wrongPassword,
+            usernameTaken: showAuthAlert.usernameTaken
           });
         } else if (userName.length >= 4 && password.length < 6) {
           setShowAuthAlert({
             username: false,
-            password: true
+            password: true,
+            usernameDoesNotExist: showAuthAlert.usernameDoesNotExist,
+            wrongPassword: showAuthAlert.wrongPassword,
+            usernameTaken: showAuthAlert.usernameTaken
           });
         }
   
@@ -1330,14 +1355,31 @@ function App() {
       if (loginModalState === "login") {
         let userId = userData.findIndex(user => user.username === userName);
         if (userId !== -1) {
-          if (password === userData[userId].password) {
-            setLoginStatus(true);
-            setLoginModalState("closed");
-          } else {
-            // tell user the entered password is wrong
-          }
+            // login successfully
+            if (password === userData[userId].password) {
+              setLoginModalState("closed");
+              setLoginStatus(true);
+              return;
+            } else {
+              // tell user the entered password is incorrect
+              setShowAuthAlert({
+                username: false,
+                password: false,
+                usernameDoesNotExist: false,
+                wrongPassword: true,
+                usernameTaken: false
+              });
+              return;
+            }
         } else {
-          // tell user the entered username does not exist
+          // tell user the username does not exist
+          setShowAuthAlert({
+            username: false,
+            password: false,
+            usernameDoesNotExist: true,
+            wrongPassword: false,
+            usernameTaken: false
+          });
         }
       }
 
@@ -1345,6 +1387,13 @@ function App() {
         let userId = userData.findIndex(user => user.username === userName);
         if (userId !== -1) {
           // tell user the username is already taken
+          setShowAuthAlert({
+            username: false,
+            password: false,
+            usernameDoesNotExist: false,
+            wrongPassword: false,
+            usernameTaken: true
+          });
           return;
         }
 

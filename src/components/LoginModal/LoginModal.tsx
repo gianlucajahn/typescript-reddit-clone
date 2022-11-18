@@ -15,7 +15,10 @@ export interface LoginModalProps {
     loginStatus: boolean,
     showAuthAlert: {
       username: boolean,
-      password: boolean
+      password: boolean,
+      usernameDoesNotExist: boolean,
+      wrongPassword: boolean,
+      usernameTaken: boolean
     },
     handleLoginInput: ChangeEventHandler<HTMLInputElement>,
     handleLoginModal: MouseEventHandler<HTMLButtonElement>,
@@ -70,12 +73,15 @@ export default function LoginModal (props: LoginModalProps) {
                 <div className="circle" style={{ display: hoverState.username === false ? userName.length <= 1 ? "block" : "none" : "none", left: loginModalState === "login" ? "19.5%" : "33.75%" }}></div>
             </div>
             {showAuthAlert.username && <h4 className="typecheck">! Username must contain 4 characters or more</h4>}
+            {showAuthAlert.usernameDoesNotExist && <h4 className="typecheck">! A user with this username does not exist</h4>}
+            {showAuthAlert.usernameTaken && <h4 className="typecheck">! This username is already taken</h4>}
             <div className="container password">
                 <input className="inputField" type="password" required spellCheck="false" id="password" onChange={handleLoginInput} onMouseEnter={handleHover} onMouseLeave={handleHover} />
                 <span className="label">{loginModalState === "login" ? "PASSWORD" : "PREFERED PASSWORD"}</span>
                 <div className="circle" style={{ display: hoverState.password === false ? password.length <= 1 ? "block" : "none" : "none", left: loginModalState === "login" ? "19.5%" : "33.65%" }}></div>
             </div>
             {showAuthAlert.password && <h4 className="typecheck second-typecheck">! Password must contain 6 characters or more</h4>}
+            {showAuthAlert.wrongPassword && <h4 className="typecheck second-typecheck">! The entered password is wrong</h4>}
 
             <button className="anmelden" id="login" onClick={handleLogin}>
                 {loginModalState === "login" ? "Login" : "Sign Up"}
