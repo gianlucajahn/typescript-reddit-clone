@@ -4,6 +4,7 @@ import GridPost from '../../components/GridPost/GridPost';
 import PostedComment from '../../components/PostedComment/PostedComment';
 import SortBar from '../../components/SortBar/SortBar';
 import { Subreddits, Subreddit, Post, userObjectArray, userObject } from '../../types/types';
+import userArray from '../../utils/userArray';
 import './ProfilePage.scss';
 
 export interface ProfilePageProps {
@@ -149,6 +150,59 @@ export default function ProfilePage (props:  ProfilePageProps) {
       }
 
       if (userName === currentlyInspectedUser) {
+        switch (currentUserData?.avatar) {
+          case "1":
+            setBackgroundColor("#51e9f4");
+            break;
+          case "2":
+            setBackgroundColor("#ffd635");
+            break;
+          case "3":
+            setBackgroundColor("#0079d3");
+            break;
+          case "4":
+            setBackgroundColor("#94b3ff");
+            break;
+          case "5":
+            setBackgroundColor("#e4abff");
+            break;
+          case "6":
+            setBackgroundColor("#ff99aa");
+            break;
+          case "7":
+            setBackgroundColor("#0079d2");
+            break;
+          case "8":
+            setBackgroundColor("#7eed56");
+            break;
+          case "9":
+            setBackgroundColor("#4856a3");
+            break;
+          case "10":
+            setBackgroundColor("#d4e815");
+            break;
+          case "11":
+            setBackgroundColor("#ffb470");
+            break;
+          case "12":
+            setBackgroundColor("#ff66ac");
+            break;
+          case "13":
+            setBackgroundColor("#c18d42");
+            break;
+          case "14":
+            setBackgroundColor("#ff5105");
+            break;
+          case "15":
+            setBackgroundColor("#46d160");
+            break;
+        }
+
+        if (currentUserData?.avatar.length !== 0) {
+          console.log(currentUserData)
+          return;
+        }
+
         if (userName === "Nikola Tesla") {
           setBackgroundColor("#7193ff")
         } else if (randomIntToString === "1") {
@@ -851,7 +905,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
             <img className="settings" src={require("../../resources/images/bluesettings.png")} />
             <div className="d-card" onMouseMove={hoverCard} id="card" onMouseLeave={resetCard} style={{ backgroundColor: backgroundColor }}>
               <div className="card-content">
-                <img className="card-icon" src={userName === "Nikola Tesla" ? userName === currentlyInspectedUser ? require(`../../resources/images/avatartesla_head.png`) : require(`../../resources/images/base_variants/default${currentUserData?.avatar}.png`) : userName === currentlyInspectedUser ? require(`../../resources/images/avatar${randomIntToString}_head.png`) : require("../../resources/images/base_variants/default1.png")} />
+                <img className="card-icon" src={userName === "Nikola Tesla" ? userName === currentlyInspectedUser ? require(`../../resources/images/avatartesla_head.png`) : require(`../../resources/images/base_variants/default${currentUserData?.avatar}.png`) : userName === currentlyInspectedUser ? userArray.findIndex(user => user.username === userName) !== -1 ? require(`../../resources/images/base_variants/default${userArray[userArray.findIndex(user => user.username === userName)].avatar}.png`) : require(`../../resources/images/avatar${randomIntToString}_head.png`) : require(`../../resources/images/base_variants/default${currentUserData?.avatar}.png`)} />
               </div>
             </div>
 

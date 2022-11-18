@@ -9,6 +9,7 @@ import { ReactComponent as Star } from "../../resources/images/star.svg";
 import { ReactComponent as User } from "../../resources/images/user.svg";
 import { ObjectType } from 'typescript';
 import { Notification, Subreddit, Subreddits, userObject, userObjectArray } from '../../types/types';
+import userArray from '../../utils/userArray';
 
 export interface NavBarProps {
   dropdownIsOpen: boolean,
@@ -139,7 +140,7 @@ export default function NavBar (props: NavBarProps) {
                 submitPage ? require("../../resources/images/add.PNG") :  
                 currentSub !== undefined ?  require(`../../resources/images/Communities/${currentSub.title}/icon.png`) 
                 : location.pathname.substring(0, 5) === "/user" 
-                ? require(`../../resources/images/${location.pathname.substring(6, 10) === userName.substring(0, 4) 
+                ? userArray.findIndex(user => user.username === userName) !== -1 ? require(`../../resources/images/base_variants/default${userArray[userArray.findIndex(user => user.username === userName)].avatar}.png`) : require(`../../resources/images/${location.pathname.substring(6, 10) === userName.substring(0, 4) 
                 ? userName === "Nikola Tesla" ? "avatartesla_head.png" : `avatar${randomIntToString}_head.png` : `base_variants/default${currentUserData?.avatar}.png`}`) : require("../../resources/images/home.png")} style={{ height: currentSub !== undefined ? "21px" : "18px" }} />
               <h4 className="return subText">{submitPage ? "Create Post" : currentSub !== undefined ? "r/" + currentSub.title : location.pathname.substring(6, 10) === userName.substring(0, 4) ? `u/${userName}` : location.pathname.substring(0, 5) === "/user" ? `u/${location.pathname.substring(6)}` : "Home"}</h4>
             </div>
@@ -340,7 +341,7 @@ export default function NavBar (props: NavBarProps) {
               <div className={loginStatus ? "link loggedInLink" : "link"} id="link" style={{ border: dropdownIsOpen ? "1px solid #EDEFF1" : "1px solid transparent" }} onMouseEnter={handleHoverLink} onMouseLeave={handleHoverLink}>
                   {loginStatus ? null : <img src={require("../../resources/images/user.png")} className="userImg" />}
                   {loginStatus ? <div className="avatarContainer">
-                    <img className="avatar" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
+                    <img className="avatar" src={userArray.findIndex(user => user.username === userName) !== -1 ? require(`../../resources/images/base_variants/default${userArray[userArray.findIndex(user => user.username === userName)].avatar}.png`) : require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
                     <div className="navbarUserInfo">
                       <h4>{userName}</h4>
                       <div className="karmaContainer">
@@ -353,7 +354,7 @@ export default function NavBar (props: NavBarProps) {
               </div>
               <div className={loginStatus ? "dropdownMenu dropdownMenuLogin" : "dropdownMenu"} style={{ display: dropdownIsOpen ? "block" : "none", right: loginStatus ? "12px" : "20px" }} id="dropdownMenu">
                 {loginStatus ? <div className="dropdownItem dropdownProfile">
-                  <img className="avatarBig" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} onClick={navToProfile} />
+                  <img className="avatarBig" src={userArray.findIndex(user => user.username === userName) !== -1 ? require(`../../resources/images/base_variants/default${userArray[userArray.findIndex(user => user.username === userName)].avatar}.png`) : require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} onClick={navToProfile} />
                   <div className="profile">
                     <h3 className="username">{userName}</h3>
                     <button className="toProfile auth shopAvatar profil" onClick={navToProfile}>

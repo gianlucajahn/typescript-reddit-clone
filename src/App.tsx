@@ -1430,7 +1430,7 @@ function App() {
         let demoUserData = {
           username: "Nikola Tesla",
           password: "electricity",
-          avatar: "tesla",
+          avatar: "",
           trophies: [
             "betauser",
             "newuser",
