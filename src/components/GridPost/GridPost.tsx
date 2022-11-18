@@ -2,6 +2,7 @@ import React, { MouseEventHandler, useEffect, useState, Dispatch, SetStateAction
 import { findAllInRenderedTree } from 'react-dom/test-utils';
 import { useLocation } from 'react-router-dom';
 import { Post, Subreddit } from '../../types/types';
+import userArray from '../../utils/userArray';
 import Comments from '../Comments/Comments';
 import './GridPost.scss';
 
@@ -178,7 +179,7 @@ export default function GridPost (props: GridPostProps) {
 
             <div className="content">
                 {post.type === "text" ? 
-                <p className="src" style={{ width: currentPost === undefined ? "555px" : "662px" }}>{post.src}</p> : <img className="src" src={currentPost?.author === userName ? currentPost.src : location.pathname.includes("user") ? currentlyInspectedUser === userName ? nonUserData.includes(currentProfileSection) ? require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`) : post.src : require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`) : require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`)} style={{ maxWidth: currentPost === undefined ? "599px" : "698px" }} />}
+                <p className="src" style={{ width: currentPost === undefined ? "555px" : "662px" }}>{post.src}</p> : <img className="src" src={currentPost?.author === userName ? currentPost.src : location.pathname.includes("user") ? currentlyInspectedUser === userName ? userArray.findIndex(user => user.username === userName) !== -1 ? require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`) : nonUserData.includes(currentProfileSection) ? require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`) : post.src : require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`) : require(`../../resources/images/Communities/${post.subreddit}/${post.id.toString()}.png`)} style={{ maxWidth: currentPost === undefined ? "599px" : "698px" }} />}
             </div>
 
             <div className="footer">
