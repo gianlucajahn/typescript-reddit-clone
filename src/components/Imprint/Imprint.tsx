@@ -51,7 +51,7 @@ export default function Imprint (props: ImprintProps) {
 
         <div className="line lastline"></div>
 
-        <h5 className="imprint-credits">Reddit Inc © 2022. All rights reserved</h5>
+        <h5 className="imprint-credits">No rights reserved. Built for educational purposes.</h5>
     </div>
   );
 }

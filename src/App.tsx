@@ -1078,7 +1078,6 @@ function App() {
     const postId = parseInt(currentPost?.id);
     const updatedPost = currentPost;
     if (target.id === "upvote") {
-      console.log(target.classList);
       if (target.classList.contains('nested')) {
         console.log("upvote nest");
         const oldVotes = updatedPost.comments[commentId].nested_comments[0].vote;
@@ -1098,7 +1097,15 @@ function App() {
           }
         });
         updatedPost.comments = updatedCommentArray;
-        setPosts([...posts, posts[postId] = updatedPost]);
+        let updatedPosts = posts.map((post, i) => {
+          if (i === postId) {
+            post = updatedPost;
+            return post;
+          } else {
+            return post;
+          }
+        });
+        setPosts(updatedPosts);
       } else {
         const oldVotes = updatedPost.comments[commentId].vote;
         const newVotes = oldVotes === 1 ? 0 : 1;
@@ -1119,7 +1126,15 @@ function App() {
           }
         });
         updatedPost.comments = updatedCommentArray;
-        setPosts([...posts, posts[postId] = updatedPost]);
+        let updatedPosts = posts.map((post, i) => {
+          if (i === postId) {
+            post = updatedPost;
+            return post;
+          } else {
+            return post;
+          }
+        });
+        setPosts(updatedPosts);
       }
     } else if (target.id === "downvote") {
       if (target.classList.contains('nested')) {
@@ -1139,7 +1154,15 @@ function App() {
           }
         });
         updatedPost.comments = updatedCommentArray;
-        setPosts([...posts, posts[postId] = updatedPost]);
+        let updatedPosts = posts.map((post, i) => {
+          if (i === postId) {
+            post = updatedPost;
+            return post;
+          } else {
+            return post;
+          }
+        });
+        setPosts(updatedPosts);
       } else {
         const oldVotes = updatedPost.comments[commentId].vote;
         const newVotes = oldVotes === -1 ? 0 : -1;
@@ -1160,7 +1183,15 @@ function App() {
           }
         });
         updatedPost.comments = updatedCommentArray;
-        setPosts([...posts, posts[postId] = updatedPost]);
+        let updatedPosts = posts.map((post, i) => {
+          if (i === postId) {
+            post = updatedPost;
+            return post;
+          } else {
+            return post;
+          }
+        });
+        setPosts(updatedPosts);
       }
     }
   }

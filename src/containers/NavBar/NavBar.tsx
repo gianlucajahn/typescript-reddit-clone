@@ -759,7 +759,7 @@ export default function NavBar (props: NavBarProps) {
                 </div>
 
                 <div className="dropdownItem" id="credits">
-                  <h6>© 2022 Reddit, Inc. All rights reserved.</h6>
+                  <h6>No rights reserved. Built for educational purposes only.</h6>
                 </div>
               </div>
             </div>
