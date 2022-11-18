@@ -260,6 +260,27 @@ function App() {
       return;
     }
 
+    // Add "commenter" tropy to user trophy case
+    let updatedUserData = [...userData];
+    let userId = userData.findIndex(user => user.username === userName);
+    let userObject = {...userData[userId]};
+
+    // Don't add second commenter trophy if user already has one
+    if (userObject.trophies.includes("commenter")) {
+      
+    } else {
+      userObject.trophies.push("commenter");
+      updatedUserData = updatedUserData.map((user, i) => {
+        if (i === userId) {
+          user = userObject;
+          return user;
+        } else {
+          return user;
+        }
+      });
+      setUserData(updatedUserData);
+    }
+
     commentNotification(e);
     const target = e.currentTarget;
     const commentId = parseInt(target.id);
