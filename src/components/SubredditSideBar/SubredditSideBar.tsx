@@ -58,7 +58,7 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
           }
           <p className="about">{currentSub?.about}</p>
           <div className="createdAt">
-            <img className="cake" src={require("../../resources/images/cake.png")} />
+            <img className="cake" src={require("../../resources/images/cakeblack.png")} />
             <p>Created {currentSub?.creationDate}</p>
           </div>
     

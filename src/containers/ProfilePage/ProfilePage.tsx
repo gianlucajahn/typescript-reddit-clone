@@ -915,7 +915,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
             </button>
             
             <h1>{currentlyInspectedUser === userName ? userName : currentlyInspectedUser}</h1>
-            <h4>u/{currentlyInspectedUser === userName ? userName : currentlyInspectedUser} · {currentlyInspectedUser === userName ? "1d" : currentUserData?.age}</h4>
+            <h4>u/{currentlyInspectedUser === userName ? userName : currentlyInspectedUser} · {currentlyInspectedUser === userName ? userArray.findIndex(user => user.username === userName) === -1 ? "1d" : currentUserData?.age : currentUserData?.age}</h4>
 
             {currentlyInspectedUser === userName && <button className="style">
               <img className="shirt" src={require("../../resources/images/shirt.png")} />
@@ -927,7 +927,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
                 <h3>Karma</h3>
                 <div className="flexbox">
                   <img className="karma" src={require("../../resources/images/karma_blue.png")} />
-                  <h4>{currentlyInspectedUser === userName ? "1" : currentUserData?.karma}</h4>
+                  <h4>{currentlyInspectedUser === userName ? userData[userData.findIndex(user => user.username === userName)].karma : currentUserData?.karma}</h4>
                 </div>
               </div>
 
@@ -935,7 +935,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
                 <h3>Cake day</h3>
                 <div className="flexbox">
                   <img className="cake" src={require("../../resources/images/cake.png")} />
-                  <h4>{currentlyInspectedUser === userName ? creationDate : currentUserData?.cakeday}</h4>
+                  <h4>{currentlyInspectedUser === userName ? userArray.findIndex(user => user.username === userName) === -1 ? creationDate : currentUserData?.cakeday : currentUserData?.cakeday}</h4>
                 </div>
               </div>
             </div>
