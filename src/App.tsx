@@ -311,7 +311,27 @@ function App() {
       return;
     }
 
+    // Add "poster" tropy to user trophy case
+    let updatedUserData = [...userData];
+    let userId = userData.findIndex(user => user.username === userName);
+    let userObject = {...userData[userId]};
 
+    // Don't add second poster trophy if user already has one
+    if (userObject.trophies.includes("poster")) {
+      return;
+    }
+    userObject.trophies.push("poster");
+    updatedUserData = updatedUserData.map((user, i) => {
+      if (i === userId) {
+        user = userObject;
+        return user;
+      } else {
+        return user;
+      }
+    });
+    setUserData(updatedUserData);
+
+    // Initiate loading, add post to posts array and navigate to new post page
     setSubmitLoading(true);
     setTimeout((e: any) => {
       let submittedCustomPost = {...customPost};
@@ -354,6 +374,27 @@ function App() {
   const submitComment = (e: React.MouseEvent) => {
     commentNotification(e);
     const target = e.currentTarget as HTMLButtonElement;
+
+    // Add "commenter" tropy to user trophy case
+    let updatedUserData = [...userData];
+    let userId = userData.findIndex(user => user.username === userName);
+    let userObject = {...userData[userId]};
+
+    // Don't add second commenter trophy if user already has one
+    if (userObject.trophies.includes("commenter")) {
+      
+    } else {
+      userObject.trophies.push("commenter");
+      updatedUserData = updatedUserData.map((user, i) => {
+        if (i === userId) {
+          user = userObject;
+          return user;
+        } else {
+          return user;
+        }
+      });
+      setUserData(updatedUserData);
+    }
 
     if (loginStatus === false) {
       setLoginModalState("login");
