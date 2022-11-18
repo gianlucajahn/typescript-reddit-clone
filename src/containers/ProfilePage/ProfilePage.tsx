@@ -37,6 +37,7 @@ export interface ProfilePageProps {
     reportUser: MouseEventHandler,
     addFriend: MouseEventHandler,
     handleNestedComment: MouseEventHandler,
+    followUser: MouseEventHandler,
     loginStatus: boolean,
     setLoginModalState: any,
     loginModalState: string,
@@ -83,6 +84,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
     handleLike,
     handleNavigate,
     navToSubmit,
+    followUser,
     loginStatus,
     setLoginModalState,
     loginModalState,
@@ -885,8 +887,8 @@ export default function ProfilePage (props:  ProfilePageProps) {
             {currentlyInspectedUser === userName ? <button className="create" onClick={navToSubmit}>
               New Post
             </button> : <div className="social-buttons">
-                <button className="create">Follow</button>
-                <button className="create" style={{ cursor: "not-allowed" }}>Chat</button>
+                <button className={userData[userData.findIndex(user => user.username === userName)].following.includes(currentlyInspectedUser) ? "followed" : "create"} onClick={followUser}>{userData[userData.findIndex(user => user.username === userName)].following.includes(currentlyInspectedUser) ? "Unf" : "F"}ollow</button>
+                <button className="create-non" style={{ cursor: "not-allowed" }}>Chat</button>
               </div>}
 
             {

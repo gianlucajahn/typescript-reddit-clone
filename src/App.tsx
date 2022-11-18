@@ -1326,7 +1326,39 @@ function App() {
   }
 
   const followUser = (e: React.MouseEvent) => {
+    let userId = userData.findIndex(user => user.username === userName);
+    if (userId === -1) {
+      return;
+    }
 
+    let userObject = {...userData[userId]};
+    
+    if (userObject.following.includes(currentlyInspectedUser)) {
+      let followId = userObject.following.findIndex(user => user === currentlyInspectedUser);
+      let newFollowing = [...userObject.following];
+      newFollowing.splice(followId, 1);
+      userObject.following = newFollowing;
+      let newUserData = userData.map((user, i) => {
+        if (user.username !== userName) {
+          return user;
+        } else {
+          user = userObject;
+          return user;
+        }
+      });
+      setUserData(newUserData);
+      return;
+    }
+    userObject.following.push(currentlyInspectedUser);
+    let newUserData = userData.map((user, i) => {
+      if (user.username !== userName) {
+        return user;
+      } else {
+        user = userObject;
+        return user;
+      }
+    });
+    setUserData(newUserData);
   }
 
   const addFriend = (e: React.MouseEvent) => {
@@ -1631,6 +1663,7 @@ function App() {
           currentUserData={currentUserData}
           reportUser={reportUser}
           addFriend={addFriend}
+          followUser={followUser}
         />} />
         <Route path='/submit' element={<SubmitPage
           randomIntToString={randomIntToString}
