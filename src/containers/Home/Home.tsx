@@ -5,6 +5,7 @@ import SortBar from '../../components/SortBar/SortBar';
 import HomeSideBar from '../../components/HomeSideBar/HomeSideBar';
 import { Post, Subreddit, Subreddits } from '../../types/types';
 import Grid from '../Grid/Grid';
+import userArray from '../../utils/userArray';
 
 export interface HomeProps {
   randomIntToString: string,
@@ -97,12 +98,13 @@ export default function Home (props: HomeProps) {
   return (
     <div className="home" style={{ maxHeight: loginModalState === "closed" ? "" : "92.75vh", overflow: loginModalState === "closed" ? "" : "hidden" }}>
       <div className="feed" style={{ overflow: "hidden" }}>
-        <CreatePost 
+        {userArray.findIndex(user => user.username === userName) === -1 && <CreatePost 
           randomIntToString={randomIntToString}
           userName={userName}
           navToSubmit={navToSubmit}
           loginStatus={loginStatus}
-        />
+        />}
+        
         <SortBar 
           currentSort={currentSort}
           setSort={setSort}
