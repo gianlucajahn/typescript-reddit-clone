@@ -94,6 +94,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
     const [currentProfileSection, setCurrentProfileSection] = useState("overview");
     const [optionsExpanded, setOptionsExpanded] = useState(false);
     const [hoveredSection, setHoveredSection] = useState("none");
+    const [currentAwardLength, setCurrentAwardLength] = useState<number>(0);
     const [backgroundColor, setBackgroundColor] = useState("");
 
     useEffect(() => {
@@ -179,7 +180,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
     ];
     const date = new Date();
     let day = date.getDate();
-    let monthNum = date.getMonth() + 1;
+    let monthNum = date.getMonth();
     let year = date.getFullYear();
     const monthNames = [
       "January",
@@ -802,7 +803,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
         </div>
 
         <div className="info">
-          <div className="card" style={{ height: optionsExpanded ? "722px" : "616px" }}>
+          <div className="card">
             <div className="box">
               {currentlyInspectedUser === userName && <img className="add-photo" src={require("../../resources/images/addphoto.png")} />}
             </div>
@@ -847,8 +848,12 @@ export default function ProfilePage (props:  ProfilePageProps) {
             {posts.map((post, i) => {
               if (post.author !== currentlyInspectedUser) {
                 return;
-              } else if (post.awards.length === 0) {
+              } 
+              
+              if (post.awards.length === 0) {
                 return;
+              } else {
+                console.log(post.awards.length);
               }
 
               return <div className="awards-display">

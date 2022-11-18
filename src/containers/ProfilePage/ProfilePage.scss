@@ -302,7 +302,7 @@
                         font-family: "IBM";
                         align-items: center;
                         transition: 0.2s all;
-                        width: 130px;
+                        width: 134px;
                         box-sizing: border-box;
                         font-size: 10px;
                         color: #1c1c1c;
@@ -330,7 +330,7 @@
                         font-family: "IBM";
                         align-items: center;
                         transition: 0.2s all;
-                        width: 130px;
+                        width: 134px;
                         font-size: 10px;
                         color: #1c1c1c;
                         display: flex;
@@ -350,7 +350,7 @@
                         border: none;
                         border-radius: 9999px;
                         gap: 6px;
-                        width: 130px;
+                        width: 134px;
                         cursor: pointer;
                         font-family: "IBM";
                         align-items: center;
@@ -427,6 +427,7 @@
                     cursor: pointer;
                     display: flex;
                     margin-right: 15px;
+                    margin-bottom: 12px !important;
                     margin-top: 3px;
                     padding: 4px 14px 5px 14px;
 

@@ -662,6 +662,8 @@ function App() {
   const navToProfile = (e: React.MouseEvent) => {
     setCurrentSub(undefined);
     setCurrentlyInspectedUser(userName);
+    let userId = userData.findIndex(user => user.username === userName);
+    setCurrentUserData(userData[userId]);
     navigate(`/user/${userName}`);
   }
 
@@ -1253,6 +1255,27 @@ function App() {
           return;
         }
 
+        let demoUserData = {
+          username: userName,
+          password: password,
+          avatar: "",
+          trophies: [
+            "betauser",
+            "newuser",
+          ],
+          following: [
+
+          ],
+          reported: false,
+          added: false,
+          karma: "1",
+          age: "1d",
+          color: "",
+          cakeday: ""
+        };
+        let updatedUserData = [...userData];
+        updatedUserData.push(demoUserData);
+        setUserData(updatedUserData);
         setLoginStatus(true);
         setLoginModalState("closed");
       }
@@ -1267,7 +1290,8 @@ function App() {
           password: "electricity",
           avatar: "tesla",
           trophies: [
-
+            "betauser",
+            "newuser",
           ],
           following: [
 
