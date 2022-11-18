@@ -178,7 +178,8 @@ export default function ProfilePage (props:  ProfilePageProps) {
     const nonUserData = [
       "saved",
       "upvoted",
-      "downvoted"
+      "downvoted",
+      "following"
     ];
     const date = new Date();
     let day = date.getDate();
@@ -767,6 +768,44 @@ export default function ProfilePage (props:  ProfilePageProps) {
               }
 
               if (post.author === userName) {
+                return;
+              }
+
+              return <GridPost 
+              post={post}
+              posts={posts}
+              currentSub={currentSub} 
+              currentPost={currentPost}
+              handleNavigate={handleNavigate}
+              handleLike={handleLike}
+              currentlyInspectedUser={currentlyInspectedUser}
+              openPost={openPost}
+              userName={userName}
+              mainComment={mainComment}
+              writeComment={writeComment}
+              submitComment={submitComment}
+              handleLikeComment={handleLikeComment}
+              loginStatus={loginStatus}
+              handleNestedComment={handleNestedComment}
+              setIndex={setIndex}
+              writeNestedComment={writeNestedComment}
+              submitNestedComment={submitNestedComment}
+              currentEditedComment={currentEditedComment}
+              editComment={editComment}
+              editNestedComment={editNestedComment}
+              randomIntToString={randomIntToString}
+              savePost={savePost}
+              navToUserProfile={navToUserProfile}
+              navToProfile={navToProfile}
+              nonUserData={nonUserData}
+              currentProfileSection={currentProfileSection}
+             />
+            })}
+            
+            {currentProfileSection === "following" && posts.map((post, i) => {
+              const userId = userData.findIndex(user => user.username === userName);
+
+              if (userData[userId].following.includes(post.author) === false) {
                 return;
               }
 
