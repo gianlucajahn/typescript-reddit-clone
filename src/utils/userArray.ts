@@ -43,10 +43,9 @@ const userArray = [
         password: "defaultpassword",
         avatar: "4",
         trophies: [
-            "popularcomment",
             "popularpost",
-            "poster",
-            "photograph"
+            "photograph",
+            "poster"
         ],
         following: [
             ""
