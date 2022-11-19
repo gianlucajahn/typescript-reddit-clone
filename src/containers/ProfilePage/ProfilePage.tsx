@@ -948,7 +948,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
               if (post.awards.length === 0) {
                 return;
               } else {
-                console.log(post.awards.length);
+                
               }
 
               return <div className="awards-display">

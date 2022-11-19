@@ -1,10 +1,11 @@
-import React, { MouseEventHandler, Dispatch, SetStateAction } from 'react';
+import React, { MouseEventHandler, Dispatch, SetStateAction, useState, useEffect } from 'react';
 import { Subreddits, Subreddit, Post } from '../../types/types';
 import { ReactComponent as Cross } from "../../resources/images/cross.svg";
 import './individualPost.scss';
 import GridPost from '../../components/GridPost/GridPost';
 import SubredditSideBar from '../../components/SubredditSideBar/SubredditSideBar';
 import SubmitPage from '../SubmitPage/SubmitPage';
+import Confetti from 'react-confetti';
 
 export interface individualPostProps {
     randomIntToString: string,
@@ -14,6 +15,8 @@ export interface individualPostProps {
     setSort: React.MouseEventHandler;
     subreddits: Subreddits,
     topSubreddits: Subreddits,
+    addedConfetti: boolean,
+    setAddedConfetti: any,
     handleSubMembership: MouseEventHandler,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
@@ -60,6 +63,7 @@ export default function IndividualPost (props: individualPostProps) {
     currentSub,
     setSort,
     subreddits,
+    addedConfetti,
     topSubreddits,
     currentEditedComment,
     mainComment,
@@ -69,6 +73,7 @@ export default function IndividualPost (props: individualPostProps) {
     writeNestedComment,
     editComment,
     editNestedComment,
+    setAddedConfetti,
     navToProfile,
     savePost,
     submitNestedComment,
@@ -95,8 +100,34 @@ export default function IndividualPost (props: individualPostProps) {
     currentPost
   } = props;
 
+  const [confettiRunning, setConfettiRunning] = useState(false);
+  const [opacity, setOpacity] = useState(1.0);
+  const width = 1920;
+  const height = 1850;
+
+  useEffect(() => {
+    if (currentPost?.id === "86") {
+      setConfettiRunning(true);
+      let turnOff = setTimeout((e) => setConfettiRunning(false), 6000);
+      let opacityStep1 = setTimeout((e) => setOpacity(0.8), 3750);
+      let opacityStep2 = setTimeout((e) => setOpacity(0.6), 4250);
+      let opacityStep3 = setTimeout((e) => setOpacity(0.5), 4750);
+      let opacityStep4 = setTimeout((e) => setOpacity(0.4), 5250);
+      let opacityStep5 = setTimeout((e) => setOpacity(0.2), 5750);
+      let opacityStep6 = setTimeout((e) => setOpacity(0.1), 5950);
+      let finishAnimation = setTimeout((e) => setAddedConfetti(true), 6000);
+    }
+  }, []);
+
   return (
     <div className="post-page" style={{ backgroundColor: currentSub?.backgroundColor === "#edeff1" ? "#2e2f2f" : currentSub?.backgroundColor }}>
+      {confettiRunning && !addedConfetti && <Confetti 
+                            width={width} 
+                            height={height}
+                            numberOfPieces={600}
+                            opacity={opacity} />}
+
+
       <div className="pageHeader">
         <div className="leftHeader">
           <img className="postIcon" src={require("../../resources/images/post.png")} />

@@ -39,6 +39,7 @@ function App() {
   const [cachedPosts, setCachedPosts] = useState<Post[]>();
   const [cachedUserData, setCachedUserData] = useState<UserData>();
   const [currentSub, setCurrentSub] = useState<Subreddit>();
+  const [addedConfetti, setAddedConfetti] = useState(false);
   const [currentPost, setCurrentPost] = useState<Post>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [showAuthAlert, setShowAuthAlert] = useState({
@@ -1883,6 +1884,8 @@ function App() {
           savePost={savePost}
           navToUserProfile={navToUserProfile}
           navToProfile={navToProfile}
+          addedConfetti={addedConfetti}
+          setAddedConfetti={setAddedConfetti}
         />} />
       </Routes>
     </div>
