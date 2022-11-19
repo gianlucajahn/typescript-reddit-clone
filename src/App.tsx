@@ -565,7 +565,6 @@ function App() {
     const target = e.currentTarget as HTMLButtonElement;
     const subIndex = subreddits.findIndex(element => element.title === target.id);
     const targetedSubreddit = subreddits[subIndex];
-    console.log(targetedSubreddit);
 
     if (targetedSubreddit.joined) {
       const joinedCommunitiesEdited = [...joinedCommunities];
@@ -989,12 +988,12 @@ function App() {
           post.upvotes = newUpvotes;
         }
       } else {
-        // add 1 karma to author
+        // add 1/2 karma to author
         let userId = userData.findIndex(user => user.username === post.author);
         let newUserData = userData.map((user, i) => {
           if (i === userId) {
             let karmaNum = parseInt(user.karma);
-            karmaNum = karmaNum + 1;
+            post.vote === 0 ? karmaNum = karmaNum + 1 : karmaNum = karmaNum + 2;
             let karmaString = karmaNum.toString();
             user.karma = karmaString;
             return user;
@@ -1042,12 +1041,12 @@ function App() {
           post.upvotes = newUpvotes;
         }
       } else {
-        // remove 1 karma from author
+        // remove 1/2 karma from author
         let userId = userData.findIndex(user => user.username === post.author);
         let newUserData = userData.map((user, i) => {
           if (i === userId) {
             let karmaNum = parseInt(user.karma);
-            karmaNum = karmaNum - 1;
+            post.vote === 0 ? karmaNum = karmaNum - 1 : karmaNum = karmaNum - 2;
             let karmaString = karmaNum.toString();
             user.karma = karmaString;
             return user;
@@ -1152,7 +1151,6 @@ function App() {
     const updatedPost = currentPost;
     if (target.id === "upvote") {
       if (target.classList.contains('nested')) {
-        console.log("upvote nest");
         const oldVotes = updatedPost.comments[commentId].nested_comments[0].vote;
         const newVotes = oldVotes === 1 ? 0 : 1;
         let currentUpvotesString = updatedPost.comments[commentId].nested_comments[0].upvotes;
@@ -1161,7 +1159,6 @@ function App() {
         let newUpvotes = currentUpvotes.toString();
         const updatedCommentArray = updatedPost.comments.map((comment, i) => {
           if (i === commentId) {
-            console.log("upvote nest 2");
             comment.nested_comments[0].vote = newVotes;
             comment.nested_comments[0].upvotes = newUpvotes;
             return comment;
@@ -1272,7 +1269,6 @@ function App() {
   const selectAnchor = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     const index = Number(target.id);
-    console.log(index);
     const newAnchorArray = currentSub?.anchors?.map((anchor, i) => {
       if (anchor && i === index) {
         setCurrentAnchor(i);
@@ -1942,6 +1938,8 @@ function App() {
           navToProfile={navToProfile}
           addedConfetti={addedConfetti}
           setAddedConfetti={setAddedConfetti}
+          setCurrentPost={setCurrentPost}
+          setCurrentSub={setCurrentSub}
         />} />
       </Routes>
     </div>

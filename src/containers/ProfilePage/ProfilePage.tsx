@@ -199,7 +199,6 @@ export default function ProfilePage (props:  ProfilePageProps) {
         }
 
         if (currentUserData?.avatar.length !== 0) {
-          console.log(currentUserData)
           return;
         }
 

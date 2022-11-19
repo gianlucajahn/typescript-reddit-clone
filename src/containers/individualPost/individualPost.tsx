@@ -6,6 +6,7 @@ import GridPost from '../../components/GridPost/GridPost';
 import SubredditSideBar from '../../components/SubredditSideBar/SubredditSideBar';
 import SubmitPage from '../SubmitPage/SubmitPage';
 import Confetti from 'react-confetti';
+import { useLocation } from 'react-router-dom';
 
 export interface individualPostProps {
     randomIntToString: string,
@@ -17,6 +18,7 @@ export interface individualPostProps {
     topSubreddits: Subreddits,
     addedConfetti: boolean,
     setAddedConfetti: any,
+    setCurrentPost: any,
     handleSubMembership: MouseEventHandler,
     handleNavigate: MouseEventHandler,
     handleLike: MouseEventHandler,
@@ -38,6 +40,7 @@ export interface individualPostProps {
     writeNestedComment: any,
     editComment: any,
     editNestedComment: any,
+    setCurrentSub: any,
     navToProfile: MouseEventHandler,
     submitNestedComment: MouseEventHandler
     expandRule: MouseEventHandler,
@@ -74,6 +77,8 @@ export default function IndividualPost (props: individualPostProps) {
     editComment,
     editNestedComment,
     setAddedConfetti,
+    setCurrentPost,
+    setCurrentSub,
     navToProfile,
     savePost,
     submitNestedComment,
@@ -99,6 +104,29 @@ export default function IndividualPost (props: individualPostProps) {
     posts,
     currentPost
   } = props;
+
+  const location = useLocation();
+  if (currentPost === undefined) {
+    let numberArray = [
+      0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+    ];
+    let eventualPostId = location.pathname.substring(location.pathname.length - 2);
+    let firstNum = eventualPostId.substring(0, 1);
+    let firstNumToInt = parseInt(firstNum);
+    if (numberArray.includes(firstNumToInt)) {
+      setCurrentPost(posts[parseInt(eventualPostId)]);
+      let currentPost = posts[parseInt(eventualPostId)];
+      let subreddit = currentPost.subreddit;
+      let subredditId = subreddits.findIndex(sub => sub.title === subreddit);
+      setCurrentSub(subreddits[subredditId]);
+    } else {
+      setCurrentPost(posts[parseInt(eventualPostId.substring(1))]);
+      let currentPost = posts[parseInt(eventualPostId.substring(1))];
+      let subreddit = currentPost.subreddit;
+      let subredditId = subreddits.findIndex(sub => sub.title === subreddit);
+      setCurrentSub(subreddits[subredditId]);
+    }
+  }
 
   const [confettiRunning, setConfettiRunning] = useState(false);
   const [opacity, setOpacity] = useState(1.0);
