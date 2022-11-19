@@ -955,7 +955,7 @@ function App() {
       return;
     }
 
-    console.log(posts);
+
     const target = e.currentTarget;
     const targetParent = target.parentElement;
     const ancestor = targetParent?.parentElement;
@@ -965,6 +965,20 @@ function App() {
 
     if (target.id === "upvote") {
       if (post.vote === 1) {
+        // remove 1 karma from author
+        let userId = userData.findIndex(user => user.username === post.author);
+        let newUserData = userData.map((user, i) => {
+          if (i === userId) {
+            let karmaNum = parseInt(user.karma);
+            karmaNum = karmaNum - 1;
+            let karmaString = karmaNum.toString();
+            user.karma = karmaString;
+            return user;
+          } else {
+            return user;
+          }
+        });
+        setUserData(newUserData);
         post.vote = 0;
 
         if (!post.upvotes.includes('k')) {
@@ -975,6 +989,20 @@ function App() {
           post.upvotes = newUpvotes;
         }
       } else {
+        // add 1 karma to author
+        let userId = userData.findIndex(user => user.username === post.author);
+        let newUserData = userData.map((user, i) => {
+          if (i === userId) {
+            let karmaNum = parseInt(user.karma);
+            karmaNum = karmaNum + 1;
+            let karmaString = karmaNum.toString();
+            user.karma = karmaString;
+            return user;
+          } else {
+            return user;
+          }
+        });
+        setUserData(newUserData);
         if (!post.upvotes.includes('k')) {
           const oldVotes = post.vote;
           const newVotes = 1;
@@ -990,6 +1018,20 @@ function App() {
 
     } else if (target.id === "downvote") {
       if (post.vote === -1) {
+        // add 1 karma to author
+        let userId = userData.findIndex(user => user.username === post.author);
+        let newUserData = userData.map((user, i) => {
+          if (i === userId) {
+            let karmaNum = parseInt(user.karma);
+            karmaNum = karmaNum + 1;
+            let karmaString = karmaNum.toString();
+            user.karma = karmaString;
+            return user;
+          } else {
+            return user;
+          }
+        });
+        setUserData(newUserData);
         post.vote = 0;
 
         if (!post.upvotes.includes('k')) {
@@ -1000,6 +1042,20 @@ function App() {
           post.upvotes = newUpvotes;
         }
       } else {
+        // remove 1 karma from author
+        let userId = userData.findIndex(user => user.username === post.author);
+        let newUserData = userData.map((user, i) => {
+          if (i === userId) {
+            let karmaNum = parseInt(user.karma);
+            karmaNum = karmaNum - 1;
+            let karmaString = karmaNum.toString();
+            user.karma = karmaString;
+            return user;
+          } else {
+            return user;
+          }
+        });
+        setUserData(newUserData);
         if (!post.upvotes.includes('k')) {
           const oldVotes = post.vote;
           const newVotes = -1;

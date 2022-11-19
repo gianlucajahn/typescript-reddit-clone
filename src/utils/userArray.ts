@@ -15,7 +15,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "30.482",
+        karma: "30482",
         age: "5y",
         color: "#7eed56",
         cakeday: "October 5th, 2017"
@@ -53,7 +53,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "4.106",
+        karma: "4106",
         age: "8mo",
         color: "#94b3ff",
         cakeday: "March 22nd, 2022"
@@ -90,7 +90,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "4.729",
+        karma: "4729",
         age: "9mo",
         color: "#",
         cakeday: "February 1st, 2022"
@@ -217,7 +217,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "48.294",
+        karma: "48294",
         age: "2y",
         color: "#",
         cakeday: "May 11th, 2020"
@@ -253,7 +253,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "1.080",
+        karma: "1080",
         age: "7y",
         color: "#",
         cakeday: "January 20th, 2015"
@@ -327,7 +327,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "28.676",
+        karma: "28676",
         age: "2y",
         color: "#"
     },
@@ -469,7 +469,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "2.192",
+        karma: "2192",
         age: "1y",
         color: "#",
         cakeday: "February 26th, 2021"
@@ -544,7 +544,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "92.498",
+        karma: "92498",
         age: "5y",
         color: "#",
         cakeday: "April 1st, 2017"
@@ -563,7 +563,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "4.270",
+        karma: "4270",
         age: "4y",
         color: "#",
         cakeday: "April 10th, 2018"
@@ -582,7 +582,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "2.477",
+        karma: "2477",
         age: "4y",
         color: "#",
         cakeday: "December 23rd, 2017"
@@ -620,7 +620,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "6.498",
+        karma: "6498",
         age: "3y",
         color: "#",
         cakeday: "July 18th, 2019"
@@ -710,7 +710,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "5.382",
+        karma: "5382",
         age: "4y",
         color: "#",
         cakeday: "June 5th, 2018"
@@ -837,7 +837,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "3.572",
+        karma: "3572",
         age: "2y",
         color: "#",
         cakeday: "May 20th, 2020"
@@ -909,7 +909,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "2.591",
+        karma: "2591",
         age: "2y",
         color: "#",
         cakeday: "November 17th, 2020"
@@ -966,7 +966,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "4.272",
+        karma: "4272",
         age: "4y",
         color: "#",
         cakeday: "July 15th, 2018"
@@ -1092,7 +1092,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "8.318",
+        karma: "8318",
         age: "1y",
         color: "#",
         cakeday: "September 11th, 2021"
@@ -1200,7 +1200,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "5.729",
+        karma: "5729",
         age: "4y",
         color: "#",
         cakeday: "May 12th, 2018"
@@ -1397,7 +1397,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "5.328",
+        karma: "5328",
         age: "1y",
         color: "#",
         cakeday: "August 2nd, 2021"
@@ -1681,7 +1681,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "3.201",
+        karma: "3201",
         age: "11mo",
         color: "#",
         cakeday: "January 17th, 2022"
@@ -1841,7 +1841,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "1.930",
+        karma: "1930",
         age: "2y",
         color: "#",
         cakeday: "August 2nd, 2020"
@@ -1860,7 +1860,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "6.382",
+        karma: "6382",
         age: "3y",
         color: "#",
         cakeday: "August 2nd, 2019"
@@ -2093,7 +2093,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "3.592",
+        karma: "3592",
         age: "4y",
         color: "#",
         cakeday: "August 25th, 2018"
@@ -2112,7 +2112,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "7.674",
+        karma: "7674",
         age: "5y",
         color: "#",
         cakeday: "May 5th, 2017"
@@ -2131,7 +2131,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "1.098",
+        karma: "1098",
         age: "6y",
         color: "#",
         cakeday: "August 2nd, 2016"
@@ -2402,7 +2402,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "11.294",
+        karma: "11294",
         age: "4y",
         color: "#",
         cakeday: "August 2nd, 2018"
@@ -2438,7 +2438,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "1.110",
+        karma: "1110",
         age: "4y",
         color: "#",
         cakeday: "September 16th, 2018"
@@ -2814,7 +2814,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "2.402",
+        karma: "2402",
         age: "1y",
         color: "#",
         cakeday: "August 2nd, 2021"
@@ -2869,7 +2869,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "7.492",
+        karma: "7492",
         age: "3y",
         color: "#",
         cakeday: "August 17th, 2019"
@@ -2889,7 +2889,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "16.988",
+        karma: "16988",
         age: "3y",
         color: "#",
         cakeday: "March 6th, 2019"
@@ -3050,7 +3050,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "3.335",
+        karma: "3335",
         age: "3y",
         color: "#",
         cakeday: "August 18th, 2019"
@@ -3535,7 +3535,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "5.802",
+        karma: "5802",
         age: "3y",
         color: "#",
         cakeday: "May 2nd, 2019"
@@ -3592,7 +3592,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "11.709",
+        karma: "11709",
         age: "7y",
         color: "#",
         cakeday: "March 2nd, 2015"
@@ -3718,7 +3718,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "9.999",
+        karma: "9999",
         age: "17y",
         color: "#",
         cakeday: "September 7th, 2005"
@@ -4330,7 +4330,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "5.540",
+        karma: "5540",
         age: "3y",
         color: "#",
         cakeday: "August 5th, 2019"
@@ -4349,7 +4349,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "1.832",
+        karma: "1832",
         age: "4y",
         color: "#",
         cakeday: "July 16th, 2018"
@@ -4406,7 +4406,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "2.749",
+        karma: "2749",
         age: "2y",
         color: "#",
         cakeday: "November 7th, 2020"
@@ -4425,7 +4425,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "1.458",
+        karma: "1458",
         age: "7y",
         color: "#",
         cakeday: "April 26th, 2015"
@@ -4444,7 +4444,7 @@ const userArray = [
         ],
         reported: false,
         added: false,
-        karma: "1.038",
+        karma: "1038",
         age: "2y",
         color: "#",
         cakeday: "August 3rd, 2020"
