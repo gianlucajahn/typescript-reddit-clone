@@ -927,7 +927,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
                 <h3>Karma</h3>
                 <div className="flexbox">
                   <img className="karma" src={require("../../resources/images/karma_blue.png")} />
-                  <h4>{currentlyInspectedUser === userName ? userData[userData.findIndex(user => user.username === userName)].karma : currentUserData?.karma}</h4>
+                  <h4>{currentlyInspectedUser === userName ? userData[userData.findIndex(user => user.username === userName)].karma.length >= 4 ? userData[userData.findIndex(user => user.username === userName)].karma.substring(0, userData[userData.findIndex(user => user.username === userName)].karma.length - 3) + "." + userData[userData.findIndex(user => user.username === userName)].karma.substring(userData[userData.findIndex(user => user.username === userName)].karma.length - 3) : userData[userData.findIndex(user => user.username === userName)].karma : currentUserData!.karma.length >= 4 ? currentUserData?.karma.substring(0, currentUserData.karma.length - 3) + "." + currentUserData?.karma.substring(currentUserData.karma.length - 3) : currentUserData?.karma}</h4>
                 </div>
               </div>
 
@@ -948,7 +948,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
               if (post.awards.length === 0) {
                 return;
               } else {
-                
+
               }
 
               return <div className="awards-display">

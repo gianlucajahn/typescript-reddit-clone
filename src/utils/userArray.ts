@@ -329,7 +329,8 @@ const userArray = [
         added: false,
         karma: "28676",
         age: "2y",
-        color: "#"
+        color: "#",
+        cakeday: "January 3rd, 2017"
     },
     {
         username: "TeemoG0d69",
