@@ -1,6 +1,10 @@
+// Imports
 import React, { MouseEventHandler, useState } from 'react';
+// Component Imports
 import SubredditSideBar from '../../components/SubredditSideBar/SubredditSideBar';
+// Type Imports
 import { Post, Subreddit, Subreddits } from '../../types/types';
+// CSS Imports
 import './SubmitPage.scss';
 
 export interface SubmitPageProps {
@@ -14,6 +18,21 @@ export interface SubmitPageProps {
   submitPage: boolean,
   setSubmitPostType: any,
   onImgUpload: any,
+  communityOptions: boolean,
+  submitDropdownState: boolean
+  loginModalState: string,
+  currentSub: Subreddit | undefined,
+  posts: Post[],
+  currentPost: Post | undefined,
+  standardTheme: any,
+  imageUploaded: boolean,
+  submitLoading: boolean,
+  setIndex: any,
+  customPost: Post,
+  editPostTitle: any,
+  editPostSrc: any,
+  expandRule: MouseEventHandler,
+  openPost: MouseEventHandler,
   handleNavigate: MouseEventHandler,
   navToSubmit: MouseEventHandler,
   switchCommunityTheme: MouseEventHandler,
@@ -23,21 +42,6 @@ export interface SubmitPageProps {
   submitCustomPost: MouseEventHandler,
   navToProfile: MouseEventHandler,
   removeUploadedImg: MouseEventHandler,
-  communityOptions: boolean,
-  expandRule: MouseEventHandler,
-  submitDropdownState: boolean
-  loginModalState: string,
-  currentSub: Subreddit | undefined,
-  posts: Post[],
-  currentPost: Post | undefined,
-  standardTheme: any,
-  imageUploaded: boolean,
-  openPost: MouseEventHandler,
-  submitLoading: boolean,
-  setIndex: any,
-  customPost: Post,
-  editPostTitle: any,
-  editPostSrc: any,
 }
 
 export default function SubmitPage (props: SubmitPageProps) {
@@ -58,8 +62,15 @@ export default function SubmitPage (props: SubmitPageProps) {
     editPostSrc,
     communityOptions,
     submitDropdownState,
-    navToProfile,
     onImgUpload,
+    loginModalState,
+    currentSub,
+    posts,
+    standardTheme,
+    currentPost,
+    setIndex,
+    navToProfile,
+    openPost,
     submitCustomPost,
     removeUploadedImg,
     selectSubmitSubreddit,
@@ -69,23 +80,21 @@ export default function SubmitPage (props: SubmitPageProps) {
     expandRule,
     handleNavigate,
     navToSubmit,
-    loginModalState,
-    currentSub,
-    posts,
-    standardTheme,
-    currentPost,
-    openPost,
-    setIndex,
   } = props;
 
+  // Local state
   const [typeHover, setTypeHover] = useState({
     text: false,
     image: false,
     link: false
   });
-
   const [draftAmount, setDraftAmount] = useState(0);
   const [focussed, setFocussed] = useState(false);
+  const [OC, setOC] = useState(false);
+  const [spoiler, setSpoiler] = useState(false);
+  const [NSFW, setNSFW] = useState(false);
+
+  // Hover event handler for post type div onMouseEnter events
   const handleHover = (e: React.MouseEvent) => {
     const target = e.currentTarget;
     if (target.id === "text") {
@@ -109,10 +118,7 @@ export default function SubmitPage (props: SubmitPageProps) {
     }
   }
 
-  const [OC, setOC] = useState(false);
-  const [spoiler, setSpoiler] = useState(false);
-  const [NSFW, setNSFW] = useState(false);
-
+  // Hover event handler for post type div onMouseLeave events
   const resetHover = (e: React.MouseEvent) => {
     setTypeHover({
       text: false,
