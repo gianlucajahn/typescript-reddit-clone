@@ -112,7 +112,7 @@ export default function SubredditPage (props: SubredditPageProps) {
 
   return (
     <div className="subredditPage" style={{ backgroundColor: communityTheme ?  currentSub?.backgroundColor : "#edeff1", height: loginModalState === "closed" ? "" : "100vh", overflow: loginModalState === "closed" ? "scroll" : "hidden" }}>
-      <img className="subredditBanner" src={communityTheme ? require(`../../resources/images/Communities/${currentSub?.title}/banner.jpg`) : require(`../../resources/images/Communities/todayilearned/banner.jpg`)} />
+      <img alt="banner" className="subredditBanner" src={communityTheme ? require(`../../resources/images/Communities/${currentSub?.title}/banner.jpg`) : require(`../../resources/images/Communities/todayilearned/banner.jpg`)} />
 
       <SubredditHeadline 
         currentSub={currentSub}

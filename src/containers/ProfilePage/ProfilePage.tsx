@@ -912,17 +912,17 @@ export default function ProfilePage (props:  ProfilePageProps) {
         <div className="info">
           <div className="card">
             <div className="box">
-              {currentlyInspectedUser === userName && <img className="add-photo" src={require("../../resources/images/addphoto.png")} />}
+              {currentlyInspectedUser === userName && <img alt="add" className="add-photo" src={require("../../resources/images/addphoto.png")} />}
             </div>
-            <img className="settings" src={require("../../resources/images/bluesettings.png")} />
+            <img alt="settings" className="settings" src={require("../../resources/images/bluesettings.png")} />
             <div className="d-card" onMouseMove={hoverCard} id="card" onMouseLeave={resetCard} style={{ backgroundColor: backgroundColor }}>
               <div className="card-content">
-                <img className="card-icon" src={userName === "Nikola Tesla" ? userName === currentlyInspectedUser ? require(`../../resources/images/avatartesla_head.png`) : require(`../../resources/images/base_variants/default${currentUserData?.avatar}.png`) : userName === currentlyInspectedUser ? userArray.findIndex(user => user.username === userName) !== -1 ? require(`../../resources/images/base_variants/default${userArray[userArray.findIndex(user => user.username === userName)].avatar}.png`) : require(`../../resources/images/avatar${randomIntToString}_head.png`) : require(`../../resources/images/base_variants/default${currentUserData?.avatar}.png`)} />
+                <img alt="card" className="card-icon" src={userName === "Nikola Tesla" ? userName === currentlyInspectedUser ? require(`../../resources/images/avatartesla_head.png`) : require(`../../resources/images/base_variants/default${currentUserData?.avatar}.png`) : userName === currentlyInspectedUser ? userArray.findIndex(user => user.username === userName) !== -1 ? require(`../../resources/images/base_variants/default${userArray[userArray.findIndex(user => user.username === userName)].avatar}.png`) : require(`../../resources/images/avatar${randomIntToString}_head.png`) : require(`../../resources/images/base_variants/default${currentUserData?.avatar}.png`)} />
               </div>
             </div>
 
             <button className="details">
-              <img className="hexagon" src={require("../../resources/images/hexagon.png")} />        
+              <img alt="hexagon" className="hexagon" src={require("../../resources/images/hexagon.png")} />        
               Details    
             </button>
             
@@ -930,7 +930,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
             <h4>u/{currentlyInspectedUser === userName ? userName : currentlyInspectedUser} · {currentlyInspectedUser === userName ? userArray.findIndex(user => user.username === userName) === -1 ? "1d" : currentUserData?.age : currentUserData?.age}</h4>
 
             {currentlyInspectedUser === userName && <button className="style">
-              <img className="shirt" src={require("../../resources/images/shirt.png")} />
+              <img alt="shirt" className="shirt" src={require("../../resources/images/shirt.png")} />
               <h3>Style Avatar</h3>
             </button>}
 
@@ -938,7 +938,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
               <div className="karma-container">
                 <h3>Karma</h3>
                 <div className="flexbox">
-                  <img className="karma" src={require("../../resources/images/karma_blue.png")} />
+                  <img alt="karma" className="karma" src={require("../../resources/images/karma_blue.png")} />
                   <h4>{currentlyInspectedUser === userName ? userData[userData.findIndex(user => user.username === userName)].karma.length >= 4 ? userData[userData.findIndex(user => user.username === userName)].karma.substring(0, userData[userData.findIndex(user => user.username === userName)].karma.length - 3) + "." + userData[userData.findIndex(user => user.username === userName)].karma.substring(userData[userData.findIndex(user => user.username === userName)].karma.length - 3) : userData[userData.findIndex(user => user.username === userName)].karma : currentUserData!.karma.length >= 4 ? currentUserData?.karma.substring(0, currentUserData.karma.length - 3) + "." + currentUserData?.karma.substring(currentUserData.karma.length - 3) : currentUserData?.karma}</h4>
                 </div>
               </div>
@@ -946,7 +946,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
               <div className="cake-container">
                 <h3>Cake day</h3>
                 <div className="flexbox">
-                  <img className="cake" src={require("../../resources/images/cake.png")} />
+                  <img alt="cake" className="cake" src={require("../../resources/images/cake.png")} />
                   <h4>{currentlyInspectedUser === userName ? userArray.findIndex(user => user.username === userName) === -1 ? creationDate : currentUserData?.cakeday : currentUserData?.cakeday}</h4>
                 </div>
               </div>
@@ -964,27 +964,27 @@ export default function ProfilePage (props:  ProfilePageProps) {
               }
 
               return <div className="awards-display">
-                <img className="award" src={require(`../../resources/images/${post.awards[0]}.png`)} />
-                {post.awards.length >= 2 && <img className="award" src={require(`../../resources/images/${post.awards[1]}.png`)} />}
-                {post.awards.length >= 3 && <img className="award" src={require(`../../resources/images/${post.awards[2]}.png`)} />}
-                {post.awards.length >= 4 && <img className="award" src={require(`../../resources/images/${post.awards[3]}.png`)} />}
-                {post.awards.length >= 5 && <img className="award" src={require(`../../resources/images/${post.awards[4]}.png`)} />}
-                {post.awards.length >= 6 && <img className="award" src={require(`../../resources/images/${post.awards[5]}.png`)} />}
-                {post.awards.length >= 7 && <img className="award" src={require(`../../resources/images/${post.awards[6]}.png`)} />}
-                {post.awards.length >= 8 && <img className="award" src={require(`../../resources/images/${post.awards[7]}.png`)} />}
-                {post.awards.length >= 9 && <img className="award" src={require(`../../resources/images/${post.awards[8]}.png`)} />}
+                <img alt="award" className="award" src={require(`../../resources/images/${post.awards[0]}.png`)} />
+                {post.awards.length >= 2 && <img className="award" alt="award" src={require(`../../resources/images/${post.awards[1]}.png`)} />}
+                {post.awards.length >= 3 && <img className="award" alt="award" src={require(`../../resources/images/${post.awards[2]}.png`)} />}
+                {post.awards.length >= 4 && <img className="award" alt="award" src={require(`../../resources/images/${post.awards[3]}.png`)} />}
+                {post.awards.length >= 5 && <img className="award" alt="award" src={require(`../../resources/images/${post.awards[4]}.png`)} />}
+                {post.awards.length >= 6 && <img className="award" alt="award" src={require(`../../resources/images/${post.awards[5]}.png`)} />}
+                {post.awards.length >= 7 && <img className="award" alt="award" src={require(`../../resources/images/${post.awards[6]}.png`)} />}
+                {post.awards.length >= 8 && <img className="award" alt="award" src={require(`../../resources/images/${post.awards[7]}.png`)} />}
+                {post.awards.length >= 9 && <img className="award" alt="award" src={require(`../../resources/images/${post.awards[8]}.png`)} />}
                 <p>received</p>
               </div>
             })}
 
             <div className="social-container">
               <button className={currentlyInspectedUser !== userName ? currentUserData?.added ? "social-true" : "social" : "social"} onClick={currentlyInspectedUser !== userName ? addFriend : (e) => null}>
-                <img className={currentlyInspectedUser !== userName ? currentUserData?.added ? "added" : "add" : "add"} src={currentlyInspectedUser !== userName ? currentUserData?.added ? require("../../resources/images/checkblack.png") : require("../../resources/images/add.PNG") : require("../../resources/images/add.PNG") } />
+                <img alt="add" className={currentlyInspectedUser !== userName ? currentUserData?.added ? "added" : "add" : "add"} src={currentlyInspectedUser !== userName ? currentUserData?.added ? require("../../resources/images/checkblack.png") : require("../../resources/images/add.PNG") : require("../../resources/images/add.PNG") } />
                 <h3>{currentlyInspectedUser === userName ? "Add social link" : currentUserData?.added ? "Request sent" : "Add As Friend"}</h3>
               </button>
 
               <button className={currentlyInspectedUser !== userName ? currentUserData?.reported ? "social-reported" : "social" : "social"} onClick={currentlyInspectedUser !== userName ? reportUser : (e) => null}>
-                <img className="add" src={currentlyInspectedUser === userName ? require("../../resources/images/add.PNG") : require("../../resources/images/report.png")} style={{ marginRight: userName === currentlyInspectedUser ? "" : "4px", marginLeft: userName === currentlyInspectedUser ? "" : "4px" }} />
+                <img alt="add" className="add" src={currentlyInspectedUser === userName ? require("../../resources/images/add.PNG") : require("../../resources/images/report.png")} style={{ marginRight: userName === currentlyInspectedUser ? "" : "4px", marginLeft: userName === currentlyInspectedUser ? "" : "4px" }} />
                 <h3>{currentlyInspectedUser === userName ? "Add GitHub" : currentUserData?.reported ? "Report sent" : "Report User"}</h3>
               </button>
             </div>
@@ -1022,7 +1022,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
 
             {currentUserData?.trophies.map((trophy, i) => {
               return <div className="trophy-container">
-                <img className="tropy-icon" src={require(`../../resources/images/${trophy}.png`)} />
+                <img alt="trophy" className="tropy-icon" src={require(`../../resources/images/${trophy}.png`)} />
                 <h3>{trophy === "sevenyearclub" ? "Seven-Year Club" : 
                      trophy === "sixyearclub" ? "Six-Year Club" : 
                      trophy === "fiveyearclub" ? "Five-Year Club" :

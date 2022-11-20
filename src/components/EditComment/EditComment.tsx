@@ -104,25 +104,25 @@ export default function EditComment  (props: EditCommentProps) {
       <div className="button-bar">
         <div className="start">
             <button className="text-settings" aria-label="Bold">
-              <img className="setting-icon" src={require("../../resources/images/bold.png")} />
+              <img alt="bold" className="setting-icon" src={require("../../resources/images/bold.png")} />
             </button>
             <button className="text-settings" aria-label="Italic">
-              <img className="setting-icon" src={require("../../resources/images/italic.png")} />
+              <img alt="italic" className="setting-icon" src={require("../../resources/images/italic.png")} />
             </button>
             <button className="text-settings" aria-label="Link">
-              <img className="setting-icon" src={require("../../resources/images/clip.png")} />
+              <img alt="clip" className="setting-icon" src={require("../../resources/images/clip.png")} />
             </button>
             <button className="text-settings" aria-label="Striked">
-              <img className="setting-icon" src={require("../../resources/images/strikethrough.png")} />
+              <img alt="strikethrough" className="setting-icon" src={require("../../resources/images/strikethrough.png")} />
             </button>
             <button className="text-settings" aria-label="Inline Code">
-              <img className="setting-icon" src={require("../../resources/images/inline.png")} />
+              <img alt="inline" className="setting-icon" src={require("../../resources/images/inline.png")} />
             </button>
             <button className="text-settings" aria-label="Superscript">
-              <img className="setting-icon" src={require("../../resources/images/superscript.png")} />
+              <img alt="superscript" className="setting-icon" src={require("../../resources/images/superscript.png")} />
             </button>
             <button className="text-settings spoiler" aria-label="Spoiler">
-              <img className="setting-icon" src={require("../../resources/images/spoiler.png")} />
+              <img alt="spoiler" className="setting-icon" src={require("../../resources/images/spoiler.png")} />
             </button>
       
             <div className="line"></div>
@@ -130,21 +130,21 @@ export default function EditComment  (props: EditCommentProps) {
             {mainBox && (
               <>
                 <button className="text-settings" aria-label="Heading">
-                  <img className="setting-icon" src={require("../../resources/images/heading.png")} />
+                  <img alt="heading" className="setting-icon" src={require("../../resources/images/heading.png")} />
                 </button>
                 <button className="text-settings" aria-label="Bulleted">
-                  <img className="setting-icon" src={require("../../resources/images/bulleted.png")} />
+                  <img alt="bulleted" className="setting-icon" src={require("../../resources/images/bulleted.png")} />
                 </button>
                 <button className="text-settings" aria-label="Numbered"> 
-                  <img className="setting-icon" src={require("../../resources/images/numbered.png")} />
+                  <img alt="numbered" className="setting-icon" src={require("../../resources/images/numbered.png")} />
                 </button>
                 <button className="text-settings" aria-label="Quote Block">
-                  <img className="setting-icon" src={require("../../resources/images/quote.png")} />
+                  <img alt="quote" className="setting-icon" src={require("../../resources/images/quote.png")} />
                 </button>
               </>
             )}
             <button className="text-settings" aria-label="More">
-              <img className="setting-icon" src={require("../../resources/images/dots.png")} />
+              <img alt="dots" className="setting-icon" src={require("../../resources/images/dots.png")} />
             </button>
         </div>
 

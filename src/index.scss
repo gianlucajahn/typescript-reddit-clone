@@ -17,39 +17,47 @@ code {
 @font-face {
   font-family: 'Benton Sans';
   src: url("./resources/fonts/bentonsansregular.otf") format("opentype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Benton Sans Book';
   src: url("./resources/fonts/bentonsansbook.otf") format("opentype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Noto Sans";
   src: url("./resources/fonts/notosans.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Noto Sans Regular";
   src: url("./resources/fonts/notosans-regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Noto Sans Bold";
   src: url("./resources/fonts/notosans-bold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "IBM";
   src: url("./resources/fonts/ibmplexsans.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "IBM Light";
   src: url("./resources/fonts/ibmplexsanslight.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "IBM Regular";
   src: url("./resources/fonts/ibmplexsansregular.ttf") format("truetype");
+  font-display: swap;
 }

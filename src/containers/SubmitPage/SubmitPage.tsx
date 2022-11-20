@@ -143,21 +143,21 @@ export default function SubmitPage (props: SubmitPageProps) {
         <button className="community-selector closeSelector" id="community-selector" style={{ borderBottomLeftRadius: submitDropdownState ? "0px" : "4px", borderBottomRightRadius: submitDropdownState ? "0px" : "4px" }}>
           <div className="top closeSelector" onClick={selectSubmitDropdown}>
               <div className="start closeSelector">
-                  <img className="community-icon closeSelector" src={require(`../../resources/images/Communities/${currentSub !== undefined ? `${currentSub.title}/icon` : "placeholder"}.png`)} />
+                  <img alt="icon" className="community-icon closeSelector" src={require(`../../resources/images/Communities/${currentSub !== undefined ? `${currentSub.title}/icon` : "placeholder"}.png`)} />
                   <h4 className="community-title closeSelector">{currentSub !== undefined ? "r/" + currentSub.title : "Choose a community"}</h4>
               </div>
-              <img className="expand closeSelector" src={require("../../resources/images/expand.png")} />
+              <img alt="expand" className="expand closeSelector" src={require("../../resources/images/expand.png")} />
           </div>
           
           <div className="dropdown closeSelector" style={{ display: submitDropdownState ? "flex" : "none" }}>
             <h4 className="closeSelector">YOUR PROFILE</h4>
             <div className="profile closeSelector" onClick={navToProfile}>
-              <img src={require(`../../resources/images/avatar${loginStatus ? userName === "Nikola Tesla" ? "tesla" : randomIntToString : randomIntToString}.PNG`)} className="closeSelector" />
+              <img alt="avatar" src={require(`../../resources/images/avatar${loginStatus ? userName === "Nikola Tesla" ? "tesla" : randomIntToString : randomIntToString}.PNG`)} className="closeSelector" />
               <h3 className="closeSelector">u/{userName}</h3>
             </div>
             <h4 className="closeSelector">YOUR COMMUNITIES</h4>
             {currentSub !== undefined && <div className="sub-container closeSelector" id="none" onClick={selectSubmitSubreddit}>
-                <img className="sub-icon closeSelector" src={require(`../../resources/images/Communities/placeholder.png`)} />
+                <img alt="icon" className="sub-icon closeSelector" src={require(`../../resources/images/Communities/placeholder.png`)} />
                 <div className="sub-info closeSelector">
                   <h3 className="sub-title closeSelector">Remove Subreddit</h3>
                   <h4 className="sub-members closeSelector">Click here to reset</h4>
@@ -165,7 +165,7 @@ export default function SubmitPage (props: SubmitPageProps) {
               </div>}
             {subreddits.map((sub, i) => {
               return <div className="sub-container closeSelector" id={sub.title} onClick={selectSubmitSubreddit}>
-                <img className="sub-icon closeSelector" src={require(`../../resources/images/Communities/${sub.title}/icon.png`)} id={sub.title === "leagueoflegends" ? "league" : ""}/>
+                <img alt="icon" className="sub-icon closeSelector" src={require(`../../resources/images/Communities/${sub.title}/icon.png`)} id={sub.title === "leagueoflegends" ? "league" : ""}/>
                 <div className="sub-info closeSelector">
                   <h3 className="sub-title closeSelector">r/{sub.title}</h3>
                   <h4 className="sub-members closeSelector">{sub.members} members</h4>
@@ -178,27 +178,27 @@ export default function SubmitPage (props: SubmitPageProps) {
         <div className="post-options" >
           <div className="post-types">
             <div className="post-type post hoverable" style={{ backgroundColor: submitPostType === "text" ? "#f2f8fd" : typeHover.text ? "#f2f8fd" : "white", borderBottom: submitPostType === "text" ? "2px solid #0079d3" : "" }} id="text" onClick={(e) => setSubmitPostType("text")} onMouseEnter={handleHover} onMouseLeave={resetHover}>
-              <img className="text" src={require(`../../resources/images/${submitPostType === "text" ? "typetext_selected" : "typetext"}.png`)} />
+              <img alt="text" className="text" src={require(`../../resources/images/${submitPostType === "text" ? "typetext_selected" : "typetext"}.png`)} />
               <h2 style={{ color: submitPostType === "text" ? "#0079d3" : "#878a8c" }}>Post</h2>
             </div>
 
             <div className="post-type img hoverable" style={{ backgroundColor: submitPostType === "image" ? "#f2f8fd" : typeHover.image ? "#f2f8fd" : "white", borderBottom: submitPostType === "image" ? "2px solid #0079d3" : "" }} id="image" onClick={(e) => setSubmitPostType("image")} onMouseEnter={handleHover} onMouseLeave={resetHover}>
-              <img className="image" src={require(`../../resources/images/${submitPostType === "image" ? "typeimage_selected" : "typeimage"}.png`)} />
+              <img alt="image" className="image" src={require(`../../resources/images/${submitPostType === "image" ? "typeimage_selected" : "typeimage"}.png`)} />
               <h2 style={{ color: submitPostType === "image" ? "#0079d3" : "#878a8c" }}>Images & Video</h2>
             </div>
 
             <div className="post-type links hoverable" style={{ backgroundColor: submitPostType === "link" ? "#f2f8fd" : typeHover.link ? "#f2f8fd" : "white", borderBottom: submitPostType === "link" ? "2px solid #0079d3" : "" }} id="link" onClick={(e) => setSubmitPostType("link")} onMouseEnter={handleHover} onMouseLeave={resetHover}>
-              <img className="link" src={require(`../../resources/images/${submitPostType === "link" ? "typelink_selected" : "typelink"}.png`)} />
+              <img alt="link" className="link" src={require(`../../resources/images/${submitPostType === "link" ? "typelink_selected" : "typelink"}.png`)} />
               <h2 style={{ color: submitPostType === "link" ? "#0079d3" : "#878a8c" }}>Link</h2>
             </div>
 
             <div className="post-type polls not-allowed">
-              <img className="poll" src={require(`../../resources/images/typepoll.png`)} />
+              <img alt="poll" className="poll" src={require(`../../resources/images/typepoll.png`)} />
               <h2 className="greyed-out">Poll</h2>
             </div>
 
             <div className="post-type talks not-allowed">
-              <img className="talk" src={require(`../../resources/images/typetalk.png`)} />
+              <img alt="talk" className="talk" src={require(`../../resources/images/typetalk.png`)} />
               <h2 className="greyed-out">Talk</h2>
             </div>
           </div>
@@ -212,43 +212,43 @@ export default function SubmitPage (props: SubmitPageProps) {
               <div className="button-bar-top">
                 <div className="start">
                     <button className="text-settings" aria-label="Bold">
-                      <img className="setting-icon" src={require("../../resources/images/bold.png")} />
+                      <img alt="bold" className="setting-icon" src={require("../../resources/images/bold.png")} />
                     </button>
                     <button className="text-settings" aria-label="Italic">
-                      <img className="setting-icon" src={require("../../resources/images/italic.png")} />
+                      <img alt="italic" className="setting-icon" src={require("../../resources/images/italic.png")} />
                     </button>
                     <button className="text-settings" aria-label="Link">
-                      <img className="setting-icon" src={require("../../resources/images/clip.png")} />
+                      <img alt="clip" className="setting-icon" src={require("../../resources/images/clip.png")} />
                     </button>
                     <button className="text-settings" aria-label="Striked">
-                      <img className="setting-icon" src={require("../../resources/images/strikethrough.png")} />
+                      <img alt="strikethrough" className="setting-icon" src={require("../../resources/images/strikethrough.png")} />
                     </button>
                     <button className="text-settings" aria-label="Inline Code">
-                      <img className="setting-icon" src={require("../../resources/images/inline.png")} />
+                      <img alt="inline" className="setting-icon" src={require("../../resources/images/inline.png")} />
                     </button>
                     <button className="text-settings" aria-label="Superscript">
-                      <img className="setting-icon" src={require("../../resources/images/superscript.png")} />
+                      <img alt="superscript" className="setting-icon" src={require("../../resources/images/superscript.png")} />
                     </button>
                     <button className="text-settings spoiler" aria-label="Spoiler">
-                      <img className="setting-icon" src={require("../../resources/images/spoiler.png")} />
+                      <img alt="spoiler" className="setting-icon" src={require("../../resources/images/spoiler.png")} />
                     </button>
               
                     <div className="line"></div>
         
                     <button className="text-settings" aria-label="Heading">
-                      <img className="setting-icon" src={require("../../resources/images/heading.png")} />
+                      <img alt="heading" className="setting-icon" src={require("../../resources/images/heading.png")} />
                     </button>
                     <button className="text-settings" aria-label="Bulleted">
-                      <img className="setting-icon" src={require("../../resources/images/bulleted.png")} />
+                      <img alt="bulleted" className="setting-icon" src={require("../../resources/images/bulleted.png")} />
                     </button>
                     <button className="text-settings" aria-label="Numbered"> 
-                      <img className="setting-icon" src={require("../../resources/images/numbered.png")} />
+                      <img alt="numbered" className="setting-icon" src={require("../../resources/images/numbered.png")} />
                     </button>
                     <button className="text-settings" aria-label="Quote Block">
-                      <img className="setting-icon" src={require("../../resources/images/quote.png")} />
+                      <img alt="quote" className="setting-icon" src={require("../../resources/images/quote.png")} />
                     </button>
                     <button className="text-settings" aria-label="More">
-                      <img className="setting-icon" src={require("../../resources/images/dots.png")} />
+                      <img alt="dots" className="setting-icon" src={require("../../resources/images/dots.png")} />
                     </button>
                 </div>
     
@@ -270,29 +270,29 @@ export default function SubmitPage (props: SubmitPageProps) {
 
           {submitPostType === "image" && <img id="blah" src={imageUploaded ? `${customPost.src}` : "#"} alt="Your Image" style={{ visibility: imageUploaded ? "visible" : "hidden" }}/>}
           {submitPostType === "image" && imageUploaded && <button className="delete" type="button" onClick={removeUploadedImg}>
-              <img className="remove" src={require("../../resources/images/remove.png")} />
+              <img alt="remove" className="remove" src={require("../../resources/images/remove.png")} />
             </button>}
 
           <div className="flair-container">
             <button type="button" className="flair-btn" style={{ backgroundColor: OC ? "#4ac150" : "white", border: OC ? "1px solid #4ac150" : "1px solid #878a8c", gap: OC ? "9px" : "7px" }} onClick={(e) => setOC(!OC)}> 
-              <img className={OC ? "check-icon" : "flair-icon"} src={OC ? require("../../resources/images/check.png") : require("../../resources/images/add.PNG")} />
+              <img alt="check" className={OC ? "check-icon" : "flair-icon"} src={OC ? require("../../resources/images/check.png") : require("../../resources/images/add.PNG")} />
               <h3 className="active" style={{ color: OC ? "white" : "#878a8c" }}>OC</h3>
             </button>
 
             <button type="button" className="flair-btn" style={{ backgroundColor: spoiler ? "black" : "white", border: spoiler ? "1px solid black" : "1px solid #878a8c", gap: spoiler ? "9px" : "7px" }} onClick={(e) => setSpoiler(!spoiler)}>
-              <img className={spoiler ? "check-icon" : "flair-icon"} src={spoiler ? require("../../resources/images/check.png") : require("../../resources/images/add.PNG")} />
+              <img alt="icon" className={spoiler ? "check-icon" : "flair-icon"} src={spoiler ? require("../../resources/images/check.png") : require("../../resources/images/add.PNG")} />
               <h3 className="active" style={{ color: spoiler ? "white" : "#878a8c" }}>Spoiler</h3>
             </button>
 
             <button type="button" className="flair-btn" style={{ backgroundColor: NSFW ? "rgb(255, 88, 91)" : "white", border: NSFW ? "1px solid rgb(255, 88, 91)" : "1px solid #878a8c", gap: NSFW ? "9px" : "7px" }} onClick={(e) => setNSFW(!NSFW)}>
-              <img className={NSFW ? "check-icon" : "flair-icon"} src={NSFW ? require("../../resources/images/check.png") : require("../../resources/images/add.PNG")} />
+              <img alt="nsfw" className={NSFW ? "check-icon" : "flair-icon"} src={NSFW ? require("../../resources/images/check.png") : require("../../resources/images/add.PNG")} />
               <h3 className="active" style={{ color: NSFW ? "white" : "#878a8c" }}>NSFW</h3>
             </button>
 
             <button type="button" className="flair-btn greyed-out">
-              <img className="flair-icon" src={require("../../resources/images/flair.PNG")} />
+              <img alt="flair" className="flair-icon" src={require("../../resources/images/flair.PNG")} />
               <h3 className="grey">Flair</h3>
-              <img className="expand" src={require("../../resources/images/expandgrey.png")} />
+              <img alt="expand" className="expand" src={require("../../resources/images/expandgrey.png")} />
             </button>
           </div>
 
@@ -317,7 +317,7 @@ export default function SubmitPage (props: SubmitPageProps) {
 
             <div className="connection-container">
               <h4>Connect accounts to share your post</h4>
-              <img className="info" src={require("../../resources/images/infos_grey.png")} />
+              <img alt="info" className="info" src={require("../../resources/images/infos_grey.png")} />
             </div>
           </div>
         </div>
@@ -346,7 +346,7 @@ export default function SubmitPage (props: SubmitPageProps) {
         <div className="rediquette-container">
           <div className="rq-header">
             <div className="flex">
-                <img src={require("../../resources/images/rediquette.png")} className="rq-icon" />
+                <img alt="rediquette" src={require("../../resources/images/rediquette.png")} className="rq-icon" />
                 <h3>Posting to Reddit</h3>
             </div>
             <div className="line"></div>

@@ -52,6 +52,7 @@ export default function LoginModal (props: LoginModalProps) {
           <img 
             src={require("../../resources/images/loginbackground.png")} 
             className="loginBackground" 
+            alt="background"
           />
           <div className="modalContent">
             <button 

@@ -30,7 +30,7 @@ export default function SubredditHeadline (props: SubredditHeadlineProps) {
     <div className="subredditHeadline">
     <div className="headlineTop">
       <div className="iconContainer">
-        <img className="icon" src={require(`../../resources/images/Communities/${currentSub?.title}/icon.png`)} />
+        <img alt="icon" className="icon" src={require(`../../resources/images/Communities/${currentSub?.title}/icon.png`)} />
       </div>
       <div className="headlineTitle">
         <h1>{currentSub?.officialTitle}</h1>

@@ -111,13 +111,13 @@ export default function PostedComment (props: PostedCommentProps) {
   return (
     <div className="comment" id={`${index}`} style={{ marginLeft: nested ? "10px" : "", marginTop: nested ? "12px" : "", marginBottom: nested ? "10px" : "20px" }}>
         {(nested && commentObj.nested_comments.length !== 0) && <div className="comment-header">
-            <img className="comment-avatar" src={nested ? commentObj.nested_comments[0].author === "Nikola Tesla" ? require("../../resources/images/avatartesla.PNG") : require(`../../resources/images/avatar${randomIntToString}.PNG`) : userName === "Nikola Tesla" ? require("../../resources/images/avatartesla.PNG") : commentObj.author === userName ? require(`../../resources/images/avatar${randomIntToString}.PNG`) : require(`../../resources/images/base_variants/default${commentObj.avatar}.png`)} />
+            <img alt="avatar" className="comment-avatar" src={nested ? commentObj.nested_comments[0].author === "Nikola Tesla" ? require("../../resources/images/avatartesla.PNG") : require(`../../resources/images/avatar${randomIntToString}.PNG`) : userName === "Nikola Tesla" ? require("../../resources/images/avatartesla.PNG") : commentObj.author === userName ? require(`../../resources/images/avatar${randomIntToString}.PNG`) : require(`../../resources/images/base_variants/default${commentObj.avatar}.png`)} />
             <h4 className="comment-author" id={nested ? commentObj.nested_comments[0].author : commentObj.author} onClick={nested ? navToProfile : userName === commentObj.author ? navToProfile : navToUserProfile}>{nested ? commentObj.nested_comments[0].author : commentObj.author}</h4>
             <h4 className="comment-timestamp">· {nested ? commentObj.nested_comments[0].time : commentObj.time}</h4>
         </div>}
 
         {(!nested && !edited) && <div className="comment-header">
-            <img className="comment-avatar" src={nested ? commentObj.author === "Nikola Tesla" ? require("../../resources/images/avatartesla.PNG") : require(`../../resources/images/avatar${randomIntToString}.PNG`) : commentObj.author === "Nikola Tesla" ? require("../../resources/images/avatartesla.PNG") : commentObj.author === userName ? require(`../../resources/images/avatar${randomIntToString}.PNG`) : require(`../../resources/images/base_variants/default${commentObj.avatar}.png`)} />
+            <img alt="avatar" className="comment-avatar" src={nested ? commentObj.author === "Nikola Tesla" ? require("../../resources/images/avatartesla.PNG") : require(`../../resources/images/avatar${randomIntToString}.PNG`) : commentObj.author === "Nikola Tesla" ? require("../../resources/images/avatartesla.PNG") : commentObj.author === userName ? require(`../../resources/images/avatar${randomIntToString}.PNG`) : require(`../../resources/images/base_variants/default${commentObj.avatar}.png`)} />
             <h4 className="comment-author" id={nested ? commentObj.nested_comments[0].author : commentObj.author} onClick={nested ? navToProfile : userName === commentObj.author ? navToProfile : navToUserProfile}>{nested ? commentObj.nested_comments[0].author : commentObj.author}</h4>
             <h4 className="comment-timestamp">· {nested ? commentObj.nested_comments[0].time : commentObj.time}</h4>
         </div>}
@@ -128,31 +128,31 @@ export default function PostedComment (props: PostedCommentProps) {
                 <p id="content">{nested ? commentObj.nested_comments[0].content : commentObj.content}</p>
                 <div className="comment-footer">
                     <button className={nested ? `${index} nested` : `${index}`} onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={handleLikeComment} id="upvote">
-                        <img className="upvote" src={require(`../../resources/images/${nested ? commentObj.nested_comments[0].vote === 0 || commentObj.nested_comments[0].vote === -1 ? hover.upvote ? "upvoteHover.png" : "upvote.png" : "upvoted.png" : commentObj.vote === 0 || commentObj.vote === -1 ?
+                        <img alt="upvote" className="upvote" src={require(`../../resources/images/${nested ? commentObj.nested_comments[0].vote === 0 || commentObj.nested_comments[0].vote === -1 ? hover.upvote ? "upvoteHover.png" : "upvote.png" : "upvoted.png" : commentObj.vote === 0 || commentObj.vote === -1 ?
                                                                                            hover.upvote ? "upvoteHover.png" : "upvote.png" 
                                                                                            : "upvoted.png"}`)} 
                         />
                     </button>
                     <h3 className="votes">{nested ? commentObj.nested_comments[0].upvotes : commentObj.upvotes}</h3>
                     <button className={nested ? `${index} nested` : `${index}`} onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={handleLikeComment} id="downvote">
-                        <img className="downvote" src={require(`../../resources/images/${nested ? commentObj.nested_comments[0].vote === 0 || commentObj.nested_comments[0].vote === 1 ? hover.downvote ? "downvoteHover.png" : "downvote.png" : "downvoted.png" : commentObj.vote === 0 || commentObj.vote === 1 ?
+                        <img alt="downvote" className="downvote" src={require(`../../resources/images/${nested ? commentObj.nested_comments[0].vote === 0 || commentObj.nested_comments[0].vote === 1 ? hover.downvote ? "downvoteHover.png" : "downvote.png" : "downvoted.png" : commentObj.vote === 0 || commentObj.vote === 1 ?
                                                                                             hover.downvote ? "downvoteHover.png" : "downvote.png"  
                                                                                             : "downvoted.png"}`)} 
                         />
                     </button>
 
                     {nested && commentObj.nested_comments[0].author === userName && location.pathname.includes("user") === false && <div className="edit comment-footer-box" id={`${index}`} onClick={(e) => { handleNestedComment(e); switchNestedEdit(e);}}>
-                        <img className="edit-icon" src={require("../../resources/images/pencil.png")} />
+                        <img alt="edit" className="edit-icon" src={require("../../resources/images/pencil.png")} />
                         <h3>Edit</h3>
                     </div>}
 
                     {nested === false && commentObj.author === userName && location.pathname.includes("user") === false && <div className="edit comment-footer-box" id={`${index}`} onClick={switchEdit}>
-                        <img className="edit-icon" src={require("../../resources/images/pencil.png")} />
+                        <img alt="edit" className="edit-icon" src={require("../../resources/images/pencil.png")} />
                         <h3>Edit</h3>
                     </div>}
 
                     {commentObj.nesting === "none" && location.pathname.includes("user") === false && <div className="reply comment-footer-box" id={`${index}`} onClick={(e) => { handleNestedComment(e); switchNestedEdit(e);}}>
-                        <img className="reply-icon" src={require("../../resources/images/comments.png")} />
+                        <img alt="reply" className="reply-icon" src={require("../../resources/images/comments.png")} />
                         <h3>Reply</h3>
                     </div>}
 

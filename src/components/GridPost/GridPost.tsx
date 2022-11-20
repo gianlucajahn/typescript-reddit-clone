@@ -150,7 +150,7 @@ export default function GridPost (props: GridPostProps) {
         <div className="upper" style={{ borderBottomLeftRadius: currentPost === undefined ? "5px" : "0px", borderBottomRightRadius: currentPost === undefined ? "5px" : "0px", borderBottom: currentPost === undefined ? "" : "none" }}>
         <div className="left" style={{ backgroundColor: currentPost === undefined ? "#f8f9fa" : "white" }}>
             <button className="upvote-btn" onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={handleLike} id="upvote">
-                <img className="upvote" src={require(`../../resources/images/${post.vote === 0 || post.vote === -1 ? 
+                <img alt="upvote" className="upvote" src={require(`../../resources/images/${post.vote === 0 || post.vote === -1 ? 
                                                                                hovered.upvote ? "upvoteHover.png" : "upvote.png" 
                                                                                : "upvoted.png"}`)} 
                 />
@@ -167,13 +167,13 @@ export default function GridPost (props: GridPostProps) {
         </div>
         <div className="right">
             <div className="header">
-                <img className="subIcon dontOpenPost" src={require(`../../resources/images/Communities/${post.subreddit}/icon.png`)} id={post.subreddit} onClick={handleNavigate} />
+                <img alt="icon" className="subIcon dontOpenPost" src={require(`../../resources/images/Communities/${post.subreddit}/icon.png`)} id={post.subreddit} onClick={handleNavigate} />
                 <h5 className="subName dontOpenPost" id={post.subreddit} onClick={handleNavigate}>r/{post.subreddit}</h5>
                 <h5 className="author dontOpenPost">· Posted by <span className="span" id={post.author} onClick={navToUserProfile}>u/{post.author}</span></h5>
                 <h5 className="creationDate">· {post.time}</h5>
                 <div className="awards">
                     {post.awards.map((award: string, i: number) => {
-                        return <img className="award" src={require(`../../resources/images/${award}.png`)} />
+                        return <img alt="award" className="award" src={require(`../../resources/images/${award}.png`)} />
                     })}
                 </div>
             </div>
@@ -195,32 +195,32 @@ export default function GridPost (props: GridPostProps) {
 
             <div className="footer">
                 <div className="comments footer-div">
-                    <img className="comments-icon" src={require("../../resources/images/comments.png")} />
+                    <img alt="comment" className="comments-icon" src={require("../../resources/images/comments.png")} />
                     <h4>{addUpComments(currentPost)} Comments</h4>
                 </div>
 
                 <div className="awards-footer footer-div">
-                    <img className="awards-icon" src={require("../../resources/images/awards.png")} />
+                    <img alt="award" className="awards-icon" src={require("../../resources/images/awards.png")} />
                     <h4>Award</h4>
                 </div>
 
                 <div className="share footer-div">
-                    <img className="share-icon" src={require("../../resources/images/share.png")} />
+                    <img alt="share" className="share-icon" src={require("../../resources/images/share.png")} />
                     <h4>Share</h4>
                 </div>
 
                 <div className="save footer-div save-div dontOpenPost" onClick={savePost} id={post.saved ? "saved" : "save"}>
-                    <img className="save-icon" src={require(`../../resources/images/${post.saved ? "saved" : "save"}.png`)} />
+                    <img alt="save" className="save-icon" src={require(`../../resources/images/${post.saved ? "saved" : "save"}.png`)} />
                     <h4>{post.saved ? "Unsave" : "Save"}</h4>
                 </div>
 
                 <div className="more footer-div">
-                    <img className="more-icon" src={require("../../resources/images/moregrey.png")} />
+                    <img alt="more" className="more-icon" src={require("../../resources/images/moregrey.png")} />
                 </div>
 
                 {currentPost === undefined ? null : <div className="people">
                     <p className="people-count">{viewers} people here</p>
-                    <img className="people-icon" src={require("../../resources/images/people.png")} />
+                    <img alt="people" className="people-icon" src={require("../../resources/images/people.png")} />
                 </div>}
             </div>
         </div>

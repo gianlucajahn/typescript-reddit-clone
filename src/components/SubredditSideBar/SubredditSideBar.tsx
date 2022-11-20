@@ -52,18 +52,18 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
       <div className="aboutCommunity">
           <div className="head" style={{ backgroundColor: communityTheme ? currentSub?.headerColor : standardTheme.headerColor, height: currentPost === undefined ? "" : "9px" }}>
             {currentPost === undefined ? <h3>About Community</h3> : null}
-            {currentPost === undefined ? <img className="more" src={require("../../resources/images/more_white.PNG")} /> : null}
+            {currentPost === undefined ? <img alt="more" className="more" src={require("../../resources/images/more_white.PNG")} /> : null}
           </div>
 
           {currentPost !== undefined && 
           <div className="postHead" id={currentPost.subreddit} onClick={handleNavigate}>
-            <img className="head-img" src={require(`../../resources/images/Communities/${currentPost.subreddit}/icon.png`)} />
+            <img alt="icon" className="head-img" src={require(`../../resources/images/Communities/${currentPost.subreddit}/icon.png`)} />
             <p className="head-p">r/{currentPost.subreddit}</p>
           </div>
           }
           <p className="about">{currentSub?.about}</p>
           <div className="createdAt">
-            <img className="cake" src={require("../../resources/images/cakeblack.png")} />
+            <img alt="cake" className="cake" src={require("../../resources/images/cakeblack.png")} />
             <p>Created {currentSub?.creationDate}</p>
           </div>
     
@@ -101,7 +101,7 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
             </div>
     
             <div className="user" onClick={navToProfile}>
-              <img className="avatar" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
+              <img alt="avatar" className="avatar" src={require(`../../resources/images/avatar${userName === "Nikola Tesla" ? "tesla.PNG" : randomIntToString + ".PNG"}`)} />
               <p className="userName">{userName}</p>
             </div>
           </div>
@@ -109,12 +109,12 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
           <div className="communityOptions">
             <button className="communityToggle" onClick={switchCommunityOptions}>
               COMMUNITY OPTIONS
-              <img className="expand" src={require("../../resources/images/expandblack.png")} style={{ transform: communityOptions ? "rotate(180deg)" : "" }} />
+              <img alt="expand" className="expand" src={require("../../resources/images/expandblack.png")} style={{ transform: communityOptions ? "rotate(180deg)" : "" }} />
             </button>
     
             <div className="theme" style={{ display: communityOptions ? "flex" : "none" }}>
               <div className="leftTheme">
-                <img className="eye" src={require("../../resources/images/eye.png")} />
+                <img alt="eye" className="eye" src={require("../../resources/images/eye.png")} />
                 <p>Community theme</p>
               </div>
               <button className="switch" onClick={switchCommunityTheme} style={{ backgroundColor: communityTheme ?  `${currentSub?.buttonColor}` : "#edeff1" }}>
@@ -139,7 +139,7 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
                   <h3 className="rule-num">{rule?.number + `. `}</h3>
                   <h3 className="rule-title">{rule?.title}</h3>
                 </div>
-                <img className="expand" src={require("../../resources/images/expandblack.png")} style={{ transform: rule?.expanded ? "rotate(180deg)" : "" }}/>
+                <img alt="expand" className="expand" src={require("../../resources/images/expandblack.png")} style={{ transform: rule?.expanded ? "rotate(180deg)" : "" }}/>
               </div>
               <div className="ruleFooter" style={{ display: currentSub.rules[i]?.expanded ? "block" : "none" }}>
                 {rule?.desc}

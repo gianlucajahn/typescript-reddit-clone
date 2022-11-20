@@ -46,7 +46,7 @@ export default function HomeSideBar (props: HomeSideBarProps) {
         
         <div className="topCommunities">
             <div className="topBannerContainer">
-                <img className="topBanner" src={require("../../resources/images/bannerTopCommunities3.png")} />
+                <img alt="banner" className="topBanner" src={require("../../resources/images/bannerTopCommunities3.png")} />
                 <h3>Today's Top Growing Communities</h3>
             </div>
 
@@ -63,9 +63,9 @@ export default function HomeSideBar (props: HomeSideBarProps) {
                     paddingRight: subreddit.joined ? "11px" : "4px"
                 }}>
                     <h3 className="num">{i + 1}</h3>
-                    <img className="top" src={require("../../resources/images/top.png")} />
+                    <img alt="top" className="top" src={require("../../resources/images/top.png")} />
 
-                    <img className="logo" src={require(`../../resources/images/Communities/${subreddit.title}/icon.png`)} />
+                    <img alt="logo" className="logo" src={require(`../../resources/images/Communities/${subreddit.title}/icon.png`)} />
                     <h3 className="title">{"r/" + subreddit.title}</h3>
 
                     <button className={subreddit.joined ? "leave" : "join"} onClick={handleSubMembership} id={subreddit.title} style={{
@@ -89,7 +89,7 @@ export default function HomeSideBar (props: HomeSideBarProps) {
 
         <div className="premiumContainer">
           <div className="premium-top">
-            <img className="premiumIcon" src={require("../../resources/images/premium2.png")} />
+            <img alt="premium" className="premiumIcon" src={require("../../resources/images/premium2.png")} />
             <div className="slogan">
               <h4 className="headline">Reddit Premium</h4>
               <h4 className="content">The best Reddit experience, with monthly Coins</h4>
@@ -100,9 +100,9 @@ export default function HomeSideBar (props: HomeSideBarProps) {
         </div>
 
         <div className="homeContainer">
-          <img className="home-banner" src={require("../../resources/images/homebanner.png")} />
-          <img className="home-avatar" src={require("../../resources/images/homeavatar.png")} />
-          <h3 className="home-headline">Home</h3>
+          <img alt="banner" className="home-banner" src={require("../../resources/images/homebanner.png")} />
+          <img alt="avatar" className="home-avatar" src={require("../../resources/images/homeavatar.png")} />
+          <h3  className="home-headline">Home</h3>
           <h3 className="home-content">Your personal Reddit frontpage. Come here to check in with your favorite communities.</h3>
 
           <button className="home-create create-post" onClick={navToSubmit}>Create Post</button>

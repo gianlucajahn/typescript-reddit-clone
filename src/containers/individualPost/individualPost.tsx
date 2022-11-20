@@ -169,13 +169,13 @@ export default function IndividualPost (props: individualPostProps) {
 
       <div className="pageHeader">
         <div className="leftHeader">
-          <img className="postIcon" src={require("../../resources/images/post.png")} />
+          <img alt="post" className="postIcon" src={require("../../resources/images/post.png")} />
           <h3>{currentPost!.title!.length >= 95 ? currentPost?.title!.substring(0, 95) + " (...)" : currentPost?.title}</h3>
           {currentPost?.flair.title !== "none" && <button className="flairBtn" style={{ backgroundColor: currentPost?.flair!.color }}>{currentPost?.flair!.title}</button>}
         </div>
 
         <div className="rightHeader" onClick={closePost}>
-          <img className="cross" src={require("../../resources/images/cross.png")} />
+          <img alt="cross" className="cross" src={require("../../resources/images/cross.png")} />
           <h3>Close</h3>
         </div>
       </div>
