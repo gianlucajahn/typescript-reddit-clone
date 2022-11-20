@@ -1,50 +1,55 @@
+// Imports
 import React, { MouseEventHandler, useEffect, useState, Dispatch, SetStateAction } from 'react';
+// Hook Imports
 import { useLocation } from 'react-router-dom';
+// Component Imports
 import CreatePost from '../../components/CreatePost/CreatePost';
 import SubredditHeadline from '../../components/SubredditHeadline/SubredditHeadline';
 import Grid from '../Grid/Grid';
-import { Subreddits, Subreddit, Post } from '../../types/types';
-import './SubredditPage.scss';
 import SortBar from '../../components/SortBar/SortBar';
 import Imprint from '../../components/Imprint/Imprint';
-import { ReactComponent as Pen } from "../../resources/images/pen.svg";
-import { resourceLimits } from 'worker_threads';
 import SubredditSideBar from '../../components/SubredditSideBar/SubredditSideBar';
+// Type Imports
+import { Subreddits, Subreddit, Post } from '../../types/types';
+// SVG Imports
+import { ReactComponent as Pen } from "../../resources/images/pen.svg";
+// CSS Imports
+import './SubredditPage.scss';
 
 export interface SubredditPageProps {
     randomIntToString: string,
     userName: string,
     currentSort: string,
-    setSort: React.MouseEventHandler;
     subreddits: Subreddits,
     topSubreddits: Subreddits,
-    handleSubMembership: React.MouseEventHandler,
-    handleNavigate: MouseEventHandler<HTMLDivElement>,
-    navToSubmit: MouseEventHandler,
-    openPost: MouseEventHandler,
-    navToProfile: MouseEventHandler,
-    handleLike: MouseEventHandler,
     loginStatus: boolean,
     submitPage: boolean,
     setLoginModalState: any,
     identifyCurrentSub: any,
     currentSub: Subreddit | undefined,
-    selectAnchor: React.MouseEventHandler,
     currentAnchor: number | undefined,
-    expandRule: MouseEventHandler,
     loginModalState: string,
     posts: Post[],
-    navToUserProfile: MouseEventHandler,
     currentPost: Post | undefined,
     communityTheme: boolean,
     currentEditedComment: string,
     communityOptions : boolean,
     mainComment: string,
     writeComment: any,
-    setIndex: Dispatch<SetStateAction<number | undefined>>
     writeNestedComment: any,
     editComment: any,
     editNestedComment: any,
+    handleSubMembership: React.MouseEventHandler,
+    expandRule: MouseEventHandler,
+    selectAnchor: React.MouseEventHandler,
+    setSort: React.MouseEventHandler;
+    navToUserProfile: MouseEventHandler,
+    setIndex: Dispatch<SetStateAction<number | undefined>>
+    handleNavigate: MouseEventHandler<HTMLDivElement>,
+    navToSubmit: MouseEventHandler,
+    openPost: MouseEventHandler,
+    navToProfile: MouseEventHandler,
+    handleLike: MouseEventHandler,
     submitNestedComment: MouseEventHandler
     switchCommunityTheme: MouseEventHandler,
     submitComment: MouseEventHandler,
@@ -82,10 +87,10 @@ export default function SubredditPage (props: SubredditPageProps) {
     standardTheme,
     mainComment,
     writeComment,
-    setIndex,
     writeNestedComment,
     editComment,
     editNestedComment,
+    setIndex,
     navToUserProfile,
     savePost,
     submitNestedComment,
