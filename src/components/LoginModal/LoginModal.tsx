@@ -1,7 +1,10 @@
+// Imports
 import React, { ChangeEventHandler, MouseEventHandler } from 'react';
+// Import SVGs
 import { ReactComponent as Google } from "../../resources/images/google.svg";
 import { ReactComponent as Apple } from "../../resources/images/apple.svg";
 import { ReactComponent as Cross } from "../../resources/images/cross.svg";
+// CSS Imports
 import './LoginModal.scss';
 
 export interface LoginModalProps {
@@ -32,7 +35,6 @@ export default function LoginModal (props: LoginModalProps) {
     hoverState,
     userName,
     password,
-    loginStatus,
     showAuthAlert,
     handleLogin,
     handleLoginInput,
@@ -47,9 +49,15 @@ export default function LoginModal (props: LoginModalProps) {
         </div>
 
         <div className="loginModal">
-          <img src={require("../../resources/images/loginbackground.png")} className="loginBackground" />
+          <img 
+            src={require("../../resources/images/loginbackground.png")} 
+            className="loginBackground" 
+          />
           <div className="modalContent">
-            <button id="closed" onClick={handleLoginModal}>
+            <button 
+              id="closed" 
+              onClick={handleLoginModal}
+              >
                 <Cross className="cross"/>
             </button>
             <h3 className="heading">{loginModalState === "login" ? "Login" : "Sign Up"}</h3>
