@@ -1,13 +1,13 @@
+// General
 * {
     margin: 0;
     padding: 0;
 }
 
-
-
 // Imports
 @import '../../styles/global/variables';
 
+// CSS
 .home {
     background-color: $mainPageBackground;
     display: flex;
