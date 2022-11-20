@@ -1,15 +1,20 @@
+// Imports
 import React, { FormEventHandler, MouseEventHandler, useEffect, useState } from 'react';
+// Hook Imports
 import { useLocation } from 'react-router-dom';
-import './NavBar.scss';
+// SVG Imports
 import { ReactComponent as RedditLogo } from "../../resources/images/redditlogo.svg";
 import { ReactComponent as Reddit } from "../../resources/images/reddit.svg";
 import { ReactComponent as Search } from "../../resources/images/search.svg";
 import { ReactComponent as Expand } from "../../resources/images/expand.svg";
 import { ReactComponent as Star } from "../../resources/images/star.svg";
 import { ReactComponent as User } from "../../resources/images/user.svg";
-import { ObjectType } from 'typescript';
+// Type Imports
 import { Notification, Subreddit, Subreddits, userObject, userObjectArray } from '../../types/types';
+// Utility imports
 import userArray from '../../utils/userArray';
+// CSS Imports
+import './NavBar.scss';
 
 export interface NavBarProps {
   dropdownIsOpen: boolean,
@@ -17,7 +22,6 @@ export interface NavBarProps {
   loginStatus: boolean,
   subDropdownIsOpen: boolean,
   randomIntToString: string,
-  navToSubmit: MouseEventHandler,
   subreddits: Subreddits,
   submitPage: boolean,
   currentSub: Subreddit | undefined,
@@ -29,9 +33,11 @@ export interface NavBarProps {
   currentUserData: userObject | undefined,
   notificationDropdown: boolean,
   setSearchTerm: any,
+  setNotificationDropdown: any,
   notificationArray: Notification[],
   searchItemDisplay: boolean[],
   navToProfile: MouseEventHandler,
+  navToSubmit: MouseEventHandler,
   handleNotifications: MouseEventHandler,
   changeSearchItemDisplay: MouseEventHandler<HTMLImageElement>,
   handleInputChange: FormEventHandler,
@@ -42,7 +48,6 @@ export interface NavBarProps {
   handleDropdown: MouseEventHandler<HTMLDivElement>,
   handleExpand: MouseEventHandler<HTMLDivElement>,
   handleSelectSort: MouseEventHandler,
-  setNotificationDropdown: any,
   handleExpandSub: MouseEventHandler<HTMLDivElement>,
   handleNavigate: MouseEventHandler<HTMLDivElement>,
   quickNavigate: MouseEventHandler,
@@ -63,13 +68,13 @@ export interface NavBarProps {
 
 export default function NavBar (props: NavBarProps) {
   const {
-    dropdownIsOpen,
+    navToProfile,
     handleNotifications,
     handleDropdown,
     navToSubmit,
+    changeSearchItemDisplay,
     clickNotification,
     quickNavigate,
-    setNotificationDropdown,
     handleSelectSort,
     handleExpand,
     handleLoginModal,
@@ -82,12 +87,12 @@ export default function NavBar (props: NavBarProps) {
     notificationNum,
     searchTerm,
     searchItemDisplay,
+    setNotificationDropdown,
+    dropdownIsOpen,
     notificationDropdown,
-    changeSearchItemDisplay,
     dropdownState,
     subreddits,
     setSearchTerm,
-    navToProfile,
     submitPage,
     currentSub,
     userName,
@@ -101,9 +106,14 @@ export default function NavBar (props: NavBarProps) {
     randomIntToString
   } = props;
 
+  // Variable declaration with hooks
   const location = useLocation();
+
+  // Local state
   const [noti, setNoti] = useState(false);
   const [paddingLeft, setPaddingLeft] = useState("");
+
+  // link hover event handler
   const handleHoverLink = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     if (e.type === "mouseenter") {
@@ -113,6 +123,7 @@ export default function NavBar (props: NavBarProps) {
     }
   }
 
+  // Div hover event handler
   const handleHoverSubMenu = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     if (e.type === "mouseenter" && target.id === "subredditContainer") {
@@ -122,6 +133,7 @@ export default function NavBar (props: NavBarProps) {
     }
   }
 
+  // Render counter
   let currentRender = 0;
 
   return (
