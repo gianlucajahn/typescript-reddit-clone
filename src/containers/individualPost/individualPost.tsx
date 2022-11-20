@@ -1,30 +1,29 @@
+// Imports
 import React, { MouseEventHandler, Dispatch, SetStateAction, useState, useEffect } from 'react';
+// Type Imports
 import { Subreddits, Subreddit, Post } from '../../types/types';
+// SVG Imports
 import { ReactComponent as Cross } from "../../resources/images/cross.svg";
-import './individualPost.scss';
+// Hook Imports
+import { useLocation } from 'react-router-dom';
+// Component Imports
 import GridPost from '../../components/GridPost/GridPost';
 import SubredditSideBar from '../../components/SubredditSideBar/SubredditSideBar';
 import SubmitPage from '../SubmitPage/SubmitPage';
 import Confetti from 'react-confetti';
-import { useLocation } from 'react-router-dom';
+// CSS Imports
+import './individualPost.scss';
 
 export interface individualPostProps {
     randomIntToString: string,
     userName: string,
     currentSort: string,
     currentSub: Subreddit | undefined,
-    setSort: React.MouseEventHandler;
     subreddits: Subreddits,
     topSubreddits: Subreddits,
     addedConfetti: boolean,
     setAddedConfetti: any,
     setCurrentPost: any,
-    handleSubMembership: MouseEventHandler,
-    handleNavigate: MouseEventHandler,
-    handleLike: MouseEventHandler,
-    navToUserProfile: MouseEventHandler,
-    navToSubmit: MouseEventHandler,
-    openPost: MouseEventHandler,
     loginStatus: boolean,
     setLoginModalState: any,
     submitPage: boolean,
@@ -36,11 +35,18 @@ export interface individualPostProps {
     communityOptions : boolean,
     mainComment: string,
     writeComment: any,
-    setIndex: Dispatch<SetStateAction<number | undefined>>
     writeNestedComment: any,
     editComment: any,
     editNestedComment: any,
     setCurrentSub: any,
+    setIndex: Dispatch<SetStateAction<number | undefined>>
+    setSort: React.MouseEventHandler;
+    handleSubMembership: MouseEventHandler,
+    handleNavigate: MouseEventHandler,
+    handleLike: MouseEventHandler,
+    navToUserProfile: MouseEventHandler,
+    navToSubmit: MouseEventHandler,
+    openPost: MouseEventHandler,
     navToProfile: MouseEventHandler,
     submitNestedComment: MouseEventHandler
     expandRule: MouseEventHandler,
@@ -64,7 +70,6 @@ export default function IndividualPost (props: individualPostProps) {
     userName,
     currentSort,
     currentSub,
-    setSort,
     subreddits,
     addedConfetti,
     topSubreddits,
@@ -72,13 +77,22 @@ export default function IndividualPost (props: individualPostProps) {
     mainComment,
     submitPage,
     writeComment,
-    setIndex,
     writeNestedComment,
     editComment,
     editNestedComment,
     setAddedConfetti,
     setCurrentPost,
     setCurrentSub,
+    communityOptions,
+    communityTheme,
+    standardTheme,
+    loginStatus,
+    setLoginModalState,
+    loginModalState,
+    posts,
+    currentPost,
+    setSort,
+    setIndex,
     navToProfile,
     savePost,
     submitNestedComment,
@@ -95,17 +109,12 @@ export default function IndividualPost (props: individualPostProps) {
     switchCommunityOptions,
     handleLikeComment,
     switchCommunityTheme,
-    communityOptions,
-    communityTheme,
-    standardTheme,
-    loginStatus,
-    setLoginModalState,
-    loginModalState,
-    posts,
-    currentPost
   } = props;
 
+  // declare variable to use useLocation hook with
   const location = useLocation();
+
+  // cover deep linking
   if (currentPost === undefined) {
     let numberArray = [
       0, 1, 2, 3, 4, 5, 6, 7, 8, 9
@@ -128,11 +137,13 @@ export default function IndividualPost (props: individualPostProps) {
     }
   }
 
+  // Local state
   const [confettiRunning, setConfettiRunning] = useState(false);
   const [opacity, setOpacity] = useState(1.0);
   const width = 1920;
   const height = 1850;
 
+  // Render confetti component if first render of first custom user post
   useEffect(() => {
     if (currentPost?.id === "86") {
       setConfettiRunning(true);
