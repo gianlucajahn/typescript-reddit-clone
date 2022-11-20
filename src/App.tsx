@@ -1,28 +1,33 @@
-import React, { ChangeEvent, MouseEventHandler, useEffect, useState } from 'react';
-import logo from './logo.svg';
-import './App.scss';
-import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import Home from './containers/Home/Home';
-import NavBar from './containers/NavBar/NavBar';
-import { isReturnStatement, reduceEachTrailingCommentRange } from 'typescript';
-import LoginModal from './components/LoginModal/LoginModal';
-import subredditArray from './utils/subredditArray';
-import SubredditPage from './containers/SubredditPage/SubredditPage';
-import { Subreddits, Subreddit, Post, Comment, UserData, baseCustomPost, Draft, Notifications, userObjectArray, userObject } from "./types/types";
-import postArray from './utils/postArray';
+// Imports
 import IndividualPost from './containers/individualPost/individualPost';
 import SubmitPage from './containers/SubmitPage/SubmitPage';
+import Home from './containers/Home/Home';
+import NavBar from './containers/NavBar/NavBar';
+import LoginModal from './components/LoginModal/LoginModal';
+import ProfilePage from './containers/ProfilePage/ProfilePage';
+import SubredditPage from './containers/SubredditPage/SubredditPage';
+import subredditArray from './utils/subredditArray';
+import postArray from './utils/postArray';
+import userArray from './utils/userArray';
+import React, { ChangeEvent, useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { Subreddits, Subreddit, Post, Comment, UserData, baseCustomPost, Draft, Notifications, userObjectArray, userObject } from "./types/types";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ProfilePage from './containers/ProfilePage/ProfilePage';
-import userArray from './utils/userArray';
+import './App.scss';
 
 function App() {
+
+  // define variables to use useLocation() and useNavigate() hooks with
   const location = useLocation();
   const navigate = useNavigate();
+
+  // Application's global state
   const [currentlyRenderedPosts, setCurrentlyRenderedPosts] = useState(8);
   const [subreddits, setSubreddits] = useState(subredditArray);
   const [currentEditedComment, setCurrentEditedComment] = useState("");
+  const [posts, setPosts] = useState<Post[]>(postArray);
+  const [customPost, setCustomPost] = useState<Post>(baseCustomPost);
   const [notificationNum, setNotificationNum] = useState(0);
   const [notificationDropdown, setNotificiationDropdown] = useState(false);
   const [topSubreddits, setTopSubreddits] = useState(subreddits.slice(0, 5));
@@ -42,13 +47,6 @@ function App() {
   const [addedConfetti, setAddedConfetti] = useState(false);
   const [currentPost, setCurrentPost] = useState<Post>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
-  const [showAuthAlert, setShowAuthAlert] = useState({
-    username: false,
-    password: false,
-    wrongPassword: false,
-    usernameDoesNotExist: false,
-    usernameTaken: false
-  });
   const [imageUploaded, setImageUploaded] = useState(false);
   const [submitPage, setSubmitPage] = useState(false);
   const [renderNum, setRenderNum] = useState(5);
@@ -66,6 +64,19 @@ function App() {
   const [mainComment, setMainComment] = useState("");
   const [index, setIndex] = useState<number | undefined>(undefined);
   const [loginStatus, setLoginStatus] = useState(false);
+
+  // login modal authentication / alerts
+  // Used in: LoginModal.tsx
+  const [showAuthAlert, setShowAuthAlert] = useState({
+    username: false,
+    password: false,
+    wrongPassword: false,
+    usernameDoesNotExist: false,
+    usernameTaken: false
+  });
+
+  // base state for search bar 
+  // Used in: NavBar.tsx
   const [searchItemDisplay, setSearchItemDisplay] = useState([
     true,
     true,
@@ -85,6 +96,9 @@ function App() {
     true,
     true,
   ]);
+
+  // base state for navbar dropdown menu
+  // Used in: NavBar.tsx
   const [dropdownState, setDropdownState] = useState({
     erkunden: false,
     gaming: false,
@@ -97,10 +111,16 @@ function App() {
     weitereinfos: false,
     richtlinien: true
   });
+
+  // base state for hoverable elements
+  // Used in: NavBar.tsx
   const [hoverState, setHoverState] = useState({
     username: false,
     password: false
   });
+
+  // base state for 'joinedCommunities' array
+  // Used in: NavBar.tsx
   const [joinedCommunities, setJoinedCommunities] = useState([
     subreddits[5],
     subreddits[6],
@@ -110,6 +130,8 @@ function App() {
     subreddits[9],
   ]);
 
+  // base state for search array
+  // Used in: NavBar.tsx
   const baseSearchArray = [
     true,
     true,
@@ -130,9 +152,8 @@ function App() {
     true
   ];
 
-  const [posts, setPosts] = useState<Post[]>(postArray);
-  const [customPost, setCustomPost] = useState<Post>(baseCustomPost);
-
+  // enable/disable search dropdown menu depending on search term length
+  // Used in: NavBar.tsx
   useEffect(() => {
     if (searchTerm.length === 0) {
       setSearchDropdown(false);
@@ -145,6 +166,8 @@ function App() {
     }
   }, [searchTerm]);
 
+  // enable picture display on image upload via state
+  // Used in: SubmitPage.tsx
   useEffect(() => {
     if (imageUploaded) {
       setImageUploadCount(imageUploadCount + 1);
@@ -156,6 +179,8 @@ function App() {
     }
   }, [customPost.src])
 
+  // check if current location is the submit page
+  // Used in: SubmitPage.tsx
   useEffect(() => {
     if (location.pathname.substring(1) === "submit") {
       setSubmitPage(true);
@@ -169,6 +194,8 @@ function App() {
     }
   }, [location.pathname])
 
+  // assign one post from the desired subreddit to currentPost to be able to post to the correct sub on submit page
+  // Used in: SubmitPage.tsx
   useEffect(() => {
     if (submitPage) {
       if (currentSub !== undefined) {
@@ -178,10 +205,14 @@ function App() {
     }
   }, [submitPage])
 
+  // reset amount of rendered posts on sorter switch
+  // Used in: Grid.tsx
   useEffect(() => {
     setRenderNum(5);
   }, [currentSort])
 
+  // reset notification count upon opening notification dropdown menu
+  // Used in: NavBar.tsx
   const handleNotifications = (e: React.MouseEvent) => {
     const target = e.currentTarget;
     if (target.classList.contains('noti')) {
@@ -189,6 +220,8 @@ function App() {
     } 
   }
 
+  // handle user input in the login modal, put out alerts if username/password don't fit requirements
+  // Used in: LoginModal.tsx
   const handleLoginInput = (e: ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
     if (target.id === "username") {
@@ -216,16 +249,22 @@ function App() {
     }
   }
 
+  // handle user input on EditComment textarea element
+  // Used in: EditComment.tsx
   const writeComment = (e: any) => {
     const target = e.target;
     setMainComment(target.value);
   }
 
+  // handle user input on nested EditComment textarea element
+  // Used in: EditComment.tsx
   const writeNestedComment = (e: any) => {
     let target = e.target;
     setCurrentEditedComment(target.value);
   }
 
+  // submit edited comment
+  // Used in: EditComment.tsx
   const editComment = (e: any) => {
     let target = e.target;
     let commentId = e.target.id;
@@ -239,6 +278,8 @@ function App() {
     setCurrentPost(updatedPost);
   }
 
+  // remove image that has previously been uploaded in SubmitPost component's input element
+  // Used in: SubmitPage.tsx
   const removeUploadedImg = (e: React.MouseEvent) => {
     setImageUploadCount(0);
     setImageUploaded(false);
@@ -248,10 +289,14 @@ function App() {
     setCustomPost(updatedCustomPost);
   }
 
+  // increase amount of currently rendered posts on scroll (infinite scrolling)
+  // Used in: Grid.tsx
   const addPostsToRender = (e: React.MouseEvent) => {
     setCurrentlyRenderedPosts(currentlyRenderedPosts + 8);
   }
 
+  // submit nested edited comment
+  // Used in: EditComment.tsx
   const editNestedComment = (e: any) => {
     let target = e.target;
     let commentId = e.target.id;
@@ -265,6 +310,8 @@ function App() {
     setCurrentPost(updatedPost);
   }
 
+  // submit nested comment (who would've thought)
+  // Used in: EditComment.tsx
   const submitNestedComment = (e: React.MouseEvent) => {
     if (currentPost === undefined) {
       return;
@@ -315,10 +362,14 @@ function App() {
     setNotificationArray(newNotificationArray);
   }
 
+  // display subreddit selection dropdown menu in SubmitPage component
+  // Used in: SubmitPage.tsx
   const selectSubmitDropdown = (e: React.MouseEvent) => {
     setSubmitDropdownState(true);
   }
 
+  // hide subreddit selection dropdown menu in SubmitPage component, navigate to newly created post
+  // Used in: SubmitPage.tsx
   const selectSubmitSubreddit = (e: React.MouseEvent) => {
     const target = e.currentTarget;
 
@@ -337,6 +388,8 @@ function App() {
     }
   }
 
+  // submit newly created post
+  // Used in: SubmitPage.tsx
   const submitCustomPost = (e: React.MouseEvent) => {
     if (currentSub === undefined) {
       return;
@@ -402,6 +455,8 @@ function App() {
     }, 2150);
   }
 
+  // submit comment
+  // Used in: EditComment.tsx
   const submitComment = (e: React.MouseEvent) => {
     commentNotification(e);
     const target = e.currentTarget as HTMLButtonElement;
@@ -491,6 +546,8 @@ function App() {
     }
   }
 
+  // Reset currentSub state and navigate back to home page on click
+  // Used in: NavBar.tsx, search bar
   const removeCurrentSub = (e: React.MouseEvent) => {
     setCurrentSub(undefined);
     navigate("/");
@@ -541,6 +598,8 @@ function App() {
     setCurrentSub({...currentSub, rules: newRules});
   }
 
+  // disable scrolling on opening of LoginModal
+  // Used in: LoginModal.tsx
   useEffect(() => {
     identifyCurrentSub(location.pathname);
     setMainComment("");
@@ -555,6 +614,8 @@ function App() {
     window.scrollTo(0, 0);
   }, [loginModalState])
 
+  // Used in: Join/Leave subreddits
+  // Used in: NavBar.tsx
   const handleSubMembership = (e: React.MouseEvent) => {
     if (loginStatus === false) {
       setLoginModalState("login");
@@ -624,6 +685,8 @@ function App() {
     setSubreddits(newSubredditArray);
   }
 
+  // Navigate to the targeted sub when notifications in the notification dropdown menu are clicked
+  // Used in: NavBar.tsx
   const clickNotification = (e: React.MouseEvent) => {
     const target = e.currentTarget;
     const subId = subreddits.findIndex(sub => sub.title === target.id);
@@ -633,6 +696,8 @@ function App() {
     }
   }
 
+  // Fired when premium button is clicked
+  // Used in: Home.tsx
   const enablePremium = (e: React.MouseEvent) => {
     if (loginStatus === false) {
       setLoginModalState("login");
@@ -651,6 +716,8 @@ function App() {
       });
   }
 
+  // Send notification when custom post is submitted
+  // Used in: SubmitPage.tsx
   const submitPostNotification = (e: React.MouseEvent) => {
     toast.success('Thanks for submitting a post! 💘', {
       position: "bottom-right",
@@ -664,11 +731,15 @@ function App() {
       });
   }
 
+  // Switch sorting algorithm 
+  // Used in: SortBar.tsx
   const setSort = (e: React.MouseEvent) => {
     const target = e.currentTarget as HTMLButtonElement;
     setCurrentSort(target.id);
   }
 
+  // delete targeted search item from search dropdown menu
+  // Used in: NavBar.tsx, search bar
   const changeSearchItemDisplay = (e: React.MouseEvent) => {
     const target = e.currentTarget as HTMLImageElement;
     const targetedId = parseInt(target.id) - 1;
@@ -677,6 +748,8 @@ function App() {
     setSearchItemDisplay(newArray);
   }
 
+  // (un-)favorite targeted subreddit
+  // Used in: NavBar.tsx
   const handleFavorite = (e: React.MouseEvent) => {
     favoriteNotification(e);
 
@@ -706,11 +779,15 @@ function App() {
     setNotificationArray(newNotificationArray);
   }
 
+  // Handle hover events in NavBar
+  // Used in: NavBar.tsx
   const handleHover = (e: React.MouseEvent) => {
     const target = e.currentTarget;
     setHoverState({...hoverState, [target.id]: !hoverState[target.id as keyof typeof hoverState]});
   }
 
+  // expand/close dropdown menu's for subreddit categories
+  // Used in: NavBar.tsx
   const handleExpand = (e: React.MouseEvent) => {
     const changedState = e.currentTarget.id;
     if (changedState === "erkunden") {
@@ -730,6 +807,8 @@ function App() {
       }
   }
 
+  // navigate to current user's profile
+  // Used in: NavBar.tsx
   const navToProfile = (e: React.MouseEvent) => {
     setCurrentSub(undefined);
     setCurrentlyInspectedUser(userName);
@@ -738,6 +817,8 @@ function App() {
     navigate(`/user/${userName}`);
   }
 
+  // navigate to targeted user's profile
+  // Used in: NavBar.tsx
   const navToUserProfile = (e: React.MouseEvent) => {
     const target = e.currentTarget;
 
@@ -757,6 +838,8 @@ function App() {
     navigate(`/user/${target.id}`);
   }
 
+  // switch from current page to individual post page
+  // Used in: Grid.tsx
   const openPost = (e: React.MouseEvent) => {
     let target = e.target as HTMLElement | null;
     if (target!.classList.contains("dontOpenPost") || target!.classList.contains("upvote-btn") || target!.classList.contains("downvote-btn") || target!.classList.contains("span") || target!.classList.contains("comment-author")) {
@@ -779,6 +862,8 @@ function App() {
     navigate(`/r/${subreddit?.title}/${post.id}`);
   }
 
+  // navigate to targeted subreddit 
+  // Used in: NavBar.tsx / GridPost.tsx
   const handleNavigate = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     const subIndex = subreddits.findIndex(element => element.title === target.id);
@@ -836,10 +921,14 @@ function App() {
     setSearchTerm("");
   }
 
+  // expand/close subreddit dropdown menu
+  // Used in: NavBar.tsx
   const handleExpandSub = (e: React.MouseEvent) => {
     setSubDropdownIsOpen(!subDropdownIsOpen);
   }
 
+  // close current individual post page and navigate back to home page
+  // Used in: individualPost.tsx
   const closePost = (e: React.MouseEvent) => {
     navigate("/");
     setCurrentPost(undefined);
@@ -847,6 +936,8 @@ function App() {
     setMainComment("");
   }
 
+  // reset dropdown menu state
+  // Used in: NavBar.tsx
   const handleDropdown = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     if (target.id === "link") {
@@ -866,6 +957,8 @@ function App() {
     }
   }
 
+  // open targeted dropdown menu &/or close all other ones on window click event
+  // Used in: App.tsx
   const checkDropdown = (e: any) => {
     const dropdownMenu = document.getElementById('dropdownMenu');
     const searchDropdown = document.getElementById('searchDropdown');
@@ -935,6 +1028,8 @@ function App() {
     }
   }
 
+  // Switch login modal state from login to register & vice versa
+  // Used in: LoginModal.tsx
   const handleLoginModal = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
     setDropdownIsOpen(false);
@@ -948,6 +1043,8 @@ function App() {
     });
   }
 
+  // handle click events on upvote/downvote buttons 
+  // Used in: GridPost.tsx
   const handleLike = (e: React.MouseEvent) => {
     if (loginStatus === false) {
       setLoginModalState("login");
@@ -1080,6 +1177,8 @@ function App() {
     setPosts(newPosts);
   }
 
+  // define comment notification
+  // Used in: EditComment.tsx
   const commentNotification = (e: React.MouseEvent) => {
     toast.success('You submitted a comment. Thanks!', {
       position: "bottom-right",
@@ -1093,6 +1192,8 @@ function App() {
       });
   }
 
+  // define favorization notification
+  // Used in: NavBar.tsx
   const favoriteNotification = (e: React.MouseEvent) => {
     const target = e.currentTarget;
 
@@ -1108,6 +1209,8 @@ function App() {
       });
   }
 
+  // define membership notification
+  // Used in: SubredditHeadline.tsx / HomeSideBar.tsx
   const membershipNotification = (e: React.MouseEvent) => {
     const target = e.currentTarget;
 
@@ -1123,6 +1226,8 @@ function App() {
       });
   }
 
+  // handle image upload on input type="file" elements
+  // Used in: SubmitPage.tsx
   const onImgUpload = (e: any) => {
     setImageUploaded(true);
     const target = e.target as HTMLInputElement;
@@ -1135,6 +1240,8 @@ function App() {
     }
   }
 
+  // handle click events on upvote/downvote buttons in PostedComment components
+  // Used in: PostedComment.tsx
   const handleLikeComment = (e: React.MouseEvent) => {
     if (currentPost === undefined) {
       return;
@@ -1266,6 +1373,8 @@ function App() {
     }
   }
 
+  // switch to specificed anchor on page
+  // Used in: -
   const selectAnchor = (e: React.MouseEvent) => {
     const target = e.target as HTMLDivElement;
     const index = Number(target.id);
@@ -1279,12 +1388,16 @@ function App() {
     });
   }
 
+  // Switch currently used sorting algorithm
+  // Used in: SortBar.tsx
   const handleSelectSort = (e: React.MouseEvent) => {
     const target = e.currentTarget;
     navigate("/");
     setCurrentSort(target.id);
   }
 
+  // navigate to submit page
+  // Used in: HomeSideBar.tsx / SubredditSideBar.tsx / ProfilePage.tsx / NavBar.tsx
   const navToSubmit = (e: React.MouseEvent) => {
     const target = e.currentTarget;
 
@@ -1303,11 +1416,15 @@ function App() {
     navigate("/submit");
   }
 
+  // handle search bar input change
+  // Used in: NavBar.tsx
   const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
     const target = e.currentTarget as HTMLInputElement;
     setSearchTerm(target.value);
   }
 
+  // handle input changes on submit post page's title element
+  // Used in: SubmitPage.tsx
   const editPostTitle = (e: any) => {
     const target = e.target;
     let updatedCustomPost = {...customPost};
@@ -1315,6 +1432,8 @@ function App() {
     setCustomPost(updatedCustomPost);
   }
 
+  // handle input changes on submit post page's input element
+  // Used in: SubmitPage.tsx
   const editPostSrc = (e: any) => {
     const target = e.target;
     let updatedCustomPost = {...customPost};
@@ -1322,6 +1441,8 @@ function App() {
     setCustomPost(updatedCustomPost);
   }
 
+  // add targeted post to user's saved posts
+  // Used in: GridPost.tsx
   const savePost = (e: React.MouseEvent) => {
     if (loginStatus === false) {
       setLoginModalState('login');
@@ -1353,6 +1474,8 @@ function App() {
     saveNotification(e);
   }
 
+  // define saving notification
+  // Used in: GridPost.tsx
   const saveNotification = (e: React.MouseEvent) => {
     const target = e.currentTarget;
 
@@ -1368,6 +1491,8 @@ function App() {
       });
   }
 
+  // handle click events on Login/Register/Demo Account buttons in Login Modal
+  // Used in: LoginModal.tsx
   const handleLogin = (e: React.MouseEvent) => {
     const target = e.target as HTMLButtonElement | HTMLDivElement;
 
@@ -1508,18 +1633,26 @@ function App() {
     }
   }
 
+  // open/close community options for targeted subreddit
+  // Used in: SubredditSideBar.tsx
   const switchCommunityOptions = (e: React.MouseEvent) => {
     setCommunityOptions(!communityOptions);
   }
 
+  // enable/disable community theme for targeted subreddit
+  // Used in: SubredditSideBar.tsx
   const switchCommunityTheme = (e: React.MouseEvent) => {
     setCommunityTheme(!communityTheme);
   }
 
+  // navigate back to subreddit's main page
+  // Used in: NavBar.tsx
   const quickNavigate = (e: React.MouseEvent) => {
     navigate(`r/${currentSub}`);
   }
 
+  // add targeted user to current user's "following" array
+  // Used in: ProfilePage.tsx
   const followUser = (e: React.MouseEvent) => {
     let userId = userData.findIndex(user => user.username === userName);
     if (userId === -1) {
@@ -1556,6 +1689,8 @@ function App() {
     setUserData(newUserData);
   }
 
+  // add targeted user as a friend
+  // Used in: ProfilePage.tsx
   const addFriend = (e: React.MouseEvent) => {
     const friendName = currentlyInspectedUser;
     let friendId = userData.findIndex(user => user.username === friendName);
@@ -1564,6 +1699,8 @@ function App() {
     setUserData(updatedUserData);
   }
 
+  // report targeted user
+  // Used in: ProfilePage.tsx
   const reportUser = (e: React.MouseEvent) => {
     const reportName = currentlyInspectedUser;
     let reportId = userData.findIndex(user => user.username === reportName);
@@ -1572,6 +1709,8 @@ function App() {
     setUserData(updatedUserData);
   }
 
+  // add nesting to targeted comment
+  // Used in: PostedComment.tsx
   const handleNestedComment = (e: React.MouseEvent) => {
     if (loginStatus === false) {
       setLoginModalState("login");
@@ -1625,6 +1764,8 @@ function App() {
     }
   }
 
+  // cache current user's data on logout
+  // Used in: App.tsx
   useEffect(() => {
     if (loginStatus === false) {
       if (location.pathname === "/submit") {
@@ -1667,12 +1808,15 @@ function App() {
     }
   }, [loginStatus])
 
+  // define standard theme for subreddit pages
+  // Used in: SubredditSideBar.tsx
   const standardTheme = {
     buttonColor: "#0079d3",
     headerColor: "#0079d3",
     banner: "../../resources/images/Communities/todayilearned/banner.jpg",
   }
 
+  // return 
   return (
     <div onClick={checkDropdown} style={{ maxHeight: loginModalState === "closed" ? "" : "100vh !important", overflow: loginModalState === "closed" ? "" : "hidden" }} id="app">
       {loginModalState !== "closed" ? 
