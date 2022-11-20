@@ -1,18 +1,22 @@
 // Imports
+// Component Imports
 import IndividualPost from './containers/individualPost/individualPost';
 import SubmitPage from './containers/SubmitPage/SubmitPage';
 import Home from './containers/Home/Home';
 import NavBar from './containers/NavBar/NavBar';
 import LoginModal from './components/LoginModal/LoginModal';
 import ProfilePage from './containers/ProfilePage/ProfilePage';
+// Utility Imports
 import SubredditPage from './containers/SubredditPage/SubredditPage';
 import subredditArray from './utils/subredditArray';
 import postArray from './utils/postArray';
 import userArray from './utils/userArray';
+// Object & Method imports
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { Subreddits, Subreddit, Post, Comment, UserData, baseCustomPost, Draft, Notifications, userObjectArray, userObject } from "./types/types";
 import { ToastContainer, toast } from 'react-toastify';
+// CSS Imports
 import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
 
