@@ -1,4 +1,6 @@
+// Imports
 import * as React from 'react';
+// CSS Imports
 import './SortBar.scss';
 
 export interface SortBarProps {
