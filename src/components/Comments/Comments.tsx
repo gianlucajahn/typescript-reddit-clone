@@ -1,10 +1,14 @@
-import { AnyNaptrRecord } from 'dns';
+// Imports
 import React, { MouseEventHandler, useEffect, useState, Dispatch, SetStateAction } from 'react';
+// Type Imports
 import { Post, Subreddit, Comment } from '../../types/types';
-import './Comments.scss';
+// SVG Imports
 import { ReactComponent as Dropdown } from "../../resources/images/dropdown.svg";
+// Component Imports
 import EditComment from '../EditComment/EditComment';
 import PostedComment from '../PostedComment/PostedComment';
+// CSS Imports
+import './Comments.scss';
 
 
 export interface CommentsProps {
@@ -16,10 +20,10 @@ export interface CommentsProps {
   currentEditedComment: string,
   currentPost: Post,
   loginStatus: boolean,
-  setIndex: Dispatch<SetStateAction<number | undefined>>,
   writeNestedComment: any,
   editComment: any,
   editNestedComment: any,
+  setIndex: Dispatch<SetStateAction<number | undefined>>,
   navToProfile: MouseEventHandler | undefined,
   navToUserProfile: MouseEventHandler | undefined,
   submitNestedComment: MouseEventHandler,
@@ -38,24 +42,24 @@ export default function Comments (props: CommentsProps) {
     currentPost,
     loginStatus,
     randomIntToString,
-    navToProfile,
-    navToUserProfile,
-    setIndex,
     writeNestedComment,
     editComment,
     editNestedComment,
+    navToProfile,
+    navToUserProfile,
+    setIndex,
     submitNestedComment,
     submitComment,
     handleLikeComment,
     handleNestedComment
   } = props;
 
+  // Local state
   const [focussed, setFocussed] = useState(false);
   const [hovered, setHovered] = useState({
     upvote: false,
     downvote: false
   });
-
   const [boxId, setBoxId] = useState(0);
   const [hoveredComments, setHoveredComments] = useState([
     {
@@ -87,7 +91,6 @@ export default function Comments (props: CommentsProps) {
       downvote: false
     }
   ])
-
   const basicCommentHoverState = [
     {
       upvote: false,
@@ -119,10 +122,12 @@ export default function Comments (props: CommentsProps) {
     }
   ];
 
+  // Reset comment hover states on login/logout
   useEffect(() => {
     setHoveredComments(basicCommentHoverState);
   }, [loginStatus])
 
+  // Handle comment hover events
   const handleHoverComment = (e: React.MouseEvent) => {
     const target = e.currentTarget;
     const idString = target.classList[0];
