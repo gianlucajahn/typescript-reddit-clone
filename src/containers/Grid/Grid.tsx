@@ -260,6 +260,10 @@ export default function Grid (props: GridProps) {
           return;
         }
 
+        if (post.author !== userName) {
+          return;
+        }
+
         return <GridPost 
                  post={posts[i]}
                  posts={posts}

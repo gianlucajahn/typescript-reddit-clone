@@ -406,18 +406,19 @@ function App() {
 
     // Don't add second poster trophy if user already has one
     if (userObject.trophies.includes("poster")) {
-      return;
+      
+    } else {
+      userObject.trophies.push("poster");
+      updatedUserData = updatedUserData.map((user, i) => {
+        if (i === userId) {
+          user = userObject;
+          return user;
+        } else {
+          return user;
+        }
+      });
+      setUserData(updatedUserData);
     }
-    userObject.trophies.push("poster");
-    updatedUserData = updatedUserData.map((user, i) => {
-      if (i === userId) {
-        user = userObject;
-        return user;
-      } else {
-        return user;
-      }
-    });
-    setUserData(updatedUserData);
 
     // Initiate loading, add post to posts array and navigate to new post page
     setSubmitLoading(true);
