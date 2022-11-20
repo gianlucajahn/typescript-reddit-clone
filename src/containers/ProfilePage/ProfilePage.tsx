@@ -1,10 +1,15 @@
+// Imports
 import React, { MouseEventHandler, useState, SetStateAction, Dispatch, useEffect } from 'react';
+// Component Imports
 import BackToTopButton from '../../components/BackToTopButton/BackToTopButton';
 import GridPost from '../../components/GridPost/GridPost';
 import PostedComment from '../../components/PostedComment/PostedComment';
 import SortBar from '../../components/SortBar/SortBar';
+// Type Imports
 import { Subreddits, Subreddit, Post, userObjectArray, userObject } from '../../types/types';
+// Utility Imports
 import userArray from '../../utils/userArray';
+// CSS Imports
 import './ProfilePage.scss';
 
 export interface ProfilePageProps {
@@ -12,17 +17,23 @@ export interface ProfilePageProps {
     userName: string,
     currentSort: string,
     currentSub: Subreddit | undefined,
-    setSort: React.MouseEventHandler;
     subreddits: Subreddits,
     topSubreddits: Subreddits,
     renderNum: number,
-    setRenderNum: Dispatch<SetStateAction<number>>,
     currentEditedComment: string,
-    setIndex: Dispatch<SetStateAction<number | undefined>>
     writeNestedComment: any,
     editComment: any,
     editNestedComment: any,
     currentlyInspectedUser: string,
+    loginStatus: boolean,
+    setLoginModalState: any,
+    loginModalState: string,
+    posts: Post[],
+    currentPost: Post | undefined,
+    mainComment: string,
+    writeComment: any,
+    userData: userObjectArray,
+    currentUserData: userObject | undefined,
     savePost: MouseEventHandler,
     enablePremium: MouseEventHandler,
     submitNestedComment: MouseEventHandler
@@ -39,15 +50,9 @@ export interface ProfilePageProps {
     addFriend: MouseEventHandler,
     handleNestedComment: MouseEventHandler,
     followUser: MouseEventHandler,
-    loginStatus: boolean,
-    setLoginModalState: any,
-    loginModalState: string,
-    posts: Post[],
-    currentPost: Post | undefined,
-    mainComment: string,
-    writeComment: any,
-    userData: userObjectArray,
-    currentUserData: userObject | undefined
+    setIndex: Dispatch<SetStateAction<number | undefined>>,
+    setRenderNum: Dispatch<SetStateAction<number>>,
+    setSort: React.MouseEventHandler
 }
 
 export default function ProfilePage (props:  ProfilePageProps) {
@@ -57,49 +62,50 @@ export default function ProfilePage (props:  ProfilePageProps) {
     currentSort,
     currentSub,
     renderNum,
-    setRenderNum,
     currentPost,
     mainComment,
     writeComment,
-    setSort,
-    navToProfile,
-    navToUserProfile,
     subreddits,
     topSubreddits,
-    setIndex,
     currentEditedComment,
     writeNestedComment,
-    editComment,
-    enablePremium,
-    editNestedComment,
-    savePost,
-    submitNestedComment,
-    currentlyInspectedUser,
-    handleNestedComment,
-    handleLikeComment,
-    submitComment,
-    reportUser,
-    addFriend,
-    openPost,
-    handleSubMembership,
-    handleLike,
-    handleNavigate,
-    navToSubmit,
-    followUser,
     loginStatus,
     setLoginModalState,
     loginModalState,
     posts,
     userData,
-    currentUserData
+    currentUserData,
+    editComment,
+    editNestedComment,
+    currentlyInspectedUser,
+    savePost,
+    submitNestedComment,
+    enablePremium,
+    setIndex,
+    handleNestedComment,
+    handleLikeComment,
+    submitComment,
+    setSort,
+    navToProfile,
+    navToUserProfile,
+    reportUser,
+    addFriend,
+    openPost,
+    handleSubMembership,
+    setRenderNum,
+    handleLike,
+    handleNavigate,
+    navToSubmit,
+    followUser,
     } = props;
 
+    // Local state
     const [currentProfileSection, setCurrentProfileSection] = useState("overview");
     const [optionsExpanded, setOptionsExpanded] = useState(false);
     const [hoveredSection, setHoveredSection] = useState("none");
-    const [currentAwardLength, setCurrentAwardLength] = useState<number>(0);
     const [backgroundColor, setBackgroundColor] = useState("");
 
+    // profile card background determination
     useEffect(() => {
       switch (currentUserData?.avatar) {
         case "1":
@@ -228,12 +234,15 @@ export default function ProfilePage (props:  ProfilePageProps) {
       }
     }, []);
 
+    // used for conditional src's on img elements
     const nonUserData = [
       "saved",
       "upvoted",
       "downvoted",
       "following"
     ];
+
+    // current data determination
     const date = new Date();
     let day = date.getDate();
     let monthNum = date.getMonth();
@@ -254,11 +263,13 @@ export default function ProfilePage (props:  ProfilePageProps) {
     let month = monthNames[monthNum - 1];
     let creationDate = `${month} ${day}${day - 20 === 1 ? "st" : day - 30 === 1 ? "st" : day === 1 ? "st" : day - 20 === 2 ? "nd" : day === 2 ? "nd" : "th"}, ${year}`;
 
+    // event handler for switching the profile sections
     const switchProfileSection = (e: React.MouseEvent) => {
       const target = e.currentTarget;
       setCurrentProfileSection(target.id);
     }
 
+    // event handler for animating the profile card on hover
     const hoverCard = (e: React.MouseEvent) => {
       let card = document.getElementById('card');
       card!.style.transition = "0s all";
@@ -267,6 +278,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
       card!.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
     }
 
+    // reset card angle onMouseLeave
     const resetCard = (e: React.MouseEvent) => {
       let xAxis = 0;
       let yAxis = 0;
@@ -275,6 +287,7 @@ export default function ProfilePage (props:  ProfilePageProps) {
       card!.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
     }
 
+    // event handler to conditionally color section headlines on hover
     const hoverSection = (e: React.MouseEvent) => {
       const target = e.currentTarget;
       setHoveredSection(target.id);
