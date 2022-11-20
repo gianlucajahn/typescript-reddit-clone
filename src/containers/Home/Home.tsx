@@ -1,27 +1,39 @@
+// Imports
 import React, { MouseEventHandler, Dispatch, SetStateAction, useRef, useEffect, useState } from 'react';
-import './Home.scss';
+// Component Imports
 import CreatePost from '../../components/CreatePost/CreatePost';
 import SortBar from '../../components/SortBar/SortBar';
 import HomeSideBar from '../../components/HomeSideBar/HomeSideBar';
-import { Post, Subreddit, Subreddits } from '../../types/types';
 import Grid from '../Grid/Grid';
+// Type imports
+import { Post, Subreddit, Subreddits } from '../../types/types';
+// Utility Imports
 import userArray from '../../utils/userArray';
+// CSS Imports
+import './Home.scss';
 
 export interface HomeProps {
   randomIntToString: string,
   userName: string,
   currentSort: string,
   currentSub: Subreddit | undefined,
-  setSort: React.MouseEventHandler;
   subreddits: Subreddits,
   topSubreddits: Subreddits,
   renderNum: number,
-  setRenderNum: Dispatch<SetStateAction<number>>,
   currentEditedComment: string,
-  setIndex: Dispatch<SetStateAction<number | undefined>>
   writeNestedComment: any,
   editComment: any,
   editNestedComment: any,
+  loginStatus: boolean,
+  setLoginModalState: any,
+  loginModalState: string,
+  posts: Post[],
+  currentPost: Post | undefined,
+  mainComment: string,
+  writeComment: any,
+  setRenderNum: Dispatch<SetStateAction<number>>,
+  setIndex: Dispatch<SetStateAction<number | undefined>>
+  setSort: React.MouseEventHandler;
   savePost: MouseEventHandler,
   enablePremium: MouseEventHandler,
   submitNestedComment: MouseEventHandler
@@ -33,15 +45,8 @@ export interface HomeProps {
   submitComment: MouseEventHandler,
   handleLikeComment: MouseEventHandler,
   handleNestedComment: MouseEventHandler,
-  loginStatus: boolean,
-  setLoginModalState: any,
-  loginModalState: string,
-  posts: Post[],
   navToUserProfile: MouseEventHandler,
   navToProfile: MouseEventHandler,
-  currentPost: Post | undefined,
-  mainComment: string,
-  writeComment: any
 }
 
 export default function Home (props: HomeProps) {
@@ -53,21 +58,19 @@ export default function Home (props: HomeProps) {
     currentSort,
     currentSub,
     renderNum,
-    setRenderNum,
     currentPost,
-    navToProfile,
     mainComment,
     writeComment,
-    setSort,
     subreddits,
     topSubreddits,
-    setIndex,
-    navToUserProfile,
     currentEditedComment,
     writeNestedComment,
     editComment,
-    enablePremium,
     editNestedComment,
+    loginStatus,
+    setLoginModalState,
+    loginModalState,
+    posts,
     savePost,
     submitNestedComment,
     handleNestedComment,
@@ -78,10 +81,12 @@ export default function Home (props: HomeProps) {
     handleLike,
     handleNavigate,
     navToSubmit,
-    loginStatus,
-    setLoginModalState,
-    loginModalState,
-    posts
+    enablePremium,
+    setIndex,
+    navToUserProfile,
+    setSort,
+    navToProfile,
+    setRenderNum,
   } = props;
 
   useEffect(() => {
