@@ -1,36 +1,42 @@
+// Imports
 import React, { useState, MouseEventHandler } from 'react';
-import './HomeSideBar.scss';
-import { Subreddits } from '../../types/types';
+// Component Imports
 import Imprint from '../Imprint/Imprint';
 import BackToTopButton from '../BackToTopButton/BackToTopButton';
+// Type Imports
+import { Subreddits } from '../../types/types';
+// CSS Imports
+import './HomeSideBar.scss';
 
 export interface HomeSideBarProps {
     subreddits: Subreddits,
     topSubreddits: Subreddits,
+    loginStatus: boolean,
+    loginModalState: string
+    setLoginModalState: any,
     handleSubMembership: React.MouseEventHandler,
     enablePremium: MouseEventHandler,
     handleNavigate: MouseEventHandler<HTMLElement>,
     navToSubmit: MouseEventHandler,
-    loginStatus: boolean,
-    loginModalState: string
-    setLoginModalState: any
 }
 
 export default function HomeSideBar (props: HomeSideBarProps) {
   const {
     subreddits,
     topSubreddits,
+    loginStatus,
+    setLoginModalState,
+    loginModalState,
     handleSubMembership,
     enablePremium,
     handleNavigate,
     navToSubmit,
-    loginStatus,
-    setLoginModalState,
-    loginModalState
   } = props;
 
+  // Local state
   const [viewAll, setViewAll] = useState(false);
 
+  // Set visibility on subreddit list
   const handleView = (e: React.MouseEvent) => {
     setViewAll(!viewAll);
   }

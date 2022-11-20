@@ -1,5 +1,8 @@
+// Imports
 import * as React from 'react';
+// Type imports
 import { Subreddit } from '../../types/types';
+// CSS Imports
 import './SubredditHeadline.scss';
 
 export interface SubredditHeadlineProps {

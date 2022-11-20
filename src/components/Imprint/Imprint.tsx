@@ -1,4 +1,6 @@
+// Imports
 import React from 'react';
+// CSS Imports
 import './Imprint.scss';
 
 export interface ImprintProps {

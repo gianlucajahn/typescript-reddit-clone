@@ -1,8 +1,13 @@
+// Imports
 import React, { MouseEventHandler } from 'react';
+// Type Imports
 import { Post, Subreddit } from '../../types/types';
+// SVG Imports
 import { ReactComponent as Pen } from "../../resources/images/pen.svg";
+// Component Imports
 import Imprint from '../Imprint/Imprint';
 import BackToTopButton from '../BackToTopButton/BackToTopButton';
+// CSS Imports
 import './SubredditSideBar.scss';
 
 export interface SubredditSideBarProps {
@@ -12,15 +17,15 @@ export interface SubredditSideBarProps {
     standardTheme: any,
     loginStatus: boolean,
     randomIntToString: string,
+    userName: string,
+    communityOptions: boolean,
+    currentPost: Post | undefined,
+    switchCommunityOptions: MouseEventHandler,
+    handleNavigate: MouseEventHandler,
     navToProfile: MouseEventHandler,
     navToSubmit: MouseEventHandler,
     switchCommunityTheme: MouseEventHandler,
     expandRule: MouseEventHandler,
-    userName: string,
-    switchCommunityOptions: MouseEventHandler,
-    handleNavigate: MouseEventHandler,
-    communityOptions: boolean,
-    currentPost: Post | undefined,
 }
 
 export default function SubredditSideBar (props: SubredditSideBarProps) {
@@ -32,12 +37,12 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
     submitPage,
     loginStatus,
     randomIntToString,
+    userName,
     navToProfile,
     handleNavigate,
     navToSubmit,
     switchCommunityTheme,
     expandRule,
-    userName,
     switchCommunityOptions,
     communityOptions
   } = props;

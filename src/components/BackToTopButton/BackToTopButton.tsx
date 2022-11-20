@@ -1,4 +1,6 @@
+// Imports
 import React, { MouseEventHandler } from 'react';
+// CSS Imports
 import './BackToTopButton.scss';
 
 export interface BackToTopButtonProps {
