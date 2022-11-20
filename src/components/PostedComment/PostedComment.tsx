@@ -1,14 +1,16 @@
+// Imports
 import React, { MouseEventHandler, Dispatch, SetStateAction, useState } from 'react';
+// Hook Imports
 import { useLocation } from 'react-router-dom';
+// Type Imports
 import { Comment, Post, Subreddit } from '../../types/types';
+// Component Imports
 import EditComment from '../EditComment/EditComment';
+// CSS Imports
 import './PostedComment.scss';
 
 export interface PostedCommentProps {
     index: number,
-    handleHoverComment?: MouseEventHandler,
-    handleLikeComment: MouseEventHandler,
-    handleNestedComment: MouseEventHandler,
     hoveredComments?: any,
     commentObj: Comment,
     userName: string,
@@ -20,62 +22,69 @@ export interface PostedCommentProps {
     boxId?: number | undefined,
     setBoxId?: any,
     editComment: any,
-    navToProfile: MouseEventHandler | undefined,
-    navToUserProfile: MouseEventHandler | undefined,
+    currentEditedComment: string,
+    writeNestedComment: any,
     editNestedComment: any,
-    submitComment: MouseEventHandler,
     currentSub: Subreddit | undefined,
     currentPost: Post,
     nested: boolean,
+    navToProfile: MouseEventHandler | undefined,
+    navToUserProfile: MouseEventHandler | undefined,
+    submitComment: MouseEventHandler,
+    handleHoverComment?: MouseEventHandler,
+    handleLikeComment: MouseEventHandler,
+    handleNestedComment: MouseEventHandler,
     setIndex: Dispatch<SetStateAction<number | undefined>>,
-    writeNestedComment: any,
     submitNestedComment: MouseEventHandler,
-    currentEditedComment: string,
 }
 
 export default function PostedComment (props: PostedCommentProps) {
   const {
     index,
-    handleHoverComment,
-    handleLikeComment,
-    handleNestedComment,
     hoveredComments,
     mainComment,
     boxId,
     randomIntToString,
     setBoxId,
-    navToProfile,
-    navToUserProfile,
     userName,
     noFurtherNesting,
     commentObj,
     targetedComment,
     currentPost,
     writeComment,
-    submitComment,
     currentSub,
     nested,
-    setIndex,
     writeNestedComment,
     editComment,
     editNestedComment,
+    currentEditedComment,
+    navToProfile,
+    navToUserProfile,
+    submitComment,
+    setIndex,
     submitNestedComment,
-    currentEditedComment
+    handleHoverComment,
+    handleLikeComment,
+    handleNestedComment,
   } = props;
 
+  // Declare location variable to use useLocation() hook with
+  const location = useLocation();
+
+  // Local state
   const [hover, setHover] = useState({
     upvote: false,
     downvote: false
   })
-
-  const location = useLocation();
   const [edited, setEdited] = useState(false);
   const [nestedEdited, setNestedEdited] = useState(false);
 
+  // Switch from PostedComment component to EditComment component
   const switchEdit = (e: React.MouseEvent) => {
     setEdited(!edited);
   }
 
+  // Switch from PostedComment component to EditComment component on nested comments
   const switchNestedEdit = (e: React.MouseEvent) => {
     if (userName === "") {
         return;
@@ -83,6 +92,7 @@ export default function PostedComment (props: PostedCommentProps) {
     setNestedEdited(!nestedEdited);
   }
 
+  // Hover event handler for upvote/downvote buttons in posted comments
   const handleHover = (e: React.MouseEvent) => {
     const target = e.currentTarget;
     if (target.id === "upvote") {
