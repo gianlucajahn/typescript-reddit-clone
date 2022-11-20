@@ -1,5 +1,8 @@
+// Imports
 import React, { MouseEventHandler, useEffect, useState, Dispatch, SetStateAction } from 'react';
+// Type Imports
 import { Comment, Subreddit } from '../../types/types';
+// CSS Imports
 import './EditComment.scss';
 
 export interface EditCommentProps {
@@ -18,11 +21,11 @@ export interface EditCommentProps {
     edited?: boolean,
     boxId: number | undefined,
     setBoxId: any,
-    setIndex: Dispatch<SetStateAction<number | undefined>>,
     writeNestedComment?: any,
     editComment: any,
     editNestedComment: any,
     switchNestedEdit?: any,
+    setIndex: Dispatch<SetStateAction<number | undefined>>,
     switchEdit?: MouseEventHandler,
     submitNestedComment?: MouseEventHandler,
     handleNestedComment?: MouseEventHandler,
@@ -45,26 +48,29 @@ export default function EditComment  (props: EditCommentProps) {
     writeComment,
     nested,
     currentSub,
-    setIndex,
     writeNestedComment,
     editComment,
     editNestedComment,
     nestedEdited,
+    setIndex,
     switchEdit,
     handleNestedComment,
     submitNestedComment,
     submitComment
   } = props;
 
+  // Local state
+  const [focussed, setFocussed] = useState(false);
+  const [isMainBox, setIsMainBox] = useState(false);
+
+  // Set indices for comments
   useEffect(() => {
     if (index !== undefined) {
       setIndex(index);
     }
   }, [index])
 
-  const [focussed, setFocussed] = useState(false);
-  const [isMainBox, setIsMainBox] = useState(false);
-
+  // Set id's for editComment boxes
   useEffect(() => {
     let submitButton = (document.body.getElementsByClassName('submitcomment'))[boxId!];
     if (submitButton === undefined) {
@@ -75,6 +81,7 @@ export default function EditComment  (props: EditCommentProps) {
     }
   }, []);
 
+    // Set id's for editComment boxes
   useEffect(() => {
     setBoxId(boxId! + 1);
   }, []);
