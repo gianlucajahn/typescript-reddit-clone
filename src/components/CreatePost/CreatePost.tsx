@@ -1,5 +1,8 @@
+// Imports
 import React, { MouseEventHandler } from 'react';
+// Hook Imports
 import { useNavigate } from 'react-router-dom';
+// CSS Imports
 import './CreatePost.scss';
 
 export interface CreatePostProps {
