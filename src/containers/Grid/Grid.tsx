@@ -1,11 +1,16 @@
+// Imports
 import React, { MouseEventHandler, SetStateAction, Dispatch } from 'react';
-import GridPost from '../../components/GridPost/GridPost';
+// Type Imports
 import { Post, Subreddit } from '../../types/types';
+// Component Imports
+import GridPost from '../../components/GridPost/GridPost';
+// Utility Imports
 import bestOrder from '../../utils/bestOrder';
 import hotOrder from '../../utils/hotOrder';
 import newOrder from '../../utils/newOrder';
 import postArray from '../../utils/postArray';
 import topOrder from '../../utils/topOrder';
+// CSS Imports
 import './Grid.scss';
 
 export interface GridProps {
@@ -20,12 +25,12 @@ export interface GridProps {
     randomIntToString: string,
     currentEditedComment: string,
     loginStatus: boolean,
-    setIndex: Dispatch<SetStateAction<number | undefined>>
     writeNestedComment: any,
     editComment: any,
     renderNum?: number,
-    navToProfile: MouseEventHandler,
     editNestedComment: any,
+    setIndex: Dispatch<SetStateAction<number | undefined>>
+    navToProfile: MouseEventHandler,
     navToUserProfile: MouseEventHandler,
     savePost: MouseEventHandler,
     submitNestedComment: MouseEventHandler
@@ -45,17 +50,17 @@ export default function Grid (props: GridProps) {
     loginModalState,
     userName,
     currentEditedComment,
-    navToProfile,
     posts,
     renderNum,
     loginStatus,
     mainComment,
     writeComment,
-    setIndex,
     writeNestedComment,
     editComment,
     editNestedComment,
     randomIntToString,
+    setIndex,
+    navToProfile,
     navToUserProfile,
     savePost,
     submitNestedComment,

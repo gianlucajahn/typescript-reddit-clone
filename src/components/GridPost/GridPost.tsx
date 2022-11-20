@@ -1,9 +1,14 @@
+// Imports
 import React, { MouseEventHandler, useEffect, useState, Dispatch, SetStateAction } from 'react';
-import { findAllInRenderedTree } from 'react-dom/test-utils';
+// Hook Imports
 import { useLocation } from 'react-router-dom';
+// Type Imports
 import { Post, Subreddit } from '../../types/types';
+// Utility Imports
 import userArray from '../../utils/userArray';
+// Component Imports
 import Comments from '../Comments/Comments';
+// CSS Imports
 import './GridPost.scss';
 
 export interface GridPostProps {
@@ -16,15 +21,15 @@ export interface GridPostProps {
     writeComment: any,
     currentEditedComment: string,
     loginStatus: boolean,
-    setIndex: Dispatch<SetStateAction<number | undefined>>,
     writeNestedComment: any,
-    navToProfile?: MouseEventHandler | undefined,
     editComment: any,
     randomIntToString: string,
     currentlyInspectedUser?: string | undefined,
     editNestedComment: any,
     currentProfileSection?: string,
     nonUserData?: any,
+    setIndex: Dispatch<SetStateAction<number | undefined>>,
+    navToProfile?: MouseEventHandler | undefined,
     navToUserProfile: MouseEventHandler | undefined,
     savePost: MouseEventHandler,
     submitNestedComment: MouseEventHandler,
@@ -50,11 +55,11 @@ export default function GridPost (props: GridPostProps) {
     writeComment,
     currentEditedComment,
     loginStatus,
-    setIndex,
     writeNestedComment,
     editComment,
     randomIntToString,
     editNestedComment,
+    setIndex,
     navToProfile,
     savePost,
     submitNestedComment,
@@ -67,14 +72,17 @@ export default function GridPost (props: GridPostProps) {
     openPost
   } = props;
 
+  // Local state
   const [hovered, setHovered] = useState({
     upvote: false,
     downvote: false
   });
-
   const [viewers, setViewers] = useState(Math.floor(Math.random() * 80 + 12));
+
+  // Declaring location variable to use useLocation() hook with
   const location = useLocation();
 
+  // Hover event handler for upvote/downvote buttons
   const handleHover = (e: React.MouseEvent) => {
     const target = e.currentTarget;
     if (target.id === "upvote") {
@@ -92,6 +100,7 @@ export default function GridPost (props: GridPostProps) {
     }
   }
 
+  // timed event handler to randomly add/subtract to current viewer count
   const changeViewers = (e: any) => {
     const outcome = Math.floor(Math.random() * 2);
     if (outcome === 0) {
@@ -101,6 +110,7 @@ export default function GridPost (props: GridPostProps) {
     }
   }
 
+  // Comment counter
   const addUpComments = (posting: Post | undefined) => {
     if (currentPost === undefined) {
         let postId = posts.findIndex(postObject => postObject.title === post.title);
@@ -130,6 +140,7 @@ export default function GridPost (props: GridPostProps) {
     }
   }
 
+  // Fire changeViewers function every 6 seconds
   useEffect(() => {
     setInterval(changeViewers, 6000);
   }, [])
