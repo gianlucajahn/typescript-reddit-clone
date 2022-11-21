@@ -1,6 +1,6 @@
 <h1 align="center">👥 React Reddit Clone</h1>
 
-![](/src/resources/images/banner2.PNG)
+![](/src/resources/images/banner.png)
 <p align="center">
   Reddit Clone built with React & Typescript
 </p>
