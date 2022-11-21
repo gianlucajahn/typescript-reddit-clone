@@ -1,4 +1,4 @@
-<h1 align="center">🟠 React Reddit Clone</h1>
+<h1 align="center">⚛️ React Reddit Clone</h1>
 
 ![](/src/resources/images/banner.png)
 <p align="center">
@@ -6,7 +6,7 @@
 </p>
 
 ## Short Description
-An e-commerce store, imitating a Game Store, built with React. Includes dedicated game pages, a search functionality, genre and rating filters, a like feature and a wishlist. Responsive to the bone and tested with Jest. You can find a list of [features](#features), [performance tests](#performance) and [technologies used](#technologies-used) below.
+A Reddit Clone built with TypeScript, React and SCSS. Additional to the famous infinite scrolling home page I also implemented subreddits, individual post pages, comments and nested comments, post submission, profile pages and various dropdown menu's, including the search bar and notifications. Users can join and leave subreddits, add/remove them to/from their favorites, can like posts and comments or create some on their own. A detailed feature list can be found at the end of this document.
 
 ## 🔴 Demo
 🧪 [Live Demo](https://gianlucajahn.github.io/react-ecommerce-store) available. Click "Live Demo" to open it.
@@ -14,17 +14,23 @@ An e-commerce store, imitating a Game Store, built with React. Includes dedicate
 ## Showcase
 You can see images and a GIF of the project in user interaction below. The user starts on the landing page, navigates through the browse section, selects a game, adds it to their cart and opens the cart. The GIF does not show all features of the shop, it only shows the most elementary user interactions. <br /> <br />
 
-![](/src/Resources/image/preview0.png)
 ![](/src/Resources/image/preview1.png)
 ![](/src/Resources/image/preview2.png)
 ![](/src/Resources/image/preview3.png)
 ![](/src/Resources/image/preview4.png)
+![](/src/Resources/image/preview5.png)
+![](/src/Resources/image/preview6.png)
+![](/src/Resources/image/preview7.png)
+![](/src/Resources/image/preview8.png)
+![](/src/Resources/image/preview9.png)
+![](/src/Resources/image/preview10.png)
+![](/src/Resources/image/preview11.png)
 ![](/src/Resources/image/showcase.gif)
 
 ## Performance
 I let [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de) run over my application to check for it's **performance, accessibility, use of best practices and SEO optimization**. You can view the results right below this paragraph.
 
-![Google Lighthouse Performance Results](https://i.ibb.co/qkXkY5W/report1.png)
+![Google Lighthouse Performance Results](/src/Resources/image/performance.png)
 
 ## Motivation
 My motivations in building this project were showcasing what I learned so far and to have somewhat of a "sandbox" to experiment and build within. I was able to learn new libraries and I had to be creative with ways to increase my application's performance. I also believed that building a project with a much bigger codebase than my preceding ones and learning how to organize such a codebase could set me off better for work in a business environment - and it did.
