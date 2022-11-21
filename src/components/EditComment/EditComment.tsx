@@ -98,6 +98,7 @@ export default function EditComment  (props: EditCommentProps) {
         value={nestedEdited ? commentObj?.nested_comments[0].content : nested ? commentObj?.nested_comments[0].content : isMainBox ? mainComment : commentObj?.content} 
         onChange={nestedEdited ? editNestedComment : nested ? (e) => console.log(edited + " " + nested + " " + nestedEdited) : (e) => {e.target.id === "" ? writeComment(e) : editComment(e)}} 
         onFocus={() => setFocussed(true)} 
+        spellCheck={false}
         onBlur={() => setFocussed(false)}>
       </textarea>
 
