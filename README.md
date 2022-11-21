@@ -14,23 +14,23 @@ A Reddit Clone built with TypeScript, React and SCSS. Additional to the famous i
 ## Showcase
 You can see images and a GIF of the project in user interaction below. The user starts on the landing page, navigates through the browse section, selects a game, adds it to their cart and opens the cart. The GIF does not show all features of the shop, it only shows the most elementary user interactions. <br /> <br />
 
-![](/src/Resources/image/preview1.png)
-![](/src/Resources/image/preview2.png)
-![](/src/Resources/image/preview3.png)
-![](/src/Resources/image/preview4.png)
-![](/src/Resources/image/preview5.png)
-![](/src/Resources/image/preview6.png)
-![](/src/Resources/image/preview7.png)
-![](/src/Resources/image/preview8.png)
-![](/src/Resources/image/preview9.png)
-![](/src/Resources/image/preview10.png)
-![](/src/Resources/image/preview11.png)
+![](/src/Resources/image/preview1.PNG)
+![](/src/Resources/image/preview2.PNG)
+![](/src/Resources/image/preview3.PNG)
+![](/src/Resources/image/preview4.PNG)
+![](/src/Resources/image/preview5.PNG)
+![](/src/Resources/image/preview6.PNG)
+![](/src/Resources/image/preview7.PNG)
+![](/src/Resources/image/preview8.PNG)
+![](/src/Resources/image/preview9.PNG)
+![](/src/Resources/image/preview10.PNG)
+![](/src/Resources/image/preview11.PNG)
 ![](/src/Resources/image/showcase.gif)
 
 ## Performance
 I let [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de) run over my application to check for it's **performance, accessibility, use of best practices and SEO optimization**. You can view the results right below this paragraph.
 
-![Google Lighthouse Performance Results](/src/Resources/image/performance.png)
+![Google Lighthouse Performance Results](/src/Resources/image/performance.PNG)
 
 ## Motivation
 My motivations in building this project were showcasing what I learned so far and to have somewhat of a "sandbox" to experiment and build within. I was able to learn new libraries and I had to be creative with ways to increase my application's performance. I also believed that building a project with a much bigger codebase than my preceding ones and learning how to organize such a codebase could set me off better for work in a business environment - and it did.
