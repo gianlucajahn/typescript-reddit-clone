@@ -1,4 +1,4 @@
-<h1 align="center">👥 React Reddit Clone</h1>
+<h1 align="center">👨‍👩‍👧‍👦 React Reddit Clone</h1>
 
 ![](/src/resources/images/banner.png)
 <p align="center">
