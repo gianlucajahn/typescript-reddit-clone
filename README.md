@@ -73,6 +73,6 @@ My motivations in building this project was moving on with what I learned about 
 - Manipulating objects in state and working with optional parameters and props in TypeScript
 
 ## Credits
-[Reddit.com](https://www.reddit.com/): Since this is a clone built for educational purposes only, all rights and credits go to Reddit Inc.
+🟠 [Reddit.com](https://www.reddit.com/): Since this is a clone built for educational purposes only, all rights and credits go to Reddit Inc.
 
-All rights to all concepts, designs, services and ideas in this web app belong to Reddit/Reddit Inc. This is just a clone built with React for educational purposes to learn the underlying programming language. I am not in any way connected to Reddit and neither is this web app. Neither me nor this web app are affiliated with Reddit. If you are an owner of the copyrighted material, please let me know if you have any issues with this and I'll take the page down immediately.
+All rights to all concepts, designs, services and ideas in this web app belong to Reddit/Reddit Inc. This is just a clone built with TypeScript for educational purposes to learn the underlying programming language. I am not in any way connected to Reddit and neither is this web app. Neither me nor this web app are affiliated with Reddit. If you are an owner of the copyrighted material, please let me know if you have any issues with this and I'll take the page down immediately.
