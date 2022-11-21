@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+<h1 align="center">👥 React Reddit Clone</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](/src/resources/images/banner2.png)
+<p align="center">
+  Reddit Clone built with React & Typescript
+</p>
 
-## Available Scripts
+## Short Description
+An e-commerce store, imitating a Game Store, built with React. Includes dedicated game pages, a search functionality, genre and rating filters, a like feature and a wishlist. Responsive to the bone and tested with Jest. You can find a list of [features](#features), [performance tests](#performance) and [technologies used](#technologies-used) below.
 
-In the project directory, you can run:
+## 🔴 Demo
+🧪 [Live Demo](https://gianlucajahn.github.io/react-ecommerce-store) available. Click "Live Demo" to open it.
 
-### `npm start`
+## Showcase
+You can see images and a GIF of the project in user interaction below. The user starts on the landing page, navigates through the browse section, selects a game, adds it to their cart and opens the cart. The GIF does not show all features of the shop, it only shows the most elementary user interactions. <br /> <br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![](/src/Resources/image/preview0.png)
+![](/src/Resources/image/preview1.png)
+![](/src/Resources/image/preview2.png)
+![](/src/Resources/image/preview3.png)
+![](/src/Resources/image/preview4.png)
+![](/src/Resources/image/showcase.gif)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Performance
+I let [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de) run over my application to check for it's **performance, accessibility, use of best practices and SEO optimization**. You can view the results right below this paragraph.
 
-### `npm test`
+![Google Lighthouse Performance Results](https://i.ibb.co/qkXkY5W/report1.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Motivation
+My motivations in building this project were showcasing what I learned so far and to have somewhat of a "sandbox" to experiment and build within. I was able to learn new libraries and I had to be creative with ways to increase my application's performance. I also believed that building a project with a much bigger codebase than my preceding ones and learning how to organize such a codebase could set me off better for work in a business environment - and it did.
 
-### `npm run build`
+## Features
+- Expressive, responsive and clear UI/UX
+- Extensive unit and integration tests to ensure intentional behaviour
+- Search any game you want
+- Filters to sort after genres and ratings
+- Like & Wishlist feature to track your personal wishlist
+- Smooth Animations with Framer Motion
+- Quick Navigation to view all parts of the project without having to click through it
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
+- React
+- React Router Dom
+- Framer Motion
+- Jest
+- CSS
+- Git
+- CDN 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## What I learned:
+- Using motion libraries (e.g. Framer Motion) to achieve much smoother user experiences while maintaining clean code
+- Working with a CDN (Cloud Delivery Network) to improve performance by accelerating bundle delivery
+- organizing and connect a project with React Router Dom
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Credits
+[nekusu](https://github.com/nekusu): UI/UX for the game pages and cart popup
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+All rights to all pictures, products and names on this website belong to the respective publishers of the games displayed. I only used them to build an environment for myself to learn coding in React with. This page is not being used commercially. If you are an owner of the copyrighted material, please let me know if you have any issues with this page and I'll take it down immediately.
