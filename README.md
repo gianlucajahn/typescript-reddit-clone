@@ -43,32 +43,36 @@ I let [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/b
 ![Google Lighthouse Performance Results](/src/resources/images/performance.png)
 
 ## Motivation
-My motivations in building this project were showcasing what I learned so far and to have somewhat of a "sandbox" to experiment and build within. I was able to learn new libraries and I had to be creative with ways to increase my application's performance. I also believed that building a project with a much bigger codebase than my preceding ones and learning how to organize such a codebase could set me off better for work in a business environment - and it did.
+My motivations in building this project was moving on with what I learned about JavaScript and React, jumping into a newer technology - TypeScript, in this case - and working on a big codebase on my own. This project currently consists of just a bit more than 24,000 lines of code, so while still not being a corporate size project, I learned how to structure sizeable codebases effectively. My next endeavour will be working with backends, possibly utilizing Next.js in the process.
 
 ## Features
-- Expressive, responsive and clear UI/UX
-- Extensive unit and integration tests to ensure intentional behaviour
-- Search any game you want
-- Filters to sort after genres and ratings
-- Like & Wishlist feature to track your personal wishlist
-- Smooth Animations with Framer Motion
-- Quick Navigation to view all parts of the project without having to click through it
+- Pixel perfect UI/UX
+- Subreddit join, leave and favoriting
+- Upvoting, downvoting and saving posts
+- Adding custom posts, including either text or images
+- Upvoting and downvoting comments
+- Writing comments and nested comments
+- Editing your own comments and nested comments after submission
+- Profile Pages with different sections
+- a working karma system
+- Following, adding and reporting other users
+- Switchable color themes for subreddits
+- Various dropdown menu's
+- Search bar and dropdown menu
 
 ## Technologies Used
+- TypeScript
 - React
 - React Router Dom
-- Framer Motion
-- Jest
-- CSS
+- SCSS
 - Git
-- CDN 
 
 ## What I learned:
-- Using motion libraries (e.g. Framer Motion) to achieve much smoother user experiences while maintaining clean code
-- Working with a CDN (Cloud Delivery Network) to improve performance by accelerating bundle delivery
-- organizing and connect a project with React Router Dom
+- Working with a strongly typed language like TypeScript and learning to type to minimize bugs/errors
+- Organizing a bigger codebase descriptively and maintaining efficiency of the end product
+- Manipulating objects in state and working with optional parameters and props in TypeScript
 
 ## Credits
-[nekusu](https://github.com/nekusu): UI/UX for the game pages and cart popup
+[Reddit.com](https://www.reddit.com/): Since this is a clone built for educational purposes only, all rights and credits go to Reddit Inc.
 
-All rights to all pictures, products and names on this website belong to the respective publishers of the games displayed. I only used them to build an environment for myself to learn coding in React with. This page is not being used commercially. If you are an owner of the copyrighted material, please let me know if you have any issues with this page and I'll take it down immediately.
+All rights to all concepts, designs, services and ideas in this web app belong to Reddit/Reddit Inc. This is just a clone built with React for educational purposes to learn the underlying programming language. I am not in any way connected to Reddit and neither is this web app. Neither me nor this web app are affiliated with Reddit. If you are an owner of the copyrighted material, please let me know if you have any issues with this and I'll take the page down immediately.
