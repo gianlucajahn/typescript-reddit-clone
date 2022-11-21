@@ -14,17 +14,17 @@ A Reddit Clone built with TypeScript, React and SCSS. Additional to the famous i
 ## Showcase
 You can see images and a GIF of the project in user interaction below. The user starts on the landing page, navigates through the browse section, selects a game, adds it to their cart and opens the cart. The GIF does not show all features of the shop, it only shows the most elementary user interactions. <br /> <br />
 
-![](/src/Resources/image/preview1.PNG)
-![](/src/Resources/image/preview2.PNG)
-![](/src/Resources/image/preview3.PNG)
-![](/src/Resources/image/preview4.PNG)
-![](/src/Resources/image/preview5.PNG)
-![](/src/Resources/image/preview6.PNG)
-![](/src/Resources/image/preview7.PNG)
-![](/src/Resources/image/preview8.PNG)
-![](/src/Resources/image/preview9.PNG)
-![](/src/Resources/image/preview10.PNG)
-![](/src/Resources/image/preview11.PNG)
+![](/src/resources/images/preview1.PNG)
+![](/src/resources/images/preview2.PNG)
+![](/src/resources/images/preview3.PNG)
+![](/src/resources/images/preview4.PNG)
+![](/src/resources/images/preview5.PNG)
+![](/src/resources/images/preview6.PNG)
+![](/src/resources/images/preview7.PNG)
+![](/src/resources/images/preview8.PNG)
+![](/src/resources/images/preview9.PNG)
+![](/src/resources/images/preview10.PNG)
+![](/src/resources/images/preview11.PNG)
 
 ## Performance
 I let [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de) run over my application to check for it's **performance, accessibility, use of best practices and SEO optimization**. You can view the results right below this paragraph.
