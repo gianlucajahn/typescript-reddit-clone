@@ -29,7 +29,7 @@ You can see images and a GIF of the project in user interaction below. The user 
 ## Performance
 I let [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de) run over my application to check for it's **performance, accessibility, use of best practices and SEO optimization**. You can view the results right below this paragraph.
 
-![Google Lighthouse Performance Results](/src/Resources/image/performance.png)
+![Google Lighthouse Performance Results](/src/resources/images/performance.png)
 
 ## Motivation
 My motivations in building this project were showcasing what I learned so far and to have somewhat of a "sandbox" to experiment and build within. I was able to learn new libraries and I had to be creative with ways to increase my application's performance. I also believed that building a project with a much bigger codebase than my preceding ones and learning how to organize such a codebase could set me off better for work in a business environment - and it did.
