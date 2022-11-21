@@ -8,7 +8,7 @@
 ## Short Description 📋
 A Reddit Clone built with TypeScript, React and SCSS. Additional to the famous infinite scrolling home page I also implemented subreddits, individual post pages, comments and nested comments, post submission, profile pages and various dropdown menu's, including the search bar and notifications. Users can join and leave subreddits, add/remove them to/from their favorites, can like posts and comments or create some on their own. A detailed feature list can be found at the end of this document.
 
-## Demo 
+## Demo 🔴
 ⚛️ [Live Demo](https://gianlucajahn.github.io/react-ecommerce-store) available. Click "Live Demo" to open it.
 
 ## Showcase 🎬
