@@ -12,7 +12,7 @@ A Reddit Clone built with TypeScript, React and SCSS. Additional to the famous i
 ⚛️ [Live Demo](https://gianlucajahn.github.io/react-ecommerce-store) available. Click "Live Demo" to open it.
 
 ## Showcase
-You can see images of the project in user interaction below. The user starts on the home page, signs up with a new account, selects a subreddit and much more. Detailed descriptions can be found right beneath the images. These images only show the most elementary user interactions. <br /> <br />
+You can see images of the project in user interaction below. The user starts on the home page, signs up with a new account, selects a subreddit and much more. Detailed descriptions can be found right beneath the images. These images only showcase the most elementary user interactions. <br /> <br />
 
 ![](/src/resources/images/preview1.PNG)
 <sup>The clone's home page, posts are sorted by "Hot".</sup>
@@ -58,7 +58,7 @@ My motivations in building this project was moving on with what I learned about 
 - Following, adding and reporting other users
 - Switchable color themes for subreddits
 - Various dropdown menu's
-- Search bar and dropdown menu
+- Search functionality
 
 ## Technologies Used
 - TypeScript
