@@ -187,7 +187,7 @@ function App() {
   // check if current location is the submit page
   // Used in: SubmitPage.tsx
   useEffect(() => {
-    if (location.pathname.substring(1) === "submit") {
+    if (location.pathname.substring(25) === "submit") {
       setSubmitPage(true);
     } else {
       setSubmitPage(false);
@@ -565,8 +565,8 @@ function App() {
       return;
     }
 
-    if (location.pathname.substring(1, 2) === "r") {
-      const newSub = location.pathname.substring(3)
+    if (location.pathname.substring(25, 26) === "r") {
+      const newSub = location.pathname.substring(27)
       const subIndex = subreddits.findIndex(element => element.title === newSub);
       if (subIndex !== -1) {
         let newSub = {...subreddits[subIndex]};
@@ -1778,7 +1778,7 @@ function App() {
   // Used in: App.tsx
   useEffect(() => {
     if (loginStatus === false) {
-      if (location.pathname === "/submit") {
+      if (location.pathname.includes("submit")) {
         navigate("/");
       }
     }

@@ -148,13 +148,13 @@ export default function NavBar (props: NavBarProps) {
 
           <div className="subredditContainer" id="subredditContainer" style={{ display: loginStatus ? "flex" : "none", border: subDropdownIsOpen ? "1px solid #EDEFF1" : "1px solid transparent" }} onClick={handleExpandSub} onMouseEnter={handleHoverSubMenu} onMouseLeave={handleHoverSubMenu}>
             <div>
-              <img className={location.pathname.substring(0, 5) === "/user" ? "profile-pic" : "currentSubreddit return"} alt="nav-icon" src={
+              <img className={location.pathname.includes("/user") ? "profile-pic" : "currentSubreddit return"} alt="nav-icon" src={
                 submitPage ? require("../../resources/images/add.PNG") :  
                 currentSub !== undefined ?  require(`../../resources/images/Communities/${currentSub.title}/icon.png`) 
-                : location.pathname.substring(0, 5) === "/user" 
-                ? userArray.findIndex(user => user.username === userName) !== -1 ? require(`../../resources/images/base_variants/default${userArray[userArray.findIndex(user => user.username === userName)].avatar}.png`) : require(`../../resources/images/${location.pathname.substring(6, 10) === userName.substring(0, 4) 
+                : location.pathname.includes("/user")
+                ? userArray.findIndex(user => user.username === userName) !== -1 ? require(`../../resources/images/base_variants/default${userArray[userArray.findIndex(user => user.username === userName)].avatar}.png`) : require(`../../resources/images/${location.pathname.substring(30, 34) === userName.substring(0, 4) 
                 ? userName === "Nikola Tesla" ? "avatartesla_head.png" : `avatar${randomIntToString}_head.png` : `base_variants/default${currentUserData?.avatar}.png`}`) : require("../../resources/images/home.png")} style={{ height: currentSub !== undefined ? "21px" : "18px" }} />
-              <h4 className="return subText">{submitPage ? "Create Post" : currentSub !== undefined ? "r/" + currentSub.title : location.pathname.substring(6, 10) === userName.substring(0, 4) ? `u/${userName}` : location.pathname.substring(0, 5) === "/user" ? `u/${location.pathname.substring(6)}` : "Home"}</h4>
+              <h4 className="return subText">{submitPage ? "Create Post" : currentSub !== undefined ? "r/" + currentSub.title : location.pathname.substring(30, 34) === userName.substring(0, 4) ? `u/${userName}` : location.pathname.includes("/user") ? `u/${location.pathname.substring(30)}` : "Home"}</h4>
             </div>
             <img src={require("../../resources/images/expand.png")} className="expand return" alt="expand" />
             <div className="subredditDropdown" id="subredditDropdown" style={{ display: subDropdownIsOpen ? "block" : "none", borderTop: "1px solid transparent" }}>

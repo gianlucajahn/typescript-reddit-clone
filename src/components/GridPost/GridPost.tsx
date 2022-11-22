@@ -181,10 +181,10 @@ export default function GridPost (props: GridPostProps) {
             <div className="headline" style={{ gap: /[0-9]+$/.test(location.pathname) ? "3px" : "0px" }}>
                 <h2 className="headline-text" style={{ width: currentPost === undefined ? "490px" : "640px" }}>
                     {post.title}
-                    {post.flair.title !== "none" ? location.pathname.substring(1, 2) !== "r" ? <button className="flair" style={{ backgroundColor: post.flair.color, zIndex: 1 }}>{post.flair.title}</button> : /[0-9]+$/.test(location.pathname) ? null : <button className="flair" style={{ backgroundColor: post.flair.color, zIndex: 1 }}>{post.flair.title}</button> : null}
+                    {post.flair.title !== "none" ? location.pathname.substring(25, 26) !== "r" ? <button className="flair" style={{ backgroundColor: post.flair.color, zIndex: 1 }}>{post.flair.title}</button> : /[0-9]+$/.test(location.pathname) ? null : <button className="flair" style={{ backgroundColor: post.flair.color, zIndex: 1 }}>{post.flair.title}</button> : null}
                 </h2>
                 <div className="individualPost">
-                    {post.flair.title !== "none" ? location.pathname.substring(1, 2) === "r" ? /[0-9]+$/.test(location.pathname) ? <button className="flair" style={{ backgroundColor: post.flair.color, zIndex: 1 }}>{post.flair.title}</button> : null : null : null}
+                    {post.flair.title !== "none" ? location.pathname.substring(25, 26) === "r" ? /[0-9]+$/.test(location.pathname) ? <button className="flair" style={{ backgroundColor: post.flair.color, zIndex: 1 }}>{post.flair.title}</button> : null : null : null}
                 </div>
             </div>
 
