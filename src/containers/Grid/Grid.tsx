@@ -254,43 +254,6 @@ export default function Grid (props: GridProps) {
                  navToProfile={navToProfile}
                 />
       })}
-
-      {currentSub !== undefined && posts.map((post, i) => {
-        if (post.subreddit !== currentSub.title) {
-          return;
-        }
-
-        if (post.author !== userName) {
-          return;
-        }
-
-        return <GridPost 
-                 post={posts[i]}
-                 posts={posts}
-                 currentSub={currentSub} 
-                 currentPost={currentPost}
-                 handleNavigate={handleNavigate}
-                 handleLike={handleLike}
-                 openPost={openPost}
-                 userName={userName}
-                 mainComment={mainComment}
-                 writeComment={writeComment}
-                 submitComment={submitComment}
-                 handleLikeComment={handleLikeComment}
-                 loginStatus={loginStatus}
-                 handleNestedComment={handleNestedComment}
-                 setIndex={setIndex}
-                 writeNestedComment={writeNestedComment}
-                 submitNestedComment={submitNestedComment}
-                 currentEditedComment={currentEditedComment}
-                 editComment={editComment}
-                 editNestedComment={editNestedComment}
-                 randomIntToString={randomIntToString}
-                 savePost={savePost}
-                 navToUserProfile={navToUserProfile}
-                 navToProfile={navToProfile}
-                />
-      })}
     </div>
   );
 }
