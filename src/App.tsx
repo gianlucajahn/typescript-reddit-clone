@@ -1893,7 +1893,7 @@ function App() {
         theme="light"
       />
       <Routes key={location.pathname} location={location}>
-        <Route path='/' element={<Home 
+        <Route path='/typescript-reddit-clone/' element={<Home 
           randomIntToString={randomIntToString}
           userName={userName}
           currentSort={currentSort}
@@ -1929,7 +1929,7 @@ function App() {
           navToUserProfile={navToUserProfile}
           navToProfile={navToProfile}
         />} />
-        <Route path='/r/:subredditId' element={<SubredditPage
+        <Route path='/typescript-reddit-clone/r/:subredditId' element={<SubredditPage
           randomIntToString={randomIntToString}
           userName={userName}
           currentSort={currentSort}
@@ -1972,7 +1972,7 @@ function App() {
           navToUserProfile={navToUserProfile}
           navToProfile={navToProfile}
         />} />
-        <Route path='/user/:userId' element={<ProfilePage
+        <Route path='/typescript-reddit-clone/user/:userId' element={<ProfilePage
           randomIntToString={randomIntToString}
           userName={userName}
           currentSort={currentSort}
@@ -2014,7 +2014,7 @@ function App() {
           addFriend={addFriend}
           followUser={followUser}
         />} />
-        <Route path='/submit' element={<SubmitPage
+        <Route path='/typescript-reddit-clone/submit' element={<SubmitPage
           randomIntToString={randomIntToString}
           submitPostType={submitPostType}
           setSubmitPostType={setSubmitPostType}
@@ -2050,7 +2050,7 @@ function App() {
           submitLoading={submitLoading}
           navToProfile={navToProfile}
         />} />
-        <Route path='/r/:subredditId/:postId' element={<IndividualPost
+        <Route path='/typescript-reddit-clone/r/:subredditId/:postId' element={<IndividualPost
           randomIntToString={randomIntToString}
           userName={userName}
           currentSort={currentSort}
