@@ -19,6 +19,7 @@ import { ToastContainer, toast } from 'react-toastify';
 // CSS Imports
 import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
+import { triggerAsyncId } from 'async_hooks';
 
 function App() {
 
@@ -1432,6 +1433,10 @@ function App() {
   // Used in: SubmitPage.tsx
   const editPostTitle = (e: any) => {
     const target = e.target;
+
+    if (target.value.length >= 301) {
+      return;
+    }
     let updatedCustomPost = {...customPost};
     updatedCustomPost.title = target.value;
     setCustomPost(updatedCustomPost);
