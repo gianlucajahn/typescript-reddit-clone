@@ -454,7 +454,7 @@ function App() {
       newNotificationArray.push(newNotification);
       setNotificationArray(newNotificationArray);
 
-      navigate(`/r/${currentSub.title}/${postId}`);
+      navigate(`/typescript-reddit-clone/r/${currentSub.title}/${postId}`);
       setCustomPost(baseCustomPost);
       setSubmitLoading(false);
       submitPostNotification(e);
@@ -556,7 +556,7 @@ function App() {
   // Used in: NavBar.tsx, search bar
   const removeCurrentSub = (e: React.MouseEvent) => {
     setCurrentSub(undefined);
-    navigate("/");
+    navigate("/typescript-reddit-clone/");
   }
 
   const identifyCurrentSub = (e: any) => {
@@ -698,7 +698,7 @@ function App() {
     const subId = subreddits.findIndex(sub => sub.title === target.id);
     if (subId !== -1) {
       setCurrentSub(subreddits[subId]);
-      navigate(`/r/${subreddits[subId].title}`);
+      navigate(`/typescript-reddit-clone/r/${subreddits[subId].title}`);
     }
   }
 
@@ -820,7 +820,7 @@ function App() {
     setCurrentlyInspectedUser(userName);
     let userId = userData.findIndex(user => user.username === userName);
     setCurrentUserData(userData[userId]);
-    navigate(`/user/${userName}`);
+    navigate(`/typescript-reddit-clone/user/${userName}`);
   }
 
   // navigate to targeted user's profile
@@ -841,7 +841,7 @@ function App() {
     }
 
     setCurrentUserData(userData[userId]);
-    navigate(`/user/${target.id}`);
+    navigate(`/typescript-reddit-clone/user/${target.id}`);
   }
 
   // switch from current page to individual post page
@@ -865,7 +865,7 @@ function App() {
     const subreddit = subreddits.find(sub => sub.title === post.subreddit);
     setCurrentPost(post);
     setCurrentSub(subreddit);
-    navigate(`/r/${subreddit?.title}/${post.id}`);
+    navigate(`/typescript-reddit-clone/r/${subreddit?.title}/${post.id}`);
   }
 
   // navigate to targeted subreddit 
@@ -884,45 +884,45 @@ function App() {
       return;
     } else if (target.classList.contains('gaming') || (target.parentElement?.classList.contains("gaming"))) {
       setCurrentSub(subreddits[11]);
-      navigate("/r/gaming");
+      navigate("/typescript-reddit-clone/r/gaming");
       return;
     } else if (target.classList.contains('apexlegends') || (target.parentElement?.classList.contains("apexlegends"))) {
       setCurrentSub(subreddits[11]);
-      navigate("/r/apexlegends");
+      navigate("/typescript-reddit-clone/r/apexlegends");
       return;
     } else if (target.classList.contains('genshinimpact') || (target.parentElement?.classList.contains("genshinimpact"))) {
       setCurrentSub(subreddits[2]);
-      navigate("/r/genshinimpact");
+      navigate("/typescript-reddit-clone/r/genshinimpact");
       return;
     } else if (target.classList.contains('sports') || (target.parentElement?.classList.contains("sports"))) {
       setCurrentSub(subreddits[15]);
-      navigate("/r/sports");
+      navigate("/typescript-reddit-clone/r/sports");
       return;
     } else if (target.classList.contains('movies') || (target.parentElement?.classList.contains("television"))) {
       setCurrentSub(subreddits[0]);
-      navigate("/r/movies");
+      navigate("/typescript-reddit-clone/r/movies");
       return;
     } else if (target.classList.contains('finance') || (target.parentElement?.classList.contains("business"))) {
       setCurrentSub(subreddits[4]);
-      navigate("/r/finance");
+      navigate("/typescript-reddit-clone/r/finance");
       return;
     } else if (target.classList.contains('crypto') || (target.parentElement?.classList.contains("crypto"))) {
       setCurrentSub(subreddits[16]);
-      navigate("/r/crypto");
+      navigate("/typescript-reddit-clone/r/crypto");
       return;
     } else if (target.classList.contains('returnHome')) {
       setCurrentSub(undefined);
-      navigate("/");
+      navigate("/typescript-reddit-clone/");
       return;
     } else if (target.classList.contains('books')) {
       setCurrentSub(subreddits[10]);
-      navigate("/r/books");
+      navigate("/typescript-reddit-clone/r/books");
       return;
     } else if (target.classList.contains('join')) {
       return;
     }
 
-    navigate(`r/${target.id}`);
+    navigate(`/typescript-reddit-clone/r/${target.id}`);
     setSearchDropdown(false);
     setSearchTerm("");
   }
@@ -936,7 +936,7 @@ function App() {
   // close current individual post page and navigate back to home page
   // Used in: individualPost.tsx
   const closePost = (e: React.MouseEvent) => {
-    navigate("/");
+    navigate("/typescript-reddit-clone/");
     setCurrentPost(undefined);
     setCurrentSub(undefined);
     setMainComment("");
@@ -1398,7 +1398,7 @@ function App() {
   // Used in: SortBar.tsx
   const handleSelectSort = (e: React.MouseEvent) => {
     const target = e.currentTarget;
-    navigate("/");
+    navigate("/typescript-reddit-clone/");
     setCurrentSort(target.id);
   }
 
@@ -1419,7 +1419,7 @@ function App() {
     } else {
       setSubmitPostType("text");
     }
-    navigate("/submit");
+    navigate("/typescript-reddit-clone/submit");
   }
 
   // handle search bar input change
@@ -1658,7 +1658,7 @@ function App() {
   // navigate back to subreddit's main page
   // Used in: NavBar.tsx
   const quickNavigate = (e: React.MouseEvent) => {
-    navigate(`r/${currentSub}`);
+    navigate(`/typescript-reddit-clone/r/${currentSub}`);
   }
 
   // add targeted user to current user's "following" array
@@ -1779,7 +1779,7 @@ function App() {
   useEffect(() => {
     if (loginStatus === false) {
       if (location.pathname.includes("submit")) {
-        navigate("/");
+        navigate("/typescript-reddit-clone/");
       }
     }
 
