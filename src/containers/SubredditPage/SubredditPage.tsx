@@ -52,6 +52,7 @@ export interface SubredditPageProps {
     handleLike: MouseEventHandler,
     submitNestedComment: MouseEventHandler
     switchCommunityTheme: MouseEventHandler,
+    setCurrentSub: any,
     submitComment: MouseEventHandler,
     handleLikeComment: MouseEventHandler,
     savePost: MouseEventHandler,
@@ -90,6 +91,7 @@ export default function SubredditPage (props: SubredditPageProps) {
     writeNestedComment,
     editComment,
     editNestedComment,
+    setCurrentSub,
     setIndex,
     navToUserProfile,
     savePost,
@@ -109,6 +111,16 @@ export default function SubredditPage (props: SubredditPageProps) {
     submitComment,
     selectAnchor
   } = props;
+
+  useEffect(() => {
+    if (currentSub === undefined) {
+      const subId = subreddits.findIndex(sub => sub.title === location.pathname.substring(27));
+      if (subId === -1) {
+        return;
+      }
+      setCurrentSub(subreddits[subId]);
+    }
+  }, []);
 
   return (
     <div className="subredditPage" style={{ backgroundColor: communityTheme ?  currentSub?.backgroundColor : "#edeff1", height: loginModalState === "closed" ? "" : "100vh", overflow: loginModalState === "closed" ? "scroll" : "hidden" }}>

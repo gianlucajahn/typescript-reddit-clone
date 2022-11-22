@@ -1971,6 +1971,7 @@ function App() {
           editNestedComment={editNestedComment}
           submitPage={submitPage}
           savePost={savePost}
+          setCurrentSub={setCurrentSub}
           navToUserProfile={navToUserProfile}
           navToProfile={navToProfile}
         />} />
