@@ -1706,6 +1706,7 @@ function App() {
     let friendId = userData.findIndex(user => user.username === friendName);
     let updatedUserData = [...userData];
     updatedUserData[friendId].added = !updatedUserData[friendId].added;
+    updatedUserData[friendId].reported = false;
     setUserData(updatedUserData);
   }
 
@@ -1716,6 +1717,7 @@ function App() {
     let reportId = userData.findIndex(user => user.username === reportName);
     let updatedUserData = [...userData];
     updatedUserData[reportId].reported = !updatedUserData[reportId].reported;
+    updatedUserData[reportId].added = false;
     setUserData(updatedUserData);
   }
 
