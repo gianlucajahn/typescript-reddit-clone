@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/typescript-reddit-clone/static/css/main.27cac89e.css",
-    "main.js": "/typescript-reddit-clone/static/js/main.02b89a4b.js",
+    "main.js": "/typescript-reddit-clone/static/js/main.3d4ba9c3.js",
     "static/js/787.f22eee2d.chunk.js": "/typescript-reddit-clone/static/js/787.f22eee2d.chunk.js",
     "static/media/preview3.PNG": "/typescript-reddit-clone/static/media/preview3.a89582a4610c362e6839.PNG",
     "static/media/68.png": "/typescript-reddit-clone/static/media/68.4de8baaefa220efa7c61.png",
@@ -159,8 +159,8 @@
     "static/media/img.PNG": "/typescript-reddit-clone/static/media/img.1e4254da40a1a612a67f.PNG",
     "static/media/stonks.webp": "/typescript-reddit-clone/static/media/stonks.796db24f07b1ec8218a4.webp",
     "static/media/reddit.svg": "/typescript-reddit-clone/static/media/reddit.5136a6f4476ce5b17aee18afcc83d900.svg",
-    "static/media/favorite.svg": "/typescript-reddit-clone/static/media/favorite.217737c603de8ad551a2.svg",
     "index.html": "/typescript-reddit-clone/index.html",
+    "static/media/favorite.svg": "/typescript-reddit-clone/static/media/favorite.217737c603de8ad551a2.svg",
     "static/media/apple.svg": "/typescript-reddit-clone/static/media/apple.cd70d0dd370d574afc3a7064449e2404.svg",
     "static/media/search.svg": "/typescript-reddit-clone/static/media/search.6ff81b30d33a8b8fb911e57bdc7dabd8.svg",
     "static/media/google.svg": "/typescript-reddit-clone/static/media/google.c5f20af48e48c8ceb2dc881a3bc511c1.svg",
@@ -171,11 +171,11 @@
     "static/media/dropdown.svg": "/typescript-reddit-clone/static/media/dropdown.c6e655a6d45a12dc0e9b56bdfc54481e.svg",
     "static/media/expand.svg": "/typescript-reddit-clone/static/media/expand.45a1a7112bf6255f362b.svg",
     "main.27cac89e.css.map": "/typescript-reddit-clone/static/css/main.27cac89e.css.map",
-    "main.02b89a4b.js.map": "/typescript-reddit-clone/static/js/main.02b89a4b.js.map",
+    "main.3d4ba9c3.js.map": "/typescript-reddit-clone/static/js/main.3d4ba9c3.js.map",
     "787.f22eee2d.chunk.js.map": "/typescript-reddit-clone/static/js/787.f22eee2d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.27cac89e.css",
-    "static/js/main.02b89a4b.js"
+    "static/js/main.3d4ba9c3.js"
   ]
 }
