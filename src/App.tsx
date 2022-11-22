@@ -1826,6 +1826,8 @@ function App() {
     banner: "../../resources/images/Communities/todayilearned/banner.jpg",
   }
 
+  console.log(location.pathname);
+
   // return 
   return (
     <div onClick={checkDropdown} style={{ maxHeight: loginModalState === "closed" ? "" : "100vh !important", overflow: loginModalState === "closed" ? "" : "hidden" }} id="app">

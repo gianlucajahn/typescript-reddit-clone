@@ -170,7 +170,7 @@ export default function SubredditSideBar (props: SubredditSideBarProps) {
 
 
     {submitPage === false && <Imprint />}
-    <BackToTopButton />
+    {submitPage === false && <BackToTopButton />}
   </div>
   );
 }
